@@ -1,0 +1,178 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/gawk 95ff0ba345ee96b1fe7e8f327ab35fa9 1754242584
+obj /usr/bin/gawkbug 6a9a9763e7710f69bdf511d7d7937958 1754242581
+dir /usr/include
+dir /usr/include/awk
+obj /usr/include/awk/awk.h cec838014a44f2d517ed36bef1ca433a 1754242583
+obj /usr/include/awk/cmd.h acd39a4488ce42a38e15c42268e2c062 1754242583
+obj /usr/include/awk/custom.h e0dbd191cc6dd1fc0889ba37da07ba66 1754242583
+obj /usr/include/awk/floatmagic.h 7558490510b304735a769701b0d4eb89 1754242583
+obj /usr/include/awk/gawkapi.h 5cdd22d73a8583a9a033616662160bab 1754242583
+obj /usr/include/awk/gettext.h 5cf2d45ac11c0d227c40d41da215e193 1754242583
+obj /usr/include/awk/interpret.h 864611ff720551600f827604d20d6989 1754242583
+obj /usr/include/awk/nonposix.h c6c48fca93efdd478ec8042a6ab09173 1754242583
+obj /usr/include/awk/protos.h f8a3d895d710d63983dfecd32eb673e9 1754242583
+obj /usr/include/gawkapi.h 5cdd22d73a8583a9a033616662160bab 1754242581
+dir /usr/lib64
+dir /usr/lib64/gawk
+obj /usr/lib64/gawk/filefuncs.so f1c1679749dcf60eadf09e70afb84b19 1754242584
+obj /usr/lib64/gawk/fnmatch.so 341f537e8d2811114fa908a2ca08e131 1754242584
+obj /usr/lib64/gawk/fork.so 15170fc789828ab5623e6e5516c34530 1754242584
+obj /usr/lib64/gawk/inplace.so 41946a0dac7dd743dc4cadac4c925f8f 1754242584
+obj /usr/lib64/gawk/intdiv.so 5ec5124a2f3906bbef83670c374734c8 1754242584
+obj /usr/lib64/gawk/ordchr.so 294fc76fc728ec25ab3e1091be535190 1754242584
+obj /usr/lib64/gawk/readdir.so ed10342ed7b5cf5296195cbca58d5a06 1754242584
+obj /usr/lib64/gawk/readfile.so caeec8d8d88c3a12a9a9d3f0e8d32d33 1754242584
+obj /usr/lib64/gawk/revoutput.so 6cbc834017945d60c568b875232bac89 1754242584
+obj /usr/lib64/gawk/revtwoway.so dd4fb39a2ed1f832d327a9fa097094ff 1754242584
+obj /usr/lib64/gawk/rwarray.so 72c4bb7df3766f92f77036c27aae65e9 1754242584
+obj /usr/lib64/gawk/time.so 826b99040fcbee9e4893aba734d0fc64 1754242584
+dir /usr/lib64/misc
+dir /usr/lib64/misc/awk
+obj /usr/lib64/misc/awk/grcat ec0e2ee55eef612512d525ff5e800885 1754242584
+obj /usr/lib64/misc/awk/pwcat 17cf5b1ac97fa7934c51caec590a78fe 1754242584
+dir /usr/share
+dir /usr/share/awk
+obj /usr/share/awk/assert.awk c94753467cb0ce839cbc87dd5313392a 1754242582
+obj /usr/share/awk/bits2str.awk 801e293a442232eafd89a2d0550c6221 1754242582
+obj /usr/share/awk/cliff_rand.awk 4f102335ebacbb13af785af2a5ee5699 1754242582
+obj /usr/share/awk/ctime.awk 8d5d47289e51296344d0e5b9c7766d76 1754242582
+obj /usr/share/awk/ftrans.awk 8a3ce2527c151d25d7c2b14811f2cfdc 1754242582
+obj /usr/share/awk/getopt.awk aa8def2be02c460149e1373955ba3d1d 1754242582
+obj /usr/share/awk/gettime.awk 8a4784537dfcaa8861dbb8c48e19bf8f 1754242582
+obj /usr/share/awk/group.awk 66b8d1e59bc2ebe332e5f48e43427c81 1754242582
+obj /usr/share/awk/have_mpfr.awk 277af1c082b2d1b5d1fb164f4e70fb80 1754242582
+obj /usr/share/awk/inplace.awk f44bc9cf4ade4ec2e7d9f19061589331 1754242582
+obj /usr/share/awk/intdiv0.awk af5a27eb05a5cdc496135b8068faf741 1754242582
+obj /usr/share/awk/isnumeric.awk 17c9d11119cce043ffd41a8b6889a471 1754242582
+obj /usr/share/awk/join.awk babd186770765508e26d344613ffbe0d 1754242582
+obj /usr/share/awk/libintl.awk cc11a880a2e1e277530c2d7d7cdac202 1754242582
+obj /usr/share/awk/noassign.awk 5c3ae18fb1b0d7e66795de410e4ba50b 1754242582
+obj /usr/share/awk/ns_passwd.awk 18c0634bf39d0bcc0555d70470fb1961 1754242582
+obj /usr/share/awk/ord.awk 1b35f85e1492c59ebc24bd2e643074f6 1754242582
+obj /usr/share/awk/passwd.awk 5ae528f9931a406a8adb5562f544fb55 1754242582
+obj /usr/share/awk/processarray.awk 2c4024c524af0bb20de33c70dd1d4cea 1754242582
+obj /usr/share/awk/quicksort.awk 41d84c6f3f8376779167b6cbf52d1b4a 1754242582
+obj /usr/share/awk/readable.awk 72fe0f2ef7c67d51469a3eb505427063 1754242582
+obj /usr/share/awk/readfile.awk 090e8a4a6c9306498c239ea7222f81aa 1754242582
+obj /usr/share/awk/rewind.awk c87adbdbc349b6e4c96d9494d7fc9a30 1754242582
+obj /usr/share/awk/round.awk e9028984b0d82fac692f3d5c5d4c211e 1754242582
+obj /usr/share/awk/shellquote.awk bb0ea816086eef477eadac55475199b0 1754242582
+obj /usr/share/awk/strtonum.awk b3fcc1c281c1f173f13ad3b47cb8a39f 1754242582
+obj /usr/share/awk/tocsv.awk ef448f560bcfe02f8f92b758e670cbc3 1754242582
+obj /usr/share/awk/walkarray.awk 7b15948b50551201439773ad50912103 1754242582
+obj /usr/share/awk/zerofile.awk a69b061ef1bbca105082fe8a248818da 1754242582
+dir /usr/share/doc
+dir /usr/share/doc/gawk-5.3.2
+obj /usr/share/doc/gawk-5.3.2/AUTHORS.bz2 21ce4e47a42ba61f35545af703ca9bd2 1754242583
+obj /usr/share/doc/gawk-5.3.2/ChangeLog.bz2 9087d221f847000a50769bea01f22968 1754242583
+obj /usr/share/doc/gawk-5.3.2/NEWS.bz2 4fb948463ccf962eba56ba132e78c027 1754242583
+obj /usr/share/doc/gawk-5.3.2/README.bz2 18c7c5cd06479c6a3b679b313fc1d026 1754242583
+obj /usr/share/doc/gawk-5.3.2/TODO.bz2 f5bb773d6461222e47a6226387ed3841 1754242583
+dir /usr/share/info
+obj /usr/share/info/gawk.info.bz2 60d3bc10b5e35375a7d1cab0ab692d20 1754242582
+obj /usr/share/info/gawk_api-figure1.png baf3b71416547fd67b63bb2b912f647e 1754242582
+obj /usr/share/info/gawk_api-figure2.png 4c417d6ecbc9eedade1a95c780b2f6e1 1754242582
+obj /usr/share/info/gawk_api-figure3.png b460302f9a913977dbadd31841aa19d8 1754242582
+obj /usr/share/info/gawk_array-elements.png 26df69e3899a3fa1e82a6ceea94f805e 1754242582
+obj /usr/share/info/gawk_general-program.png 4251f39445276c4be98da62b35c1f5f5 1754242582
+obj /usr/share/info/gawk_process-flow.png 4ad645186d1a4712ed84701b20fa00ff 1754242582
+obj /usr/share/info/gawk_statist.jpg 40317339e5c618d2b2fc8f8583b07f82 1754242582
+obj /usr/share/info/gawkinet.info.bz2 86a2cc1d301082c5291e89ff67dd1584 1754242582
+obj /usr/share/info/gawkworkflow.info.bz2 82bd1c131930b072ab635ad9ab1fac8d 1754242582
+obj /usr/share/info/pm-gawk.info.bz2 443171d71d861679af2be2ce9a1366e9 1754242582
+dir /usr/share/locale
+dir /usr/share/locale/bg
+dir /usr/share/locale/bg/LC_MESSAGES
+obj /usr/share/locale/bg/LC_MESSAGES/gawk.mo 7a67c36a50c2e5a563d401f8e3c03d08 1754242582
+dir /usr/share/locale/ca
+dir /usr/share/locale/ca/LC_MESSAGES
+obj /usr/share/locale/ca/LC_MESSAGES/gawk.mo b6b6b8b38740c221ea645891909e6d2e 1754242582
+dir /usr/share/locale/da
+dir /usr/share/locale/da/LC_MESSAGES
+obj /usr/share/locale/da/LC_MESSAGES/gawk.mo e51091fd58322c62ffa92749f2ab29d6 1754242582
+dir /usr/share/locale/de
+dir /usr/share/locale/de/LC_MESSAGES
+obj /usr/share/locale/de/LC_MESSAGES/gawk.mo e7a44e9c4cad65f3014752bb5c478d09 1754242582
+dir /usr/share/locale/es
+dir /usr/share/locale/es/LC_MESSAGES
+obj /usr/share/locale/es/LC_MESSAGES/gawk.mo 2da5176893cd108c52b3bc8adaef425b 1754242582
+dir /usr/share/locale/fi
+dir /usr/share/locale/fi/LC_MESSAGES
+obj /usr/share/locale/fi/LC_MESSAGES/gawk.mo 140c54a4a896434f61e8482b994e9082 1754242582
+dir /usr/share/locale/fr
+dir /usr/share/locale/fr/LC_MESSAGES
+obj /usr/share/locale/fr/LC_MESSAGES/gawk.mo 6e4577331823785bf132800724ba73d2 1754242582
+dir /usr/share/locale/id
+dir /usr/share/locale/id/LC_MESSAGES
+obj /usr/share/locale/id/LC_MESSAGES/gawk.mo 4333ea5de098d4c4689efda4691aebd1 1754242582
+dir /usr/share/locale/it
+dir /usr/share/locale/it/LC_MESSAGES
+obj /usr/share/locale/it/LC_MESSAGES/gawk.mo 7a47140ef99993315940fe090e50e9fe 1754242582
+dir /usr/share/locale/ja
+dir /usr/share/locale/ja/LC_MESSAGES
+obj /usr/share/locale/ja/LC_MESSAGES/gawk.mo b7fb2a46899a0f819ffd59acc4974e83 1754242582
+dir /usr/share/locale/ka
+dir /usr/share/locale/ka/LC_MESSAGES
+obj /usr/share/locale/ka/LC_MESSAGES/gawk.mo 9011ed47624b86721e0a65b8c891fc70 1754242582
+dir /usr/share/locale/ko
+dir /usr/share/locale/ko/LC_MESSAGES
+obj /usr/share/locale/ko/LC_MESSAGES/gawk.mo b0489292af553ca072168ac26a795d8c 1754242582
+dir /usr/share/locale/ms
+dir /usr/share/locale/ms/LC_MESSAGES
+obj /usr/share/locale/ms/LC_MESSAGES/gawk.mo a3bea86baada3a8bb402ab4ff6d33d81 1754242582
+dir /usr/share/locale/nl
+dir /usr/share/locale/nl/LC_MESSAGES
+obj /usr/share/locale/nl/LC_MESSAGES/gawk.mo 814636b3275a314b0ef3fd353d40bc26 1754242582
+dir /usr/share/locale/pl
+dir /usr/share/locale/pl/LC_MESSAGES
+obj /usr/share/locale/pl/LC_MESSAGES/gawk.mo d5b110957888af41fc5345c80f9e6fd0 1754242582
+dir /usr/share/locale/pt
+dir /usr/share/locale/pt/LC_MESSAGES
+obj /usr/share/locale/pt/LC_MESSAGES/gawk.mo 0388b94102a990c1320342f173c368e0 1754242582
+dir /usr/share/locale/pt_BR
+dir /usr/share/locale/pt_BR/LC_MESSAGES
+obj /usr/share/locale/pt_BR/LC_MESSAGES/gawk.mo 1e1b8f251e6585a17056e100512d3837 1754242582
+dir /usr/share/locale/ro
+dir /usr/share/locale/ro/LC_MESSAGES
+obj /usr/share/locale/ro/LC_MESSAGES/gawk.mo 76e98e84de711fc1abddd0803073c54c 1754242582
+dir /usr/share/locale/sr
+dir /usr/share/locale/sr/LC_MESSAGES
+obj /usr/share/locale/sr/LC_MESSAGES/gawk.mo 5729b88778923eb40f8e06018c30e99f 1754242582
+dir /usr/share/locale/sv
+dir /usr/share/locale/sv/LC_MESSAGES
+obj /usr/share/locale/sv/LC_MESSAGES/gawk.mo 11913f6ed5bb753df828cfca4cf9f06c 1754242582
+dir /usr/share/locale/tr
+dir /usr/share/locale/tr/LC_MESSAGES
+obj /usr/share/locale/tr/LC_MESSAGES/gawk.mo 2bad8d4da8218b78937fcb020f708d32 1754242582
+dir /usr/share/locale/uk
+dir /usr/share/locale/uk/LC_MESSAGES
+obj /usr/share/locale/uk/LC_MESSAGES/gawk.mo 63d579e16ed197b4ec7e33230e240da4 1754242582
+dir /usr/share/locale/vi
+dir /usr/share/locale/vi/LC_MESSAGES
+obj /usr/share/locale/vi/LC_MESSAGES/gawk.mo c4fcaa7b4de1708d59b7c001d71e65a8 1754242582
+dir /usr/share/locale/zh_CN
+dir /usr/share/locale/zh_CN/LC_MESSAGES
+obj /usr/share/locale/zh_CN/LC_MESSAGES/gawk.mo 7f9cafb73657c06707a21a9c2713c2df 1754242582
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/gawk.1.bz2 f6c72a183cffc7eac5f86ebfd50af2bd 1754242582
+obj /usr/share/man/man1/gawkbug.1.bz2 be7a94dfc69faa66e00c70ebdeef058a 1754242582
+obj /usr/share/man/man1/pm-gawk.1.bz2 a2738b25636ecef491014a92bf9af599 1754242582
+dir /usr/share/man/man3
+obj /usr/share/man/man3/filefuncs.3am.bz2 6c898aa6678dec125eb98057608c1aa7 1754242581
+obj /usr/share/man/man3/fnmatch.3am.bz2 25d96884af877cce2754c114b25277e7 1754242581
+obj /usr/share/man/man3/fork.3am.bz2 59b170570f579465eb204c67c0ebd39a 1754242581
+obj /usr/share/man/man3/inplace.3am.bz2 3305194e160a0f9447c85844db79791c 1754242581
+obj /usr/share/man/man3/ordchr.3am.bz2 319f18e081cd26e9b7ad093ff04f35c0 1754242581
+obj /usr/share/man/man3/readdir.3am.bz2 f661e6cbb040db55200cf19e51056f68 1754242581
+obj /usr/share/man/man3/readfile.3am.bz2 6309d5001de6a620f538cef35a579785 1754242581
+obj /usr/share/man/man3/revoutput.3am.bz2 cbf2373051f85c10e0f0423dce8b2131 1754242581
+obj /usr/share/man/man3/revtwoway.3am.bz2 75129e8d840268939c4fd417ef8fbdb6 1754242581
+obj /usr/share/man/man3/rwarray.3am.bz2 f2e14adbdcd534335143eae4929ab8c6 1754242581
+obj /usr/share/man/man3/time.3am.bz2 52a2d63a30e61e4bec4266071b336fce 1754242581
+dir /etc
+dir /etc/profile.d
+obj /etc/profile.d/gawk.csh b3d9e29a36f945b2065b2f88d18dadaa 1754242582
+obj /etc/profile.d/gawk.sh bfc054c0862d0fad98ca641b951c7061 1754242582

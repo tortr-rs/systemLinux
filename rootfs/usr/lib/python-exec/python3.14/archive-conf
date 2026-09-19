@@ -1,0 +1,102 @@
+#!/usr/bin/python3.14
+# Copyright 1999-2020 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+#
+# archive-conf -- save off a config file in the dispatch-conf archive dir
+#
+#  Written by Wayne Davison <gentoo@blorf.net> with code snagged from
+#  Jeremy Wohl's dispatch-conf script and the portage chkcontents script.
+#
+
+import subprocess
+import sys
+
+from os import path as osp
+
+if osp.isfile(
+    osp.join(osp.dirname(osp.dirname(osp.realpath(__file__))), ".portage_not_installed")
+):
+    sys.path.insert(
+        0, osp.join(osp.dirname(osp.dirname(osp.realpath(__file__))), "lib")
+    )
+import portage
+
+portage._internal_caller = True
+
+import portage.dispatch_conf
+from portage import os
+from portage.checksum import perform_md5
+
+MANDATORY_OPTS = ["archive-dir"]
+
+
+def archive_conf():
+    args = []
+    content_files = []
+    md5_match_hash = {}
+
+    options = portage.dispatch_conf.read_config(MANDATORY_OPTS)
+
+    for conf in sys.argv[1:]:
+        if not os.path.isabs(conf):
+            conf = os.path.abspath(conf)
+        args += [conf]
+        md5_match_hash[conf] = ""
+
+    # Find all the CONTENTS files in VDB_PATH.
+    eroot_vdb_path = os.path.join(portage.settings["EROOT"], portage.VDB_PATH)
+    find = subprocess.run(
+        ["find", eroot_vdb_path, "-type", "f", "-name", "CONTENTS"],
+        capture_output=True,
+        text=True,
+    )
+    content_files += find.stdout.splitlines()
+
+    # Search for the saved md5 checksum of all the specified config files
+    # and see if the current file is unmodified or not.
+    try:
+        todo_cnt = len(args)
+        for filename in content_files:
+            filename = filename.rstrip()
+            try:
+                contents = open(filename)
+            except OSError as e:
+                print(
+                    f"archive-conf: Unable to open {filename}: {e}",
+                    file=sys.stderr,
+                )
+                sys.exit(1)
+            lines = contents.readlines()
+            for line in lines:
+                items = line.split()
+                if items[0] == "obj":
+                    for conf in args:
+                        if items[1] == conf:
+                            stored = items[2].lower()
+                            real = perform_md5(conf).lower()
+                            if stored == real:
+                                md5_match_hash[conf] = conf
+                            todo_cnt -= 1
+                            if todo_cnt == 0:
+                                raise StopIteration()
+    except StopIteration:
+        pass
+
+    for conf in args:
+        archive = os.path.join(options["archive-dir"], conf.lstrip("/"))
+        if options["use-rcs"] == "yes":
+            portage.dispatch_conf.rcs_archive(archive, conf, md5_match_hash[conf], "")
+            if md5_match_hash[conf]:
+                portage.dispatch_conf.rcs_archive_post_process(archive)
+        else:
+            portage.dispatch_conf.file_archive(archive, conf, md5_match_hash[conf], "")
+            if md5_match_hash[conf]:
+                portage.dispatch_conf.file_archive_post_process(archive)
+
+
+# run
+if len(sys.argv) > 1:
+    archive_conf()
+else:
+    print("Usage: archive-conf /CONFIG/FILE [/CONFIG/FILE...]", file=sys.stderr)

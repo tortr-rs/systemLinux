@@ -1,0 +1,14 @@
+dir /etc
+dir /etc/ppp
+obj /etc/ppp/ip-down dffaf0428b0dbf51c46b9b501bdf16d2 1710684008
+dir /etc/ppp/ip-down.d
+obj /etc/ppp/ip-down.d/30-wins.sh 44bf15bd4690c2aefe03f82ea86c86bd 1710684008
+obj /etc/ppp/ip-down.d/40-dns.sh 48b70dc163b79aeb31dcb58924a9766b 1710684008
+obj /etc/ppp/ip-down.d/50-initd.sh c0e10f8000c810488fd55716189f0fff 1710684008
+dir /etc/ppp/ip-up.d
+obj /etc/ppp/ip-up.d/30-wins.sh a9cb41532818bfce32868fea1b5926e4 1710684008
+obj /etc/ppp/ip-up.d/40-dns.sh 41d845bf7406d6db2c76df5a39390337 1710684008
+obj /etc/ppp/ip-up.d/50-initd.sh 6d9bea5147cbdeb605fa597203e3ee15 1710684008
+sym /etc/ppp/ipv6-down -> ip-down 1789836410
+obj /etc/ppp/ip-up e0d049df44d676696778952c71f414e4 1710684007
+sym /etc/ppp/ipv6-up -> ip-up 1789836410

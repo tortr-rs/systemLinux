@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+# Copyright 1999-2023 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+source "${PORTAGE_BIN_PATH:?}"/isolated-functions.sh || exit
+
+if [[ $# -lt 1 ]] ; then
+	__helpers_die "${0##*/}: at least one argument needed"
+	exit 1
+fi
+
+if ! ___eapi_has_prefix_variables; then
+	ED=${D}
+fi
+
+if ! ___eapi_has_DESTTREE_INSDESTTREE; then
+	[[ -n ${DESTTREE} ]] &&
+		die "${0##*/}: \${DESTTREE} has been banned for EAPI '${EAPI}'; use 'into' instead"
+else
+	# backwards compatibility
+	__E_DESTTREE=${DESTTREE}
+fi
+
+if [[ ! -d ${ED%/}/${__E_DESTTREE#/}/sbin ]] ; then
+	install -d "${ED%/}/${__E_DESTTREE#/}/sbin" || { __helpers_die "${0##*/}: failed to install ${ED%/}/${__E_DESTTREE#/}/sbin"; exit 2; }
+fi
+
+ret=0
+
+for x in "$@" ; do
+	if [[ -e ${x} ]] ; then
+		install -m0755 -o ${PORTAGE_INST_UID:-0} -g ${PORTAGE_INST_GID:-0} "${x}" "${ED%/}/${__E_DESTTREE#/}/sbin"
+	else
+		echo "!!! ${0##*/}: ${x} does not exist" 1>&2
+		false
+	fi
+	((ret|=$?))
+done
+
+[[ ${ret} -ne 0 ]] && __helpers_die "${0##*/} failed"
+exit ${ret}

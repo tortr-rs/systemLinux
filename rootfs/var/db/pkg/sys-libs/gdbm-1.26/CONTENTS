@@ -1,0 +1,83 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/gdbm_dump 0d2544da6c14bb2caf80cf80d118a88e 1757266128
+obj /usr/bin/gdbm_load a443820ad8615f9178c52f770e5f7057 1757266128
+obj /usr/bin/gdbmtool 36b074f6597b07776b75f0dade7a7dd2 1757266128
+dir /usr/include
+dir /usr/include/gdbm
+obj /usr/include/gdbm/dbm.h f0c089a14083ab13ce44318b16ced7a6 1757266127
+obj /usr/include/gdbm/ndbm.h c8738efca70680598ccdb59823613294 1757266127
+obj /usr/include/gdbm.h c2918c96679e28b08777cae4975b1a29 1757266127
+dir /usr/lib64
+obj /usr/lib64/libgdbm.so.6.0.0 392e477dd6f87ec3e3a9facae35ae104 1757266128
+obj /usr/lib64/libgdbm_compat.so.4.0.0 292acd1fe6c8c5d040f76c3dcd39f3ab 1757266128
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/gdbm-1.26
+obj /usr/share/doc/gdbm-1.26/AUTHORS 8f58ec79b2fa7dd61baff91dbf9e43c2 1757266127
+obj /usr/share/doc/gdbm-1.26/ChangeLog.bz2 a70a76c472274a7e39a4127d003e0771 1757266127
+obj /usr/share/doc/gdbm-1.26/NEWS.bz2 14b3f716c7cc4c23e910593770892902 1757266127
+obj /usr/share/doc/gdbm-1.26/README.bz2 8fce54186f35fb00a5ebf835491a4f86 1757266127
+obj /usr/share/doc/gdbm-1.26/THANKS.bz2 78f2824ad1c8c18d0f012d00c534b2aa 1757266127
+dir /usr/share/info
+obj /usr/share/info/gdbm.info.bz2 cedabe5396ee16f7a9e96d35352522cc 1757266127
+dir /usr/share/locale
+dir /usr/share/locale/da
+dir /usr/share/locale/da/LC_MESSAGES
+obj /usr/share/locale/da/LC_MESSAGES/gdbm.mo 04cbe4b4608d68185d8eeab1b1b582c0 1757266127
+dir /usr/share/locale/de
+dir /usr/share/locale/de/LC_MESSAGES
+obj /usr/share/locale/de/LC_MESSAGES/gdbm.mo af7e14354227a5b6b6a0782a338b59cd 1757266127
+dir /usr/share/locale/eo
+dir /usr/share/locale/eo/LC_MESSAGES
+obj /usr/share/locale/eo/LC_MESSAGES/gdbm.mo fd6036c57573a45d5a0833c3f3ce190c 1757266127
+dir /usr/share/locale/es
+dir /usr/share/locale/es/LC_MESSAGES
+obj /usr/share/locale/es/LC_MESSAGES/gdbm.mo dfa598a1961b4b006722b0b1ee237dbc 1757266127
+dir /usr/share/locale/fi
+dir /usr/share/locale/fi/LC_MESSAGES
+obj /usr/share/locale/fi/LC_MESSAGES/gdbm.mo eb38197527dd706943af0fbe686dd7ef 1757266127
+dir /usr/share/locale/fr
+dir /usr/share/locale/fr/LC_MESSAGES
+obj /usr/share/locale/fr/LC_MESSAGES/gdbm.mo dc2939f4de11376d16d97d8c39dc41ef 1757266127
+dir /usr/share/locale/ja
+dir /usr/share/locale/ja/LC_MESSAGES
+obj /usr/share/locale/ja/LC_MESSAGES/gdbm.mo 2cca3d35fbb64a39b7f42c6f349187ab 1757266127
+dir /usr/share/locale/ka
+dir /usr/share/locale/ka/LC_MESSAGES
+obj /usr/share/locale/ka/LC_MESSAGES/gdbm.mo df1d778996b4cbfb6ba2db13ccce8ae3 1757266127
+dir /usr/share/locale/pl
+dir /usr/share/locale/pl/LC_MESSAGES
+obj /usr/share/locale/pl/LC_MESSAGES/gdbm.mo dca2948858db9285e244c8c33a13eaee 1757266127
+dir /usr/share/locale/pt_BR
+dir /usr/share/locale/pt_BR/LC_MESSAGES
+obj /usr/share/locale/pt_BR/LC_MESSAGES/gdbm.mo f42f6e4a144c760487d290a376e0c5bd 1757266127
+dir /usr/share/locale/ro
+dir /usr/share/locale/ro/LC_MESSAGES
+obj /usr/share/locale/ro/LC_MESSAGES/gdbm.mo 7b5cc1a0cefc9c6411723bdd27fdb5d7 1757266127
+dir /usr/share/locale/ru
+dir /usr/share/locale/ru/LC_MESSAGES
+obj /usr/share/locale/ru/LC_MESSAGES/gdbm.mo 66373471b55accd3841a41d69dd3119e 1757266127
+dir /usr/share/locale/sr
+dir /usr/share/locale/sr/LC_MESSAGES
+obj /usr/share/locale/sr/LC_MESSAGES/gdbm.mo aaa7d004ad02d52be922d51a43af73df 1757266127
+dir /usr/share/locale/sv
+dir /usr/share/locale/sv/LC_MESSAGES
+obj /usr/share/locale/sv/LC_MESSAGES/gdbm.mo 5b4944ecb4a227c48acc4789a7d00613 1757266127
+dir /usr/share/locale/uk
+dir /usr/share/locale/uk/LC_MESSAGES
+obj /usr/share/locale/uk/LC_MESSAGES/gdbm.mo ccafa6342d69be9945d05e8358fe5fb5 1757266127
+dir /usr/share/locale/vi
+dir /usr/share/locale/vi/LC_MESSAGES
+obj /usr/share/locale/vi/LC_MESSAGES/gdbm.mo 806a279e59b096d8d6b5f6de7ed942a9 1757266127
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/gdbm_dump.1.bz2 6b55ffb78273da4794276218f6917248 1757266127
+obj /usr/share/man/man1/gdbm_load.1.bz2 24bf9e2c359c1fadade7cee58b1c0ed7 1757266127
+obj /usr/share/man/man1/gdbmtool.1.bz2 3cf730360affc7e56ad2853398a58930 1757266127
+dir /usr/share/man/man3
+obj /usr/share/man/man3/gdbm.3.bz2 707a1ff6089cb93903ba015c0bdd1187 1757266127
+sym /usr/lib64/libgdbm_compat.so.4 -> libgdbm_compat.so.4.0.0 1789354110
+sym /usr/lib64/libgdbm_compat.so -> libgdbm_compat.so.4.0.0 1789354110
+sym /usr/lib64/libgdbm.so.6 -> libgdbm.so.6.0.0 1789354110
+sym /usr/lib64/libgdbm.so -> libgdbm.so.6.0.0 1789354110

@@ -1,0 +1,123 @@
+dir /usr
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/gnulib-l10n-20241231
+obj /usr/share/doc/gnulib-l10n-20241231/README e622ec6f9a5f632e745989fe58ec3b3b 1746204755
+dir /usr/share/locale
+dir /usr/share/locale/af
+dir /usr/share/locale/af/LC_MESSAGES
+obj /usr/share/locale/af/LC_MESSAGES/gnulib.mo 149f220f6ce91f207942a142cd936ed2 1746204755
+dir /usr/share/locale/be
+dir /usr/share/locale/be/LC_MESSAGES
+obj /usr/share/locale/be/LC_MESSAGES/gnulib.mo dff7aa6e7fff6b35500a8eda16591f6d 1746204755
+dir /usr/share/locale/bg
+dir /usr/share/locale/bg/LC_MESSAGES
+obj /usr/share/locale/bg/LC_MESSAGES/gnulib.mo 644aecd79b1054596255e16658d74bff 1746204755
+dir /usr/share/locale/ca
+dir /usr/share/locale/ca/LC_MESSAGES
+obj /usr/share/locale/ca/LC_MESSAGES/gnulib.mo 100c0a79e2dda88089d8d10732d856a9 1746204755
+dir /usr/share/locale/cs
+dir /usr/share/locale/cs/LC_MESSAGES
+obj /usr/share/locale/cs/LC_MESSAGES/gnulib.mo 571bbafe70671aa0fae257782ecb926e 1746204755
+dir /usr/share/locale/da
+dir /usr/share/locale/da/LC_MESSAGES
+obj /usr/share/locale/da/LC_MESSAGES/gnulib.mo 04758893deccb7694c3a931825f42ad8 1746204755
+dir /usr/share/locale/de
+dir /usr/share/locale/de/LC_MESSAGES
+obj /usr/share/locale/de/LC_MESSAGES/gnulib.mo 0a86defbcf8411dbb291159b24fb45ca 1746204755
+dir /usr/share/locale/el
+dir /usr/share/locale/el/LC_MESSAGES
+obj /usr/share/locale/el/LC_MESSAGES/gnulib.mo 9b8f52b3924fc9434371ad803139e7e2 1746204755
+dir /usr/share/locale/eo
+dir /usr/share/locale/eo/LC_MESSAGES
+obj /usr/share/locale/eo/LC_MESSAGES/gnulib.mo ea51f3a173c337c12703edcf3e849a2a 1746204755
+dir /usr/share/locale/es
+dir /usr/share/locale/es/LC_MESSAGES
+obj /usr/share/locale/es/LC_MESSAGES/gnulib.mo 7e31201872b87ded65de0f67714f2805 1746204755
+dir /usr/share/locale/et
+dir /usr/share/locale/et/LC_MESSAGES
+obj /usr/share/locale/et/LC_MESSAGES/gnulib.mo c22c49386cab0b2fc033fe078693ac53 1746204755
+dir /usr/share/locale/eu
+dir /usr/share/locale/eu/LC_MESSAGES
+obj /usr/share/locale/eu/LC_MESSAGES/gnulib.mo 42fd41b31e9f4e7f4a6bbc1703a5b243 1746204755
+dir /usr/share/locale/fi
+dir /usr/share/locale/fi/LC_MESSAGES
+obj /usr/share/locale/fi/LC_MESSAGES/gnulib.mo 6e283ed77a9f58d41fe08c0f5a49b023 1746204755
+dir /usr/share/locale/fr
+dir /usr/share/locale/fr/LC_MESSAGES
+obj /usr/share/locale/fr/LC_MESSAGES/gnulib.mo c4defc776c90f1aaeaacbab0aa134650 1746204755
+dir /usr/share/locale/ga
+dir /usr/share/locale/ga/LC_MESSAGES
+obj /usr/share/locale/ga/LC_MESSAGES/gnulib.mo 41dc5a2a7ef90757ebafc4de3e2fb7b3 1746204755
+dir /usr/share/locale/gl
+dir /usr/share/locale/gl/LC_MESSAGES
+obj /usr/share/locale/gl/LC_MESSAGES/gnulib.mo 3fe560381cce9291ce2d753d63bca942 1746204755
+dir /usr/share/locale/hu
+dir /usr/share/locale/hu/LC_MESSAGES
+obj /usr/share/locale/hu/LC_MESSAGES/gnulib.mo 97d1ee160c0dddfb1d1b4edcd139ff14 1746204755
+dir /usr/share/locale/it
+dir /usr/share/locale/it/LC_MESSAGES
+obj /usr/share/locale/it/LC_MESSAGES/gnulib.mo 9d90cba4eb9b76e4fde7e487ccb89e44 1746204755
+dir /usr/share/locale/ja
+dir /usr/share/locale/ja/LC_MESSAGES
+obj /usr/share/locale/ja/LC_MESSAGES/gnulib.mo fbe0ade86d5121be571e2be3ab981a6f 1746204755
+dir /usr/share/locale/ka
+dir /usr/share/locale/ka/LC_MESSAGES
+obj /usr/share/locale/ka/LC_MESSAGES/gnulib.mo e493b8068a314413cb25b3b1f852d91b 1746204755
+dir /usr/share/locale/ko
+dir /usr/share/locale/ko/LC_MESSAGES
+obj /usr/share/locale/ko/LC_MESSAGES/gnulib.mo 09f64844353f3bf530c07556442e75b8 1746204755
+dir /usr/share/locale/ms
+dir /usr/share/locale/ms/LC_MESSAGES
+obj /usr/share/locale/ms/LC_MESSAGES/gnulib.mo e0d9158c8d72001ac948217dd5b93995 1746204755
+dir /usr/share/locale/nb
+dir /usr/share/locale/nb/LC_MESSAGES
+obj /usr/share/locale/nb/LC_MESSAGES/gnulib.mo 5bd6cba9302ce82217c4f8712713e927 1746204755
+dir /usr/share/locale/nl
+dir /usr/share/locale/nl/LC_MESSAGES
+obj /usr/share/locale/nl/LC_MESSAGES/gnulib.mo 20778068554421fbcbac1310223538dc 1746204755
+dir /usr/share/locale/pl
+dir /usr/share/locale/pl/LC_MESSAGES
+obj /usr/share/locale/pl/LC_MESSAGES/gnulib.mo 6b38f02b139e2b7ca5a1d7c796882930 1746204755
+dir /usr/share/locale/pt
+dir /usr/share/locale/pt/LC_MESSAGES
+obj /usr/share/locale/pt/LC_MESSAGES/gnulib.mo 8abe394ca6501206588888001f407418 1746204755
+dir /usr/share/locale/pt_BR
+dir /usr/share/locale/pt_BR/LC_MESSAGES
+obj /usr/share/locale/pt_BR/LC_MESSAGES/gnulib.mo 70ba7db7b4fc1c529dd024d5a57bba01 1746204755
+dir /usr/share/locale/ro
+dir /usr/share/locale/ro/LC_MESSAGES
+obj /usr/share/locale/ro/LC_MESSAGES/gnulib.mo e2c0da46f0c2c981e788d4368b541149 1746204755
+dir /usr/share/locale/ru
+dir /usr/share/locale/ru/LC_MESSAGES
+obj /usr/share/locale/ru/LC_MESSAGES/gnulib.mo 6ecf20786c408c73089c0067958fdee3 1746204755
+dir /usr/share/locale/rw
+dir /usr/share/locale/rw/LC_MESSAGES
+obj /usr/share/locale/rw/LC_MESSAGES/gnulib.mo de8c93714e02f84af5dc6ea4e5d6ec58 1746204755
+dir /usr/share/locale/sk
+dir /usr/share/locale/sk/LC_MESSAGES
+obj /usr/share/locale/sk/LC_MESSAGES/gnulib.mo 16967faf8a237b10f2431bbe1c615eec 1746204755
+dir /usr/share/locale/sl
+dir /usr/share/locale/sl/LC_MESSAGES
+obj /usr/share/locale/sl/LC_MESSAGES/gnulib.mo ce6f902faa181181bce6f5784a95a116 1746204755
+dir /usr/share/locale/sr
+dir /usr/share/locale/sr/LC_MESSAGES
+obj /usr/share/locale/sr/LC_MESSAGES/gnulib.mo 10e4cc36b128475aa95c70875d2a7919 1746204755
+dir /usr/share/locale/sv
+dir /usr/share/locale/sv/LC_MESSAGES
+obj /usr/share/locale/sv/LC_MESSAGES/gnulib.mo 141ec1df526230690cfd0f951832095c 1746204755
+dir /usr/share/locale/tr
+dir /usr/share/locale/tr/LC_MESSAGES
+obj /usr/share/locale/tr/LC_MESSAGES/gnulib.mo fa3f271cdb300c083bfb2ac35a282ec1 1746204755
+dir /usr/share/locale/uk
+dir /usr/share/locale/uk/LC_MESSAGES
+obj /usr/share/locale/uk/LC_MESSAGES/gnulib.mo 90dca174adced766ea1a2e297fe67b88 1746204755
+dir /usr/share/locale/vi
+dir /usr/share/locale/vi/LC_MESSAGES
+obj /usr/share/locale/vi/LC_MESSAGES/gnulib.mo bbe31a5d0c25fcbf7c739b316e9fc1ad 1746204755
+dir /usr/share/locale/zh_CN
+dir /usr/share/locale/zh_CN/LC_MESSAGES
+obj /usr/share/locale/zh_CN/LC_MESSAGES/gnulib.mo 7604035b4ecc41c5c5cb610f187e0410 1746204755
+dir /usr/share/locale/zh_TW
+dir /usr/share/locale/zh_TW/LC_MESSAGES
+obj /usr/share/locale/zh_TW/LC_MESSAGES/gnulib.mo 2e933ac4a6a819fc64d20d77df2a7766 1746204755

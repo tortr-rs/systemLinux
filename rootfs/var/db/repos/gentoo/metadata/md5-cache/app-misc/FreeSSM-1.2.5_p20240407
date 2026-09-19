@@ -1,0 +1,15 @@
+BDEPEND=dev-qt/qttools:6[linguist]
+DEFINED_PHASES=compile configure install
+DEPEND=dev-qt/qtbase:6[gui,widgets] media-libs/libglvnd
+DESCRIPTION=Free and easy to use diagnostic and adjustment tool for SUBARU vehicles
+EAPI=8
+HOMEPAGE=https://github.com/Comer352L/FreeSSM
+INHERIT=qmake-utils desktop
+IUSE=small-resolution
+KEYWORDS=~amd64
+LICENSE=GPL-3
+RDEPEND=dev-qt/qtbase:6[gui,widgets] media-libs/libglvnd
+SLOT=0
+SRC_URI=https://github.com/Comer352L/FreeSSM/archive/1a0fa0934581b3383adfd2722050503695ca9dab.tar.gz -> FreeSSM-1.2.5_p20240407.tar.gz
+_eclasses_=desktop	e447b5f77146d69797e9f03ff177f3f1	qmake-utils	cc0baf4385fb880725ae334ce289b70f	qt-utils	5b7ae92788820ab4495683740521513c	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=c8505c3b4406cf07f2bd517e4cfd1cc8

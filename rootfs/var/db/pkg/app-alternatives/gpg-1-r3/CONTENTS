@@ -1,0 +1,13 @@
+dir /usr
+dir /usr/bin
+sym /usr/bin/gpg -> gpg-reference 1789354044
+sym /usr/bin/gpg2 -> gpg 1789354044
+sym /usr/bin/gpgv -> gpgv-reference 1789354044
+sym /usr/bin/gpgv2 -> gpgv 1789354044
+dir /usr/share
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/gpg.1 080e62b39a395b5a77be67d5aca3915a 1767534699
+obj /usr/share/man/man1/gpg2.1 d7c20aaf9cc1cbd07b006a8666eec4fd 1767534699
+obj /usr/share/man/man1/gpgv.1 1ee103c23f390a91c06fb03bc439a5b7 1767534699
+obj /usr/share/man/man1/gpgv2.1 0e261dcd4193df52172d2af3708a7a45 1767534699

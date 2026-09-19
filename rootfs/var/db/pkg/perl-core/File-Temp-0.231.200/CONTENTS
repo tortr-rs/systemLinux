@@ -1,0 +1,17 @@
+dir /usr
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/File-Temp-0.231.200
+obj /usr/share/doc/File-Temp-0.231.200/README.bz2 1055d3fc86de605bc95824f0affff51a 1789851363
+obj /usr/share/doc/File-Temp-0.231.200/Changes.bz2 f76319028f3561654e3a8bc4bda7615d 1789851363
+dir /usr/lib64
+dir /usr/lib64/perl5
+dir /usr/lib64/perl5/vendor_perl
+dir /usr/lib64/perl5/vendor_perl/5.44
+dir /usr/lib64/perl5/vendor_perl/5.44/x86_64-linux
+dir /usr/lib64/perl5/vendor_perl/5.44/x86_64-linux/auto
+dir /usr/lib64/perl5/vendor_perl/5.44/x86_64-linux/auto/File
+dir /usr/lib64/perl5/vendor_perl/5.44/x86_64-linux/auto/File/Temp
+obj /usr/lib64/perl5/vendor_perl/5.44/x86_64-linux/auto/File/Temp/.packlist 4a50f48ead7c0ba2f086447376f3f3b0 1789851363
+dir /usr/lib64/perl5/vendor_perl/5.44/File
+obj /usr/lib64/perl5/vendor_perl/5.44/File/Temp.pm dea4fdcd389330ec130d107822d0151a 1789851363

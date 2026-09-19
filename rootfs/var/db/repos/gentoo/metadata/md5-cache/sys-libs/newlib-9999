@@ -1,0 +1,13 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install setup unpack
+DESCRIPTION=Newlib is a C library intended for use on embedded systems
+EAPI=8
+HOMEPAGE=https://sourceware.org/newlib/
+INHERIT=dot-a flag-o-matic toolchain-funcs git-r3
+IUSE=nls threads unicode headers-only nano
+LICENSE=NEWLIB LIBGLOSS GPL-2
+PROPERTIES=live
+RESTRICT=strip
+SLOT=0
+_eclasses_=dot-a	e5200fe17cfd2ed6fa66edd80201763a	flag-o-matic	fd3558f73f6503093adee69adf41020d	git-r3	e6c2f983e006e805160436c75a0c1562	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=478dd875bacb3677663f6e101388e16a

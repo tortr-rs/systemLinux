@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install
+DEPEND=net-libs/libnet:1.1 net-libs/libpcap
+DESCRIPTION=Library of Ethernet, IP, UDP, TCP, ICMP, ARP and RARP protocols
+EAPI=8
+HOMEPAGE=https://ntwib.sourceforge.net/
+INHERIT=dot-a toolchain-funcs
+IUSE=doc
+KEYWORDS=~amd64 ~hppa ~ppc x86
+LICENSE=GPL-3
+RDEPEND=net-libs/libnet:1.1 net-libs/libpcap
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/ntwib/netwib-5.39.0-src.tgz doc? ( https://downloads.sourceforge.net/ntwib/netwib-5.39.0-doc_html.tgz )
+_eclasses_=dot-a	e5200fe17cfd2ed6fa66edd80201763a	flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=5c590368dfc2c86ddb67031c085b8ac4

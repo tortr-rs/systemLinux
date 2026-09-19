@@ -1,0 +1,1 @@
+|| ( dev-lang/python:3.14 dev-lang/python:3.13 dev-lang/python:3.12 ) app-text/xmlto app-text/docbook-xml-dtd:4.4 acct-user/messagebus dev-build/autoconf-archive virtual/pkgconfig >=dev-build/meson-1.2.3 app-alternatives/ninja dev-build/meson-format-array virtual/pkgconfig

@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure postinst prepare
+DEPEND=x11-libs/libX11 xrender? ( x11-libs/libXrender )
+DESCRIPTION=A Pager for fluxbox
+EAPI=7
+HOMEPAGE=http://git.fluxbox.org/fbpager.git/
+INHERIT=flag-o-matic
+IUSE=+xrender
+KEYWORDS=amd64 ~mips ppc ~sparc x86
+LICENSE=MIT
+RDEPEND=x11-libs/libX11 xrender? ( x11-libs/libXrender )
+SLOT=0
+SRC_URI=mirror://gentoo/fbpager-20090221.tar.bz2
+_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=246e8c014ab97f48720d888fd903df03

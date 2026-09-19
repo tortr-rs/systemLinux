@@ -1,0 +1,15 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=configure unpack
+DEPEND=app-arch/zstd:= dev-libs/libatomic_ops >=dev-libs/libuv-1.26:= dev-libs/libffi:= dev-lang/perl clang? ( >=llvm-core/clang-3.1 )
+DESCRIPTION=A 6model-based VM for NQP and Raku
+EAPI=8
+HOMEPAGE=http://moarvm.org
+INHERIT=edo git-r3
+IUSE=asan clang debug doc +jit optimize static-libs ubsan
+LICENSE=Artistic-2
+PROPERTIES=live
+RDEPEND=app-arch/zstd:= dev-libs/libatomic_ops >=dev-libs/libuv-1.26:= dev-libs/libffi:=
+RESTRICT=test
+SLOT=0
+_eclasses_=edo	a5e294016aa84979fcb2459749eb80b2	git-r3	e6c2f983e006e805160436c75a0c1562
+_md5_=592c76b44ba4abc3d2e3b401316e4b9e

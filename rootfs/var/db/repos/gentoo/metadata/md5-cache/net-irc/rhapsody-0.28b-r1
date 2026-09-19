@@ -1,0 +1,14 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=configure install
+DEPEND=>=sys-libs/ncurses-5.0:0=
+DESCRIPTION=IRC client intended to be displayed on a text console
+EAPI=8
+HOMEPAGE=https://rhapsody.sourceforge.net/
+INHERIT=toolchain-funcs
+KEYWORDS=amd64 ~riscv x86
+LICENSE=GPL-2
+RDEPEND=>=sys-libs/ncurses-5.0:0=
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/project/rhapsody/rhapsody/Rhapsody%20IRC%200.28b/rhapsody_0.28b.tgz
+_eclasses_=toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=3e13e027ff1dff62327129627fbcc3aa

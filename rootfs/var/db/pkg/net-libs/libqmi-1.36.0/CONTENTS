@@ -1,0 +1,98 @@
+dir /usr
+dir /usr/src
+dir /usr/libexec
+obj /usr/libexec/qmi-proxy 866652b53f40f38425029cbb0acff0ff 1780389580
+dir /usr/share
+dir /usr/share/bash-completion
+dir /usr/share/bash-completion/completions
+obj /usr/share/bash-completion/completions/qmicli 3e03eababb36a7a3e7f73557ff5fe72d 1780389578
+dir /usr/share/doc
+dir /usr/share/doc/libqmi-1.36.0
+obj /usr/share/doc/libqmi-1.36.0/NEWS.bz2 c6d9d4e06e905596ef3fc4d361bfcb49 1780389578
+obj /usr/share/doc/libqmi-1.36.0/ChangeLog e33a32d05a11ef6a3747827b9c10401c 1780389578
+obj /usr/share/doc/libqmi-1.36.0/TODO.bz2 be47e35c2f6e559195fe5db3aeea0e85 1780389578
+obj /usr/share/doc/libqmi-1.36.0/README.md.bz2 e906a0274c004743b64c8c83a6553b82 1780389577
+obj /usr/share/doc/libqmi-1.36.0/AUTHORS.bz2 9a1cd1ce32a03c699835b5aef1f8a409 1780389578
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/qmi-firmware-update.1.bz2 3511d5c6954f3cb6b37cf9fa2706ad58 1780389575
+obj /usr/share/man/man1/qmi-network.1.bz2 c1925a18ed97ac39b0f617f5a4443d69 1780389544
+obj /usr/share/man/man1/qmicli.1.bz2 d129a40951cb0583236d11125bc19df1 1780389575
+dir /usr/lib64
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/qmi-glib.pc 8212366bad2093d59436c2f6e637ef86 1780389543
+obj /usr/lib64/libqmi-glib.so.5.11.0 660b839672a97c0f191a5d4a1813abc9 1780389581
+dir /usr/bin
+obj /usr/bin/qmi-network 8370f1bf14b3df8a5fbab995247375d9 1780389543
+obj /usr/bin/qmicli a8b8de727753647031ff0c097d7043ee 1780389580
+obj /usr/bin/qmi-firmware-update 073bacb306965a603adfc6fed8239081 1780389580
+dir /usr/include
+dir /usr/include/libqmi-glib
+obj /usr/include/libqmi-glib/qmi-enums-dms.h 6a72c3c10f2246c2170682427d5c46cf 1744171042
+obj /usr/include/libqmi-glib/qmi-version.h 1da5e23ac16165fb1e437bfcf9023409 1780389543
+obj /usr/include/libqmi-glib/qmi-enums-wda.h 4bf48f62ec0d6edd3c72008209eb4569 1744171042
+obj /usr/include/libqmi-glib/qmi-error-types.h b90085b1a5936011af20ab55a72c3773 1780389544
+obj /usr/include/libqmi-glib/qmi-enum-types.h d2714aa80d89c0ebc718bcfd2fdefe93 1780389544
+obj /usr/include/libqmi-glib/qmi-enums-pdc.h 3f3c7b197bbe9ac50d0076e7eb5928ec 1744171042
+obj /usr/include/libqmi-glib/qmi-wda.h d49d5ecf1e2a6c55b45341914991e118 1780389544
+obj /usr/include/libqmi-glib/qmi-message.h c53572aa5b6047895fc396bca17e2aa7 1744171042
+obj /usr/include/libqmi-glib/qmi-errors.h 6c96ec106222e5235dc470801358a590 1744171042
+obj /usr/include/libqmi-glib/qmi-enums-gas.h 4be2bf3ba17529586eb27078284c1dd7 1744171042
+obj /usr/include/libqmi-glib/libqmi-glib.h 5030d45154782f37ec41276f76a6917f 1744171042
+obj /usr/include/libqmi-glib/qmi-pdc.h 10844179e2e50648366ac747b08c8b8d 1780389544
+obj /usr/include/libqmi-glib/qmi-ssc.h bfccdeeb4f6622da7c58fa300f7a7568 1780389544
+obj /usr/include/libqmi-glib/qmi-flags64-dms.h c74c0d612ee2e856283e5b9c30545cd2 1744171042
+obj /usr/include/libqmi-glib/qmi-enums-pds.h 1dd0cd28f00ceb546653f85a4411707d 1744171042
+obj /usr/include/libqmi-glib/qmi-enums.h 0c338d68fa613c2d9a1ad081457feffe 1744171042
+obj /usr/include/libqmi-glib/qmi-enums-voice.h d359a0995ae65ba4a91e13686f17dbe0 1744171042
+obj /usr/include/libqmi-glib/qmi-enums-uim.h dbe36948f22a71f8a4a6c68109ee849a 1744171042
+obj /usr/include/libqmi-glib/qmi-flags64-loc.h 2e982cc0a845060625d557cbac49e16a 1744171042
+obj /usr/include/libqmi-glib/qmi-fox.h 14753672439313170defa67bac8e0d86 1780389544
+obj /usr/include/libqmi-glib/qmi-enums-wds.h 6714337d69d9f9f7e670ffe9a23be2bf 1744171042
+obj /usr/include/libqmi-glib/qmi-imsa.h f8a55290bbe55cb280ae4ec462baea8d 1780389544
+obj /usr/include/libqmi-glib/qmi-enums-pbm.h 1cc03f4d19bf1049f407c9d4730da0cc 1744171042
+obj /usr/include/libqmi-glib/qmi-enums-wms.h 97261954a7bac773197fbcd349fe1772 1744171042
+obj /usr/include/libqmi-glib/qmi-dms.h 24ccb263ca2466eadab6dd2765222c9d 1780389544
+obj /usr/include/libqmi-glib/qmi-enums-dsd.h bc885196fd7f5dd5003079df822a9bba 1744171042
+obj /usr/include/libqmi-glib/qmi-imsp.h e63373f3c3df579cbbcecccd468a6363 1780389544
+obj /usr/include/libqmi-glib/qmi-flags64-nas.h 49e962d8f11001f9327966c76276bae2 1744171042
+obj /usr/include/libqmi-glib/qmi-uim.h cc459b21f7db760a916055d9afe95d08 1780389544
+obj /usr/include/libqmi-glib/qmi-nas.h 9e22a2dd72529f2bb1c1eb9a4714b5d4 1780389544
+obj /usr/include/libqmi-glib/qmi-voice.h 3379c4d6ccc92c89fd95df7b0c46daf7 1780389544
+obj /usr/include/libqmi-glib/qmi-atr.h 2af21518786542f8e84b63c7f51fd3e0 1780389544
+obj /usr/include/libqmi-glib/qmi-flags64-dsd.h d6eeab5817be8cdb954b25260e3818ff 1744171042
+obj /usr/include/libqmi-glib/qmi-pds.h 7eb3bcf1dbe1bf95541df779690459b2 1780389544
+obj /usr/include/libqmi-glib/qmi-proxy.h 8c623750be4d925e44e149f39a0b6a6b 1744171042
+obj /usr/include/libqmi-glib/qmi-utils.h def0cf9a7c9426c4657571eb01220719 1744171042
+obj /usr/include/libqmi-glib/qmi-compat.h 38c527d2d9898431b3e0efaf28be76b5 1744171042
+obj /usr/include/libqmi-glib/qmi-dsd.h 26731147e734094a443867606812f95b 1780389544
+obj /usr/include/libqmi-glib/qmi-sar.h e831de5b89b6e841521708e5947128d8 1780389544
+obj /usr/include/libqmi-glib/qmi-enums-imsa.h 811bda0e0bc351f17dcdeaec43a9b3c5 1744171042
+obj /usr/include/libqmi-glib/qmi-enums-ssc.h 0dfe870f694b4da795ba49b7b6fddf7c 1744171042
+obj /usr/include/libqmi-glib/qmi-enums-imsp.h 71387fe47d048eefef2bce49ece01435 1744171042
+obj /usr/include/libqmi-glib/qmi-flag-types.h 7d87283c70675b1d1001f59d6cd903ca 1780389544
+obj /usr/include/libqmi-glib/qmi-wms.h a0f29b8e75540ce177cfcd5ebc5e2364 1780389544
+obj /usr/include/libqmi-glib/qmi-client.h 9e710995365c2839b852c8db8b6080ea 1744171042
+obj /usr/include/libqmi-glib/qmi-enums-loc.h b7421d0478cf74f8480981e993942e3b 1744171042
+obj /usr/include/libqmi-glib/qmi-oma.h 2fb9babb9ec93074fff6ef15fc4cc927 1780389544
+obj /usr/include/libqmi-glib/qmi-ims.h 7aca2757e6b542ea6d11a2c95fd45e47 1780389544
+obj /usr/include/libqmi-glib/qmi-message-context.h bc8af137dff2b55bc834235e89622a26 1744171042
+obj /usr/include/libqmi-glib/qmi-qos.h 9d784f62ebc001206ef6c717d82c1f13 1780389544
+obj /usr/include/libqmi-glib/qmi-device.h f58d6d124e9755dce62701527c67d135 1744171042
+obj /usr/include/libqmi-glib/qmi-enums-sar.h 08b65742030fded8a3d8f832170d3393 1744171042
+obj /usr/include/libqmi-glib/qmi-loc.h 339115908c1a3d3e0af746fdce9c2b39 1780389544
+obj /usr/include/libqmi-glib/qmi-wds.h ccda56d42153bf114aa3047def30f5a3 1780389544
+obj /usr/include/libqmi-glib/qmi-enums-oma.h 93086f0851902582f6da2ee1db9144c9 1744171042
+obj /usr/include/libqmi-glib/qmi-gms.h 72d75596c4fa2c7080b6c951b623e087 1780389544
+obj /usr/include/libqmi-glib/qmi-flags64-types.h 887cf71cab886c1df324d4036a7e79e4 1780389544
+obj /usr/include/libqmi-glib/qmi-pbm.h 4f3a795f21bce3e48bc408cae507ef5f 1780389544
+obj /usr/include/libqmi-glib/qmi-flags64-wds.h cc57a86f46d09c2b406260f40beae69c 1744171042
+obj /usr/include/libqmi-glib/qmi-gas.h 1306dc2c9a7671144834fd69a854cd89 1780389544
+obj /usr/include/libqmi-glib/qmi-enums-private.h 8d119f5eb84c6f08a05613b6783c446c 1744171042
+obj /usr/include/libqmi-glib/qmi-enums-nas.h d0c383edcccde68b27905e21ed1970b0 1744171042
+obj /usr/include/libqmi-glib/qmi-enums-fox.h fb1e0a33d462b621721bd71b43561ce8 1744171042
+obj /usr/include/libqmi-glib/qmi-enums-qos.h c1103e7f0a49c814421366218b2527ab 1744171042
+obj /usr/include/libqmi-glib/qmi-dpm.h 23894d9395cbc464be54a7e04f957f90 1780389544
+dir /usr/lib
+sym /usr/lib64/libqmi-glib.so.5 -> libqmi-glib.so.5.11.0 1789836513
+sym /usr/lib64/libqmi-glib.so -> libqmi-glib.so.5 1789836513

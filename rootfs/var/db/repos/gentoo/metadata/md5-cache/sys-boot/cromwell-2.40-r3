@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install postinst postrm preinst prepare prerm pretend
+DESCRIPTION=Xbox boot loader
+EAPI=7
+HOMEPAGE=http://www.xbox-linux.org/wiki/Cromwell
+INHERIT=mount-boot toolchain-funcs flag-o-matic
+KEYWORDS=-* x86
+LICENSE=GPL-2
+RESTRICT=strip
+SLOT=0
+SRC_URI=mirror://gentoo/cromwell-2.40.tar.bz2 mirror://gentoo/cromwell-2.40-r3-cvs-fixes.patch.lzma
+_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	mount-boot	2457686015a19b48bcaedc5f7cc19505	mount-boot-utils	2551bac1a772f4b6beacb494a750ae92	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=79e8680604d79390a1a44714b354dac5

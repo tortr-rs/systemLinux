@@ -1,0 +1,197 @@
+#!/bin/bash
+#
+# Copyright, the authors of the Linux man-pages project
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+set -Eefuo pipefail;
+
+
+# Defaults:
+t='no';
+t_e='no';
+t_fp='no';
+t_fd='no';
+t_flp='no';
+t_fld='no';
+t_fgp='no';
+t_fgd_libm='no';
+t_fgd_libio='no';
+t_mf='no';
+t_mo='no';
+t_t_braced='no';
+t_t_td_simple='no';
+t_t_td_braced='no';
+t_t_td_func='no';
+t_ue='no';
+t_uf_def='no';
+t_uf_linux_def='no';
+t_umf='no';
+t_umo='no';
+t_ut_su='no';
+t_ut_td_simple='no';
+
+
+grepc_err()
+{
+	>&2 printf '%s\n' "$(basename "$0"): error: $*";
+	exit 1;
+}
+
+
+while getopts "t:" opt; do
+	case "$opt" in
+	t)
+		case "$OPTARG" in
+		e)		t_e='yes';		;;&
+		f | fp)		t_fp='yes';		;;&
+		f | fd)		t_fd='yes';		;;&
+		f | fl | flp)	t_flp='yes';		;;&
+		f | fl | fld)	t_fld='yes';		;;&
+		f | fg | fgp)	t_fgp='yes';		;;&
+		f | fg | fgd)	t_fgd_libm='yes';
+				t_fgd_libio='yes';	;;&
+		m | mf)		t_mf='yes';		;;&
+		m | mo)		t_mo='yes';		;;&
+		t)		t_t_braced='yes';
+				t_t_td_simple='yes';
+				t_t_td_braced='yes';
+				t_t_td_func='yes';	;;&
+		u | ue)		t_ue='yes';		;;&
+		u | uf)		t_uf_def='yes';
+				t_uf_linux_def='yes';	;;&
+		u | um)		t_umf='yes';
+				t_umo='yes';		;;&
+		u | ut)		t_ut_su='yes';
+				t_ut_td_simple='yes';	;;&
+		[efmtu] | f[pdlg] | fl[pd] | fg[pd] | m[fo] | u[efmt])
+				t='yes';
+				;;
+		*)
+				grepc_err "-$opt: $OPTARG: Unknown argument.";
+				;;
+		esac;
+		;;
+	\? | *)
+		exit 1;
+		;;
+	esac;
+done;
+shift $((OPTIND-1));
+
+if test $# -lt 1; then
+	grepc_err "Missing identifier.";
+fi;
+identifier="$1";
+shift;
+
+if test $# -gt 0; then
+	grepc_err "$1: Unexpected argument.";
+fi;
+
+if test "$t" = 'no'; then
+	t_e='yes';
+	t_fp='yes';
+	t_fd='yes';
+	t_flp='yes';
+	t_fld='yes';
+	t_fgp='yes';
+	t_fgd_libm='yes';
+	t_fgd_libio='yes';
+	t_mf='yes';
+	t_mo='yes';
+	t_t_braced='yes';
+	t_t_td_simple='yes';
+	t_t_td_braced='yes';
+	t_t_td_func='yes';
+fi;
+
+
+grepc_c_t_sue_decl_()   { printf '%s' '(?s)^(?:[\w[](?:[\w\s\(,\)[\]*]|::)*[\w\s\)*\]]\s+)?\b(?:'"$1"')\b[\w \t[\]:]*(?<!\w)'"$2"'(?!\w)'; }
+grepc_c_f_return_()     { printf '%s' '(?s)^[\w[](?:[\w\s\(,\)[\]*]|::)+[\w\s\)*\]]\s+\**'; }
+grepc_c_f_params_()     { printf '%s' '\s*(?<params>\((?:[\w\s,;[\]*\?:+-]|(?&params))*(?:\.\.\.)?\))'; }
+grepc_c_f_decl_()       { grepc_c_f_return_;
+                          printf '%s' '\(?'"$1"'\)?';
+                          grepc_c_f_params_; }
+grepc_c_body_()         { printf '%s' '[ \t]*\n*(?<space>[ \t]*){.*?^\k<space>}'; }
+grepc_c_u_body_()       { printf '%s' '[ \t]*\n*(?<space>[ \t]*){(?:(?!^\k<space>?}).)*'"$1"'.*?^\k<space>}'; }
+grepc_c_fld_decl_()     { printf '%s' '(?s)^(?:COMPAT_)?SYSCALL_DEFINE.\('"$1"'\b[\w\s,;[\]*\?:+-]*\)'; }
+grepc_c_m_decl_()       { printf '%s' '(?s)^[ \t]*#\s*define\s[\s\\]*'"$1"'\b'; }
+grepc_c_mf_decl_()      { grepc_c_m_decl_ "$1";
+                          printf '%s' '\([^\(]*\)'; }
+grepc_c_mo_decl_()      { grepc_c_m_decl_ "$1";
+                          printf '%s' '(?!\()'; }
+grepc_c_m_repl_()       { printf '%s' '(?:(?![^\\]$).)*'"$1"'.*?(?<!\\)$'; }
+
+
+grepc_c_e()             { grepc_c_t_sue_decl_ 'enum' '';
+                          grepc_c_u_body_ '^[ \t]*'"$1"'\b\s*[=,]';
+                          echo '[^;]*;'; }
+grepc_c_fp()            { grepc_c_f_decl_ "$1";
+                          echo '(?:[\w\s\(,\)[\]]|::)*;'; }
+grepc_c_fd()            { grepc_c_f_decl_ "$1";
+                          grepc_c_body_;
+                          echo; }
+grepc_c_fgd_libm()      { grepc_c_fd "M_DECL_FUNC \(__$1\)"; }
+grepc_c_fgd_libio()     { grepc_c_fd "_IO_$1"; }
+grepc_c_fgp_libio()     { grepc_c_fp "_IO_$1"; }
+grepc_c_fgp()           { grepc_c_fgp_libio "$1"; }
+grepc_c_flp()           { grepc_c_fp "(?:compat_)?sys_$1"; }
+grepc_c_fld()           { grepc_c_fld_decl_ "$1";
+                          grepc_c_body_;
+                          echo; }
+grepc_c_mf()            { grepc_c_mf_decl_ "$1";
+                          grepc_c_m_repl_ '';
+                          echo; }
+grepc_c_mo()            { grepc_c_mo_decl_ "$1";
+                          grepc_c_m_repl_ '';
+                          echo; }
+grepc_c_t_braced()      { grepc_c_t_sue_decl_ 'struct|union|enum' "$1";
+                          grepc_c_body_;
+                          echo '[^;]*;'; }
+grepc_c_t_td_simple()   { echo '(?s)^[ \t]*typedef\s+[^{};]+\b'"$1"';'; }
+grepc_c_t_td_braced()   { printf '%s' '(?s)^[ \t]*typedef\s+(?:struct|union|enum)\b[\w \t[\]:]*';
+                          grepc_c_body_;
+                          echo '\s*'"$1"'(?:\[[\w\(,\)]\])*;'; }
+grepc_c_t_td_func()     { echo '(?s)^[ \t]*typedef\s+[^{};]+\(\**'"$1"'\)\s*\([^{};]+;'; }
+grepc_c_ue()            { grepc_c_t_sue_decl_ 'enum' '';
+                          grepc_c_u_body_ "$1";
+                          echo '[^;]*;'; }
+grepc_c_uf_def()        { grepc_c_f_decl_ '\w+';
+                          grepc_c_u_body_ "$1";
+                          echo; }
+grepc_c_uf_linux_def()  { grepc_c_fld_decl_ '\w+';
+                          grepc_c_u_body_ "$1";
+                          echo; }
+grepc_c_umf()           { grepc_c_mf_decl_ '\w+'
+                          grepc_c_m_repl_ "$1";
+                          echo; }
+grepc_c_umo()           { grepc_c_mo_decl_ '\w+'
+                          grepc_c_m_repl_ "$1";
+                          echo; }
+grepc_c_ut_su()         { grepc_c_t_sue_decl_ 'struct|union' '';
+                          grepc_c_u_body_ "$1";
+                          echo '[^;]*;'; }
+grepc_c_ut_td_simple()  { echo '(?s)^[ \t]*typedef\s+[^{};]*'"$1"'[^{};]+;'; }
+
+
+if test "$t_e" = yes;             then grepc_c_e "$identifier";             fi;
+if test "$t_fp" = yes;            then grepc_c_fp "$identifier";            fi;
+if test "$t_fd" = yes;            then grepc_c_fd "$identifier";            fi;
+if test "$t_flp" = yes;           then grepc_c_flp "$identifier";           fi;
+if test "$t_fld" = yes;           then grepc_c_fld "$identifier";           fi;
+if test "$t_fgp" = yes;           then grepc_c_fgp "$identifier";           fi;
+if test "$t_fgd_libm" = yes;      then grepc_c_fgd_libm "$identifier";      fi;
+if test "$t_fgd_libio" = yes;     then grepc_c_fgd_libio "$identifier";     fi;
+if test "$t_mf" = yes;            then grepc_c_mf "$identifier";            fi;
+if test "$t_mo" = yes;            then grepc_c_mo "$identifier";            fi;
+if test "$t_t_braced" = yes;      then grepc_c_t_braced "$identifier";      fi;
+if test "$t_t_td_simple" = yes;   then grepc_c_t_td_simple "$identifier";   fi;
+if test "$t_t_td_braced" = yes;   then grepc_c_t_td_braced "$identifier";   fi;
+if test "$t_t_td_func" = yes;     then grepc_c_t_td_func "$identifier";     fi;
+if test "$t_ue" = yes;            then grepc_c_ue "$identifier";            fi;
+if test "$t_uf_def" = yes;        then grepc_c_uf_def "$identifier";        fi;
+if test "$t_uf_linux_def" = yes;  then grepc_c_uf_linux_def "$identifier";  fi;
+if test "$t_umf" = yes;           then grepc_c_umf "$identifier";           fi;
+if test "$t_umo" = yes;           then grepc_c_umo "$identifier";           fi;
+if test "$t_ut_su" = yes;         then grepc_c_ut_su "$identifier";         fi;
+if test "$t_ut_td_simple" = yes;  then grepc_c_ut_td_simple "$identifier";  fi;

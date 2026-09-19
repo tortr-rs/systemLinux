@@ -1,0 +1,14 @@
+BDEPEND=>=sys-libs/ncurses-5.2:= dev-libs/libnl:= >=dev-libs/popt-1.16 virtual/pkgconfig
+DEFINED_PHASES=compile install postinst prepare pretend setup
+DESCRIPTION=utility to administer the IP virtual server services
+EAPI=8
+HOMEPAGE=http://linuxvirtualserver.org/
+INHERIT=linux-info toolchain-funcs
+IUSE=static-libs
+KEYWORDS=amd64 ~ppc ppc64 ~s390 ~sparc x86
+LICENSE=GPL-2
+RDEPEND=>=sys-libs/ncurses-5.2:= dev-libs/libnl:= >=dev-libs/popt-1.16
+SLOT=0
+SRC_URI=https://kernel.org/pub/linux/utils/kernel/ipvsadm/ipvsadm-1.31.tar.xz
+_eclasses_=linux-info	efd923656513c879204fec6638eadee5	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=cc0d8b8641e9bff8f8a982ed860a4c94

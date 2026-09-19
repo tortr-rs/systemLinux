@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install
+DEPEND=media-libs/libsdl[sound,video] virtual/zlib:=
+DESCRIPTION=Networked Puzzle Bubble clone
+EAPI=9
+HOMEPAGE=http://freshmeat.net/projects/pengupop
+INHERIT=desktop
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3+
+RDEPEND=media-libs/libsdl[sound,video] virtual/zlib:=
+SLOT=0
+SRC_URI=mirror://gentoo/pengupop-2.2.5.tar.gz
+_eclasses_=desktop	e447b5f77146d69797e9f03ff177f3f1
+_md5_=121a2bc6b499f108f59a9b78d635bd2a

@@ -1,0 +1,2 @@
+/bin/kmod libzstd.so.1,liblzma.so.5,libz.so.1,libc.so.6
+/usr/lib64/libkmod.so.2.5.1 libzstd.so.1,liblzma.so.5,libz.so.1,libc.so.6

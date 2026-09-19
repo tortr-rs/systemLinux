@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst postrm
+DESCRIPTION=Firmware and config for atmel and atmel_cs wlan drivers included in linux 2.6
+EAPI=8
+HOMEPAGE=https://www.thekelleys.org.uk/atmel/
+INHERIT=toolchain-funcs
+IUSE=pcmcia usb
+KEYWORDS=amd64 ~ppc x86
+LICENSE=Atmel
+RDEPEND=>=net-wireless/wireless-tools-26-r1 pcmcia? ( sys-apps/pcmciautils )
+SLOT=0
+SRC_URI=https://www.thekelleys.org.uk/atmel/atmel-firmware-1.3.tar.gz
+_eclasses_=toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=df2591e9f1774080d6e86f01f28cebfc

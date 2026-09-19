@@ -1,0 +1,11 @@
+DEFINED_PHASES=configure install
+DESCRIPTION=An alternative to the FLAC reference encoder
+EAPI=8
+HOMEPAGE=https://flake-enc.sourceforge.net
+INHERIT=dot-a toolchain-funcs
+KEYWORDS=amd64 x86
+LICENSE=LGPL-2.1
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/flake-enc/flake-0.11.tar.bz2
+_eclasses_=dot-a	e5200fe17cfd2ed6fa66edd80201763a	flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=17b649ccff7f4939f2824b3a19ee6754

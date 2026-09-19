@@ -1,0 +1,15 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/c89 9b076ae5554a1f6297993e21f8e62918 1764527017
+obj /usr/bin/c99 a7daa355e58a8b2cd78a7b3ca8757853 1764527017
+obj /usr/bin/gcc-config f839457810007c1a43caf807aea2a060 1764527017
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/gcc-config-2.12.2
+obj /usr/share/doc/gcc-config-2.12.2/README.md.bz2 645fee8794a6ee3cb70f6380910b2284 1764527017
+dir /usr/share/eselect
+dir /usr/share/eselect/modules
+obj /usr/share/eselect/modules/gcc.eselect 6eb56efe3ccda05d10731a9c987b1cd5 1764527017
+dir /usr/share/gcc-config
+obj /usr/share/gcc-config/c89 9b076ae5554a1f6297993e21f8e62918 1764527017
+obj /usr/share/gcc-config/c99 a7daa355e58a8b2cd78a7b3ca8757853 1764527017

@@ -1,0 +1,8 @@
+dir /usr
+dir /usr/share
+dir /usr/share/eselect
+dir /usr/share/eselect/modules
+obj /usr/share/eselect/modules/rust.eselect 3bad4c78a9d5e20c3736f929dfae0c27 1789851624
+dir /usr/share/doc
+dir /usr/share/doc/eselect-rust-20210703
+obj /usr/share/doc/eselect-rust-20210703/README.md.bz2 c63e228fc8ee17e0304f30253fab6e44 1789851625

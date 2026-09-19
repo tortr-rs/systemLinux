@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install
+DESCRIPTION=Detect the content format of a disk or disk image
+EAPI=7
+HOMEPAGE=http://disktype.sourceforge.net/
+INHERIT=toolchain-funcs
+KEYWORDS=amd64 arm ppc ~sparc x86
+LICENSE=BSD
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/disktype/disktype-9.tar.gz
+_eclasses_=toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=e5bf07f819f1ada1397f2414db5f3bb6

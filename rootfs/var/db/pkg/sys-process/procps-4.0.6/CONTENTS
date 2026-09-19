@@ -1,0 +1,255 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/free b7823a9b4f0df007b3491ef98cb7276a 1775414909
+obj /usr/bin/hugetop 1e4b711f6dad29d04f85aeb7f48192da 1775414909
+obj /usr/bin/pgrep f33c09bdd27069d838ea49dd8109f728 1775414909
+obj /usr/bin/pidof 97b1e4753f69715edc288651c1f70adf 1775414909
+obj /usr/bin/pidwait f33c09bdd27069d838ea49dd8109f728 1775414909
+obj /usr/bin/pkill f33c09bdd27069d838ea49dd8109f728 1775414909
+obj /usr/bin/pmap 9bd1713d3f15ef51888a4c8fa4980c3f 1775414909
+obj /usr/bin/pwdx ee1b08ed676ce47bfeeec038fc961242 1775414909
+obj /usr/bin/slabtop 2f05729aad5307989859bbfbbef12a12 1775414909
+obj /usr/bin/tload c39063a41dec3d6b21b701fb713343b2 1775414909
+obj /usr/bin/top 975ae02782a95fdfddc51b90cde3b35c 1775414909
+obj /usr/bin/uptime d12efef1a8a2ebbaeb028b5c48f9e99f 1775414909
+obj /usr/bin/vmstat 6429bc5013dbcd21caac74391467af97 1775414909
+obj /usr/bin/w 699c33c9db61b46489ed551f40f9a422 1775414909
+obj /usr/bin/watch 5345e2e6f75638bf2f2119ec6bbb893b 1775414909
+dir /usr/include
+dir /usr/include/libproc2
+obj /usr/include/libproc2/diskstats.h 7c18e19b81c11561c91e30f8bf3c1ed0 1775414907
+obj /usr/include/libproc2/meminfo.h e5e72150016e34d2776d9841faacd181 1775414907
+obj /usr/include/libproc2/misc.h 4a9cc061fc0d354ca8ab9026b0185307 1775414907
+obj /usr/include/libproc2/pids.h a48ba492d2b04e65f5246fd19d22fd3d 1775414907
+obj /usr/include/libproc2/slabinfo.h 2960f92780cf40ecaa3ba26960118905 1775414907
+obj /usr/include/libproc2/stat.h d13bfd1e195559334ebe02be049152ba 1775414907
+obj /usr/include/libproc2/vmstat.h aef9550861f8995a4d31301835d7aae8 1775414907
+obj /usr/include/libproc2/xtra-procps-debug.h 204990ac4bddc1614eacd2599aa53107 1775414907
+dir /usr/lib64
+obj /usr/lib64/libproc2.so.1.0.1 422ea44315f67f896318b6d1fda7e602 1775414909
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/libproc2.pc 5422fc2969c9fcd5974668142a34d079 1775414907
+dir /usr/sbin
+obj /usr/sbin/sysctl 8aa0fa522e2843f8a3b4537637a3ef1f 1775414909
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/procps-4.0.6
+obj /usr/share/doc/procps-4.0.6/AUTHORS.bz2 4b6ea5968917f3846d16803fa74cec6a 1775414908
+obj /usr/share/doc/procps-4.0.6/ChangeLog e4440ab6acdee53edc915449f7097237 1775414908
+obj /usr/share/doc/procps-4.0.6/FAQ.bz2 8afeb0652c31d9b3f64d5cae9e08fc61 1775414907
+obj /usr/share/doc/procps-4.0.6/NEWS.bz2 1b3863c15ded0b5417ea0e95ebcdf299 1775414908
+obj /usr/share/doc/procps-4.0.6/README.md.bz2 7681c8919a66fe5214c474667c605421 1775414908
+obj /usr/share/doc/procps-4.0.6/bugs.md.bz2 3f2627bd1eae9c6d468d83ddc0fcf86b 1775414907
+obj /usr/share/doc/procps-4.0.6/libproc.supp.bz2 61f04905285d855dd9599b2b5e4d45e2 1775414907
+obj /usr/share/doc/procps-4.0.6/sysctl.conf.bz2 fb0cea19c79502c0a3095d758264f398 1775414908
+dir /usr/share/locale
+dir /usr/share/locale/de
+dir /usr/share/locale/de/LC_MESSAGES
+obj /usr/share/locale/de/LC_MESSAGES/procps-ng.mo 24237a1a1e09727707750ba73f90e72d 1775414907
+dir /usr/share/locale/es
+dir /usr/share/locale/es/LC_MESSAGES
+obj /usr/share/locale/es/LC_MESSAGES/procps-ng.mo 89509a76d3e9f134caaa65e6e690e59d 1775414907
+dir /usr/share/locale/fr
+dir /usr/share/locale/fr/LC_MESSAGES
+obj /usr/share/locale/fr/LC_MESSAGES/procps-ng.mo 8208b1f54badb80fbd2df5a55b9c9fe4 1775414907
+dir /usr/share/locale/ka
+dir /usr/share/locale/ka/LC_MESSAGES
+obj /usr/share/locale/ka/LC_MESSAGES/procps-ng.mo 0e19fb5d1527922817adfc4d8da3ee33 1775414907
+dir /usr/share/locale/ko
+dir /usr/share/locale/ko/LC_MESSAGES
+obj /usr/share/locale/ko/LC_MESSAGES/procps-ng.mo 03e46cf7830bb3750ccd4609cbdb5cb5 1775414907
+dir /usr/share/locale/pl
+dir /usr/share/locale/pl/LC_MESSAGES
+obj /usr/share/locale/pl/LC_MESSAGES/procps-ng.mo 5840d1ae06cab11811e152a57711c5bd 1775414907
+dir /usr/share/locale/pt_BR
+dir /usr/share/locale/pt_BR/LC_MESSAGES
+obj /usr/share/locale/pt_BR/LC_MESSAGES/procps-ng.mo 68ee6d1f6c2d9a7848b933dd54f60c89 1775414907
+dir /usr/share/locale/ro
+dir /usr/share/locale/ro/LC_MESSAGES
+obj /usr/share/locale/ro/LC_MESSAGES/procps-ng.mo 1d5260aefe2178894cdc85887f18baa9 1775414907
+dir /usr/share/locale/sv
+dir /usr/share/locale/sv/LC_MESSAGES
+obj /usr/share/locale/sv/LC_MESSAGES/procps-ng.mo 347551eaf10c5d196552b11c787e8439 1775414907
+dir /usr/share/locale/uk
+dir /usr/share/locale/uk/LC_MESSAGES
+obj /usr/share/locale/uk/LC_MESSAGES/procps-ng.mo b29b654163b57b2ef4219c478f7352b7 1775414907
+dir /usr/share/locale/vi
+dir /usr/share/locale/vi/LC_MESSAGES
+obj /usr/share/locale/vi/LC_MESSAGES/procps-ng.mo b02d50895bd5f86bcaa72ae854d5f6eb 1775414907
+dir /usr/share/locale/zh_CN
+dir /usr/share/locale/zh_CN/LC_MESSAGES
+obj /usr/share/locale/zh_CN/LC_MESSAGES/procps-ng.mo d5599e195b0930b55a2956ca1752236c 1775414907
+dir /usr/share/man
+dir /usr/share/man/de
+dir /usr/share/man/de/man1
+obj /usr/share/man/de/man1/free.1.bz2 de1fa8bed7bc7891358613c6b502dec7 1775414907
+obj /usr/share/man/de/man1/kill.1.bz2 c78aad412508f98e8ffd3f2a7c3e3706 1775414907
+obj /usr/share/man/de/man1/pgrep.1.bz2 d2096dfc851e519d0d80103fc6ef3d82 1775414907
+obj /usr/share/man/de/man1/pidof.1.bz2 e6d4c8595e3318940b6bc599be26cfac 1775414907
+obj /usr/share/man/de/man1/pmap.1.bz2 404c3498e158281c9fe6601a11a3915a 1775414907
+obj /usr/share/man/de/man1/ps.1.bz2 dd1624c07887509443a43d1a7368ca1d 1775414907
+obj /usr/share/man/de/man1/pwdx.1.bz2 d4d338b79d1fdd3fc2e9774a8f316da6 1775414907
+obj /usr/share/man/de/man1/slabtop.1.bz2 538378fc6e845cfd281d4ca96d4f8c06 1775414907
+obj /usr/share/man/de/man1/tload.1.bz2 1f46dc1d87a6a633f45de45bf8203329 1775414907
+obj /usr/share/man/de/man1/uptime.1.bz2 59be4d683359bcf8664dfb9bc9ac95aa 1775414907
+obj /usr/share/man/de/man1/w.1.bz2 0704c7dfb5e71f3800f0791b0c08d2e5 1775414907
+obj /usr/share/man/de/man1/watch.1.bz2 6a8cca0c9c46a182fc1d6e6dc3e73324 1775414907
+dir /usr/share/man/de/man3
+obj /usr/share/man/de/man3/procps.3.bz2 8cb379f815648e7bd7bc48605522de00 1775414907
+obj /usr/share/man/de/man3/procps_misc.3.bz2 bdcf29506adacb5b19d09441fc523a96 1775414907
+obj /usr/share/man/de/man3/procps_pids.3.bz2 2393de9d9bb8298c42e2853a2514d90e 1775414907
+dir /usr/share/man/de/man5
+obj /usr/share/man/de/man5/sysctl.conf.5.bz2 8f3a7acb8784fbe2a0dc775222ee9777 1775414907
+dir /usr/share/man/de/man8
+obj /usr/share/man/de/man8/sysctl.8.bz2 60878905f04642afb2f00cc10fea136b 1775414907
+obj /usr/share/man/de/man8/vmstat.8.bz2 1b66e8acb639c6cb74f6769fad1755e8 1775414907
+dir /usr/share/man/fr
+dir /usr/share/man/fr/man1
+obj /usr/share/man/fr/man1/free.1.bz2 e48a62d7f9b17ee97366c410eeac4672 1775414907
+obj /usr/share/man/fr/man1/pmap.1.bz2 df387cb8af132bd63a2b67a32fc2b6d8 1775414907
+obj /usr/share/man/fr/man1/ps.1.bz2 590e29efb160e3324caa776ad163281a 1775414907
+obj /usr/share/man/fr/man1/pwdx.1.bz2 bdc3f4925d4736cdb4d8327f11a21c00 1775414907
+obj /usr/share/man/fr/man1/slabtop.1.bz2 5b02f8d8ce1a6bb00332b0c5b82da182 1775414907
+obj /usr/share/man/fr/man1/tload.1.bz2 7f7baaf7146802d8f5554a6ae2db5f69 1775414907
+dir /usr/share/man/fr/man8
+obj /usr/share/man/fr/man8/vmstat.8.bz2 4bfa616cdcd2c6d8396e31896f5b3b18 1775414907
+dir /usr/share/man/man1
+obj /usr/share/man/man1/free.1.bz2 8196b58d71adc4799115a9e6e915b27c 1775414907
+obj /usr/share/man/man1/hugetop.1.bz2 4cdf45e8b71890b3f7f77eec6d684b0c 1775414907
+obj /usr/share/man/man1/kill.1.bz2 c693e9122204d170b7d04f91fbdfa0db 1775414907
+obj /usr/share/man/man1/pgrep.1.bz2 33746de49dcea0fdf853a30cc409dbbe 1775414907
+obj /usr/share/man/man1/pidof.1.bz2 de79804aaafbc83d638b336664cca409 1775414907
+obj /usr/share/man/man1/pidwait.1 77e76aa1d4221cc7d851ec08a17f54d1 1775414907
+obj /usr/share/man/man1/pmap.1.bz2 1bce1f9f339ee298f899bd5647e9a783 1775414907
+obj /usr/share/man/man1/ps.1.bz2 9cebf3bc6c0c97ec347c13a87c6fa7cc 1775414907
+obj /usr/share/man/man1/pwdx.1.bz2 bfeea181117f2818b6a6ea27a4dae36b 1775414907
+obj /usr/share/man/man1/slabtop.1.bz2 44e4f231e6fc6234d178c901f5aae168 1775414907
+obj /usr/share/man/man1/tload.1.bz2 9c0c5e4ce6b2e356cdfe7d845f8ce7e1 1775414907
+obj /usr/share/man/man1/top.1.bz2 9137b10df9d3490a7567c49ba84f5cee 1775414907
+obj /usr/share/man/man1/uptime.1.bz2 781ef07a6ec67bd2ae486c1e80431e4f 1775414907
+obj /usr/share/man/man1/w.1.bz2 bf3a8e82217b874509e2fbcf7da98995 1775414907
+obj /usr/share/man/man1/watch.1.bz2 b603f1c1cd02e2db94fe7481bf590db0 1775414907
+dir /usr/share/man/man3
+obj /usr/share/man/man3/procps.3.bz2 b3150bac1e44e4653d40d74a0b70c705 1775414907
+obj /usr/share/man/man3/procps_misc.3.bz2 52744a419231757efc993a8f33f9a24f 1775414907
+obj /usr/share/man/man3/procps_pids.3.bz2 854e23cf4e9d9d212c87ba7603e28824 1775414907
+dir /usr/share/man/man5
+obj /usr/share/man/man5/sysctl.conf.5.bz2 c6a65daec5012a5763e71c8de38cd481 1775414907
+dir /usr/share/man/man8
+obj /usr/share/man/man8/sysctl.8.bz2 5f71b6dff5095520f7d332e19c5c0e90 1775414907
+obj /usr/share/man/man8/vmstat.8.bz2 12dfa8087e709929b308b3623af12ab8 1775414907
+dir /usr/share/man/pl
+dir /usr/share/man/pl/man1
+obj /usr/share/man/pl/man1/free.1.bz2 394e5bbbb10b8ba5131219181360b751 1775414907
+obj /usr/share/man/pl/man1/pidof.1.bz2 de434a26992105e0b379225a22bc3c36 1775414907
+obj /usr/share/man/pl/man1/pmap.1.bz2 db603c86d1490d4c00d1a8b2e74bde9a 1775414907
+obj /usr/share/man/pl/man1/pwdx.1.bz2 11d388a91b43f69d0f0e96289ec7452e 1775414907
+obj /usr/share/man/pl/man1/slabtop.1.bz2 a785047be307a67af94961318efb992e 1775414907
+dir /usr/share/man/pl/man8
+obj /usr/share/man/pl/man8/vmstat.8.bz2 32ef4e2a30c7897cb98a3ceca329a18d 1775414907
+dir /usr/share/man/pt_BR
+dir /usr/share/man/pt_BR/man1
+obj /usr/share/man/pt_BR/man1/free.1.bz2 f0ad9dba79bf61710715ce6e6345577d 1775414907
+obj /usr/share/man/pt_BR/man1/pmap.1.bz2 4863f2cde0f39fca6eaf8eb3114ea151 1775414907
+obj /usr/share/man/pt_BR/man1/pwdx.1.bz2 aeb6a684970ba870fd5612bf076519d0 1775414907
+obj /usr/share/man/pt_BR/man1/slabtop.1.bz2 8d618ef4e20e4c10c52a8aa8322e5bd2 1775414907
+obj /usr/share/man/pt_BR/man1/tload.1.bz2 e9d422e5a36bd11bff4733e32eb98a2f 1775414907
+dir /usr/share/man/pt_BR/man8
+obj /usr/share/man/pt_BR/man8/vmstat.8.bz2 9d963df07a51c3cfa929d641925a1211 1775414907
+dir /usr/share/man/ro
+dir /usr/share/man/ro/man1
+obj /usr/share/man/ro/man1/free.1.bz2 8d9351dd16e99c2d01571a493645c809 1775414907
+obj /usr/share/man/ro/man1/kill.1.bz2 b0e057fc8ae66a2546e087ca4d39b852 1775414907
+obj /usr/share/man/ro/man1/pgrep.1.bz2 a879ec825e121d224b56605547ed1816 1775414907
+obj /usr/share/man/ro/man1/pidof.1.bz2 cca4e21115efd2ba533dec234ce949c4 1775414907
+obj /usr/share/man/ro/man1/pmap.1.bz2 1dcd8cb995e1961f54ccdb9a928f5068 1775414907
+obj /usr/share/man/ro/man1/ps.1.bz2 dfa3cf809539c124d546413929d1442f 1775414907
+obj /usr/share/man/ro/man1/pwdx.1.bz2 f8c77685e77aded844b78bbd75ec9c56 1775414907
+obj /usr/share/man/ro/man1/slabtop.1.bz2 f4b90678634e979240444dd14ae697c8 1775414907
+obj /usr/share/man/ro/man1/tload.1.bz2 f54ff006fa909d5aad7a4ac8bde28a33 1775414907
+obj /usr/share/man/ro/man1/top.1.bz2 27b5181d16c6ae6112f052833cbffb53 1775414907
+obj /usr/share/man/ro/man1/uptime.1.bz2 ce24c74881406d741d3d421bacd44166 1775414907
+obj /usr/share/man/ro/man1/w.1.bz2 4a2549bcad077dc6ebeabeb00d56994b 1775414907
+obj /usr/share/man/ro/man1/watch.1.bz2 9b3f3c685e5ca995938b306526d60789 1775414907
+dir /usr/share/man/ro/man3
+obj /usr/share/man/ro/man3/procps.3.bz2 9410a207f9df1a7e37895a680f7b0d76 1775414907
+obj /usr/share/man/ro/man3/procps_misc.3.bz2 7b7b401ead7cbdccaa6054dfbe03c674 1775414907
+obj /usr/share/man/ro/man3/procps_pids.3.bz2 a9ad77d4556e105f1696c6e0c47f6885 1775414907
+dir /usr/share/man/ro/man5
+obj /usr/share/man/ro/man5/sysctl.conf.5.bz2 8f083681727618604a3cd82cd6895805 1775414907
+dir /usr/share/man/ro/man8
+obj /usr/share/man/ro/man8/sysctl.8.bz2 3abd2b88790ac072015f2eabb02cd0f7 1775414907
+obj /usr/share/man/ro/man8/vmstat.8.bz2 2ea45335f022eabf256387984d72d1e9 1775414907
+dir /usr/share/man/sv
+dir /usr/share/man/sv/man1
+obj /usr/share/man/sv/man1/free.1.bz2 b58f65967ccf68e9d34335f045b8bd36 1775414907
+obj /usr/share/man/sv/man1/kill.1.bz2 45bb2b236dd6f5aa3542ffb123939b29 1775414907
+obj /usr/share/man/sv/man1/pgrep.1.bz2 1fdb9894e252cfb9f84c5034bcdd390e 1775414907
+obj /usr/share/man/sv/man1/pidof.1.bz2 6574e60da1a3b7593693d928da9bf2eb 1775414907
+obj /usr/share/man/sv/man1/pmap.1.bz2 ed749e43a814619dc969d472906090f9 1775414907
+obj /usr/share/man/sv/man1/ps.1.bz2 15b97262b74f1f620f4988d2420f5ed5 1775414907
+obj /usr/share/man/sv/man1/pwdx.1.bz2 70a5e54943811492a84b2e4e41501a9c 1775414907
+obj /usr/share/man/sv/man1/slabtop.1.bz2 e105f954c0b2a3253b3b3f418468b5ff 1775414907
+obj /usr/share/man/sv/man1/tload.1.bz2 a7dfbc01bf3c19a9270a9ed66e376e93 1775414907
+obj /usr/share/man/sv/man1/top.1.bz2 11340f4b10c03d17172ea0ed89b0fc11 1775414907
+obj /usr/share/man/sv/man1/uptime.1.bz2 8462ec322561f00c2d2c004b4f7c4474 1775414907
+obj /usr/share/man/sv/man1/w.1.bz2 52166b83623b9b1ab04a29db259ce96e 1775414907
+obj /usr/share/man/sv/man1/watch.1.bz2 f086279c9aca8a9f38552ed1d5e70de7 1775414907
+dir /usr/share/man/sv/man3
+obj /usr/share/man/sv/man3/procps.3.bz2 3b67212dbdb6396c7fb074673eb65599 1775414907
+obj /usr/share/man/sv/man3/procps_misc.3.bz2 3074b17857d9e29dd0a1376523a9f320 1775414907
+obj /usr/share/man/sv/man3/procps_pids.3.bz2 e759a949d7d86ebf44743056c6c211c5 1775414907
+dir /usr/share/man/sv/man5
+obj /usr/share/man/sv/man5/sysctl.conf.5.bz2 95334d3cc459f4586eaed19b05dc1734 1775414907
+dir /usr/share/man/sv/man8
+obj /usr/share/man/sv/man8/sysctl.8.bz2 75ed867a53c28705e2071c41ed6cf594 1775414907
+obj /usr/share/man/sv/man8/vmstat.8.bz2 e3f19e2a99acea1e85a60fbc6d4f5450 1775414907
+dir /usr/share/man/uk
+dir /usr/share/man/uk/man1
+obj /usr/share/man/uk/man1/free.1.bz2 bbfc4457b51ac2d4ecff825457ea0631 1775414907
+obj /usr/share/man/uk/man1/kill.1.bz2 eee8e7172a02027846edfc5c49b6c8ab 1775414907
+obj /usr/share/man/uk/man1/pgrep.1.bz2 316cebea4c6f3ecbfb26f8fb2e9388a9 1775414907
+obj /usr/share/man/uk/man1/pidof.1.bz2 37932bca36ddaa53d24d9fd413e2150d 1775414907
+obj /usr/share/man/uk/man1/pmap.1.bz2 17b29525d640d13f4b6e9adbac1c5d76 1775414907
+obj /usr/share/man/uk/man1/ps.1.bz2 91f2166b2629e95baa7df46c3fd8a9bf 1775414907
+obj /usr/share/man/uk/man1/pwdx.1.bz2 fe4473872c3e9a01be22c28e17f5d70c 1775414907
+obj /usr/share/man/uk/man1/slabtop.1.bz2 7067d4e80027bac5901a7a09726cbdc3 1775414907
+obj /usr/share/man/uk/man1/tload.1.bz2 4c58e780efafbc24d1856830f39ec63b 1775414907
+obj /usr/share/man/uk/man1/top.1.bz2 8a7b5df9807872b001d7399fe45a91fc 1775414907
+obj /usr/share/man/uk/man1/uptime.1.bz2 b24e8880aef682c74eb6ae35d3a5034b 1775414907
+obj /usr/share/man/uk/man1/w.1.bz2 73869cd79e5efe61b94911c15d078acf 1775414907
+obj /usr/share/man/uk/man1/watch.1.bz2 e51fe1f4e4a513311abdd16de7f10d5b 1775414907
+dir /usr/share/man/uk/man3
+obj /usr/share/man/uk/man3/procps.3.bz2 68ec38580aaf6f78054d2c0708848b22 1775414907
+obj /usr/share/man/uk/man3/procps_misc.3.bz2 2ec4218b2665b2301e659203760e7206 1775414907
+obj /usr/share/man/uk/man3/procps_pids.3.bz2 92fc219d7df0b4cc3c6fa4e8d8cd5fc1 1775414907
+dir /usr/share/man/uk/man5
+obj /usr/share/man/uk/man5/sysctl.conf.5.bz2 d3e04071497bc1d4ff3e651915b329e2 1775414907
+dir /usr/share/man/uk/man8
+obj /usr/share/man/uk/man8/sysctl.8.bz2 8884a47e75631a8c710675cb0588eeb3 1775414907
+obj /usr/share/man/uk/man8/vmstat.8.bz2 97b43277bee30ddfb8520d4fbc8b8d3d 1775414907
+dir /usr/share/man/zh_CN
+dir /usr/share/man/zh_CN/man1
+obj /usr/share/man/zh_CN/man1/free.1.bz2 de341dbdb5c196b5fbe1376f8ac85c9c 1775414907
+obj /usr/share/man/zh_CN/man1/kill.1.bz2 71d9a22f35feaeacf347795962f36a22 1775414907
+obj /usr/share/man/zh_CN/man1/pgrep.1.bz2 2c3f3af5a819481db851d5e7d1780a9b 1775414907
+obj /usr/share/man/zh_CN/man1/pidof.1.bz2 687b07f3a3f0aae11b03b69d2034bbc7 1775414907
+obj /usr/share/man/zh_CN/man1/pmap.1.bz2 bcee26e1433952d95477db57b799ac02 1775414907
+obj /usr/share/man/zh_CN/man1/ps.1.bz2 2a6e71d995fd6e48adbeaf41b795d425 1775414907
+obj /usr/share/man/zh_CN/man1/pwdx.1.bz2 f7880ed9ce12774c913a9807bb249b94 1775414907
+obj /usr/share/man/zh_CN/man1/slabtop.1.bz2 98b77d52276e84a76fe9bb13a0964868 1775414907
+obj /usr/share/man/zh_CN/man1/tload.1.bz2 c13dd4aeddd28a09746d78fb9638668d 1775414907
+obj /usr/share/man/zh_CN/man1/top.1.bz2 5cf7a6e49e63d8b375197762b05fa7c5 1775414907
+obj /usr/share/man/zh_CN/man1/uptime.1.bz2 82bb10cb82258ff6500c04acafcd4796 1775414907
+obj /usr/share/man/zh_CN/man1/w.1.bz2 ade7de5fd4a071aef2a8d749a3d363f3 1775414907
+obj /usr/share/man/zh_CN/man1/watch.1.bz2 9a1476b1a726ed58aa5f04907824982f 1775414907
+dir /usr/share/man/zh_CN/man5
+obj /usr/share/man/zh_CN/man5/sysctl.conf.5.bz2 ba3b066cd1dfe0a8c6e3ebe83f5d8e8a 1775414907
+dir /usr/share/man/zh_CN/man8
+obj /usr/share/man/zh_CN/man8/sysctl.8.bz2 714226a7ef52142016a51ee82b690a12 1775414907
+obj /usr/share/man/zh_CN/man8/vmstat.8.bz2 4dbbd2ea21d0952106bec6c2e028bef9 1775414907
+dir /bin
+obj /bin/kill 0cb01fa6738f378bada2c8e6a979aa19 1775414909
+obj /bin/ps 504568cc91bec112cb778ec7d20267a4 1775414909
+sym /usr/lib64/libproc2.so.1 -> libproc2.so.1.0.1 1789354252
+sym /usr/lib64/libproc2.so -> libproc2.so.1.0.1 1789354252

@@ -1,0 +1,72 @@
+Title: Portage to verify git-synced ::gentoo per default
+Author: Florian Schmaus <flow@gentoo.org>
+Posted: 2025-11-01
+Revision: 7
+News-Item-Format: 2.0
+Display-If-Installed: sys-apps/portage
+
+Portage now implicitly enables OpenPGP verification of the "raw" ::gentoo
+repository when synchronizing using git [1]. That is, >= Portage 3.0.70 will
+set
+    sync-git-verify-commit-signature = true
+for the "raw" ::gentoo repository as default.
+
+Note that if you have the 'rsync-verify' flag (misleading name) disabled
+for sys-apps/portage, you will need to enable it, as it pulls in
+app-portage/gemato which is used for verification for git repositories too.
+It is enabled by default.
+
+This behavior change otherwise only requires action from users who are
+synchronizing the "raw" ::gentoo git repository, as otherwise synchronization
+may fail due to verification errors.
+
+Users
+- synchronizing the "sync friendly" ::gentoo git repository,
+- using rsync as synchronization mechanism
+- or, using emerge-webrsync
+are *not* required to take any action.
+
+Remotes of the "sync friendly" ::gentoo git repository include:
+- https://github.com/gentoo-mirror/gentoo
+- https://anongit.gentoo.org/git/repo/sync/gentoo.git
+- https://gitweb.gentoo.org/repo/sync/gentoo.git
+
+We recommend using those instead of the "raw" repo because the "raw" repo
+does not include news items, GLSAs, or generated metadata. No action is
+required when using one of these remotes listed above. For those other
+sync types/repos, verification is already handled and they are
+unaffected by this change.
+
+This news item is NOT instructing users to start using the raw repo, it
+is just a necessary change if you are already using it. Please do not start
+using the "raw" repo as a result of this news item. Stop reading if you
+aren't using it already!
+
+However, advanced users who already use the "raw" ::gentoo remote repository
+need to adjust the repository configuration to verify against the
+"gentoo developers" keyfile.  Ensure that sec-keys/openpgp-keys-gentoo-developers
+is installed, as it provides this keyfile.  Furthermore, the key refresh
+method should be set to 'keyserver' because WKD is not supported with the
+"gentoo developers" keyfile.
+
+Remotes of this category include:
+- https://github.com/gentoo/gentoo
+- https://gitweb.gentoo.org/repo/gentoo.git/
+
+An typical adjusted configuration may look like the following:
+
+[gentoo]
+location = /var/db/repos/gentoo
+sync-type = git
+# This is the raw git repository and it lacks news, GLSAs, and metadata.
+# We don't recommend using it unless you're an advanced user!
+#
+# If using this repository instead of the 'sync' repositories, please make
+# sure to generate news and friends yourself.
+sync-uri = https://github.com/gentoo/gentoo.git
+sync-openpgp-key-path = /usr/share/openpgp-keys/gentoo-developers.asc
+# If you experience hangs or refresh failures, try 'no' instead.
+sync-openpgp-key-refresh = keyserver
+
+
+1: https://bugs.gentoo.org/959831

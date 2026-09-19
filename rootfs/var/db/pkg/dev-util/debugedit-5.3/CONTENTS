@@ -1,0 +1,16 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/debugedit 755c20181205723eccd19f70147d9439 1775409418
+obj /usr/bin/debugedit-classify-ar 90824760f5e7554b7ff1ee5784015d9b 1775409418
+obj /usr/bin/find-debuginfo e41f120adfc5e5544837bdee970b982f 1775409417
+obj /usr/bin/sepdebugcrcfix 0a122b8bb548885fd4b2a49e24d10d7b 1775409418
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/debugedit-5.3
+obj /usr/share/doc/debugedit-5.3/README.bz2 14de13e80a86d6af32c411e3efec2b8b 1775409417
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/debugedit-classify-ar.1.bz2 8adcb9dbeca421bb8c43cb294551c505 1775409417
+obj /usr/share/man/man1/debugedit.1.bz2 a883fbdbf4c2f67d8fe8be3301f091fe 1775409417
+obj /usr/share/man/man1/find-debuginfo.1.bz2 707aa8b45fc06603df6b94e225b36251 1775409417
+obj /usr/share/man/man1/sepdebugcrcfix.1.bz2 5eba2bf208f8001624d79e8d87fc12af 1775409417

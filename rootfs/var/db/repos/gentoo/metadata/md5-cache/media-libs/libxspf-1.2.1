@@ -1,0 +1,14 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=configure install
+DEPEND=>=dev-libs/expat-2 >=dev-libs/uriparser-0.7.5 test? ( >=dev-util/cpptest-1.1 )
+DESCRIPTION=Playlist handling library
+EAPI=9
+HOMEPAGE=https://libspiff.sourceforge.net/
+IUSE=test
+KEYWORDS=amd64 ppc x86
+LICENSE=BSD LGPL-2.1
+RDEPEND=>=dev-libs/expat-2 >=dev-libs/uriparser-0.7.5
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/libspiff/libxspf-1.2.1.tar.bz2
+_md5_=18469c8ae827c3c1db2e08fbf4cd264d

@@ -1,0 +1,19 @@
+dir /usr
+dir /usr/lib64
+dir /usr/lib64/perl5
+dir /usr/lib64/perl5/vendor_perl
+dir /usr/lib64/perl5/vendor_perl/5.42
+dir /usr/lib64/perl5/vendor_perl/5.42/Class
+dir /usr/lib64/perl5/vendor_perl/5.42/Class/Inspector
+obj /usr/lib64/perl5/vendor_perl/5.42/Class/Inspector/Functions.pm 6a52ffec100e8b9a5c4453fa6b39f555 1763921562
+obj /usr/lib64/perl5/vendor_perl/5.42/Class/Inspector.pm 7aed0ce1dfc5dd2067632ea22fd2f483 1763921562
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Class
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Class/Inspector
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Class/Inspector/.packlist 480d0c090e9c4a84053f906f3ce87a4d 1763921562
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/Class-Inspector-1.360.0
+obj /usr/share/doc/Class-Inspector-1.360.0/Changes.bz2 bc9529ef62fcdbac977c648f9a22a9de 1763921562
+obj /usr/share/doc/Class-Inspector-1.360.0/README.bz2 0fa4b755526c97e4daeb0b8af1379dfa 1763921562

@@ -1,0 +1,13 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/binutils-config 5ce1fbb75ea0c480f610dc0a4c5344b8 1764527021
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/binutils-config-5.6
+obj /usr/share/doc/binutils-config-5.6/README.bz2 271574c80bf335289a456788a236377e 1764527021
+dir /usr/share/eselect
+dir /usr/share/eselect/modules
+obj /usr/share/eselect/modules/binutils.eselect 191eaabc51653d6ef204e332d8eb64cb 1764527021
+dir /usr/share/man
+dir /usr/share/man/man8
+obj /usr/share/man/man8/binutils-config.8.bz2 a2c3fcfdc4e81c3081ba41d7dfef9751 1764527021

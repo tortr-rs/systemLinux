@@ -1,0 +1,8 @@
+/usr/bin/podselect
+/usr/lib64/perl5/vendor_perl/5.42/Pod/Find.pm
+/usr/lib64/perl5/vendor_perl/5.42/Pod/InputObjects.pm
+/usr/lib64/perl5/vendor_perl/5.42/Pod/ParseUtils.pm
+/usr/lib64/perl5/vendor_perl/5.42/Pod/Parser.pm
+/usr/lib64/perl5/vendor_perl/5.42/Pod/PlainText.pm
+/usr/lib64/perl5/vendor_perl/5.42/Pod/Select.pm
+/usr/share/man/man1/podselect.1

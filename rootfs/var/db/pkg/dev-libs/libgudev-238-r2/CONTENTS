@@ -1,0 +1,22 @@
+dir /usr
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/libgudev-238-r2
+obj /usr/share/doc/libgudev-238-r2/NEWS.bz2 e879ef8c619ca7f98d9979e6dd921bb1 1726997877
+obj /usr/share/doc/libgudev-238-r2/README.md.bz2 2ebd2ef2857fccfbd061d69a072354f2 1726997877
+dir /usr/lib64
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/gudev-1.0.pc 4001e5d21b816492e8efe6af77deef83 1726997872
+obj /usr/lib64/libgudev-1.0.so.0.3.0 c0102e22d17636f0f3c752610ad0fe1b 1726997880
+sym /usr/lib64/libgudev-1.0.so.0 -> libgudev-1.0.so.0.3.0 1789836488
+dir /usr/include
+dir /usr/include/gudev-1.0
+dir /usr/include/gudev-1.0/gudev
+obj /usr/include/gudev-1.0/gudev/gudevclient.h 8f6bfc524ee6b376cf852d434d81ac64 1688482034
+obj /usr/include/gudev-1.0/gudev/gudevtypes.h 33273efa147b4e7c65648c7e2be4d502 1688482034
+obj /usr/include/gudev-1.0/gudev/gudevenumerator.h 5df945f619338a8b91456ed18f99148b 1688482034
+obj /usr/include/gudev-1.0/gudev/gudevenums.h 5b350456dbfcbad806802ac7925a93b2 1688482034
+obj /usr/include/gudev-1.0/gudev/gudev.h ac9edc5cee83e9c14b961735411b1372 1688482034
+obj /usr/include/gudev-1.0/gudev/gudevdevice.h 49c71bb30b346a54b5b1d7112623606d 1688482034
+obj /usr/include/gudev-1.0/gudev/gudevenumtypes.h 50fbccce6b40cc209a5d8b27776df3d2 1726997874
+sym /usr/lib64/libgudev-1.0.so -> libgudev-1.0.so.0 1789836488

@@ -1,0 +1,286 @@
+#!/usr/bin/env bash
+# Copyright 1999-2022 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+# shellcheck disable=SC1007
+
+source "${PORTAGE_BIN_PATH:?}"/isolated-functions.sh || exit
+
+do_ignore() {
+	local -x LC_ALL= LC_COLLATE=C
+	local -a skip_dirs
+	local fileno skip
+
+	# Open the file in which the skippable paths will be recorded.
+	exec {fileno}>"${T}/.ecompress_skip_files" || die
+
+	for skip; do
+		if [[ ${skip} == *$'\n'* ]]; then
+			# The operand must be disregarded because the temporary
+			# files comprise <newline>-terminated pathnames.
+			continue
+		elif [[ -d ${ED%/}/${skip#/} ]]; then
+			skip_dirs+=( "${ED%/}/${skip#/}" )
+		else
+			rm -f -- "${ED%/}/${skip#/}.ecompress" \
+			&& printf '%s\n' "${EPREFIX}/${skip#/}" \
+			|| ! break
+		fi
+	done >&"${fileno}" || die
+
+	if (( ${#skip_dirs[@]} )); then
+		while IFS= read -rd '' skip; do
+			skip=${skip%.ecompress}
+			printf '%s\n' "${skip#"${D%/}"}" || ! break
+		done \
+		< <(printf '%s\0' "${skip_dirs[@]}" | find0 -name '*.ecompress' ! -path $'*\n*' -print0 -delete) \
+		>&"${fileno}" || die
+
+		# Check whether the invocation of find(1) succeeded.
+		wait "$!" || die
+	fi
+
+	# Close the file in which the skippable paths have been recorded.
+	exec {fileno}>&- || die
+
+	# shellcheck disable=2015
+	if [[ -s ${T}/.ecompress_skip_files && -s ${T}/.ecompress_had_precompressed ]]; then
+		# Filter skipped files from ${T}/.ecompress_had_precompressed,
+		# using temporary files since these lists can be extremely large.
+		sort -u -- "${T}"/.ecompress_skip_files > "${T}"/.ecompress_skip_files_sorted \
+		&& sort -u -- "${T}"/.ecompress_had_precompressed > "${T}"/.ecompress_had_precompressed_sorted \
+		&& comm -13 -- "${T}"/.ecompress_{skip_files,had_precompressed}_sorted > "${T}"/.ecompress_had_precompressed || die
+		rm -f -- "${T}"/.ecompress_{had_precompressed_sorted,skip_files{,_sorted}}
+	fi
+}
+
+do_queue() {
+	local uncompressed_path suffix path
+	local -a find_args paths
+	local -A collision_by
+
+	for path; do
+		if [[ ${path} == *$'\n'* ]]; then
+			# The operand must be disregarded because the temporary
+			# files comprise <newline>-terminated pathnames.
+			continue
+		elif [[ -e ${ED%/}/${path#/} ]]; then
+			paths+=( "${ED%/}/${path#/}" )
+		fi
+	done
+
+	(( ${#paths[@]} )) || return 0
+
+	find_args+=( -type f )
+	if [[ ${PORTAGE_DOCOMPRESS_SIZE_LIMIT} ]]; then
+		find_args+=( -size "+${PORTAGE_DOCOMPRESS_SIZE_LIMIT}c" )
+	fi
+	# Note that the find(1) command that feeds this loop is made to
+	# ignore pathnames containing <newline>. It must do so because
+	# the temporary files comprise <newline>-terminated pathnames.
+	while IFS= read -rd '' path; do
+		# detect the horrible posibility of the ebuild installing
+		# colliding compressed and/or uncompressed variants
+		# and fail hard (bug #667072)
+		#
+		# note: to save time, we need to do this only if there's
+		# at least one compressed file
+		if [[ ${path} == *.@(Z|gz|bz2|lzma|lz|lzo|lz4|xz|zst) ]]; then
+			uncompressed_path=${path%.*}
+			for suffix in '' .{Z,gz,bz2,lzma,lz,lzo,lz4,xz,zst}; do
+				if [[ ${uncompressed_path}${suffix} != "${path}" && -e ${uncompressed_path}${suffix} ]]; then
+					collision_by[$path]=
+					collision_by[$uncompressed_path]=
+					# ignore compressed variants in that case
+					continue 2
+				fi
+			done
+			printf '%s\n' "${path#"${D%/}"}" || ! break
+		fi
+
+		: >> "${path}.ecompress" || die
+	done \
+	< <(printf '%s\0' "${paths[@]}" | find0 "${find_args[@]}" ! -path $'*\n*' -print0) \
+	> "${T}"/.ecompress_had_precompressed || die
+
+	# Check whether the invocation of find(1) succeeded.
+	wait "$!" || die
+
+	if (( ${#collision_by[@]} )); then
+		eqawarn "QA Notice: Colliding files found by ecompress:"
+		eqawarn
+		while IFS= read -r path; do
+			eqawarn "  ${path@Q}"
+		done < <(printf '%s\n' "${!collision_by[@]}" | sort)
+		eqawarn
+		eqawarn "Please remove the extraneous compressed variants."
+	fi
+}
+
+guess_suffix() (
+	local IFS f i tmpdir
+	local -a args
+
+	trap 'rm -rf -- "${tmpdir}"' EXIT
+	tmpdir=$(mktemp -d -- "${T:-/tmp}/tmp.XXXXXX") \
+	&& cd -- "${tmpdir}" \
+	|| return
+
+	# We have to fill the file enough so that there is something
+	# to compress as some programs will refuse to do compression
+	# if it cannot actually compress the file
+	for (( i = 0; i <= 1000; i++ )); do
+		printf '%s ' "${i}" || ! break
+	done > compressme || return
+
+	read -rd '' -a args <<<"${PORTAGE_COMPRESS_FLAGS}"
+	"${PORTAGE_COMPRESS}" "${args[@]}" compressme > /dev/null || return
+
+	# If PORTAGE_COMPRESS_FLAGS contains -k then we need to avoid
+	# having our glob match the uncompressed file here.
+	for f in compressme?*; do
+		test -e "${f}" \
+		&& printf '%s\n' "${f#compressme}" \
+		&& return
+	done
+)
+
+fix_symlinks() (
+	local something_changed link target1 target2 i
+
+	# Run the last element of the ensuing pipeline in the current shell.
+	# This option shall not persist because the function is a forking list.
+	shopt -s lastpipe
+
+	# Repeat until nothing changes, in order to handle multiple
+	# levels of indirection (see bug #470916).
+	while true ; do
+		something_changed=0
+
+		printf '%s\0' "${ED}" \
+		| find0 -type l -xtype l -printf '%p\0%l\0' \
+		| while IFS= read -rd '' link && IFS= read -rd '' target1; do
+			target2=${target1}${PORTAGE_COMPRESS_SUFFIX}
+
+			if [[ ${target2} == /* ]]; then
+				if [[ ! -f ${D%/}${target2} ]]; then
+					continue
+				fi
+			elif [[ ! -f ${link%/*}/${target2} ]]; then
+				continue
+			fi
+
+			something_changed=1
+			rm -f -- "${link}" \
+			&& ln -snf -- "${target2}" "${link}${PORTAGE_COMPRESS_SUFFIX}" \
+			|| return
+		done
+
+		# Check whether the invocation of find(1) succeeded. The use of
+		# the wait builtin is avoided here because the rm(1) and ln(1)
+		# utilities may be executed many times, with bash being prone
+		# to losing the status code of the last asynchronous command as
+		# a consequence of PID reuse. This is an issue most likely to
+		# affect OpenRC users. See bug #965423.
+		(( PIPESTATUS[1] == 0 )) || return
+
+		if (( ! something_changed )); then
+			break
+		elif (( ++i >= 100 )); then
+			# Protect against possibility of a bug triggering an endless loop.
+			eerror "ecompress: too many levels of indirection for" \
+				"'${something_changed#"${ED%/}"}'"
+			break
+		fi
+	done
+)
+
+if [[ -z $1 ]] ; then
+	__helpers_die "${0##*/}: at least one argument needed"
+	exit 1
+fi
+
+if ! ___eapi_has_prefix_variables; then
+	ED=${D} EPREFIX=
+fi
+
+while (( $# )); do
+	case $1 in
+	--ignore)
+		shift
+		do_ignore "$@"
+		exit
+		;;
+	--queue)
+		shift
+		do_queue "$@"
+		exit
+		;;
+	--dequeue)
+		[[ -n ${2} ]] && die "${0##*/}: --dequeue takes no additional arguments"
+		break
+		;;
+	*)
+		die "${0##*/}: unknown arguments '$*'"
+		exit 1
+	esac
+done
+
+if [[ ! ${PORTAGE_COMPRESS} ]]; then
+	die "${0##*/}: aborting because PORTAGE_COMPRESS is either empty or unset"
+fi
+
+if [[ ! -v PORTAGE_COMPRESS_FLAGS ]] ; then
+	case ${PORTAGE_COMPRESS} in
+		bzip2|gzip)
+			PORTAGE_COMPRESS_FLAGS="-9"
+			;;
+		lz4)
+			# Without the -m option, lz4 will not compress multiple
+			# files at once, per bug 672916. Passing --rm removes
+			# the source files upon successfuly compressing.
+			PORTAGE_COMPRESS_FLAGS="-m --rm"
+			;;
+		xz)
+			PORTAGE_COMPRESS_FLAGS="-q -T$(___makeopts_jobs) --memlimit-compress=50%"
+			;;
+		zstd)
+			PORTAGE_COMPRESS_FLAGS="-q --rm -T$(___makeopts_jobs)";;
+	esac
+fi
+
+# figure out the new suffix
+if ! PORTAGE_COMPRESS_SUFFIX=$(guess_suffix); then
+	error="${0##*/}: failed to determine the suffix of archives created by ${PORTAGE_COMPRESS@Q}"
+	if [[ ${PORTAGE_COMPRESS##*/} == @(true|:) ]]; then
+		error+=' (to disable compression, set PORTAGE_COMPRESS="" instead)'
+	fi
+	die "${error}"
+fi
+
+export PORTAGE_COMPRESS_SUFFIX PORTAGE_COMPRESS_FLAGS PORTAGE_COMPRESS
+
+printf '%s\0' "${ED}" \
+| find0 -name '*.ecompress' ! -path $'*\n*' -delete -print0 \
+| ___parallel "${PORTAGE_BIN_PATH}"/ecompress-file
+all_compressed=$(( $? == 0 ))
+
+if [[ -s ${T}/.ecompress_had_precompressed ]]; then
+	eqawarn "QA Notice: One or more compressed files were found in docompress-ed"
+	eqawarn "directories. Please fix the ebuild not to install compressed files"
+	eqawarn "(manpages, documentation) when automatic compression is used:"
+	eqawarn
+	n=0
+	while IFS= read -r f; do
+		eqawarn "  ${f}"
+		if (( ++n == 10 )); then
+			eqawarn "  ..."
+			break
+		fi
+	done <"${T}"/.ecompress_had_precompressed
+fi
+
+if (( ! all_compressed )); then
+	__helpers_die "${0##*/}: one or more files coudn't be compressed"
+elif ! fix_symlinks; then
+	__helpers_die "${0##*/}: one or more symlinks couldn't be repaired"
+fi

@@ -1,0 +1,94 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/flex 5385ba8ae5bcc5e0a61de919882746c9 1741541586
+sym /usr/bin/flex++ -> flex 1789354134
+dir /usr/include
+obj /usr/include/FlexLexer.h 38e430f055b643e834bac596bf13e556 1741541584
+dir /usr/lib64
+obj /usr/lib64/libfl.a 1d2faa1674001009815d0576ba717640 1741541586
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/flex-2.6.4-r6
+obj /usr/share/doc/flex-2.6.4-r6/AUTHORS.bz2 6c84e299a94ac991be7ad59f73f9346b 1741541585
+obj /usr/share/doc/flex-2.6.4-r6/ChangeLog.bz2 21c3060076f32494fd1b2426103c5bfb 1741541585
+obj /usr/share/doc/flex-2.6.4-r6/NEWS.bz2 fcd61d3044e633d75256abd96adbe5a0 1741541585
+obj /usr/share/doc/flex-2.6.4-r6/ONEWS.bz2 6b292c62a2bc5b7bba1c59cff8ce856d 1741541585
+obj /usr/share/doc/flex-2.6.4-r6/README.md.bz2 0b57daa4a61a8df70b7a67ef5ed4e625 1741541585
+obj /usr/share/doc/flex-2.6.4-r6/THANKS.bz2 98d4ac560e01bafefdf660d044a08a63 1741541585
+dir /usr/share/info
+obj /usr/share/info/flex.info-1.bz2 e83827e2b6d314d881555aa203ab1a12 1741541584
+obj /usr/share/info/flex.info-2.bz2 68267ebdb9648e4f5768536a63bca496 1741541584
+obj /usr/share/info/flex.info.bz2 4d447ffd4fc561f857091af1c023a09d 1741541584
+dir /usr/share/locale
+dir /usr/share/locale/ca
+dir /usr/share/locale/ca/LC_MESSAGES
+obj /usr/share/locale/ca/LC_MESSAGES/flex.mo ce93253a8ee3f0191633074580d284fb 1741541584
+dir /usr/share/locale/da
+dir /usr/share/locale/da/LC_MESSAGES
+obj /usr/share/locale/da/LC_MESSAGES/flex.mo 1d2c955e583769f8c652360065e33f5f 1741541585
+dir /usr/share/locale/de
+dir /usr/share/locale/de/LC_MESSAGES
+obj /usr/share/locale/de/LC_MESSAGES/flex.mo 613f50de4ae752a47d22b3abb02a9a43 1741541585
+dir /usr/share/locale/en@boldquot
+dir /usr/share/locale/en@boldquot/LC_MESSAGES
+obj /usr/share/locale/en@boldquot/LC_MESSAGES/flex.mo 2ef68045044cc2e4c830bfac88c5fa6e 1741541585
+dir /usr/share/locale/en@quot
+dir /usr/share/locale/en@quot/LC_MESSAGES
+obj /usr/share/locale/en@quot/LC_MESSAGES/flex.mo 445fa844bcfd070e62be0862a034f4b9 1741541585
+dir /usr/share/locale/eo
+dir /usr/share/locale/eo/LC_MESSAGES
+obj /usr/share/locale/eo/LC_MESSAGES/flex.mo df8cf641553a48371e92fa128166ea15 1741541585
+dir /usr/share/locale/es
+dir /usr/share/locale/es/LC_MESSAGES
+obj /usr/share/locale/es/LC_MESSAGES/flex.mo b2324f6f4d91459a38ee5be41c9080f1 1741541585
+dir /usr/share/locale/fi
+dir /usr/share/locale/fi/LC_MESSAGES
+obj /usr/share/locale/fi/LC_MESSAGES/flex.mo 0a7cb4fe0bc4705f81accb4d206000bb 1741541585
+dir /usr/share/locale/fr
+dir /usr/share/locale/fr/LC_MESSAGES
+obj /usr/share/locale/fr/LC_MESSAGES/flex.mo 258fb3c9a2f2766d80ed317f34e5f5d6 1741541585
+dir /usr/share/locale/ga
+dir /usr/share/locale/ga/LC_MESSAGES
+obj /usr/share/locale/ga/LC_MESSAGES/flex.mo ffcd59151369e3d8caf91c09f702715f 1741541585
+dir /usr/share/locale/hr
+dir /usr/share/locale/hr/LC_MESSAGES
+obj /usr/share/locale/hr/LC_MESSAGES/flex.mo 5adb6a46f649f8000d0f33cfc70dbb4a 1741541585
+dir /usr/share/locale/ko
+dir /usr/share/locale/ko/LC_MESSAGES
+obj /usr/share/locale/ko/LC_MESSAGES/flex.mo 868e756c94fb8c1e71adddba6d9f818d 1741541585
+dir /usr/share/locale/nl
+dir /usr/share/locale/nl/LC_MESSAGES
+obj /usr/share/locale/nl/LC_MESSAGES/flex.mo a9fc30f87e842debff01eb0334cd2ab2 1741541585
+dir /usr/share/locale/pl
+dir /usr/share/locale/pl/LC_MESSAGES
+obj /usr/share/locale/pl/LC_MESSAGES/flex.mo d7ac6558fd504b29f2672008b090c2d9 1741541585
+dir /usr/share/locale/pt_BR
+dir /usr/share/locale/pt_BR/LC_MESSAGES
+obj /usr/share/locale/pt_BR/LC_MESSAGES/flex.mo 2830d4270ca7719ee45f2228c2776e89 1741541585
+dir /usr/share/locale/ro
+dir /usr/share/locale/ro/LC_MESSAGES
+obj /usr/share/locale/ro/LC_MESSAGES/flex.mo 4e40df1429f0318352f29590a0c0607b 1741541585
+dir /usr/share/locale/ru
+dir /usr/share/locale/ru/LC_MESSAGES
+obj /usr/share/locale/ru/LC_MESSAGES/flex.mo bf689816c1e6dc202d0b72d4089e1a15 1741541585
+dir /usr/share/locale/sr
+dir /usr/share/locale/sr/LC_MESSAGES
+obj /usr/share/locale/sr/LC_MESSAGES/flex.mo 889ca58503e4daf0e13654d0cd06e85c 1741541585
+dir /usr/share/locale/sv
+dir /usr/share/locale/sv/LC_MESSAGES
+obj /usr/share/locale/sv/LC_MESSAGES/flex.mo d1361223dcf94135b0146598a1e57316 1741541585
+dir /usr/share/locale/tr
+dir /usr/share/locale/tr/LC_MESSAGES
+obj /usr/share/locale/tr/LC_MESSAGES/flex.mo e085661af29fea3ec385f3da208642d2 1741541585
+dir /usr/share/locale/vi
+dir /usr/share/locale/vi/LC_MESSAGES
+obj /usr/share/locale/vi/LC_MESSAGES/flex.mo e856d4896ca91738e0e5ad908d64c62b 1741541585
+dir /usr/share/locale/zh_CN
+dir /usr/share/locale/zh_CN/LC_MESSAGES
+obj /usr/share/locale/zh_CN/LC_MESSAGES/flex.mo 8fa4f37a3e315b6ea5897eb466af8a7b 1741541585
+dir /usr/share/locale/zh_TW
+dir /usr/share/locale/zh_TW/LC_MESSAGES
+obj /usr/share/locale/zh_TW/LC_MESSAGES/flex.mo 6f446a492c9253230e2c250e73c4175a 1741541585
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/flex.1.bz2 8e8710f73c4b4850ef615f737c644888 1741541584

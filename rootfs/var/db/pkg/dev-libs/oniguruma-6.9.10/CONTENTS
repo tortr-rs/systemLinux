@@ -1,0 +1,32 @@
+dir /usr
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/oniguruma-6.9.10
+obj /usr/share/doc/oniguruma-6.9.10/FAQ.ja.bz2 3cea5bde564f4b3517db7620a24ea911 1789850936
+obj /usr/share/doc/oniguruma-6.9.10/UNICODE_PROPERTIES.bz2 aa790b0fc6065aa2698470473d90456b 1789850936
+obj /usr/share/doc/oniguruma-6.9.10/CALLOUTS.BUILTIN.bz2 5627fa098de9690d7b346266dc5025fc 1789850936
+obj /usr/share/doc/oniguruma-6.9.10/API.bz2 888b745573d428b0d1b6b95d85c86592 1789850936
+obj /usr/share/doc/oniguruma-6.9.10/CALLOUTS.BUILTIN.ja.bz2 f2f126e3dcf1de323ad2e153040693f9 1789850936
+obj /usr/share/doc/oniguruma-6.9.10/RE.ja.bz2 637cb49d5b2f2d760ab1dbb2f4d3db68 1789850936
+obj /usr/share/doc/oniguruma-6.9.10/README.bz2 ecefdf6258d946b01ba90c9c51c2c6be 1789850936
+obj /usr/share/doc/oniguruma-6.9.10/RE.bz2 05883f252b5c42e986695c213d8f945c 1789850936
+obj /usr/share/doc/oniguruma-6.9.10/FAQ.bz2 8b48292de7b97a9383a795739493cd3d 1789850936
+obj /usr/share/doc/oniguruma-6.9.10/API.ja.bz2 e669e6db881c925624ee55f3bc6015d7 1789850936
+obj /usr/share/doc/oniguruma-6.9.10/HISTORY.bz2 e20f469a8549ad0dfd5c25e3a6fafbf7 1789850936
+obj /usr/share/doc/oniguruma-6.9.10/AUTHORS 85bb08e77ab9f8e694a97a30f68e0683 1789850936
+obj /usr/share/doc/oniguruma-6.9.10/README_japanese.bz2 324de73c276fccabb1cc74a6cd009e17 1789850936
+obj /usr/share/doc/oniguruma-6.9.10/SYNTAX.md.bz2 b3813d3b360774b43620b625713161dd 1789850936
+obj /usr/share/doc/oniguruma-6.9.10/CALLOUTS.API.ja.bz2 a08f8f97dd34029a28a804253e8d8fe0 1789850936
+obj /usr/share/doc/oniguruma-6.9.10/CALLOUTS.API.bz2 36e58a75c431db56c827fbbef0ef723d 1789850936
+dir /usr/lib64
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/oniguruma.pc 29b862ce71387aaf97a206e4997d7f80 1789850936
+obj /usr/lib64/libonig.so.5.5.0 46cbf88e3f0d452048063702a322c31a 1789850937
+dir /usr/bin
+obj /usr/bin/onig-config 3adb3a8d6c8b464089562f7377449099 1789850936
+dir /usr/include
+obj /usr/include/oniggnu.h aa5bcd9fe9e5e92b068951d31ee5094f 1789850936
+obj /usr/include/onigposix.h 0c0201d751bd1c9f941135df0a31dc0a 1789850936
+obj /usr/include/oniguruma.h ebf5df107f6991cc685fe6325697b3e4 1789850936
+sym /usr/lib64/libonig.so -> libonig.so.5.5.0 1789850936
+sym /usr/lib64/libonig.so.5 -> libonig.so.5.5.0 1789850936

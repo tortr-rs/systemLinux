@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>laumann@gentoo.org</email>
+		<name>Thomas Bracht Laumann Jespersen</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">openjpeg.mirror</remote-id>
+		<remote-id type="github">uclouvain/openjpeg</remote-id>
+		<remote-id type="cpe">cpe:/a:openjpeg:openjpeg</remote-id>
+	</upstream>
+</pkgmetadata>

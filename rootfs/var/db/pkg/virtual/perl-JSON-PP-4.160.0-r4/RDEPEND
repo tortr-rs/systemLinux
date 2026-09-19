@@ -1,0 +1,1 @@
+|| ( =dev-lang/perl-5.44* =dev-lang/perl-5.42* =dev-lang/perl-5.40* =dev-lang/perl-5.38* ~perl-core/JSON-PP-4.160.0 ) dev-lang/perl:0/5.42= !<perl-core/JSON-PP-4.160.0 !>perl-core/JSON-PP-4.160.0-r999

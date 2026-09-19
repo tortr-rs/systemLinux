@@ -1,0 +1,8 @@
+dir /var
+dir /var/spool
+dir /var/spool/mail
+obj /var/spool/mail/.keep_acct-user_mail-0 d41d8cd98f00b204e9800998ecf8427e 1782668920
+dir /usr
+dir /usr/lib
+dir /usr/lib/sysusers.d
+obj /usr/lib/sysusers.d/acct-user-mail.conf fc58822c0a52c76ef7990b6544a91db1 1782668920

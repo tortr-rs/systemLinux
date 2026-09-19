@@ -1,0 +1,7 @@
+/usr/lib/python3.14/site-packages/lxml/html/diff.cpython-314-x86_64-linux-gnu.so libc.so.6
+/usr/lib/python3.14/site-packages/lxml/html/_difflib.cpython-314-x86_64-linux-gnu.so libc.so.6
+/usr/lib/python3.14/site-packages/lxml/sax.cpython-314-x86_64-linux-gnu.so libc.so.6
+/usr/lib/python3.14/site-packages/lxml/objectify.cpython-314-x86_64-linux-gnu.so libxml2.so.16,libc.so.6
+/usr/lib/python3.14/site-packages/lxml/etree.cpython-314-x86_64-linux-gnu.so libxslt.so.1,libexslt.so.0,libxml2.so.16,libc.so.6
+/usr/lib/python3.14/site-packages/lxml/builder.cpython-314-x86_64-linux-gnu.so libc.so.6
+/usr/lib/python3.14/site-packages/lxml/_elementpath.cpython-314-x86_64-linux-gnu.so libc.so.6

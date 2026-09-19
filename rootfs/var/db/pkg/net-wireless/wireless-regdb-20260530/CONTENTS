@@ -1,0 +1,14 @@
+dir /lib
+dir /lib/firmware
+obj /lib/firmware/regulatory.db 7b37a33bbe0f18f342fcd5a9f80bc3fe 1788513159
+obj /lib/firmware/regulatory.db.p7s 1ab34236cbd7434b889a28f5bc3ce530 1788513159
+dir /usr
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/wireless-regdb-20260530
+obj /usr/share/doc/wireless-regdb-20260530/README.bz2 500b19b7214a747106d6d6968116882d 1788513159
+obj /usr/share/doc/wireless-regdb-20260530/db.txt.bz2 378a389504a9222c09172a2df64f9b49 1788513159
+dir /usr/share/man
+dir /usr/share/man/man5
+obj /usr/share/man/man5/regulatory.db.5 939253b0853593bb7c9789bab0dcc6c6 1788513159
+obj /usr/share/man/man5/regulatory.bin.5.bz2 19cc57b9ec37ffa618964aa6c4f7c343 1788513159

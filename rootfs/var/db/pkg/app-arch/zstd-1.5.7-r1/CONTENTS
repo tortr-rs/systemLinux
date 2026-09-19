@@ -1,0 +1,32 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/pzstd bf021efaea8dc7d2ee0c498e76b53019 1768996626
+sym /usr/bin/unzstd -> zstd 1789353872
+obj /usr/bin/zstd c1dc34de14068ad873b087dd081cb3eb 1768996626
+obj /usr/bin/zstd-frugal 8de674a2341c1f4e1681ce7a041c4bed 1768996626
+sym /usr/bin/zstdcat -> zstd 1789353872
+obj /usr/bin/zstdgrep 4e16657238c1d51e2067380425cea68c 1739923464
+obj /usr/bin/zstdless f96f2accbe640e420a7cfd312d411732 1739923464
+sym /usr/bin/zstdmt -> zstd 1789353872
+dir /usr/include
+obj /usr/include/zdict.h 6576e2f31efa67d1609fe87d23b25950 1739923464
+obj /usr/include/zstd.h c156aefa14f44d2dfb74516f26919bed 1768996619
+obj /usr/include/zstd_errors.h c41245e70dc8b3520adab14d208c8b46 1739923464
+dir /usr/lib64
+sym /usr/lib64/libzstd.so -> libzstd.so.1 1789353872
+sym /usr/lib64/libzstd.so.1 -> libzstd.so.1.5.7 1789353872
+obj /usr/lib64/libzstd.so.1.5.7 26df1ef8c80d80d1c24842f8f145d4ab 1768996626
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/libzstd.pc 153cbdd53539c004e9b2846de76e6877 1768996620
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/zstd-1.5.7-r1
+obj /usr/share/doc/zstd-1.5.7-r1/README.md.bz2 62c01367c1a6f8954fbb2a0e8f636e36 1768996626
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/zstd.1.bz2 4d760f0abed1656ff84c266560d03ee6 1739923464
+sym /usr/share/man/man1/zstdcat.1.bz2 -> zstd.1.bz2 1789353872
+obj /usr/share/man/man1/zstdgrep.1.bz2 ba250b37ec628bd67667e951e80ff271 1739923464
+obj /usr/share/man/man1/zstdless.1.bz2 53558268823710bb041239da9636dba2 1739923464
+sym /usr/share/man/man1/zstdmt.1.bz2 -> zstd.1.bz2 1789353872
+sym /usr/share/man/man1/unzstd.1.bz2 -> zstd.1.bz2 1789353872

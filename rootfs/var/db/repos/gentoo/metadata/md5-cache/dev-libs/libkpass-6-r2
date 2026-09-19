@@ -1,0 +1,12 @@
+DEFINED_PHASES=configure install
+DEPEND=>=dev-libs/nettle-2.7.1:=
+DESCRIPTION=Libkpass is a C implementation to access KeePass 1.x format password databases
+EAPI=8
+HOMEPAGE=https://sourceforge.net/projects/libkpass/
+IUSE=static-libs
+KEYWORDS=~amd64
+LICENSE=GPL-3+
+RDEPEND=>=dev-libs/nettle-2.7.1:=
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/libkpass/libkpass-6.tar.gz
+_md5_=9403611b8de5842334a0594c9591228a

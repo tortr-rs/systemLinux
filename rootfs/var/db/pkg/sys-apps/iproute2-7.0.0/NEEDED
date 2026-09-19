@@ -1,0 +1,17 @@
+/bin/ss libmnl.so.0,libc.so.6
+/bin/ip libmnl.so.0,libc.so.6
+/sbin/ifstat-iproute2 libmnl.so.0,libm.so.6,libc.so.6
+/sbin/dpll libmnl.so.0,libc.so.6
+/sbin/netshaper libmnl.so.0,libm.so.6,libc.so.6
+/sbin/vdpa libmnl.so.0,libc.so.6
+/sbin/dcb libmnl.so.0,libm.so.6,libc.so.6
+/sbin/rdma libmnl.so.0,libc.so.6
+/sbin/devlink libmnl.so.0,libm.so.6,libc.so.6
+/sbin/tipc libmnl.so.0,libc.so.6
+/sbin/genl libmnl.so.0,libc.so.6
+/sbin/lnstat libmnl.so.0,libc.so.6
+/sbin/rtacct libmnl.so.0,libm.so.6,libc.so.6
+/sbin/nstat libmnl.so.0,libm.so.6,libc.so.6
+/sbin/bridge libmnl.so.0,libc.so.6
+/sbin/tc libmnl.so.0,libm.so.6,libxtables.so.12,libc.so.6
+/sbin/rtmon libmnl.so.0,libc.so.6

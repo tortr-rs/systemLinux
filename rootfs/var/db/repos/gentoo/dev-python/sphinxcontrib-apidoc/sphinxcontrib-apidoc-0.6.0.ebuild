@@ -1,0 +1,35 @@
+# Copyright 2021-2026 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=8
+
+DISTUTILS_USE_PEP517=setuptools
+PYTHON_COMPAT=( python3_{12..15} )
+
+inherit distutils-r1 pypi
+
+DESCRIPTION="Sphinx extension for running sphinx-apidoc on each build"
+HOMEPAGE="
+	https://pypi.org/project/sphinxcontrib-apidoc/
+	https://github.com/sphinx-contrib/apidoc/
+"
+
+LICENSE="BSD"
+SLOT="0"
+KEYWORDS="amd64 ~arm ~arm64 ~riscv ~x86"
+
+BDEPEND="
+	dev-python/pbr[${PYTHON_USEDEP}]
+"
+RDEPEND="
+	${BDEPEND}
+	>=dev-python/sphinx-5.0.0[${PYTHON_USEDEP}]
+"
+
+EPYTEST_PLUGINS=()
+distutils_enable_tests pytest
+
+python_test() {
+	cd "${T}" || die
+	epytest "${S}"/tests
+}

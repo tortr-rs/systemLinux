@@ -1,0 +1,619 @@
+# Copyright 2010-2016 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+DESCRIPTION="Manage php installations"
+MAINTAINER="php-bugs@gentoo.org"
+MODULES="cli apache2 fpm cgi phpdbg"
+
+#
+# Output a list of link names (not full paths) belonging to the given
+# SAPI. These need to be updated when the user changes his active
+# target.
+#
+# INPUT:
+#
+# The name of a SAPI.
+#
+# OUTPUT:
+#
+# A space-separated list of link names belonging to the given
+# SAPI. For example, the "cli" SAPI has three link names: "php phpize
+# php-config". The "cgi" sapi has only "php-cgi".
+#
+sapi_active_link_names() {
+	local sapi="${1}"
+
+	case "${sapi}" in
+		apache2) echo "mod_php.so" ;;
+		cli)     echo "php phpize php-config phar" ;;
+		fpm)     echo "php-fpm" ;;
+		cgi)     echo "php-cgi" ;;
+		phpdbg)  echo "phpdbg"  ;;
+		*)       die "invalid SAPI name: ${sapi}" ;;
+	esac
+}
+
+# The link names obtained from sapi_active_link_names() all need to
+# point somewhere. Usually the target is the same as the link name
+# itself, but not always. This function returns the link-target for a
+# given sapi, sapi-target, and link name.
+#
+# INPUT:
+#
+# The first parameter is a SAPI name. The second parameter is the
+# SAPI-target name (for example, "php7.0"). The third parameter is a
+# link name.
+#
+# OUTPUT:
+#
+# The name of the target (that is, file) for the given link name.
+#
+sapi_link_name_target() {
+	local sapi="${1}"
+	local target_name="${2}"
+	local link_name="${3}"
+
+	# For now, only apache2's mod_php.so gets special treatment.
+	if [[ "${sapi}" == "apache2" && "${link_name}" == "mod_php.so" ]] ; then
+		local major=$(parse_target_major_version "${target_name}")
+		echo "libphp${major}.so"
+	else
+		echo "${link_name}"
+	fi
+}
+
+# Each SAPI provides a few (one or more) "active" links in a
+# predictable location. The target directory (where they point) is
+# fixed for a given SAPI, and this function returns it.
+#
+# The name "target" is unfortunate, but that's the terminology that
+# "ln" uses. The link_name is the name of the link on the filesystem,
+# and target is where it points.
+#
+# INPUT:
+#
+# The first parameter is the name of a SAPI. The second parameter is
+# the name of a target.
+#
+# OUTPUT:
+#
+# The directory to which the given SAPI's symlinks point. For example,
+# the "cli" sapi has three executable symlinks and all of them point
+# to executables in /usr/lib/phpX.Y/bin.
+#
+sapi_active_link_target_dir() {
+	local sapi="${1}"
+	local target="${2}"
+
+	local link_target_dir="${ROOT%/}/usr/lib64/${target}/bin"
+	if [[ "${sapi}" == "apache2" ]] ; then
+		link_target_dir+="/../apache2"
+	fi
+
+	echo "${link_target_dir}"
+}
+
+
+# Each SAPI provides a few (one or more) "active" links in a
+# predictable location. And fortunately that location is fixed for a
+# given SAPI. For example, the "cgi" SAPI has its sole active symlink,
+# /usr/bin/php-cgi, in /usr/bin. Given a SAPI name, we return the
+# directory where that SAPI's links are located.
+#
+# INPUT:
+#
+# The name of a SAPI.
+#
+# OUTPUT:
+#
+# The directory in which the given SAPI's symlinks are located. For
+# example, the "cli" sapi has its three executable links in "/usr/bin".
+#
+sapi_active_link_dir() {
+	local sapi="${1}"
+
+	case "${sapi}" in
+		apache2) echo "${ROOT%/}/usr/lib64/apache2/modules" ;;
+		cli)     echo "${ROOT%/}/usr/bin" ;;
+		fpm)     echo "${ROOT%/}/usr/bin" ;;
+		cgi)     echo "${ROOT%/}/usr/bin" ;;
+		phpdbg)  echo "${ROOT%/}/usr/bin" ;;
+		*)       die "invalid SAPI name: ${sapi}" ;;
+	esac
+}
+
+
+# Each SAPI provides at least one "active" link in a predictable
+# location.  For example, the "cgi" SAPI has its active symlink at
+# /usr/bin/php-cgi. Given a SAPI name we return the path to that link.
+#
+# Note that SAPIs may provide more than one active link -- we return
+# the path for only the first.
+#
+# INPUT:
+#
+# The name of a SAPI.
+#
+# OUTPUT:
+#
+# The path of the main symlink provided by the active version of the
+# given SAPI. An error is raised if the given SAPI is not valid.
+#
+sapi_active_link_path() {
+	local sapi="${1}"
+	local dir=$(sapi_active_link_dir "${sapi}")
+	local link_names=( $(sapi_active_link_names "${sapi}") )
+
+	# Use the first link name only.
+	echo "${dir}/${link_names[0]}"
+}
+
+
+# Parse and return the major version from a target name. For example,
+# the "php5.6" target has a major version of "5".
+#
+# INPUT:
+#
+# The name of a valid PHP target, like php5.6 or php7.0.
+#
+# OUTPUT:
+#
+# A major version number. An error is raised if the given target is
+# not valid.
+#
+parse_target_major_version() {
+	local target="${1}"
+	local major="${target:3:1}"
+	case "${major}" in
+		5|7|8) echo "${major}" ;;
+		*)   die "invalid PHP target name: ${target}" ;;
+	esac
+}
+
+# Remove dead active symlinks for the given SAPI.
+#
+# If a symlink for an SAPI is dead, then that SAPI is at least
+# partially broken. For example, if the symlink to php-cgi is dead,
+# then CGI just isn't going to work -- the SAPI is broken. It
+# therefore makes sense to run update() after we find and remove any
+# broken links. The update at least has the potential to leave things
+# working.
+#
+# There is one potential caveat to that approach, for SAPIs with more
+# than one active symlink. What if "phar" is broken (after a rebuild)
+# but "php" is OK? Do we want to update() the entire SAPI because one
+# of the symlinks is dead? Answer: I guess.
+#
+# INPUT:
+#
+# The name of the SAPI to clean up.
+#
+# OUTPUT:
+#
+# If any symlinks are removed, that fact will be announced. If an
+# update occurs, that will be noted as well
+#
+cleanup_sapi() {
+	local sapi="${1}"
+	local link_dir=$(sapi_active_link_dir "${sapi}")
+
+	for link_name in $(sapi_active_link_names "${sapi}"); do
+		local link_path="${link_dir}/${link_name}"
+		if [[ -L "${link_path}" && ! -e "${link_path}" ]] ; then
+			rm -f "${link_path}" || die "failed to remove ${link_path}"
+			echo "Removed broken symlink ${link_path}."
+			update_sapi "${sapi}" # Try to fix it.
+		fi
+	done
+}
+
+
+# Update the given SAPI to the latest valid target.
+#
+# The "latest" target is really just the last available one in the
+# list for this SAPI.
+#
+# INPUT:
+#
+# The name of a SAPI.
+#
+# OUTPUT:
+#
+# An error code "1" is returned if there are no valid targets for the
+# given SAPI. Otherwise, we return whatever comes back from set_sapi()
+#
+update_sapi() {
+	local sapi="${1}"
+	local latest_target=$(find_sapi_targets "${sapi}" | tail -n 1)
+
+	# No valid targets?
+	[[ -z "${latest_target}" ]] && return 1
+
+	# Proceed even if the current target is the latest one. This can
+	# fix issues where, for example, the "phpize" symlink is broken
+	# but "php" is fine and points to the latest target.
+	set_sapi "${sapi}" "${latest_target}"
+}
+
+
+#
+# Find all valid target names by searching libdir for directories like
+# php5.6, php7.0, etc.
+#
+# OUTPUT:
+#
+# A space-separated list of target names, for example, "php5.6 php7.0".
+#
+find_targets() {
+	# Temporarily enable the "nullglob" shell option to ensure that we
+	# don't return a literal "php*.*" when there are no valid targets.
+	local shopt_nullglob_saved=$(shopt -p nullglob)
+	shopt -s nullglob
+	cd "${ROOT%/}/usr/lib64" && echo php*.*
+	${shopt_nullglob_saved}
+}
+
+# List all valid targets for the given SAPI. The list is obtained by
+# searching the filesystem for a particular (SAPI-specific) file in
+# locations determined by find_targets(). This list should therefore
+# be a subset of find_targets().
+#
+# INPUT:
+#
+# The name of a SAPI.
+#
+# OUTPUT:
+#
+# The "display name" of every available target for this SAPI, one per
+# line. For example,
+#
+#   php5.6
+#   php7.0
+#
+find_sapi_targets() {
+	local sapi="${1}"
+
+	local pattern_suffix
+	case "${sapi}" in
+		apache2) pattern_suffix="apache2/libphp[578].so" ;;
+		cli)     pattern_suffix="bin/php"     ;;
+		fpm)     pattern_suffix="bin/php-fpm" ;;
+		cgi)     pattern_suffix="bin/php-cgi" ;;
+		phpdbg)  pattern_suffix="bin/phpdbg"  ;;
+		*)       die "invalid SAPI name: ${sapi}" ;;
+	esac
+
+	for target in $(find_targets); do
+		local pattern="${ROOT%/}/usr/lib64/${target}/${pattern_suffix}"
+
+		for file in $pattern; do
+			[[ -f "${file}" ]] && echo "${target}"
+		done
+	done | /usr/bin/sort | /usr/bin/uniq
+}
+
+
+# Find the active (selected) target for the given SAPI. This is used
+# to decorate the output of the `eselect php list <sapi>` command.
+#
+# INPUT:
+#
+# The name of a SAPI.
+#
+# OUTPUT:
+#
+# The "display name" of the active target for the given SAPI. For
+# example, "php5.6" or "php7.0".
+#
+get_sapi_active_target() {
+	local sapi="${1}"
+	local active_symlink=$(sapi_active_link_path "${sapi}")
+
+	if [[ -L "${active_symlink}" ]] ; then
+		local active_file=$(canonicalise "${active_symlink}")
+		if [[ -a "${active_file}" ]] ; then
+			# This sed command (regular expression) finds a target name
+			# contained in a filesystem path. For example, it parses
+			# "php5.6" from "/usr/lib64/php5.6/apache2/libphp5.so".
+			# The curly braces are an attempt to avoid '+' which is
+			# a GNU extension.
+			local sed_cmd='s:.*/\(php[0-9]\.[0-9]\{1,\}\)/.*:\1:p'
+			echo "${active_file}" | /usr/bin/sed -ne "${sed_cmd}"
+		fi
+	fi
+}
+
+# Write an apache configuration file to load the active version of
+# mod_php. The 5.x and 7.x series (at least...) have different module
+# names, and so require a different apache configuration when
+# switching between the two.
+#
+# INPUT:
+#
+# The name of the target (php5.6, php7.0) for which to write the
+# configuration file.
+#
+# OUTPUT:
+#
+# None.
+#
+write_mod_php_conf() {
+	local target="${1}"
+	local conf_dir="${ROOT%/}/var/lib/eselect-php"
+	local conf_path="${conf_dir}/mod_php.conf"
+
+	/usr/bin/mkdir -p "${conf_dir}" || die "failed to create ${conf_dir}"
+
+	local major=$(parse_target_major_version "${target}")
+	if [[ $major -gt 7 ]] ; then
+		major=''
+	fi
+	cat <<-EOF > "${conf_path}" || die "failed to write mod_php.conf"
+	<IfModule !php${major}_module>
+	    LoadModule php${major}_module modules/mod_php.so
+	</IfModule>
+	EOF
+}
+
+
+# Resolve an index or target name for a given SAPI into the "display
+# name" of that target.
+#
+# INPUT:
+#
+# The first parameter is the name of a SAPI. The second parameter is
+# either a number (the index of a target), or a target name.
+#
+# OUTPUT:
+#
+# The "display name" of the given target for the given SAPI. For
+# example, if the first parameter is "cli" and the second parameter is
+# "1", then the output will be the display name of the first target
+# for the cli SAPI (e.g. "php5.6").
+#
+# If the index or target name is invalid (that is, does not correspond
+# to one of the valid targets for the given SAPI), then nothing is
+# output.
+#
+resolv_target() {
+	local sapi="${1}"
+	local target="${2}"
+
+	# $targets is an array of things like "php5.6" and "php7.0"
+	local targets=( $(find_sapi_targets "${sapi}") )
+
+	if is_number "${target}" ; then
+		if [[ $target -le ${#targets[@]} && $target -gt 0 ]] ; then
+			# $target looks like an index into the $targets array.
+			echo "${targets[ $(( $target - 1 )) ]}"
+		fi
+	elif has "${target}" ${targets[@]} ; then
+		# $target is the *name* of a valid target for this SAPI.
+		echo "${target}"
+	fi
+}
+
+
+# Die if the given module name is not valid.
+#
+# INPUT:
+#
+# A module name.
+#
+# OUTPUT:
+#
+# None; the function will die() if the given module name is invalid
+# (that is, not one of our declared $MODULES), and do nothing
+# otherwise.
+#
+check_module() {
+	local module="${1}"
+	has "${module}" $MODULES || \
+		die -q "Please choose one of the following modules: ${MODULES}"
+}
+
+## Actual actions
+
+# Perform the "list" action for the given SAPI.
+#
+# INPUT:
+#
+# The SAPI name.
+#
+# OUTPUT:
+#
+# A numbered and decorated list of targets for the given SAPI.
+#
+list_sapi() {
+	local sapi="${1}"
+	local targets=( $(find_sapi_targets "${sapi}") )
+	local active=$(get_sapi_active_target "${sapi}")
+
+	for (( i = 0; i < ${#targets[@]}; i++ )) ; do
+		if [[ $active == ${targets[i]} ]] ; then
+			targets[i]=$(highlight_marker "${targets[i]}")
+		fi
+	done
+	write_numbered_list -m "(none found)" "${targets[@]}"
+}
+
+
+# Perform the "set" action for the given SAPI.
+#
+# INPUT:
+#
+# The first parameter is the SAPI name, and the second parameter is
+# the desired target.
+#
+# OUTPUT:
+#
+# None.
+#
+set_sapi() {
+	local sapi="${1}"
+	local target="${2}"
+	local target_name=$(resolv_target "${sapi}" "${target}")
+	[[ -z $target_name ]] && die -q "invalid target ${target} for SAPI ${sapi}"
+
+	local link_tgt_dir=$(sapi_active_link_target_dir "${sapi}" "${target_name}")
+	local link_dir=$(sapi_active_link_dir "${sapi}")
+
+	for link_name in $(sapi_active_link_names "${sapi}"); do
+		local link_target=$(sapi_link_name_target "${sapi}" "${target_name}" "${link_name}")
+
+		# We need these links to be relative: when setting a target
+		# with ROOT nonempty, the symlink needs to point within
+		# ROOT. But if you later chroot() into ROOT, that link will
+		# point... nowhere, most likely. We need it to still point
+		# at the right target in that case!
+		local relative_target=$(relative_name \
+									"${link_tgt_dir}/${link_target}" \
+									"${link_dir}" )
+
+		# Since the phar extension is optional, we check here to
+		# ensure that the target of our symlink exists before we
+		# create it.  Otherwise, we could wind up with a /usr/bin/phar
+		# symlink that points nowhere. This might leave /usr/bin/phar
+		# pointing to a different version than you'd expect (wherever
+		# it pointed before you just tried to change it), but I guess
+		# leaving some working version is not a terrible thing to do.
+		if [[ -e "${link_tgt_dir}/${link_target}" ]]; then
+			# Use the short "-f" option for POSIX compatibility.
+			ln -s -f "${relative_target}" "${link_dir}/${link_name}" || \
+				die -q "failed to create active ${link_name} symlink"
+		fi
+	done
+
+	# The call to write_mod_php_conf() in particular needs to take
+	# place here, in set_sapi(), since otherwise it can get skipped by
+	# e.g. the update_sapi() function.
+	if [[ "${sapi}" == "apache2" ]]; then
+		write_mod_php_conf "${target_name}"
+		echo "Please restart apache for the changes to take effect."
+	elif [[ "${sapi}" == "fpm" ]]; then
+		echo "Please restart php-fpm for the changes to take effect."
+	fi
+}
+
+
+## set action
+
+describe_set() {
+	echo "make <target> active for <module>"
+}
+
+describe_set_parameters() {
+	echo "<module> <target>"
+}
+
+describe_set_options() {
+	echo "module: one of: ${MODULES}"
+	echo "target: target name or number (from the \"list\" action)"
+}
+
+
+do_set() {
+	local sapi="${1}"
+	local target="${2}"
+	check_module "${sapi}"
+
+	set_sapi "${sapi}" "${target}"
+}
+
+
+
+## List action
+
+describe_list() {
+	echo "lists valid targets for <module>"
+}
+
+describe_list_parameters() {
+	echo "<module>"
+}
+
+describe_list_options() {
+	echo "module: one of: ${MODULES}"
+}
+
+do_list() {
+	local sapi="${1}"
+	check_module "${sapi}"
+	list_sapi "${sapi}"
+}
+
+## Show action
+
+describe_show() {
+	echo "show the active target for <module>"
+}
+
+describe_show_parameters() {
+	echo "<module>"
+}
+
+describe_show_options() {
+	echo "module: one of: ${MODULES}"
+}
+
+do_show() {
+	local sapi="${1}"
+	check_module "${sapi}"
+	get_sapi_active_target "${sapi}"
+}
+
+## update action
+
+describe_update() {
+	echo "update <module> to latest target"
+}
+
+describe_update_parameters() {
+	echo "<module> [--if-unset]"
+}
+
+describe_update_options() {
+	echo "module: one of: ${MODULES}"
+	echo "--if-unset: do nothing if <module> target already exists"
+}
+
+do_update() {
+	local sapi="${1}"
+	local ifunset="${2}"
+
+	# Input sanity check.
+	check_module "${sapi}"
+
+	# Older versions listed the flag as "ifunset" insted of "--if-unset".
+	if [[ "${ifunset}" == "ifunset" || "${ifunset}" == "--if-unset" ]] ; then
+		if [[ -n $(get_sapi_active_target "${sapi}") ]] ; then
+			# There's already an active target for this SAPI, and the
+			# user asked us to leave it alone. So we leave it alone.
+			return
+		fi
+	fi
+
+	update_sapi "${sapi}" || echo "Nothing to update"
+}
+
+## cleanup action
+
+describe_cleanup() {
+	echo "remove and try to fix stale links"
+}
+
+do_cleanup() {
+	for sapi in $MODULES ; do
+		cleanup_sapi "${sapi}"
+	done
+}
+
+## list-modules action
+
+describe_list-modules() {
+	echo "output a space-separated list of valid modules"
+}
+
+do_list-modules() {
+	echo "${MODULES}"
+}

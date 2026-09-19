@@ -1,0 +1,22 @@
+# Copyright 1999-2026 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=8
+
+RPM_COMPRESS_TYPE=none
+inherit rpm toolchain-funcs
+
+RH_REV=3
+DESCRIPTION="Print out increasing, decreasing, random, or redundant data"
+HOMEPAGE="http://freshmeat.net/projects/bsd-jot/"
+SRC_URI="http://www.mit.edu/afs/athena/system/rhlinux/athena-${PV}/free/SRPMS/athena-${P}-${RH_REV}.src.rpm"
+S="${WORKDIR}/athena-${P}"
+
+LICENSE="BSD"
+SLOT="0"
+KEYWORDS="amd64 ~arm ~arm64 ~mips ppc ~ppc64 ~riscv x86"
+
+src_prepare() {
+	default
+	tc-export CC
+}

@@ -1,0 +1,1 @@
+>=sys-apps/util-linux-2.37 sys-apps/acl >=sys-libs/glibc-2.34 >=sys-libs/libxcrypt-4.4.0 >=dev-libs/libgcrypt-1.4.5 >=sys-apps/kmod-15:0/0= >=app-arch/libarchive-3.0:0/13= >=app-arch/lz4-0_p131:0/1.10.0-meson= >=dev-libs/openssl-3.0.0:0/3= sys-libs/pam:0/0=[abi_x86_64(-)] dev-libs/libpcre2 >=sys-libs/libseccomp-2.4.0 >=app-arch/zstd-1.4.0:0/1= >=sys-kernel/linux-headers-5.10

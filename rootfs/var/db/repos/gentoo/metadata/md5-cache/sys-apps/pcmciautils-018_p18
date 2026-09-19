@@ -1,0 +1,15 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=compile configure install postinst postrm prepare setup
+DEPEND=sys-apps/kmod[tools] app-alternatives/yacc app-alternatives/lex
+DESCRIPTION=PCMCIA userspace utilities for Linux
+EAPI=8
+HOMEPAGE=https://packages.qa.debian.org/pcmciautils
+INHERIT=flag-o-matic linux-info toolchain-funcs udev
+IUSE=debug staticsocket
+KEYWORDS=amd64 arm arm64 ~loong ~m68k ppc ~riscv x86
+LICENSE=GPL-2
+RDEPEND=sys-apps/kmod[tools]
+SLOT=0
+SRC_URI=mirror://debian/pool/main/p/pcmciautils/pcmciautils_018.orig.tar.gz mirror://debian/pool/main/p/pcmciautils/pcmciautils_018-18.debian.tar.xz
+_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	linux-info	efd923656513c879204fec6638eadee5	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5	udev	1a23882bb73bc31c64a6f00a5e515f34
+_md5_=31a138faf07ccf5ceaeb531e30a3ab25

@@ -1,0 +1,15 @@
+BDEPEND=dev-lang/ocaml dev-ml/dune
+DEFINED_PHASES=compile install test
+DEPEND=dev-ml/lwt:= dev-lang/ocaml:=[ocamlopt?] dev-ml/dune:=
+DESCRIPTION=Cooperative light-weight thread library for OCaml
+EAPI=7
+HOMEPAGE=https://github.com/ocsigen/lwt_log
+INHERIT=dune
+IUSE=+ocamlopt
+KEYWORDS=~amd64 ~x86
+LICENSE=LGPL-2
+RDEPEND=dev-ml/lwt:= dev-lang/ocaml:=[ocamlopt?] dev-ml/dune:=
+SLOT=0/1.1.1
+SRC_URI=https://github.com/ocsigen/lwt_log/archive/1.1.1.tar.gz -> lwt_log-1.1.1.tar.gz
+_eclasses_=dune	bca6089ec4118f02802b8cee78a748c5	edo	a5e294016aa84979fcb2459749eb80b2	multiprocessing	45d0620f25c2f063ad6276ecd9ed9399
+_md5_=eeb8fc7109d91cad1014ebc5f521e220

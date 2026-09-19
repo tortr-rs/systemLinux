@@ -1,0 +1,1 @@
+dev-lang/python:3.14[threads(+)] >=sys-libs/glibc-2.43-r2

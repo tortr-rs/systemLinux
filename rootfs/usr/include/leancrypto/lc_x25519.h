@@ -1,0 +1,92 @@
+/*
+ * Copyright (C) 2023 - 2026, Stephan Mueller <smueller@chronox.de>
+ *
+ * License: see LICENSE file in root directory
+ *
+ * THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESS OR IMPLIED
+ * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+ * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE, ALL OF
+ * WHICH ARE HEREBY DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+ * OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+ * BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+ * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+ * USE OF THIS SOFTWARE, EVEN IF NOT ADVISED OF THE POSSIBILITY OF SUCH
+ * DAMAGE.
+ */
+
+#ifndef LC_X25519_H
+#define LC_X25519_H
+
+#include "lc_rng.h"
+#include "lc_status.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#define LC_X25519_SECRETKEYBYTES (32U)
+#define LC_X25519_PUBLICKEYBYTES (32U)
+#define LC_X25519_SSBYTES (32U)
+
+struct lc_x25519_sk {
+	uint8_t sk[LC_X25519_SECRETKEYBYTES];
+};
+
+struct lc_x25519_pk {
+	uint8_t pk[LC_X25519_PUBLICKEYBYTES];
+};
+
+struct lc_x25519_ss {
+	uint8_t ss[LC_X25519_SSBYTES];
+};
+
+/*
+ * These interfaces are used for testing or for rustTLS - they are NOT
+ * intended as general-purpose API as they are not PQC-safe
+ */
+int lc_x25519_keypair(struct lc_x25519_pk *pk, struct lc_x25519_sk *sk,
+		      struct lc_rng_ctx *rng_ctx);
+int lc_x25519_pk_from_sk(struct lc_x25519_pk *pk,
+			 const struct lc_x25519_sk *sk);
+int lc_x25519_ss(struct lc_x25519_ss *ss, const struct lc_x25519_pk *pk,
+		 const struct lc_x25519_sk *sk);
+int lc_x25519_sk_ptr(uint8_t **x25519_key, size_t *x25519_key_len,
+		     struct lc_x25519_sk *sk);
+int lc_x25519_pk_ptr(uint8_t **x25519_key, size_t *x25519_key_len,
+		     struct lc_x25519_pk *pk);
+int lc_x25519_ss_ptr(uint8_t **x25519_ss, size_t *x25519_ss_len,
+		     struct lc_x25519_ss *ss);
+int lc_x25519_sk_load(struct lc_x25519_sk *sk, const uint8_t *src_key,
+		      size_t src_key_len);
+int lc_x25519_pk_load(struct lc_x25519_pk *pk, const uint8_t *src_key,
+		      size_t src_key_len);
+int lc_x25519_ss_load(struct lc_x25519_ss *ss, const uint8_t *src_sig,
+		      size_t src_sig_len);
+
+enum lc_x25519_alg_operation {
+	/** Unknown operation */
+	lc_alg_operation_x25519_unknown,
+	/** ED25519: key generation operation */
+	lc_alg_operation_x25519_keygen,
+	/** ED25519: shared secret generation operation */
+	lc_alg_operation_x25519_ss,
+};
+
+/**
+ * @brief Obtain algorithm status
+ *
+ * @param [in] operation X25519 algorithm type
+ *
+ * @return algorithm status
+ */
+enum lc_alg_status_val
+lc_x25519_alg_status(const enum lc_x25519_alg_operation operation);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* LC_X25519_H */

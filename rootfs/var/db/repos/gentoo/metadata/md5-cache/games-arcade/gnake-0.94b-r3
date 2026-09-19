@@ -1,0 +1,14 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=compile install
+DEPEND=sys-libs/ncurses:=
+DESCRIPTION=ncurses-based Nibbles clone
+EAPI=8
+HOMEPAGE=https://wiki.gentoo.org/wiki/No_homepage
+INHERIT=flag-o-matic toolchain-funcs
+KEYWORDS=~amd64 ~arm64 ~x86
+LICENSE=GPL-2
+RDEPEND=sys-libs/ncurses:=
+SLOT=0
+SRC_URI=mirror://gentoo/Gnake.0.94b.tar.gz
+_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=47db14d9ef72caf695e5b6829f2d6675

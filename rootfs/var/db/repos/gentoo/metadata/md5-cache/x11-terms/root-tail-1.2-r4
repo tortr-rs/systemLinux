@@ -1,0 +1,15 @@
+BDEPEND=app-text/rman sys-devel/gcc x11-misc/gccmakedep >=x11-misc/imake-1.0.8-r1
+DEFINED_PHASES=compile configure install prepare
+DEPEND=x11-libs/libXext x11-libs/libX11 x11-base/xorg-proto
+DESCRIPTION=Terminal to display (multiple) log files on the root window
+EAPI=7
+HOMEPAGE=http://oldhome.schmorp.de/marc/root-tail.html
+INHERIT=flag-o-matic toolchain-funcs
+IUSE=kde debug
+KEYWORDS=amd64 ppc ppc64 ~riscv x86
+LICENSE=GPL-2
+RDEPEND=x11-libs/libXext x11-libs/libX11
+SLOT=0
+SRC_URI=http://oldhome.schmorp.de/marc/data/root-tail-1.2.tar.gz
+_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=e3baa8198a4fb740c05597ce5947535a

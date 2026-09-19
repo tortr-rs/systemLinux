@@ -1,0 +1,12 @@
+DEFINED_PHASES=configure install postinst
+DEPEND=x11-libs/gtk+:3 dev-libs/glib x11-libs/pango virtual/pkgconfig nls? ( sys-devel/gettext )
+DESCRIPTION=a GTK+ TCP/IP DX-cluster and ON4KST chat client
+EAPI=8
+HOMEPAGE=https://sourceforge.net/projects/xdxclusterclient
+IUSE=nls
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+RDEPEND=x11-libs/gtk+:3 dev-libs/glib x11-libs/pango
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/xdxclusterclient/xdx-2.91.tar.gz
+_md5_=15e190525cd0146dcc498ba5e593edb9

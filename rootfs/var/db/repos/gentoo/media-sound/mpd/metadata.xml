@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>nex+b-g-o@nexadn.de</email>
+    <name>Adrian Schollmeyer</name>
+  </maintainer>
+  <maintainer type="project">
+    <email>proxy-maint@gentoo.org</email>
+    <name>Proxy Maintainers</name>
+  </maintainer>
+  <use>
+    <flag name="cdio">Enable ISO9660 parsing via <pkg>dev-libs/libcdio-paranoia</pkg></flag>
+    <flag name="chromaprint">Enable ChromaPrint / AcoustID support</flag>
+    <flag name="curl">Enable web stream listening support via <pkg>net-misc/curl</pkg></flag>
+    <flag name="eventfd">Use the eventfd function in MPD's event loop</flag>
+    <flag name="faad">Use <pkg>media-libs/faad2</pkg> for AAC decoding</flag>
+    <flag name="fluidsynth">Enable MIDI support with <pkg>media-sound/fluidsynth</pkg> (discouraged)</flag>
+    <flag name="gme">Enable video game music formats support via <pkg>media-libs/game-music-emu</pkg></flag>
+    <flag name="httpd">Enable built-in stream server</flag>
+    <flag name="id3tag">Enable support for ID3 tags via <pkg>media-libs/libid3tag</pkg></flag>
+    <flag name="inotify">Use the Linux kernel inotify subsystem to notice changes to mpd music library</flag>
+    <flag name="lame">Support for MP3 streaming via Icecast2</flag>
+    <flag name="libmpdclient">Enable support for remote mpd databases</flag>
+    <flag name="libsoxr">Enable resampling with <pkg>media-libs/soxr</pkg></flag>
+    <flag name="mpg123">Enable support for mp3 decoding over <pkg>media-sound/mpg123</pkg></flag>
+    <flag name="nfs">Enable support for the Network File System</flag>
+    <flag name="openmpt">OpenMPT decoder plugin</flag>
+    <flag name="pipewire">Enable support for PipeWire audio backend</flag>
+    <flag name="qobuz">Build plugin to access qobuz</flag>
+    <flag name="recorder">Enables output plugin for recording radio streams</flag>
+    <flag name="shout">Enable ShoutCast/IceCast plugin using <pkg>media-libs/libshout</pkg></flag>
+    <flag name="signalfd">Use the signalfd function in MPD's event loop</flag>
+    <flag name="snapcast">Snapcast audio plugin</flag>
+    <flag name="sndio">Enable support for the <pkg>media-sound/sndio</pkg> backend</flag>
+    <flag name="systemd">Enable support for systemd socket activation</flag>
+    <flag name="tremor">Enable support for <pkg>media-libs/tremor</pkg>, a fixed-point version of the Ogg Vorbis decoder</flag>
+    <flag name="twolame">Enable MP2 encoding via <pkg>media-sound/twolame</pkg></flag>
+    <flag name="wav">Support WAV encoding</flag>
+    <flag name="webdav">Enable using music from a WebDAV share</flag>
+    <flag name="wildmidi">Enable MIDI support via <pkg>media-sound/wildmidi</pkg></flag>
+    <flag name="zlib">Enable database compression with <pkg>virtual/zlib</pkg></flag>
+  </use>
+  <upstream>
+    <bugs-to>https://github.com/MusicPlayerDaemon/MPD/issues</bugs-to>
+    <changelog>https://raw.githubusercontent.com/MusicPlayerDaemon/MPD/refs/heads/master/NEWS</changelog>
+    <doc>https://mpd.readthedocs.io/en/latest/index.html</doc>
+    <remote-id type="github">MusicPlayerDaemon/MPD</remote-id>
+  </upstream>
+</pkgmetadata>

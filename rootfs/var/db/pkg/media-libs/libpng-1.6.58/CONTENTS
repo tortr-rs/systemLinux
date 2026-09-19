@@ -1,0 +1,38 @@
+dir /usr
+dir /usr/src
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/libpng-1.6.58
+obj /usr/share/doc/libpng-1.6.58/TODO.bz2 7f95dd124aa3b7ce3fa18eab923930e2 1777540317
+obj /usr/share/doc/libpng-1.6.58/libpng-manual.txt.bz2 8f69711199ec8f54382e546ca90abf41 1777540317
+obj /usr/share/doc/libpng-1.6.58/ANNOUNCE.bz2 d2541bfd3c613ac9be67d17c91838d60 1777540317
+obj /usr/share/doc/libpng-1.6.58/README.bz2 132423204e8b1cf9248e29e1092ff17b 1777540317
+obj /usr/share/doc/libpng-1.6.58/CHANGES.bz2 ff10ac51213991d0f4917a4a89322419 1777540317
+dir /usr/share/man
+dir /usr/share/man/man5
+obj /usr/share/man/man5/png.5.bz2 d41918b02f6aa10d07187421be4f64a5 1777540317
+dir /usr/share/man/man3
+obj /usr/share/man/man3/libpng.3.bz2 96312a8a5c8f320da10e3233c65c6362 1777540317
+obj /usr/share/man/man3/libpngpf.3.bz2 d7c7795e60333558e05ab5084dd367d2 1777540317
+dir /usr/lib64
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/libpng16.pc 99045a716f90910193a984cd4ceb995a 1777540317
+obj /usr/lib64/libpng16.so.16.58.0 ce8dc4b85952290c901847f3d2e8d19f 1777540317
+dir /usr/bin
+obj /usr/bin/pngfix 70753c01231411273fcd9bd3a07ed890 1777540317
+obj /usr/bin/png-fix-itxt 5e2263dac40d3b3719ce0e7d740e399f 1777540317
+obj /usr/bin/libpng16-config 59ae6a50486fd8ada237a60f278fc3fd 1777540317
+dir /usr/include
+dir /usr/include/libpng16
+obj /usr/include/libpng16/png.h 432a7ea65a765f3d71feaac107f9192e 1777540317
+obj /usr/include/libpng16/pnglibconf.h b22d9fb3811affa5320c2a2bf37c801b 1777540317
+obj /usr/include/libpng16/pngconf.h cb6ab74207d614ad5a86d7a5cabdc2e8 1777540317
+sym /usr/include/png.h -> libpng16/png.h 1789836443
+sym /usr/include/pnglibconf.h -> libpng16/pnglibconf.h 1789836443
+sym /usr/include/pngconf.h -> libpng16/pngconf.h 1789836443
+dir /usr/lib
+sym /usr/bin/libpng-config -> libpng16-config 1789836443
+sym /usr/lib64/libpng16.so.16 -> libpng16.so.16.58.0 1789836443
+sym /usr/lib64/libpng16.so -> libpng16.so.16.58.0 1789836443
+sym /usr/lib64/libpng.so -> libpng16.so 1789836443
+sym /usr/lib64/pkgconfig/libpng.pc -> libpng16.pc 1789836443

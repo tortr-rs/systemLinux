@@ -1,0 +1,222 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/dirmngr e8af577fd9050b733ddc14be1b401e72 1786297167
+obj /usr/bin/dirmngr-client 2454d1941a1d7ad419aa952f3842da3f 1786297167
+obj /usr/bin/gpg-agent 7d2c139c0bd0b76369f9f11109e7c497 1786297167
+obj /usr/bin/gpg-authcode-sign.sh 8c802d6dce446ad6ba3411083f5355a8 1786297166
+obj /usr/bin/gpg-card a3e1d8a625208f63737b29b726e6f317 1786297167
+obj /usr/bin/gpg-connect-agent 5b2cea07d465a7539d1c9d16850db1e6 1786297167
+obj /usr/bin/gpg-mail-tube e5063d3be13e78b41fd0986f2d7b42a7 1786297167
+obj /usr/bin/gpg-reference af426ec91a5e7749f08026d40b55fe0d 1786297167
+obj /usr/bin/gpg-wks-client e60a25bd3b61f5d251e96d8c1106790b 1786297167
+obj /usr/bin/gpgconf 233c81e2363fd94218fd7e39d1842699 1786297167
+obj /usr/bin/gpgparsemail e2b5602fdad19b6eae33bcc8d62a38b0 1786297167
+obj /usr/bin/gpgsm b167370923f0ab7b7dc5bd6aa52bde2b 1786297167
+obj /usr/bin/gpgsplit c799feb9bdb12e2a5a4ec85992b94da9 1786297167
+obj /usr/bin/gpgtar 2c9938cc0e3f97e85bcb5c519d3a0292 1786297167
+obj /usr/bin/gpgv-reference 83c8402052d58ae695253fe7a8ed7326 1786297167
+obj /usr/bin/kbxutil d4b69d09a3191f131f4ae11f0b57b3b6 1786297167
+obj /usr/bin/watchgnupg cc0f134b2692fbb9cbf35e5e720f9836 1786297167
+dir /usr/lib
+dir /usr/lib/systemd
+dir /usr/lib/systemd/user
+obj /usr/lib/systemd/user/dirmngr.service 0e82afe917b9a22164e1c77fcc00123b 1786297166
+obj /usr/lib/systemd/user/dirmngr.socket 55070b8cf2347282d1baf97eb90ca319 1786297166
+obj /usr/lib/systemd/user/gpg-agent-browser.socket 43a51a805e48ebb00a82ce0928cb0ff5 1786297166
+obj /usr/lib/systemd/user/gpg-agent-extra.socket d4ae84ec812069b7fc6d91f9f2d8278c 1786297166
+obj /usr/lib/systemd/user/gpg-agent-ssh.socket 4ab45d4b588ee47ce357312ccbb977f2 1786297166
+obj /usr/lib/systemd/user/gpg-agent.service b8d21e35805b843bcede58e60814116a 1786297166
+obj /usr/lib/systemd/user/gpg-agent.socket bf0fa55f8a38c201a2c1e763f8b204c8 1786297166
+dir /usr/libexec
+obj /usr/libexec/gpg-auth 6e81727e63546175f5e124885eddd957 1786297167
+obj /usr/libexec/gpg-check-pattern 8cd5ec14c4afc691a9af0409d76f2e81 1786297167
+obj /usr/libexec/gpg-pair-tool cf5cee78357279ac9102a4a7c1bc4317 1786297167
+obj /usr/libexec/gpg-preset-passphrase 7caa8cad6d8dbdd43e3e6fff9c674c2e 1786297167
+obj /usr/libexec/gpg-protect-tool c7e575fbfa6bdd39ad5f30947b3eb641 1786297167
+obj /usr/libexec/gpg-wks-client 6fc726f68b8eea6a1681d31f18bd07b2 1786297166
+obj /usr/libexec/keyboxd bf0185fdf78341f5045060e50e4ff3ea 1786297167
+obj /usr/libexec/scdaemon c63b331632e4643990c844893840d48b 1786297167
+dir /usr/sbin
+obj /usr/sbin/addgnupghome 1629d5e5b1a74e8457ca6bf835831b63 1786297166
+obj /usr/sbin/applygnupgdefaults 9b7f5cae4dd3702a853be8a4d746aa62 1786297166
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/gnupg-2.5.21
+obj /usr/share/doc/gnupg-2.5.21/ChangeLog.bz2 2c631e14c0956ea1f8d2cb9d7da5911e 1786297166
+obj /usr/share/doc/gnupg-2.5.21/DCO.bz2 bc0638c79cd22c9ec5a17ef6563a0a48 1786297166
+obj /usr/share/doc/gnupg-2.5.21/DETAILS.bz2 5e88d942cae76679e527e160592cde0a 1786297166
+obj /usr/share/doc/gnupg-2.5.21/FAQ.bz2 2fb94f4c9f56b35bdf86a734a0dfea42 1786297166
+obj /usr/share/doc/gnupg-2.5.21/HACKING.bz2 f5989ad3eec3beb28e968500bab830d8 1786297166
+obj /usr/share/doc/gnupg-2.5.21/KEYSERVER.bz2 93958e4f6813a98ed92ca36e573fd88f 1786297166
+obj /usr/share/doc/gnupg-2.5.21/NEWS.bz2 1884f4f73be26f5432dd8abc7c514005 1786297166
+obj /usr/share/doc/gnupg-2.5.21/OpenPGP.bz2 391ba0ead202f00303e5beb8c35cac46 1786297166
+obj /usr/share/doc/gnupg-2.5.21/README-systemd.bz2 209293c5e75d745f8aa991c96dc9333f 1786297166
+obj /usr/share/doc/gnupg-2.5.21/README.bz2 84b2e225d112af9e6dc8ea494863daa6 1786297166
+obj /usr/share/doc/gnupg-2.5.21/THANKS.bz2 5f392d55adcbf1c524a6d58ada282b6a 1786297166
+obj /usr/share/doc/gnupg-2.5.21/TODO.bz2 5caa62e270029f1deb6be2b2d9d1a819 1786297166
+obj /usr/share/doc/gnupg-2.5.21/TRANSLATE.bz2 7ddc1424d7eedc3e22ad19f2cf475a4e 1786297166
+obj /usr/share/doc/gnupg-2.5.21/VERSION 9f02f753304df1be12d3400108bc0c5e 1786297166
+dir /usr/share/doc/gnupg-2.5.21/examples
+obj /usr/share/doc/gnupg-2.5.21/examples/README.bz2 fe2ca190f30e90c7acd780482d780c41 1786297166
+obj /usr/share/doc/gnupg-2.5.21/examples/common.conf.bz2 4f94a251b54a5b49732968771941fe2f 1786297166
+obj /usr/share/doc/gnupg-2.5.21/examples/gpgconf.conf.bz2 15db1d32e933b2e1cda0f8021a747a10 1786297166
+obj /usr/share/doc/gnupg-2.5.21/examples/gpgconf.rnames.bz2 f347615cac6378388065f7b4cd1f0ca4 1786297166
+obj /usr/share/doc/gnupg-2.5.21/examples/pwpattern.list.bz2 b67e99407e0d2d143b9644b4f359ac00 1786297166
+obj /usr/share/doc/gnupg-2.5.21/examples/qualified.txt.bz2 7f94b132eed679208c92e8afae2e1b58 1786297166
+obj /usr/share/doc/gnupg-2.5.21/examples/scd-event.bz2 6c6978296079d9a421cf6c55c78865e4 1786297166
+obj /usr/share/doc/gnupg-2.5.21/examples/trustlist.txt.bz2 4e88120d0f459cf0dc9436ab560362d7 1786297166
+dir /usr/share/gnupg
+obj /usr/share/gnupg/distsigkey.gpg 3fb92d5703959723897382b7eb42fc71 1786297166
+obj /usr/share/gnupg/help.be.txt 14a267cde4ab3ba9bf15d6bac9eddff5 1786297166
+obj /usr/share/gnupg/help.ca.txt 14a267cde4ab3ba9bf15d6bac9eddff5 1786297166
+obj /usr/share/gnupg/help.cs.txt 14a267cde4ab3ba9bf15d6bac9eddff5 1786297166
+obj /usr/share/gnupg/help.da.txt 14a267cde4ab3ba9bf15d6bac9eddff5 1786297166
+obj /usr/share/gnupg/help.de.txt 2ce363dc4f901492b3378a5890c800b1 1786297166
+obj /usr/share/gnupg/help.el.txt 14a267cde4ab3ba9bf15d6bac9eddff5 1786297166
+obj /usr/share/gnupg/help.eo.txt 14a267cde4ab3ba9bf15d6bac9eddff5 1786297166
+obj /usr/share/gnupg/help.es.txt aa04475c3579b70cd782933202b57a11 1786297166
+obj /usr/share/gnupg/help.et.txt 14a267cde4ab3ba9bf15d6bac9eddff5 1786297166
+obj /usr/share/gnupg/help.fi.txt 2f1c09676d19e0665a7796bbcdb43bbf 1786297166
+obj /usr/share/gnupg/help.fr.txt 31483ae33be515f71e55ffdd02a91053 1786297166
+obj /usr/share/gnupg/help.gl.txt 14a267cde4ab3ba9bf15d6bac9eddff5 1786297166
+obj /usr/share/gnupg/help.hu.txt 27846e504b7ee16691d74fa767a94964 1786297166
+obj /usr/share/gnupg/help.id.txt 10fc1f64cb3db5f7644f76e7c0116b44 1786297166
+obj /usr/share/gnupg/help.it.txt 621e06d2432cab3609494cbb7e6fb78b 1786297166
+obj /usr/share/gnupg/help.ja.txt 95173246d545f278dfa82d97b568955a 1786297166
+obj /usr/share/gnupg/help.nb.txt 14a267cde4ab3ba9bf15d6bac9eddff5 1786297166
+obj /usr/share/gnupg/help.pl.txt 934c96dc3271ebcc317f2e10258cafef 1786297166
+obj /usr/share/gnupg/help.pt.txt b7e5747c3226befddcb3889d9dbc945e 1786297166
+obj /usr/share/gnupg/help.pt_BR.txt 38e773675d99ef7a40c459d68022641a 1786297166
+obj /usr/share/gnupg/help.ro.txt 89a6fc0dd0a8fb7b259d5e62ec50d35d 1786297166
+obj /usr/share/gnupg/help.ru.txt 0ddc84a27580324f65f9fbdbab03c724 1786297166
+obj /usr/share/gnupg/help.sk.txt fff59cd28f183572140170cf47690016 1786297166
+obj /usr/share/gnupg/help.sv.txt 14a267cde4ab3ba9bf15d6bac9eddff5 1786297166
+obj /usr/share/gnupg/help.tr.txt 220682465372281151e7e40b546c546f 1786297166
+obj /usr/share/gnupg/help.txt 7f632c29671f6c70093f174ef31e8b03 1786297166
+obj /usr/share/gnupg/help.zh_CN.txt 190a45c12adf08bbce7a6217ece1335f 1786297166
+obj /usr/share/gnupg/help.zh_TW.txt a9377039bb23cad8781691eaa11769e6 1786297166
+obj /usr/share/gnupg/mail-tube.de.txt 2cb055b904bd18298d6f056883acb6d4 1786297166
+obj /usr/share/gnupg/mail-tube.txt 09cc0b6490b86b6da71a1719e1c17be7 1786297166
+obj /usr/share/gnupg/wks-utils.de.txt 8f98d74e11f3cd9b13cffe29e1d81bb6 1786297166
+obj /usr/share/gnupg/wks-utils.txt e3d3bfbcca1c8096ad3aa9521e02b727 1786297166
+dir /usr/share/info
+obj /usr/share/info/gnupg.info-1.bz2 9ae9a7705faf025fefde18c1324e035a 1786297166
+obj /usr/share/info/gnupg.info-2.bz2 feacdcc96ee5ea3515806740035ebae5 1786297166
+obj /usr/share/info/gnupg.info-3.bz2 a77623d226831d3640f6dce275e2731d 1786297166
+obj /usr/share/info/gnupg.info.bz2 e8c19f6b6f6580025270d4cca023efd4 1786297166
+dir /usr/share/locale
+dir /usr/share/locale/ca
+dir /usr/share/locale/ca/LC_MESSAGES
+obj /usr/share/locale/ca/LC_MESSAGES/gnupg2.mo d0405988830a94956d059325871547c0 1786297166
+dir /usr/share/locale/cs
+dir /usr/share/locale/cs/LC_MESSAGES
+obj /usr/share/locale/cs/LC_MESSAGES/gnupg2.mo 655526cc3b1f0d75c5cd7b5d4b09a13d 1786297166
+dir /usr/share/locale/da
+dir /usr/share/locale/da/LC_MESSAGES
+obj /usr/share/locale/da/LC_MESSAGES/gnupg2.mo 34ab1dfc23f9e9b3e72b3e231576ea7c 1786297166
+dir /usr/share/locale/de
+dir /usr/share/locale/de/LC_MESSAGES
+obj /usr/share/locale/de/LC_MESSAGES/gnupg2.mo 69ece2c49cb865577ba4e0c433df4e4d 1786297166
+dir /usr/share/locale/el
+dir /usr/share/locale/el/LC_MESSAGES
+obj /usr/share/locale/el/LC_MESSAGES/gnupg2.mo 173897dd2b1bc058cb5f0ae3f5f7f3d7 1786297166
+dir /usr/share/locale/en@boldquot
+dir /usr/share/locale/en@boldquot/LC_MESSAGES
+obj /usr/share/locale/en@boldquot/LC_MESSAGES/gnupg2.mo f9f7c0ccdf55d069b665b25b79e9d5ee 1786297166
+dir /usr/share/locale/en@quot
+dir /usr/share/locale/en@quot/LC_MESSAGES
+obj /usr/share/locale/en@quot/LC_MESSAGES/gnupg2.mo 1ac3b89ba2c70085c4067a21304171c6 1786297166
+dir /usr/share/locale/eo
+dir /usr/share/locale/eo/LC_MESSAGES
+obj /usr/share/locale/eo/LC_MESSAGES/gnupg2.mo c50cadbb211787262adec3be7a4a2000 1786297166
+dir /usr/share/locale/es
+dir /usr/share/locale/es/LC_MESSAGES
+obj /usr/share/locale/es/LC_MESSAGES/gnupg2.mo 61fbea2d289ba22632fdff57721936d2 1786297166
+dir /usr/share/locale/et
+dir /usr/share/locale/et/LC_MESSAGES
+obj /usr/share/locale/et/LC_MESSAGES/gnupg2.mo 84ee8ec3ddf88498c6d95fe12dd9195f 1786297166
+dir /usr/share/locale/fi
+dir /usr/share/locale/fi/LC_MESSAGES
+obj /usr/share/locale/fi/LC_MESSAGES/gnupg2.mo 823c61dac85855b482be3591b4c7ea3f 1786297166
+dir /usr/share/locale/fr
+dir /usr/share/locale/fr/LC_MESSAGES
+obj /usr/share/locale/fr/LC_MESSAGES/gnupg2.mo e87d4b5de6e15f87f77f8b886625802d 1786297166
+dir /usr/share/locale/gl
+dir /usr/share/locale/gl/LC_MESSAGES
+obj /usr/share/locale/gl/LC_MESSAGES/gnupg2.mo 40842ade1b6414144f198fcccbcbc351 1786297166
+dir /usr/share/locale/hu
+dir /usr/share/locale/hu/LC_MESSAGES
+obj /usr/share/locale/hu/LC_MESSAGES/gnupg2.mo 7c4c02d653f9fe7ef6cbeb82b7adea37 1786297166
+dir /usr/share/locale/id
+dir /usr/share/locale/id/LC_MESSAGES
+obj /usr/share/locale/id/LC_MESSAGES/gnupg2.mo 6a7c669dd8edeeb3735db8c77cd9857c 1786297166
+dir /usr/share/locale/it
+dir /usr/share/locale/it/LC_MESSAGES
+obj /usr/share/locale/it/LC_MESSAGES/gnupg2.mo 0dcfc6413be591996c7d07be65c1c36c 1786297166
+dir /usr/share/locale/ja
+dir /usr/share/locale/ja/LC_MESSAGES
+obj /usr/share/locale/ja/LC_MESSAGES/gnupg2.mo 7fc910bfe79f38ef479bef71614fdce5 1786297166
+dir /usr/share/locale/ka
+dir /usr/share/locale/ka/LC_MESSAGES
+obj /usr/share/locale/ka/LC_MESSAGES/gnupg2.mo a83e6ed3583acc3b6539b1914aa286d8 1786297166
+dir /usr/share/locale/nb
+dir /usr/share/locale/nb/LC_MESSAGES
+obj /usr/share/locale/nb/LC_MESSAGES/gnupg2.mo 22e9565e6bea929abe43426348a5936a 1786297166
+dir /usr/share/locale/nl
+dir /usr/share/locale/nl/LC_MESSAGES
+obj /usr/share/locale/nl/LC_MESSAGES/gnupg2.mo 156342e714275949dea11e573b506a3a 1786297166
+dir /usr/share/locale/pl
+dir /usr/share/locale/pl/LC_MESSAGES
+obj /usr/share/locale/pl/LC_MESSAGES/gnupg2.mo 85e5714f20daea0ffc5a37de1e43d684 1786297166
+dir /usr/share/locale/pt
+dir /usr/share/locale/pt/LC_MESSAGES
+obj /usr/share/locale/pt/LC_MESSAGES/gnupg2.mo 1e05ac1e557eb01d8a80ca48a1b875f9 1786297166
+dir /usr/share/locale/ro
+dir /usr/share/locale/ro/LC_MESSAGES
+obj /usr/share/locale/ro/LC_MESSAGES/gnupg2.mo d3cf450de892c073b8b6f9b7cf6ee813 1786297166
+dir /usr/share/locale/ru
+dir /usr/share/locale/ru/LC_MESSAGES
+obj /usr/share/locale/ru/LC_MESSAGES/gnupg2.mo a77f008b24002c38989657c098ec2b7c 1786297166
+dir /usr/share/locale/sk
+dir /usr/share/locale/sk/LC_MESSAGES
+obj /usr/share/locale/sk/LC_MESSAGES/gnupg2.mo db45d70582952340ef8cccb71ab41257 1786297166
+dir /usr/share/locale/sv
+dir /usr/share/locale/sv/LC_MESSAGES
+obj /usr/share/locale/sv/LC_MESSAGES/gnupg2.mo 3ef961380affcf12d2f940cd4fa30a00 1786297166
+dir /usr/share/locale/tr
+dir /usr/share/locale/tr/LC_MESSAGES
+obj /usr/share/locale/tr/LC_MESSAGES/gnupg2.mo 0097265011730c9894175764a7a86714 1786297166
+dir /usr/share/locale/uk
+dir /usr/share/locale/uk/LC_MESSAGES
+obj /usr/share/locale/uk/LC_MESSAGES/gnupg2.mo 59e14f8524223711fa6c4813ee7b6b6b 1786297166
+dir /usr/share/locale/zh_CN
+dir /usr/share/locale/zh_CN/LC_MESSAGES
+obj /usr/share/locale/zh_CN/LC_MESSAGES/gnupg2.mo 6057038678eac1ef522fb8bcbe3210eb 1786297166
+dir /usr/share/locale/zh_TW
+dir /usr/share/locale/zh_TW/LC_MESSAGES
+obj /usr/share/locale/zh_TW/LC_MESSAGES/gnupg2.mo 068310df991310c89f7b861c6b42d950 1786297166
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/dirmngr-client.1.bz2 e8788da921775950df113fe1a91956a8 1786297166
+obj /usr/share/man/man1/gpg-agent.1.bz2 a91fdaca62389069778d056193c3d675 1786297166
+obj /usr/share/man/man1/gpg-card.1.bz2 42b41bf546fef3f91f86eaabf2f89d3b 1786297166
+obj /usr/share/man/man1/gpg-check-pattern.1.bz2 f13c796c152075326ac0d95abcff306b 1786297166
+obj /usr/share/man/man1/gpg-connect-agent.1.bz2 1ef2edf0d7da074ec2d63d2b4dbf273c 1786297166
+obj /usr/share/man/man1/gpg-mail-tube.1.bz2 29952e0666441751368b9306b5b0e688 1786297166
+obj /usr/share/man/man1/gpg-preset-passphrase.1.bz2 ed3db04f1e9c473afc6162a726e280ac 1786297166
+obj /usr/share/man/man1/gpg-reference.1.bz2 73cae68edc7607ccd71bbd2beb2db005 1786297166
+obj /usr/share/man/man1/gpg-wks-client.1.bz2 ad7806236e24d6b5d36cb48f7fa82082 1786297166
+obj /usr/share/man/man1/gpg-wks-server.1.bz2 9a2917effaed4d50e2e880265bf7bef3 1786297166
+obj /usr/share/man/man1/gpgconf.1.bz2 aa242f611611404a1ae461d828940850 1786297166
+obj /usr/share/man/man1/gpgparsemail.1.bz2 e42e4c9b8b5ba30bb60b77ae364772bd 1786297166
+obj /usr/share/man/man1/gpgsm.1.bz2 36b6359ef05a1ccdc832925d3facd0e4 1786297166
+obj /usr/share/man/man1/gpgtar.1.bz2 e54596c58b64226ec693a840e31f7b9a 1786297166
+obj /usr/share/man/man1/gpgv-reference.1.bz2 d4a4a625aa56b63f0ddcefa43974ff81 1786297166
+obj /usr/share/man/man1/scdaemon.1.bz2 9f1247732aaa7487987f06068427c0b4 1786297166
+obj /usr/share/man/man1/watchgnupg.1.bz2 09edf6fa3d31d502b2971e6680fbc142 1786297166
+dir /usr/share/man/man7
+obj /usr/share/man/man7/gnupg.7.bz2 0263a82728c684700c2996630ae91380 1786297166
+dir /usr/share/man/man8
+obj /usr/share/man/man8/addgnupghome.8.bz2 24bc3f8d48e95be830be44b6eba7e8ba 1786297166
+obj /usr/share/man/man8/applygnupgdefaults.8.bz2 98e6c95e465a447615354f580f80cb9c 1786297166
+obj /usr/share/man/man8/dirmngr.8.bz2 5f8d018cefbf30cf17990d38d4c9fa7b 1786297166

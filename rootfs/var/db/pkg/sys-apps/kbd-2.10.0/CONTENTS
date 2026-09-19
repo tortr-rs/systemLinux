@@ -1,0 +1,819 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/chvt 4bac5425adb9f6ade9267a293a955ed7 1783272617
+obj /usr/bin/deallocvt bda16fed41c89f1cb611a3e0fe62e629 1783272617
+obj /usr/bin/dumpkeys bc57c7db648d7e96dc6a3bc4a4bb1c12 1783272617
+obj /usr/bin/fgconsole d2e81d788d22caad5ffbdaa91d268bf3 1783272617
+obj /usr/bin/getkeycodes a62223a7a8322dffc8d9cef94719c466 1783272617
+obj /usr/bin/kbd_mode d3174400df726537a087951b58f737bf 1783272617
+obj /usr/bin/kbdinfo 70b2cef379fd43d2902af8d399bc1897 1783272617
+obj /usr/bin/kbdrate 47a779741e1ee84628f908738dbe5e74 1783272617
+obj /usr/bin/loadkeys 9c8d0aa0bf5212e772b7998fb0ec083f 1783272617
+obj /usr/bin/loadunimap 0b0c467933dffd88e5e7b67ff1fceaf0 1783272617
+obj /usr/bin/mapscrn 508beadce116764b0db93de52a09e81c 1783272617
+obj /usr/bin/openvt 2b7c82778ab613fa8120f2d3e0b473e3 1783272617
+obj /usr/bin/psfxtable 872dd0e77fb606068c9f90907e56abe4 1783272617
+obj /usr/bin/resizecons e1ba3d9f161293a08ba57ada7edc01d6 1783272617
+obj /usr/bin/setfont 110ba3e403ae5854058b9a7b6b6f1bca 1783272617
+obj /usr/bin/setkeycodes 3220655dea61134637901a587d777425 1783272617
+obj /usr/bin/setleds 6628c4e8111fce8582390db44a9dc9ee 1783272617
+obj /usr/bin/setmetamode 2b852a7a2ebd83d8a41cc41c251d1f8c 1783272617
+obj /usr/bin/setvtrgb 334b4f28de601afc01871fb777c77107 1783272617
+obj /usr/bin/showconsolefont 0927e262dce043c04bb116c83239e341 1783272617
+obj /usr/bin/showkey b8abe1b92a23201c60119706a6cd269c 1783272617
+obj /usr/bin/unicode_start d6a1e55ed7ba2be76e7b40517875ed49 1783272612
+obj /usr/bin/unicode_stop 04f23c67ec08dc6202a8660f78b8ca4d 1783272612
+obj /usr/bin/vlock 7a49488e11c3da8d8cdcb8a949a695bf 1783272617
+dir /usr/share
+dir /usr/share/consolefonts
+obj /usr/share/consolefonts/161.cp.gz 9810075d11155d242f8d78b09457ba2a 1783272612
+obj /usr/share/consolefonts/162.cp.gz f44435adf760bc70028807bdfe5ad4ba 1783272612
+obj /usr/share/consolefonts/163.cp.gz 6a523528837bb21ceae1b1e7c115ed3f 1783272612
+obj /usr/share/consolefonts/164.cp.gz c1c32e306e9bb9ba2e7f8f4a88d2d818 1783272612
+obj /usr/share/consolefonts/165.cp.gz 30853fd9751cc72b610f1f939a2aaff1 1783272612
+obj /usr/share/consolefonts/737.cp.gz 35d1de54eddc1c943ce274d393ec5d23 1783272612
+obj /usr/share/consolefonts/880.cp.gz c15a17cd2a5871acbe9f3a9cb26eaa40 1783272612
+obj /usr/share/consolefonts/928.cp.gz df4d30b55757ea3b1cbcbb672a799fdb 1783272612
+obj /usr/share/consolefonts/972.cp.gz d974f406f384185c58ca5ee70c7be020 1783272612
+obj /usr/share/consolefonts/Cyr_a8x14.psfu.gz 1b51d79e3bf49b02902004153d0b7164 1783272612
+obj /usr/share/consolefonts/Cyr_a8x16.psfu.gz 861714e3bd4d7d6584169001a23f82ff 1783272612
+obj /usr/share/consolefonts/Cyr_a8x8.psfu.gz fe0ab0519e24fc1981f4831346738ad4 1783272612
+obj /usr/share/consolefonts/ERRORS 88a85f1e1644e1995d25db0de770e49f 1783272612
+obj /usr/share/consolefonts/Goha-12.psfu.gz 8cab7965345462b72d6f14cd9fb4ac9f 1783272612
+obj /usr/share/consolefonts/Goha-14.psfu.gz 0c3558da0a5c64b0c49a9c456ee8d479 1783272612
+obj /usr/share/consolefonts/Goha-16.psfu.gz 9713b782c6469484f7c2260b92d643d8 1783272612
+obj /usr/share/consolefonts/GohaClassic-12.psfu.gz d68bf3418312203da6cf460646c9f8b3 1783272612
+obj /usr/share/consolefonts/GohaClassic-14.psfu.gz 449bc10fa9badabc41d633e16ea228c9 1783272612
+obj /usr/share/consolefonts/GohaClassic-16.psfu.gz d35307431b7a7eeb7e1742500618f1c6 1783272612
+obj /usr/share/consolefonts/Lat2-Terminus16.psfu.gz c3981dc001057c26922dcf729bbcfb98 1783272612
+obj /usr/share/consolefonts/LatArCyrHeb-08.psfu.gz bcd81156b870488b3e4521562f9d692b 1783272612
+obj /usr/share/consolefonts/LatArCyrHeb-14.psfu.gz b6e24b1b46a0dad081ddfecc6969ad8d 1783272612
+obj /usr/share/consolefonts/LatArCyrHeb-16+.psfu.gz 86838635d023f1a4864b9e1eed3b57c3 1783272612
+obj /usr/share/consolefonts/LatArCyrHeb-16.psfu.gz 3739e83ed41a1b5761b34f22e056c577 1783272612
+obj /usr/share/consolefonts/LatArCyrHeb-19.psfu.gz 5f1b292874194db6fd9a7cee415ffea9 1783272612
+obj /usr/share/consolefonts/LatCyrHebKa-16_GIA.psfu.gz 23d3e9d922750335a127aeca1ad57966 1783272612
+obj /usr/share/consolefonts/LatGrkCyr-12x22.psfu.gz 5c91c39297d611ac537be652fe120d8b 1783272612
+obj /usr/share/consolefonts/LatGrkCyr-8x16.psfu.gz 61274d93dabca9a7bc282f738b5a3ff2 1783272612
+obj /usr/share/consolefonts/LatKaCyrHeb-14.psfu.gz 401f121e7edafb1bec8c8ae3b1e73224 1783272612
+obj /usr/share/consolefonts/Mik_8x16.gz 694f2b7683c6c434a82b4f64163ffd88 1783272612
+obj /usr/share/consolefonts/README.12x22 f76189d4a4f6981b5803ce0be50d8943 1783272612
+obj /usr/share/consolefonts/README.Arabic 3f6e153e5a5d2b968af8192448fa2b87 1783272612
+obj /usr/share/consolefonts/README.Cyrillic 8947f03e76557d512398f550f834f802 1783272612
+obj /usr/share/consolefonts/README.Ethiopic 8fd4876eb0ac97206b02772f47123bf4 1783272612
+obj /usr/share/consolefonts/README.Greek c2b1cd01a4595c134bca9502f35107de 1783272612
+obj /usr/share/consolefonts/README.Hebrew 2cdd81fc834f2253c68ca288b8277607 1783272612
+obj /usr/share/consolefonts/README.Lat2-Terminus16 a1b3da63e8551d66c40e5c565e15f791 1783272612
+obj /usr/share/consolefonts/README.LatGrkCyr 4c93c1349421c4cf8046ae4c60103920 1783272612
+obj /usr/share/consolefonts/README.Sun 940a5f56a21e7ad5ec10481a93758215 1783272612
+obj /usr/share/consolefonts/README.cp1250 0153b01db53074d19ab8d2669c6d9b60 1783272612
+obj /usr/share/consolefonts/README.cybercafe 3127f7f79fce8328e09e9bd98abdab1c 1783272612
+obj /usr/share/consolefonts/README.drdos d0c651ff67519ca2b6967bbc84e07935 1783272612
+obj /usr/share/consolefonts/README.eurlatgr ae812fd94f5b49aef0f137612fe20465 1783272612
+obj /usr/share/consolefonts/README.eurlatgr.mappings f66661b7a693a20d97c52bf97823a82a 1783272612
+obj /usr/share/consolefonts/README.lat0 49a60caa1a7a4fecf92acd6507cc5876 1783272612
+obj /usr/share/consolefonts/README.lat7 72068658abf95bda9b32c690f096802d 1783272612
+obj /usr/share/consolefonts/README.lat9 f35813d5b3a07f96ba171d73c36803bd 1783272612
+obj /usr/share/consolefonts/README.psfu a8d655fda60067815321c231f619b3f2 1783272612
+obj /usr/share/consolefonts/UniCyrExt_8x16.psf.gz 86406904ee951c000019f62299d18020 1783272612
+obj /usr/share/consolefonts/UniCyr_8x14.psf.gz fa0f8c8625bba894d1a7b11ca11da3c8 1783272612
+obj /usr/share/consolefonts/UniCyr_8x16.psf.gz 810ed62b6d0d4d825a2b6d56b36c7abe 1783272612
+obj /usr/share/consolefonts/UniCyr_8x8.psf.gz e12ba6d3bf7b5c404128aa3899033251 1783272612
+obj /usr/share/consolefonts/alt-8x14.gz d8068c32f279f511ebc879457081214f 1783272612
+obj /usr/share/consolefonts/alt-8x16.gz b6b2da91ee523e2c1e5ca389a1dc2754 1783272612
+obj /usr/share/consolefonts/alt-8x8.gz ec55ffe0e06d60269ac389c7cba4fd09 1783272612
+obj /usr/share/consolefonts/altc-8x16.gz e50faa45cc8ba7c38575dab6f76c0a7f 1783272612
+obj /usr/share/consolefonts/aply16.psf.gz 7ce23383b394e706af5cdcbf62cc2d12 1783272612
+obj /usr/share/consolefonts/arm8.fnt.gz cf9922afc1b7fba92c0ae153709db67a 1783272612
+obj /usr/share/consolefonts/cp1250.psfu.gz 44683bfbb2871b247052975624951af3 1783272612
+obj /usr/share/consolefonts/cp850-8x14.psfu.gz e5980a88f5fc1ec69843218c3e2ba272 1783272612
+obj /usr/share/consolefonts/cp850-8x16.psfu.gz 7d2a11c03afe7f7addc57714fa1d105e 1783272612
+obj /usr/share/consolefonts/cp850-8x8.psfu.gz bc314f9fa7e7c3798e190f768d365d16 1783272612
+obj /usr/share/consolefonts/cp857.08.gz b0f44994d8926664e024bef72547c4c0 1783272612
+obj /usr/share/consolefonts/cp857.14.gz 88127eabe87c39122152839adf544938 1783272612
+obj /usr/share/consolefonts/cp857.16.gz 117f56a5b0f4d8fe46a517fb70ab58f5 1783272612
+obj /usr/share/consolefonts/cp865-8x14.psfu.gz 0e1cc56a7887aa51f726169a67d41a91 1783272612
+obj /usr/share/consolefonts/cp865-8x16.psfu.gz ee01d736829a71396fc656e53499db11 1783272612
+obj /usr/share/consolefonts/cp865-8x8.psfu.gz eda82594c24e77a7b5c814175119bdf4 1783272612
+obj /usr/share/consolefonts/cp866-8x14.psf.gz fce74f8f968108a577623a83a8c4d1a7 1783272612
+obj /usr/share/consolefonts/cp866-8x16.psf.gz 65fc8e66b0d884fe8a5f5f96c83b2ad4 1783272612
+obj /usr/share/consolefonts/cp866-8x8.psf.gz 1bc30738d3d432b94ded26fb7fe8e7b9 1783272612
+obj /usr/share/consolefonts/cybercafe.fnt.gz 53c559c91f7ebad6d55d9a44168be04c 1783272612
+obj /usr/share/consolefonts/cyr-sun16.psfu.gz bdfd6e982d1561d21443707e7fb7d776 1783272612
+obj /usr/share/consolefonts/default8x16.psfu.gz c0e617c5d8a4bdb2bbd1060119f64415 1783272612
+obj /usr/share/consolefonts/default8x9.psfu.gz 9b5318d23439fe70cccf162bb618a1bb 1783272612
+obj /usr/share/consolefonts/drdos8x14.psfu.gz 66a9d2de292b57434bf3f074f7c9e4f3 1783272612
+obj /usr/share/consolefonts/drdos8x16.psfu.gz 18cdeb801a19e29799cec32075c3ff6b 1783272612
+obj /usr/share/consolefonts/drdos8x6.psfu.gz f9845206aeb53ba40d1461979b69c2c3 1783272612
+obj /usr/share/consolefonts/drdos8x8.psfu.gz e5994b324139599dbd94c1a400309ca6 1783272612
+obj /usr/share/consolefonts/eurlatgr.psfu.gz e3a1ee3871c833d5a71cb0cf57626cd6 1783272612
+obj /usr/share/consolefonts/gr737a-8x8.psfu.gz acf47b447a6185dee579a0992cdc5e78 1783272612
+obj /usr/share/consolefonts/gr737a-9x14.psfu.gz 7d34cc9a42260ffb6e6557c34a8baf18 1783272612
+obj /usr/share/consolefonts/gr737a-9x16.psfu.gz 6ff2242a0f5fec64dd12e8337d4d5e2b 1783272612
+obj /usr/share/consolefonts/gr737b-8x11.psfu.gz 69c5d5684bf0debd6d1b5efed78d903f 1783272612
+obj /usr/share/consolefonts/gr737b-9x16-medieval.psfu.gz edbe3024be3cf549a51b952d3a1a42b2 1783272612
+obj /usr/share/consolefonts/gr737c-8x14.psfu.gz 4c41dadc5bb41df3533c815de474157c 1783272612
+obj /usr/share/consolefonts/gr737c-8x16.psfu.gz ec7fa58aaeff582887ed96622f7a28c1 1783272612
+obj /usr/share/consolefonts/gr737c-8x6.psfu.gz e4e3db79b32845ed31dc5823b278176c 1783272612
+obj /usr/share/consolefonts/gr737c-8x7.psfu.gz 711f532aa50c35e72eac65234c7277d3 1783272612
+obj /usr/share/consolefonts/gr737c-8x8.psfu.gz e6b0a7555ca286ebc0c7bdbe15dc94ff 1783272612
+obj /usr/share/consolefonts/gr737d-8x16.psfu.gz ec7fa58aaeff582887ed96622f7a28c1 1783272612
+obj /usr/share/consolefonts/gr928-8x16-thin.psfu.gz 70f1458f2d8246402a387966484fa683 1783272612
+obj /usr/share/consolefonts/gr928-9x14.psfu.gz d8335ab16790f9c0df229afcfb58c3c7 1783272612
+obj /usr/share/consolefonts/gr928-9x16.psfu.gz 6755638f92346bbaa0f70e73c607c9d0 1783272612
+obj /usr/share/consolefonts/gr928a-8x14.psfu.gz f97795329911f3d34a6e182cd5fbb910 1783272612
+obj /usr/share/consolefonts/gr928a-8x16.psfu.gz acfdea19f6fc9d4f349e31c528118f81 1783272612
+obj /usr/share/consolefonts/gr928b-8x14.psfu.gz 51b216618c919e21195bc35d7ffab2a5 1783272612
+obj /usr/share/consolefonts/gr928b-8x16.psfu.gz 462a71720d187ac4df67ba6ea97f442f 1783272612
+obj /usr/share/consolefonts/greek-polytonic.psfu.gz 00b89da42d09c19a66b64303525e6b4e 1783272612
+obj /usr/share/consolefonts/iso01-12x22.psfu.gz 75898b2ff95b1a3c213bf4760493095c 1783272612
+obj /usr/share/consolefonts/iso01.08.gz 11c44208d38c29451c36a3461092d26a 1783272612
+obj /usr/share/consolefonts/iso01.14.gz 3adfa4a14a5b4151e812afd6f28fd589 1783272612
+obj /usr/share/consolefonts/iso01.16.gz 2e51f6bae2231f6e4c3f4e0393f19cef 1783272612
+obj /usr/share/consolefonts/iso02-12x22.psfu.gz 75898b2ff95b1a3c213bf4760493095c 1783272612
+obj /usr/share/consolefonts/iso02.08.gz faef158641b4faee5895fa2d45fce007 1783272612
+obj /usr/share/consolefonts/iso02.14.gz bbbc0328e644b721c6606c439c013bb4 1783272612
+obj /usr/share/consolefonts/iso02.16.gz af1f0449ceec22c65d23bfbc99ccd679 1783272612
+obj /usr/share/consolefonts/iso03.08.gz 5e4e059ad9949cff61aed65c035f6a86 1783272612
+obj /usr/share/consolefonts/iso03.14.gz 469e2073fe7603074430084560f864f4 1783272612
+obj /usr/share/consolefonts/iso03.16.gz 04bd34c25c1085f196f5d6f3c746ef28 1783272612
+obj /usr/share/consolefonts/iso04.08.gz 3287f8bc103b1bc8c445403c4946630b 1783272612
+obj /usr/share/consolefonts/iso04.14.gz 7f00714af04df4eaeb49773157467ae1 1783272612
+obj /usr/share/consolefonts/iso04.16.gz 0ad3ea1cd72a83009acdcb50b9aacd54 1783272612
+obj /usr/share/consolefonts/iso05.08.gz cacf7827fd6c0db0d941ce7a9393aa31 1783272612
+obj /usr/share/consolefonts/iso05.14.gz e2d5637d8980468a30befab83346d8c4 1783272612
+obj /usr/share/consolefonts/iso05.16.gz 27679a14248aba915057e45322ce56b7 1783272612
+obj /usr/share/consolefonts/iso06.08.gz 9ae8d72c5bc48fe5db854eb78fa4f0a5 1783272612
+obj /usr/share/consolefonts/iso06.14.gz 8f64255fbca2c2c6c6dc2a410683c02c 1783272612
+obj /usr/share/consolefonts/iso06.16.gz 54f8222514fe0436ad134b1a4cf3efd1 1783272612
+obj /usr/share/consolefonts/iso07.14.gz ea23ca181eb0471839fe08e92aa5e60c 1783272612
+obj /usr/share/consolefonts/iso07.16.gz ae87ba77ea51ccec1ca75de0799da559 1783272612
+obj /usr/share/consolefonts/iso07u-16.psfu.gz 51fadedefbf1ffee147674ddd42191ff 1783272612
+obj /usr/share/consolefonts/iso08.08.gz b575a1d160f31dfc20f4fa72ddc620dd 1783272612
+obj /usr/share/consolefonts/iso08.14.gz befb2df3c6d29fe6c13fd6747690c1c2 1783272612
+obj /usr/share/consolefonts/iso08.16.gz 337c34babc6cd22e914dfdd068da4ca8 1783272612
+obj /usr/share/consolefonts/iso09.08.gz 5c4f2c533d24096c38a717bc3a93dd0a 1783272612
+obj /usr/share/consolefonts/iso09.14.gz 611f4ffc6f9307459095381acd01bbd8 1783272612
+obj /usr/share/consolefonts/iso09.16.gz a1cc13af3dc573241226ce74b186aa52 1783272612
+obj /usr/share/consolefonts/iso10.08.gz d5f23345017a1e0d267c83dc3eaf78ba 1783272612
+obj /usr/share/consolefonts/iso10.14.gz aeb88510a83ef35a4ca47a92243ea555 1783272612
+obj /usr/share/consolefonts/iso10.16.gz bdca275ebdb602239de3cf59a5f4dc76 1783272612
+obj /usr/share/consolefonts/koi8-14.psf.gz 6a168678c7d8099c9115feb5f426e0dd 1783272612
+obj /usr/share/consolefonts/koi8c-8x16.gz 4eec6bfe73e4e7397cae01fc3100e85a 1783272612
+obj /usr/share/consolefonts/koi8r-8x14.gz 94880fe210c46b29ae1b54f2f1fa8594 1783272612
+obj /usr/share/consolefonts/koi8r-8x16.gz 03ca2b9ecb0cd21b1612aba2195b3ffc 1783272612
+obj /usr/share/consolefonts/koi8r-8x8.gz 76827790a692a18816bed87bb6fe9fa2 1783272612
+obj /usr/share/consolefonts/koi8r.8x8.psfu.gz 5c676d11970db538a946072a6625b7bb 1783272612
+obj /usr/share/consolefonts/koi8u_8x14.psfu.gz e1c4ce03db323d1316ca0b71991bbb8a 1783272612
+obj /usr/share/consolefonts/koi8u_8x16.psfu.gz e0dee9accd1f51fe71158966ef4e7cde 1783272612
+obj /usr/share/consolefonts/koi8u_8x8.psfu.gz 22451a82981590813f33bf9d563eba5c 1783272612
+obj /usr/share/consolefonts/lat0-08.psfu.gz c90b249bddae6f2e0f671dc448d22698 1783272612
+obj /usr/share/consolefonts/lat0-10.psfu.gz 6b0b044a28e654ee2e4cf4c5b51c2fd6 1783272612
+obj /usr/share/consolefonts/lat0-12.psfu.gz 167af8a0eefdc4b09e10e616ed3e16da 1783272612
+obj /usr/share/consolefonts/lat0-14.psfu.gz a8bb997611c3127fd593e8b53a9b42b9 1783272612
+obj /usr/share/consolefonts/lat0-16.psfu.gz 930417a1e096354dbcc2e101f4456e93 1783272612
+obj /usr/share/consolefonts/lat0-sun16.psfu.gz f6f0166f3be381d995a329c08896b357 1783272612
+obj /usr/share/consolefonts/lat1-08.psfu.gz 011ede509ab55bb54abd2ebb65dba6d5 1783272612
+obj /usr/share/consolefonts/lat1-10.psfu.gz 4a9dbdce88666b4b4571792663a4bf16 1783272612
+obj /usr/share/consolefonts/lat1-12.psfu.gz 524aac2cee7ae398cca9c96cb33af3c3 1783272612
+obj /usr/share/consolefonts/lat1-14.psfu.gz b70fd0c0d0a692c744b3108f45a32c9d 1783272612
+obj /usr/share/consolefonts/lat1-16.psfu.gz c9751c122ac0ed29f329da99fea35f2c 1783272612
+obj /usr/share/consolefonts/lat2-08.psfu.gz f6825719ff57a98ff9861ad081a053f4 1783272612
+obj /usr/share/consolefonts/lat2-10.psfu.gz 415efca12db9159c3e949bdec9226848 1783272612
+obj /usr/share/consolefonts/lat2-12.psfu.gz 0dfc33712b9221e603a05e780a75c8ed 1783272612
+obj /usr/share/consolefonts/lat2-14.psfu.gz 150c0427f95d6bd76a2cbda5daf71680 1783272612
+obj /usr/share/consolefonts/lat2-16.psfu.gz 2d8ffb54454187aa4cd2e3e2e0608f9b 1783272612
+obj /usr/share/consolefonts/lat2-sun16.psfu.gz fe54ae1fac99fd8dfcf420bad0b9a648 1783272612
+obj /usr/share/consolefonts/lat2a-16.psfu.gz 24635e725d813fc6af79951581ceed94 1783272612
+obj /usr/share/consolefonts/lat4-08.psfu.gz afe6bf0c14d881a83453e5df107dad2b 1783272612
+obj /usr/share/consolefonts/lat4-10.psfu.gz c4cc2dcb65efc3dad8988a7228328131 1783272612
+obj /usr/share/consolefonts/lat4-12.psfu.gz 0f00d52578eacb3c6921f63b54872e03 1783272612
+obj /usr/share/consolefonts/lat4-14.psfu.gz 50021687dcad95caa2d61e78d73711f5 1783272612
+obj /usr/share/consolefonts/lat4-16+.psfu.gz 738eb4de5217fa39ed443d0a07305022 1783272612
+obj /usr/share/consolefonts/lat4-16.psfu.gz b2c9ebbd862b0f933d2e1f19bfc604f3 1783272612
+obj /usr/share/consolefonts/lat4-19.psfu.gz 703c0e052f09a39de21891ed4589a25e 1783272612
+obj /usr/share/consolefonts/lat4a-08.psfu.gz 0ba4754c24599c56a6acc1763f3d203a 1783272612
+obj /usr/share/consolefonts/lat4a-10.psfu.gz 58ddd52afd53d8530aca311b8468d456 1783272612
+obj /usr/share/consolefonts/lat4a-12.psfu.gz 0f3cd1a09d0bef3e2c650c259d021191 1783272612
+obj /usr/share/consolefonts/lat4a-14.psfu.gz 870438c4b45600413d64537970067ba3 1783272612
+obj /usr/share/consolefonts/lat4a-16+.psfu.gz df2e23e0473fd6db88e78ffa15b9ba60 1783272612
+obj /usr/share/consolefonts/lat4a-16.psfu.gz e86d932784e8e4ccaafb20ed5f5a0bba 1783272612
+obj /usr/share/consolefonts/lat4a-19.psfu.gz 3983eece9526a105d68a823af5f586c0 1783272612
+obj /usr/share/consolefonts/lat5-12.psfu.gz 4d44fae484d35f7bf72ed654ea1259d2 1783272612
+obj /usr/share/consolefonts/lat5-14.psfu.gz 1bc447e170b9c48b72cf4f5ba2ad45b2 1783272612
+obj /usr/share/consolefonts/lat5-16.psfu.gz f6e58acf66a9679ccacc638bdd64e9e3 1783272612
+obj /usr/share/consolefonts/lat7-14.psfu.gz eb7d7d52b91082deb7576c349b3e7571 1783272612
+obj /usr/share/consolefonts/lat7a-14.psfu.gz 5311c115ab2c56fc1d3d7fda5a6dc708 1783272612
+obj /usr/share/consolefonts/lat7a-16.psf.gz 47d8d8a96a295211d0699e8afd5c4e1c 1783272612
+obj /usr/share/consolefonts/lat9-08.psf.gz 120700a884758d911522d49265cb234f 1783272612
+obj /usr/share/consolefonts/lat9-10.psf.gz d481f53fa7fd0906e766dee4124f4f5b 1783272612
+obj /usr/share/consolefonts/lat9-12.psf.gz 3a789528119cadb1cd7c4e5774fb6e3b 1783272612
+obj /usr/share/consolefonts/lat9-14.psf.gz 60463cf083f0e7c179e6434e10dc1871 1783272612
+obj /usr/share/consolefonts/lat9-16.psf.gz 282e599cc25ab5d6ff76c9222c11ef77 1783272612
+obj /usr/share/consolefonts/lat9u-08.psfu.gz 329b27b10b16011ce5b30c26b1e280c0 1783272612
+obj /usr/share/consolefonts/lat9u-10.psfu.gz 5464216a75672b0cbe64f0ce3b92fe2d 1783272612
+obj /usr/share/consolefonts/lat9u-12.psfu.gz 2a21f8b652431ae43b47141648f83131 1783272612
+obj /usr/share/consolefonts/lat9u-14.psfu.gz 95f04084ab549f82cafaf43a8be73c75 1783272612
+obj /usr/share/consolefonts/lat9u-16.psfu.gz 01e55e1328485a05490604640c9051d0 1783272612
+obj /usr/share/consolefonts/lat9v-08.psfu.gz 63aa645a08cf21d0b0d01c433e4407ba 1783272612
+obj /usr/share/consolefonts/lat9v-10.psfu.gz 76f8023bc29b563930fb0dcb7799db58 1783272612
+obj /usr/share/consolefonts/lat9v-12.psfu.gz dc143418d4809a1b043e4e6bc93b90dd 1783272612
+obj /usr/share/consolefonts/lat9v-14.psfu.gz 32bc610934d1119649b6c7a5caa1511a 1783272612
+obj /usr/share/consolefonts/lat9v-16.psfu.gz 53d3d61f484451509d5ae3ac7cd672ca 1783272612
+obj /usr/share/consolefonts/lat9w-08.psfu.gz 6f1db2b864ffb90da617ec49eda7ddbf 1783272612
+obj /usr/share/consolefonts/lat9w-10.psfu.gz 3f37853b06a136d8125668ed46341ada 1783272612
+obj /usr/share/consolefonts/lat9w-12.psfu.gz a3f37d0a881e1e4e27d212b11ad85ed9 1783272612
+obj /usr/share/consolefonts/lat9w-14.psfu.gz 5d652d3195eade023ebc9d270918883e 1783272612
+obj /usr/share/consolefonts/lat9w-16.psfu.gz 1ede4c9f241b931f429a030b36135d10 1783272612
+obj /usr/share/consolefonts/latarcyrheb-sun16.psfu.gz 163d6b40887a28ffec7fbbfbc87a0677 1783272612
+obj /usr/share/consolefonts/latarcyrheb-sun32.psfu.gz 48c13e978590093990ce9705a63479cd 1783272612
+obj /usr/share/consolefonts/pancyrillic.f16.psfu.gz 452ed730aa58f86dc548ba5573e219c2 1783272612
+dir /usr/share/consolefonts/partialfonts
+obj /usr/share/consolefonts/partialfonts/8859-1.a0-ff.08.gz 807791741a3344f56f99b26a0e813a7d 1783272612
+obj /usr/share/consolefonts/partialfonts/8859-1.a0-ff.14.gz 515bebadc1c4f924537fe45b1d5e2636 1783272612
+obj /usr/share/consolefonts/partialfonts/8859-1.a0-ff.16.gz 518da6988ef6c2b496fe80384c506f72 1783272612
+obj /usr/share/consolefonts/partialfonts/8859-10.a0-ff.08.gz d1dba62102fc126281b7dcb89857543e 1783272612
+obj /usr/share/consolefonts/partialfonts/8859-10.a0-ff.14.gz c09f529b59ffcf3bb72efccd930146d3 1783272612
+obj /usr/share/consolefonts/partialfonts/8859-10.a0-ff.16.gz a112e90d75107260580b116771c0366a 1783272612
+obj /usr/share/consolefonts/partialfonts/8859-2.a0-ff.08.gz babf00f6eb7575857ea887c9ce82e0fd 1783272612
+obj /usr/share/consolefonts/partialfonts/8859-2.a0-ff.14.gz 210929146424f185f600d2fa71eb86e2 1783272612
+obj /usr/share/consolefonts/partialfonts/8859-2.a0-ff.16.gz af56fca6def58700e809450132818702 1783272612
+obj /usr/share/consolefonts/partialfonts/8859-3.a0-ff.08.gz 405467938ce88dea48a6c5d6016e2a2c 1783272612
+obj /usr/share/consolefonts/partialfonts/8859-3.a0-ff.14.gz 52210a0814e24738ba90167755cbe4f4 1783272612
+obj /usr/share/consolefonts/partialfonts/8859-3.a0-ff.16.gz 1dcb23bd78acf5bdf3f4bf34c36afb5f 1783272612
+obj /usr/share/consolefonts/partialfonts/8859-4.a0-ff.08.gz fd7edc44b596df2174c5d9cb616ef0ee 1783272612
+obj /usr/share/consolefonts/partialfonts/8859-4.a0-ff.14.gz 99d98c2acd0ad2dcfd29f3783ea086f2 1783272612
+obj /usr/share/consolefonts/partialfonts/8859-4.a0-ff.16.gz 3a8ad1dcd3ddbf3ab788adafc75affe9 1783272612
+obj /usr/share/consolefonts/partialfonts/8859-5.a0-ff.08.gz d71271330092a7d8a737b3bf6a55bf59 1783272612
+obj /usr/share/consolefonts/partialfonts/8859-5.a0-ff.14.gz f3483fe6c97e0d2463da003736823547 1783272612
+obj /usr/share/consolefonts/partialfonts/8859-5.a0-ff.16.gz ecc39b2732ed8b2be6ee04adc5779316 1783272612
+obj /usr/share/consolefonts/partialfonts/8859-6.a0-ff.08.gz ffd2c37e315e98d40e4df5883ac85f27 1783272612
+obj /usr/share/consolefonts/partialfonts/8859-6.a0-ff.14.gz 6b86f75394020c95ad5fe47fd5300f2f 1783272612
+obj /usr/share/consolefonts/partialfonts/8859-6.a0-ff.16.gz 96e038011979b5f71a5193e878d29f51 1783272612
+obj /usr/share/consolefonts/partialfonts/8859-7.a0-ff.08.gz e1a36ddf629c5cf6d42becd9df6fd905 1783272612
+obj /usr/share/consolefonts/partialfonts/8859-7.a0-ff.14.gz 8d3de8c6c27fb2b44ee1dc6e6ee9d891 1783272612
+obj /usr/share/consolefonts/partialfonts/8859-7.a0-ff.16.gz b3d1d0e78fd0eeead22b9c0d6c241784 1783272612
+obj /usr/share/consolefonts/partialfonts/8859-8.a0-ff.08.gz 9fbecf05054f82f66a9ef077f3d2efe9 1783272612
+obj /usr/share/consolefonts/partialfonts/8859-8.a0-ff.14.gz 4f118f60771aec3ce21424a9a99ad209 1783272612
+obj /usr/share/consolefonts/partialfonts/8859-8.a0-ff.16.gz ce0092dacf7ffb2970c9699489e880e4 1783272612
+obj /usr/share/consolefonts/partialfonts/8859-9.a0-ff.08.gz f4ee8cc30716eb9efa52dfeadafaf703 1783272612
+obj /usr/share/consolefonts/partialfonts/8859-9.a0-ff.14.gz 1819d33c8b0e57bfa3310c8bda8b2c42 1783272612
+obj /usr/share/consolefonts/partialfonts/8859-9.a0-ff.16.gz e0c2826ac0c7a229896f7c4aded79249 1783272612
+obj /usr/share/consolefonts/partialfonts/ascii.20-7f.08.gz a857d0dfbe9d173a63043d41bc412c83 1783272612
+obj /usr/share/consolefonts/partialfonts/ascii.20-7f.14.gz a72f16b03b3e5acd921fa6e083933b7f 1783272612
+obj /usr/share/consolefonts/partialfonts/ascii.20-7f.16.gz 9b64f3448f2994f29cdb3f473e63fdaf 1783272612
+obj /usr/share/consolefonts/partialfonts/cp437.00-1f.08.gz 2944062857b2cc1bc43587e607d36ee8 1783272612
+obj /usr/share/consolefonts/partialfonts/cp437.00-1f.14.gz a0d7bae256f7dd1b0e955bb61a1b54b8 1783272612
+obj /usr/share/consolefonts/partialfonts/cp437.00-1f.16.gz 1da48b91a264c1c9781b2518b5d8b45a 1783272612
+obj /usr/share/consolefonts/partialfonts/none.00-17.08.gz 5814eee0241cae4180b2c668d8c60a40 1783272612
+obj /usr/share/consolefonts/partialfonts/none.00-17.14.gz 79b1c6ac858658c1250c27e87408a89c 1783272612
+obj /usr/share/consolefonts/partialfonts/none.00-17.16.gz cf753a11c0d3de700fb0d5c1fd893e7f 1783272612
+obj /usr/share/consolefonts/ruscii_8x16.psfu.gz 6d57cf48e36ba12ce3e065d65fe18da8 1783272612
+obj /usr/share/consolefonts/ruscii_8x8.psfu.gz 0ec98675162fb683252c93e646e4386c 1783272612
+obj /usr/share/consolefonts/solar24x32.psfu.gz 5b807fff41d63cbd71cef4b32ab87dbe 1783272612
+obj /usr/share/consolefonts/sun12x22.psfu.gz 7e80a208325af2ecb189e4a702b42d4f 1783272612
+obj /usr/share/consolefonts/t.fnt.gz dd4aae36d85b1d47d51c81d18f3d1540 1783272612
+obj /usr/share/consolefonts/t850b.fnt.gz 7faee603236d427c2ffc3ad9206bd713 1783272612
+obj /usr/share/consolefonts/tcvn8x16.psf.gz 382f17b36ec6efa082983957124dea3b 1783272612
+obj /usr/share/consolefonts/viscii10-8x16.psfu.gz a2aeb2323428c60158c015cc63ae5cfb 1783272612
+dir /usr/share/consoletrans
+obj /usr/share/consoletrans/8859-10_to_uni.trans ed93bf49d268c23000e78f12102c32ea 1783272612
+obj /usr/share/consoletrans/8859-13_to_uni.trans 961befdeb8a1ff4bf467b4ad27ca91ab 1783272612
+obj /usr/share/consoletrans/8859-14_to_uni.trans 309a06931dd6a7aedc04577f28722451 1783272612
+obj /usr/share/consoletrans/8859-15_to_uni.trans 490fa7acbf254805593a1379d9e8505a 1783272612
+obj /usr/share/consoletrans/8859-1_to_uni.trans e59cac6fcd9e58f699528e271dca80f0 1783272612
+obj /usr/share/consoletrans/8859-2_to_uni.trans 05a5851c1dd14aa698580d33d4499e0b 1783272612
+obj /usr/share/consoletrans/8859-3_to_uni.trans f6edadbec8200848a4a4a4ed36acccf5 1783272612
+obj /usr/share/consoletrans/8859-4_to_uni.trans 3999670bab9719c5801e9c3008216d21 1783272612
+obj /usr/share/consoletrans/8859-5_to_uni.trans eb797c04a3cd727c789b28867dbde059 1783272612
+obj /usr/share/consoletrans/8859-6_to_uni.trans e95ac89d2c0e83ed9d70d9e3ee3e90cb 1783272612
+obj /usr/share/consoletrans/8859-7_to_uni.trans 10aaacf80c3dc75569f0d355fecd0f9b 1783272612
+obj /usr/share/consoletrans/8859-8_to_uni.trans ad6184301a192d8bf9311d7491ad279c 1783272612
+obj /usr/share/consoletrans/8859-9_to_uni.trans 4ac66b35d2407eec06e70d4b2b6f49be 1783272612
+obj /usr/share/consoletrans/baltic.trans ec012894419256065ea8295b19e5fd2f 1783272612
+obj /usr/share/consoletrans/cp1250_to_uni.trans bd4fc7c6b384ae27d66c56dd5c41477f 1783272612
+obj /usr/share/consoletrans/cp1251_to_uni.trans 8fdb2f09e5a636aa8b05ae481434feed 1783272612
+obj /usr/share/consoletrans/cp437_to_iso01.trans 56cd802f97929e8a92dbc7ddc46493d7 1783272612
+obj /usr/share/consoletrans/cp437_to_uni.trans 1088343dec08293bcd9367f39e5fe15b 1783272612
+obj /usr/share/consoletrans/cp737_to_uni.trans 4e82bc0420aec10b175626bb756323ba 1783272612
+obj /usr/share/consoletrans/cp775_to_uni.trans 98001ff09ae9d383b72ba6b5d00a0ce2 1783272612
+obj /usr/share/consoletrans/cp850_to_iso01.trans 94a35e41983411a445e0ab55ec34d252 1783272612
+obj /usr/share/consoletrans/cp850_to_uni.trans 95f509f6d030e123d49a9f4763ce2c32 1783272612
+obj /usr/share/consoletrans/cp852_to_uni.trans 764c91cee0da0f829e7607eb90b2f263 1783272612
+obj /usr/share/consoletrans/cp853_to_uni.trans 2f3e25e77d5fb98c8409d95031c7be87 1783272612
+obj /usr/share/consoletrans/cp855_to_uni.trans d33df9c14aa6d463d5153de80eb647c8 1783272612
+obj /usr/share/consoletrans/cp857_to_uni.trans 264b7088177d40eb97ab528f25a91235 1783272612
+obj /usr/share/consoletrans/cp860_to_uni.trans 1401751227b90eaef0486ba784f54247 1783272612
+obj /usr/share/consoletrans/cp861_to_uni.trans ba898cf99f074f43c2f78324aeb207c2 1783272612
+obj /usr/share/consoletrans/cp862_to_uni.trans f917ba113e1d9fd38aa8d7d80cfc8a17 1783272612
+obj /usr/share/consoletrans/cp863_to_uni.trans 9fe9d2cb1423d6681c5a48aab598426d 1783272612
+obj /usr/share/consoletrans/cp864_to_uni.trans 42a2eed12ced6a2dcbc14d76df531772 1783272612
+obj /usr/share/consoletrans/cp865_to_uni.trans e9988b1c0bd0164e425585a898473aa2 1783272612
+obj /usr/share/consoletrans/cp866_to_uni.trans 64733148a867aa0372f6a0147adb5de3 1783272612
+obj /usr/share/consoletrans/cp869_to_uni.trans 4646e21d2184b4f6e7697d9d967b9c72 1783272612
+obj /usr/share/consoletrans/cp874_to_uni.trans 2cf5e04d55fd55147a9bee5f698fcf33 1783272612
+obj /usr/share/consoletrans/iso02_to_cp1250.trans 2f6ac92bdbada57b10aeab53e632380f 1783272612
+obj /usr/share/consoletrans/koi2alt 4b8cfeb661f1023f2f9c70effe00dd0e 1783272612
+obj /usr/share/consoletrans/koi8-r_to_uni.trans 4f8d5234cfc639f8434ecb2451fc2266 1783272612
+obj /usr/share/consoletrans/koi8-u_to_uni.trans 08d38a1ecff0eb8a608025c31e2c4dde 1783272612
+obj /usr/share/consoletrans/koi8u2ruscii 373714f344960ada9af7ff042fccf7c3 1783272612
+obj /usr/share/consoletrans/latin2u.trans a9ebc9586b0f88d371c828da351845ce 1783272612
+obj /usr/share/consoletrans/null 1fda5819a459a88687ddf8af06f28990 1783272612
+obj /usr/share/consoletrans/space feddebba3929ff9e4c04c215b93950ce 1783272612
+obj /usr/share/consoletrans/trivial fd7221e86a3944f845a3fe33236c8846 1783272612
+obj /usr/share/consoletrans/utflist cd3077be90c944bbc5ab19074192d738 1783272612
+obj /usr/share/consoletrans/vga2iso bdfa57320db604c9c87cab1d1722617a 1783272612
+obj /usr/share/consoletrans/viscii1.0_to_tcvn.trans 470eb44f562c0191b2d169b3d06eacd3 1783272612
+obj /usr/share/consoletrans/viscii1.0_to_viscii1.1.trans e658d17b8dd4060ec10226ea54877d14 1783272612
+obj /usr/share/consoletrans/zero 832447abc76c912fc25daaad9060ea8f 1783272612
+dir /usr/share/doc
+dir /usr/share/doc/kbd-2.10.0
+obj /usr/share/doc/kbd-2.10.0/AUTHORS d8ebabb928301877c06dc4cdc8fe9dad 1783272614
+obj /usr/share/doc/kbd-2.10.0/CREDITS.bz2 ba014ddc031fc0b4891045c3e4d17ce5 1783272614
+obj /usr/share/doc/kbd-2.10.0/ChangeLog 70b23a452fad242772bf53eec20fe2ee 1783272614
+obj /usr/share/doc/kbd-2.10.0/NEWS 70b23a452fad242772bf53eec20fe2ee 1783272614
+obj /usr/share/doc/kbd-2.10.0/README.bz2 65f7c9f9c5f8d0546319c0f528773e54 1783272613
+dir /usr/share/keymaps
+dir /usr/share/keymaps/amiga
+obj /usr/share/keymaps/amiga/amiga-de.map.gz 309c7317cbf21301a522f79a580418a3 1783272612
+obj /usr/share/keymaps/amiga/amiga-us.map.gz 8eec38a8804a01ada2e7b84406e16daf 1783272612
+dir /usr/share/keymaps/atari
+obj /usr/share/keymaps/atari/atari-de.map.gz e234a90ffc70d7950443ad4881208bf2 1783272612
+obj /usr/share/keymaps/atari/atari-se.map.gz 3500515587ca7c89798a2674fa128f74 1783272612
+obj /usr/share/keymaps/atari/atari-uk-falcon.map.gz a7afed454ac71c758abbea1db80e61e8 1783272612
+obj /usr/share/keymaps/atari/atari-us.map.gz ccd3c3a3854835198e2f24010db29643 1783272612
+dir /usr/share/keymaps/i386
+dir /usr/share/keymaps/i386/azerty
+obj /usr/share/keymaps/i386/azerty/azerty.map.gz 93c4eb6ffc747f29428ead5735b93c0e 1783272612
+obj /usr/share/keymaps/i386/azerty/be-latin1.map.gz 91a92ac6660ac4bb59fa7b9deb66c85d 1783272612
+obj /usr/share/keymaps/i386/azerty/fr-afnor.map.gz fa5ca14926874de148293f00ef62619b 1783272612
+obj /usr/share/keymaps/i386/azerty/fr-latin1.map.gz dc6495315c583c4732ebd16e512fce27 1783272612
+obj /usr/share/keymaps/i386/azerty/fr-latin9.map.gz 20abdccae8b315a045e859b896f89f13 1783272612
+obj /usr/share/keymaps/i386/azerty/fr-pc.map.gz 95c47fae3825330705ac885c8a071edc 1783272612
+obj /usr/share/keymaps/i386/azerty/fr.map.gz 2e953a2da3c966e4f4ede57f34327b70 1783272612
+obj /usr/share/keymaps/i386/azerty/wangbe.map.gz 8742f4925eeebb358bf65183900352b5 1783272612
+obj /usr/share/keymaps/i386/azerty/wangbe2.map.gz 35e0c2561e3a7bc7b2274235beebf075 1783272612
+dir /usr/share/keymaps/i386/bepo
+obj /usr/share/keymaps/i386/bepo/fr-bepo-latin9.map.gz c0476cbc5757c4b522088950d0a84775 1783272612
+obj /usr/share/keymaps/i386/bepo/fr-bepo.map.gz 105d14c8f663f555b377a9b6c6036910 1783272612
+dir /usr/share/keymaps/i386/carpalx
+obj /usr/share/keymaps/i386/carpalx/carpalx-full.map.gz 8c8339f61da29e5b2190190951fc3b98 1783272612
+obj /usr/share/keymaps/i386/carpalx/carpalx.map.gz 81057c6da08830ac8c331619e197dcfe 1783272612
+dir /usr/share/keymaps/i386/colemak
+obj /usr/share/keymaps/i386/colemak/en-latin9.map.gz 89fb80fe99ae0a0825c1de93d129f078 1783272612
+obj /usr/share/keymaps/i386/colemak/mod-dh-ansi-us-awing.map.gz 2b68b2469842cc14d3805aa5c868a98d 1783272612
+obj /usr/share/keymaps/i386/colemak/mod-dh-ansi-us-fatz-wide.map.gz ed3e6026eb4fde41f5a5e519586595af 1783272612
+obj /usr/share/keymaps/i386/colemak/mod-dh-ansi-us-fatz.map.gz 3b01c5f96fee4429450a814a6ea7c94c 1783272612
+obj /usr/share/keymaps/i386/colemak/mod-dh-ansi-us-wide.map.gz 1b155f745cd32457ee2be59646e6a7fd 1783272612
+obj /usr/share/keymaps/i386/colemak/mod-dh-ansi-us.map.gz fa104b898f83427c538c50796019b7d2 1783272612
+obj /usr/share/keymaps/i386/colemak/mod-dh-iso-uk-wide.map.gz 3e5380127beaeef8fc5a1a979ce24b19 1783272612
+obj /usr/share/keymaps/i386/colemak/mod-dh-iso-uk.map.gz b005ffd978f8fb83347c6ed4e0073b2c 1783272612
+obj /usr/share/keymaps/i386/colemak/mod-dh-iso-us-wide.map.gz 9fee7b175057a4fdd82dd4fc282fa781 1783272612
+obj /usr/share/keymaps/i386/colemak/mod-dh-iso-us.map.gz 40d18e49fd5c69d7778111011d8642f4 1783272612
+obj /usr/share/keymaps/i386/colemak/mod-dh-matrix-us.map.gz f9528b85e94adb205ca50e1a5933fda0 1783272612
+dir /usr/share/keymaps/i386/dvorak
+obj /usr/share/keymaps/i386/dvorak/ANSI-dvorak.map.gz f5079d72dc90ac60b6e44d7e897db23e 1783272612
+obj /usr/share/keymaps/i386/dvorak/dvorak-ca-fr.map.gz fbea8ce0a2847da851d7722059c69033 1783272612
+obj /usr/share/keymaps/i386/dvorak/dvorak-de.map.gz 82875db026c7126832e3c502ce1c62a5 1783272612
+obj /usr/share/keymaps/i386/dvorak/dvorak-es.map.gz 1e7069d30596738b5d31a13a67056cb4 1783272612
+obj /usr/share/keymaps/i386/dvorak/dvorak-fr.map.gz 61220a7a30f608c3a49ad6339988b110 1783272612
+obj /usr/share/keymaps/i386/dvorak/dvorak-l.map.gz 13e34314f9f1a82eacabced28919210b 1783272612
+obj /usr/share/keymaps/i386/dvorak/dvorak-la.map.gz b8be863a86963e8ddcc9f297c9ebe3ca 1783272612
+obj /usr/share/keymaps/i386/dvorak/dvorak-no.map.gz 044d98751895dbe3dbe10a9660c07329 1783272612
+obj /usr/share/keymaps/i386/dvorak/dvorak-programmer.map.gz 61887bcd702b80fd05caf1b00db048a8 1783272612
+obj /usr/share/keymaps/i386/dvorak/dvorak-r.map.gz 4a0156a0d683a77013e6993fa51cb274 1783272612
+obj /usr/share/keymaps/i386/dvorak/dvorak-ru.map.gz 47a0a3c5c026572b029d0c2c936c9d45 1783272612
+obj /usr/share/keymaps/i386/dvorak/dvorak-sv-a1.map.gz b598efec4ea16f126022d9d44571dbc4 1783272612
+obj /usr/share/keymaps/i386/dvorak/dvorak-sv-a5.map.gz 134db6c7e7d72e15b98f43a23ca6ca80 1783272612
+obj /usr/share/keymaps/i386/dvorak/dvorak-uk.map.gz d34e62688d619966ca1366f0d106ffc2 1783272612
+obj /usr/share/keymaps/i386/dvorak/dvorak-ukp.map.gz ade2dbe3546757d2bc3033fa01fb28e1 1783272612
+obj /usr/share/keymaps/i386/dvorak/dvorak.map.gz 86002a74e276541f2d6ac5a86507079a 1783272612
+dir /usr/share/keymaps/i386/fgGIod
+obj /usr/share/keymaps/i386/fgGIod/tr_f-latin5.map.gz 5b681d5ac80c6d9a9bb49fa0f7fd4490 1783272612
+obj /usr/share/keymaps/i386/fgGIod/trf-fgGIod.map.gz 0e98df77a7afe429c215bf9c9ed80f82 1783272612
+dir /usr/share/keymaps/i386/hcesar
+obj /usr/share/keymaps/i386/hcesar/hcesar.map.gz c6953fe05794e86ee7d7a9b7c90dd15c 1783272612
+dir /usr/share/keymaps/i386/include
+obj /usr/share/keymaps/i386/include/applkey.map.gz d84bccba832bb64ec1c64be5dd056557 1783272612
+obj /usr/share/keymaps/i386/include/azerty-layout.inc 937d7f7a6f23ee300ccb99e0f015ef2a 1783272612
+obj /usr/share/keymaps/i386/include/backspace.map.gz 1bacfa6a283821f675818995d972f6ce 1783272612
+obj /usr/share/keymaps/i386/include/compose.inc c91046ee33a627391541d2904e663b5e 1783272612
+obj /usr/share/keymaps/i386/include/ctrl.map.gz a5b10e000c7d12c13890c18d5954677f 1783272612
+obj /usr/share/keymaps/i386/include/euro.map.gz 28cf53b070510661f8bd6708a2931ea8 1783272612
+obj /usr/share/keymaps/i386/include/euro1.inc ecfa67866d4cf62c845f603cf2250559 1783272612
+obj /usr/share/keymaps/i386/include/euro1.map.gz 2744933c831a5e6d1f84c4e8bd2f0e3b 1783272612
+obj /usr/share/keymaps/i386/include/euro2.map.gz 2a2cd35caba0ce86bed5b9449c79b023 1783272612
+obj /usr/share/keymaps/i386/include/keypad.map.gz 420a6699934713d4f84215b64427159a 1783272612
+obj /usr/share/keymaps/i386/include/linux-keys-bare.inc d6d9f4c6cd255d4a9bf2c24345edb526 1783272612
+obj /usr/share/keymaps/i386/include/linux-keys-extd.inc 58d91f3d8592fe2227716d390ccbd58e 1783272612
+obj /usr/share/keymaps/i386/include/linux-with-alt-and-altgr.inc c7cbadf9d67d49b1935039154cce1e47 1783272612
+obj /usr/share/keymaps/i386/include/linux-with-modeshift-altgr.inc c5a99f3e3045ff92ccb073b48fa60bae 1783272612
+obj /usr/share/keymaps/i386/include/linux-with-two-alt-keys.inc d72d2218adb3eb6b615ef78286c76988 1783272612
+obj /usr/share/keymaps/i386/include/qwerty-layout.inc f471deac0e71a38e249f72a9f540d9d4 1783272612
+obj /usr/share/keymaps/i386/include/qwertz-layout.inc 4974b8ace9251ef057e1c23629af1b0a 1783272612
+obj /usr/share/keymaps/i386/include/unicode.map.gz ee2a3eb209d23c16bc71b893e9a05988 1783272612
+obj /usr/share/keymaps/i386/include/windowkeys.map.gz 317f2b8d2c714fc7ccf751c861666e5b 1783272612
+dir /usr/share/keymaps/i386/neo
+obj /usr/share/keymaps/i386/neo/3l.map.gz fa8f20224ce53ac5e803d8a88799e179 1783272612
+obj /usr/share/keymaps/i386/neo/README.md 150875f29fc0bd00210277b860109048 1783272612
+obj /usr/share/keymaps/i386/neo/adnw.map.gz b2002ebfe6f14ebc4683138190daaa50 1783272612
+obj /usr/share/keymaps/i386/neo/bone.map.gz ce7982cf802a07a974060f8872135f68 1783272612
+obj /usr/share/keymaps/i386/neo/koy.map.gz 2400c62ff34a8379c56d7ede310fe4e5 1783272612
+obj /usr/share/keymaps/i386/neo/neo.map.gz c393bb869e43b68cdd49b260606d560a 1783272612
+obj /usr/share/keymaps/i386/neo/neoqwertz.map.gz 7cf1cd4f07b174eb9ef32462f342c596 1783272612
+dir /usr/share/keymaps/i386/olpc
+obj /usr/share/keymaps/i386/olpc/es-olpc.map.gz 2fce0e76e2df2d372f6d50248dcc2d56 1783272612
+obj /usr/share/keymaps/i386/olpc/pt-olpc.map.gz f2af462aea943d633be1eb823caf691c 1783272612
+dir /usr/share/keymaps/i386/qwerty
+obj /usr/share/keymaps/i386/qwerty/bashkir.map.gz 31e37e2dd6cc6b8b4ad9db13b4fb9ad9 1783272612
+obj /usr/share/keymaps/i386/qwerty/bg-cp1251.map.gz 3f2e80dbba039646b38df9b21fbc207f 1783272612
+obj /usr/share/keymaps/i386/qwerty/bg-cp855.map.gz 830e57680b9d7940db3482eee0482ccf 1783272612
+obj /usr/share/keymaps/i386/qwerty/bg_bds-cp1251.map.gz 30bf460e8deaca3a5a2aaec38b27afdc 1783272612
+obj /usr/share/keymaps/i386/qwerty/bg_bds-utf8.map.gz f46bb8148d1fb721410c5d5b0758c4b9 1783272612
+obj /usr/share/keymaps/i386/qwerty/bg_pho-cp1251.map.gz 7ea289a497c1cc3c2eac88d949687f19 1783272612
+obj /usr/share/keymaps/i386/qwerty/bg_pho-utf8.map.gz 97396ee3da626f60e5c294d0e74e4f00 1783272612
+obj /usr/share/keymaps/i386/qwerty/br-abnt.map.gz 94d955192fcff8b93d7df428511cb21f 1783272612
+obj /usr/share/keymaps/i386/qwerty/br-abnt2.map.gz 84e196ebc3af1304334c3f41f9e373fe 1783272612
+obj /usr/share/keymaps/i386/qwerty/br-latin1-abnt2.map.gz 695545a102028642445889e180958af3 1783272612
+obj /usr/share/keymaps/i386/qwerty/br-latin1-us.map.gz 3800ab36c8005b5d2095bab930e93814 1783272612
+obj /usr/share/keymaps/i386/qwerty/by-cp1251.map.gz be5ff3e03dd1d90cd44617142fd245b0 1783272612
+obj /usr/share/keymaps/i386/qwerty/by.map.gz 535295d2070c270aa5a70ddde830776f 1783272612
+obj /usr/share/keymaps/i386/qwerty/bywin-cp1251.map.gz e22d0cc936eee56a4c89ba79088fb662 1783272612
+obj /usr/share/keymaps/i386/qwerty/ca.map.gz b391e00948e60307ae9ff6c165d7ba67 1783272612
+obj /usr/share/keymaps/i386/qwerty/cf.map.gz b15ca05ff62d1f3424d38388d1d4f97d 1783272612
+obj /usr/share/keymaps/i386/qwerty/cz-cp1250.map.gz 25f6e9fc8413b63ae945bd7fe776fb90 1783272612
+obj /usr/share/keymaps/i386/qwerty/cz-lat2-prog.map.gz d60d2d142d865f70249ba8e6bf32eed6 1783272612
+obj /usr/share/keymaps/i386/qwerty/cz-lat2.map.gz b83c518876b83a8d6d278083b077ae7a 1783272612
+obj /usr/share/keymaps/i386/qwerty/cz-qwerty.map.gz 5e1349f9ffca5ea27978a7c438df5824 1783272612
+obj /usr/share/keymaps/i386/qwerty/defkeymap.map.gz 8882ce4561168218f08099bee1f93534 1783272612
+obj /usr/share/keymaps/i386/qwerty/defkeymap_V1.0.map.gz 2d93eb7c41c6028907412fcd0ccd0f9a 1783272612
+obj /usr/share/keymaps/i386/qwerty/dk-latin1.map.gz 3316d6841b2667b894310caecd367503 1783272612
+obj /usr/share/keymaps/i386/qwerty/dk.map.gz a8fd4fded1d5e927646a862e0f358a2b 1783272612
+obj /usr/share/keymaps/i386/qwerty/emacs.map.gz 2c4b705cf19839c1623fae04807fe82e 1783272612
+obj /usr/share/keymaps/i386/qwerty/emacs2.map.gz 4aa6357a0dac8a061dcbdd76602defc8 1783272612
+obj /usr/share/keymaps/i386/qwerty/es-cp850.map.gz cd6f49a6e4e3e4340fd438a18511e026 1783272612
+obj /usr/share/keymaps/i386/qwerty/es.map.gz 82a33054efd7f3c3d34651471425d288 1783272612
+obj /usr/share/keymaps/i386/qwerty/et-nodeadkeys.map.gz 9e52bb3202886f67bd06020e37ecbfeb 1783272612
+obj /usr/share/keymaps/i386/qwerty/et.map.gz 8780f50760421f952d77bbdb1363f6ab 1783272612
+obj /usr/share/keymaps/i386/qwerty/fa.map.gz 7206890484960e9bebdaac64a6b59964 1783272612
+obj /usr/share/keymaps/i386/qwerty/fi.map.gz 4caed64112f27d59821297819d5c8eec 1783272612
+obj /usr/share/keymaps/i386/qwerty/ge.map.gz 6461c53140c91b9e8d5b466c943b6434 1783272612
+obj /usr/share/keymaps/i386/qwerty/gr-pc.map.gz 5aae15a546887aaa5ebb6d600ab55faa 1783272612
+obj /usr/share/keymaps/i386/qwerty/gr.map.gz 81d46260011a0f9915bd9dd52f7c3935 1783272612
+obj /usr/share/keymaps/i386/qwerty/hu101.map.gz 9c1663378db74ee65d2243142df0b0f2 1783272612
+obj /usr/share/keymaps/i386/qwerty/hypermap.m4 061ec8dcb7e35292f8b55095085083ad 1783272612
+obj /usr/share/keymaps/i386/qwerty/ie.map.gz e242d7dae6833206ce9e838abaa1dc9a 1783272612
+obj /usr/share/keymaps/i386/qwerty/il-heb.map.gz cee665e65a9d61d02b2c150b0de95fb0 1783272612
+obj /usr/share/keymaps/i386/qwerty/il-phonetic.map.gz b346b9e918716c1b38e29537e91446fa 1783272612
+obj /usr/share/keymaps/i386/qwerty/il.map.gz ba7b76df84d0274d5708a5a3fe796d5d 1783272612
+obj /usr/share/keymaps/i386/qwerty/is-latin1-us.map.gz 40ed036d7ccc75a2486ff0a026ae95a8 1783272612
+obj /usr/share/keymaps/i386/qwerty/is-latin1.map.gz f9dfbd9ec3cad1b80fcb59f0503f5f6c 1783272612
+obj /usr/share/keymaps/i386/qwerty/it-ibm.map.gz d676d312b4d1afa9a2e6a38721e5ff1d 1783272612
+obj /usr/share/keymaps/i386/qwerty/it.map.gz f16e4672bae9b1498de175840d7c2cc2 1783272612
+obj /usr/share/keymaps/i386/qwerty/it2.map.gz 1aa28882e522f48ce18a1645cf26df79 1783272612
+obj /usr/share/keymaps/i386/qwerty/jp106.map.gz c20ab76161ae0a3995007b957388601a 1783272612
+obj /usr/share/keymaps/i386/qwerty/kazakh.map.gz ae06658f0300f2048e85087b832b52d0 1783272612
+obj /usr/share/keymaps/i386/qwerty/ky_alt_sh-UTF-8.map.gz a00213defd3fd149b7861a00f3cfb16a 1783272612
+obj /usr/share/keymaps/i386/qwerty/kyrgyz.map.gz 3f4cb4d9c888ec7a6aca8d64625d90dc 1783272612
+obj /usr/share/keymaps/i386/qwerty/la-latin1.map.gz 43a7ee546d6103b4e358f1157dc445ea 1783272612
+obj /usr/share/keymaps/i386/qwerty/lt.baltic.map.gz 5f26f2ae1e1eaa14b25aa701af179a68 1783272612
+obj /usr/share/keymaps/i386/qwerty/lt.l4.map.gz 4ca1d215daee905bcfadc99927b3420e 1783272612
+obj /usr/share/keymaps/i386/qwerty/lt.map.gz 9a47ac30fb23b9883414ce93266f5f4f 1783272612
+obj /usr/share/keymaps/i386/qwerty/lv-tilde.map.gz 57aa530b5179cb9b4a4298c2e57e382e 1783272612
+obj /usr/share/keymaps/i386/qwerty/lv.map.gz 5e27170fc0923479d2f0af75de8f7f27 1783272612
+obj /usr/share/keymaps/i386/qwerty/mac-no.map.gz 6ad3df63892e9425c1c91571b4c4e67a 1783272612
+obj /usr/share/keymaps/i386/qwerty/mk-cp1251.map.gz c8873ff737f78c22faa40985eb66d010 1783272612
+obj /usr/share/keymaps/i386/qwerty/mk-utf.map.gz 0483b6f97c39cc2fa74f5367621586a3 1783272612
+obj /usr/share/keymaps/i386/qwerty/mk.map.gz ca8e7ded94ba1ce8729c03fe5eab619a 1783272612
+obj /usr/share/keymaps/i386/qwerty/mk0.map.gz db4fa27d02da35296cb5629f3c34c305 1783272612
+obj /usr/share/keymaps/i386/qwerty/nl.map.gz d6c3119214b478f7a630d25696653c02 1783272612
+obj /usr/share/keymaps/i386/qwerty/nl2.map.gz 639bad63cc8a275194bfcdbf48c30fbc 1783272612
+obj /usr/share/keymaps/i386/qwerty/no-latin1.doc 8865215546b8711a693fc2af40287949 1783272612
+obj /usr/share/keymaps/i386/qwerty/no-latin1.map.gz be2bcbcb04381df2bfb7d4dee19680d1 1783272612
+obj /usr/share/keymaps/i386/qwerty/no.map.gz 1aa30cd753947cc39a423840c624e1ba 1783272612
+obj /usr/share/keymaps/i386/qwerty/pc110.map.gz 980b34f71538d97a78dc6c6ce13d3be0 1783272612
+obj /usr/share/keymaps/i386/qwerty/pl.map.gz dc3f7e4a49491940cb5ed1778e5d42bd 1783272612
+obj /usr/share/keymaps/i386/qwerty/pl1.map.gz 55ac728ae0215a4d71d1226e269b7a90 1783272612
+obj /usr/share/keymaps/i386/qwerty/pl2.map.gz 0b0844b0bc678b63dea90b30549efe94 1783272612
+obj /usr/share/keymaps/i386/qwerty/pl3.map.gz 06e619f7596f556884513f3f18fd1623 1783272612
+obj /usr/share/keymaps/i386/qwerty/pl4.map.gz 2918b63fbe573952bf78b7b9807e2276 1783272612
+obj /usr/share/keymaps/i386/qwerty/pt-latin1.map.gz c196d11c3b4fea8e28edc699c660e7ee 1783272612
+obj /usr/share/keymaps/i386/qwerty/pt-latin9.map.gz ce8e4b16d4ab26dc44473fec40d015b0 1783272612
+obj /usr/share/keymaps/i386/qwerty/ro.map.gz cc946048d02a32f73f002a4f6552fb2c 1783272612
+obj /usr/share/keymaps/i386/qwerty/ro_std.map.gz 52874c8c7da8e311abe5e684269ec273 1783272612
+obj /usr/share/keymaps/i386/qwerty/ro_win.map.gz 82b2d55af3a784b3198903c1955efade 1783272612
+obj /usr/share/keymaps/i386/qwerty/ru-cp1251.map.gz 2ab61ff1c2e683e7003254aa5b8c34f5 1783272612
+obj /usr/share/keymaps/i386/qwerty/ru-ms.map.gz 1b874311003e78d05b5ab70026075678 1783272612
+obj /usr/share/keymaps/i386/qwerty/ru-yawerty.map.gz a4c365f9f5d62b3cfcc36c86fbb4f9b3 1783272612
+obj /usr/share/keymaps/i386/qwerty/ru.map.gz dfca59d86f543dc56c45c37659349331 1783272612
+obj /usr/share/keymaps/i386/qwerty/ru1.map.gz 4eae30a1730491e842fbaa6cd55e5f72 1783272612
+obj /usr/share/keymaps/i386/qwerty/ru2.map.gz ff699c0057ef1a568906a916e689209f 1783272612
+obj /usr/share/keymaps/i386/qwerty/ru3.map.gz 29d28abc43dc85ff359074c648f0b193 1783272612
+obj /usr/share/keymaps/i386/qwerty/ru4.map.gz 4234b72706d2fb7f664cd98069d23c18 1783272612
+obj /usr/share/keymaps/i386/qwerty/ru_win.map.gz 2ab49ff7f8667a708b779eca5404381d 1783272612
+obj /usr/share/keymaps/i386/qwerty/ruwin_alt-CP1251.map.gz 9e6a6c5894327935678d25c5fddb00b7 1783272612
+obj /usr/share/keymaps/i386/qwerty/ruwin_alt-KOI8-R.map.gz 3f6a7c624d4a1c72f98ccfd94c65cef9 1783272612
+obj /usr/share/keymaps/i386/qwerty/ruwin_alt-UTF-8.map.gz cadbfa08ec5780c0977ed19893255fd5 1783272612
+obj /usr/share/keymaps/i386/qwerty/ruwin_alt_sh-UTF-8.map.gz 609ece788b7a66a7e8ef0d328144ed2d 1783272612
+obj /usr/share/keymaps/i386/qwerty/ruwin_cplk-CP1251.map.gz c025237f6ac95c9a0f1c8a94abca5ea7 1783272612
+obj /usr/share/keymaps/i386/qwerty/ruwin_cplk-KOI8-R.map.gz c19b2781c190b5fe1389bdd8f3df26e6 1783272612
+obj /usr/share/keymaps/i386/qwerty/ruwin_cplk-UTF-8.map.gz bcabc0eb777a7a33ce3ab77d1cc934e3 1783272612
+obj /usr/share/keymaps/i386/qwerty/ruwin_ct_sh-CP1251.map.gz 2d5eca184422aa08955b460f981e3706 1783272612
+obj /usr/share/keymaps/i386/qwerty/ruwin_ct_sh-KOI8-R.map.gz b103ab26e584eb340b33cc5867267171 1783272612
+obj /usr/share/keymaps/i386/qwerty/ruwin_ct_sh-UTF-8.map.gz b18c2349755bbe80be0709d6c9faec0a 1783272612
+obj /usr/share/keymaps/i386/qwerty/ruwin_ctrl-CP1251.map.gz 91ef6bbfab9407551450f59cb5cc3ad7 1783272612
+obj /usr/share/keymaps/i386/qwerty/ruwin_ctrl-KOI8-R.map.gz ceaa14d9df9b3beccb9b5837c2bff61b 1783272612
+obj /usr/share/keymaps/i386/qwerty/ruwin_ctrl-UTF-8.map.gz 3144a28b06aa05742d9c69d910b2245f 1783272612
+obj /usr/share/keymaps/i386/qwerty/se-fi-ir209.map.gz 9a7ca4297baa304d35af77fb03ce952c 1783272612
+obj /usr/share/keymaps/i386/qwerty/se-fi-lat6.map.gz 4b0d7f40259059a1c966873df34eb2b2 1783272612
+obj /usr/share/keymaps/i386/qwerty/se-ir209.map.gz 6b463fee75d8b7ef4e8e7ced39673c1e 1783272612
+obj /usr/share/keymaps/i386/qwerty/se-lat6.map.gz 431260b4032b90499999f1fe9d124c7b 1783272612
+obj /usr/share/keymaps/i386/qwerty/sk-prog-qwerty.map.gz 8751ca88ba9fc35862a9089bfa1b4e88 1783272612
+obj /usr/share/keymaps/i386/qwerty/sk-qwerty.map.gz 227fdb8652f756fe2e70914d93a7cef3 1783272612
+obj /usr/share/keymaps/i386/qwerty/sr-cy.map.gz 78705c93204492d12bc15e2fd9705df1 1783272612
+obj /usr/share/keymaps/i386/qwerty/sv-latin1.map.gz 457e846aa3129931a6f9a07b54d9be86 1783272612
+obj /usr/share/keymaps/i386/qwerty/tj_alt-UTF8.map.gz 00529cbde5c347c3062c291b6c1c9f26 1783272612
+obj /usr/share/keymaps/i386/qwerty/tr_q-latin5.map.gz fd17b6ed41a50ca3fe3fb641d38c8701 1783272612
+obj /usr/share/keymaps/i386/qwerty/tralt.map.gz 48a8288a13c90f226ee50d88c88e4509 1783272612
+obj /usr/share/keymaps/i386/qwerty/trf.map.gz 8994c3e58eff0cc918d1135d984b7d42 1783272612
+obj /usr/share/keymaps/i386/qwerty/trq.map.gz e2503cd0a6812b729bb7d5e0beb6c982 1783272612
+obj /usr/share/keymaps/i386/qwerty/ttwin_alt-UTF-8.map.gz be7176f78982d4c519a7d98e32624f6c 1783272612
+obj /usr/share/keymaps/i386/qwerty/ttwin_cplk-UTF-8.map.gz 8c9a14b268bf4935d8c9e0c92690cc38 1783272612
+obj /usr/share/keymaps/i386/qwerty/ttwin_ct_sh-UTF-8.map.gz 6d050a8d5e51b5459f063263f5161a88 1783272612
+obj /usr/share/keymaps/i386/qwerty/ttwin_ctrl-UTF-8.map.gz d5e98e2d8db754379110dd9042a21f93 1783272612
+obj /usr/share/keymaps/i386/qwerty/ua-cp1251.map.gz c0fac181a031688d67aecdb445d21f1d 1783272612
+obj /usr/share/keymaps/i386/qwerty/ua-utf-ws.map.gz 3b705c8e53d866998e8290ca6d20c73f 1783272612
+obj /usr/share/keymaps/i386/qwerty/ua-utf.map.gz 760e48442aa003f0867c009a071f2b2e 1783272612
+obj /usr/share/keymaps/i386/qwerty/ua-ws.map.gz 2b14e47b5eb4bb7d5b4ee70eb5cdd6be 1783272612
+obj /usr/share/keymaps/i386/qwerty/ua.map.gz 11344179236f7adb01e6053ce2de73aa 1783272612
+obj /usr/share/keymaps/i386/qwerty/uk.map.gz 69d0498324557ca21667f72a0fcf88d0 1783272612
+obj /usr/share/keymaps/i386/qwerty/us-acentos.map.gz 11bb8935dbe88ab91084bc3aa66e18e5 1783272612
+obj /usr/share/keymaps/i386/qwerty/us.map.gz 7a1c7c2b17fd77105e3c7fc11330a7b8 1783272612
+obj /usr/share/keymaps/i386/qwerty/us1.map.gz 1aeed8d94e89ce56dbc47a9242deac6c 1783272612
+dir /usr/share/keymaps/i386/qwertz
+obj /usr/share/keymaps/i386/qwertz/croat.map.gz 4701faf546aa3101d1eaaee62387d81b 1783272612
+obj /usr/share/keymaps/i386/qwertz/cz-us-qwertz.map.gz 2a543488714ec630d31369216bc6cb71 1783272612
+obj /usr/share/keymaps/i386/qwertz/cz.map.gz ce88b394876be3974beb42c90762b5fc 1783272612
+obj /usr/share/keymaps/i386/qwertz/de-latin1-nodeadkeys.map.gz 675bd41b5fb6a011c2989819b56e4286 1783272612
+obj /usr/share/keymaps/i386/qwertz/de-latin1.map.gz a950bab5fadde443c6864e6d5457c8d1 1783272612
+obj /usr/share/keymaps/i386/qwertz/de-mobii.map.gz c16cc222be76d208becffc647d161e57 1783272612
+obj /usr/share/keymaps/i386/qwertz/de.map.gz 9524b2a733703f8654c7093e7b74f33b 1783272612
+obj /usr/share/keymaps/i386/qwertz/de_CH-latin1.map.gz db772dbb6ad9031351b38115899af585 1783272612
+obj /usr/share/keymaps/i386/qwertz/de_alt_UTF-8.map.gz 78787a976a60bd505236fc86af375b0d 1783272612
+obj /usr/share/keymaps/i386/qwertz/fr_CH-latin1.map.gz 307ea1117d4d3daa6cd89c9dac51fbdf 1783272612
+obj /usr/share/keymaps/i386/qwertz/fr_CH.map.gz 90d65038c9f39ab6abf8846c10657d32 1783272612
+obj /usr/share/keymaps/i386/qwertz/hu.map.gz f5524c1d6fbc07b7c709643548bb19b5 1783272612
+obj /usr/share/keymaps/i386/qwertz/sg-latin1-lk450.map.gz bc7b9c323320ea589203f145056c955d 1783272612
+obj /usr/share/keymaps/i386/qwertz/sg-latin1.map.gz 0de38b07be09f96c072bed2ef4229c0a 1783272612
+obj /usr/share/keymaps/i386/qwertz/sg-mac.map.gz 0ca96c9494a5e83d18db8c689b92cb81 1783272612
+obj /usr/share/keymaps/i386/qwertz/sg.map.gz 30b2fd0db47dc4ee32d104bd25476b79 1783272612
+obj /usr/share/keymaps/i386/qwertz/sk-prog-qwertz.map.gz 500e5ebe411a92fedd58ccac4bed3474 1783272612
+obj /usr/share/keymaps/i386/qwertz/sk-qwertz.map.gz 07dd2c194a25fd3960d809a902ab0b2c 1783272612
+obj /usr/share/keymaps/i386/qwertz/slovene.map.gz b7be448c8d9b2965a7d740224de68dd2 1783272612
+sym /usr/share/keymaps/i386/qwertz/sr-latin.map.gz -> slovene.map.gz 1789354252
+dir /usr/share/keymaps/include
+obj /usr/share/keymaps/include/compose.8859_7 efa09695a15b8a6d4bafe446600d7ea0 1783272612
+obj /usr/share/keymaps/include/compose.8859_8 e8e11dcacba4e1a9d037181c27af915f 1783272612
+obj /usr/share/keymaps/include/compose.latin dbbbe804bbba0ae5f059c614252dbd08 1783272612
+obj /usr/share/keymaps/include/compose.latin1 538cb6023df946424fc60a952e216d53 1783272612
+obj /usr/share/keymaps/include/compose.latin2 e940ff55749181fde75ef782092cf6dd 1783272612
+obj /usr/share/keymaps/include/compose.latin3 2fedfd86cb292cb0c98cd0d75ffc706e 1783272612
+obj /usr/share/keymaps/include/compose.latin4 ba9df885d2456fc2f81b6659d2f514c6 1783272612
+obj /usr/share/keymaps/include/vim-compose.latin1 ee0e4404b2fe83b67ecbd87d058d32b7 1783272612
+dir /usr/share/keymaps/mac
+dir /usr/share/keymaps/mac/all
+obj /usr/share/keymaps/mac/all/apple-a1048-sv.map.gz 1b6c7486f87ad969992ff3bd1315469f 1783272612
+obj /usr/share/keymaps/mac/all/apple-a1243-sv-fn-reverse.map.gz 93dccff50b7c47998229cbc1ec6206ea 1783272612
+obj /usr/share/keymaps/mac/all/apple-a1243-sv.map.gz dec9a979a2b9b0067698013a2765718e 1783272612
+obj /usr/share/keymaps/mac/all/apple-internal-0x0253-sv-fn-reverse.map.gz b5e2d84286c22cf1ea69b75f46590f16 1783272612
+obj /usr/share/keymaps/mac/all/apple-internal-0x0253-sv.map.gz 837170e11dce948273955cca23d36ac5 1783272612
+obj /usr/share/keymaps/mac/all/mac-be.map.gz 0dc371d31c62bb6233c3c22f47908075 1783272612
+obj /usr/share/keymaps/mac/all/mac-de-latin1-nodeadkeys.map.gz e00e228d1bcd2d916b46c79181f0dbba 1783272612
+obj /usr/share/keymaps/mac/all/mac-de-latin1.map.gz a910b529bf773d04831a9fcf92f630a8 1783272612
+obj /usr/share/keymaps/mac/all/mac-de_CH.map.gz 0ce435dbd843332f9bb9c9ca09e0b485 1783272612
+obj /usr/share/keymaps/mac/all/mac-dk-latin1.map.gz 3fc7a98894c0564becc0bbc7d089b5fe 1783272612
+obj /usr/share/keymaps/mac/all/mac-dvorak.map.gz 0d33a1da2dec2e7b53879e3dc75737bb 1783272612
+obj /usr/share/keymaps/mac/all/mac-es.map.gz a707b1b310ccf66a1ddd7423631964ad 1783272612
+obj /usr/share/keymaps/mac/all/mac-fi-latin1.map.gz 79c172780540ec806caa6f6dbff88329 1783272612
+obj /usr/share/keymaps/mac/all/mac-fr-legacy.map.gz b4492dffd11487014e8ea7afc922e01c 1783272612
+obj /usr/share/keymaps/mac/all/mac-fr.map.gz 730b4927b4858b1144e588b612b3b642 1783272612
+obj /usr/share/keymaps/mac/all/mac-fr_CH-latin1.map.gz 6a33ff95a7bd095ce50eb06f353d64d4 1783272612
+obj /usr/share/keymaps/mac/all/mac-it.map.gz d51b56f3f6743b70cc0357c27a67faf1 1783272612
+obj /usr/share/keymaps/mac/all/mac-no-latin1.map.gz 744cdfacc3bd92105f8aea9fc59043ed 1783272612
+obj /usr/share/keymaps/mac/all/mac-pl.map.gz a4ad6a26d20a096f1e65ead2938cd440 1783272612
+obj /usr/share/keymaps/mac/all/mac-pt-latin1.map.gz d7c0dd3aaf108a53ea0a21db13cf0521 1783272612
+obj /usr/share/keymaps/mac/all/mac-se.map.gz cacdb0fc6196141c60d8435cf61a8524 1783272612
+obj /usr/share/keymaps/mac/all/mac-template.map.gz 7c535ea6265a4f72f2310bea2b00e7e9 1783272612
+obj /usr/share/keymaps/mac/all/mac-uk.map.gz 8df83829f25b932f7eb2ff3699d2ddba 1783272612
+obj /usr/share/keymaps/mac/all/mac-us.map.gz 7feeb81ddc24b96fb415dd55d00c1286 1783272612
+dir /usr/share/keymaps/mac/include
+obj /usr/share/keymaps/mac/include/apple-a1048-base.inc 4220a5fa3a44f1b50377769596384851 1783272612
+obj /usr/share/keymaps/mac/include/apple-a1243-fn-reverse.inc b1121af35241144f7ef4dfb296560429 1783272612
+obj /usr/share/keymaps/mac/include/apple-a1243-fn.inc cfe9c2d93bc2039da502b906dd494c8d 1783272612
+obj /usr/share/keymaps/mac/include/mac-azerty-layout.inc a2afd224c6f5bd72c82bb4ddeb18ac5c 1783272612
+obj /usr/share/keymaps/mac/include/mac-euro.map.gz fcb039dd134661ddf05d6ea6991e09f5 1783272612
+obj /usr/share/keymaps/mac/include/mac-euro2.map.gz 05b4ad8c3989b48ca2f40e852c6d7216 1783272612
+obj /usr/share/keymaps/mac/include/mac-linux-keys-bare.inc 028a7c36d9f5e761c23fcc54ba6d4d4d 1783272612
+obj /usr/share/keymaps/mac/include/mac-qwerty-layout.inc f32d1d139d3d1ba5841d73c917465187 1783272612
+obj /usr/share/keymaps/mac/include/mac-qwertz-layout.inc d64adcba54795822a1fa113c1abdf5dd 1783272612
+dir /usr/share/keymaps/pine
+obj /usr/share/keymaps/pine/en.map.gz b0dcc8aba6f4fac6aa97728706430c56 1783272612
+sym /usr/share/keymaps/ppc -> mac 1789354252
+dir /usr/share/keymaps/sun
+obj /usr/share/keymaps/sun/sun-pl-altgraph.map.gz 7207b5fa025feb2cc3c95e977042c96e 1783272612
+obj /usr/share/keymaps/sun/sun-pl.map.gz 38aa56399c1b78c53e9f76b6a82d76a5 1783272612
+obj /usr/share/keymaps/sun/sundvorak.map.gz 280f346b5e94ddc777d6dd71c431c18e 1783272612
+obj /usr/share/keymaps/sun/sunkeymap.map.gz 2dd8bd4b4eeaf0f76335a947764b52f5 1783272612
+obj /usr/share/keymaps/sun/sunt4-es.map.gz b7879f8600a8c54f7c7bb248e1e2f505 1783272612
+obj /usr/share/keymaps/sun/sunt4-fi-latin1.map.gz cfef9662a263ae87fec619fd16196f00 1783272612
+obj /usr/share/keymaps/sun/sunt4-no-latin1.map.gz 65473dbbc3085dde894a33ff95dc31be 1783272612
+obj /usr/share/keymaps/sun/sunt5-cz-us.map.gz 3bcb34d3c1d511e40f28c25d24c6db8f 1783272612
+obj /usr/share/keymaps/sun/sunt5-de-latin1.map.gz 343e6ba3f008f11368c6993c0f6568e1 1783272612
+obj /usr/share/keymaps/sun/sunt5-es.map.gz f55a59a88ff3baa2024492eaf54ea132 1783272612
+obj /usr/share/keymaps/sun/sunt5-fi-latin1.map.gz ddf6b2a65bfd4ad1be3f0a72eb406364 1783272612
+obj /usr/share/keymaps/sun/sunt5-fr-latin1.map.gz 3796846c746f56bc796314c72541ceb2 1783272612
+obj /usr/share/keymaps/sun/sunt5-ru.map.gz 8c5a4aaba626db2622fce47bc3dc6779 1783272612
+obj /usr/share/keymaps/sun/sunt5-uk.map.gz d90804305c62a0133c8d63289b404ab7 1783272612
+obj /usr/share/keymaps/sun/sunt5-us-cz.map.gz ff643059229f68b506687c837143808c 1783272612
+obj /usr/share/keymaps/sun/sunt6-uk.map.gz 05cacd0fc9439c804a5afcc2d6b88f78 1783272612
+dir /usr/share/locale
+dir /usr/share/locale/ar
+dir /usr/share/locale/ar/LC_MESSAGES
+obj /usr/share/locale/ar/LC_MESSAGES/kbd.mo c193986c360c8a055d83283b27946046 1783272612
+dir /usr/share/locale/cs
+dir /usr/share/locale/cs/LC_MESSAGES
+obj /usr/share/locale/cs/LC_MESSAGES/kbd.mo 5e1d050f87996ee03f55246fb608b080 1783272612
+dir /usr/share/locale/da
+dir /usr/share/locale/da/LC_MESSAGES
+obj /usr/share/locale/da/LC_MESSAGES/kbd.mo ea0c213d21cc9a21ae830b6152cb0803 1783272612
+dir /usr/share/locale/de
+dir /usr/share/locale/de/LC_MESSAGES
+obj /usr/share/locale/de/LC_MESSAGES/kbd.mo 64d3b27ac9e93b8e887ab77f43a62c83 1783272612
+dir /usr/share/locale/el
+dir /usr/share/locale/el/LC_MESSAGES
+obj /usr/share/locale/el/LC_MESSAGES/kbd.mo 16abfb1900a033a8925f22778475f332 1783272612
+dir /usr/share/locale/eo
+dir /usr/share/locale/eo/LC_MESSAGES
+obj /usr/share/locale/eo/LC_MESSAGES/kbd.mo 02bd2abf62127d165eb7279875017816 1783272612
+dir /usr/share/locale/es
+dir /usr/share/locale/es/LC_MESSAGES
+obj /usr/share/locale/es/LC_MESSAGES/kbd.mo 322e355d0eb790d7c41dec9ac01adddf 1783272612
+dir /usr/share/locale/fr
+dir /usr/share/locale/fr/LC_MESSAGES
+obj /usr/share/locale/fr/LC_MESSAGES/kbd.mo 6673af49f1659822e829ef8f6374712b 1783272612
+dir /usr/share/locale/hu
+dir /usr/share/locale/hu/LC_MESSAGES
+obj /usr/share/locale/hu/LC_MESSAGES/kbd.mo 4c38acaac61bce997da5c69c0db8279e 1783272612
+dir /usr/share/locale/id
+dir /usr/share/locale/id/LC_MESSAGES
+obj /usr/share/locale/id/LC_MESSAGES/kbd.mo 667718f5cdf42588164c8fd3d42626c8 1783272612
+dir /usr/share/locale/it
+dir /usr/share/locale/it/LC_MESSAGES
+obj /usr/share/locale/it/LC_MESSAGES/kbd.mo 828d0c6c697857cd0be2383ab5cadbbc 1783272612
+dir /usr/share/locale/ka
+dir /usr/share/locale/ka/LC_MESSAGES
+obj /usr/share/locale/ka/LC_MESSAGES/kbd.mo 0b00cc9f3003f44680c453c84315970a 1783272612
+dir /usr/share/locale/kk
+dir /usr/share/locale/kk/LC_MESSAGES
+obj /usr/share/locale/kk/LC_MESSAGES/kbd.mo 2eff76969a746adff00290361ede35b7 1783272613
+dir /usr/share/locale/nl
+dir /usr/share/locale/nl/LC_MESSAGES
+obj /usr/share/locale/nl/LC_MESSAGES/kbd.mo 68e9384f6ff9bb0d6344b7a5acfa2086 1783272613
+dir /usr/share/locale/pl
+dir /usr/share/locale/pl/LC_MESSAGES
+obj /usr/share/locale/pl/LC_MESSAGES/kbd.mo 1c1cb32b1781c13c50cb416185d82e42 1783272613
+dir /usr/share/locale/pt
+dir /usr/share/locale/pt/LC_MESSAGES
+obj /usr/share/locale/pt/LC_MESSAGES/kbd.mo e0a0d2755e40d1ab7a15465865d6a238 1783272613
+dir /usr/share/locale/pt_BR
+dir /usr/share/locale/pt_BR/LC_MESSAGES
+obj /usr/share/locale/pt_BR/LC_MESSAGES/kbd.mo d58d8f8be3c5770540526a2be251db92 1783272613
+dir /usr/share/locale/ro
+dir /usr/share/locale/ro/LC_MESSAGES
+obj /usr/share/locale/ro/LC_MESSAGES/kbd.mo f5335595c289bf98b17edd26768a5da6 1783272613
+dir /usr/share/locale/ru
+dir /usr/share/locale/ru/LC_MESSAGES
+obj /usr/share/locale/ru/LC_MESSAGES/kbd.mo 6a873f70e66aa14a8cc4c4fc15630fce 1783272613
+dir /usr/share/locale/sq
+dir /usr/share/locale/sq/LC_MESSAGES
+obj /usr/share/locale/sq/LC_MESSAGES/kbd.mo 1730f01457584e72d944b6e6e09dccf9 1783272613
+dir /usr/share/locale/sr
+dir /usr/share/locale/sr/LC_MESSAGES
+obj /usr/share/locale/sr/LC_MESSAGES/kbd.mo 161cc3c8695e00969ea13780d21b68a4 1783272613
+dir /usr/share/locale/sv
+dir /usr/share/locale/sv/LC_MESSAGES
+obj /usr/share/locale/sv/LC_MESSAGES/kbd.mo e463c29a806aa0a684155e47f2964d7e 1783272613
+dir /usr/share/locale/tr
+dir /usr/share/locale/tr/LC_MESSAGES
+obj /usr/share/locale/tr/LC_MESSAGES/kbd.mo d0a761a906d29a24579112be4cbb1724 1783272613
+dir /usr/share/locale/uk
+dir /usr/share/locale/uk/LC_MESSAGES
+obj /usr/share/locale/uk/LC_MESSAGES/kbd.mo c453610db4c02ec82e9a5364e31659e0 1783272613
+dir /usr/share/locale/vi
+dir /usr/share/locale/vi/LC_MESSAGES
+obj /usr/share/locale/vi/LC_MESSAGES/kbd.mo e4d8abc529a007368d82d49f842c8e8a 1783272613
+dir /usr/share/locale/zh_CN
+dir /usr/share/locale/zh_CN/LC_MESSAGES
+obj /usr/share/locale/zh_CN/LC_MESSAGES/kbd.mo f7408dc1254ccc2bb01003fe5533a4f0 1783272613
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/chvt.1.bz2 f410bed6070bfaf40c99c59b6e54eb2a 1783272613
+obj /usr/share/man/man1/deallocvt.1.bz2 639e419c8390eb24375c486a3908441a 1783272613
+obj /usr/share/man/man1/dumpkeys.1.bz2 19bac8bbbeb127f958484d9aa2fb5574 1783272613
+obj /usr/share/man/man1/fgconsole.1.bz2 8e2579cb60508b257c6ef82764e51a96 1783272613
+obj /usr/share/man/man1/kbd_mode.1.bz2 1be950d7c2c35097def0ac8b33f841a2 1783272613
+obj /usr/share/man/man1/kbdinfo.1.bz2 5550f73a0f7c6944f8a1897026f3f87a 1783272613
+obj /usr/share/man/man1/loadkeys.1.bz2 2ddff7a9f900266a8a15c09a7bdd8f82 1783272613
+obj /usr/share/man/man1/openvt.1.bz2 fd449b6c61796651e4b802ce5ed0e523 1783272613
+obj /usr/share/man/man1/psfaddtable.1.bz2 0b893f893143aaed7c2c68cfe032c641 1783272613
+obj /usr/share/man/man1/psfgettable.1.bz2 9645b5119ba2ea73c8043c1cd2c5fa28 1783272613
+obj /usr/share/man/man1/psfstriptable.1.bz2 b828ce41bb949d0697a564cafccb8795 1783272613
+obj /usr/share/man/man1/psfxtable.1.bz2 0c634cae0ca5a460829c99af330b72cf 1783272613
+obj /usr/share/man/man1/setleds.1.bz2 a60c0ec5bd90449fc261b5a3fcb6fdc1 1783272613
+obj /usr/share/man/man1/setmetamode.1.bz2 494abf316608eba6d9a5959aca671599 1783272613
+obj /usr/share/man/man1/showkey.1.bz2 b5707ccc330022763b4987fba93a5eb4 1783272613
+obj /usr/share/man/man1/unicode_start.1.bz2 fed3e1f6c6640d25b000936b2de98b22 1783272613
+obj /usr/share/man/man1/unicode_stop.1.bz2 fee31a0b6b6310491f3ff12ac8e5af7c 1783272613
+obj /usr/share/man/man1/vlock.1.bz2 ebb128061baf2c071f884a10d3c0fb9b 1783272613
+dir /usr/share/man/man5
+obj /usr/share/man/man5/keymaps.5.bz2 0e894b369ac754ef5619594dc335c767 1783272613
+dir /usr/share/man/man8
+obj /usr/share/man/man8/getkeycodes.8.bz2 4f3a165bdf3f6b0b4ff4273b52e825a8 1783272613
+obj /usr/share/man/man8/kbdrate.8.bz2 51a938c1d40adb0cc1a5bb06e22d7c77 1783272613
+obj /usr/share/man/man8/loadunimap.8.bz2 a07134129e62db2a7eda7eac9928fbae 1783272613
+obj /usr/share/man/man8/mapscrn.8.bz2 5fef93b310437a5ab4f08dacc277d79a 1783272613
+obj /usr/share/man/man8/resizecons.8.bz2 f26cf21fbdddb60114fd7f28da485a84 1783272613
+obj /usr/share/man/man8/setfont.8.bz2 0bd939ef50e8e24b968b6ec844e15ea3 1783272613
+obj /usr/share/man/man8/setkeycodes.8.bz2 0a0222bb28af0042d0203b72c07ecd19 1783272613
+obj /usr/share/man/man8/setvtrgb.8.bz2 140e8ab7726ccbf794120e286db72ad9 1783272613
+obj /usr/share/man/man8/showconsolefont.8.bz2 5d2398244363d222e2d318069bafb430 1783272613
+dir /usr/share/unimaps
+obj /usr/share/unimaps/8859-1.a0-ff.uni 21f1baf0df6cc7b73c9b3a24423a8091 1783272612
+obj /usr/share/unimaps/8859-10.a0-ff.uni dff4e9be4711951a2b0576aa50895e30 1783272612
+obj /usr/share/unimaps/8859-13.a0-ff.uni 481e9a740c44a28553c1979390077d8f 1783272612
+obj /usr/share/unimaps/8859-14.a0-ff.uni 3b6c5ccc500f6b65c87ab166f26b5a3e 1783272612
+obj /usr/share/unimaps/8859-15.a0-ff.uni 0ffc4a5e3a75fe95c6490f41ca8df9dc 1783272612
+obj /usr/share/unimaps/8859-2.a0-ff.uni 9f0d268699d09b489270570ce50813c1 1783272612
+obj /usr/share/unimaps/8859-3.a0-ff.uni cfd96b0a49c5056b3abc1ed8d2230d9a 1783272612
+obj /usr/share/unimaps/8859-4.a0-ff.uni cd6bc8bace69f5cf714713e35d5811f3 1783272612
+obj /usr/share/unimaps/8859-5.a0-ff.uni c50f99eb9d8cd70fb2c7609aecef9cb6 1783272612
+obj /usr/share/unimaps/8859-6.a0-ff.uni e69ba0ebe8b97e110e0a81ce0f336ae6 1783272612
+obj /usr/share/unimaps/8859-7.a0-ff.uni 14d2c8bb6259872317798c56e3598046 1783272612
+obj /usr/share/unimaps/8859-8.a0-ff.uni deaacbb73736ae734acbb666dbcb3673 1783272612
+obj /usr/share/unimaps/8859-9.a0-ff.uni f8281a0fb8b0c9c94e0ed64239c75600 1783272612
+obj /usr/share/unimaps/ECMA144.uni 1dd9dd2321d059688cc32780bc199efa 1783272612
+obj /usr/share/unimaps/README 1182d558dd879e5e0360e2f23bba4dbe 1783272612
+obj /usr/share/unimaps/armscii8.uni c6eb74077d888576bb8d61d6c9d6f0db 1783272612
+obj /usr/share/unimaps/ascii.20-7f.uni 393835a0e630be61faf6dc4f17de4765 1783272612
+obj /usr/share/unimaps/cp1250.uni 212f5eac50dbeeb8688c917850802d29 1783272612
+obj /usr/share/unimaps/cp437.00-1f.uni 7b323665808734cf394b814e04a1f09a 1783272612
+obj /usr/share/unimaps/cp437.uni 38ffa9ca1a4d513c09a5b506cf393bca 1783272612
+obj /usr/share/unimaps/cp737.uni 15787a6c7009e7631aef250f4183bae6 1783272612
+obj /usr/share/unimaps/cp737a.uni 4d72c409af4672a0208234084a144cda 1783272612
+obj /usr/share/unimaps/cp737b.uni 7c6e0d371d0d92b4af5587e117fea1b0 1783272612
+obj /usr/share/unimaps/cp737c.uni 90766809a7505b713e1aef57b9d9f736 1783272612
+obj /usr/share/unimaps/cp850.uni 7973cd181fd19cb94a1c1b983328f1f8 1783272612
+obj /usr/share/unimaps/cp850a.uni 7d2b5f2861837a4f15d1812717c1eb33 1783272612
+obj /usr/share/unimaps/cp850b.uni f60627c7ebc267b25b2723f955ee2b50 1783272612
+obj /usr/share/unimaps/cp850z.uni 5883aa8f9c4140c9e5a13ebeecefcbe0 1783272612
+obj /usr/share/unimaps/cp865.uni e454b9bb6ae156a07ac0c45c0686109c 1783272612
+obj /usr/share/unimaps/cp865a.uni b1316009f162a4b1ea1ce0455418ac7e 1783272612
+obj /usr/share/unimaps/cp866.uni f203f2e39074af6fb0e4495e68c84eed 1783272612
+obj /usr/share/unimaps/cp866a.uni 9f7a19dbbdc9157087c97afd9ff2a03f 1783272612
+obj /usr/share/unimaps/cybercafe.uni 3459f48599796f042f96faa8f5c63e88 1783272612
+obj /usr/share/unimaps/cyralt.uni 091eef76e581d7f09578738c3b2c8510 1783272612
+obj /usr/share/unimaps/def.uni efe287278f3a89ae49bad9c4c3d4c82c 1783272612
+obj /usr/share/unimaps/empty.uni 5efa8725a4fe0db9594c8efd51845493 1783272612
+obj /usr/share/unimaps/ethiopic.uni 7da21c6cb108909d963ea0f31347afd2 1783272612
+obj /usr/share/unimaps/iso01.uni 41bbd9d1f43f8b3342f8cd97bd5225a8 1783272612
+obj /usr/share/unimaps/iso02.uni 02eaf178dc64b67ebf3e6e1d0121f5cf 1783272612
+obj /usr/share/unimaps/iso03.uni 60d3803e58f9b950c11519e1ca4e75f9 1783272612
+obj /usr/share/unimaps/iso04.uni 2953d434bab1b774ef8074aa59239b95 1783272612
+obj /usr/share/unimaps/iso05.uni 6e9073c75aca24501e286511c6cf94e6 1783272612
+obj /usr/share/unimaps/iso06.uni 28e1100468a447a8a1531ad1c9ad510b 1783272612
+obj /usr/share/unimaps/iso07.uni f3f07bbd7246b606a31e307c8fe14a8e 1783272612
+obj /usr/share/unimaps/iso07u.uni a2baf80b55242bc7c5776e904bf4db63 1783272612
+obj /usr/share/unimaps/iso08.uni 2a678d7eb50172fac4f87c72d11b742f 1783272612
+obj /usr/share/unimaps/iso09.uni 2603dfd3740ca1f9eea0d4bbcff0f3a0 1783272612
+obj /usr/share/unimaps/iso10.uni 732368e46fc849276569aab8d4569514 1783272612
+obj /usr/share/unimaps/iso15.uni b734721df623f633d64ec59497b904ed 1783272612
+obj /usr/share/unimaps/koi8r.uni 68027b2667783985ce4614214a1780cc 1783272612
+obj /usr/share/unimaps/koi8u.uni 07436651ec5e9a27e9266e0e026a8181 1783272612
+obj /usr/share/unimaps/lat1.uni 8e59053145f2ad32f8cec15e64053dcd 1783272612
+obj /usr/share/unimaps/lat1u.uni 3a8b440e5b91b543fb8a289ced895906 1783272612
+obj /usr/share/unimaps/lat2.uni 521e840751749824ae1db33f21c2eaf5 1783272612
+obj /usr/share/unimaps/lat2u.uni 1d3346903f081cbf77b67b9b7708bbd7 1783272612
+obj /usr/share/unimaps/lat4.uni 98280487f92bc23ba927cfc1f4fbddfa 1783272612
+obj /usr/share/unimaps/lat4u.uni 115b7f69ee9a8183da13c91bb6bf7e44 1783272612
+obj /usr/share/unimaps/lat7.uni d2ab3de5d950ae79d0efb4f95cc92872 1783272612
+obj /usr/share/unimaps/lat9u.uni 701245226a4ced03f538d5be7e9b7b90 1783272612
+obj /usr/share/unimaps/lat9v.uni e942fcfeef74ad9c44c298e68a21104d 1783272612
+obj /usr/share/unimaps/lat9w.uni c84e67c133f51110292fe05d6cc5fca0 1783272612
+obj /usr/share/unimaps/ruscii.uni fd1de982b46588a39e0b65685f417e51 1783272612
+obj /usr/share/unimaps/tcvn.uni 2604d9fd816ceb17e573f7e1c78bd679 1783272612
+obj /usr/share/unimaps/viscii.uni 97cfd907df2d0bb634690497d75b83e1 1783272612
+dir /etc
+dir /etc/pam.d
+obj /etc/pam.d/vlock 4aa67e607a5dfcfddd9dd40312e2861d 1783272611
+sym /usr/bin/psfstriptable -> psfxtable 1789354252
+sym /usr/bin/psfgettable -> psfxtable 1789354252
+sym /usr/bin/psfaddtable -> psfxtable 1789354252

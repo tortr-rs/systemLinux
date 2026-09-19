@@ -1,0 +1,12 @@
+DEFINED_PHASES=install prepare
+DESCRIPTION=Adds support for several speech synthesizers to emacspeak
+EAPI=8
+HOMEPAGE=http://leb.net/blinux/
+INHERIT=toolchain-funcs
+KEYWORDS=amd64 ppc x86
+LICENSE=GPL-2
+RDEPEND=>=app-accessibility/emacspeak-18
+SLOT=0
+SRC_URI=http://leb.net/pub/blinux/emacspeak/blinux/emacspeak-ss-1.9.1.tar.gz
+_eclasses_=toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=44ed571f895adf249d7c5e878ab1684e

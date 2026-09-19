@@ -1,0 +1,8 @@
+dir /var
+dir /var/spool
+dir /var/spool/nullmailer
+obj /var/spool/nullmailer/.keep_acct-user_nullmail-0 d41d8cd98f00b204e9800998ecf8427e 1789851632
+dir /usr
+dir /usr/lib
+dir /usr/lib/sysusers.d
+obj /usr/lib/sysusers.d/acct-user-nullmail.conf 84e43671a8ed03543cb3b4808727120c 1789851633

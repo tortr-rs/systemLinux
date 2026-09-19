@@ -1,0 +1,12 @@
+diff -Naur a/utility.h b/utility.h
+--- a/utility.h	2017-12-03 03:47:35.302504007 +0100
++++ b/utility.h	2017-12-03 03:47:59.537116442 +0100
+@@ -75,7 +75,7 @@
+     static bool stringTo ( const string& s, T& result )
+     {
+       istringstream is ( s ) ;
+-      return is >> result ;
++      return static_cast<bool>(is >> result);
+     }
+ 
+     /** generic conversion from T to string  */

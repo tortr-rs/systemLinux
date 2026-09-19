@@ -1,0 +1,1 @@
+>=dev-python/editables-0.3[python_targets_python3_14(-)] >=dev-python/packaging-24.2[python_targets_python3_14(-)] >=dev-python/pathspec-0.10.1[python_targets_python3_14(-)] >=dev-python/pluggy-1.0.0[python_targets_python3_14(-)] >=dev-python/tomlkit-0.11.1[python_targets_python3_14(-)] dev-python/trove-classifiers[python_targets_python3_14(-)] dev-lang/python:3.14

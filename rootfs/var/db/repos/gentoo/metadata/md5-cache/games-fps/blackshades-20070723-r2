@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install prepare
+DEPEND=media-libs/freealut media-libs/libsdl media-libs/libvorbis media-libs/openal virtual/glu virtual/opengl
+DESCRIPTION=You control a psychic bodyguard, and try to protect the VIP
+EAPI=8
+HOMEPAGE=https://www.wolfire.com/black-shades/ https://www.icculus.org/blackshades/
+INHERIT=desktop toolchain-funcs
+KEYWORDS=~amd64 ~x86
+LICENSE=blackshades
+RDEPEND=media-libs/freealut media-libs/libsdl media-libs/libvorbis media-libs/openal virtual/glu virtual/opengl
+SLOT=0
+SRC_URI=http://filesingularity.timedoctor.org/Textures.tar.bz2 mirror://gentoo/blackshades-20070723.tar.bz2
+_eclasses_=desktop	e447b5f77146d69797e9f03ff177f3f1	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=27b42d4d5aa817642d857b3c69ced86a

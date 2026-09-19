@@ -1,0 +1,11 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install unpack
+DESCRIPTION=ninja-compatible build tool written in C
+EAPI=8
+HOMEPAGE=https://github.com/michaelforney/samurai
+INHERIT=toolchain-funcs git-r3
+LICENSE=ISC Apache-2.0 MIT
+PROPERTIES=live
+SLOT=0
+_eclasses_=git-r3	e6c2f983e006e805160436c75a0c1562	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=a9c59c4510001c9252a54d24e165cef0

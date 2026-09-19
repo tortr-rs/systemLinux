@@ -1,0 +1,11 @@
+DEFINED_PHASES=configure install prepare test
+DESCRIPTION=Small, fast library to generate primes in order
+EAPI=8
+HOMEPAGE=https://cr.yp.to/primegen.html
+INHERIT=flag-o-matic toolchain-funcs
+KEYWORDS=amd64 ~ppc ~x86
+LICENSE=public-domain
+SLOT=0
+SRC_URI=https://cr.yp.to/primegen/primegen-0.97.tar.gz
+_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=00fc5c0d4fc734b1f06ccbbfd6a28118

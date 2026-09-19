@@ -1,0 +1,22 @@
+dir /usr
+dir /usr/lib64
+dir /usr/lib64/perl5
+dir /usr/lib64/perl5/vendor_perl
+dir /usr/lib64/perl5/vendor_perl/5.42
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/Syntax
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/Syntax/Keyword
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/Syntax/Keyword/Try
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/Syntax/Keyword/Try/Deparse.pm 8da6b399a8b27b70db0c4319539a342d 1764527171
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/Syntax/Keyword/Try.pm a35bccfb2d30b4812731758c6f858586 1764527171
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Syntax
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Syntax/Keyword
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Syntax/Keyword/Try
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Syntax/Keyword/Try/.packlist ce7215130737be676102e7495783e5fd 1764527171
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Syntax/Keyword/Try/Try.so 4bfe255ef0e0c80d7f72e99a8f26622d 1764527173
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/Syntax-Keyword-Try-0.310.0
+obj /usr/share/doc/Syntax-Keyword-Try-0.310.0/Changes.bz2 29de5845ca278ac9752db1c553d80f1c 1764527171
+obj /usr/share/doc/Syntax-Keyword-Try-0.310.0/README.bz2 0f186459c51532a55e063b1b71c6a83a 1764527172

@@ -1,0 +1,14 @@
+BDEPEND=app-arch/libarchive
+DEFINED_PHASES=install postinst unpack
+DESCRIPTION=Data files for Descent 2: The Vertigo Series
+EAPI=8
+HOMEPAGE=https://www.interplay.com
+INHERIT=cdrom estack
+IUSE=videos
+KEYWORDS=~amd64 ~x86
+LICENSE=descent-data
+PROPERTIES=interactive
+RESTRICT=bindist
+SLOT=0
+_eclasses_=cdrom	8ce3a6fc3461ad5aac4a91b47b8d83cd	estack	c61c368a76fdf3a82fdf8dbaebea3804	portability	3c2334cdfbb30bc4b33c85164fe832bf
+_md5_=759e9ee32d18d25d0057585616596aa2

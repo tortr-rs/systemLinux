@@ -1,0 +1,1 @@
+>=dev-libs/glib-2.80:2 >=dev-libs/gobject-introspection-1.84:0/0= dev-libs/libffi:0/8= >=dev-python/pycairo-1.16.0[python_targets_python3_14(-)] x11-libs/cairo[glib] dev-lang/python:3.14

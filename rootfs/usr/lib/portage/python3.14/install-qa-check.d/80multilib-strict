@@ -1,0 +1,48 @@
+# shellcheck shell=bash
+
+# Strict multilib directory checks
+
+multilib_strict_check() {
+	local IFS abort dir file
+
+	if contains_word multilib-strict "${FEATURES}" \
+		&& type find file &>/dev/null \
+		&& [[ ${MULTILIB_STRICT_DIRS} && ${MULTILIB_STRICT_DENY} ]]
+	then
+		rm -f "${T}/multilib-strict.log"
+		for dir in ${MULTILIB_STRICT_DIRS} ; do
+			[[ -d ${ED}/${dir} ]] || continue
+			while read -r -d '' file; do
+				if file "${file}" | grep -Eq "${MULTILIB_STRICT_DENY}" ; then
+					echo "${file#"${ED}"//}" >> "${T}/multilib-strict.log"
+				fi
+			done < <(find "${ED}/${dir}" -maxdepth 1 -type f -print0)
+		done
+
+		if [[ -s ${T}/multilib-strict.log ]] ; then
+			if [[ ${QA_MULTILIB_PATHS@a} != *a* ]] ; then
+				read -rd '' -a QA_MULTILIB_PATHS <<<"${QA_MULTILIB_PATHS}"
+			fi
+			if [[ ! -v QA_STRICT_MULTILIB_PATHS ]] ; then
+				for dir in "${QA_MULTILIB_PATHS[@]}" ; do
+					sed -e "s#^${dir#/}\$##" -i "${T}/multilib-strict.log"
+				done
+				sed -e "/^\$/d" -i "${T}/multilib-strict.log"
+			fi
+			if [[ -s ${T}/multilib-strict.log ]] ; then
+				abort=1
+				echo "Files matching a file type that is not allowed:"
+				while read -r ; do
+					echo "   ${REPLY}"
+				done < "${T}/multilib-strict.log"
+			fi
+		fi
+
+		(( abort )) && die "multilib-strict check failed!"
+	fi
+}
+
+multilib_strict_check
+: # guarantee successful exit
+
+# vim:ft=bash

@@ -1,0 +1,1 @@
+-O2 -pipe -march=x86-64 -mtune=generic -g -Werror=odr -Werror=lto-type-mismatch -Werror=strict-aliasing -fno-strict-aliasing

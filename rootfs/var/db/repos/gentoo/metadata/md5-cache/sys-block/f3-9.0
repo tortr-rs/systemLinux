@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install prepare
+DEPEND=elibc_musl? ( sys-libs/argp-standalone ) extra? ( sys-block/parted virtual/udev )
+DESCRIPTION=Utilities to detect broken or counterfeit flash storage
+EAPI=8
+HOMEPAGE=https://github.com/AltraMayor/f3
+INHERIT=flag-o-matic toolchain-funcs
+IUSE=extra
+KEYWORDS=amd64 ~arm ~arm64 x86
+LICENSE=GPL-3+
+RDEPEND=elibc_musl? ( sys-libs/argp-standalone ) extra? ( sys-block/parted virtual/udev )
+SLOT=0
+SRC_URI=https://github.com/AltraMayor/f3/archive/v9.0.tar.gz -> f3-9.0.tar.gz
+_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=bc77d34b4d7eab1191d4c301a1990aa2

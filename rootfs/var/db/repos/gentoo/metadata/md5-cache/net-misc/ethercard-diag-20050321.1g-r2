@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile prepare
+DESCRIPTION=Low level mii diagnostic tools including mii-diag and etherwake
+EAPI=8
+HOMEPAGE=https://wiki.gentoo.org/wiki/No_homepage
+INHERIT=flag-o-matic toolchain-funcs
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=!sys-apps/nictools
+SLOT=0
+SRC_URI=mirror://gentoo/ethercard-diag-20050321.1g.tar.lzma
+_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=fd6c1f18540eebecf70e75c3b6500d7b

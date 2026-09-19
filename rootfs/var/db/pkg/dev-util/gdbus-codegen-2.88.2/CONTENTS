@@ -1,0 +1,56 @@
+dir /usr
+dir /usr/share
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/gdbus-codegen.1.bz2 1c9b20c476f4e77c0a449895d418eaea 1788427426
+dir /usr/bin
+obj /usr/bin/gdbus-codegen 0b3ddc2eec1a368350b4bd5377614ba9 1788427425
+dir /usr/lib
+dir /usr/lib/python3.14
+dir /usr/lib/python3.14/site-packages
+dir /usr/lib/python3.14/site-packages/gdbus_codegen-2.88.2.dist-info
+obj /usr/lib/python3.14/site-packages/gdbus_codegen-2.88.2.dist-info/METADATA 3077cd477e09e903d858932a4a5a492b 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen-2.88.2.dist-info/top_level.txt dd4099cd2c5672df312c66e278475ab0 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen-2.88.2.dist-info/WHEEL d8484b2712d6275b37660ce7c74212ff 1788427425
+dir /usr/lib/python3.14/site-packages/gdbus_codegen
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/dbustypes.py bdc7767a4b4e1a35d1ecd2c289bd521b 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/parser.py 6aaac34b8ffd992fa87f153c1735ff81 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/config.py 7bd51a77ad9bbfb8b64c6f1f2deb29a1 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/codegen_docbook.py 666f97d1fd306b0a18c57258451281b8 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/codegen_md.py 570d89ec2e3bf930c0f2a0219e1aebfe 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/utils.py 11bb1551524ff80945d47625a2d87fed 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/codegen_rst.py 272608905907dc889017a6639c95bd5b 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/codegen.py e6e60e8ce61a9ab29475b11b6af14e42 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/__init__.py fcede79c13365054d829d22530b0bdae 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/codegen_main.py 2c6c63ee6c8ea3eab20b1a5baa1b6101 1788427425
+dir /usr/lib/python3.14/site-packages/gdbus_codegen/__pycache__
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/__pycache__/__init__.cpython-314.opt-1.pyc 33f8814c30f1e82ac823ed10a5cc74a3 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/__pycache__/config.cpython-314.opt-2.pyc 00bf16fa7799455864800cf1793e7af3 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/__pycache__/dbustypes.cpython-314.opt-1.pyc bb149b9ffadf5d2af6f20b017c7ad35a 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/__pycache__/codegen_rst.cpython-314.opt-2.pyc a9f6346e86c8ff245060c1a998f698f5 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/__pycache__/codegen_docbook.cpython-314.opt-1.pyc dbb799b445f75af4419e9529eaadbca1 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/__pycache__/config.cpython-314.pyc 00bf16fa7799455864800cf1793e7af3 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/__pycache__/codegen_main.cpython-314.opt-2.pyc 221b1e0abce567ecfd1ac34ad7cbc896 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/__pycache__/utils.cpython-314.pyc b829fa35f77f2f8a9998d6c2940eda4d 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/__pycache__/__init__.cpython-314.opt-2.pyc 33f8814c30f1e82ac823ed10a5cc74a3 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/__pycache__/codegen_main.cpython-314.pyc 221b1e0abce567ecfd1ac34ad7cbc896 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/__pycache__/codegen_main.cpython-314.opt-1.pyc 221b1e0abce567ecfd1ac34ad7cbc896 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/__pycache__/dbustypes.cpython-314.opt-2.pyc bb149b9ffadf5d2af6f20b017c7ad35a 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/__pycache__/parser.cpython-314.pyc 709a7c83c39def1240aa3106436e8c37 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/__pycache__/codegen.cpython-314.opt-1.pyc a569ee82dc088f082ef424320a5debbb 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/__pycache__/config.cpython-314.opt-1.pyc 00bf16fa7799455864800cf1793e7af3 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/__pycache__/parser.cpython-314.opt-2.pyc 709a7c83c39def1240aa3106436e8c37 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/__pycache__/codegen_rst.cpython-314.opt-1.pyc 5217696e590ee583bade4ae4a7799995 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/__pycache__/codegen_rst.cpython-314.pyc 5217696e590ee583bade4ae4a7799995 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/__pycache__/codegen_docbook.cpython-314.opt-2.pyc dbb799b445f75af4419e9529eaadbca1 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/__pycache__/codegen_md.cpython-314.opt-1.pyc 850ccac3cd6628aa712d3f43771d7d93 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/__pycache__/codegen.cpython-314.opt-2.pyc a569ee82dc088f082ef424320a5debbb 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/__pycache__/codegen_md.cpython-314.pyc 850ccac3cd6628aa712d3f43771d7d93 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/__pycache__/utils.cpython-314.opt-1.pyc b829fa35f77f2f8a9998d6c2940eda4d 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/__pycache__/utils.cpython-314.opt-2.pyc 6fdffe0fb150b9bc7208a2a4fe1415dd 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/__pycache__/codegen_docbook.cpython-314.pyc dbb799b445f75af4419e9529eaadbca1 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/__pycache__/codegen_md.cpython-314.opt-2.pyc 1ba80cddde02d8a2485e8aac1b2b2f12 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/__pycache__/__init__.cpython-314.pyc 33f8814c30f1e82ac823ed10a5cc74a3 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/__pycache__/parser.cpython-314.opt-1.pyc 709a7c83c39def1240aa3106436e8c37 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/__pycache__/dbustypes.cpython-314.pyc bb149b9ffadf5d2af6f20b017c7ad35a 1788427425
+obj /usr/lib/python3.14/site-packages/gdbus_codegen/__pycache__/codegen.cpython-314.pyc 41d857490f6fd3ceef93d3aee11e7882 1788427425

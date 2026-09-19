@@ -1,0 +1,1 @@
+abi_x86_64 acl amd64 dns-over-tls elibc_glibc gcrypt kernel-install kernel_linux kmod libarchive lz4 openssl pam pcre python_single_target_python3_14 resolvconf seccomp sysv-utils zstd

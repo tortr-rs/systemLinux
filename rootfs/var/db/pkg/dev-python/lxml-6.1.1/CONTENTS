@@ -1,0 +1,190 @@
+dir /usr
+dir /usr/lib
+dir /usr/lib/python3.14
+dir /usr/lib/python3.14/site-packages
+dir /usr/lib/python3.14/site-packages/lxml
+obj /usr/lib/python3.14/site-packages/lxml/ElementInclude.py 5cdb4216aa626c5e1c227f0d5905224e 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/__init__.py 599206a3b3dbbf465309944ea47868b8 1786904358
+dir /usr/lib/python3.14/site-packages/lxml/__pycache__
+obj /usr/lib/python3.14/site-packages/lxml/__pycache__/ElementInclude.cpython-314.opt-1.pyc 5869fe3b4b34862b56974906b2b9d198 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/__pycache__/ElementInclude.cpython-314.opt-2.pyc 65aadf37af7ac765d5f76d0e2de19b98 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/__pycache__/ElementInclude.cpython-314.pyc 5869fe3b4b34862b56974906b2b9d198 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/__pycache__/__init__.cpython-314.opt-1.pyc 05cc933574c949751743c297f86ab784 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/__pycache__/__init__.cpython-314.opt-2.pyc 9ee86adc9c279aa9191f423818a2934c 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/__pycache__/__init__.cpython-314.pyc 05cc933574c949751743c297f86ab784 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/__pycache__/_elementpath.cpython-314.opt-1.pyc 66ac36d15811c6e485bbcc97e43ace4a 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/__pycache__/_elementpath.cpython-314.opt-2.pyc 11759473f4a9925ae35278d20c9908dc 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/__pycache__/_elementpath.cpython-314.pyc 66ac36d15811c6e485bbcc97e43ace4a 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/__pycache__/builder.cpython-314.opt-1.pyc 4eb22dd45a863a02446ebc288fcacfd6 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/__pycache__/builder.cpython-314.opt-2.pyc 79a26e9d6326cd0d6bcb8d169d8a65de 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/__pycache__/builder.cpython-314.pyc de217155689049d9ba7547a216c02730 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/__pycache__/cssselect.cpython-314.opt-1.pyc f53a710dbcf8c7cbd37d80ccd8318f10 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/__pycache__/cssselect.cpython-314.opt-2.pyc 0540c289d4f1f92bce1c9eb3d0be5930 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/__pycache__/cssselect.cpython-314.pyc f53a710dbcf8c7cbd37d80ccd8318f10 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/__pycache__/doctestcompare.cpython-314.opt-1.pyc d49574a673749f597abea27d15ed6873 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/__pycache__/doctestcompare.cpython-314.opt-2.pyc 41ba5408bb59ff904bba7ea73760762b 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/__pycache__/doctestcompare.cpython-314.pyc d49574a673749f597abea27d15ed6873 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/__pycache__/pyclasslookup.cpython-314.opt-1.pyc 765489f8c08561eb34f77c227051f4de 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/__pycache__/pyclasslookup.cpython-314.opt-2.pyc 765489f8c08561eb34f77c227051f4de 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/__pycache__/pyclasslookup.cpython-314.pyc 765489f8c08561eb34f77c227051f4de 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/__pycache__/sax.cpython-314.opt-1.pyc 510da90e31a13a534238356a87df52f9 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/__pycache__/sax.cpython-314.opt-2.pyc e93943e17dc1cebe8a337725cae8c46b 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/__pycache__/sax.cpython-314.pyc 510da90e31a13a534238356a87df52f9 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/__pycache__/usedoctest.cpython-314.opt-1.pyc c5c3ddc9dde1a7547ff8a82b8f85fc3a 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/__pycache__/usedoctest.cpython-314.opt-2.pyc ea18607ca49ba27a69daa14193f04a55 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/__pycache__/usedoctest.cpython-314.pyc c5c3ddc9dde1a7547ff8a82b8f85fc3a 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/_elementpath.cpython-314-x86_64-linux-gnu.so 245815cad7272c45e2f03010484a6b41 1786904360
+obj /usr/lib/python3.14/site-packages/lxml/_elementpath.py 7a34e8474dc4e2de0032a1e5ab32e6d5 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/apihelpers.pxi 6429164d2862857fb15e738e1031e8b0 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/builder.cpython-314-x86_64-linux-gnu.so b9baeecfa684f2ab9580e64a4b3c0db2 1786904360
+obj /usr/lib/python3.14/site-packages/lxml/builder.py 76f1360b64a7c3a91873de02e6e9dfd9 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/classlookup.pxi 598aaca097eefee0ebc6f5ddafcbd53d 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/cleanup.pxi a665cfa666d820f01b04c8def6756c9d 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/cssselect.py c91ad09f515d50332f5da861937650d5 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/debug.pxi 58a4aa76e2a0e561ac198ec0261cf861 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/docloader.pxi ae9430dfa7ff8f557f1e4f0c67f1a270 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/doctestcompare.py 63217008e1688527d2be0a4937abbb1a 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/dtd.pxi 8e66b565bf59dfe3508f7bf8cec44fd4 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/etree.cpython-314-x86_64-linux-gnu.so 403969caba3a814428ebbf218c683201 1786904360
+obj /usr/lib/python3.14/site-packages/lxml/etree.h ab1a30d5c40db5c81819af69fea5cb16 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/etree.pyx 851757ffde938a2d9082797eb8d93050 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/etree_api.h a34147a10625383338f174c17513258a 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/extensions.pxi 3bc48d62572be28fa1a1634575c9857e 1786904358
+dir /usr/lib/python3.14/site-packages/lxml/html
+obj /usr/lib/python3.14/site-packages/lxml/html/ElementSoup.py 844bafb3b8aaa3856ed4e5171c3252f5 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__init__.py 41312a35b944f78df5ddcb83d1abcd06 1786904358
+dir /usr/lib/python3.14/site-packages/lxml/html/__pycache__
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/ElementSoup.cpython-314.opt-1.pyc 6529d2e53c6191f7a0fd09be2b8ec0dd 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/ElementSoup.cpython-314.opt-2.pyc 6529d2e53c6191f7a0fd09be2b8ec0dd 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/ElementSoup.cpython-314.pyc 6529d2e53c6191f7a0fd09be2b8ec0dd 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/__init__.cpython-314.opt-1.pyc 4683ea0e14a90fb6cce8da7e447d58bc 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/__init__.cpython-314.opt-2.pyc 4c039d47ff9b5439c1060d0f8993d8a0 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/__init__.cpython-314.pyc 2137ea11a8ea63693bf617232b2d6117 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/_diffcommand.cpython-314.opt-1.pyc 79e930170e8cf7b0738bb15614bd783b 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/_diffcommand.cpython-314.opt-2.pyc 79e930170e8cf7b0738bb15614bd783b 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/_diffcommand.cpython-314.pyc 79e930170e8cf7b0738bb15614bd783b 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/_difflib.cpython-314.opt-1.pyc 8448ae209fe4f78e9604c05fc9e6c4d8 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/_difflib.cpython-314.opt-2.pyc 9f9ff88d1e3a26ad24cc985dfcfd7515 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/_difflib.cpython-314.pyc d4733405a227d35a4f5eb43b06ed184c 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/_html5builder.cpython-314.opt-1.pyc b468e26db2edd1dcaa400237be277a38 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/_html5builder.cpython-314.opt-2.pyc 1d9614aaad757e8eaef386d0649f54a3 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/_html5builder.cpython-314.pyc b468e26db2edd1dcaa400237be277a38 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/_setmixin.cpython-314.opt-1.pyc 72ebac0e46f76f99af695a43bf42808c 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/_setmixin.cpython-314.opt-2.pyc 4b1b33b4462b7596ee7254b4007e057a 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/_setmixin.cpython-314.pyc 72ebac0e46f76f99af695a43bf42808c 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/builder.cpython-314.opt-1.pyc 4dc2c1426d8fdf9e7d58c9c192bf5a62 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/builder.cpython-314.opt-2.pyc e7a041a13c5a58152258fdff63ca178b 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/builder.cpython-314.pyc 4dc2c1426d8fdf9e7d58c9c192bf5a62 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/clean.cpython-314.opt-1.pyc b08c9ac541cadbf94fab5ab3f5505535 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/clean.cpython-314.opt-2.pyc eb539adc9aad89f16ac3ce2351c3dae5 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/clean.cpython-314.pyc b08c9ac541cadbf94fab5ab3f5505535 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/defs.cpython-314.opt-1.pyc ac75c78094107a8d275acf35c98b32cb 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/defs.cpython-314.opt-2.pyc c65a6083223646b5830e6cf0c99b6ad3 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/defs.cpython-314.pyc ac75c78094107a8d275acf35c98b32cb 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/diff.cpython-314.opt-1.pyc eb0511efb66bd58ce9c174475351f149 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/diff.cpython-314.opt-2.pyc c28d383a3de1334573f2e9957902e678 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/diff.cpython-314.pyc 4f85de1413ee7da2320bb2a049104861 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/formfill.cpython-314.opt-1.pyc 9372d56b5a6ad0d78d790f1c2f9efab0 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/formfill.cpython-314.opt-2.pyc 1ec04f03681f405d41237b74b7cfed08 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/formfill.cpython-314.pyc 3608e1961671dfd26be268cb779f3616 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/html5parser.cpython-314.opt-1.pyc b24191f6ab43b0fad43523604c4d05be 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/html5parser.cpython-314.opt-2.pyc ce3c2da53a4daa5030cbeb06d03b998b 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/html5parser.cpython-314.pyc b24191f6ab43b0fad43523604c4d05be 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/soupparser.cpython-314.opt-1.pyc a818efff412dbe1eab43c374046be419 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/soupparser.cpython-314.opt-2.pyc bd69dafc5f480e6fbbbace3721015170 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/soupparser.cpython-314.pyc a818efff412dbe1eab43c374046be419 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/usedoctest.cpython-314.opt-1.pyc 81d797661606e1743e710a9b730100dc 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/usedoctest.cpython-314.opt-2.pyc b8320148e46e68fdea1175c35bdf3267 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/__pycache__/usedoctest.cpython-314.pyc 81d797661606e1743e710a9b730100dc 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/_diffcommand.py bb4b2be752d6ca4811ab5d07770e468e 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/_difflib.cpython-314-x86_64-linux-gnu.so bbf44446a07840d8c51ae6890060ba4e 1786904360
+obj /usr/lib/python3.14/site-packages/lxml/html/_difflib.py f6c7690fc56fac51f88b7921fd391110 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/_html5builder.py 6a2fdd100dc0dd8d8f7666b661e293cf 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/_setmixin.py 14ac8f9621c93d4a58d4617de6b21865 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/builder.py 18eec5873573d81c89d2226b5c0c4e9e 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/clean.py 205f7815eef07bdec9979bf3e678395b 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/defs.py c075b66c422e618cd66243eaf093cfd5 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/diff.cpython-314-x86_64-linux-gnu.so 67cf95bc5768563d3afefaa2cfa3fdc8 1786904360
+obj /usr/lib/python3.14/site-packages/lxml/html/diff.py a19cce163d83f44efc3c891b8d7a2ec3 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/formfill.py aec9c5a9f008897f919602d265b6b616 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/html5parser.py f441a8cdfd002c2fab33521c01b050de 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/soupparser.py f9a1b7724fce21e9c2f9b897f2df09ef 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/html/usedoctest.py 1e0ebc6d02d5bcd0d5a5f7c4bad447ab 1786904358
+dir /usr/lib/python3.14/site-packages/lxml/includes
+obj /usr/lib/python3.14/site-packages/lxml/includes/__init__.pxd d41d8cd98f00b204e9800998ecf8427e 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/includes/__init__.py d41d8cd98f00b204e9800998ecf8427e 1786904358
+dir /usr/lib/python3.14/site-packages/lxml/includes/__pycache__
+obj /usr/lib/python3.14/site-packages/lxml/includes/__pycache__/__init__.cpython-314.opt-1.pyc 97e29d11d8823e72db4c29637cf9e4ef 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/includes/__pycache__/__init__.cpython-314.opt-2.pyc 97e29d11d8823e72db4c29637cf9e4ef 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/includes/__pycache__/__init__.cpython-314.pyc 97e29d11d8823e72db4c29637cf9e4ef 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/includes/c14n.pxd 122e7311af988a1f3399caab0107053d 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/includes/config.pxd 2129b22b484db09b1c3bc1119f64d3f9 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/includes/dtdvalid.pxd cc961d27989a6396fcac7e67ac20b073 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/includes/etree_defs.h 28d5d0a5a3cf78a1f9f0a545ea721d6d 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/includes/etreepublic.pxd 5f56f7bbaeb1161566fc2c9bb7ceb0ca 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/includes/htmlparser.pxd fef81856463cb7b392a92f0bb5d7c2e3 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/includes/lxml-version.h f8a6ca4914ecbf2a18020c9811be884f 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/includes/relaxng.pxd fdd16c0b54ba28ae14569a308a138d4d 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/includes/schematron.pxd 7228979aa4f0d8bdd0fd3836da9cada2 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/includes/tree.pxd 0ba7fcebcadb732a6bcba489dfec9ffb 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/includes/uri.pxd d2de99a3433a4c1c08dc56444a905af2 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/includes/xinclude.pxd b59df3351fb0ed9672f38df26cb162df 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/includes/xmlerror.pxd 63c731eb2b06710a496c5b8ba450d052 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/includes/xmlparser.pxd c80b9f0db53b478dbf56474ff8e12dfe 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/includes/xmlschema.pxd 96c3667e103ef3a4e7ba6714ac861425 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/includes/xpath.pxd c7a3c979d33497f585541f192c40bc73 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/includes/xslt.pxd e8932623793964987e4f45cf0708021b 1786904358
+dir /usr/lib/python3.14/site-packages/lxml/isoschematron
+obj /usr/lib/python3.14/site-packages/lxml/isoschematron/__init__.py 0c766df6ea00a1a12a074136afdab855 1786904358
+dir /usr/lib/python3.14/site-packages/lxml/isoschematron/__pycache__
+obj /usr/lib/python3.14/site-packages/lxml/isoschematron/__pycache__/__init__.cpython-314.opt-1.pyc 08bfbb99b8fdd1dec501119b8da7316f 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/isoschematron/__pycache__/__init__.cpython-314.opt-2.pyc 57eb03d7f93aa94feaaaa7a2d86fdc05 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/isoschematron/__pycache__/__init__.cpython-314.pyc 08bfbb99b8fdd1dec501119b8da7316f 1786904358
+dir /usr/lib/python3.14/site-packages/lxml/isoschematron/resources
+dir /usr/lib/python3.14/site-packages/lxml/isoschematron/resources/rng
+obj /usr/lib/python3.14/site-packages/lxml/isoschematron/resources/rng/iso-schematron.rng 2cc0c1083ef87ca71f953307ce512334 1786904358
+dir /usr/lib/python3.14/site-packages/lxml/isoschematron/resources/xsl
+obj /usr/lib/python3.14/site-packages/lxml/isoschematron/resources/xsl/RNG2Schtrn.xsl 8382a2452d1f99fc927f80f83bb95539 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/isoschematron/resources/xsl/XSD2Schtrn.xsl 29fa3095109870fed4735a10f1fe1e0d 1786904358
+dir /usr/lib/python3.14/site-packages/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+obj /usr/lib/python3.14/site-packages/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_abstract_expand.xsl 6f27cfe56f4ea9f98af5079c87bf5155 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_dsdl_include.xsl 4106b2f46d855a66c6d9b05663e09fd1 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematron_message.xsl ab3bd1a3dddcf305cb6dbfbdd958c168 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematron_skeleton_for_xslt1.xsl c687ac619e114249fe5fa20b82622ebb 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_svrl_for_xslt1.xsl 3ed2289d559184994e7c1e9eee0a3b06 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/readme.txt 2fc7412653a6c260ee6faa411f67d133 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/iterparse.pxi d4f5c059b53e4fd41cd6fdc88e65780d 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/lxml.etree.h ab1a30d5c40db5c81819af69fea5cb16 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/lxml.etree_api.h 506eeeef8b7cf3afa877e92dd4db6fcd 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/nsclasses.pxi e02afbca14655a124a08ac4a08468925 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/objectify.cpython-314-x86_64-linux-gnu.so dbfecbbfd586466eb70590ef1426d705 1786904360
+obj /usr/lib/python3.14/site-packages/lxml/objectify.pyx 5c8bf034f4b02b53e2fad53a1a0ea727 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/objectpath.pxi 73a326014d30c9efe8ff31e289895b3b 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/parser.pxi 01ab540f2edba63e4f02b742ecadd5c0 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/parsertarget.pxi 5301cf9f8ed52d48084d54ba2d951ce2 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/proxy.pxi ae6032db0a0c02d7f22c735a96205f22 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/public-api.pxi 8314db9cdb5ac87c361b405340cb8d86 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/pyclasslookup.py df3fac3151543162a0045395202d7cb6 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/readonlytree.pxi 9c177586ffafae79987e51ada6b974ab 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/relaxng.pxi 5cb595dccbe8399514f9ddae6b4a7291 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/sax.cpython-314-x86_64-linux-gnu.so d5939b4ce4d2a851018155223a088283 1786904360
+obj /usr/lib/python3.14/site-packages/lxml/sax.py 6a5a972d2416df797b9cc980a268a996 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/saxparser.pxi e3cf8f576bc506135d3ad0f31a7d3124 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/schematron.pxi 50b09e87b77c59962f310db37230ae4f 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/serializer.pxi 0dcaf03f1b1ba77ae19087b98f53ed6a 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/usedoctest.py 39c214ba40b290e61ba361511a22adea 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/xinclude.pxi 9c978599c470c91fe0d9d39383480a48 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/xmlerror.pxi e5e5f45628af8ff9d74f91f104f18f18 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/xmlid.pxi 9e59ffd40f21b597c485ff1aafdaa062 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/xmlschema.pxi fcdc7556d9812081b877a748b2ab4e3d 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/xpath.pxi a1ade19b297866f1f55f773cb408cbcd 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/xslt.pxi 31d25b1ca4d3643fde60a0ebc5356f49 1786904358
+obj /usr/lib/python3.14/site-packages/lxml/xsltext.pxi c5b71c96ab0794670dae108ea6c9a220 1786904358
+dir /usr/lib/python3.14/site-packages/lxml-6.1.1.dist-info
+obj /usr/lib/python3.14/site-packages/lxml-6.1.1.dist-info/METADATA 59210bbac79a62901b4e9cc5b4766422 1786904358
+obj /usr/lib/python3.14/site-packages/lxml-6.1.1.dist-info/WHEEL 2b8e4c21edcf2b7d054832657019d711 1786904358
+obj /usr/lib/python3.14/site-packages/lxml-6.1.1.dist-info/top_level.txt 91fcdd94ba07e0d46cec8d158ed51d19 1786904358
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/lxml-6.1.1
+obj /usr/share/doc/lxml-6.1.1/README.rst.bz2 85ebfe376849b6a577a007c9ebcc03f9 1786904360

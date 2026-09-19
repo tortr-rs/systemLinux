@@ -1,0 +1,15 @@
+BDEPEND=fortran? ( virtual/fortran )
+DEFINED_PHASES=compile configure install setup test
+DEPEND=fortran? ( virtual/fortran )
+DESCRIPTION=Automatically Tuned Linear Algebra Software
+EAPI=8
+HOMEPAGE=https://math-atlas.sourceforge.net
+INHERIT=fortran-2 toolchain-funcs
+IUSE=doc fortran generic lapack static-libs threads
+KEYWORDS=amd64 ~x86
+LICENSE=BSD
+RDEPEND=fortran? ( virtual/fortran )
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/math-atlas/atlas3.10.2.tar.bz2 fortran? ( lapack? ( http://www.netlib.org/lapack/lapack-3.6.0.tgz ) )
+_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	fortran-2	ae6d43513003405bd4a48698fc20370a	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=857eb0703635930312e528f042701257

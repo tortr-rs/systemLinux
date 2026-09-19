@@ -1,0 +1,16 @@
+BDEPEND=app-alternatives/ninja >=dev-build/cmake-3.28.5 virtual/pkgconfig
+DEFINED_PHASES=compile configure install postinst prepare test
+DEPEND=sys-libs/pam test? ( app-admin/sudo )
+DESCRIPTION=Password change daemon with PAM support
+EAPI=8
+HOMEPAGE=https://github.com/kravietz/poppassd-ceti
+INHERIT=cmake pam readme.gentoo-r1 systemd
+IUSE=test
+KEYWORDS=amd64 x86
+LICENSE=GPL-2+
+RDEPEND=sys-libs/pam
+RESTRICT=test
+SLOT=0
+SRC_URI=https://github.com/kravietz/poppassd-ceti/archive/v1.8.9.tar.gz -> poppassd-ceti-1.8.9.tar.gz
+_eclasses_=cmake	3530055400d05e64deaba3042af30af6	eapi9-pipestatus	d2c134036ac31c3085aebc9147f572bd	flag-o-matic	fd3558f73f6503093adee69adf41020d	multiprocessing	45d0620f25c2f063ad6276ecd9ed9399	ninja-utils	d063ea1900a793f93eb095010d6d9156	pam	b56d0c9c20fc5b553f13c8ae165a10a5	readme.gentoo-r1	9ca94b2d607e7454ca6cfb44ab8ce327	systemd	a964c0cbe818b5729da1dbfcee5be861	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5	xdg-utils	42869b3c8d86a70ef3cf75165a395e09
+_md5_=96cfad250fe8c9f37f4ae0303ba40ea4

@@ -1,0 +1,28 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/podselect a78fd910bc80c8fb56c28208c387c233 1763921498
+dir /usr/lib64
+dir /usr/lib64/perl5
+dir /usr/lib64/perl5/vendor_perl
+dir /usr/lib64/perl5/vendor_perl/5.42
+dir /usr/lib64/perl5/vendor_perl/5.42/Pod
+obj /usr/lib64/perl5/vendor_perl/5.42/Pod/Find.pm 6ae3bf184ca20e44a8269e5a2e5e0adf 1763921498
+obj /usr/lib64/perl5/vendor_perl/5.42/Pod/InputObjects.pm d9cd9ca3da0aac8d8efa70dc94f6ab04 1763921498
+obj /usr/lib64/perl5/vendor_perl/5.42/Pod/ParseUtils.pm be903efe88b8795d70f2b7c7d4d3e78b 1763921498
+obj /usr/lib64/perl5/vendor_perl/5.42/Pod/Parser.pm 5b1cd39e3fb15f3490dbacb211248c63 1763921498
+obj /usr/lib64/perl5/vendor_perl/5.42/Pod/PlainText.pm 41dd17eb108c145d2f24063a122acf43 1763921498
+obj /usr/lib64/perl5/vendor_perl/5.42/Pod/Select.pm 511a127f96ec862ef5d881e3e3d617c8 1763921498
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Pod
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Pod/Parser
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Pod/Parser/.packlist 0c075659f6fb6f85391d387398b00b3c 1763921498
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/Pod-Parser-1.660.0
+obj /usr/share/doc/Pod-Parser-1.660.0/CHANGES.bz2 31d427ab473e7d0058ea06de9bf29ee7 1763921498
+obj /usr/share/doc/Pod-Parser-1.660.0/README.bz2 27e1498e30f65ffd1030ea366bb59539 1763921499
+obj /usr/share/doc/Pod-Parser-1.660.0/TODO.bz2 63161481fa0b59ec1679c902f6ba9e41 1763921499
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/podselect.1.bz2 bd46845f5f3cab6d6b7ff59a4de1ab5d 1763921498

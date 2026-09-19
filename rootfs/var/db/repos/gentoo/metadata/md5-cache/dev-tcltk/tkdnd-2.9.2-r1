@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure prepare
+DEPEND=dev-lang/tk:=
+DESCRIPTION=Adds native drag & drop capabilities to tk toolkit
+EAPI=8
+HOMEPAGE=https://www.ellogon.org/petasis/index.php/tcltk-projects/tkdnd
+IUSE=debug threads X
+KEYWORDS=amd64 x86
+LICENSE=BSD
+RDEPEND=dev-lang/tk:=
+RESTRICT=test
+SLOT=0
+SRC_URI=https://github.com/petasis/tkdnd/archive/tkdnd-release-test-v2.9.2.tar.gz
+_md5_=5b76868a74aa15ac502bc89748ee6b2d

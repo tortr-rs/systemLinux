@@ -1,0 +1,14 @@
+BDEPEND=app-arch/unzip X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DEFINED_PHASES=install postinst postrm setup
+DESCRIPTION=Font for viewing stroke order diagrams for kanji, kana and other characters
+EAPI=8
+HOMEPAGE=https://www.nihilist.org.uk/
+INHERIT=font
+IUSE=X
+KEYWORDS=amd64 arm64 ~loong ~riscv x86
+LICENSE=BSD
+RESTRICT=binchecks
+SLOT=0
+SRC_URI=https://drive.google.com/uc?export=download&id=1DKZEYA3PJ8ulLnjYDP5bxzJ3SWi59ghr -> kanjistrokeorders-4.005.zip
+_eclasses_=font	6d0c60c855c05ae2ba808d300440ded2
+_md5_=b0f9e6313084a61a3a0d9cd3254bd8f3

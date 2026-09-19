@@ -1,0 +1,15 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=compile install prepare
+DEPEND=x11-libs/libX11 x11-libs/libXt motif? ( x11-libs/libXmu x11-libs/motif ) !motif? ( x11-libs/libXaw ) x11-base/xorg-proto
+DESCRIPTION=Simple interactive calendar program with a notebook capability
+EAPI=8
+HOMEPAGE=https://www.freebsd.org/
+INHERIT=flag-o-matic toolchain-funcs
+IUSE=motif
+KEYWORDS=~alpha amd64 ppc ppc64 x86
+LICENSE=HPND
+RDEPEND=x11-libs/libX11 x11-libs/libXt motif? ( x11-libs/libXmu x11-libs/motif ) !motif? ( x11-libs/libXaw )
+SLOT=0
+SRC_URI=ftp://daemon.jp.FreeBSD.org/pub/FreeBSD-jp/ports-jp/LOCAL_PORTS/xcalendar-4.0+i18n.tar.gz
+_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=21a6187e982282de8d5631e5e5155a4a

@@ -1,0 +1,13 @@
+DEFINED_PHASES=install prepare
+DEPEND=media-libs/freeglut x11-libs/libXi x11-libs/libXmu virtual/opengl virtual/glu
+DESCRIPTION=An OpenGL billards game
+EAPI=7
+HOMEPAGE=https://sourceforge.net/projects/billardgl/
+INHERIT=desktop
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=media-libs/freeglut x11-libs/libXi x11-libs/libXmu virtual/opengl virtual/glu
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/billardgl/BillardGL-1.75.tar.gz mirror://gentoo/billardgl.png
+_eclasses_=desktop	e447b5f77146d69797e9f03ff177f3f1
+_md5_=a5c420e2ccaae19b7563b71369efa526

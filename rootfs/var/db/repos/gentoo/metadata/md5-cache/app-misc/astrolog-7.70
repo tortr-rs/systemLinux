@@ -1,0 +1,15 @@
+BDEPEND=app-arch/unzip
+DEFINED_PHASES=compile install postinst prepare
+DEPEND=X? ( x11-libs/libX11 )
+DESCRIPTION=A many featured astrology chart calculation program
+EAPI=8
+HOMEPAGE=https://www.astrolog.org/astrolog.htm https://github.com/CruiserOne/Astrolog
+INHERIT=toolchain-funcs
+IUSE=X
+KEYWORDS=amd64 ppc ppc64 x86
+LICENSE=AGPL-3 GPL-2
+RDEPEND=X? ( x11-libs/libX11 )
+SLOT=0
+SRC_URI=https://www.astrolog.org/ftp/ast77src.zip
+_eclasses_=toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=8e4cca40a242920279ee068e39f83ddb

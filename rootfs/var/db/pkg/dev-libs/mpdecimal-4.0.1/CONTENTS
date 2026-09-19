@@ -1,0 +1,17 @@
+dir /usr
+dir /usr/include
+obj /usr/include/mpdecimal.h 093c90acf035b9010ea3336364c4e2a0 1748193254
+dir /usr/lib64
+sym /usr/lib64/libmpdec.so -> libmpdec.so.4.0.1 1789353954
+sym /usr/lib64/libmpdec.so.4 -> libmpdec.so.4.0.1 1789353954
+obj /usr/lib64/libmpdec.so.4.0.1 26ef693fb0602caf13ba066dcf1c0636 1748193255
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/libmpdec.pc c3a669f4ee6fe4e4c8f558a0bcadd1e5 1748193254
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/mpdecimal-4.0.1
+obj /usr/share/doc/mpdecimal-4.0.1/README.txt.bz2 00bac58c2170e883e230ef3733f9c727 1748193254
+dir /usr/share/man
+dir /usr/share/man/man3
+obj /usr/share/man/man3/libmpdec.3.bz2 d17d50a0ca85251b51231631f6c60f50 1748193254
+obj /usr/share/man/man3/mpdecimal.3.bz2 318e6eb8f2990674ca5d6fbc7fcc344c 1748193254

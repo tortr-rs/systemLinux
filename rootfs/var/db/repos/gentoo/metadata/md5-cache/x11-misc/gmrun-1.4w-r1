@@ -1,0 +1,13 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=configure
+DEPEND=x11-libs/gtk+:3
+DESCRIPTION=A run utility featuring a slim design and bash style auto-completion
+EAPI=8
+HOMEPAGE=https://github.com/wdlkmpx/gmrun
+IUSE=nls xdg
+KEYWORDS=amd64 ~mips ppc x86
+LICENSE=ISC
+RDEPEND=x11-libs/gtk+:3
+SLOT=0
+SRC_URI=https://github.com/wdlkmpx/gmrun/releases/download/1.4w/gmrun-1.4w.tar.xz
+_md5_=3ffb8d42ad28cce06ca6825bd6762861

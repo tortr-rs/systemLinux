@@ -1,0 +1,4 @@
+dir /usr
+dir /usr/lib
+dir /usr/lib/sysusers.d
+obj /usr/lib/sysusers.d/acct-group-mail.conf 42a9551aaafc4e81e50fadb17441b30c 1748797862

@@ -1,0 +1,74 @@
+https://github.com/royhills/ike-scan/pull/39
+
+Before:
+```
+checking whether clang accepts -fstack-protector... yes
+checking whether clang accepts -D_FORTIFY_SOURCE... yes
+checking whether clang accepts -Wformat-security... no
+```
+
+After:
+```
+checking whether clang accepts -fstack-protector... yes
+checking whether clang accepts -Wformat-security... yes
+checking whether clang accepts -D_FORTIFY_SOURCE... yes
+```
+
+--- a/acinclude.m4
++++ b/acinclude.m4
+@@ -144,7 +144,7 @@
+     return 0;
+   return 1;
+ }
+-main() {
++int main() {
+   return ! does_int64_work();
+ }],
+ [Ac_cachevar=yes],
+@@ -180,6 +180,7 @@
+ AC_CACHE_VAL(pgac_cv_snprintf_long_long_int_format,
+ [for pgac_format in '%lld' '%qd' '%I64d'; do
+ AC_TRY_RUN([#include <stdio.h>
++#include <string.h>
+ typedef long long int int64;
+ #define INT64_FORMAT "$pgac_format"
+ 
+@@ -200,7 +201,7 @@
+     return 0;			/* either multiply or snprintf is busted */
+   return 1;
+ }
+-main() {
++int main() {
+   return ! does_int64_snprintf_work();
+ }],
+ [pgac_cv_snprintf_long_long_int_format=$pgac_format; break],
+@@ -278,7 +279,7 @@
+ dnl is not present on all the operating systems that we support, e.g. OpenBSD.
+ dnl
+ AC_DEFUN([GCC_FORTIFY_SOURCE],[
+-   if test "x$CC" != "X"; then
++   if test "X$CC" != "X"; then
+       AC_MSG_CHECKING([whether ${CC} accepts -D_FORTIFY_SOURCE])
+       AC_TRY_COMPILE(,[
+          #define GNUC_PREREQ(maj, min) ((__GNUC__ << 16) + __GNUC_MINOR__ >= ((maj) << 16) + (min))
+@@ -311,7 +312,7 @@
+ dnl warnings.
+ dnl
+ AC_DEFUN([GCC_FORMAT_SECURITY],[
+-   if test "x$CC" != "X"; then
++   if test "X$CC" != "X"; then
+       AC_MSG_CHECKING([whether ${CC} accepts -Wformat-security])
+       wfs_old_cflags="$CFLAGS"
+       CFLAGS="$CFLAGS -Wall -Werror -Wformat -Wformat-security"
+--- a/configure.ac
++++ b/configure.ac
+@@ -34,8 +34,8 @@
+    CFLAGS="$CFLAGS -Wall -Wshadow -Wwrite-strings"
+    GCC_WEXTRA
+    GCC_STACK_PROTECT_CC
+-   GCC_FORTIFY_SOURCE
+    GCC_FORMAT_SECURITY
++   GCC_FORTIFY_SOURCE
+ dnl Uncomment the lines below for testing with stricter warnings.
+ dnl CFLAGS="$CFLAGS -pedantic -Wpointer-arith -Wcast-qual -Wcast-align -Wconversion -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wnested-externs -Winline "
+ dnl Uncomment the line below to check malloc/free with electric fence

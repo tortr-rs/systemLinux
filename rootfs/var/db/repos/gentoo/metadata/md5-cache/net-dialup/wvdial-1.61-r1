@@ -1,0 +1,14 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=configure install postinst
+DEPEND=>=net-libs/wvstreams-4.4
+DESCRIPTION=Excellent program to automatically configure PPP sessions
+EAPI=8
+HOMEPAGE=https://code.google.com/archive/p/wvstreams/
+INHERIT=readme.gentoo-r1
+KEYWORDS=~alpha amd64 ~hppa ppc ~sparc x86
+LICENSE=LGPL-2
+RDEPEND=>=net-libs/wvstreams-4.4 net-dialup/ppp:=
+SLOT=0
+SRC_URI=https://wvstreams.googlecode.com/files/wvdial-1.61.tar.gz
+_eclasses_=eapi9-pipestatus	d2c134036ac31c3085aebc9147f572bd	readme.gentoo-r1	9ca94b2d607e7454ca6cfb44ab8ce327
+_md5_=f54b12a062fc179ef7ed59c23aa7488e

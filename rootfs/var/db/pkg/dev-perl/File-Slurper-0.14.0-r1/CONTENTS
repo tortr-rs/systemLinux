@@ -1,0 +1,17 @@
+dir /usr
+dir /usr/lib64
+dir /usr/lib64/perl5
+dir /usr/lib64/perl5/vendor_perl
+dir /usr/lib64/perl5/vendor_perl/5.42
+dir /usr/lib64/perl5/vendor_perl/5.42/File
+obj /usr/lib64/perl5/vendor_perl/5.42/File/Slurper.pm 90176e6ba32750b60a49e64cd1d4ba41 1766337767
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/File
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/File/Slurper
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/File/Slurper/.packlist 0ac1abc830991e4714262c8a5425640d 1766337767
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/File-Slurper-0.14.0-r1
+obj /usr/share/doc/File-Slurper-0.14.0-r1/Changes.bz2 18c9f24ea10697954f0456befecda240 1766337767
+obj /usr/share/doc/File-Slurper-0.14.0-r1/README.bz2 61ff5d5d6eaed6e11a678bcf9751b089 1766337767

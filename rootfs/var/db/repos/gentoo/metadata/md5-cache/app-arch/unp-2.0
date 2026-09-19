@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile install
+DEPEND=nls? ( sys-devel/gettext ) test? ( app-arch/lzop app-arch/lzip app-arch/zstd )
+DESCRIPTION=Script for unpacking various file formats
+EAPI=8
+HOMEPAGE=https://packages.qa.debian.org/u/unp.html
+INHERIT=bash-completion-r1 strip-linguas
+IUSE=nls test
+KEYWORDS=amd64 ~arm arm64 ~hppa ~ppc x86
+LICENSE=GPL-2
+RDEPEND=nls? ( sys-devel/gettext ) test? ( app-arch/lzop app-arch/lzip app-arch/zstd ) dev-lang/perl
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=mirror://debian/pool/main/u/unp/unp_2.0.tar.xz
+_eclasses_=bash-completion-r1	4386cfb12ede6cd8f0c1987d2e88da5f	shell-completion	63a62de3ca49c798ee6e89f190e45d0e	strip-linguas	3480f49d8ea2640d0398e69d20a2f45f	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=efd9ab505726ccb595b9482690e2a260

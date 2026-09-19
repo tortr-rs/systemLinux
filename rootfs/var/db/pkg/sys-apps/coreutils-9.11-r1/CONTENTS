@@ -1,0 +1,457 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/[ 12b79f869d44dea3c079c5b7e218b8b6 1780764206
+obj /usr/bin/arch 5ca210368ad042122c499c339d397a7a 1780764206
+obj /usr/bin/b2sum 912850c99a7646ccac9ef1e4865785e1 1780764206
+obj /usr/bin/base32 162368b5c7cb13676dc6fb7d00240ce2 1780764206
+obj /usr/bin/base64 d53f5d20ae889c169113fa24cc60e058 1780764206
+obj /usr/bin/basename 9a184094bde553f00a072f8d7fb09390 1780764206
+obj /usr/bin/basenc fb1ff3a4d5af389de94e3db2fca61e46 1780764206
+obj /usr/bin/cat 92b90368d5597176ca79b6fb847e3997 1780764206
+obj /usr/bin/chgrp 22f4952e4ffb844c95923fcca0579207 1780764206
+obj /usr/bin/chmod 8d7413337cf61f4c04499b25c8d28feb 1780764206
+obj /usr/bin/chown 52ea7ec3c4d856977063abe000c8003b 1780764206
+obj /usr/bin/chroot 1bdfff651d1089d995d713645504cefd 1780764206
+obj /usr/bin/cksum 608f08b9736b9112406ed30755f39368 1780764206
+obj /usr/bin/comm d6e1069b21372c249785a008f809490e 1780764206
+obj /usr/bin/cp 33f182c6a77487a5d2f6f85c8ca42840 1780764206
+obj /usr/bin/csplit 19adf79f832e94a19c5267fe793bfb31 1780764206
+obj /usr/bin/cut d645f3634503a3aea20524a5a21484f7 1780764206
+obj /usr/bin/date 969745356897c97f895b5436356546dd 1780764206
+obj /usr/bin/dd 81be739ae45831ca53211e274089d31f 1780764206
+obj /usr/bin/df 22771d7f66746543612df29ba9de06e9 1780764206
+obj /usr/bin/dir 132f7fa2af46f781c5b0c1a99bdb3083 1780764206
+obj /usr/bin/dircolors c44add09e1ef4c0a4daf88e952131a3a 1780764206
+obj /usr/bin/dirname 3831e30bd5c8ea8a3ab81bdbd84baaa5 1780764206
+obj /usr/bin/du be3e65ea2c21ac2c81e21a0dfd94d819 1780764206
+obj /usr/bin/echo 51a3ca8133d69fb6deef3d05efc13a40 1780764206
+obj /usr/bin/env 5176e04dfa97b86669d684ad285b4d6a 1780764206
+obj /usr/bin/expand 907b7f108e2a366ff8145c607e5e00f2 1780764206
+obj /usr/bin/expr 4297891762d2151edc54aac745cc4354 1780764206
+obj /usr/bin/factor 072ba1ed3752834431150afd41a6ebe8 1780764206
+obj /usr/bin/false 2dc6be6f0c22a3dec37a9345f6fd2cd3 1780764206
+obj /usr/bin/fmt b025118ab9f61337768151f26746c155 1780764206
+obj /usr/bin/fold 8034d1b0b9e4077fc4045514732564ac 1780764206
+obj /usr/bin/groups 42e7e05ba448902f8cbbfd43d4fba854 1780764206
+obj /usr/bin/head fbf25de7f4896c2a43f1d430abef1958 1780764206
+obj /usr/bin/hostid 2e5858b210206e01b2295528de510a9f 1780764206
+obj /usr/bin/id e6d15943583c711a0890ca85a3ed0e9f 1780764206
+obj /usr/bin/install c72619bc51d0d4b87dab5fb6187646a5 1780764206
+obj /usr/bin/join 3ee137af50b5f173bb1e30d93bb5ffcf 1780764206
+obj /usr/bin/link b8dceb0e3885639cfe95ce2081218c28 1780764206
+obj /usr/bin/ln 7a24c9869111d795bcd45d34c41a7ee2 1780764206
+obj /usr/bin/logname 8d2b784188956f4c183f9347528eba29 1780764206
+obj /usr/bin/ls c4f869192e4a800d5ed13d870c564985 1780764206
+obj /usr/bin/md5sum 3fd0753c311c79afc1f600085c0ffe24 1780764206
+obj /usr/bin/mkdir 0dc0eb12cb401da2d3f8a2d172633f72 1780764206
+obj /usr/bin/mkfifo bfa0175677cc299c6f2f25eac855d7e4 1780764206
+obj /usr/bin/mknod 760047b8a6c8193045ffa84b17b9c2f2 1780764206
+obj /usr/bin/mktemp 0e35304df67da6fc99f9c49bf6df40f9 1780764206
+obj /usr/bin/mv d2f7d4b0a223313fc43aeb83d34e7221 1780764206
+obj /usr/bin/nice 76677833119bde882b977de54d3b6ffe 1780764206
+obj /usr/bin/nl 1e1b69d7e9c54620a50d4a49cef80c83 1780764206
+obj /usr/bin/nohup 0013b9ac911a8c00fcb7dfdcb36da4c5 1780764206
+obj /usr/bin/nproc 61e0385f6d87109b45eacd26f2039a92 1780764206
+obj /usr/bin/numfmt 99caa4d64ad37542604bca6fe620d8fc 1780764206
+obj /usr/bin/od abd7a1397b30eb15ed9fd00500c3dcdf 1780764206
+obj /usr/bin/paste 6949540892c27ad254f67f7fee57b7f2 1780764206
+obj /usr/bin/pathchk 8a86cc0089373f38d716e0a1dcf6ac9d 1780764206
+obj /usr/bin/pinky e0b7f6704c89b2032d5f2418296dedd2 1780764206
+obj /usr/bin/pr c14e043bae613d3bc6e2670b5ebccceb 1780764206
+obj /usr/bin/printenv e0ad026d63bcd70d25a7fd79cc4b1d2d 1780764206
+obj /usr/bin/printf 7ebd5f348a6bcaa44965e0664c47818c 1780764206
+obj /usr/bin/ptx 994f9d4f04937e008c791cb2ab4338d9 1780764206
+obj /usr/bin/pwd 0a7988a696ff5fdce473695170e9ae25 1780764206
+obj /usr/bin/readlink 12ae5e0bfcb478fd9f66669768014790 1780764206
+obj /usr/bin/realpath 9626c8187a0cd08c31b5dfa44a743889 1780764206
+obj /usr/bin/rm 80b244f9e8daa4190f0f43c315493d5c 1780764206
+obj /usr/bin/rmdir acf501f3eb8d9288a5b32bbd340f4862 1780764206
+obj /usr/bin/seq 106d9721f2a06816de0d17e57014fcad 1780764206
+obj /usr/bin/sha1sum 52ecaeea39a9b1b14a6dcac69ddad949 1780764206
+obj /usr/bin/sha224sum 66bacc85cdac017babcf2c8daec1fc63 1780764206
+obj /usr/bin/sha256sum 20be2017dede7a1e384ca130c9364fb5 1780764206
+obj /usr/bin/sha384sum c227bfe7e4457ea87b86e3827d6b818d 1780764206
+obj /usr/bin/sha512sum 2f8419bc53c81b48a489873941e06c08 1780764206
+obj /usr/bin/shred b1d9cd86ca3e4f1e252128b64af0b5be 1780764206
+obj /usr/bin/shuf 6be3506af1eae49031c9054d1de1bf27 1780764206
+obj /usr/bin/sleep a3d6a2c3a35084ce4ae9cf4a1b5ab2c4 1780764206
+obj /usr/bin/sort 1036ecc775b51c228351cc17f6c66bc9 1780764206
+obj /usr/bin/split a3f027e09f96002a47036d65c4f53cf6 1780764206
+obj /usr/bin/stat 2dbf957e1155e6fa199c6a97aca54765 1780764206
+obj /usr/bin/stdbuf b2142748704f6ae4a27491f2badd40f2 1780764206
+obj /usr/bin/stty 148da4cdc229c3193a10ac90ff993450 1780764206
+obj /usr/bin/sum 46546d135e13c9e140897dceb54d3f0b 1780764206
+obj /usr/bin/sync dd7315b5c6cfb8dd61d43b54386bf4c7 1780764206
+obj /usr/bin/tac 5c7ea966b18b8bc0589619361b847a29 1780764206
+obj /usr/bin/tail e8175e576516d0ed65cc541e67ac0159 1780764206
+obj /usr/bin/tee 3024ad814e945f18c5fdb5f8653defc6 1780764206
+obj /usr/bin/test 08708d093ccf6c3e4419637256242776 1780764206
+obj /usr/bin/timeout 60614f10fd3e6fabaf2564f060647cdb 1780764206
+obj /usr/bin/touch 05ea2e486008aced05ebf02c47bfba21 1780764206
+obj /usr/bin/tr a013878e121005356103adf7b4f8dfca 1780764206
+obj /usr/bin/true 1456f0202d054f94d728f7112decbd89 1780764206
+obj /usr/bin/truncate 122ba165f83f2a5fe0e04dbd9acee0a0 1780764206
+obj /usr/bin/tsort 7ec4a51c88b8f4ec5b38c46c3d55a46e 1780764206
+obj /usr/bin/tty d568e06735f8e3527bbb1ac41b629ff3 1780764206
+obj /usr/bin/uname 76d4834efc515c363b17b2d65f42982c 1780764206
+obj /usr/bin/unexpand 388e52a052d53ba1a63169e868ac5c25 1780764206
+obj /usr/bin/uniq 7cde73d2e0a8c67f72eff0cb55d3ffbc 1780764206
+obj /usr/bin/unlink 27731f1bfc1143792e95021e8e7c915f 1780764206
+obj /usr/bin/users e173d4750d72e582a43043de4888f383 1780764206
+obj /usr/bin/vdir 4d21154b32524f12f5cc8ad443cff3c0 1780764206
+obj /usr/bin/wc cf312d788120e21bcbb1f609ef2ab469 1780764206
+obj /usr/bin/who fa7de15b053b9f73cdaf97bb3779bf1c 1780764206
+obj /usr/bin/whoami 1dd8cf29a95639959ab1290fe0405778 1780764206
+obj /usr/bin/yes b3da7982cc18add53ac3c2217b77df42 1780764206
+dir /usr/libexec
+dir /usr/libexec/coreutils
+obj /usr/libexec/coreutils/libstdbuf.so 8caecc8be0e11b7663319ca642863373 1780764206
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/coreutils-9.11-r1
+obj /usr/share/doc/coreutils-9.11-r1/AUTHORS.bz2 efe47c573db9aa8329dd43753d360966 1780764204
+obj /usr/share/doc/coreutils-9.11-r1/ChangeLog.bz2 557d248df45f41d9ab47eb25e0fa1123 1780764204
+obj /usr/share/doc/coreutils-9.11-r1/NEWS.bz2 37a8d44d268fcfaf63f1fa17a76b729a 1780764204
+obj /usr/share/doc/coreutils-9.11-r1/README-install.bz2 bff91063e5ffe0f7dd12d3444d1db2f3 1780764204
+obj /usr/share/doc/coreutils-9.11-r1/README.bz2 b8ab8eca5c45e7d67d4fcc99a909d150 1780764204
+obj /usr/share/doc/coreutils-9.11-r1/THANKS.bz2 60f78ce8c8a38ac99463602d4e9fb8ec 1780764204
+obj /usr/share/doc/coreutils-9.11-r1/TODO.bz2 348b892f52f7b1c6f0d7d71bfb3f961f 1780764204
+dir /usr/share/info
+obj /usr/share/info/coreutils.info.bz2 fb1a52deb9af9f75fa3063e2f2a8f4da 1780764204
+dir /usr/share/locale
+dir /usr/share/locale/af
+dir /usr/share/locale/af/LC_MESSAGES
+obj /usr/share/locale/af/LC_MESSAGES/coreutils.mo 9f04365c356f7a50742724680cf79cae 1780764203
+dir /usr/share/locale/af/LC_TIME
+sym /usr/share/locale/af/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/ar
+dir /usr/share/locale/ar/LC_MESSAGES
+obj /usr/share/locale/ar/LC_MESSAGES/coreutils.mo 53cde16a5e55dc114131233628582934 1780764203
+dir /usr/share/locale/ar/LC_TIME
+sym /usr/share/locale/ar/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/be
+dir /usr/share/locale/be/LC_MESSAGES
+obj /usr/share/locale/be/LC_MESSAGES/coreutils.mo 079f592b8bcab617ee3f3fbab4ab1100 1780764203
+dir /usr/share/locale/be/LC_TIME
+sym /usr/share/locale/be/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/bg
+dir /usr/share/locale/bg/LC_MESSAGES
+obj /usr/share/locale/bg/LC_MESSAGES/coreutils.mo 3ab73cab7e8a4adb911bb47344cd7b2c 1780764203
+dir /usr/share/locale/bg/LC_TIME
+sym /usr/share/locale/bg/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/ca
+dir /usr/share/locale/ca/LC_MESSAGES
+obj /usr/share/locale/ca/LC_MESSAGES/coreutils.mo df49a6c8fdb6a24f0fe5f0862834a66d 1780764203
+dir /usr/share/locale/ca/LC_TIME
+sym /usr/share/locale/ca/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/cs
+dir /usr/share/locale/cs/LC_MESSAGES
+obj /usr/share/locale/cs/LC_MESSAGES/coreutils.mo a9128749848ae0fa11ebc0691b38fb35 1780764203
+dir /usr/share/locale/cs/LC_TIME
+sym /usr/share/locale/cs/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/da
+dir /usr/share/locale/da/LC_MESSAGES
+obj /usr/share/locale/da/LC_MESSAGES/coreutils.mo 1dccbb8be9f20749216892e296001680 1780764203
+dir /usr/share/locale/da/LC_TIME
+sym /usr/share/locale/da/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/de
+dir /usr/share/locale/de/LC_MESSAGES
+obj /usr/share/locale/de/LC_MESSAGES/coreutils.mo 1f918d9b7da1c9006d280693fde74877 1780764203
+dir /usr/share/locale/de/LC_TIME
+sym /usr/share/locale/de/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/el
+dir /usr/share/locale/el/LC_MESSAGES
+obj /usr/share/locale/el/LC_MESSAGES/coreutils.mo e6ea5fb1f18ffc582530efc841b1c8b8 1780764203
+dir /usr/share/locale/el/LC_TIME
+sym /usr/share/locale/el/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/eo
+dir /usr/share/locale/eo/LC_MESSAGES
+obj /usr/share/locale/eo/LC_MESSAGES/coreutils.mo 9ff74fa0c008fd02632de22bf15238be 1780764203
+dir /usr/share/locale/eo/LC_TIME
+sym /usr/share/locale/eo/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/es
+dir /usr/share/locale/es/LC_MESSAGES
+obj /usr/share/locale/es/LC_MESSAGES/coreutils.mo 0f5787a67e48c984378a3b569c96f47a 1780764203
+dir /usr/share/locale/es/LC_TIME
+sym /usr/share/locale/es/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/et
+dir /usr/share/locale/et/LC_MESSAGES
+obj /usr/share/locale/et/LC_MESSAGES/coreutils.mo b2ff5fdabbcb97b4f691b69635cb8b2f 1780764203
+dir /usr/share/locale/et/LC_TIME
+sym /usr/share/locale/et/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/eu
+dir /usr/share/locale/eu/LC_MESSAGES
+obj /usr/share/locale/eu/LC_MESSAGES/coreutils.mo 806eed4c4416fdfadbbeaa7afffee8ea 1780764203
+dir /usr/share/locale/eu/LC_TIME
+sym /usr/share/locale/eu/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/fi
+dir /usr/share/locale/fi/LC_MESSAGES
+obj /usr/share/locale/fi/LC_MESSAGES/coreutils.mo 8404685ed46f244acb096eb26eec483d 1780764203
+dir /usr/share/locale/fi/LC_TIME
+sym /usr/share/locale/fi/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/fr
+dir /usr/share/locale/fr/LC_MESSAGES
+obj /usr/share/locale/fr/LC_MESSAGES/coreutils.mo ac20d286c637c42c7ea3a15ab6795c3e 1780764203
+dir /usr/share/locale/fr/LC_TIME
+sym /usr/share/locale/fr/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/ga
+dir /usr/share/locale/ga/LC_MESSAGES
+obj /usr/share/locale/ga/LC_MESSAGES/coreutils.mo 4b779b5e59305e42398c72d610282fde 1780764203
+dir /usr/share/locale/ga/LC_TIME
+sym /usr/share/locale/ga/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/gl
+dir /usr/share/locale/gl/LC_MESSAGES
+obj /usr/share/locale/gl/LC_MESSAGES/coreutils.mo 9bd68a23070223f8e0b30047eaebdb59 1780764203
+dir /usr/share/locale/gl/LC_TIME
+sym /usr/share/locale/gl/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/hr
+dir /usr/share/locale/hr/LC_MESSAGES
+obj /usr/share/locale/hr/LC_MESSAGES/coreutils.mo 83888f58d3e77667826cc0acec47aae7 1780764203
+dir /usr/share/locale/hr/LC_TIME
+sym /usr/share/locale/hr/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/hu
+dir /usr/share/locale/hu/LC_MESSAGES
+obj /usr/share/locale/hu/LC_MESSAGES/coreutils.mo 326c697611bc42ca87ccea6e66732250 1780764203
+dir /usr/share/locale/hu/LC_TIME
+sym /usr/share/locale/hu/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/ia
+dir /usr/share/locale/ia/LC_MESSAGES
+obj /usr/share/locale/ia/LC_MESSAGES/coreutils.mo a50c00a8649b4a18f36a6a966272ba64 1780764203
+dir /usr/share/locale/ia/LC_TIME
+sym /usr/share/locale/ia/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/id
+dir /usr/share/locale/id/LC_MESSAGES
+obj /usr/share/locale/id/LC_MESSAGES/coreutils.mo ec23c19687041f0fc6f489532506f3ce 1780764203
+dir /usr/share/locale/id/LC_TIME
+sym /usr/share/locale/id/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/it
+dir /usr/share/locale/it/LC_MESSAGES
+obj /usr/share/locale/it/LC_MESSAGES/coreutils.mo 4304e481ddd10e87bec1f179d3863841 1780764203
+dir /usr/share/locale/it/LC_TIME
+sym /usr/share/locale/it/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/ja
+dir /usr/share/locale/ja/LC_MESSAGES
+obj /usr/share/locale/ja/LC_MESSAGES/coreutils.mo 4a0eab4a770140287c1d31314cb493cf 1780764203
+dir /usr/share/locale/ja/LC_TIME
+sym /usr/share/locale/ja/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/ka
+dir /usr/share/locale/ka/LC_MESSAGES
+obj /usr/share/locale/ka/LC_MESSAGES/coreutils.mo a120bbbc580873262aa920a8f0269973 1780764203
+dir /usr/share/locale/ka/LC_TIME
+sym /usr/share/locale/ka/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/kk
+dir /usr/share/locale/kk/LC_MESSAGES
+obj /usr/share/locale/kk/LC_MESSAGES/coreutils.mo 9f41fa105e429cafe098d4ec6672435e 1780764203
+dir /usr/share/locale/kk/LC_TIME
+sym /usr/share/locale/kk/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/ko
+dir /usr/share/locale/ko/LC_MESSAGES
+obj /usr/share/locale/ko/LC_MESSAGES/coreutils.mo 1f6bbc0477b09d35c50c22f36db636e0 1780764203
+dir /usr/share/locale/ko/LC_TIME
+sym /usr/share/locale/ko/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/lg
+dir /usr/share/locale/lg/LC_MESSAGES
+obj /usr/share/locale/lg/LC_MESSAGES/coreutils.mo 2da6271bf6c791bad74cc9ed7fa09963 1780764203
+dir /usr/share/locale/lg/LC_TIME
+sym /usr/share/locale/lg/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/lt
+dir /usr/share/locale/lt/LC_MESSAGES
+obj /usr/share/locale/lt/LC_MESSAGES/coreutils.mo bbfc209d379c1f6415871866a80eea08 1780764203
+dir /usr/share/locale/lt/LC_TIME
+sym /usr/share/locale/lt/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/ms
+dir /usr/share/locale/ms/LC_MESSAGES
+obj /usr/share/locale/ms/LC_MESSAGES/coreutils.mo 70c836f62ed03ca0665bffedef986d05 1780764203
+dir /usr/share/locale/ms/LC_TIME
+sym /usr/share/locale/ms/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/nb
+dir /usr/share/locale/nb/LC_MESSAGES
+obj /usr/share/locale/nb/LC_MESSAGES/coreutils.mo f5ce33480191c74b601fd16cc02a671b 1780764203
+dir /usr/share/locale/nb/LC_TIME
+sym /usr/share/locale/nb/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/nl
+dir /usr/share/locale/nl/LC_MESSAGES
+obj /usr/share/locale/nl/LC_MESSAGES/coreutils.mo 962f137327bd02ab9e7235768eaebcce 1780764203
+dir /usr/share/locale/nl/LC_TIME
+sym /usr/share/locale/nl/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/pl
+dir /usr/share/locale/pl/LC_MESSAGES
+obj /usr/share/locale/pl/LC_MESSAGES/coreutils.mo 990a234f1f601c4865fb36fa22e7ea4f 1780764203
+dir /usr/share/locale/pl/LC_TIME
+sym /usr/share/locale/pl/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/pt
+dir /usr/share/locale/pt/LC_MESSAGES
+obj /usr/share/locale/pt/LC_MESSAGES/coreutils.mo d88d406ef13a5f8249f9c9f7f429a155 1780764203
+dir /usr/share/locale/pt/LC_TIME
+sym /usr/share/locale/pt/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/pt_BR
+dir /usr/share/locale/pt_BR/LC_MESSAGES
+obj /usr/share/locale/pt_BR/LC_MESSAGES/coreutils.mo df475f53108b71d3263a8f4f860a65e7 1780764203
+dir /usr/share/locale/pt_BR/LC_TIME
+sym /usr/share/locale/pt_BR/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/ro
+dir /usr/share/locale/ro/LC_MESSAGES
+obj /usr/share/locale/ro/LC_MESSAGES/coreutils.mo f4677acb65dd447ce9181d0b9754b067 1780764203
+dir /usr/share/locale/ro/LC_TIME
+sym /usr/share/locale/ro/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/ru
+dir /usr/share/locale/ru/LC_MESSAGES
+obj /usr/share/locale/ru/LC_MESSAGES/coreutils.mo 889d478dd4c21f9125410d2646d9c904 1780764203
+dir /usr/share/locale/ru/LC_TIME
+sym /usr/share/locale/ru/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/sk
+dir /usr/share/locale/sk/LC_MESSAGES
+obj /usr/share/locale/sk/LC_MESSAGES/coreutils.mo 03ba73c832d020a7c72045829e599a0e 1780764203
+dir /usr/share/locale/sk/LC_TIME
+sym /usr/share/locale/sk/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/sl
+dir /usr/share/locale/sl/LC_MESSAGES
+obj /usr/share/locale/sl/LC_MESSAGES/coreutils.mo a7cc68ed50ab5653d34ae6fa3d34ee72 1780764203
+dir /usr/share/locale/sl/LC_TIME
+sym /usr/share/locale/sl/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/sr
+dir /usr/share/locale/sr/LC_MESSAGES
+obj /usr/share/locale/sr/LC_MESSAGES/coreutils.mo c0e610fa179e68588b99faa477d15c69 1780764203
+dir /usr/share/locale/sr/LC_TIME
+sym /usr/share/locale/sr/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/sv
+dir /usr/share/locale/sv/LC_MESSAGES
+obj /usr/share/locale/sv/LC_MESSAGES/coreutils.mo 67f213a8ba558d3e442f14dc72c6d7ab 1780764203
+dir /usr/share/locale/sv/LC_TIME
+sym /usr/share/locale/sv/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/ta
+dir /usr/share/locale/ta/LC_MESSAGES
+obj /usr/share/locale/ta/LC_MESSAGES/coreutils.mo 08b1f7a92c2ff68c6328c69d682a9d25 1780764203
+dir /usr/share/locale/ta/LC_TIME
+sym /usr/share/locale/ta/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/tr
+dir /usr/share/locale/tr/LC_MESSAGES
+obj /usr/share/locale/tr/LC_MESSAGES/coreutils.mo f13b8de5cd8821c5d4b51f9cae7c3650 1780764203
+dir /usr/share/locale/tr/LC_TIME
+sym /usr/share/locale/tr/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/uk
+dir /usr/share/locale/uk/LC_MESSAGES
+obj /usr/share/locale/uk/LC_MESSAGES/coreutils.mo f58a5ae3f96fc06e93fe1fd876d00a04 1780764203
+dir /usr/share/locale/uk/LC_TIME
+sym /usr/share/locale/uk/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/vi
+dir /usr/share/locale/vi/LC_MESSAGES
+obj /usr/share/locale/vi/LC_MESSAGES/coreutils.mo 6299071175f82bee12ab5fda255a7ffd 1780764203
+dir /usr/share/locale/vi/LC_TIME
+sym /usr/share/locale/vi/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/zh_CN
+dir /usr/share/locale/zh_CN/LC_MESSAGES
+obj /usr/share/locale/zh_CN/LC_MESSAGES/coreutils.mo c8ab0c9b95589f0eb0137f72fb24042c 1780764203
+dir /usr/share/locale/zh_CN/LC_TIME
+sym /usr/share/locale/zh_CN/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/locale/zh_TW
+dir /usr/share/locale/zh_TW/LC_MESSAGES
+obj /usr/share/locale/zh_TW/LC_MESSAGES/coreutils.mo e3a83378eb25f4315f2731deeaf222a9 1780764203
+dir /usr/share/locale/zh_TW/LC_TIME
+sym /usr/share/locale/zh_TW/LC_TIME/coreutils.mo -> ../LC_MESSAGES/coreutils.mo 1789354075
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/arch.1.bz2 7cddb88928a83ce6886c75a0b2f6f118 1780764204
+obj /usr/share/man/man1/b2sum.1.bz2 ca397028ea142bd073b6acde03474916 1780764204
+obj /usr/share/man/man1/base32.1.bz2 a6ebb5bd5f060e0c00aaa6c12517f74b 1780764204
+obj /usr/share/man/man1/base64.1.bz2 902bc56d6c3448bebe34359226a13136 1780764204
+obj /usr/share/man/man1/basename.1.bz2 54376c1cb5a0ca9e41d859f15bc113a5 1780764204
+obj /usr/share/man/man1/basenc.1.bz2 358aa828b0aa0730538ce577401f1004 1780764204
+obj /usr/share/man/man1/cat.1.bz2 7aa0e9200ed8ec1aef14f30e3acd51c2 1780764204
+obj /usr/share/man/man1/chgrp.1.bz2 e52155b3de3dc1d6d9c9c40ed0e76157 1780764204
+obj /usr/share/man/man1/chmod.1.bz2 f28f89803d77075daa79ebacc816513d 1780764204
+obj /usr/share/man/man1/chown.1.bz2 a133066b98c521e130c8dec3b338a49d 1780764204
+obj /usr/share/man/man1/chroot.1.bz2 556ef8a6dd7e1a516c9da372cfff73e1 1780764204
+obj /usr/share/man/man1/cksum.1.bz2 c89df736be2be858acf31299fa1a7abf 1780764204
+obj /usr/share/man/man1/comm.1.bz2 89c7edd88c79feb937db198eec94a112 1780764204
+obj /usr/share/man/man1/cp.1.bz2 9d3b81d957ac89915e29729b8316cf87 1780764204
+obj /usr/share/man/man1/csplit.1.bz2 560060c16b25e7862fbbd583be513727 1780764204
+obj /usr/share/man/man1/cut.1.bz2 0b4ced7b66191ee5e48138f6fef180db 1780764204
+obj /usr/share/man/man1/date.1.bz2 f7e6d15729e2461af66aca22e7f15293 1780764204
+obj /usr/share/man/man1/dd.1.bz2 e8620c8878f2bab830862f81ec6290c3 1780764204
+obj /usr/share/man/man1/df.1.bz2 3a03cc455aec71b7f5c31407560f0f56 1780764204
+obj /usr/share/man/man1/dir.1.bz2 6d77b71cc2a963df735d6f359a71b7be 1780764204
+obj /usr/share/man/man1/dircolors.1.bz2 de74395361be2e20df96fc3c6aa48a59 1780764204
+obj /usr/share/man/man1/dirname.1.bz2 75790b6101ebbb0d4d7c8723d76a13b8 1780764204
+obj /usr/share/man/man1/du.1.bz2 7c0c3d0356b65d33e3b568394a24104d 1780764204
+obj /usr/share/man/man1/echo.1.bz2 8c0ca85596940de0fab02ba4890478e5 1780764204
+obj /usr/share/man/man1/env.1.bz2 12d6e87ebd2bcd47a3f4c5aa42d2b633 1780764204
+obj /usr/share/man/man1/expand.1.bz2 671b0ab1c536564c81dca75aaa07c642 1780764204
+obj /usr/share/man/man1/expr.1.bz2 b892933ac9a299f7efb62f98336eea43 1780764204
+obj /usr/share/man/man1/factor.1.bz2 0e121fedef5a9aedb5a3a8a003a2a66e 1780764204
+obj /usr/share/man/man1/false.1.bz2 6df9f336a8220c79b6fb190f44112a40 1780764204
+obj /usr/share/man/man1/fmt.1.bz2 d372d790756bc6aaecf927d9eba79d07 1780764204
+obj /usr/share/man/man1/fold.1.bz2 6160a50137b815e0edef02648fdc3ef3 1780764204
+obj /usr/share/man/man1/groups.1.bz2 891bedecab39acc459bccc3c66ebdc6d 1780764204
+obj /usr/share/man/man1/head.1.bz2 bd450d1a31bb014c82dbf2c5f6ac246c 1780764204
+obj /usr/share/man/man1/hostid.1.bz2 28794369f89d72dbb0d75af06d1aa2d0 1780764204
+obj /usr/share/man/man1/id.1.bz2 f3d54877ff6c2d310b040b7fa6e5f24a 1780764204
+obj /usr/share/man/man1/install.1.bz2 9d1b1f5afa8792df9bb31b020620d52c 1780764204
+obj /usr/share/man/man1/join.1.bz2 9ab0990d517ae1f517768493ea70d7f3 1780764204
+obj /usr/share/man/man1/link.1.bz2 6999de38b13ae6899a8963596f4bb517 1780764204
+obj /usr/share/man/man1/ln.1.bz2 d483ebec5dae39dc79f1d0ce145c3dc2 1780764204
+obj /usr/share/man/man1/logname.1.bz2 e88a0c49d1b67aa944c943a1495ca0bc 1780764204
+obj /usr/share/man/man1/ls.1.bz2 b81cbed61bdf4ccdfffef4ed7ffd3108 1780764204
+obj /usr/share/man/man1/md5sum.1.bz2 7d59ee0db602491e527658392cdd1421 1780764204
+obj /usr/share/man/man1/mkdir.1.bz2 ca82936175ecfb5a2c29bea1e2f36e27 1780764204
+obj /usr/share/man/man1/mkfifo.1.bz2 bcff31191ff72f3b346c955c06af7810 1780764204
+obj /usr/share/man/man1/mknod.1.bz2 7168492e12cca0c404a9b6ddd0a96a29 1780764204
+obj /usr/share/man/man1/mktemp.1.bz2 b8f656e5a42df4101084c3ea4bcc146b 1780764204
+obj /usr/share/man/man1/mv.1.bz2 d6f044fc62e2e5383bb5f24019b5e839 1780764204
+obj /usr/share/man/man1/nice.1.bz2 8080d264bd2304ea11b770555c34be11 1780764204
+obj /usr/share/man/man1/nl.1.bz2 610f13bafe4b33d41cfdcd58471deba6 1780764204
+obj /usr/share/man/man1/nohup.1.bz2 635c4c3ac5a2a881bc94ab5916b18070 1780764204
+obj /usr/share/man/man1/nproc.1.bz2 7d07a2cf39c3b83146e5c91fcd6bf515 1780764204
+obj /usr/share/man/man1/numfmt.1.bz2 3a787e6ce18749b7aca211148c2b5905 1780764204
+obj /usr/share/man/man1/od.1.bz2 8ff8afbb22e228f9b2a6bc7834bc9a84 1780764204
+obj /usr/share/man/man1/paste.1.bz2 536831646254c0286fcc2c0eb4b821b1 1780764204
+obj /usr/share/man/man1/pathchk.1.bz2 b9fe2043b6708affddf4903ac484cb39 1780764204
+obj /usr/share/man/man1/pinky.1.bz2 1c21093543eb8b2fd665ab86c6921e61 1780764204
+obj /usr/share/man/man1/pr.1.bz2 2aad2d3814f450431cbaccf6a83d602b 1780764204
+obj /usr/share/man/man1/printenv.1.bz2 98cdf8c5daf357aad529a4a423ec262b 1780764204
+obj /usr/share/man/man1/printf.1.bz2 900b63447f76361db36e15a90db18609 1780764204
+obj /usr/share/man/man1/ptx.1.bz2 d004ae223f67193ec1da0febafa861ad 1780764204
+obj /usr/share/man/man1/pwd.1.bz2 f10d8b064a505d729f0ef9357f655eb7 1780764204
+obj /usr/share/man/man1/readlink.1.bz2 1164861e80edb9ed04e7fd7f494e8cc5 1780764204
+obj /usr/share/man/man1/realpath.1.bz2 5db01470796de311ade88acb7825814b 1780764204
+obj /usr/share/man/man1/rm.1.bz2 24a25ac4da393f3c252d16394a635fba 1780764204
+obj /usr/share/man/man1/rmdir.1.bz2 46306744c2ea4d57be06348382a1d1db 1780764204
+obj /usr/share/man/man1/seq.1.bz2 429b84519b3ff72c1320150549698024 1780764204
+obj /usr/share/man/man1/sha1sum.1.bz2 131b1336edfe3c9a372b7cd2c8a1a6aa 1780764204
+obj /usr/share/man/man1/sha224sum.1.bz2 3911408edd6de326c8d31cdeadc3aa05 1780764204
+obj /usr/share/man/man1/sha256sum.1.bz2 ad3f48de02eae3b4aab395b9001160ee 1780764204
+obj /usr/share/man/man1/sha384sum.1.bz2 4cfbbec869cc392792704fba2c8eb8a4 1780764204
+obj /usr/share/man/man1/sha512sum.1.bz2 4bdc4f2d2be9a24b4c236784aa800e75 1780764204
+obj /usr/share/man/man1/shred.1.bz2 bd43f3cebab393fd5f20d2801e469d89 1780764204
+obj /usr/share/man/man1/shuf.1.bz2 580a793dd21d2318119e865610d7fea4 1780764204
+obj /usr/share/man/man1/sleep.1.bz2 e2abcc8a965798612e3b5705ca0e8faf 1780764204
+obj /usr/share/man/man1/sort.1.bz2 f1db138039d5a98dc51f807938521abb 1780764204
+obj /usr/share/man/man1/split.1.bz2 84407df60e23c5a4b344328d8cbefab6 1780764204
+obj /usr/share/man/man1/stat.1.bz2 cf1ca5ab219b5db6c271eb4ccafa33e4 1780764204
+obj /usr/share/man/man1/stdbuf.1.bz2 8d4b70a0a6d807469458ab861e39b684 1780764204
+obj /usr/share/man/man1/stty.1.bz2 fc80aaa93b0b99d1703f7ef605f49ee0 1780764204
+obj /usr/share/man/man1/sum.1.bz2 fce0881a5cb04678fb659401a48ad284 1780764204
+obj /usr/share/man/man1/sync.1.bz2 638c0b8539fc113b1813866138d07dbf 1780764204
+obj /usr/share/man/man1/tac.1.bz2 59d2e434eb352d3b2e110344a29745f7 1780764204
+obj /usr/share/man/man1/tail.1.bz2 09206ac50f040fb5740d4893fdd77407 1780764204
+obj /usr/share/man/man1/tee.1.bz2 7bd853b01dfa51d27f331e4b067023fb 1780764204
+obj /usr/share/man/man1/test.1.bz2 b5f0dafce004594637007f80bfe4e1b6 1780764204
+obj /usr/share/man/man1/timeout.1.bz2 36266099ae692385d7446bf4d1f712f8 1780764204
+obj /usr/share/man/man1/touch.1.bz2 38e7347a4953c40564daa66f3f7440a3 1780764204
+obj /usr/share/man/man1/tr.1.bz2 a262b3bacb3756db28455e09ae6e26e3 1780764204
+obj /usr/share/man/man1/true.1.bz2 4bde707524e1edb8a7745c76091d0626 1780764204
+obj /usr/share/man/man1/truncate.1.bz2 142305ba290400b9b92a2041e4e6fad6 1780764204
+obj /usr/share/man/man1/tsort.1.bz2 a0b44d81d12633dd2680a822fb919c84 1780764204
+obj /usr/share/man/man1/tty.1.bz2 46c6ff84525c6f30dab1651388d9f457 1780764204
+obj /usr/share/man/man1/uname.1.bz2 0ce16d5f392bc4fc677ff7fbe5972186 1780764204
+obj /usr/share/man/man1/unexpand.1.bz2 6d18081a88737d62c274cd51042ccee4 1780764204
+obj /usr/share/man/man1/uniq.1.bz2 e8ee5d7172cc05fe3664f8801763e428 1780764204
+obj /usr/share/man/man1/unlink.1.bz2 ac03fc1af49958fef81d6cecc266aa0b 1780764204
+obj /usr/share/man/man1/users.1.bz2 a78e090ec4398c692e5b72b3053ef83b 1780764204
+obj /usr/share/man/man1/vdir.1.bz2 7101aae24abeff31d94876a917196b7d 1780764204
+obj /usr/share/man/man1/wc.1.bz2 8966750f21ffb522e0c5aacb89f20ef5 1780764204
+obj /usr/share/man/man1/who.1.bz2 82fab17deb20db4b8d6cb87335bd2b08 1780764204
+obj /usr/share/man/man1/whoami.1.bz2 3936e8410cfc666749874402067e718e 1780764204
+obj /usr/share/man/man1/yes.1.bz2 dfca18e1ca3ef2cae37f96644217ccd4 1780764204
+dir /etc
+obj /etc/DIR_COLORS 7512d321f371c83895b63062d1ae2434 1780764204

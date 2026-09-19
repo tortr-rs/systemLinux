@@ -1,0 +1,7 @@
+
+pkgdatadir=/usr/share/mobile-broadband-provider-info
+database=${pkgdatadir}/serviceproviders.xml
+
+Name: mobile-broadband-provider-info
+Description: Mobile Broadband Service Provider Information Database
+Version: 20240407

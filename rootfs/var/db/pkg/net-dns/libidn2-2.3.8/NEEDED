@@ -1,0 +1,2 @@
+/usr/bin/idn2 libidn2.so.0,libunistring.so.5,libc.so.6
+/usr/lib64/libidn2.so.0.4.0 libunistring.so.5,libc.so.6

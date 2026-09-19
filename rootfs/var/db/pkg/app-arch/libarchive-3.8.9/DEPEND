@@ -1,0 +1,1 @@
+virtual/zlib:0/1=[abi_x86_64(-)] virtual/acl:0/0=[abi_x86_64(-)] app-arch/bzip2:0/1=[abi_x86_64(-)] dev-libs/libxml2:2/16=[abi_x86_64(-)] virtual/libiconv:0/0=[abi_x86_64(-)] dev-libs/openssl:0/3=[abi_x86_64(-)] >=app-arch/xz-utils-5.2.5-r1:0/0=[abi_x86_64(-)] app-arch/zstd:0/1=[abi_x86_64(-)] virtual/os-headers sys-fs/e2fsprogs[abi_x86_64(-)]

@@ -1,0 +1,20 @@
+dir /usr
+dir /usr/lib
+dir /usr/lib/python3.14
+dir /usr/lib/python3.14/site-packages
+dir /usr/lib/python3.14/site-packages/jaraco
+dir /usr/lib/python3.14/site-packages/jaraco/functools
+obj /usr/lib/python3.14/site-packages/jaraco/functools/__init__.py ad922071e3b2ff1760ac64f02ff845a5 1788715603
+obj /usr/lib/python3.14/site-packages/jaraco/functools/__init__.pyi 9488cb912c2c80c2060a9be751b1bf95 1788715603
+dir /usr/lib/python3.14/site-packages/jaraco/functools/__pycache__
+obj /usr/lib/python3.14/site-packages/jaraco/functools/__pycache__/__init__.cpython-314.opt-1.pyc 5694caf72f1f03a802df3bff0bed2fcd 1788715603
+obj /usr/lib/python3.14/site-packages/jaraco/functools/__pycache__/__init__.cpython-314.opt-2.pyc 7d69852307f1a9b01655b7f25cc37568 1788715603
+obj /usr/lib/python3.14/site-packages/jaraco/functools/__pycache__/__init__.cpython-314.pyc 36ac1356ecaeafa5dc5824ce624e114a 1788715603
+obj /usr/lib/python3.14/site-packages/jaraco/functools/py.typed d41d8cd98f00b204e9800998ecf8427e 1788715603
+dir /usr/lib/python3.14/site-packages/jaraco.functools-4.6.0.dist-info
+obj /usr/lib/python3.14/site-packages/jaraco.functools-4.6.0.dist-info/METADATA d4db8fc78a9057bfdcf3d42f0498ae2f 1788715603
+obj /usr/lib/python3.14/site-packages/jaraco.functools-4.6.0.dist-info/WHEEL a5ebf9ab2d4e1b8f00d2a5deeaf4c6e4 1788715603
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/jaraco-functools-4.6.0
+obj /usr/share/doc/jaraco-functools-4.6.0/README.rst.bz2 0914e0bae2ec2feb4f30cddeb3bfc522 1788715604

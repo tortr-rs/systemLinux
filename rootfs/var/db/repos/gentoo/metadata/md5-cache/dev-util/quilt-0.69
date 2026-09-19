@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare setup
+DESCRIPTION=quilt patch manager
+EAPI=8
+HOMEPAGE=https://savannah.nongnu.org/projects/quilt
+INHERIT=elisp-common shell-completion
+IUSE=emacs graphviz
+KEYWORDS=amd64 arm arm64 ~mips ppc ppc64 ~riscv ~sparc x86 ~x64-solaris
+LICENSE=GPL-2 GPL-1+
+RDEPEND=sys-apps/ed dev-util/diffstat graphviz? ( media-gfx/graphviz ) elibc_Darwin? ( app-misc/getopt ) elibc_SunOS? ( app-misc/getopt ) sys-apps/coreutils app-arch/zstd:=
+RESTRICT=test
+SLOT=0
+SRC_URI=mirror://nongnu/quilt/quilt-0.69.tar.gz
+_eclasses_=elisp-common	af0b23d31469d538d402c81481e6343e	shell-completion	63a62de3ca49c798ee6e89f190e45d0e	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=55db9573b786423b06eed0d54ebb9f20

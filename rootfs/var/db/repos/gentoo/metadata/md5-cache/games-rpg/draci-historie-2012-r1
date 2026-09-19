@@ -1,0 +1,14 @@
+BDEPEND=app-arch/unzip
+DEFINED_PHASES=install unpack
+DESCRIPTION=Bert the little dragon searches for his father
+EAPI=8
+HOMEPAGE=https://www.ucw.cz/draci-historie/index-en.html
+INHERIT=desktop wrapper
+IUSE=l10n_cs l10n_de +l10n_en l10n_pl
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=games-engines/scummvm
+SLOT=0
+SRC_URI=l10n_cs? ( https://www.ucw.cz/draci-historie/binary/dh-cz-2012.zip ) l10n_de? ( https://www.ucw.cz/draci-historie/binary/dh-de-2012.zip ) l10n_en? ( https://www.ucw.cz/draci-historie/binary/dh-en-2012.zip ) l10n_pl? ( https://www.ucw.cz/draci-historie/binary/dh-pl-2012.zip ) !l10n_cs? ( !l10n_de? ( !l10n_en? ( !l10n_pl? ( https://www.ucw.cz/draci-historie/binary/dh-en-2012.zip ) ) ) ) https://distfiles.gentoo.org/pub/dev/ionen@gentoo.org/draci-historie.png
+_eclasses_=desktop	e447b5f77146d69797e9f03ff177f3f1	wrapper	ebaa3beeb43f7e533872b6c37168c7ad
+_md5_=ace5e0b730bcea16fc112beeded3b66f

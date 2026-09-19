@@ -1,0 +1,11 @@
+DEFINED_PHASES=install
+DEPEND=mail-filter/libmilter:=
+DESCRIPTION=sendmail milter for amavisd-new
+EAPI=8
+HOMEPAGE=https://github.com/prehor/amavisd-milter/
+KEYWORDS=amd64 x86
+LICENSE=BSD
+RDEPEND=mail-filter/libmilter:= mail-filter/amavisd-new
+SLOT=0
+SRC_URI=https://github.com/prehor/amavisd-milter/releases/download/1.7.2/amavisd-milter-1.7.2.tar.gz
+_md5_=c019ecfc21b6f924c62df454d711a840

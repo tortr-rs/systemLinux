@@ -1,0 +1,50 @@
+dir /usr
+dir /usr/lib
+dir /usr/lib/python3.14
+dir /usr/lib/python3.14/site-packages
+dir /usr/lib/python3.14/site-packages/platformdirs
+obj /usr/lib/python3.14/site-packages/platformdirs/__init__.py 7b4f064695efde5c637906ae5ed3dc93 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/__main__.py 65f5c8f0bfdef1156370cd30d2fa723c 1789319929
+dir /usr/lib/python3.14/site-packages/platformdirs/__pycache__
+obj /usr/lib/python3.14/site-packages/platformdirs/__pycache__/__init__.cpython-314.opt-1.pyc d5ddeb15a12add30e6e0f0aeaae4de1c 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/__pycache__/__init__.cpython-314.opt-2.pyc e2717ad515dba49f8595bb441eb3a568 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/__pycache__/__init__.cpython-314.pyc d5ddeb15a12add30e6e0f0aeaae4de1c 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/__pycache__/__main__.cpython-314.opt-1.pyc 82746ff085f25537bd3c8c2c351351fd 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/__pycache__/__main__.cpython-314.opt-2.pyc 2f475d21d6eb09206b509cf7bad70133 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/__pycache__/__main__.cpython-314.pyc 82746ff085f25537bd3c8c2c351351fd 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/__pycache__/_xdg.cpython-314.opt-1.pyc 5f75bf6b12bac923f4749fcf0f4fa604 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/__pycache__/_xdg.cpython-314.opt-2.pyc 89937dcc9a5902f4f0cf0c8df20ea9d9 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/__pycache__/_xdg.cpython-314.pyc 5f75bf6b12bac923f4749fcf0f4fa604 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/__pycache__/android.cpython-314.opt-1.pyc 30981b32eeb1668634c0bb7acf076f41 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/__pycache__/android.cpython-314.opt-2.pyc f18905fd37b462137c7b50d9dccf3458 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/__pycache__/android.cpython-314.pyc 30981b32eeb1668634c0bb7acf076f41 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/__pycache__/api.cpython-314.opt-1.pyc 8993ea740c77726eaca9d0abe191cc68 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/__pycache__/api.cpython-314.opt-2.pyc a1301fa5008a218f4ce438361a91cd54 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/__pycache__/api.cpython-314.pyc 8993ea740c77726eaca9d0abe191cc68 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/__pycache__/macos.cpython-314.opt-1.pyc c54bd7439900f99e2a5928a8ace6af6c 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/__pycache__/macos.cpython-314.opt-2.pyc 2cae16fa127e70798a05e6e23f45ac92 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/__pycache__/macos.cpython-314.pyc c54bd7439900f99e2a5928a8ace6af6c 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/__pycache__/unix.cpython-314.opt-1.pyc acee0f5fb4a6ef234ec8cb04ca974e44 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/__pycache__/unix.cpython-314.opt-2.pyc c609448331ed56101faa2f6b19dd3fcd 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/__pycache__/unix.cpython-314.pyc acee0f5fb4a6ef234ec8cb04ca974e44 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/__pycache__/version.cpython-314.opt-1.pyc e5673fa85039a86e8f2f7a65b45bccc6 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/__pycache__/version.cpython-314.opt-2.pyc e5673fa85039a86e8f2f7a65b45bccc6 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/__pycache__/version.cpython-314.pyc e5673fa85039a86e8f2f7a65b45bccc6 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/__pycache__/windows.cpython-314.opt-1.pyc 41ed397927b55542a86bb1fd5571803b 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/__pycache__/windows.cpython-314.opt-2.pyc e1423470c23041a8d54899f3a56bc1ea 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/__pycache__/windows.cpython-314.pyc 41ed397927b55542a86bb1fd5571803b 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/_xdg.py 0a08985362d6167d826501b1d1233807 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/android.py 438d77da3cd27df3c5c8eec5fe9925b1 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/api.py 2c7345a59ff04ca8fb77993e9619aada 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/macos.py e15dda54afce2c36b855d932f7a14e82 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/py.typed d41d8cd98f00b204e9800998ecf8427e 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/unix.py ffc829010f0e6fc5b4774da87784aa32 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/version.py 89af255ae31c002353b04694ea2239a0 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs/windows.py 837ab72b6e54062974e2c7bf464945fb 1789319929
+dir /usr/lib/python3.14/site-packages/platformdirs-4.11.3.dist-info
+obj /usr/lib/python3.14/site-packages/platformdirs-4.11.3.dist-info/METADATA 0b06eeb7a6b599e06c8bced128ecd11b 1789319929
+obj /usr/lib/python3.14/site-packages/platformdirs-4.11.3.dist-info/WHEEL a5ebf9ab2d4e1b8f00d2a5deeaf4c6e4 1789319929
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/platformdirs-4.11.3
+obj /usr/share/doc/platformdirs-4.11.3/README.md.bz2 bee82faec99c238f6dc5fcddcb5c3906 1789319930

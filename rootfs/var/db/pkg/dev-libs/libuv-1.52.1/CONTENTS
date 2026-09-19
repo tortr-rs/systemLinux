@@ -1,0 +1,21 @@
+dir /usr
+dir /usr/include
+dir /usr/include/uv
+obj /usr/include/uv/errno.h 40625fb0a8692969e4e8e4b5284bf23c 1780248011
+obj /usr/include/uv/linux.h 69ea88f656a7d3063fc0dde309f22ffe 1780248011
+obj /usr/include/uv/threadpool.h d43062c02ff56f95a0afbdfdde76c2e2 1780248011
+obj /usr/include/uv/unix.h 94df0bd69d8a949f16f1d1d76c5daed9 1780248011
+obj /usr/include/uv/version.h b32983558f968fe32ae7614cc31a139a 1780248011
+obj /usr/include/uv.h 1588cfde346582f3103319213f823b49 1780248011
+dir /usr/lib64
+obj /usr/lib64/libuv.so.1.0.0 584f9e74d0be858a6d3493223f25cf68 1780248012
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/libuv.pc eb713bc587c47c00082efddfe27e9658 1780248011
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/libuv-1.52.1
+obj /usr/share/doc/libuv-1.52.1/AUTHORS.bz2 4ff71c47426fb671e317b98a948e6e87 1780248011
+obj /usr/share/doc/libuv-1.52.1/ChangeLog.bz2 4052f8e33b77e4e0f322375e3449629b 1780248011
+obj /usr/share/doc/libuv-1.52.1/README.md.bz2 6128ca663d035e4f8cd1ada76115e99a 1780248011
+sym /usr/lib64/libuv.so.1 -> libuv.so.1.0.0 1789353945
+sym /usr/lib64/libuv.so -> libuv.so.1.0.0 1789353945

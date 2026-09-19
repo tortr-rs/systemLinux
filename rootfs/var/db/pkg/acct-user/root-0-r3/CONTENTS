@@ -1,0 +1,6 @@
+dir /usr
+dir /usr/lib
+dir /usr/lib/sysusers.d
+obj /usr/lib/sysusers.d/acct-user-root.conf 879a65cd92d73fc083c7d5af412a8019 1711315986
+dir /root
+obj /root/.keep_acct-user_root-0 d41d8cd98f00b204e9800998ecf8427e 1711315986

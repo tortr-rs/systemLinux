@@ -1,0 +1,41 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/gzexe 9996e1101105531963dd526656cb38e4 1748193274
+obj /usr/bin/zcmp aa27aaa6fb94a328e1595254be5ed3c9 1748193274
+obj /usr/bin/zdiff 7934fc6a91c0b9ba77e5c8a24bcdc5be 1748193274
+obj /usr/bin/zegrep 00a56ed99986d72fd5967de74d69470c 1748193274
+obj /usr/bin/zfgrep 997a6cfb1a2b3f88160ffa320d29d735 1748193274
+obj /usr/bin/zforce 352bb112a09cb1bc5141a7eccf27aeb6 1748193274
+obj /usr/bin/zgrep 0431e03a134fa41fd5a5094383e2d462 1748193274
+obj /usr/bin/zless e22ba401d85fa65f502290e14304efdd 1748193274
+obj /usr/bin/zmore dedc61d78bca6c409dc41db6f865569b 1748193274
+obj /usr/bin/znew a13a2884674eff834c661558c100b35c 1748193274
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/gzip-1.14
+obj /usr/share/doc/gzip-1.14/AUTHORS c5dafa47bec6b3bdf6cbbf53174b195b 1748193275
+obj /usr/share/doc/gzip-1.14/ChangeLog.bz2 b8d7ef58505ce68646acb2d3a7a93974 1748193275
+obj /usr/share/doc/gzip-1.14/NEWS.bz2 3678d16846ee39c7249dc178e8dd6d56 1748193275
+obj /usr/share/doc/gzip-1.14/README.bz2 0fb582fc530b2f9280ed8d58d72dec1e 1748193274
+obj /usr/share/doc/gzip-1.14/THANKS.bz2 df4d96364737ed059c5bd610fe159d33 1748193275
+obj /usr/share/doc/gzip-1.14/TODO.bz2 ee85e6e58d5807e47065ea077a9b9b07 1748193275
+dir /usr/share/doc/gzip-1.14/txt
+obj /usr/share/doc/gzip-1.14/txt/algorithm.doc.bz2 cb39059acac264579c1168969711d4cf 1748193275
+obj /usr/share/doc/gzip-1.14/txt/gzip.doc.bz2 2f9b1a848b3fea62cd9b558bdfcf11e9 1748193275
+dir /usr/share/info
+obj /usr/share/info/gzip.info.bz2 8a99a0cd6a672d762254ca7fac4900a2 1748193274
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/gzexe.1.bz2 d8e8714c970850fcb764ee086116235d 1748193274
+obj /usr/share/man/man1/gzip-reference.1.bz2 95a6e2d403ceccde56e9134025ecd5cf 1748193274
+obj /usr/share/man/man1/zcmp.1 1420f6a43af2ee86d401a4c7b042bea7 1748193274
+obj /usr/share/man/man1/zdiff.1.bz2 5b20d19f84672650c4c3566cc2739652 1748193274
+obj /usr/share/man/man1/zforce.1.bz2 73cffe81e8e1ed03fcb4ee81a6c8e8ba 1748193274
+obj /usr/share/man/man1/zgrep.1.bz2 ab1bdd3cd252f2a9ce824136c45f0277 1748193274
+obj /usr/share/man/man1/zless.1.bz2 d2d114a068876c55d9e4e4942150649b 1748193274
+obj /usr/share/man/man1/zmore.1.bz2 fe380bf5b3a5c2ac721810cdc5eaa38a 1748193274
+obj /usr/share/man/man1/znew.1.bz2 e24778fbb3e1bdeddf9f45f3e95ad18a 1748193274
+dir /bin
+obj /bin/gunzip-reference 60591870edc35698e34276c8a0a0a115 1748193274
+obj /bin/gzip-reference faaf84adab70f9ce130b471f1fb9e1b2 1748193275
+obj /bin/zcat-reference 600ebafbfbae52c2e276c039e75f3e55 1748193274

@@ -1,0 +1,29 @@
+dir /usr
+dir /usr/src
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/pycairo-1.29.1
+obj /usr/share/doc/pycairo-1.29.1/README.rst.bz2 f3facefae6dce8ab71a41c55cdc247d9 1788694536
+obj /usr/share/doc/pycairo-1.29.1/NEWS.bz2 d013c72053a6257c2ce16603fab70053 1788694536
+dir /usr/lib64
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/py3cairo.pc 6ff99f5e23fb928e1f767c867bef3689 1788694533
+dir /usr/include
+dir /usr/include/pycairo
+obj /usr/include/pycairo/py3cairo.h 99cd68af82f4f72458fe415204e34f8c 1786091044
+dir /usr/lib
+dir /usr/lib/python3.14
+dir /usr/lib/python3.14/site-packages
+dir /usr/lib/python3.14/site-packages/cairo
+obj /usr/lib/python3.14/site-packages/cairo/__init__.pyi 0c4f41131ed19f48b42631a1bc5b5e60 1786091044
+dir /usr/lib/python3.14/site-packages/cairo/include
+obj /usr/lib/python3.14/site-packages/cairo/include/py3cairo.h 99cd68af82f4f72458fe415204e34f8c 1786091044
+obj /usr/lib/python3.14/site-packages/cairo/__init__.py 74576b5bbb4629822b31786e144805bc 1786091044
+obj /usr/lib/python3.14/site-packages/cairo/py.typed d41d8cd98f00b204e9800998ecf8427e 1786091044
+dir /usr/lib/python3.14/site-packages/cairo/__pycache__
+obj /usr/lib/python3.14/site-packages/cairo/__pycache__/__init__.cpython-314.opt-1.pyc ee67eb65183f20e71d7d89789516669a 1788694535
+obj /usr/lib/python3.14/site-packages/cairo/__pycache__/__init__.cpython-314.opt-2.pyc bc9c83957c511f2204d7d43f56b9a3ff 1788694535
+obj /usr/lib/python3.14/site-packages/cairo/__pycache__/__init__.cpython-314.pyc ee67eb65183f20e71d7d89789516669a 1788694535
+obj /usr/lib/python3.14/site-packages/cairo/_cairo.cpython-314-x86_64-linux-gnu.so f75d7078cd1b20cf600d4a7e00374c82 1788694537
+dir /usr/lib/python3.14/site-packages/pycairo-1.29.1.dist-info
+obj /usr/lib/python3.14/site-packages/pycairo-1.29.1.dist-info/METADATA 69a890da4f75d38d7ed6f5050c196eab 1788694533

@@ -1,0 +1,16 @@
+BDEPEND=virtual/pkgconfig test? ( llvm_slot_20? ( llvm-core/clang:20= llvm-core/lld:20= ) llvm_slot_21? ( llvm-core/clang:21= llvm-core/lld:21= ) ) || ( >=dev-lang/rust-bin-1.92:* >=dev-lang/rust-1.92:* ) >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install setup test unpack
+DEPEND=app-arch/zstd:=
+DESCRIPTION=A very fast linker for Linux
+EAPI=8
+HOMEPAGE=https://github.com/davidlattimore/wild
+INHERIT=cargo llvm-r2 unpacker git-r3
+IUSE=lto test debug +llvm_slot_21 llvm_slot_20
+LICENSE=|| ( Apache-2.0 MIT ) Apache-2.0 BSD-2 BSD ISC MIT MPL-2.0 Unicode-3.0 ZLIB
+PROPERTIES=live
+RDEPEND=app-arch/zstd:=
+REQUIRED_USE=^^ ( llvm_slot_20 llvm_slot_21 )
+RESTRICT=!test? ( test )
+SLOT=0
+_eclasses_=cargo	bff30f59ca59b09857b787ac644b2e4c	eapi9-pipestatus	d2c134036ac31c3085aebc9147f572bd	flag-o-matic	fd3558f73f6503093adee69adf41020d	git-r3	e6c2f983e006e805160436c75a0c1562	llvm-r2	56f5637f85225a4b5312d9055a7727d8	llvm-utils	e7edb4086e31c8537574b263d899f826	multilib	fc812e8eb2170022c28272d80a1f9e77	multiprocessing	45d0620f25c2f063ad6276ecd9ed9399	rust	71b6825bd86e342e1540c76cc6fe864b	rust-toolchain	76468983281b0a7fc167ca224f84ecfd	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5	unpacker	a89c769f7dcf68bd2a6d23da9ede2ad2
+_md5_=64bed0f5f96a31722c8aa3c706e15771

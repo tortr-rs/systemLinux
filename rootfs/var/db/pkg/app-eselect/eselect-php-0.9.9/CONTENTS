@@ -1,0 +1,5 @@
+dir /usr
+dir /usr/share
+dir /usr/share/eselect
+dir /usr/share/eselect/modules
+obj /usr/share/eselect/modules/php.eselect 9a4384510b8dd2bb61e7cd40e28f1979 1789851212

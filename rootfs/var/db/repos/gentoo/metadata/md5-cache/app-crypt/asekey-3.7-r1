@@ -1,0 +1,14 @@
+BDEPEND=virtual/pkgconfig virtual/pkgconfig
+DEFINED_PHASES=configure postinst postrm prepare
+DEPEND=sys-apps/pcsc-lite[udev] virtual/libusb:0
+DESCRIPTION=ASEKey USB SIM Card Reader
+EAPI=8
+HOMEPAGE=https://wiki.gentoo.org/wiki/No_homepage
+INHERIT=udev
+KEYWORDS=~amd64 ~riscv ~x86
+LICENSE=BSD LGPL-2.1
+RDEPEND=sys-apps/pcsc-lite[udev] virtual/libusb:0
+SLOT=0
+SRC_URI=https://dev.gentoo.org/~sam/distfiles/app-crypt/asekey/asekey-3.7.tar.bz2
+_eclasses_=toolchain-funcs	58a918e3a42d0156f010dcfd43725be5	udev	1a23882bb73bc31c64a6f00a5e515f34
+_md5_=9728f03f51f83a1cb9a3d1dff0fde963

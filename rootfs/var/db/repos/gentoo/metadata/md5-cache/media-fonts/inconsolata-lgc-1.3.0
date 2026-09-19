@@ -1,0 +1,13 @@
+BDEPEND=media-gfx/fontforge X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DEFINED_PHASES=install postinst postrm setup
+DESCRIPTION=Modified version of Inconsolata Hellenic adding the Cyrillic alphabet
+EAPI=7
+HOMEPAGE=https://github.com/MihailJP/Inconsolata-LGC
+INHERIT=font
+IUSE=X
+KEYWORDS=~amd64 ~loong ~riscv
+LICENSE=OFL-1.1
+SLOT=0
+SRC_URI=https://github.com/MihailJP/Inconsolata-LGC/archive/LGC-1.3.0.tar.gz -> inconsolata-lgc-1.3.0.tar.gz
+_eclasses_=font	6d0c60c855c05ae2ba808d300440ded2
+_md5_=e1fee73acd9471d108e31650041ec5ec

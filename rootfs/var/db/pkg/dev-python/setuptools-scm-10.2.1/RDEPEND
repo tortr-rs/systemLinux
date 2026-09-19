@@ -1,0 +1,1 @@
+dev-python/packaging[python_targets_python3_14(-)] >=dev-python/setuptools-64[python_targets_python3_14(-)] =dev-python/vcs-versioning-2*[python_targets_python3_14(-)] >=dev-python/vcs-versioning-2.2[python_targets_python3_14(-)] dev-lang/python:3.14

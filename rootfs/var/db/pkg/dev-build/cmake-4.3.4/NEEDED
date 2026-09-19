@@ -1,0 +1,4 @@
+/usr/bin/cpack libcurl.so.4,libexpat.so.1,libjsoncpp.so.27,libarchive.so.13,librhash.so.1,libuv.so.1,libz.so.1,libstdc++.so.6,libm.so.6,libgcc_s.so.1,libc.so.6
+/usr/bin/ccmake libform.so.6,libncurses.so.6,libtinfo.so.6,libcurl.so.4,libexpat.so.1,libjsoncpp.so.27,libarchive.so.13,librhash.so.1,libuv.so.1,libz.so.1,libstdc++.so.6,libm.so.6,libgcc_s.so.1,libc.so.6
+/usr/bin/cmake libcurl.so.4,libexpat.so.1,libjsoncpp.so.27,libarchive.so.13,librhash.so.1,libuv.so.1,libz.so.1,libstdc++.so.6,libm.so.6,libgcc_s.so.1,libc.so.6
+/usr/bin/ctest libcurl.so.4,libexpat.so.1,libjsoncpp.so.27,libarchive.so.13,librhash.so.1,libuv.so.1,libz.so.1,libstdc++.so.6,libm.so.6,libgcc_s.so.1,libc.so.6

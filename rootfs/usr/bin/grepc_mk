@@ -1,0 +1,63 @@
+#!/bin/bash
+#
+# Copyright, the authors of the Linux man-pages project
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+set -Eefuo pipefail;
+
+
+# Defaults:
+t='no';
+t_r='no';
+t_v='no';
+
+
+grepc_err()
+{
+	>&2 printf '%s\n' "$(basename "$0"): error: $*";
+	exit 1;
+}
+
+
+while getopts "t:" opt; do
+	case "$opt" in
+	t)
+		case "$OPTARG" in
+		r)	t_r='yes';	;;&
+		v)	t_v='yes';	;;&
+		[rv])
+			t='yes';
+			;;
+		*)
+			grepc_err "-$opt: $OPTARG: Unknown argument.";
+			;;
+		esac;
+		;;
+	\? | *)
+		exit 1;
+		;;
+	esac;
+done;
+shift $((OPTIND-1));
+
+if test $# -lt 1; then
+	grepc_err "Missing identifier.";
+fi;
+identifier="$1";
+shift;
+
+if test $# -gt 0; then
+	grepc_err "$1: Unexpected argument.";
+fi;
+
+if test "$t" = 'no'; then
+	t_v='yes';
+fi;
+
+
+grepc_mk_r()  { echo '(?s)^(\$\()?'"$1"'\)?\s*:[^=].*?(?<!\\)$(?:(?!^[^\t]).)*'; }
+grepc_mk_v()  { echo '(?s)^'"$1"'\s*[:?+]*=.*?(?<!\\)$'; }
+
+
+if test "$t_r" = yes;  then grepc_mk_r "$identifier";  fi;
+if test "$t_v" = yes;  then grepc_mk_v "$identifier";  fi;

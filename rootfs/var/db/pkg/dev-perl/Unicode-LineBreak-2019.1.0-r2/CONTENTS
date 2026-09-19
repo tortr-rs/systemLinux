@@ -1,0 +1,36 @@
+dir /usr
+dir /usr/lib64
+dir /usr/lib64/perl5
+dir /usr/lib64/perl5/vendor_perl
+dir /usr/lib64/perl5/vendor_perl/5.42
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/POD2
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/POD2/JA
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/POD2/JA/Text
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/POD2/JA/Text/LineFold.pod 3b417eea49a36fcfdcb7de5274eaba2f 1771175833
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/POD2/JA/Unicode
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/POD2/JA/Unicode/GCString.pod bcb38ac1ee0d2d7e98e3cb28c00a2365 1771175833
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/POD2/JA/Unicode/LineBreak.pod 4fbeb7a3c65683ac4aea6ac48b359a6e 1771175833
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/Text
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/Text/LineFold.pm e098b90588fd74176937905d9d7ff8a1 1771175833
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/Unicode
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/Unicode/GCString.pm c9fff780cb0cb1c9e8bf15f0561d4b91 1771175833
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/Unicode/GCString.pod c66446dab893d192d4c5a8ccb93468df 1771175833
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/Unicode/LineBreak
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/Unicode/LineBreak/Constants.pm 31d8cea61ca8ad4b84828e0ec2faae10 1771175833
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/Unicode/LineBreak/Defaults.pm.sample 095da6e8e76dced1b5d227be1385942a 1771175833
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/Unicode/LineBreak.pm 87ef8f83e88097d197b8915202bd1e74 1771175833
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/Unicode/LineBreak.pod 1f960811db86b7f37717bf7ce1af0db5 1771175833
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Unicode
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Unicode/LineBreak
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Unicode/LineBreak/.packlist abce9cdd0d22dd2d3a098448e3ee8a32 1771175833
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Unicode/LineBreak/LineBreak.so 06ff9e76d2886339ea7688a13ba109df 1771175834
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/sombok
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/sombok/extralibs.ld 68b329da9893e34099c7d8ad5cb9c940 1771175832
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/Unicode-LineBreak-2019.1.0-r2
+obj /usr/share/doc/Unicode-LineBreak-2019.1.0-r2/Changes.REL1.bz2 3ab997f855cab33e646bd7434633c3f1 1771175833
+obj /usr/share/doc/Unicode-LineBreak-2019.1.0-r2/Changes.bz2 9935f9a1394940bda32c68875b12d753 1771175833
+obj /usr/share/doc/Unicode-LineBreak-2019.1.0-r2/README.bz2 5ad73a5d896fbfa252ad96fc27c2f32e 1771175834

@@ -1,0 +1,14 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=install prepare
+DEPEND=sys-libs/ncurses:=
+DESCRIPTION=Coreutils Viewer: show progress for cp, rm, dd, and so forth
+EAPI=8
+HOMEPAGE=https://github.com/Xfennec/progress
+INHERIT=toolchain-funcs
+KEYWORDS=amd64 ~arm ~arm64 ppc ppc64 ~riscv x86
+LICENSE=GPL-3
+RDEPEND=sys-libs/ncurses:=
+SLOT=0
+SRC_URI=https://github.com/Xfennec/progress/archive/v0.17.tar.gz -> progress-0.17.tar.gz
+_eclasses_=toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=8018c57146363592f32291a05cfef37b

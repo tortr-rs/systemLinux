@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare
+DEPEND=dev-db/unixODBC sys-libs/ncurses
+DESCRIPTION=Provides a subset of the well-known JDBC 2.0(tm) and runs on top of ODBC
+EAPI=8
+HOMEPAGE=http://libodbcxx.sourceforge.net/
+INHERIT=flag-o-matic
+KEYWORDS=~alpha ~amd64 ~hppa ~ppc ~riscv ~x86
+LICENSE=LGPL-2.1
+RDEPEND=dev-db/unixODBC sys-libs/ncurses
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/libodbcxx/libodbc++-0.2.5.tar.bz2
+_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=53f67d7b28d792d1bc65e64afcbe792d

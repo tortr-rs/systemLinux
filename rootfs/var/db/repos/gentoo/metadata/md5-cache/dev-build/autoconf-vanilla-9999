@@ -1,0 +1,12 @@
+BDEPEND=>=dev-lang/perl-5.10 >=sys-devel/m4-1.4.16 >=sys-apps/texinfo-4.3 >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=configure install prepare test unpack
+DESCRIPTION=Used to create autoconfiguration files
+EAPI=8
+HOMEPAGE=https://www.gnu.org/software/autoconf/autoconf.html
+INHERIT=git-r3 toolchain-autoconf
+LICENSE=GPL-3+
+PROPERTIES=live
+RDEPEND=>=dev-lang/perl-5.10 >=sys-devel/m4-1.4.16 >=dev-build/autoconf-wrapper-15 sys-devel/gnuconfig !~dev-build/autoconf-vanilla-9999:2.5
+SLOT=9999
+_eclasses_=git-r3	e6c2f983e006e805160436c75a0c1562	toolchain-autoconf	a55432b7b206ce2c052f915fbc08fe65
+_md5_=1285a2d347c031550f1ba60371ea378e

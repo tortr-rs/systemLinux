@@ -1,0 +1,12 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install postinst unpack
+DESCRIPTION=WM-Independent Dropdown Creator
+EAPI=8
+HOMEPAGE=https://github.com/noctuid/tdrop
+INHERIT=optfeature git-r3
+LICENSE=BSD-2
+PROPERTIES=live
+RDEPEND=app-shells/bash sys-apps/gawk sys-process/procps x11-apps/xprop x11-apps/xrandr x11-apps/xwininfo x11-misc/xdotool
+SLOT=0
+_eclasses_=git-r3	e6c2f983e006e805160436c75a0c1562	optfeature	58cc13bdc4e9a204077e1e7c9a1d7988
+_md5_=817f3f5e4bf227f5913161dc6f59bb05

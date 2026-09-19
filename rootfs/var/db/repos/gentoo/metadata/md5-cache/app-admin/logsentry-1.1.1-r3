@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst
+DESCRIPTION=Automatically monitor system logs and mail security violations
+EAPI=8
+HOMEPAGE=https://sourceforge.net/projects/sentrytools/
+INHERIT=toolchain-funcs
+IUSE=selinux
+KEYWORDS=amd64 arm ~mips ppc ~s390 ~sparc x86
+LICENSE=GPL-2
+RDEPEND=virtual/mailx selinux? ( sec-policy/selinux-logsentry )
+SLOT=0
+SRC_URI=mirror://gentoo/logsentry-1.1.1.tar.gz
+_eclasses_=toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=23f80ac578b420ff96ccbe103dc22b18

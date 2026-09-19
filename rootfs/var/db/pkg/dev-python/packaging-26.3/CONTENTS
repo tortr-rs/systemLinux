@@ -1,0 +1,104 @@
+dir /usr
+dir /usr/lib
+dir /usr/lib/python3.14
+dir /usr/lib/python3.14/site-packages
+dir /usr/lib/python3.14/site-packages/packaging
+obj /usr/lib/python3.14/site-packages/packaging/__init__.py b48d9ad65465097d5e34cdef7e9f64c8 1788715558
+dir /usr/lib/python3.14/site-packages/packaging/__pycache__
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/__init__.cpython-314.opt-1.pyc aca07c6ab687fb4410046e5487780502 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/__init__.cpython-314.opt-2.pyc aca07c6ab687fb4410046e5487780502 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/__init__.cpython-314.pyc aca07c6ab687fb4410046e5487780502 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/_elffile.cpython-314.opt-1.pyc ca22fcf3cbaaa45d3440d08535cfbb29 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/_elffile.cpython-314.opt-2.pyc 6be146beb59f4c945cab91d0e856b134 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/_elffile.cpython-314.pyc ca22fcf3cbaaa45d3440d08535cfbb29 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/_manylinux.cpython-314.opt-1.pyc 76197cb8d016e81bb438e4de3e973588 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/_manylinux.cpython-314.opt-2.pyc 6ee840f6116e628e0503d77402377ee7 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/_manylinux.cpython-314.pyc d360bb5404f389b33ea0d652c1407126 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/_musllinux.cpython-314.opt-1.pyc aaea103a73c113f62d084ec29965500f 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/_musllinux.cpython-314.opt-2.pyc 3568475285a687cbd1fd0779ff143911 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/_musllinux.cpython-314.pyc a468bde66883c221f3bf028f40a8aec7 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/_parser.cpython-314.opt-1.pyc 6ffe175f0fa6e76c386307069d840caa 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/_parser.cpython-314.opt-2.pyc ea561f2e1a697e74a891abaf724e8736 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/_parser.cpython-314.pyc 6ffe175f0fa6e76c386307069d840caa 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/_ranges.cpython-314.opt-1.pyc bf50852912872f9da01e63111e3145a3 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/_ranges.cpython-314.opt-2.pyc b2ab1f1e7027f7aa09be166b19d0e6c2 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/_ranges.cpython-314.pyc bf50852912872f9da01e63111e3145a3 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/_structures.cpython-314.opt-1.pyc 044b9e0f478ad554199b0f26342d0974 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/_structures.cpython-314.opt-2.pyc d8ec4d6363af24e8a24b3f7368a2b86d 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/_structures.cpython-314.pyc 044b9e0f478ad554199b0f26342d0974 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/_tokenizer.cpython-314.opt-1.pyc b19192ac3579a33a31d08a86dcd3460e 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/_tokenizer.cpython-314.opt-2.pyc a2489774894863060e1191208d6fe5e2 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/_tokenizer.cpython-314.pyc 71f62963144994f515bb7ba4afea9a3c 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/dependency_groups.cpython-314.opt-1.pyc f27413122eba459c1ba93126d3449050 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/dependency_groups.cpython-314.opt-2.pyc f300f970b2d351c03ef66bcde66b862f 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/dependency_groups.cpython-314.pyc f27413122eba459c1ba93126d3449050 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/direct_url.cpython-314.opt-1.pyc d4d6dc6a59304af769bbc6001f5fb973 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/direct_url.cpython-314.opt-2.pyc 2645b22118531fcc0142f3d99b0215b2 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/direct_url.cpython-314.pyc d4d6dc6a59304af769bbc6001f5fb973 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/errors.cpython-314.opt-1.pyc 64042acde28009b49ac7333f7bdf3c45 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/errors.cpython-314.opt-2.pyc 7916aa96f6d05220cec880ea9b22f7d2 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/errors.cpython-314.pyc 64042acde28009b49ac7333f7bdf3c45 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/markers.cpython-314.opt-1.pyc b25c1bc82861c7041bda6be6b0b9080b 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/markers.cpython-314.opt-2.pyc 42f9ad24021d6f73b1dd95ea98e87de7 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/markers.cpython-314.pyc 2d3f834b8fb1f0791021449ab1145779 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/metadata.cpython-314.opt-1.pyc 5ee7149834940f22eda8c947d8ca02bb 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/metadata.cpython-314.opt-2.pyc 26f92840c407a2a171da9d0187510859 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/metadata.cpython-314.pyc ebb18bc9d905e3d1a38f7f6700d192e8 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/pylock.cpython-314.opt-1.pyc fc43d7a9c9c950518c6f133dab0bbcec 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/pylock.cpython-314.opt-2.pyc 93b0c6d67cb449fdbda9af38cf086382 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/pylock.cpython-314.pyc fc43d7a9c9c950518c6f133dab0bbcec 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/ranges.cpython-314.opt-1.pyc b427fd51923cbaf7ec02f07d1f31311a 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/ranges.cpython-314.opt-2.pyc 9ba6b6a8b96107c5060d43fddad74cc0 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/ranges.cpython-314.pyc 8135552a7899027829342122dec53138 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/requirements.cpython-314.opt-1.pyc 9f4fa24bdb473af1a661d06e1a83b0f7 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/requirements.cpython-314.opt-2.pyc 704c0de4dad5c0c50f76b82bdb98930e 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/requirements.cpython-314.pyc 9f4fa24bdb473af1a661d06e1a83b0f7 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/specifiers.cpython-314.opt-1.pyc fc0fa3a3c293573dc1e7893dd9a03df5 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/specifiers.cpython-314.opt-2.pyc b01bc2cf2b91b1b01fc2709ffa9551a4 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/specifiers.cpython-314.pyc cb5b70950b91557744b9be22781a90f0 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/tags.cpython-314.opt-1.pyc 96d9f6a6d22ce4f772ca96912966e391 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/tags.cpython-314.opt-2.pyc ba32f9b9ecd3e58a327864af06902c75 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/tags.cpython-314.pyc 96d9f6a6d22ce4f772ca96912966e391 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/utils.cpython-314.opt-1.pyc 45d512de6aa87232ac1ec019f9d5738e 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/utils.cpython-314.opt-2.pyc 49b40ea57272346485d0d8fe1fff52bb 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/utils.cpython-314.pyc 45d512de6aa87232ac1ec019f9d5738e 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/version.cpython-314.opt-1.pyc 8b526ea108b33f3268cafdb6bef05206 1788715559
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/version.cpython-314.opt-2.pyc 64618a08dfff08fbfbfc4f80c3c4aeff 1788715559
+obj /usr/lib/python3.14/site-packages/packaging/__pycache__/version.cpython-314.pyc 8b526ea108b33f3268cafdb6bef05206 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/_elffile.py 48805acf841db76c9a0ed1fd8ef7a407 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/_manylinux.py cee0b9574943c6e1d85e3904e6b3ed31 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/_musllinux.py bdb1c4e9041701e4a15a78f6b1808443 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/_parser.py 15ecf07e8b88163af1f1d5b58c7375fa 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/_ranges.py a617c2859d77a54244ba946cb6ebb0b2 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/_structures.py b709e6f635eed4446b3da0dd5065eee8 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/_tokenizer.py 805c23bf5dedc4eceac562487948a9de 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/dependency_groups.py cb56c4a6636ddf8a4d80f7d03c4187e9 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/direct_url.py 13950f812b5868c0a8fc867e0e8170f2 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/errors.py f9d6a22e97bf3b200086f77c1ee77811 1788715558
+dir /usr/lib/python3.14/site-packages/packaging/licenses
+obj /usr/lib/python3.14/site-packages/packaging/licenses/__init__.py bd15e6083f27646fcf4e1c6ecaf2c2b0 1788715558
+dir /usr/lib/python3.14/site-packages/packaging/licenses/__pycache__
+obj /usr/lib/python3.14/site-packages/packaging/licenses/__pycache__/__init__.cpython-314.opt-1.pyc 491d4497f669fe96c0b643799159daa4 1788715559
+obj /usr/lib/python3.14/site-packages/packaging/licenses/__pycache__/__init__.cpython-314.opt-2.pyc 734f44b3e5139cc2b1e156b9878089dc 1788715559
+obj /usr/lib/python3.14/site-packages/packaging/licenses/__pycache__/__init__.cpython-314.pyc 491d4497f669fe96c0b643799159daa4 1788715559
+obj /usr/lib/python3.14/site-packages/packaging/licenses/__pycache__/_spdx.cpython-314.opt-1.pyc 60813443242bb13fd2341ff331ca3c49 1788715559
+obj /usr/lib/python3.14/site-packages/packaging/licenses/__pycache__/_spdx.cpython-314.opt-2.pyc 60813443242bb13fd2341ff331ca3c49 1788715559
+obj /usr/lib/python3.14/site-packages/packaging/licenses/__pycache__/_spdx.cpython-314.pyc 60813443242bb13fd2341ff331ca3c49 1788715559
+obj /usr/lib/python3.14/site-packages/packaging/licenses/_spdx.py 71f3a6f6de2ccbb9fc1b4e9d733c88d7 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/markers.py e384d19306f86a4a3928ab0b87a936ae 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/metadata.py bbef112e2bdc4459083f1d0f2de38d9d 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/py.typed d41d8cd98f00b204e9800998ecf8427e 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/pylock.py ad023e569d7e555f6132eda6cf29a2c2 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/ranges.py b84d2f5f5beb94b2d2f7a81cf5e5a671 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/requirements.py b5e0be4743e81f809387551a39ba4c34 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/specifiers.py d1a3229c54502372e6b34d36952db8b0 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/tags.py dcdd9ef43c051125be9da5e3d731e37d 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/utils.py 43cc4f5f1fb888bfe5de2849ccb3c30d 1788715558
+obj /usr/lib/python3.14/site-packages/packaging/version.py 8001005179905c02981c42c34aa39e52 1788715558
+dir /usr/lib/python3.14/site-packages/packaging-26.3.dist-info
+obj /usr/lib/python3.14/site-packages/packaging-26.3.dist-info/METADATA 2918325b7f2bd4a0ae3215497a8b12cc 1788715558
+obj /usr/lib/python3.14/site-packages/packaging-26.3.dist-info/WHEEL 5b30b1d0507423be616800616cb80db3 1788715558
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/packaging-26.3
+obj /usr/share/doc/packaging-26.3/README.rst.bz2 3d9ebc95d4c162d30260a1a21ebdaa7a 1788715559

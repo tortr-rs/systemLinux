@@ -1,0 +1,14 @@
+BDEPEND=app-alternatives/yacc
+DEFINED_PHASES=compile install
+DESCRIPTION=An efficient logic-model checker for the verification of multi-threaded code
+EAPI=8
+HOMEPAGE=https://spinroot.com/ https://github.com/nimble-code/Spin
+INHERIT=desktop toolchain-funcs
+IUSE=doc examples graphviz tk
+KEYWORDS=~amd64 ~riscv ~x86
+LICENSE=BSD
+RDEPEND=sys-devel/gcc tk? ( dev-lang/tk graphviz? ( media-gfx/graphviz ) )
+SLOT=0
+SRC_URI=https://github.com/nimble-code/Spin/archive/refs/tags/version-6.5.2.tar.gz -> spin-6.5.2.tar.gz
+_eclasses_=desktop	e447b5f77146d69797e9f03ff177f3f1	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=c735c7daceb38d088254268f499d4d65

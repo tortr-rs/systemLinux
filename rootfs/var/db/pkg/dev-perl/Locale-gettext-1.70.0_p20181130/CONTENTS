@@ -1,0 +1,20 @@
+dir /usr
+dir /usr/lib64
+dir /usr/lib64/perl5
+dir /usr/lib64/perl5/vendor_perl
+dir /usr/lib64/perl5/vendor_perl/5.42
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/Locale
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/Locale/gettext
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/Locale/gettext/Config.pm 34ae5b637b2f078e5b551af74bb40271 1763921705
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/Locale/gettext.pm a0ec0743dce2bdd9c6ced082405c1ca6 1763921705
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Locale
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Locale/gettext
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Locale/gettext/.packlist 4c1b7c0c8142985265b6d9fa540adeea 1763921705
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Locale/gettext/gettext.so 3eaea129f6938aa1b427c4d4495b63ed 1763921706
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/Locale-gettext-1.70.0_p20181130
+obj /usr/share/doc/Locale-gettext-1.70.0_p20181130/Changes.bz2 a0e8374cc9b7858b3ff11d166924b6b5 1763921705
+obj /usr/share/doc/Locale-gettext-1.70.0_p20181130/README.md.bz2 1d4a93d63c06df4ac644567639d648ee 1763921705

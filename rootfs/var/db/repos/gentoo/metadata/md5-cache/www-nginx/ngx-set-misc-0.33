@@ -1,0 +1,16 @@
+BDEPEND=virtual/pkgconfig www-servers/nginx:=[modules(-)] test? ( dev-perl/Test-Nginx ) test? ( www-nginx/ngx-echo www-nginx/ngx-iconv )
+DEFINED_PHASES=compile configure install postinst prepare test
+DEPEND=hmac? ( dev-libs/openssl:= ) www-servers/nginx:=[modules(-)] www-nginx/ngx_devel_kit
+DESCRIPTION=An NGINX module that adds various set_xxx directives to NGINX's rewrite module
+EAPI=8
+HOMEPAGE=https://github.com/openresty/set-misc-nginx-module
+INHERIT=nginx-module
+IUSE=+hmac test
+KEYWORDS=amd64 arm64
+LICENSE=BSD-2
+RDEPEND=hmac? ( dev-libs/openssl:= ) www-servers/nginx:=[modules(-)] www-nginx/ngx_devel_kit
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://github.com/openresty/set-misc-nginx-module/archive/refs/tags/v0.33.tar.gz -> ngx-set-misc-0.33.tar.gz
+_eclasses_=eapi9-pipestatus	d2c134036ac31c3085aebc9147f572bd	edo	a5e294016aa84979fcb2459749eb80b2	flag-o-matic	fd3558f73f6503093adee69adf41020d	nginx-module	4a55377d4937a5605798987b53365f3b	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=db060c34e00984178347250b9a86a5e6

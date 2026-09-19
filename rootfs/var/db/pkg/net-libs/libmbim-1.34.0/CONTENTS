@@ -1,0 +1,70 @@
+dir /usr
+dir /usr/src
+dir /usr/libexec
+obj /usr/libexec/mbim-proxy 63af647bb7a414918cfa9ad3f1bf440f 1780386570
+dir /usr/share
+dir /usr/share/bash-completion
+dir /usr/share/bash-completion/completions
+obj /usr/share/bash-completion/completions/mbimcli 6c643737c042039b829888d8d33550e6 1780386568
+dir /usr/share/doc
+dir /usr/share/doc/libmbim-1.34.0
+obj /usr/share/doc/libmbim-1.34.0/NEWS.bz2 b77aa45740eeb24d878e0e849c457b8f 1780386568
+obj /usr/share/doc/libmbim-1.34.0/README.md.bz2 3abd4705333598eb906f5a2dd729eebd 1780386568
+obj /usr/share/doc/libmbim-1.34.0/AUTHORS.bz2 5770a84bfd8b80c5c00e5aa693ed4200 1780386568
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/mbimcli.1.bz2 901f996e97b918b43943e746fb5776a3 1780386566
+obj /usr/share/man/man1/mbim-network.1.bz2 ad2373a8dbc5b67d5c8637d1f74d483b 1780386561
+dir /usr/lib64
+obj /usr/lib64/libmbim-glib.so.4.10.0 31a35557335f96af88b32e700e797b5f 1780386570
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/mbim-glib.pc 5e1b0a99039c57dcbd6f45a48b7e8bd3 1780386561
+dir /usr/bin
+obj /usr/bin/mbim-network 7cf89a5b866f57ea31c8ad2b3f54a640 1780386561
+obj /usr/bin/mbimcli c1af53c0e1b4a7a7d1f3ad0099933326 1780386570
+dir /usr/include
+dir /usr/include/libmbim-glib
+obj /usr/include/libmbim-glib/mbim-message.h 8427bcfbf1a69c2c7eb6433f1027beb9 1767466967
+obj /usr/include/libmbim-glib/mbim-enums.h 09c65cfc17ef3de3cdf54c558d1ef1ab 1767466967
+obj /usr/include/libmbim-glib/mbim-version.h 860fbb40e7a0bdd3028f7dec77c96097 1780386561
+obj /usr/include/libmbim-glib/mbim-stk.h 898ac5d2efeaa17793df3c0e94cc1fc5 1780386561
+obj /usr/include/libmbim-glib/mbim-phonebook.h 45d64f87e89c4be05e58ffb12b2e58ce 1780386561
+obj /usr/include/libmbim-glib/mbim-flag-types.h 5d7ec0cdb0956d623b7ef7a33e8b8d36 1780386562
+obj /usr/include/libmbim-glib/mbim-sms.h eac2cd34ea25154847bd5dcc9a4742d6 1780386561
+obj /usr/include/libmbim-glib/mbim-ms-host-shutdown.h c3d092ec64429f93bc7f015cd9a43034 1780386561
+obj /usr/include/libmbim-glib/mbim-google.h 8a36d900fc67cd027a26a89f1b09d820 1780386561
+obj /usr/include/libmbim-glib/mbim-compat.h c547fc47b47a1fa55b49800fb2dffba1 1767466967
+obj /usr/include/libmbim-glib/mbim-intel-mutual-authentication.h 3a5fa43132728fc4c79f97b9bfc598d9 1780386561
+obj /usr/include/libmbim-glib/mbim-error-types.h 8c4395ff0d0ea50f99b8644a247b8b74 1780386561
+obj /usr/include/libmbim-glib/mbim-fibocom.h 65a90954b68d763d5342ac2e1e3794d7 1780386561
+obj /usr/include/libmbim-glib/mbim-intel-firmware-update.h f060ca06c21522a665dcdbbe481491ff 1780386561
+obj /usr/include/libmbim-glib/mbim-intel-at-tunnel.h 27cb2dd09172da5e47422d7db5f9fbe7 1780386561
+obj /usr/include/libmbim-glib/mbim-ms-uicc-low-level-access.h 0777f2476376fda76c7c1c0b4ea13a52 1780386561
+obj /usr/include/libmbim-glib/mbim-dss.h 9e6b2fd7ba7a64238209123711fbfd18 1780386561
+obj /usr/include/libmbim-glib/mbim-ussd.h 161bac630c3ac3c1fa8653fd12cf2e8d 1780386561
+obj /usr/include/libmbim-glib/mbim-quectel.h 97379d32b83e2e4bf2a5a52ca627da93 1780386561
+obj /usr/include/libmbim-glib/mbim-ms-sar.h e7f0506f1afc328a1e35597240fa5e2f 1780386561
+obj /usr/include/libmbim-glib/mbim-ms-voice-extensions.h c7e05e3d5eccb648f3d8584296bab290 1780386561
+obj /usr/include/libmbim-glib/mbim-ms-basic-connect-extensions.h 70460c20759f831cf208e8dc9ae80622 1780386561
+obj /usr/include/libmbim-glib/mbim-tlv.h 2c4f12d38dacea8cc3fe1d9aec517980 1767466967
+obj /usr/include/libmbim-glib/mbim-intel-tools.h 28fe88a0997fc06328ea51b2d4d69cc2 1780386561
+obj /usr/include/libmbim-glib/mbim-qdu.h 3116eb8983a63b1b0613d4583418cd5b 1780386561
+obj /usr/include/libmbim-glib/mbim-proxy-control.h 4629a4ea494ba570cce6032538138c6b 1780386561
+obj /usr/include/libmbim-glib/mbim-enum-types.h 5cdd660901de4fe1aebc70dd6ab7f2a4 1780386562
+obj /usr/include/libmbim-glib/mbim-auth.h 792c7fb20c09c2213458b70ece3dbdd2 1780386561
+obj /usr/include/libmbim-glib/mbim-intel-thermal-rf.h ba6143885599cf547e4af81565a4d119 1780386561
+obj /usr/include/libmbim-glib/mbim-atds.h e44a927e1ae81133b1aa07e86662e607 1780386561
+obj /usr/include/libmbim-glib/mbim-proxy.h 32d6aebdedc8e5170bb50fc7ec51ff5e 1767466967
+obj /usr/include/libmbim-glib/mbim-uuid.h 9d1d9cb04b721605e9b080d3043758f6 1767466967
+obj /usr/include/libmbim-glib/mbim-compal.h 5199a18882cd01a9d31ea054dc240de2 1780386561
+obj /usr/include/libmbim-glib/mbim-cid.h 26eae84e98be11f3e3f744e93d435e86 1767466967
+obj /usr/include/libmbim-glib/mbim-device.h 03a3b3205688dba2dd6046ea3fe49d90 1767466967
+obj /usr/include/libmbim-glib/mbim-qmi.h c973f9ba045f485f2f1b26feaeb40901 1780386561
+obj /usr/include/libmbim-glib/mbim-ms-firmware-id.h a7ae58435d37341df9d6a59b5fa1f0a6 1780386561
+obj /usr/include/libmbim-glib/mbim-basic-connect.h 6ad57cd848e8538df544cd8b700e51cf 1780386561
+obj /usr/include/libmbim-glib/mbim-utils.h cba499b6434d55836a35facb56246018 1767466967
+obj /usr/include/libmbim-glib/libmbim-glib.h 42309a09cc9035735ec25beb311eab8c 1767466967
+obj /usr/include/libmbim-glib/mbim-errors.h 53faa6c37bca540755ef475f12516973 1767466967
+dir /usr/lib
+sym /usr/lib64/libmbim-glib.so.4 -> libmbim-glib.so.4.10.0 1789836492
+sym /usr/lib64/libmbim-glib.so -> libmbim-glib.so.4 1789836492

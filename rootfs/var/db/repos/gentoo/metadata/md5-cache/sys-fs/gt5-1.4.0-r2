@@ -1,0 +1,10 @@
+DEFINED_PHASES=install
+DESCRIPTION=a diff-capable 'du-browser'
+EAPI=7
+HOMEPAGE=http://gt5.sourceforge.net/
+KEYWORDS=amd64 ~sparc x86
+LICENSE=GPL-2
+RDEPEND=|| ( www-client/links www-client/elinks www-client/lynx )
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/gt5/gt5-1.4.0.tar.gz
+_md5_=9342816724430d6094152164dd1aec5b

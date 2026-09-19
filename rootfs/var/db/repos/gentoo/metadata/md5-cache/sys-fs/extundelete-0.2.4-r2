@@ -1,0 +1,11 @@
+DEFINED_PHASES=-
+DEPEND=sys-fs/e2fsprogs
+DESCRIPTION=A utility to undelete files from an ext3 or ext4 partition
+EAPI=7
+HOMEPAGE=https://extundelete.sourceforge.net/
+KEYWORDS=amd64 ~arm ~riscv ~sparc x86
+LICENSE=GPL-2
+RDEPEND=sys-fs/e2fsprogs
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/extundelete/extundelete-0.2.4.tar.bz2
+_md5_=22bbebb727494cb7330a85c1a57b9600

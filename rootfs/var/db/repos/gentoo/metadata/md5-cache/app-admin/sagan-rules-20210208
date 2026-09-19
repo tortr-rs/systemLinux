@@ -1,0 +1,9 @@
+DEFINED_PHASES=install
+DESCRIPTION=Rules for Sagan log analyzer
+EAPI=7
+HOMEPAGE=https://github.com/quadrantsec/sagan-rules
+KEYWORDS=amd64 x86
+LICENSE=BSD
+SLOT=0
+SRC_URI=https://quadrantsec.com/rules/sagan-rules-20210208.tar.gz
+_md5_=a558f494a3ec26dddd92f35b52ea20b6

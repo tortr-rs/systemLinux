@@ -1,0 +1,1 @@
+!sys-libs/e2fsprogs-libs virtual/libintl sys-apps/util-linux >=sys-libs/glibc-2.42-r5

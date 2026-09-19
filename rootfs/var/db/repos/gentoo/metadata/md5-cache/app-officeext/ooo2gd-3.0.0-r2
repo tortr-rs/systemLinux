@@ -1,0 +1,15 @@
+BDEPEND=app-arch/unzip
+DEFINED_PHASES=install unpack
+DESCRIPTION=Extension for export to Google docs, zoho and WebDAV
+EAPI=7
+HOMEPAGE=https://code.google.com/p/ooo2gd/
+INHERIT=office-ext-r1
+IUSE=office_implementation_libreoffice
+KEYWORDS=amd64
+LICENSE=LGPL-2
+RDEPEND=office_implementation_libreoffice? ( || ( app-office/libreoffice[java] app-office/libreoffice-bin[java] ) )
+REQUIRED_USE=|| ( office_implementation_libreoffice )
+SLOT=0
+SRC_URI=https://ooo2gd.googlecode.com/files/ooo2gd_3.0.0.oxt
+_eclasses_=office-ext-r1	a26e95a93a1a0fcd3daa3b2fc19d475b
+_md5_=32b415f45d37dc95f77d19aa0922fd7c

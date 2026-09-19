@@ -1,0 +1,1 @@
+abi_x86_64 alpha amd64 arm arm64 arm64-macos elibc_Darwin elibc_SunOS elibc_bionic elibc_glibc elibc_mingw elibc_musl hppa kernel_Darwin kernel_Hurd kernel_SunOS kernel_linux loong m68k mips ppc ppc64 prefix prefix-guest prefix-stack riscv s390 sparc test verify-sig x64-macos x64-solaris x86

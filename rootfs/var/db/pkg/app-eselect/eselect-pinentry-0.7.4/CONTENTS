@@ -1,0 +1,5 @@
+dir /usr
+dir /usr/share
+dir /usr/share/eselect
+dir /usr/share/eselect/modules
+obj /usr/share/eselect/modules/pinentry.eselect cd8cd0836ef071e2d36c77d97fcaf79b 1717349303

@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Copyright 1999-2023 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+source "${PORTAGE_BIN_PATH:?}"/isolated-functions.sh || exit
+
+if [[ $# -lt 1 ]] ; then
+	__helpers_die "${0##*/}: at least one argument needed"
+	exit 1
+fi
+
+if ! ___eapi_doinitd_respects_exeopts; then
+	export EXEOPTIONS=-m0755
+	export DIROPTIONS=""
+fi
+
+__E_EXEDESTTREE='/etc/init.d/' exec doexe "$@"

@@ -1,0 +1,193 @@
+dir /usr
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/nano-9.2
+obj /usr/share/doc/nano-9.2/AUTHORS.bz2 4a580c4446b0e783b8976e2ba52b951e 1788715248
+obj /usr/share/doc/nano-9.2/ChangeLog.bz2 b0a76e77edb8d89a337536d3c25044bd 1788715248
+obj /usr/share/doc/nano-9.2/NEWS.bz2 e4a7f50011c0b7aad427e8ff50a33799 1788715248
+obj /usr/share/doc/nano-9.2/README.bz2 4d2e2a0b7ba4ccf7663100e062198bac 1788715248
+obj /usr/share/doc/nano-9.2/THANKS.bz2 118e54a5110f4aa97e07c58dc18a0d7e 1788715249
+obj /usr/share/doc/nano-9.2/TODO 3497fd380a2dfde9a083c4bd2b863dc2 1788715248
+dir /usr/share/doc/nano-9.2/html
+obj /usr/share/doc/nano-9.2/html/faq.html f19331b462389203112bdf7d62cb9795 1788715249
+obj /usr/share/doc/nano-9.2/sample.nanorc.bz2 61bfd416892ad6a2a0681626dd1de99c 1788715249
+dir /usr/share/info
+obj /usr/share/info/nano.info.bz2 4302f816f7a0bd31f767df5138cbdff4 1788715248
+dir /usr/share/locale
+dir /usr/share/locale/ar
+dir /usr/share/locale/ar/LC_MESSAGES
+obj /usr/share/locale/ar/LC_MESSAGES/nano.mo 23ed1e6fd6dd07ac07ae7d9883aae185 1788715248
+dir /usr/share/locale/bg
+dir /usr/share/locale/bg/LC_MESSAGES
+obj /usr/share/locale/bg/LC_MESSAGES/nano.mo 9e7845c8f97b7552d3f21e20260d6f41 1788715248
+dir /usr/share/locale/ca
+dir /usr/share/locale/ca/LC_MESSAGES
+obj /usr/share/locale/ca/LC_MESSAGES/nano.mo 101952ad8f771b24e28879cf17b55c09 1788715248
+dir /usr/share/locale/cs
+dir /usr/share/locale/cs/LC_MESSAGES
+obj /usr/share/locale/cs/LC_MESSAGES/nano.mo bbb1828ba01d798a18d00db7f6727a93 1788715248
+dir /usr/share/locale/da
+dir /usr/share/locale/da/LC_MESSAGES
+obj /usr/share/locale/da/LC_MESSAGES/nano.mo b51842d799bfe408fb1df449aa486160 1788715248
+dir /usr/share/locale/de
+dir /usr/share/locale/de/LC_MESSAGES
+obj /usr/share/locale/de/LC_MESSAGES/nano.mo 3bfe16449062726d0affb15b5fbc6f95 1788715248
+dir /usr/share/locale/eo
+dir /usr/share/locale/eo/LC_MESSAGES
+obj /usr/share/locale/eo/LC_MESSAGES/nano.mo 748a5a9bb2e54dc150398424cde258cc 1788715248
+dir /usr/share/locale/es
+dir /usr/share/locale/es/LC_MESSAGES
+obj /usr/share/locale/es/LC_MESSAGES/nano.mo f1837553b89e8320a0f3a7399a9e89c6 1788715248
+dir /usr/share/locale/eu
+dir /usr/share/locale/eu/LC_MESSAGES
+obj /usr/share/locale/eu/LC_MESSAGES/nano.mo 5439ec065497a980eca2a044408fdfb1 1788715248
+dir /usr/share/locale/fi
+dir /usr/share/locale/fi/LC_MESSAGES
+obj /usr/share/locale/fi/LC_MESSAGES/nano.mo a5ce656b2c292277d2b3344a1f7d1404 1788715248
+dir /usr/share/locale/fr
+dir /usr/share/locale/fr/LC_MESSAGES
+obj /usr/share/locale/fr/LC_MESSAGES/nano.mo e347fc7b2892601bbf27fc96553848b8 1788715248
+dir /usr/share/locale/ga
+dir /usr/share/locale/ga/LC_MESSAGES
+obj /usr/share/locale/ga/LC_MESSAGES/nano.mo 0d21e8124e3b2420cc7921767a369aac 1788715248
+dir /usr/share/locale/gl
+dir /usr/share/locale/gl/LC_MESSAGES
+obj /usr/share/locale/gl/LC_MESSAGES/nano.mo 82f083a9dccb39ddc0057cb981b42e1a 1788715248
+dir /usr/share/locale/hr
+dir /usr/share/locale/hr/LC_MESSAGES
+obj /usr/share/locale/hr/LC_MESSAGES/nano.mo a486384c4b271c8528a5a1315d3546f7 1788715248
+dir /usr/share/locale/hu
+dir /usr/share/locale/hu/LC_MESSAGES
+obj /usr/share/locale/hu/LC_MESSAGES/nano.mo a6e9c514e84541ad0ff28c2598588b80 1788715248
+dir /usr/share/locale/id
+dir /usr/share/locale/id/LC_MESSAGES
+obj /usr/share/locale/id/LC_MESSAGES/nano.mo 624fb2dc04d22bc0c2b790576bdb372c 1788715248
+dir /usr/share/locale/is
+dir /usr/share/locale/is/LC_MESSAGES
+obj /usr/share/locale/is/LC_MESSAGES/nano.mo 2aff9e1ef0ea2077a7a2da87ad5e92d5 1788715248
+dir /usr/share/locale/it
+dir /usr/share/locale/it/LC_MESSAGES
+obj /usr/share/locale/it/LC_MESSAGES/nano.mo af8629f2358ca391464423d1646ae426 1788715248
+dir /usr/share/locale/ja
+dir /usr/share/locale/ja/LC_MESSAGES
+obj /usr/share/locale/ja/LC_MESSAGES/nano.mo 4e51f549d3dd8b96bdfb0ae783402ee3 1788715248
+dir /usr/share/locale/ka
+dir /usr/share/locale/ka/LC_MESSAGES
+obj /usr/share/locale/ka/LC_MESSAGES/nano.mo 167701e38be7ee155b92bab5c771f56f 1788715248
+dir /usr/share/locale/kk
+dir /usr/share/locale/kk/LC_MESSAGES
+obj /usr/share/locale/kk/LC_MESSAGES/nano.mo 2ed7cde07148103fcbce0c02ef60b78c 1788715248
+dir /usr/share/locale/ko
+dir /usr/share/locale/ko/LC_MESSAGES
+obj /usr/share/locale/ko/LC_MESSAGES/nano.mo 154f4311afd6ce9c5138550ee62c00ba 1788715248
+dir /usr/share/locale/ms
+dir /usr/share/locale/ms/LC_MESSAGES
+obj /usr/share/locale/ms/LC_MESSAGES/nano.mo 182b68c29ded79f42361792a21553fa8 1788715248
+dir /usr/share/locale/nb
+dir /usr/share/locale/nb/LC_MESSAGES
+obj /usr/share/locale/nb/LC_MESSAGES/nano.mo be0f1af84254a0159889adb75edd4254 1788715248
+dir /usr/share/locale/nl
+dir /usr/share/locale/nl/LC_MESSAGES
+obj /usr/share/locale/nl/LC_MESSAGES/nano.mo 63b6d50482cf29ba6040f20787a1af39 1788715248
+dir /usr/share/locale/pl
+dir /usr/share/locale/pl/LC_MESSAGES
+obj /usr/share/locale/pl/LC_MESSAGES/nano.mo 875683e0acd505692ac7305c1dd57de8 1788715248
+dir /usr/share/locale/pt
+dir /usr/share/locale/pt/LC_MESSAGES
+obj /usr/share/locale/pt/LC_MESSAGES/nano.mo 9acafd9ed4fe06df7c9b4595dee1fe39 1788715248
+dir /usr/share/locale/pt_BR
+dir /usr/share/locale/pt_BR/LC_MESSAGES
+obj /usr/share/locale/pt_BR/LC_MESSAGES/nano.mo 0713d923c062e57afa978a13d0b53779 1788715248
+dir /usr/share/locale/ro
+dir /usr/share/locale/ro/LC_MESSAGES
+obj /usr/share/locale/ro/LC_MESSAGES/nano.mo 266e14313659eff9c853e80680b35e1e 1788715248
+dir /usr/share/locale/ru
+dir /usr/share/locale/ru/LC_MESSAGES
+obj /usr/share/locale/ru/LC_MESSAGES/nano.mo e55502fe4f85eed7337334cbdbaa839b 1788715248
+dir /usr/share/locale/sk
+dir /usr/share/locale/sk/LC_MESSAGES
+obj /usr/share/locale/sk/LC_MESSAGES/nano.mo bd05c5e26dfe23f82224bf2aa498334b 1788715248
+dir /usr/share/locale/sl
+dir /usr/share/locale/sl/LC_MESSAGES
+obj /usr/share/locale/sl/LC_MESSAGES/nano.mo 10b8b155d944f4c865763fbf1231843d 1788715248
+dir /usr/share/locale/sq
+dir /usr/share/locale/sq/LC_MESSAGES
+obj /usr/share/locale/sq/LC_MESSAGES/nano.mo 066d152036f94c390e099fa7264839d9 1788715248
+dir /usr/share/locale/sr
+dir /usr/share/locale/sr/LC_MESSAGES
+obj /usr/share/locale/sr/LC_MESSAGES/nano.mo 1091d752e93b68c1a380086dab945e44 1788715248
+dir /usr/share/locale/sv
+dir /usr/share/locale/sv/LC_MESSAGES
+obj /usr/share/locale/sv/LC_MESSAGES/nano.mo 41d56c8fa485982e1c6e063823834112 1788715248
+dir /usr/share/locale/tr
+dir /usr/share/locale/tr/LC_MESSAGES
+obj /usr/share/locale/tr/LC_MESSAGES/nano.mo 59e34d146d36f0222823dd97b19f7c3b 1788715248
+dir /usr/share/locale/uk
+dir /usr/share/locale/uk/LC_MESSAGES
+obj /usr/share/locale/uk/LC_MESSAGES/nano.mo 5c243a52cf23a19f4bf9585d1c42d052 1788715248
+dir /usr/share/locale/vi
+dir /usr/share/locale/vi/LC_MESSAGES
+obj /usr/share/locale/vi/LC_MESSAGES/nano.mo 1b72e252e04888641890101de45d91b1 1788715248
+dir /usr/share/locale/zh_CN
+dir /usr/share/locale/zh_CN/LC_MESSAGES
+obj /usr/share/locale/zh_CN/LC_MESSAGES/nano.mo 79b3448bf957d686081b99bb62d2c71f 1788715248
+dir /usr/share/locale/zh_TW
+dir /usr/share/locale/zh_TW/LC_MESSAGES
+obj /usr/share/locale/zh_TW/LC_MESSAGES/nano.mo d87cd41660e7bbe4ec9a9080277c6e6d 1788715248
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/nano.1.bz2 79f6586ec8f650330a1a285cd2cd9cb2 1788715248
+obj /usr/share/man/man1/rnano.1.bz2 8d19a56584f5294cea73f38d8a3890e8 1788715248
+dir /usr/share/man/man5
+obj /usr/share/man/man5/nanorc.5.bz2 cfa461e51137fdc127fc07f0749de988 1788715248
+dir /usr/share/nano
+obj /usr/share/nano/ada.nanorc 8d5377f1ef75ad7b8f35d597800ab63b 1788715248
+obj /usr/share/nano/asm.nanorc 38afb1f15f234ceee492c4e2e37b54e3 1788715248
+obj /usr/share/nano/autoconf.nanorc 3b690497cb1840ad30e1284ca6e59351 1788715248
+obj /usr/share/nano/awk.nanorc 1a4657196bd85c5e25f7dde106681f2e 1788715248
+obj /usr/share/nano/c.nanorc 92f3b0f9d93573093a599fcec428fe5b 1788715248
+obj /usr/share/nano/changelog.nanorc 7aff528e9b6359a8c99788a099fba1fa 1788715248
+obj /usr/share/nano/cmake.nanorc e378fd5d2d5da13cc4a33ef052d95db2 1788715248
+obj /usr/share/nano/css.nanorc 3ddb8fedb423b8b863a95da5396d2544 1788715248
+obj /usr/share/nano/default.nanorc 0e0ee069d44e97c7606a15f855523c4a 1788715248
+obj /usr/share/nano/email.nanorc 23e3f3a82e32c0c5bb5cdd37fe120297 1788715248
+obj /usr/share/nano/fortran.nanorc c3bbeb9d58d23a95ceac5465defab7d5 1788715248
+obj /usr/share/nano/gentoo.nanorc 50249ed1265c7c1c531d504fde3b0d52 1788715249
+obj /usr/share/nano/go.nanorc 56bb6155e7c0d9344960b7d9084eb91d 1788715248
+obj /usr/share/nano/groff.nanorc da51f7c42ec6e7b608b0fbbbddae736c 1788715248
+obj /usr/share/nano/guile.nanorc 3734c9c0891e950d577d2d9cc96faa59 1788715248
+obj /usr/share/nano/haskell.nanorc 8b0c331de2784d094865f9631bc178ed 1788715248
+obj /usr/share/nano/html.nanorc 5b18db462b7b4e2bf49af5c67b90a08c 1788715248
+obj /usr/share/nano/java.nanorc 04b8485ccac5abfd1e3d874d5b1846de 1788715248
+obj /usr/share/nano/javascript.nanorc e16f0c87845721b302cd4c515a84dcad 1788715248
+obj /usr/share/nano/json.nanorc 227d84d4d82a3bfa660df2bbc8a537b6 1788715248
+obj /usr/share/nano/lua.nanorc 0065fb6b4f1c58c2e920f0e8e0f4862d 1788715248
+obj /usr/share/nano/makefile.nanorc 58870cc8b080f21ffde91194c68a8565 1788715248
+obj /usr/share/nano/man.nanorc 81be5f623cd8088862b7c3426e661ea1 1788715248
+obj /usr/share/nano/markdown.nanorc 49f39bbff535c34708a75d3c04d6bd12 1788715248
+obj /usr/share/nano/nanohelp.nanorc e173a3c1fcca840edd580e304f15fb05 1788715248
+obj /usr/share/nano/nanorc.nanorc 4903224edfb0a9b6d440d51f99370815 1788715248
+obj /usr/share/nano/nftables.nanorc d58fe2ee129b60b52444dbbf6c353b8e 1788715248
+obj /usr/share/nano/objc.nanorc a189bcc84e672a39923599394230de9c 1788715248
+obj /usr/share/nano/ocaml.nanorc 34b6105b6d8679ed7c0aa0fb52818ea5 1788715248
+obj /usr/share/nano/patch.nanorc 29241c0d0f36d5df3905a4bb2d6b802b 1788715248
+obj /usr/share/nano/perl.nanorc a572e1ab2c45850c1265da8665f2dbc5 1788715248
+obj /usr/share/nano/php.nanorc a806ff8732d70523671d626d326f628e 1788715248
+obj /usr/share/nano/po.nanorc d8e1b3566beae64d5cd377a46a8e1e8e 1788715248
+obj /usr/share/nano/povray.nanorc 8301e7abd6a4c8e16ec3ac5fa13b9406 1788715248
+obj /usr/share/nano/python.nanorc 2a72d50580ab1754f419576485e42e25 1788715248
+obj /usr/share/nano/ruby.nanorc 94ed2489d48f642a2aac3737ed121bb5 1788715248
+obj /usr/share/nano/rust.nanorc 8a490885c2eacd8624aacaf5088146c4 1788715248
+obj /usr/share/nano/sh.nanorc 06fce0ecbdf6fa167d869175e6ae5351 1788715248
+obj /usr/share/nano/spec.nanorc 06dc0c299c31c8ad24674a750648c66e 1788715248
+obj /usr/share/nano/sql.nanorc f3545769be56113d203079f5758fd398 1788715248
+obj /usr/share/nano/tcl.nanorc 4a02ddb6601bdfb6b8a1a38356f7ce7d 1788715248
+obj /usr/share/nano/tex.nanorc bc7cf31d641f198b2c3738b79042e793 1788715248
+obj /usr/share/nano/texinfo.nanorc 5c207faef7ff3c04aca4fc10263c6d7c 1788715248
+obj /usr/share/nano/xml.nanorc 7f1e93b2c4aac1068c6c5d6979164a10 1788715248
+obj /usr/share/nano/yaml.nanorc 8509823b0544bec15449dc5eb8f04e42 1788715248
+dir /etc
+obj /etc/nanorc e4ebe488319693214ba7b3dac57650f5 1788715249
+dir /bin
+obj /bin/nano d50f68dccac703bda38fb0217c2e0c9a 1788715250
+sym /bin/rnano -> nano 1789353877

@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install postinst
+DEPEND=app-alternatives/awk dev-lang/perl
+DESCRIPTION=A Large Assortment of Beautiful Themed Icons, Created with FVWM in mind
+EAPI=7
+HOMEPAGE=http://wm-icons.sourceforge.net/
+INHERIT=readme.gentoo-r1
+KEYWORDS=~amd64 ~arm64 ~ppc ~ppc64 ~x86
+LICENSE=GPL-2
+RDEPEND=app-alternatives/awk dev-lang/perl
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/wm-icons/wm-icons-0.4.0.tar.bz2
+_eclasses_=eapi9-pipestatus	d2c134036ac31c3085aebc9147f572bd	readme.gentoo-r1	9ca94b2d607e7454ca6cfb44ab8ce327
+_md5_=bb4ab4918e57c539806085f08048860b

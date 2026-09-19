@@ -1,0 +1,16 @@
+BDEPEND=virtual/pkgconfig virtual/pkgconfig
+DEFINED_PHASES=compile install postinst setup
+DEPEND=!minimal? ( lua_single_target_lua5-1? ( dev-lang/lua:5.1 ) )
+DESCRIPTION=Entropy Key userspace daemon
+EAPI=7
+HOMEPAGE=http://www.entropykey.co.uk/
+INHERIT=linux-info lua-single systemd toolchain-funcs udev
+IUSE=munin minimal usb +lua_single_target_lua5-1
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT GPL-2
+RDEPEND=!minimal? ( lua_single_target_lua5-1? ( dev-lang/lua:5.1 ) lua_single_target_lua5-1? ( dev-lua/luasocket[lua_targets_lua5-1(-)] ) kernel_linux? ( virtual/udev ) munin? ( net-analyzer/munin ) ) virtual/service-manager
+REQUIRED_USE=^^ ( lua_single_target_lua5-1 ) minimal? ( !munin )
+SLOT=0
+SRC_URI=mirror://ubuntu/pool/universe/e/ekeyd/ekeyd_1.1.5.orig.tar.gz
+_eclasses_=linux-info	efd923656513c879204fec6638eadee5	lua-single	75fe955a36b18e199213c8739eaebdbb	lua-utils	7c89927eda6f21c4c48136247077ab37	systemd	a964c0cbe818b5729da1dbfcee5be861	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5	udev	1a23882bb73bc31c64a6f00a5e515f34
+_md5_=aceec2e88fda79304397775bb041312e

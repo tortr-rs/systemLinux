@@ -1,0 +1,80 @@
+# elog/mod_echo.py - elog dispatch module
+# Copyright 2007-2020 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+import sys
+from portage.output import EOutput, colorize
+from portage.const import EBUILD_PHASES
+from portage.localization import _
+
+
+_items = []
+
+
+def process(mysettings, key, logentries, fulltext):
+    global _items
+    logfile = None
+    # output logfile explicitly only if it isn't in tempdir, otherwise
+    # it will be removed anyway
+    if (
+        key == mysettings.mycpv
+        and "PORTAGE_LOGDIR" in mysettings
+        and "PORTAGE_LOG_FILE" in mysettings
+    ):
+        logfile = mysettings["PORTAGE_LOG_FILE"]
+
+    try:
+        binary = mysettings.configdict["pkg"]["MERGE_TYPE"] == "binary"
+    except KeyError:
+        binary = False
+    _items.append((mysettings["ROOT"], key, logentries, logfile, binary))
+
+
+def finalize():
+    # For consistency, send all message types to stdout.
+    sys.stdout.flush()
+    sys.stderr.flush()
+    stderr = sys.stderr
+    try:
+        sys.stderr = sys.stdout
+        _finalize()
+    finally:
+        sys.stderr = stderr
+        sys.stdout.flush()
+        sys.stderr.flush()
+
+
+def _finalize():
+    global _items
+    printer = EOutput()
+    for root, key, logentries, logfile, binary in _items:
+        color = "PKG_BINARY_MERGE" if binary else "INFORM"
+
+        print()
+
+        if root == "/":
+            printer.einfo(_("Messages for package %s:") % colorize(color, key))
+        else:
+            printer.einfo(
+                _("Messages for package %(pkg)s merged to %(root)s:")
+                % {"pkg": colorize(color, key), "root": root}
+            )
+        if logfile is not None:
+            printer.einfo(_("Log file: %s") % colorize("INFORM", logfile))
+        print()
+        for phase in EBUILD_PHASES:
+            if phase not in logentries:
+                continue
+            for msgtype, msgcontent in logentries[phase]:
+                fmap = {
+                    "INFO": printer.einfo,
+                    "LOG": printer.elog,
+                    "WARN": printer.ewarn,
+                    "ERROR": printer.eerror,
+                    "QA": printer.eqawarn,
+                }
+                if isinstance(msgcontent, str):
+                    msgcontent = [msgcontent]
+                for line in msgcontent:
+                    fmap[msgtype](line.strip("\n"))
+    _items = []

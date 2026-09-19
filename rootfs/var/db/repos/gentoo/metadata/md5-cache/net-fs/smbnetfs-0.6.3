@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install
+DEPEND=>=sys-fs/fuse-2.3:0= >=net-fs/samba-4.2 >=dev-libs/glib-2.30 keyring? ( app-crypt/libsecret ) virtual/pkgconfig
+DESCRIPTION=FUSE filesystem for SMB shares
+EAPI=7
+HOMEPAGE=https://sourceforge.net/projects/smbnetfs
+INHERIT=readme.gentoo-r1
+IUSE=keyring
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=>=sys-fs/fuse-2.3:0= >=net-fs/samba-4.2 >=dev-libs/glib-2.30 keyring? ( app-crypt/libsecret )
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/project/smbnetfs/smbnetfs/SMBNetFS-0.6.3/smbnetfs-0.6.3.tar.bz2
+_eclasses_=eapi9-pipestatus	d2c134036ac31c3085aebc9147f572bd	readme.gentoo-r1	9ca94b2d607e7454ca6cfb44ab8ce327
+_md5_=ac6a545f85a66d9bcd49583e5c248b96

@@ -1,0 +1,12 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=compile configure install prepare test
+DESCRIPTION=Modal editor inspired by vim
+EAPI=8
+HOMEPAGE=http://kakoune.org/ https://github.com/mawww/kakoune
+INHERIT=toolchain-funcs
+KEYWORDS=~amd64 ~arm ~arm64 ~ppc ~ppc64 ~x86
+LICENSE=Unlicense
+SLOT=0
+SRC_URI=https://github.com/mawww/kakoune/releases/download/v2022.10.31/kakoune-2022.10.31.tar.bz2
+_eclasses_=toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=3e414e17115e5c07c11772b4cc6f12fd

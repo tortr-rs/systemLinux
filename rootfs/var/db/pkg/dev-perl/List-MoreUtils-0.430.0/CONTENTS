@@ -1,0 +1,20 @@
+dir /usr
+dir /usr/lib64
+dir /usr/lib64/perl5
+dir /usr/lib64/perl5/vendor_perl
+dir /usr/lib64/perl5/vendor_perl/5.42
+dir /usr/lib64/perl5/vendor_perl/5.42/List
+dir /usr/lib64/perl5/vendor_perl/5.42/List/MoreUtils
+obj /usr/lib64/perl5/vendor_perl/5.42/List/MoreUtils/Contributing.pod bc5c3b3a4315b475d8b22792658e8038 1763921731
+obj /usr/lib64/perl5/vendor_perl/5.42/List/MoreUtils/PP.pm 40f6af6eedf793474e122fee93949428 1763921731
+obj /usr/lib64/perl5/vendor_perl/5.42/List/MoreUtils.pm 0cb4732c1304c6aeaa4963da6a85271d 1763921731
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/List
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/List/MoreUtils
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/List/MoreUtils/.packlist b946f7e240a9d47b8c11e0724ebd4418 1763921731
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/List-MoreUtils-0.430.0
+obj /usr/share/doc/List-MoreUtils-0.430.0/Changes.bz2 4ece51ac71a3f105cf481c8db070ff18 1763921731
+obj /usr/share/doc/List-MoreUtils-0.430.0/README.md.bz2 6e821ea7f4603598c10d37b2e52ba454 1763921731

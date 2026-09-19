@@ -1,0 +1,14 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=compile install
+DEPEND=dev-libs/libclthreads media-libs/freetype:2 x11-libs/libX11 x11-libs/libXft
+DESCRIPTION=C++ wrapper library around the X Window System API
+EAPI=8
+HOMEPAGE=https://kokkinizita.linuxaudio.org/linuxaudio/index.html
+INHERIT=toolchain-funcs
+KEYWORDS=amd64 ~ppc ~sparc x86
+LICENSE=LGPL-2.1
+RDEPEND=dev-libs/libclthreads media-libs/freetype:2 x11-libs/libX11 x11-libs/libXft
+SLOT=0
+SRC_URI=https://kokkinizita.linuxaudio.org/linuxaudio/downloads/clxclient-3.9.2.tar.bz2
+_eclasses_=toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=43b6b7e6378de5bf9d860684b9082a48

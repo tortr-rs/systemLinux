@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install
+DESCRIPTION=Lightweight scheme interpreter
+EAPI=8
+HOMEPAGE=https://tinyscheme.sourceforge.net/
+INHERIT=multilib toolchain-funcs
+IUSE=static-libs
+KEYWORDS=amd64 ppc x86
+LICENSE=BSD
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/tinyscheme/tinyscheme-1.42.tar.gz
+_eclasses_=multilib	fc812e8eb2170022c28272d80a1f9e77	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=73593c49091b3878ca47dbe9447cb0c6

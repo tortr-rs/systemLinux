@@ -1,0 +1,28 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/xxhsum 8a7f3a9563b444ffb817632d089cef1a 1765732407
+dir /usr/include
+obj /usr/include/xxh3.h 162ffcb2a373c48de3b98a5e9ae4bfc6 1765732406
+obj /usr/include/xxhash.h 93e40f7da3ed1ecc8a2d0884b4dd61ae 1765732406
+dir /usr/lib64
+obj /usr/lib64/libxxhash.so.0.8.3 a0db7a25f164607c45185136931fd6ab 1765732407
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/libxxhash.pc e7aedf8027fe864a8f6c6766e81bd859 1765732406
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/xxhash-0.8.3
+obj /usr/share/doc/xxhash-0.8.3/CHANGELOG.bz2 718d20790d50304910529e091f01f90d 1765732406
+obj /usr/share/doc/xxhash-0.8.3/README.md.bz2 9a8d7d29e60256b9b174b65d6e2039ee 1765732406
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/xxhsum.1.bz2 a9c34d1676a5b0ba837042e2f8dcae14 1765732406
+sym /usr/share/man/man1/xxh64sum.1.bz2 -> xxhsum.1.bz2 1789353967
+sym /usr/share/man/man1/xxh3sum.1.bz2 -> xxhsum.1.bz2 1789353967
+sym /usr/share/man/man1/xxh32sum.1.bz2 -> xxhsum.1.bz2 1789353967
+sym /usr/share/man/man1/xxh128sum.1.bz2 -> xxhsum.1.bz2 1789353967
+sym /usr/lib64/libxxhash.so.0 -> libxxhash.so.0.8.3 1789353967
+sym /usr/lib64/libxxhash.so -> libxxhash.so.0.8.3 1789353967
+sym /usr/bin/xxh64sum -> xxhsum 1789353967
+sym /usr/bin/xxh3sum -> xxhsum 1789353967
+sym /usr/bin/xxh32sum -> xxhsum 1789353967
+sym /usr/bin/xxh128sum -> xxhsum 1789353967

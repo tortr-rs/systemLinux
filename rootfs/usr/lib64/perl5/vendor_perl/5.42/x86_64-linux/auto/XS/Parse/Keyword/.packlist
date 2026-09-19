@@ -1,0 +1,10 @@
+/usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/XS/Parse/Infix.pm
+/usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/XS/Parse/Infix/Builder.pm
+/usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/XS/Parse/Infix/Builder_data.pm
+/usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/XS/Parse/Keyword.pm
+/usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/XS/Parse/Keyword/Builder.pm
+/usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/XS/Parse/Keyword/Builder_data.pm
+/usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/XS/Parse/Keyword/Keyword.bs
+/usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/XS/Parse/Keyword/Keyword.so
+/usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/share/module/XS-Parse-Infix/include/XSParseInfix.h
+/usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/share/module/XS-Parse-Keyword/include/XSParseKeyword.h

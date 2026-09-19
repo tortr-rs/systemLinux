@@ -1,0 +1,39 @@
+dir /usr
+dir /usr/include
+dir /usr/include/json-c
+obj /usr/include/json-c/arraylist.h bed3c39727adfaa767c07c6c3d9a3bfe 1726416901
+obj /usr/include/json-c/debug.h 96a6e82ea382511a945e1812c81f3fee 1726416901
+obj /usr/include/json-c/json.h f741e4ea7a8f78f6c80daf38cb4a919d 1771783618
+obj /usr/include/json-c/json_c_version.h 06c141de3ed1a7ce29be258a39d8a9aa 1726417321
+obj /usr/include/json-c/json_config.h 0fed60af2796fda14fc5b3c077a68386 1771783618
+obj /usr/include/json-c/json_inttypes.h f76f2ff40c81c34adf349cb12b9eb2d5 1726416901
+obj /usr/include/json-c/json_object.h 4cf09be9d268ae026cc5b115f925ae0b 1726416901
+obj /usr/include/json-c/json_object_iterator.h 6303a77735aaabbb08fdc3c4540f7268 1726416901
+obj /usr/include/json-c/json_patch.h 4b4e70bdb8550d022185d4caa1432743 1726416901
+obj /usr/include/json-c/json_pointer.h 378069205a42d8070f4b985a2c6fb67f 1726416901
+obj /usr/include/json-c/json_tokener.h 599539a4fa352fc41a0bfd01be133cc8 1726416901
+obj /usr/include/json-c/json_types.h 3d04159d4a6b9588dae78910ebbb6c36 1726416901
+obj /usr/include/json-c/json_util.h 6d69a2f494cce7f3fecb84376f397a11 1726416901
+obj /usr/include/json-c/json_visit.h f2f3ebd75c5b9b8165ce31d46cb0388e 1726416901
+obj /usr/include/json-c/linkhash.h 3931fc23a9213352b0e3c108cb97c642 1726416901
+obj /usr/include/json-c/printbuf.h 221478b454a2e849314e1cfbbcf80f39 1726416901
+dir /usr/lib64
+dir /usr/lib64/cmake
+dir /usr/lib64/cmake/json-c
+obj /usr/lib64/cmake/json-c/json-c-config.cmake 786c251fbb9ec7baf74e0311ad3e565a 1771783618
+obj /usr/lib64/cmake/json-c/json-c-targets-relwithdebinfo.cmake ed438cfda102b248405a04838d0a27d8 1771783618
+obj /usr/lib64/cmake/json-c/json-c-targets.cmake cc5bff3a43e6fa9997a12045b9011208 1771783618
+obj /usr/lib64/libjson-c.so.5.4.0 99fbe379cc1dd4c2b867da5458a25e66 1771783628
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/json-c.pc 371c418f043e7e596715ac5f6fd41f87 1771783618
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/json-c-0.18
+obj /usr/share/doc/json-c-0.18/AUTHORS.bz2 2490e877102b8963a7cad3178cf07629 1771783626
+obj /usr/share/doc/json-c-0.18/ChangeLog.bz2 ae6d567b6be54a8ac2b2764f0cdb527d 1771783626
+obj /usr/share/doc/json-c-0.18/NEWS 7b33597477549d51d7d465c006f004d8 1771783627
+obj /usr/share/doc/json-c-0.18/README 3250f962cda7d1b593b26a8415e505b4 1771783626
+obj /usr/share/doc/json-c-0.18/README.html 3c9423a199599f7f28a97cf79ebbb9ae 1771783626
+obj /usr/share/doc/json-c-0.18/README.md.bz2 1e24258f882d14d9971ab4f09e75bdc7 1771783626
+sym /usr/lib64/libjson-c.so.5 -> libjson-c.so.5.4.0 1789353925
+sym /usr/lib64/libjson-c.so -> libjson-c.so.5 1789353925

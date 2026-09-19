@@ -1,0 +1,149 @@
+dir /usr
+dir /usr/bin
+sym /usr/bin/find -> gfind 1789354080
+obj /usr/bin/gfind dec24849d6cc3aaad8ac055c5aa07fd0 1786902301
+obj /usr/bin/gxargs 078e02784aacaaec7b18a2b6457142fd 1786902301
+sym /usr/bin/xargs -> gxargs 1789354080
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/findutils-4.11.0
+obj /usr/share/doc/findutils-4.11.0/AUTHORS.bz2 5d68bcfd3f1f89db4403a52643415011 1786902300
+obj /usr/share/doc/findutils-4.11.0/ChangeLog.bz2 34d2c46ae93c753105f014f5afac42f5 1786902300
+obj /usr/share/doc/findutils-4.11.0/NEWS.bz2 da7f473a4d14c1bc6fc877dc8bd505dd 1786902300
+obj /usr/share/doc/findutils-4.11.0/README-hacking.bz2 e6fcae67758c3482a3e0111d041a6904 1786902300
+obj /usr/share/doc/findutils-4.11.0/README.bz2 daa644928425596ac4e9da2ad0b085eb 1786902300
+obj /usr/share/doc/findutils-4.11.0/THANKS.bz2 edb3bf2be97842fb650e9e53b2a04340 1786902300
+obj /usr/share/doc/findutils-4.11.0/TODO.bz2 fbc74d24af8b26b502cf826ee1cfce1b 1786902300
+dir /usr/share/info
+obj /usr/share/info/find-maint.info.bz2 a8ca4d6e6f712a3e6ba1b42db4b4877e 1786902299
+obj /usr/share/info/find.info.bz2 b0409a8c70183c92ebd886fc575c386f 1786902299
+dir /usr/share/locale
+dir /usr/share/locale/ar
+dir /usr/share/locale/ar/LC_MESSAGES
+obj /usr/share/locale/ar/LC_MESSAGES/findutils.mo eab566663201bef74e3d4eb6b8a87c95 1786902299
+dir /usr/share/locale/be
+dir /usr/share/locale/be/LC_MESSAGES
+obj /usr/share/locale/be/LC_MESSAGES/findutils.mo 9acd9f484e5df255158e8470db1613f3 1786902299
+dir /usr/share/locale/bg
+dir /usr/share/locale/bg/LC_MESSAGES
+obj /usr/share/locale/bg/LC_MESSAGES/findutils.mo d0fcfa33f60a40ba576a39b5cc240d84 1786902299
+dir /usr/share/locale/ca
+dir /usr/share/locale/ca/LC_MESSAGES
+obj /usr/share/locale/ca/LC_MESSAGES/findutils.mo e4803ee5a74520d002d3fecd955c0be3 1786902299
+dir /usr/share/locale/cs
+dir /usr/share/locale/cs/LC_MESSAGES
+obj /usr/share/locale/cs/LC_MESSAGES/findutils.mo 30c2bdeb455063bd1c43bd9b7e6f37c9 1786902299
+dir /usr/share/locale/da
+dir /usr/share/locale/da/LC_MESSAGES
+obj /usr/share/locale/da/LC_MESSAGES/findutils.mo 8952c58177cce0e8a5c061e6e2f2ba53 1786902299
+dir /usr/share/locale/de
+dir /usr/share/locale/de/LC_MESSAGES
+obj /usr/share/locale/de/LC_MESSAGES/findutils.mo 748307ab70bc9b5a81a5dd1eaaeeba3c 1786902299
+dir /usr/share/locale/el
+dir /usr/share/locale/el/LC_MESSAGES
+obj /usr/share/locale/el/LC_MESSAGES/findutils.mo a0d7b97f0d3fc29d46c3b597219e6bc0 1786902299
+dir /usr/share/locale/eo
+dir /usr/share/locale/eo/LC_MESSAGES
+obj /usr/share/locale/eo/LC_MESSAGES/findutils.mo d54f03b8bccc26b32444e2635ee022ae 1786902299
+dir /usr/share/locale/es
+dir /usr/share/locale/es/LC_MESSAGES
+obj /usr/share/locale/es/LC_MESSAGES/findutils.mo 05de08588bf25ca7a06d4b5a8aca9cd1 1786902299
+dir /usr/share/locale/et
+dir /usr/share/locale/et/LC_MESSAGES
+obj /usr/share/locale/et/LC_MESSAGES/findutils.mo 3bdd594f244be0d358a260d007b6b989 1786902299
+dir /usr/share/locale/fi
+dir /usr/share/locale/fi/LC_MESSAGES
+obj /usr/share/locale/fi/LC_MESSAGES/findutils.mo 5c2bff17e463081d7d8563e486014eb7 1786902299
+dir /usr/share/locale/fr
+dir /usr/share/locale/fr/LC_MESSAGES
+obj /usr/share/locale/fr/LC_MESSAGES/findutils.mo 07bd8f20807557c0da857ff5566e38e6 1786902299
+dir /usr/share/locale/ga
+dir /usr/share/locale/ga/LC_MESSAGES
+obj /usr/share/locale/ga/LC_MESSAGES/findutils.mo edd76e71e15a577b9cc566f463e0cd4c 1786902299
+dir /usr/share/locale/gl
+dir /usr/share/locale/gl/LC_MESSAGES
+obj /usr/share/locale/gl/LC_MESSAGES/findutils.mo c11c3a003af1856b93ee82a888282cda 1786902299
+dir /usr/share/locale/hr
+dir /usr/share/locale/hr/LC_MESSAGES
+obj /usr/share/locale/hr/LC_MESSAGES/findutils.mo 6e1bfc15d17218267f18a71548e85034 1786902299
+dir /usr/share/locale/hu
+dir /usr/share/locale/hu/LC_MESSAGES
+obj /usr/share/locale/hu/LC_MESSAGES/findutils.mo 06e6b35e885b1d55b6a049cac367fc9f 1786902299
+dir /usr/share/locale/id
+dir /usr/share/locale/id/LC_MESSAGES
+obj /usr/share/locale/id/LC_MESSAGES/findutils.mo db781e48e24e24d0d73a4ca829a62f48 1786902299
+dir /usr/share/locale/it
+dir /usr/share/locale/it/LC_MESSAGES
+obj /usr/share/locale/it/LC_MESSAGES/findutils.mo 49ed1b37a1ed5420bf637466c14a5192 1786902299
+dir /usr/share/locale/ja
+dir /usr/share/locale/ja/LC_MESSAGES
+obj /usr/share/locale/ja/LC_MESSAGES/findutils.mo 966c440c777cc09e5262319edfb81377 1786902299
+dir /usr/share/locale/ka
+dir /usr/share/locale/ka/LC_MESSAGES
+obj /usr/share/locale/ka/LC_MESSAGES/findutils.mo 753c2e7622549f00a1918a7c4ba04c66 1786902299
+dir /usr/share/locale/ko
+dir /usr/share/locale/ko/LC_MESSAGES
+obj /usr/share/locale/ko/LC_MESSAGES/findutils.mo e1bab8e680e5e59442ea0e584048b716 1786902299
+dir /usr/share/locale/lg
+dir /usr/share/locale/lg/LC_MESSAGES
+obj /usr/share/locale/lg/LC_MESSAGES/findutils.mo f6aa2b1f9d30ecd2e4fdbd7f2884819b 1786902299
+dir /usr/share/locale/lt
+dir /usr/share/locale/lt/LC_MESSAGES
+obj /usr/share/locale/lt/LC_MESSAGES/findutils.mo 1c2d8437e170472249103444b49dcd44 1786902299
+dir /usr/share/locale/ms
+dir /usr/share/locale/ms/LC_MESSAGES
+obj /usr/share/locale/ms/LC_MESSAGES/findutils.mo 8c4502ed8abfb11213cc32e9379df4fb 1786902299
+dir /usr/share/locale/nb
+dir /usr/share/locale/nb/LC_MESSAGES
+obj /usr/share/locale/nb/LC_MESSAGES/findutils.mo 5cc56dd45bbf6bbdd2e247468549c36e 1786902299
+dir /usr/share/locale/nl
+dir /usr/share/locale/nl/LC_MESSAGES
+obj /usr/share/locale/nl/LC_MESSAGES/findutils.mo d0193cef5b0cfa527dd549a130c80eba 1786902299
+dir /usr/share/locale/pl
+dir /usr/share/locale/pl/LC_MESSAGES
+obj /usr/share/locale/pl/LC_MESSAGES/findutils.mo 414e1c7f5881b1846c42776fdf8d2083 1786902299
+dir /usr/share/locale/pt
+dir /usr/share/locale/pt/LC_MESSAGES
+obj /usr/share/locale/pt/LC_MESSAGES/findutils.mo 62497fc355221e90eac77fad3104a7dc 1786902299
+dir /usr/share/locale/pt_BR
+dir /usr/share/locale/pt_BR/LC_MESSAGES
+obj /usr/share/locale/pt_BR/LC_MESSAGES/findutils.mo 98ec5724f7a9c708d1a2af1d123ff676 1786902299
+dir /usr/share/locale/ro
+dir /usr/share/locale/ro/LC_MESSAGES
+obj /usr/share/locale/ro/LC_MESSAGES/findutils.mo 524d0e3fa90a3aa48fb91115e83c8d69 1786902299
+dir /usr/share/locale/ru
+dir /usr/share/locale/ru/LC_MESSAGES
+obj /usr/share/locale/ru/LC_MESSAGES/findutils.mo 9870b5f5e75fa8f17b2c5a03e4064372 1786902299
+dir /usr/share/locale/sk
+dir /usr/share/locale/sk/LC_MESSAGES
+obj /usr/share/locale/sk/LC_MESSAGES/findutils.mo 20fcdaeec0d862deaee7aedbc6b74dd4 1786902299
+dir /usr/share/locale/sl
+dir /usr/share/locale/sl/LC_MESSAGES
+obj /usr/share/locale/sl/LC_MESSAGES/findutils.mo 261b98275d9f93b638465e0c4f096823 1786902299
+dir /usr/share/locale/sr
+dir /usr/share/locale/sr/LC_MESSAGES
+obj /usr/share/locale/sr/LC_MESSAGES/findutils.mo 1ca79a6322c97e8978933ccc407b8cb1 1786902299
+dir /usr/share/locale/sv
+dir /usr/share/locale/sv/LC_MESSAGES
+obj /usr/share/locale/sv/LC_MESSAGES/findutils.mo 7dbf4dfd2b2a165a831a8e9645af38d1 1786902300
+dir /usr/share/locale/tr
+dir /usr/share/locale/tr/LC_MESSAGES
+obj /usr/share/locale/tr/LC_MESSAGES/findutils.mo 660862c86172a2aac0d88e91e8bd7bba 1786902300
+dir /usr/share/locale/uk
+dir /usr/share/locale/uk/LC_MESSAGES
+obj /usr/share/locale/uk/LC_MESSAGES/findutils.mo fcef1db843ad8492b085b11ea8ed0f9a 1786902300
+dir /usr/share/locale/vi
+dir /usr/share/locale/vi/LC_MESSAGES
+obj /usr/share/locale/vi/LC_MESSAGES/findutils.mo a5bc39823d95fb6672f77ebb73174926 1786902300
+dir /usr/share/locale/zh_CN
+dir /usr/share/locale/zh_CN/LC_MESSAGES
+obj /usr/share/locale/zh_CN/LC_MESSAGES/findutils.mo 3244fa22c9a245a158b41df7119844a3 1786902300
+dir /usr/share/locale/zh_TW
+dir /usr/share/locale/zh_TW/LC_MESSAGES
+obj /usr/share/locale/zh_TW/LC_MESSAGES/findutils.mo 57c12dade7197b349ae0724cf6f07722 1786902300
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/gfind.1.bz2 02b00c4862427bc68749bf69fd2893d2 1786902299
+obj /usr/share/man/man1/gxargs.1.bz2 bd2c09a9d3e99678334d7175e193e947 1786902299
+sym /usr/share/man/man1/xargs.1.bz2 -> gxargs.1.bz2 1789354080
+sym /usr/share/man/man1/find.1.bz2 -> gfind.1.bz2 1789354080

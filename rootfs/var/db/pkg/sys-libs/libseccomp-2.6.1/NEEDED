@@ -1,0 +1,2 @@
+/usr/bin/scmp_sys_resolver libseccomp.so.2,libc.so.6
+/usr/lib64/libseccomp.so.2.6.1 libc.so.6

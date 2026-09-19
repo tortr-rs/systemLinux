@@ -1,0 +1,4 @@
+dir /usr
+dir /usr/lib
+dir /usr/lib/sysusers.d
+obj /usr/lib/sysusers.d/acct-user-systemd-oom.conf d6bcebc5f6d0e15c3224cbec858a1502 1711315995

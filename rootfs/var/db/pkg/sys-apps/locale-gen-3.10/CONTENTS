@@ -1,0 +1,14 @@
+dir /usr
+dir /usr/lib
+dir /usr/lib/locale
+obj /usr/lib/locale/.keep_sys-apps_locale-gen-0 d41d8cd98f00b204e9800998ecf8427e 1769361434
+dir /usr/sbin
+obj /usr/sbin/locale-gen 81e29b428bf74e888b7bfe0010b0d653 1769361434
+dir /usr/share
+dir /usr/share/man
+dir /usr/share/man/man5
+obj /usr/share/man/man5/locale.gen.5.bz2 9f596d5e6684bf5739cf2a332e88c43d 1769361434
+dir /usr/share/man/man8
+obj /usr/share/man/man8/locale-gen.8.bz2 1029e04efb94cb3ddcc9aa78b6081e68 1769361434
+dir /etc
+obj /etc/locale.gen 90b8bacf152350a0d4f35ac4531c8e96 1769361434

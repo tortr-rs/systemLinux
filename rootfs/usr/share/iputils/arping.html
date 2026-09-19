@@ -1,0 +1,112 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>arping</title><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><style>
+    a.headerlink {
+      color: #c60f0f;
+      font-size: 0.8em;
+      padding: 0 4px 0 4px;
+      text-decoration: none;
+      visibility: hidden;
+    }
+
+    a.headerlink:hover {
+      background-color: #c60f0f;
+      color: white;
+    }
+
+    h1:hover > a.headerlink, h2:hover > a.headerlink, h3:hover > a.headerlink, dt:hover > a.headerlink {
+      visibility: visible;
+    }
+  </style><a href="index.html">Index </a>·
+  <a href="iputils.directives.html">Directives </a><span style="float:right">iputils 20250605</span><hr><div class="refentry"><a name="man.arping"></a><div class="titlepage"></div><div class="refnamediv"><h2>Name</h2><p>arping — send ARP REQUEST to a neighbour host</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><div class="cmdsynopsis"><p><code class="command">arping</code>  [
+        <code class="option">-AbDfhqUV</code>
+      ] [
+        <code class="option">-c
+        <em class="replaceable"><code>count</code></em></code>
+      ] [
+        <code class="option">-w
+        <em class="replaceable"><code>deadline</code></em></code>
+      ] [
+        <code class="option">-i
+        <em class="replaceable"><code>interval</code></em></code>
+      ] [
+        <code class="option">-s
+        <em class="replaceable"><code>source</code></em></code>
+      ] [
+        <code class="option">-I
+        <em class="replaceable"><code>interface</code></em></code>
+      ] {destination}</p></div></div><div class="refsection"><a name="description"></a><h2>DESCRIPTION</h2><p>Ping
+    <span class="emphasis"><em>destination</em></span> on device
+    <span class="emphasis"><em>interface</em></span> by ARP packets, using
+    source address
+    <span class="emphasis"><em>source</em></span>.</p><p>arping supports IPv4 addresses only. For IPv6, see
+    <span class="citerefentry"><span class="refentrytitle">ndisc6</span>(8)</span>.</p></div><div class="refsection"><a name="options"></a><h2>OPTIONS</h2><div class="variablelist"><dl class="variablelist"><dt><span class="term">
+          <code class="option">-A</code>
+        </span></dt><dd><p>The same as
+          <code class="option">-U</code>, but ARP REPLY packets used instead
+          of ARP REQUEST.</p></dd><dt><span class="term">
+          <code class="option">-b</code>
+        </span></dt><dd><p>Send only MAC level broadcasts. Normally
+          <span class="command"><strong>arping</strong></span> starts from sending broadcast,
+          and switch to unicast after reply received.</p></dd><dt><span class="term">
+          <code class="option">-c
+          <em class="replaceable"><code>count</code></em></code>
+        </span></dt><dd><p>Stop after sending
+          <span class="emphasis"><em>count</em></span> ARP REQUEST packets.
+          With
+          <span class="emphasis"><em>deadline</em></span> option, instead
+          wait for
+          <span class="emphasis"><em>count</em></span> ARP REPLY packets, or
+          until the timeout expires.</p></dd><dt><span class="term">
+          <code class="option">-D</code>
+        </span></dt><dd><p>Duplicate address detection mode (DAD). See
+          RFC2131, 4.4.1. Returns 0, if DAD succeeded i.e. no
+          replies are received.</p></dd><dt><span class="term">
+          <code class="option">-f</code>
+        </span></dt><dd><p>Finish after the first reply confirming that target
+          is alive.</p></dd><dt><span class="term">
+          <code class="option">-I
+          <em class="replaceable"><code>interface</code></em></code>
+        </span></dt><dd><p>Name of network device where to send ARP REQUEST
+          packets.</p></dd><dt><span class="term">
+          <code class="option">-h</code>
+        </span></dt><dd><p>Print help page and exit.</p></dd><dt><span class="term">
+          <code class="option">-q</code>
+        </span></dt><dd><p>Quiet output. Nothing is displayed.</p></dd><dt><span class="term">
+          <code class="option">-s
+          <em class="replaceable"><code>source</code></em></code>
+        </span></dt><dd><p>IP source address to use in ARP packets. If this
+          option is absent, source address is:</p><div class="variablelist"><dl class="variablelist"><dt></dt><dd><p>• In DAD mode (with option
+                <code class="option">-D</code>) set to 0.0.0.0.</p></dd><dt></dt><dd><p>• In Unsolicited ARP mode (with options
+                <code class="option">-U</code> or
+                <code class="option">-A</code>) set to
+                <span class="emphasis"><em>destination</em></span>.</p></dd><dt></dt><dd><p>• Otherwise, it is calculated from routing
+                tables.</p></dd></dl></div></dd><dt><span class="term">
+          <code class="option">-U</code>
+        </span></dt><dd><p>Unsolicited ARP mode to update neighbours' ARP
+          caches. No replies are expected.</p></dd><dt><span class="term">
+          <code class="option">-V</code>
+        </span></dt><dd><p>Print version of the program and exit.</p></dd><dt><span class="term">
+          <code class="option">-w
+          <em class="replaceable"><code>deadline</code></em></code>
+        </span></dt><dd><p>Specify a timeout, in seconds, before
+          <span class="command"><strong>arping</strong></span> exits regardless of how many
+          packets have been sent or received.  If any replies are
+          received, exit with status 0, otherwise status 1.  When
+          combined with the <span class="emphasis"><em>count</em></span>
+          option, exit with status 0 if <span class="emphasis"><em>count</em></span> replies are received before the
+          deadline expiration, otherwise status 1.</p></dd><dt><span class="term">
+          <code class="option">-i
+          <em class="replaceable"><code>interval</code></em></code>
+        </span></dt><dd><p>Specify an interval, in seconds, between
+          packets.</p></dd></dl></div></div><div class="refsect1"><a name="see_also"></a><h2>SEE ALSO</h2><p>
+    <span class="citerefentry"><span class="refentrytitle">ndisc6</span>(8)</span>,
+    <span class="citerefentry"><span class="refentrytitle">ping</span>(8)</span>,
+    <span class="citerefentry"><span class="refentrytitle">clockdiff</span>(8)</span>,
+    <span class="citerefentry"><span class="refentrytitle">tracepath</span>(8)</span>.</p></div><div class="refsect1"><a name="author"></a><h2>AUTHOR</h2><p>
+    <span class="command"><strong>arping</strong></span> was written by Alexey Kuznetsov
+    &lt;kuznet@ms2.inr.ac.ru&gt;.</p></div><div class="refsect1"><a name="security"></a><h2>SECURITY</h2><p>
+    <span class="command"><strong>arping</strong></span> requires CAP_NET_RAW capability to be
+    executed. It is not recommended to be used as set-uid root,
+    because it allows user to modify ARP caches of neighbour
+    hosts.</p></div><div class="refsect1"><a name="availability"></a><h2>AVAILABILITY</h2><p>
+    <span class="command"><strong>arping</strong></span> is part of
+    <span class="emphasis"><em>iputils</em></span> package.</p></div></div></body></html>

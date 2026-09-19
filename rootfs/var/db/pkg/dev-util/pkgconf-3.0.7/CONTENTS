@@ -1,0 +1,46 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/bomtool 53a40a5ec90c8fd082cd21fd8e7a3a6f 1789319460
+obj /usr/bin/pccritic 6a677deb77459da1af6a6ed3120bec81 1789319460
+sym /usr/bin/pkg-config -> x86_64-pc-linux-gnu-pkg-config 1789354031
+sym /usr/bin/pkgconf -> x86_64-pc-linux-gnu-pkgconf 1789354031
+obj /usr/bin/spdxtool 2a4a12857e70657be8a9bc9f68c78357 1789319460
+sym /usr/bin/x86_64-pc-linux-gnu-pkg-config -> x86_64-pc-linux-gnu-pkgconf 1789354031
+obj /usr/bin/x86_64-pc-linux-gnu-pkgconf d1b076444ec48c10d95d044994090da1 1789319460
+dir /usr/include
+dir /usr/include/pkgconf
+dir /usr/include/pkgconf/libpkgconf
+obj /usr/include/pkgconf/libpkgconf/bsdstubs.h 18bc80f69d6c9b090019e3ec52cf7492 1789319459
+obj /usr/include/pkgconf/libpkgconf/iter.h 6ab665afda9662a7f0cc4084266c98d0 1789319459
+obj /usr/include/pkgconf/libpkgconf/libpkgconf-api.h 63feb645ca2ae3611a53a089bb888537 1789319459
+obj /usr/include/pkgconf/libpkgconf/libpkgconf.h d59dd9847a2928c4c4534715cd51b62d 1789319459
+obj /usr/include/pkgconf/libpkgconf/stdinc.h 4a8fdc19f9f19ec6c815452b806883a2 1789319459
+dir /usr/lib64
+sym /usr/lib64/libpkgconf.so -> libpkgconf.so.8.0.0 1789354031
+sym /usr/lib64/libpkgconf.so.8 -> libpkgconf.so.8.0.0 1789354031
+obj /usr/lib64/libpkgconf.so.8.0.0 6fc83053a80c44c948d52e11d2ee19d7 1789319460
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/libpkgconf.pc a37f53375b945dad802e49c12f7584dd 1789319459
+dir /usr/share
+dir /usr/share/aclocal
+obj /usr/share/aclocal/pkg.m4 3520f38a816e9115324e52def96fcd0d 1789319459
+dir /usr/share/doc
+dir /usr/share/doc/pkgconf-3.0.7
+obj /usr/share/doc/pkgconf-3.0.7/AUTHORS.bz2 f5eec4ec59eb078cc263d7698dacb9eb 1789319460
+obj /usr/share/doc/pkgconf-3.0.7/CONTRIBUTING.md.bz2 047be543f542e8d3a86b63a5b52c5c3a 1789319459
+obj /usr/share/doc/pkgconf-3.0.7/COPYING.bz2 beeb9ec9d14107d73660dce747c0e80c 1789319459
+obj /usr/share/doc/pkgconf-3.0.7/DCO.bz2 44b8d083fdc20c89bce7d9aec344323a 1789319459
+obj /usr/share/doc/pkgconf-3.0.7/NEWS.bz2 da6f21aa8e42723b40ecf486ada4f2e7 1789319460
+obj /usr/share/doc/pkgconf-3.0.7/README.md.bz2 2b8a29cb45862cde073e6c6ebf9efd44 1789319460
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/bomtool.1.bz2 3cf3daf781ff10c1ef603c0d06793d56 1789319459
+obj /usr/share/man/man1/pccritic.1.bz2 04ab5b526cd3add66328d9e79ffff4c5 1789319459
+obj /usr/share/man/man1/pkgconf.1.bz2 e3f7c2c681e1252a50f9d9671b4707ce 1789319459
+obj /usr/share/man/man1/spdxtool.1.bz2 ea9cb82ce5af580a188c68e70915b552 1789319459
+dir /usr/share/man/man5
+obj /usr/share/man/man5/pc.5.bz2 670d8c7e01001723cf828f802f707b52 1789319459
+obj /usr/share/man/man5/pkgconf-personality.5.bz2 e241ca1f23c5aa32121e62c60a3a3efc 1789319459
+dir /usr/share/man/man7
+obj /usr/share/man/man7/pkg.m4.7.bz2 d4841239fe75d14e812d627b33d42237 1789319459
+sym /usr/share/man/man1/pkg-config.1.bz2 -> pkgconf.1.bz2 1789354031

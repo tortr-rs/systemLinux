@@ -1,0 +1,2 @@
+/usr/bin/install-info libc.so.6
+/usr/bin/info libtinfo.so.6,libc.so.6

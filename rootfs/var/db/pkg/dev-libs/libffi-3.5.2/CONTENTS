@@ -1,0 +1,24 @@
+dir /usr
+dir /usr/lib64
+dir /usr/lib64/libffi
+dir /usr/lib64/libffi/include
+obj /usr/lib64/libffi/include/ffi.h 26a7b605c89d4d14e3f77248f92d1220 1757871081
+obj /usr/lib64/libffi/include/ffitarget.h 4c6f209d7e68379a335dfe32e9415f15 1757871081
+sym /usr/lib64/libffi.so -> libffi.so.8.2.0 1789353930
+sym /usr/lib64/libffi.so.8 -> libffi.so.8.2.0 1789353930
+obj /usr/lib64/libffi.so.8.2.0 28f58cbb392046d625b90c7a5b39305a 1757871082
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/libffi.pc 833881423b4343c2ddc7830428899831 1757871081
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/libffi-3.5.2
+obj /usr/share/doc/libffi-3.5.2/ChangeLog.bz2 c67cb951e0fe212502dfc67ee40c3813 1757871081
+obj /usr/share/doc/libffi-3.5.2/README.md.bz2 977e3bf07a75fd064dcf32a09fbd31e3 1757871081
+dir /usr/share/info
+obj /usr/share/info/libffi.info.bz2 1597491baee1f9464cd5d0ef2c8ac0dd 1757871081
+dir /usr/share/man
+dir /usr/share/man/man3
+obj /usr/share/man/man3/ffi.3.bz2 11dcbb53056191fca666b4f76484caa3 1757871081
+obj /usr/share/man/man3/ffi_call.3.bz2 c75b51b6eec671f48fa801931348ce63 1757871081
+obj /usr/share/man/man3/ffi_prep_cif.3.bz2 efd35af8d2a1a8d3ee90a10a9f0503c4 1757871081
+obj /usr/share/man/man3/ffi_prep_cif_var.3.bz2 a21bda3223914ad23ecd131ffbc66366 1757871081

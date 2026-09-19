@@ -1,0 +1,17 @@
+dir /usr
+dir /usr/src
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/jansson-2.15.1
+obj /usr/share/doc/jansson-2.15.1/README.rst.bz2 71080cbe9e37e9abf44a85a5947b766f 1788599539
+obj /usr/share/doc/jansson-2.15.1/CHANGES.bz2 f26ede0af1e67ac7d148acd6cc4f5e1c 1788599540
+dir /usr/lib64
+obj /usr/lib64/libjansson.so.4.15.1 ca96af931d2bd9e84539c4969ba78338 1788599541
+sym /usr/lib64/libjansson.so.4 -> libjansson.so.4.15.1 1789836424
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/jansson.pc 9fc56df4f73aec01b619505d4b458433 1788599539
+sym /usr/lib64/libjansson.so -> libjansson.so.4.15.1 1789836424
+dir /usr/include
+obj /usr/include/jansson_config.h 13ecb46bf6a8cf027660fe7ef233bc82 1788599539
+obj /usr/include/jansson.h 741bd7ef2f34f95e0a50e755f3fe5275 1788599539
+dir /usr/lib

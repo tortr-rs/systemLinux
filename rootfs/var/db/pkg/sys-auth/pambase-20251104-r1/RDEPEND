@@ -1,0 +1,1 @@
+>=sys-libs/pam-1.4.0 >=sys-auth/passwdqc-1.4.0-r1 sys-apps/systemd[pam] sys-libs/libxcrypt[system]

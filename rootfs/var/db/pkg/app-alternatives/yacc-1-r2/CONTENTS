@@ -1,0 +1,7 @@
+dir /usr
+dir /usr/bin
+sym /usr/bin/yacc -> yacc.bison 1789353863
+dir /usr/share
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/yacc.1 4443957fe0f5cf2e974445946a95b9a3 1710328064

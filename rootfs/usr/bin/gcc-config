@@ -1,0 +1,1209 @@
+#!/usr/bin/env bash
+# Copyright 2002-2022 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+# Format of /etc/env.d/gcc/ contents:
+#  config-<TARGET>:	CURRENT=<TARGET>-<VER>
+#  <TARGET>-<VER>:	has gcc-specific variables (provided by sys-devel/gcc)
+
+: ${ROOT:=/}
+[[ ${ROOT} != */ ]] && ROOT="${ROOT}/"
+[[ ${ROOT} != /* ]] && ROOT="${PWD%/}/${ROOT}"
+BROOT=""
+[[ ${BROOT} == @*@ ]] && BROOT=""
+: ${EPREFIX="${BROOT}"}
+EROOT="${ROOT%/}${EPREFIX}/"
+export PORTAGE_CONFIGROOT="${EROOT}"
+
+cd /
+
+trap ":" INT QUIT TSTP
+
+argv0=${0##*/}
+functions_script="${BROOT}/lib/gentoo/functions.sh"
+source "${functions_script}" || {
+	echo "${argv0}: Could not source ${functions_script}!" 1>&2
+	exit 1
+}
+esyslog() { :; }
+has() { [[ " ${*:2} " == *" $1 "* ]]; }
+die() { eerror "${argv0}: $*"; exit 1; }
+umask 022
+
+# *BSD SED does not work as-is, use GNU SED. TODO: find details.
+SED=$(type -P gsed)
+: ${SED:=$(type -P sed)}
+
+# Further pain: `tac` is not available everywhere #390179
+if ! type -P tac >/dev/null ; then
+	tac() { ${SED} -e '1!G;h;$!d' "$@" ; }
+fi
+
+PV="2.12.2"
+[[ ${PV} == @*@ ]] && PV="git"
+
+ABI=${DEFAULT_ABI:-$(portageq envvar DEFAULT_ABI 2>/dev/null)}
+LIBDIR_VAR=LIBDIR_${ABI}
+GENTOO_LIBDIR=${!LIBDIR_VAR:-$(portageq envvar "${LIBDIR_VAR}" 2>/dev/null)}
+[[ $? -ne 0 || -z ${GENTOO_LIBDIR} ]] && GENTOO_LIBDIR="lib64"
+[[ ${GENTOO_LIBDIR} == @*@ ]] && GENTOO_LIBDIR="lib"
+
+usage() {
+	cat <<-EOF
+	Usage: gcc-config [options] [CC Profile]
+	       gcc-config [options] --get-current-profile [CTARGET]
+	Change the current compiler profile, or give info about profiles.
+
+	Options:
+	  -C, --nocolor              Disable color output
+	  -O, --use-old              Use the old profile if one was selected.
+	  -f, --force                Make sure all config files are regenerated.
+	  -c, --get-current-profile  Print current used gcc profile.
+	  -l, --list-profiles        Print a list of available profiles.
+	  -S, --split-profile        Split profiles into their components
+	  -E, --print-environ        Print environment that can be used to setup the
+	                             current gcc profile, or a specified one.
+	  -B, --get-bin-path         Print path where binaries of the given/current
+	                             profile are located.
+	  -L, --get-lib-path         Print path where libraries of the given/current
+	                             profile are located.
+
+	Profile names are of the form:  <CTARGET>-<version> (like 'i686-pc-linux-gnu-3.2.1')
+	                                <version> (like '3.2.1')
+	                                <profile-number> (as specified in '--list-profiles')
+	                                latest
+	                                <CTARGET>-latest (like mmix-latest)
+	EOF
+	exit ${1:-1}
+}
+[[ $# -lt 1 ]] && usage 1
+
+# Usage: version_sorted_paths <CHOST>
+# Returns paths ordered by version from olders to newest.
+# We use the following hack: assume the input containst digits only in places of versions
+# Normalizer:
+#    echo "hello-world-1.2.3.444.56778" | ${SED} -e 's/[0-9]\+/0000&/g' | ${SED} -e 's/0*\([0-9]\{4\}\)/\1/g'
+#    hello-world-0001.0002.0003.0444.56778
+# That way we can have 9.0 < 10.0 order.
+# TODO: explore how portable 'sort -V' is and try using that instead.
+version_sorted_paths() {
+	local p mangled_v
+	for p in "$@"; do
+		# TODO: avoid -r
+		mangled_v=$(printf "%s" "${p}" |
+			${SED} -e 's/[0-9]\+/0000&/g' |
+			${SED} -e 's/0*\([0-9]\{4\}\)/\1/g'
+		)
+		printf "%s %s\n" "${mangled_v}" "${p}"
+	done | LANG=C sort | $SED -e 's/^.* //g'
+}
+
+# Usage: source_var <var> <file> [default value]
+source_var() {
+	unset $1
+	local val=$(source "$2"; echo "${!1}")
+	: ${val:=$3}
+	eval $1=\"${val}\"
+}
+show_var() {
+	source_var "$@"
+	echo "${!1}"
+}
+
+source_profile() {
+	# Compatibility with profile files created before 2019-09-05.
+	# These profile files were setting PATH variable.
+	# Sourcing them without restoring previous PATH value breaks gcc-config.
+	local backup_PATH=${PATH}
+
+	source "$1"
+
+	PATH=${backup_PATH}
+}
+
+try_real_hard_to_find_CHOST() {
+	#
+	# First we read make.conf
+	#
+
+	local varname=${1:-CHOST}
+	local conf=${EROOT}/etc/portage/make.conf
+	if [[ ! -e ${conf} && -e ${EROOT}/etc/make.conf ]] ; then
+		conf=${EROOT}/etc/make.conf
+	fi
+	local ret=$(source "${conf}" 2>/dev/null ; echo ${!varname})
+	if [[ -z ${ret} ]] ; then
+		# newer portage supports spaces between the var and =
+		# CHOST     =  "this-is-silly"
+		ret=$(eval $(
+			${SED} -n \
+				-e 's:[[:space:]]::g' \
+				-e "/^${varname}=/p" \
+				"${conf}"
+			) ; echo ${!varname}
+		)
+	fi
+
+	if [[ -n ${ret} ]] ; then
+		echo ${ret}
+		return 0
+	fi
+
+	#
+	# Then we try /etc/env.d/gcc/config-${CTARGET}
+	#
+	if [[ -s ${EROOT}/etc/env.d/gcc/config-${CTARGET} ]] ; then
+		ret=$(split_gcc_ver $(show_var CURRENT "${EROOT}"/etc/env.d/gcc/config-${CTARGET}))
+		echo ${ret% *}
+	fi
+}
+
+get_chost() {
+	# If it's set in the env, trust the setting.  If it's wrong,
+	# then that's the caller's problem.
+	[[ -n ${CHOST} ]] && return 0
+
+	export CHOST
+
+	# Make sure Portage isn't broken.
+	CHOST=$(portageq envvar CHOST 2>/dev/null)
+	if [[ $? -ne 0 || -z ${CHOST} ]] ; then
+		ewarn "Python or Portage seems to be broken, attempting to locate CHOST ourselves ..."
+		CHOST=$(try_real_hard_to_find_CHOST)
+	fi
+
+	if [[ -z ${CHOST} ]] ; then
+		eerror "${argv0}: Could not get portage CHOST!"
+		eerror "${argv0}: You should verify that CHOST is set in one of these places:"
+		eerror "${argv0}:  - ${EROOT}/etc/portage/make.conf"
+		eerror "${argv0}:  - active environment"
+		exit 1
+	fi
+}
+
+is_cross_compiler() {
+	[[ ${CHOST} != ${CC_COMP_TARGET} ]]
+}
+
+is_same_mountpoint() {
+	local file1=$1 file2=$2
+
+	if type -P findmnt > /dev/null ; then
+		local file1_mountpoint=$(findmnt -n -o TARGET -T "${file1}")
+		local file2_mountpoint=$(findmnt -n -o TARGET -T "${file2}")
+
+		[[ ${file1_mountpoint} == ${file2_mountpoint} ]]
+		return
+	else
+		local file1_check_file file2_check_file result
+		if [[ -d ${file1} ]] ; then
+			file1_check_file=${file1}/.gcc.config.mountpoint_check_file1.$$
+		else
+			file1_check_file=${file1%/*}/.gcc.config.mountpoint_check_file1.$$
+		fi
+		if [[ -d ${file2} ]] ; then
+			file2_check_file=${file2}/.gcc.config.mountpoint_check_file2.$$
+		else
+			file2_check_file=${file2%/*}/.gcc.config.mountpoint_check_file2.$$
+		fi
+
+		rm -f "${file1_check_file}" "${file2_check_file}"
+		touch "${file1_check_file}"
+		ln "${file1_check_file}" "${file2_check_file}" 2> /dev/null
+		result=$?
+		rm -f "${file1_check_file}" "${file2_check_file}"
+		return ${result}
+	fi
+}
+
+# Usage: atomic_ln <source file> <destination dir> <destination file name>
+atomic_ln() {
+	local src=$1 dst=$2 dstfile=$3 tmp
+	tmp="${dst}/.gcc.config.${dstfile}"
+	# `ln` will expand into unlink();symlink(); which
+	# is not atomic for a small amount of time, but
+	# `mv` is a single rename() call
+	ln -sf "${src}" "${tmp}"
+	mv "${tmp}" "${dst}/${dstfile}"
+}
+
+uniq_wrapper_list() {
+	local ver=$1; shift
+	# We want to normalize away existing target prefix.
+	set -- "${@#${CTARGET}-*}"
+	# And we want to filter out any version suffixed progs.
+	set -- "${@//*-${ver}}"
+	# Finally, filter out dupes.
+	printf '%s\n' "$@" | sort -u
+}
+
+update_wrappers() {
+	# Update the wrappers for this profile.  We need to clean out
+	# the old wrappers if the functionality no longer exists (like
+	# re-emerging gcc with diff USE flags) and install new wrappers
+	# for new functionality (like a version bump).
+	local x CTARGET=$1
+
+	# Facts on gcc's private binary dir contents:
+	#
+	# Native directory looks like:
+	#     /usr/x86_64-pc-linux-gnu/gcc-bin/11.0.0
+	#   Contents looks like:
+	#   - 'foo' ('gcc', 'c++', 'gcc-ar', 'lto-dump')
+	#   - 'foo-${v}' (go-11, gofmt-11)
+	#   - ${CTARGET}-foo ('${CTARGET}-gcc', ...)
+	#
+	#   Not each 'foo' has it's ${CTARGET}-foo match.
+	#   Examples are:
+	#   - lto-dump, gcov-dump, gcov-tool (no ${CTARGET}-lto-dump equvalent)
+	#   - go-${MAJOR}, gofmt-${MAJOR} (no ${CTARGET}-go-${MAJOR} equivalent)
+	#   - ${CTARGET}-gcc-11.0.0 (no gcc-11.0.0 equivalent)
+	#   TODO: is it a gcc or toolchain.eclass bug?
+	#
+	# Cross directory looks like:
+	#     /usr/x86_64-pc-linux-gnu/ia64-unknown-linux-gnu/gcc-bin/10.1.0
+	#   Contents look like:
+	#   - ${CTARGET}-foo ('${CTARGET}-gcc', ...)
+	#
+	#   Every tool is prefixed.
+
+	# Use the old dir to see what we wrapped up previously.
+	local old_wrappers=( $(
+		[[ -n ${OLD_GCC_PATH} ]] || exit 1
+		uniq_wrapper_list "${OLD_CC_COMP_VERSION}" $(
+			cd "${ROOT}${OLD_GCC_PATH}" 2>/dev/null || exit 1
+			echo *
+		)
+	) )
+
+	# See what new stuff we need to wrap up.
+	local new_wrappers=( $(
+		uniq_wrapper_list "${CC_COMP_VERSION}" $(
+			cd "${ROOT}${GCC_PATH}" || exit 1
+			echo *
+		)
+	) )
+	[[ -z ${new_wrappers} ]] && return 1
+
+	# First delete the wrappers that the old one provided but the
+	# new ones do not.
+	for x in "${old_wrappers[@]}" ; do
+		has "${x}" "${new_wrappers[@]}" && continue
+		rm -f "${EROOT}usr/bin/${x}" "${EROOT}usr/bin/${CTARGET}-${x}"
+	done
+
+	# For all toolchains, we want to create the fully qualified
+	# `tuple-foo`.  Only native ones do we want the simple `foo`
+	# and only for USE_NATIVE_LINKS=yes mode.
+	local all_wrappers=( ${new_wrappers[@]/#/${CTARGET}-} )
+	if ! is_cross_compiler ; then
+		all_wrappers+=( "${new_wrappers[@]}" )
+		if [[ ${USE_CC_WRAPPERS} == "yes" ]]; then
+			# There are a few fun extra progs which we have to handle #412319
+			all_wrappers+=( cc:gcc f77:g77 )
+		fi
+	fi
+
+	# Then install wrappers for anything new to this profile.
+	local ref
+	for x in "${all_wrappers[@]}" ; do
+		# We want to figure out the 'reference file' for each
+		# wrapper (the binary we're 'wrapping') so that we can
+		# sync mtimes together.  This makes things like ccache
+		# happy.  See Bug #70548 for more info.
+		#
+		# x=cc:gcc -> ref=/path/to/gcc
+		ref="${ROOT}${GCC_PATH}/${x#*:}"
+		# x=cc:gcc -> x=cc
+		x=${x%:*}
+
+		if [[ ! -x ${ref} ]] ; then
+			if is_cross_compiler && [[ ${ref} != *-accel-* ]] ; then
+				ewarn "insanity with ${x} and ${ref}"
+			else
+				# For native targets, the ref might not be
+				# fully qualified, so use the short name.
+				ref="${ROOT}${GCC_PATH}/${x#${CTARGET}-}"
+			fi
+		fi
+
+		# Now do the actual linking to the target binary
+		if [[ ${x#${CTARGET}-} == ${x} && ${USE_NATIVE_LINKS} != yes ]]; then
+			# Delete stale native symlink.
+			rm -f "${EROOT}usr/bin/${x}"
+		elif [[ -x ${ref} ]] ; then
+			# accel/offload compilers are named like 'x86_64-pc-linux-gnu-accel-nvptx-none-gcc'.
+			#
+			# When building the offload compiler, we'll have ${CHOST}-${CTARGET} where
+			# CHOST is the host and CTARGET is whatever the offload target is. gcc-config
+			# doesn't expect this 'double tuple'.
+			#
+			# e.g. when building nvptx-none, we'll have something like 'nvptx-none-x86_64-pc-linux-gnu-accel-nvptx-none-gcc'
+			# and we want to strip that to be just x86_64-pc-linux-gnu-accel-nvptx-none-gcc, as that's
+			# what we want symlinks to be made for in /usr/bin.
+			[[ ${x} == *-accel-* ]] && x="${x#${CTARGET}-}"
+			atomic_ln "${ref#${ROOT}}" "${EROOT}usr/bin" "${x}"
+		else
+			# Make sure we have no stale wrappers
+			rm -f "${EROOT}usr/bin/${x}"
+		fi
+	done
+
+	# Legacy cruft, make sure we don't leave it laying around, as we used to install
+	# genuine wrappers like python-exec, bug #143205
+	rm -f "${EROOT}usr/bin/${CTARGET}-cc" "${EROOT}usr/bin"/{${CTARGET}-,}g{cc,++}{32,64}
+
+	# But create our own ${CTARGET}-cc in /usr/bin to avoid fallbacks
+	# to the symlinks LLVM creates (sys-devel/clang-toolchain-symlinks).
+	# bug #872416.
+	atomic_ln "${CTARGET}-gcc" "${EROOT}usr/bin" "${CTARGET}-cc"
+
+	# handle the canonical cpp wrapper
+	if ! is_cross_compiler ; then
+		if [[ ${USE_NATIVE_LINKS} == yes ]]; then
+			atomic_ln "${EPREFIX%/}/usr/bin/${CTARGET}-cpp" "${EROOT}lib" "cpp"
+		else
+			rm -f "${EROOT}lib/cpp"
+		fi
+	fi
+
+	# handle c89 and c99 wrappers
+	if ! is_cross_compiler ; then
+		if [[ ${USE_NATIVE_LINKS} == yes ]]; then
+			# In June 2020 gcc-config taken over file handling from toolchain.eclass.
+			cp -fpP "${EROOT}"usr/share/gcc-config/c89 "${EROOT}"usr/bin/c89
+			cp -fpP "${EROOT}"usr/share/gcc-config/c99 "${EROOT}"usr/bin/c99
+		else
+			rm -f "${EROOT}"usr/bin/c89
+			rm -f "${EROOT}"usr/bin/c99
+		fi
+	fi
+}
+
+mv_if_diff() {
+	if cmp -s "$1" "$2" ; then
+		rm -f "$1"
+		return 0
+	else
+		mv -f "$1" "$2"
+		return 1
+	fi
+}
+
+handle_split_usr() {
+	# We need to make sure that libgcc_s.so / libunwind.so make it into /lib.
+	# On many systems (x86/amd64/etc...), this will probably never matter,
+	# but on other systems (arm/mips/etc...), this is quite critical.
+	# http://bugs.gentoo.org/60190
+	#
+	# Note: libunwind.so.7 is a DT_NEEDED dependency only on ia64 systems
+	# where libunwind.so.7 is provided by gcc itself, see:
+	#    https://bugs.gentoo.org/667020
+	#    https://bugs.gentoo.org/693252
+	#
+	# The funky move magic is required for proper updating of in-use files.
+
+	# Gentoo Prefix systems don't "boot", so no need to handle split-/usr
+	[[ -n ${EPREFIX} ]] && return 0
+
+	# We use the same ordering logic as mentioned in the MY_LDPATH setup.
+	# We get the libs from the latest version available.
+	local LDPATH
+	eval $(grep -h '^LDPATH=' $(version_sorted_paths "${GCC_ENV_D}"/${CHOST}-*) | tail -1)
+	LDPATH=${LDPATH%%:*}
+
+	# If GCC directory is not in separate mountpoint than /lib,
+	# then do not bother with copying libraries to /lib.
+	if is_same_mountpoint "${EROOT}/lib" "${ROOT}/${LDPATH}" ; then
+		local lib old_libs=0 saved_nullglob=$(shopt -p nullglob)
+		shopt -s nullglob
+		for lib in "${EROOT}"/lib*/libgcc_s{.so*,*dylib} "${EROOT}"/lib*/libunwind.so.7* ; do
+			# If we previously had stuff in /, make sure ldconfig gets re-run.
+			einfo "Removing '${lib}'"
+			rm -f "${lib}"
+			old_libs=1
+		done
+		${saved_nullglob}
+		return ${old_libs}
+	fi
+
+	# Only bother with this stuff for the native ABI.  We assume the user
+	# doesn't have critical binaries for non-native ABIs which is fair.
+	local gcclib
+	local libdir="${EROOT}${GENTOO_LIBDIR}"
+	mkdir -p "${libdir}"/.gcc.config.new || return 0 # !?!?!
+	for gcclib in gcc_s unwind ; do
+		# This assumes that we always have the .so symlink,
+		# but for now, that should be safe ...
+		for gcclib in "${ROOT}${LDPATH}"/lib${gcclib}.so.* ; do
+			[[ -e ${gcclib} ]] || continue
+			einfo "Backing up '${gcclib}' to '${libdir}'"
+			cp -pP "${gcclib}" "${libdir}"/.gcc.config.new/
+			# no need to sanity `rm` this as the `mv` should take care
+			# of it.  we also need this step to be completely atomic
+			# for systems that have even `mv` linked against libgcc_s.so.
+			# http://bugs.gentoo.org/150257
+			mv -f "${libdir}"/.gcc.config.new/* "${libdir}"/
+		done
+	done
+	rmdir "${libdir}"/.gcc.config.new
+
+	return 0
+}
+
+prefix_copy_gcc_libs() {
+	# no business here if not Prefix
+	[[ -z ${EPREFIX} ]] && return 0
+
+	# To emulate properly what ld.so.conf magic does for non-prefix,
+	# we have to copy the libs of all installed (native) GCC's and
+	# make sure we do the current one as last, such that the
+	# pointers for the unversioned libs point to the currently
+	# selected version.  This is only necessary for platforms that use
+	# shared libs, and only record the object name (not the full path).
+	case ${CHOST} in
+		*-mint*)
+			# static only, nothing to do here
+			return 0
+			;;
+		*-darwin*)
+			# Mach-O records all references with full path, hence each
+			# object has links to the GCC-specific version of the lib.
+			return 0
+			;;
+	esac
+
+	# dstlibgcc location is added to RPATH by the binutils wrapper
+	local dstlibgcc=${EROOT}/usr/${CHOST}/lib/gcc
+
+	# Prepare empty directories first
+	local temporary=.gcc.config.new
+	rm -rf   "${dstlibgcc}"/${temporary} || return 1
+	mkdir -p "${dstlibgcc}"/${temporary} || return 1
+
+	local LIBSUFFIX
+	case ${CHOST} in
+		*-aix*)
+			LIBSUFFIX="a"
+			AIXLIBS=
+
+			do_single_runtime() {
+				local sourcedir=$1; shift
+				local libname=$1; shift
+				local targetdir=$1; shift
+				local finaldir=$1; shift
+
+				aixdll \
+					--merge-runtime \
+					--finish=false \
+					--target="${targetdir}"/lib${libname}.${LIBSUFFIX} \
+					"${sourcedir}"/lib${libname}.${LIBSUFFIX} \
+					|| return 1
+				[[ ${AIXLIBS} == *":${targetdir}/lib${libname}.${LIBSUFFIX}:"* ]] \
+					|| AIXLIBS="${AIXLIBS}:${targetdir}/lib${libname}.${LIBSUFFIX}:"
+			}
+
+			finish_runtime_dir() {
+				local sourcedir=$1; shift
+				local targetdir=$1; shift
+				local cleanup=$1; shift
+
+				local f save_IFS
+				save_IFS=$IFS; IFS=:
+				for f in ${AIXLIBS}; do
+					IFS=$save_IFS
+					[[ -n ${f} ]] || continue
+					aixdll \
+						--finish-merge \
+						--keepdir=false \
+						"${f}" \
+						|| return 1
+				done
+				IFS=$save_IFS
+				unset AIXLIBS
+
+				finish_runtime_dir_elf \
+					"${sourcedir}" \
+					"${targetdir}" \
+					${cleanup} \
+					|| return 1
+			}
+			;;
+		hppa64*-hpux*)
+			LIBSUFFIX="sl"
+			do_single_runtime() {
+				do_single_runtime_elf "$@"
+			}
+			finish_runtime_dir() {
+				finish_runtime_dir_elf "$@"
+			}
+			;;
+		hppa*-hpux*)
+			LIBSUFFIX="sl"
+			do_single_runtime() {
+				local sourcedir=$1; shift
+				local libname=$1; shift
+				local targetdir=$1; shift
+				local finaldir=$1; shift
+
+				# when using some simple shell script wrappers (again :)),
+				# there may be no libs around!
+				if [[ -n $(ls "${sourcedir}"/lib${libname}.*${LIBSUFFIX}* 2>/dev/null) ]]; then
+					cp -fpP "${sourcedir}"/lib${libname}.*${LIBSUFFIX}* "${targetdir}" || return 1
+					# gcc creates "libgcc_s.4" with symlink "libgcc_s.sl -> libgcc_s.4", and
+					# we patch it to also set the 'internal name' (=soname) (gcc-PR40913).
+					if [[ ${libname} == 'gcc_s' ]]; then
+						if [[ -n $(ls "${sourcedir}"/lib${libname}.[0-9] 2>/dev/null) ]]; then
+							cp -fpP "${sourcedir}"/lib${libname}.[0-9] "${targetdir}" || return 1
+						fi
+					fi
+					# we do not need the unversioned lib, as linking
+					# is done against the used gcc's private copy.
+					rm -f "${targetdir}"/lib${libname}.${LIBSUFFIX} || return 1
+				fi
+			}
+			finish_runtime_dir() {
+				finish_runtime_dir_elf "$@"
+			}
+			;;
+		*)
+			LIBSUFFIX="so"
+			do_single_runtime() {
+				do_single_runtime_elf "$@"
+			}
+			finish_runtime_dir() {
+				finish_runtime_dir_elf "$@"
+			}
+			;;
+	esac
+
+	do_single_runtime_elf() {
+		local sourcedir=$1; shift
+		local libname=$1; shift
+		local targetdir=$1; shift
+		local finaldir=$1; shift
+
+		# when using some simple shell script wrappers (again :)),
+		# there may be no libs around!
+		if [[ -n $(ls "${sourcedir}"/lib${libname}.*${LIBSUFFIX}* 2>/dev/null) ]]; then
+			cp -fpP "${sourcedir}"/lib${libname}.*${LIBSUFFIX}* "${targetdir}" || return 1
+			# we do not need the unversioned lib, as linking
+			# is done against the used gcc's private copy.
+			rm -f "${targetdir}"/lib${libname}.${LIBSUFFIX} || return 1
+		fi
+	}
+
+	finish_runtime_dir_elf() {
+		local sourcedir=$1; shift
+		local targetdir=$1; shift
+		local cleanup=$1; shift
+
+		if [[ ${cleanup} == clean ]]; then
+			for f in "${targetdir}"/*; do
+				[[ ${f} == ${sourcedir} ]] && continue
+				[[ -e "${sourcedir}/${f##*/}" ]] && continue
+				rm -f "${f}"
+			done
+		fi
+
+		# move symlinks first:
+		# because of file ordering, the real files may be
+		# moved before the symlinks, causing the symlinks
+		# going broken.
+		for f in "${sourcedir}"/*; do
+			[[ -e ${f} && -L ${f} ]] || continue
+			# use backups: hpux cannot overwrite sharedlibs in use: "Text file busy"
+			rm -f "${targetdir}"/${f##*/}*'~' >/dev/null 2>&1
+			mv -f --backup=numbered --suffix='~' "${f}" "${targetdir}"/${f##*/} || return 1
+			rm -f "${targetdir}"/${f##*/}*'~' >/dev/null 2>&1
+		done
+
+		for f in "${sourcedir}"/*; do
+			[[ -f "${f}" ]] || continue
+			# use backups: hpux cannot overwrite sharedlibs in use: "Text file busy"
+			rm -f "${targetdir}"/${f##*/}*'~' >/dev/null 2>&1
+			mv -f --backup=numbered --suffix='~' "${f}" "${targetdir}"/${f##*/} || return 1
+			rm -f "${targetdir}"/${f##*/}*'~' >/dev/null 2>&1
+		done
+		rmdir "${sourcedir}"
+	}
+
+	# We don't rely on iteration order here.
+	local GCC_PROFILES=$(LC_ALL="C" ls ${GCC_ENV_D}/${CHOST}-*)
+
+	local targetdirs= GCC_PATH= LDPATH=
+	for x in ${GCC_PROFILES} ; do
+		unset GCC_PATH LDPATH
+		eval $(
+			source_profile "${x}"
+			echo "GCC_PATH='${GCC_PATH}'"
+			echo "LDPATH='${LDPATH%%:*}'"
+		)
+
+		pushd "${ROOT%/}${LDPATH}" > /dev/null || return 1
+
+		local donelibs= lib= gcclib=
+		for lib in lib*.${LIBSUFFIX}; do
+			gcclib=${lib#lib}
+			gcclib=${gcclib%.${LIBSUFFIX}}
+			gcclib=${gcclib%%.[0-9]*} # we need the unversioned libname.
+			[[ ${donelibs} != *" ${gcclib} "* ]] || continue
+			donelibs="${donelibs} ${gcclib} "
+
+			[[ ${targetdirs} == *":${dstlibgcc},clean:"* ]] ||
+				targetdirs="${targetdirs}:${dstlibgcc},clean:"
+
+			do_single_runtime \
+				"${ROOT%/}${LDPATH}" \
+				${gcclib} \
+				"${dstlibgcc}"/${temporary} \
+				"${dstlibgcc}" \
+				|| return 1
+		done
+
+		popd > /dev/null
+	done
+
+	local clean= targetdir=
+	local save_IFS=$IFS
+	IFS=:
+	for targetdir in ${targetdirs}; do
+		IFS=${save_IFS}
+		[[ -n ${targetdir} ]] || continue
+
+		# eventually cleanup old files
+		clean=${targetdir##*,}
+
+		targetdir=${targetdir%,*}
+
+		finish_runtime_dir \
+			"${targetdir}"/${temporary} \
+			"${targetdir}" \
+			${clean} \
+			|| return 1
+	done
+	IFS=${save_IFS}
+}
+
+switch_profile() {
+	local OLD_CC_COMP OLD_CC_COMP_VERSION OLD_GCC_PATH OLD_GCC_VER
+	local GCC_PATH
+
+	# Make sure we have write access to the dirs.  Do not require `root`
+	# so that we work with prefix/cross/etc... setups that run as user.
+	#
+	# [It's important we use ${ENV_D} and not e.g. ${EROOT} because for, say
+	# SELinux, we may not actually be able to write to ${EROOT}, but would
+	# be allowed for specific paths like the gcc wrappers we need to
+	# modify. bug #823203.]
+	[[ ! -w ${ENV_D} ]] && die "need write access to ${ENV_D}"
+
+	if is_cross_compiler ; then
+		ebegin "Switching cross-compiler to ${CC_COMP}"
+	else
+		ebegin "Switching native-compiler to ${CC_COMP}"
+	fi
+
+	# Setup things properly again for this profile
+	unset GCC_SPECS LDPATH MULTIOSDIRS
+	source_profile "${GCC_ENV_D}/${CC_COMP}"
+	# Support older configs that did not setup MULTIOSDIRS for us.
+	: ${MULTIOSDIRS:=../${GENTOO_LIBDIR}}
+
+	# Ignore active profile errors here since we're switching away
+	OLD_CC_COMP=$(get_current_profile 2>/dev/null)
+	if [[ -f ${GCC_ENV_D}/${OLD_CC_COMP} ]] ; then
+		OLD_GCC_PATH=$(show_var GCC_PATH "${GCC_ENV_D}/${OLD_CC_COMP}")
+		OLD_GCC_VER=$(show_var GCC_VER "${GCC_ENV_D}/${OLD_CC_COMP}")
+	fi
+	OLD_CC_COMP_VERSION=${OLD_GCC_VER:-$(chop_gcc_ver_spec ${OLD_CC_COMP})}
+
+	# GCC_SPECS have long been stable, and people messing with
+	# them know better than to install bad paths, so don't bother
+	# with sanity checks anymore.
+
+	echo "CURRENT=${CC_COMP}" > "${GCC_ENV_D}/config-${CTARGET}"
+
+	# Give native configs slight distinction from cross-compilers
+	# by giving it higher priority.
+	local envd envd_num envd_changed=0
+	is_cross_compiler && envd_num="05" || envd_num="04"
+	envd="${ENV_D}/${envd_num}gcc-${CTARGET}"
+	cat <<-EOF > "${envd}.tmp"
+		# Autogenerated by 'gcc-config'.
+	EOF
+	if ! is_cross_compiler ; then
+		# Only write GCC_SPECS for the native compiler. #420097
+		# Otherwise, the env.d of cross-compilers come after the
+		# native one and overrides the native setting.  Further,
+		# we don't support GCC_SPECS with cross-compilers, so
+		# writing out that settings doesn't make much sense.
+		printf 'GCC_SPECS="%s"\n' "${GCC_SPECS}" >> "${envd}.tmp"
+
+		# Regardless of the profile selected, keep the runtime lookup
+		# paths stable.  Otherwise, all the apps that were built with
+		# a new compiler will start trying to use older versions of
+		# the libs, and life gets sad.  We work off the assumption
+		# that every shared library gcc ships is ABI compatible (as
+		# is the point of SONAMEs).  We don't have to worry about
+		# static libraries here as gcc itself will take care of
+		# linking against its own internal paths first. #297685
+		local MY_LDPATH
+		MY_LDPATH=$(${SED} -n \
+			-e '/^LDPATH=/{s|LDPATH=||;s|"||g;s|:|\n|g;p}' \
+			$(version_sorted_paths "${GCC_ENV_D}"/${CHOST}-* | tac)
+		)
+
+		# Pass all by default
+		awk '!/^(STDCXX_INCDIR|LDPATH|CC|CXX|CTARGET|GCCBITS|GCC_SPECS|GCC_PATH|MULTIOSDIRS)=/ {print $0}' \
+			"${GCC_ENV_D}/${CC_COMP}" >> "${envd}.tmp"
+		if [[ -d ${EROOT}/etc/ld.so.conf.d ]] ; then
+			echo "${MY_LDPATH}" > "${EROOT}"/etc/ld.so.conf.d/05gcc-${CTARGET}.conf
+		else
+			echo "LDPATH=\"${MY_LDPATH}\"" >> "${envd}.tmp"
+		fi
+
+		# Punt old files; maybe globs too much, but oh well
+		# 'NATIVE' and '.NATIVE' were used by gcc-wrapper before Aug 2018
+		# and are not used as wrapper is removed.
+		# '.NATIVE' was created before Sept 2019.
+		# We clean up both for now. Should be safe to remove in 2021.
+		rm -f \
+			"${GCC_ENV_D}/NATIVE" "${GCC_ENV_D}/.NATIVE" \
+			"${ENV_D}/05gcc" "${ENV_D}/05gcc-${CTARGET}" \
+			"${ENV_D}/05gcc-${CTARGET}"-* "${GCC_ENV_D}/config-${CTARGET}"-*
+
+		# Relocate random crap
+		local x libdir pkgconfdir
+		local mver=${CC_COMP_VERSION:0:3}
+		for libdir in ${MULTIOSDIRS//:/ } ; do
+			pkgconfdir="${EROOT}/usr/lib/${libdir}/pkgconfig"
+			for x in "" "-${mver}" ; do
+				x="${pkgconfdir}/libgcj${x}.pc"
+				if [[ -e ${pkgconfdir}/libgcj-${CC_COMP_VERSION}.pc ]] ; then
+					ln -sf libgcj-${CC_COMP_VERSION}.pc "${x}"
+				else
+					# Maybe we selected a version that lacks gcj support.
+					rm -f "${x}"
+				fi
+			done
+			# Clean out anything left over from older versions. #430932
+			find "${pkgconfdir}"/libgcj*.pc -xtype l -delete 2>/dev/null
+		done
+
+		# Only update the file if it already exists to allow us to
+		# walk it back if necessary by dropping it from clang-common.
+		# See bug #868639 for background.
+		if [[ -f "${EROOT}/etc/clang/gentoo-gcc-install.cfg" ]] ; then
+			local gcc_lib_path="$(get_lib_path)"
+			gcc_lib_path="${gcc_lib_path%%:*}"
+			cat > "${EROOT}/etc/clang/gentoo-gcc-install.cfg.tmp" <<-EOF
+				# This file is maintained by gcc-config.
+				# It is used to specify the selected GCC installation.
+				--gcc-install-dir="${gcc_lib_path}"
+			EOF
+
+			mv_if_diff "${EROOT}/etc/clang/gentoo-gcc-install.cfg.tmp" "${EROOT}/etc/clang/gentoo-gcc-install.cfg"
+		fi
+
+		prefix_copy_gcc_libs
+		handle_split_usr
+		: $(( envd_changed += $? ))
+
+		mv_if_diff "${envd}.tmp" "${envd}"
+		: $(( envd_changed += $? ))
+	else
+		# cross-case
+		# env.d file is empty since Aug 2018 and is cleaned up by
+		# gcc-config since Sept 2019. Should be safe to remove in 2021.
+		rm -f "${envd}.tmp" "${envd}"
+	fi
+
+	update_wrappers ${CTARGET}
+
+	# Update LTO plugin for GCC.  Supported as of binutils 2.25.
+	local BFD_PLUGINS_DIR
+	local LIBLTO_PLUGIN
+	if is_cross_compiler; then
+		BFD_PLUGINS_DIR="${EROOT}usr/${CHOST}/${CTARGET}/binutils-bin/lib/bfd-plugins"
+		LIBLTO_PLUGIN="../../../../../libexec/gcc/${CTARGET}/${CC_COMP_VERSION}/liblto_plugin.so"
+	else
+		BFD_PLUGINS_DIR="${EROOT}usr/${CHOST}/binutils-bin/lib/bfd-plugins"
+	        LIBLTO_PLUGIN="../../../../libexec/gcc/${CTARGET}/${CC_COMP_VERSION}/liblto_plugin.so"
+	fi
+	mkdir -p "${BFD_PLUGINS_DIR}"
+	ln -sf "${LIBLTO_PLUGIN}" "${BFD_PLUGINS_DIR}"
+
+	if [[ ${ROOT} == "/" ]] && \
+	   [[ ${FORCE} == "yes" || ${envd_changed} -gt 0 ]]
+	then
+		# in case python is broken ...
+		if ! env-update ; then
+			echo ""
+			ewarn "env-update failed to work properly; making sure ld.so.conf paths"
+			ewarn "are setup properly.  Please rerun gcc-config with the -f option."
+			echo ""
+			if [[ -z ${EPREFIX} ]] ; then
+				if [[ ! -d /etc/ld.so.conf.d ]] ; then
+					show_var LDPATH "${ROOT}"/etc/env.d/05gcc-${CTARGET} \
+						| ${SED} -e 's|:|\n|g' >> /etc/ld.so.conf
+				fi
+				ldconfig
+			fi
+		fi
+	else
+		envd_changed=0
+	fi
+
+	eend 0
+
+	# This is needed mainly for MANPATH and INFOPATH updates.
+	if [[ ${envd_changed} -ne 0 ]] ; then
+		echo
+		ewarn "If you intend to use the gcc from the new profile in an already"
+		ewarn "running shell, please remember to do:"
+		echo
+		ewarn "  . ${EPREFIX}/etc/profile"
+		echo
+	fi
+
+	return 0
+}
+
+get_current_profile() {
+	local conf="${GCC_ENV_D}/config-${CTARGET}"
+	if [[ ! -f ${conf} ]] ; then
+		eerror "${argv0}: No gcc profile is active!"
+		return 1
+	fi
+
+	source_var CURRENT "${conf}"
+
+	if [[ -z ${CURRENT} ]] ; then
+		eerror "${argv0}: No gcc profile is active!"
+		return 1
+	elif [[ ! -f ${GCC_ENV_D}/${CURRENT} ]] ; then
+		eerror "${argv0}: Active gcc profile is invalid!"
+		return 1
+	fi
+
+	echo "${CURRENT}"
+
+	return 0
+}
+
+list_profiles() {
+	local i=0
+	local filter=
+
+	if [[ ${ROOT} != "/" ]] ; then
+		echo "Using gcc-config info in ${ROOT}"
+	fi
+
+	if [[ ! -f ${GCC_ENV_D}/config-${CTARGET} ]] ; then
+		# get_current_profile already warns
+		#eerror "${argv0}: No gcc profile is active; please select one!"
+		filter=${CTARGET}
+	fi
+
+	source_var CURRENT "${GCC_ENV_D}"/config-${CTARGET}
+	CURRENT_NATIVE=${CURRENT}
+	local target=
+	for x in $(version_sorted_paths "${GCC_ENV_D}"/*) ; do
+		[[ -f ${x} ]] || continue
+		[[ ${x} == */config* ]] && continue
+
+		source_var CTARGET "${x}"
+		# Older native profiles would not set CTARGET.
+		if [[ -z ${CTARGET} ]] ; then
+			if [[ ${x} == */${CHOST}-* ]] ; then
+				CTARGET=${CHOST}
+			else
+				ewarn "broken config file: ${x}"
+			fi
+		fi
+
+		((++i))
+
+		[[ -n ${filter} ]] && [[ ${filter} != ${CTARGET} ]] && continue
+
+		if [[ ${target} != ${CTARGET} ]] ; then
+			[[ ${i} -gt 1 ]] && echo
+			target=${CTARGET}
+			CTARGET=""
+		fi
+
+		x=${x##*/}
+		if [[ ${x} == ${CURRENT_NATIVE} ]] ; then
+			x="${x} ${GOOD}*${NORMAL}"
+		elif [[ -e ${GCC_ENV_D}/config-${target} ]] ; then
+			source_profile "${GCC_ENV_D}/config-${target}"
+			[[ ${x} == ${CURRENT} ]] && x="${x} ${HILITE}*${NORMAL}"
+		fi
+		echo "  [${i}] ${x}"
+	done
+}
+
+print_environ() {
+	local ENV_CMD SET_ELEMENT
+	case ${SHELL} in
+		*/csh|*/tcsh)
+			ENV_CMD="setenv"
+			SET_ELEMENT=" "
+			;;
+		*)
+			ENV_CMD="export"
+			SET_ELEMENT="="
+			;;
+	esac
+
+	local var
+	for var in GCC_SPECS GCC_PATH ; do
+		local ${var}
+		source_var ${var} "${GCC_ENV_D}/${CC_COMP}"
+	done
+
+	(
+	[[ -n ${GCC_PATH} ]] && PATH=${GCC_PATH}:${PATH}
+	for var in PATH GCC_SPECS ; do
+		echo "${ENV_CMD} ${var}${SET_ELEMENT}\"${!var}\""
+	done
+	)
+}
+
+get_bin_path() { show_var GCC_PATH "${GCC_ENV_D}/${CC_COMP}" ; }
+get_lib_path() { show_var LDPATH "${GCC_ENV_D}/${CC_COMP}" ; }
+
+split_gcc_ver() {
+	# Split up the gcc profile into components:
+	# TARGET-VER[-specs] -> TARGET VER [specs]
+	# arm-linux-3.3.6 -> arm-linux 3.3.6
+	# x86_64-linux-4.0.1-pre1234 -> x86_64-linux 4.0.1-pre1234
+	# sh-linux-3.4.4-hardened -> sh-linux 3.4.4 hardened
+	#
+	# So below we will start at the end and run a small state machine ...
+	# specs [3]
+	#    accept everything
+	# specs -> version transition [3->2]
+	#    when we find a version component
+	# version [2]
+	#    accept only version components (see the regex)
+	# version -> target transition [2->1]
+	#    when we hit a non version component
+	# target [1]
+	#    accept everything we have left
+	#
+	echo "$@" | awk -F- '
+	function pushit(onme, pushee) {
+		return (onme == "" ? pushee : pushee"-"onme);
+	}
+	{
+		state=3
+		targ=""
+		ver=""
+		spec=""
+		for (i=NF; i > 0; --i) {
+			if (state >= 2) {
+				if ($i ~ /^(alpha|beta|pre|rc|p)?[[:digit:].]+$/) {
+					ver=pushit(ver, $i)
+					state=2
+				} else if (state == 3)
+					spec=pushit(spec, $i)
+				else
+					state=1
+			}
+			if (state == 1)
+				targ = pushit(targ, $i)
+		}
+
+		if (targ == "") {
+			if (ver == "") {
+				ver=spec
+				spec=""
+			}
+			targ=ver
+			ver=""
+		}
+		print targ " " ver (spec != "" ? " " spec : "")
+	}'
+}
+chop_gcc_ver_spec() {
+	local splitTED=$(split_gcc_ver "$@") # target ver spec
+	splitTED=${splitTED#* }              # ver spec
+	echo ${splitTED/ /-}                 # ver-spec
+}
+
+set_doit() {
+	[[ -n ${DOIT} ]] && die "too many actions selected!"
+	DOIT=$1
+}
+DOIT=""
+FORCE="no"
+
+CC_COMP=
+ENV_D="${EROOT}etc/env.d"
+GCC_ENV_D="${ENV_D}/gcc"
+USE_NATIVE_LINKS="yes"
+USE_CC_WRAPPERS="yes"
+
+for x in "$@" ; do
+	case "${x}" in
+		# Only use specified compiler if one is not already selected.
+		-O|--use-old)
+			: ${CTARGET:=$(try_real_hard_to_find_CHOST)}
+			if get_current_profile &>/dev/null ; then
+				CC_COMP=$(get_current_profile)
+			else
+				die "No profile selected, unable to utilize --use-old"
+			fi
+			;;
+		-f|--force)
+			FORCE="yes"
+			;;
+		-c|--get-current-profile)
+			set_doit get_current_profile
+			;;
+		-l|--list-profiles)
+			set_doit list_profiles
+			;;
+		-S|--split-profile)
+			if [[ ( $1 != "-S" && $1 != "--split-profile" ) || $# -eq 1 ]] ; then
+				usage 1
+			fi
+			shift # push -S out
+			for x in "$@" ; do
+				split_gcc_ver ${x}
+			done
+			exit 0
+			;;
+		-E|--print-environ)
+			set_doit print_environ
+			;;
+		-B|--get-bin-path)
+			set_doit get_bin_path
+			;;
+		-L|--get-lib-path)
+			set_doit get_lib_path
+			;;
+		-x|--debug)
+			set -x
+			;;
+		-C|--nocolor)
+			# nothing to do; functions.sh parsed this for us
+			;;
+		-h|--help)
+			usage 0
+			;;
+		-V|--version)
+			echo "${argv0}: 2.12.2"
+			exit 0
+			;;
+		--enable-native-links)  USE_NATIVE_LINKS="yes" ;;
+		--disable-native-links) USE_NATIVE_LINKS="no" ;;
+		--enable-cc-wrappers)  USE_CC_WRAPPERS="yes" ;;
+		--disable-cc-wrappers) USE_CC_WRAPPERS="no" ;;
+		-*)
+			die "Invalid switch!  Run ${argv0} without parameters for help."
+			;;
+		*)
+			if [[ -n ${CC_COMP} ]] ; then
+				die "Too many arguments!  Run ${argv0} without parameters for help."
+			fi
+
+			if [[ -z $(echo ${x} | tr -d '[:digit:]') ]] ; then
+				# User gave us a profile index number from '--list-profiles'
+				i=1
+				for y in $(version_sorted_paths "${GCC_ENV_D}"/*) ; do
+					[[ -f ${y} ]] || continue
+					[[ ${y} == */config* ]] && continue
+
+					if [[ -f ${y} ]] && [[ ${x} == ${i} ]] ; then
+						CC_COMP=${y##*/}
+						break
+					fi
+					((++i))
+				done
+				if [[ -z ${CC_COMP} ]] ; then
+					die "Could not locate profile #$x !"
+				fi
+			else
+				# User gave us "latest" or "<CTARGET>-latest".
+				if [[ ${x} == latest ]]; then
+					get_chost
+					x=$(version_sorted_paths "${GCC_ENV_D}"/${CHOST}-* | tail -1)
+				elif [[ ${x} == *-latest ]]; then
+					x=$(version_sorted_paths "${GCC_ENV_D}"/${x%-latest}-* | tail -1)
+				fi
+
+				# User gave us a full <CTARGET-version>, <CTARGET> or <version>
+				x=${x##*/}
+				if [[ ${DOIT} == "get_current_profile" && -z $(ls "${GCC_ENV_D}"/${x}-* 2>/dev/null) ]] || \
+				   [[ ${DOIT} != "get_current_profile" && ! -f ${GCC_ENV_D}/${x} ]]
+				then
+					# Maybe they just gave us a <version>. Infer <CTARGET>.
+					get_chost
+					if [[ -f ${GCC_ENV_D}/${CHOST}-${x} ]] ; then
+						x=${CHOST}-${x}
+					else
+						die "Could not locate '$x' in '${GCC_ENV_D}/' !"
+					fi
+				fi
+				CC_COMP=${x}
+			fi
+			;;
+	esac
+done
+
+[[ -z ${DOIT}${CC_COMP} ]] && usage 1
+: ${DOIT:="switch_profile"}
+
+get_chost
+[[ ${DOIT} == "get_current_profile" ]] \
+	&& : ${CTARGET:=${CC_COMP:-${CHOST}}} \
+	|| : ${CTARGET:=${CHOST}}
+
+if [[ -z ${CC_COMP} ]] ; then
+	CC_COMP=$(get_current_profile)
+	if [[ $? -ne 0 ]] ; then
+		echo "${CC_COMP}"
+		list_profiles
+		exit 1
+	fi
+fi
+
+if [[ ${DOIT} != "get_current_profile" ]] ; then
+	GCC_LIB=$(
+		get_lib_path | \
+			${SED} -e "s|${EPREFIX:-/}/*|/|g" | \
+			awk -F/ '{ print "/"$2"/"$3"/"$4"/" }'
+	)
+
+	# For people who insist on using funky version strings ("4.6.x"
+	# rather than "4.6.2"), allow them to manually specify it.
+	source_var GCC_VER "${GCC_ENV_D}/${CC_COMP}"
+
+	CC_COMP_VERSION=${GCC_VER:-$(chop_gcc_ver_spec ${CC_COMP})}
+	CC_COMP_TARGET=$(show_var CTARGET "${GCC_ENV_D}/${CC_COMP}")
+	if [[ -z ${CC_COMP_TARGET} ]] ; then
+		# Native configs don't have CTARGET in there.
+		CC_COMP_TARGET=${CC_COMP%-${CC_COMP_VERSION}*}
+	fi
+
+	if [[ ! -d ${EROOT}/${GCC_LIB}/${CC_COMP_TARGET}/${CC_COMP_VERSION} ]] ; then
+		CC_COMP_VERSION=${CC_COMP_VERSION%-*}
+	fi
+
+	if [[ ! -f ${GCC_ENV_D}/${CC_COMP} ]] ; then
+		eerror "${argv0}: Profile '${GCC_ENV_D}/${CC_COMP}' does not exist" 1>&2
+		#exit 1
+	fi
+
+	if [[ ! -d ${EROOT}/${GCC_LIB}/${CC_COMP_TARGET}/${CC_COMP_VERSION} ]] ; then
+		eerror "${argv0}: Did not find compiler at '${EROOT}/${GCC_LIB}/${CC_COMP_TARGET}/${CC_COMP_VERSION}'" 1>&2
+		#exit 1
+	fi
+fi
+
+${DOIT}
+
+# vim:ts=4

@@ -1,0 +1,1 @@
+>=media-libs/fontconfig-2.13.92[abi_x86_64(-)] >=media-libs/freetype-2.13:2[png,abi_x86_64(-)] >=media-libs/libpng-1.6.10:0/16=[abi_x86_64(-)] >=virtual/zlib-1.2.8-r1:0/1=[abi_x86_64(-)] >=x11-libs/pixman-0.42.3[abi_x86_64(-)] >=dev-libs/glib-2.34.3:2[abi_x86_64(-)]

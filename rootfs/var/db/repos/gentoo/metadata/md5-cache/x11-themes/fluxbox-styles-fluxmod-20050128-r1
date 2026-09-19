@@ -1,0 +1,9 @@
+DEFINED_PHASES=install postinst prepare
+DESCRIPTION=A collection of FluxBox themes from FluxMod
+EAPI=7
+HOMEPAGE=https://tenr.de/styles/
+KEYWORDS=amd64 ~arm ~hppa ~mips ppc ppc64 ~sparc x86
+LICENSE=GPL-2
+SLOT=0
+SRC_URI=mirror://gentoo/fluxbox-styles-fluxmod-20050128.tar.bz2
+_md5_=9b3f2db2c671bd48caf8a25fce372c4b

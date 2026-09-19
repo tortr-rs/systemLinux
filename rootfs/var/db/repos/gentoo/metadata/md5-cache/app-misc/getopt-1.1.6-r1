@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install
+DEPEND=nls? ( virtual/libintl ) nls? ( sys-devel/gettext )
+DESCRIPTION=getopt(1) replacement supporting GNU-style long options
+EAPI=7
+HOMEPAGE=http://frodo.looijaard.name/project/getopt/
+INHERIT=toolchain-funcs
+IUSE=nls
+KEYWORDS=~arm64-macos ~x64-macos ~x64-solaris
+LICENSE=GPL-2+
+RDEPEND=nls? ( virtual/libintl )
+SLOT=0
+SRC_URI=http://frodo.looijaard.name/system/files/software/getopt/getopt-1.1.6.tar.gz
+_eclasses_=toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=0a3040963eed928347ad38f1a7f70d27

@@ -1,0 +1,48 @@
+dir /usr
+dir /usr/include
+obj /usr/include/crypt.h 2fa4c44a0d70a1d0a36bc79d2de52f2c 1777828793
+obj /usr/include/xcrypt.h 5a8158261115858ce9515d7710f26e78 1777828793
+dir /usr/lib
+obj /usr/lib/libcrypt.so.1.1.0 24ff551fe45bcac3ffdc743703ad894d 1777828794
+obj /usr/lib/libcrypt.so.2.0.0 5ab2b1c25df1fd299f53bb5431c6beee 1777828794
+dir /usr/lib/pkgconfig
+obj /usr/lib/pkgconfig/libxcrypt.pc 59e7e9335bc0c27bd45676fffcb05bfd 1777828793
+dir /usr/lib64
+sym /usr/lib64/libcrypt.so -> libcrypt.so.2.0.0 1789354136
+sym /usr/lib64/libcrypt.so.1 -> libcrypt.so.1.1.0 1789354136
+obj /usr/lib64/libcrypt.so.1.1.0 58041bb609614ac0d64dd45a648d75b5 1777828794
+sym /usr/lib64/libcrypt.so.2 -> libcrypt.so.2.0.0 1789354136
+obj /usr/lib64/libcrypt.so.2.0.0 461cad31a117ae3ab854b05d004ee2e0 1777828794
+sym /usr/lib64/libowcrypt.so -> libcrypt.so 1789354136
+sym /usr/lib64/libowcrypt.so.1 -> libcrypt.so.1 1789354136
+dir /usr/lib64/pkgconfig
+sym /usr/lib64/pkgconfig/libcrypt.pc -> libxcrypt.pc 1789354136
+obj /usr/lib64/pkgconfig/libxcrypt.pc 1f0a4bffd62b78bb98394b93df7901a9 1777828793
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/libxcrypt-4.4.38-r1
+obj /usr/share/doc/libxcrypt-4.4.38-r1/AUTHORS.bz2 57a15e850c0a4ac3e319097aee3083bd 1777828793
+obj /usr/share/doc/libxcrypt-4.4.38-r1/ChangeLog.bz2 e1ed6231c514fef2671b2e537faeb69d 1777828793
+obj /usr/share/doc/libxcrypt-4.4.38-r1/NEWS.bz2 d4f6166dab469f537722f2475f99c41c 1777828793
+obj /usr/share/doc/libxcrypt-4.4.38-r1/README.bz2 9142ae0dd3b756b224cebe70aef0b15a 1777828793
+obj /usr/share/doc/libxcrypt-4.4.38-r1/THANKS.bz2 2fb6c354391ea13ec45e6e6cd4954861 1777828793
+obj /usr/share/doc/libxcrypt-4.4.38-r1/TODO.bz2 b99134167770bc4882ba8c56d664f1f1 1777828793
+dir /usr/share/man
+dir /usr/share/man/man3
+obj /usr/share/man/man3/crypt.3.bz2 69af630a925d21ec04f46043334d13da 1777828793
+obj /usr/share/man/man3/crypt_checksalt.3.bz2 852a65e186af943e7bd4144f55220a3f 1777828793
+obj /usr/share/man/man3/crypt_gensalt.3.bz2 b080211c11431d7be5826723b2647584 1777828793
+obj /usr/share/man/man3/crypt_gensalt_ra.3 0345770ca0db5eaf927ac86fc58a6c57 1777828793
+obj /usr/share/man/man3/crypt_gensalt_rn.3 0345770ca0db5eaf927ac86fc58a6c57 1777828793
+obj /usr/share/man/man3/crypt_preferred_method.3.bz2 4008c60da3443a83a938342f91ea0bf5 1777828793
+obj /usr/share/man/man3/crypt_r.3 0181e8e9de8038c821b66df3f7d40348 1777828793
+obj /usr/share/man/man3/crypt_ra.3 0181e8e9de8038c821b66df3f7d40348 1777828793
+obj /usr/share/man/man3/crypt_rn.3 0181e8e9de8038c821b66df3f7d40348 1777828793
+dir /usr/share/man/man5
+obj /usr/share/man/man5/crypt.5.bz2 697e68cd71e5b0d1aeba05a859841475 1777828793
+sym /usr/lib/pkgconfig/libcrypt.pc -> libxcrypt.pc 1789354136
+sym /usr/lib/libcrypt.so.2 -> libcrypt.so.2.0.0 1789354136
+sym /usr/lib/libcrypt.so.1 -> libcrypt.so.1.1.0 1789354136
+sym /usr/lib/libcrypt.so -> libcrypt.so.2.0.0 1789354136
+sym /usr/lib/libowcrypt.so -> libcrypt.so 1789354136
+sym /usr/lib/libowcrypt.so.1 -> libcrypt.so.1 1789354136

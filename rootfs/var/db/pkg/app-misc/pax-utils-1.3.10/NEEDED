@@ -1,0 +1,4 @@
+/usr/bin/scanmacho libc.so.6
+/usr/bin/dumpelf libc.so.6
+/usr/bin/scanelf libc.so.6
+/usr/bin/pspax libc.so.6

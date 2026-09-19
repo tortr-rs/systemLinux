@@ -1,0 +1,1 @@
+>=virtual/zlib-1.2.5:0/1=[abi_x86_64(-)] >=net-dns/c-ares-1.16.0:0/2=[abi_x86_64(-)] net-libs/libpsl[abi_x86_64(-)] >=dev-libs/openssl-3.0.0:0/3=[abi_x86_64(-)]

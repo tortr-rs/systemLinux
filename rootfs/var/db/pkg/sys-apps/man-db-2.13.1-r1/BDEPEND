@@ -1,0 +1,1 @@
+app-arch/xz-utils virtual/pkgconfig >=app-text/po4a-0.45 sys-devel/gettext virtual/libiconv virtual/libintl virtual/pkgconfig >=app-portage/elt-patches-20250306

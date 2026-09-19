@@ -1,0 +1,101 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/m4 b208c003a3a576713975c44f6b8c8a46 1774200243
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/m4-1.4.21
+obj /usr/share/doc/m4-1.4.21/AUTHORS.bz2 4427c7e09815768ba6cb7d31b190e498 1774200242
+obj /usr/share/doc/m4-1.4.21/ChangeLog.bz2 d8194a88b42eedcb50f5c4fd434badeb 1774200241
+obj /usr/share/doc/m4-1.4.21/NEWS.bz2 2b85dab3772d67cfae48e01a00c9d1dd 1774200242
+obj /usr/share/doc/m4-1.4.21/README.bz2 0da67818d6d1c3640b3974e9646a8528 1774200241
+obj /usr/share/doc/m4-1.4.21/THANKS.bz2 88cd33cd98bd0b265fb62cf69fc108a8 1774200242
+obj /usr/share/doc/m4-1.4.21/TODO.bz2 8a35f02ee1ec13a80555888cc33c33bd 1774200242
+dir /usr/share/info
+obj /usr/share/info/m4.info-1.bz2 7c2fb7d2a112699a4ea50416205175e3 1774200241
+obj /usr/share/info/m4.info-2.bz2 794455035db312504abcfb201b618777 1774200241
+obj /usr/share/info/m4.info.bz2 6ef284388b4b8f7b525b7f3686819343 1774200241
+dir /usr/share/locale
+dir /usr/share/locale/bg
+dir /usr/share/locale/bg/LC_MESSAGES
+obj /usr/share/locale/bg/LC_MESSAGES/m4.mo 056b76310446a57d601b43b5e4db75f2 1774200241
+dir /usr/share/locale/cs
+dir /usr/share/locale/cs/LC_MESSAGES
+obj /usr/share/locale/cs/LC_MESSAGES/m4.mo f64cba266e69fd4689bb73734392405e 1774200241
+dir /usr/share/locale/da
+dir /usr/share/locale/da/LC_MESSAGES
+obj /usr/share/locale/da/LC_MESSAGES/m4.mo 7213a8a22014bd1486f888a94a9aa941 1774200241
+dir /usr/share/locale/de
+dir /usr/share/locale/de/LC_MESSAGES
+obj /usr/share/locale/de/LC_MESSAGES/m4.mo 788893a32f26a5da9a0195c87ce171c5 1774200241
+dir /usr/share/locale/el
+dir /usr/share/locale/el/LC_MESSAGES
+obj /usr/share/locale/el/LC_MESSAGES/m4.mo d851a62624cb95d1815dc2de8b04af31 1774200241
+dir /usr/share/locale/eo
+dir /usr/share/locale/eo/LC_MESSAGES
+obj /usr/share/locale/eo/LC_MESSAGES/m4.mo 6f5d4cc3f896d72b6569e5e5e4689745 1774200241
+dir /usr/share/locale/es
+dir /usr/share/locale/es/LC_MESSAGES
+obj /usr/share/locale/es/LC_MESSAGES/m4.mo 1c123a83d0dfef78612ad3a0125be142 1774200241
+dir /usr/share/locale/fi
+dir /usr/share/locale/fi/LC_MESSAGES
+obj /usr/share/locale/fi/LC_MESSAGES/m4.mo 6cee8f8dc1a00d09608d8eabb2175f34 1774200241
+dir /usr/share/locale/fr
+dir /usr/share/locale/fr/LC_MESSAGES
+obj /usr/share/locale/fr/LC_MESSAGES/m4.mo 30937202b788d9fcd6072c6436c460ef 1774200241
+dir /usr/share/locale/ga
+dir /usr/share/locale/ga/LC_MESSAGES
+obj /usr/share/locale/ga/LC_MESSAGES/m4.mo 39ed3cc713402a8c6c489dd6adfd591a 1774200241
+dir /usr/share/locale/gl
+dir /usr/share/locale/gl/LC_MESSAGES
+obj /usr/share/locale/gl/LC_MESSAGES/m4.mo 3c9ab38736ff0fec9bdb764db901e70a 1774200241
+dir /usr/share/locale/hr
+dir /usr/share/locale/hr/LC_MESSAGES
+obj /usr/share/locale/hr/LC_MESSAGES/m4.mo 5302eb3d8fbd375d57b730f9c8dc8d98 1774200241
+dir /usr/share/locale/id
+dir /usr/share/locale/id/LC_MESSAGES
+obj /usr/share/locale/id/LC_MESSAGES/m4.mo f47847fe4f2f3362e80209f12f33efae 1774200241
+dir /usr/share/locale/ja
+dir /usr/share/locale/ja/LC_MESSAGES
+obj /usr/share/locale/ja/LC_MESSAGES/m4.mo eae8ca8c9931c3456ac338d0e67dbaa4 1774200241
+dir /usr/share/locale/ka
+dir /usr/share/locale/ka/LC_MESSAGES
+obj /usr/share/locale/ka/LC_MESSAGES/m4.mo 3e995744c042b10f6c4592d808f88441 1774200241
+dir /usr/share/locale/ko
+dir /usr/share/locale/ko/LC_MESSAGES
+obj /usr/share/locale/ko/LC_MESSAGES/m4.mo d53dd118411f39ad4bd101b7d1e84858 1774200241
+dir /usr/share/locale/nl
+dir /usr/share/locale/nl/LC_MESSAGES
+obj /usr/share/locale/nl/LC_MESSAGES/m4.mo b07c232b8d31ba07f6066ecbaf58e3be 1774200241
+dir /usr/share/locale/pl
+dir /usr/share/locale/pl/LC_MESSAGES
+obj /usr/share/locale/pl/LC_MESSAGES/m4.mo 62f31f238323edf90f13aabcff9b5d82 1774200241
+dir /usr/share/locale/pt_BR
+dir /usr/share/locale/pt_BR/LC_MESSAGES
+obj /usr/share/locale/pt_BR/LC_MESSAGES/m4.mo c5b1376cdd518c644650c6f37022a27d 1774200241
+dir /usr/share/locale/ro
+dir /usr/share/locale/ro/LC_MESSAGES
+obj /usr/share/locale/ro/LC_MESSAGES/m4.mo c544599d802ae9837248604c9894b046 1774200241
+dir /usr/share/locale/ru
+dir /usr/share/locale/ru/LC_MESSAGES
+obj /usr/share/locale/ru/LC_MESSAGES/m4.mo 93b973caee5946566116e630fbd75152 1774200241
+dir /usr/share/locale/sr
+dir /usr/share/locale/sr/LC_MESSAGES
+obj /usr/share/locale/sr/LC_MESSAGES/m4.mo d3c1c62440065d1fd5e97de6ddd504e6 1774200241
+dir /usr/share/locale/sv
+dir /usr/share/locale/sv/LC_MESSAGES
+obj /usr/share/locale/sv/LC_MESSAGES/m4.mo 99b416ae5f90b01bd72b410c2f852c94 1774200241
+dir /usr/share/locale/uk
+dir /usr/share/locale/uk/LC_MESSAGES
+obj /usr/share/locale/uk/LC_MESSAGES/m4.mo 86cf3582461d6ca9c8b298ac4c1f79e7 1774200241
+dir /usr/share/locale/vi
+dir /usr/share/locale/vi/LC_MESSAGES
+obj /usr/share/locale/vi/LC_MESSAGES/m4.mo c1a495da6fb4b0320a455080238a1bd5 1774200241
+dir /usr/share/locale/zh_CN
+dir /usr/share/locale/zh_CN/LC_MESSAGES
+obj /usr/share/locale/zh_CN/LC_MESSAGES/m4.mo 69b52b446c225179bb876e04e5eb503e 1774200241
+dir /usr/share/locale/zh_TW
+dir /usr/share/locale/zh_TW/LC_MESSAGES
+obj /usr/share/locale/zh_TW/LC_MESSAGES/m4.mo dc1ab215650966040ed304fa2e040511 1774200241
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/m4.1.bz2 65a4624739ca79c9c7106cc95626b62a 1774200241

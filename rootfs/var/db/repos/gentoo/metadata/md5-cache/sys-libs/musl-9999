@@ -1,0 +1,15 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
+DESCRIPTION=Light, fast and, simple C library focused on standards-conformance and safety
+EAPI=8
+HOMEPAGE=https://musl.libc.org
+INHERIT=crossdev flag-o-matic toolchain-funcs prefix git-r3
+IUSE=crypt headers-only split-usr
+LICENSE=MIT LGPL-2 GPL-2
+PDEPEND=!crypt? ( sys-libs/libxcrypt[system] )
+PROPERTIES=live
+RDEPEND=crypt? ( !sys-libs/libxcrypt[system] )
+SLOT=0
+SRC_URI=https://dev.gentoo.org/~blueness/musl-misc/getconf.c https://gitlab.alpinelinux.org/alpine/aports/-/raw/93a08815f8598db442d8b766b463d0150ed8e2ab/main/musl/getent.c -> musl-getent-93a08815f8598db442d8b766b463d0150ed8e2ab.c https://dev.gentoo.org/~blueness/musl-misc/iconv.c
+_eclasses_=crossdev	d618c699554f72b98f8ceeeeb361dc9e	flag-o-matic	fd3558f73f6503093adee69adf41020d	git-r3	e6c2f983e006e805160436c75a0c1562	prefix	2765cb74ebcf9f9ac73893d4503c8cb6	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=2e4bef8705d5e530aa4c0203818b6540

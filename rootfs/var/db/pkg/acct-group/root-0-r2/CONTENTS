@@ -1,0 +1,4 @@
+dir /usr
+dir /usr/lib
+dir /usr/lib/sysusers.d
+obj /usr/lib/sysusers.d/acct-group-root.conf 4a4377aa7940e5c0a3ec0e2122fe0250 1711301131

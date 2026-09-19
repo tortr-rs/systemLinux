@@ -1,0 +1,185 @@
+dir /etc
+obj /etc/slsh.rc ed1ea5518c3a3ce7c65884b6fe3b7c07 1773578264
+dir /usr
+dir /usr/src
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/slang-2.3.3-r2
+obj /usr/share/doc/slang-2.3.3-r2/cslang.txt.bz2 4f85c39153e655f1038c68f4634fdd5a 1773578265
+obj /usr/share/doc/slang-2.3.3-r2/NEWS.bz2 d8bb2ca19846dc75edee71952f522649 1773578265
+obj /usr/share/doc/slang-2.3.3-r2/changes.txt.bz2 8651eda02eec1c643c045d6379ab9325 1773578265
+obj /usr/share/doc/slang-2.3.3-r2/README.bz2 e3f6727949dd1653367db177797e1d4a 1773578265
+obj /usr/share/doc/slang-2.3.3-r2/grammar.txt.bz2 f7a6100451f2237b6b4564f19efcead1 1773578265
+obj /usr/share/doc/slang-2.3.3-r2/slangfun.txt.bz2 cc650e6067821ac940570ff44d4b1f67 1773578265
+obj /usr/share/doc/slang-2.3.3-r2/cref.txt.bz2 91dffaa191d4f79b12f98c4d1b23747b 1773578265
+dir /usr/share/doc/slang-2.3.3-r2/html
+obj /usr/share/doc/slang-2.3.3-r2/html/slangdoc.html d7ae2322cb7c3ec4c5e8d6cd7b2df86a 1773578266
+obj /usr/share/doc/slang-2.3.3-r2/html/slshfun-8.html 039f3d210702272910bc122363730e65 1773578266
+obj /usr/share/doc/slang-2.3.3-r2/html/slshfun-10.html f542e358c2bfe9dc823b3abb08dee9f2 1773578266
+obj /usr/share/doc/slang-2.3.3-r2/html/slshfun-5.html aca3a92a10439796a64f5a1f7996f73a 1773578266
+obj /usr/share/doc/slang-2.3.3-r2/html/slshfun-6.html 0ec1240b1b4dee379864037ebcd4d7c7 1773578266
+obj /usr/share/doc/slang-2.3.3-r2/html/slshfun-2.html 02e41e87c69bf661466f756d13c89c09 1773578266
+obj /usr/share/doc/slang-2.3.3-r2/html/slshfun-9.html 9266cc896a756d2b8d4cde7b145a8f96 1773578266
+obj /usr/share/doc/slang-2.3.3-r2/html/slshfun-7.html d186237607f4f41e177dbbd3cd6f9f5b 1773578266
+obj /usr/share/doc/slang-2.3.3-r2/html/slshfun-4.html 16cee7564b1be69e8a80a6efc64f2abf 1773578266
+obj /usr/share/doc/slang-2.3.3-r2/html/slshfun-12.html 71a1ce82e3e1547af69956e69bf596f9 1773578266
+obj /usr/share/doc/slang-2.3.3-r2/html/slshfun.html 7e070a0d73727371117f1d13bffcab7f 1773578266
+obj /usr/share/doc/slang-2.3.3-r2/html/slshfun-13.html ad484261d4f154de5fd3b58373ef48ac 1773578266
+obj /usr/share/doc/slang-2.3.3-r2/html/slshfun-11.html c0d49c66ce903ae1204de616a6bf232f 1773578266
+obj /usr/share/doc/slang-2.3.3-r2/html/slshfun-1.html 879372a289a089b8adc33890a94d78c5 1773578266
+obj /usr/share/doc/slang-2.3.3-r2/html/slshfun-3.html 2cd2733a29ca6cc54d2b803f18d222fa 1773578266
+obj /usr/share/doc/slang-2.3.3-r2/UPGRADE.txt.bz2 303a79ada6eeff3b1f71c82d9c37e08a 1773578265
+obj /usr/share/doc/slang-2.3.3-r2/rpn.txt.bz2 f2c78210474cf143888a6b4e0ec95b1e 1773578265
+obj /usr/share/doc/slang-2.3.3-r2/slang.txt.bz2 8dfa76817f5fabab5a662fdcac2da8e1 1773578265
+dir /usr/share/slsh
+obj /usr/share/slsh/setfuns.sl 4672a6ef8b4d538b808e7566f20042b8 1773578264
+obj /usr/share/slsh/stkcheck.sl c7e30c6ddb5d7487333802a0fbd4aecf 1773578264
+dir /usr/share/slsh/scripts
+obj /usr/share/slsh/scripts/jpegsize 3022266485f6ba843b20fab11503e303 1773578264
+obj /usr/share/slsh/scripts/slstkchk 72925c828023e1267d0ae7816f5afb95 1773578264
+obj /usr/share/slsh/scripts/svnsh 843400d92af8e1492fc8c2ea20ae7c68 1773578264
+obj /usr/share/slsh/scripts/slcov ccb011684d1f17af9e59f119c10119d2 1773578264
+obj /usr/share/slsh/scripts/sldb 661305632159108682698b3bd71c2764 1773578264
+obj /usr/share/slsh/scripts/lsrpm 5fbf1225217fad98f01f800087ab3b09 1773578264
+obj /usr/share/slsh/scripts/slprof 094b24a55e61307a620e61e29c5ba55d 1773578264
+obj /usr/share/slsh/sldb.sl d987646bce2b1d1727e74bd40d96260e 1773578264
+obj /usr/share/slsh/fcntl.sl e401be2784b4c561a0458bd578214ac6 1773578265
+obj /usr/share/slsh/autoload.sl 6af61ac4b983d5adb46e0e8d364b7167 1773578263
+obj /usr/share/slsh/csv.sl 17572ea243a4aaa5faccd09023d49076 1773578265
+obj /usr/share/slsh/sldbcore.sl 2ac93a683efa4af6f2b7d06a550598d2 1773578264
+obj /usr/share/slsh/slsmg.sl a8f082983e34a0ca8b31870b7da128f3 1773578265
+obj /usr/share/slsh/json.sl c926597278c3b1a9170d7990b29d671a 1773578265
+obj /usr/share/slsh/chksum.sl e93bd2f1477042a067b5a706ced98a66 1773578265
+obj /usr/share/slsh/require.sl 0fbe790d363121a68e8a7e0389475dd5 1773578264
+dir /usr/share/slsh/help
+obj /usr/share/slsh/help/profile.hlp f09f5e2de778abee7793ed574d12039b 1773578264
+obj /usr/share/slsh/help/base64funs.hlp d1716df7bf067f57a0c1480c64e0c4b3 1773578265
+obj /usr/share/slsh/help/cmdopt.hlp efb4e18a0224bdac9f2f9511b5820c3f 1773578264
+obj /usr/share/slsh/help/csvfuns.hlp aa537e43d94528179aec10e517757756 1773578265
+obj /usr/share/slsh/help/require.hlp b7cf48f820e7e6b228fae1340ef8e462 1773578264
+obj /usr/share/slsh/help/statsfuns.hlp aeec2aa9be7aab3e95dfa49b57896640 1773578265
+obj /usr/share/slsh/help/arrayfuns.hlp d5f00642a264309e6c06d3c7b64833f1 1773578264
+obj /usr/share/slsh/help/process.hlp e212c089fad00026e99d6e6575c7ccd3 1773578264
+obj /usr/share/slsh/help/setfuns.hlp a527751211d18d179c3439e1bb64e5f4 1773578264
+obj /usr/share/slsh/help/sockfuns.hlp 94d0e7b25a8a327878dfabab722ce4d7 1773578265
+obj /usr/share/slsh/help/pngfuns.hlp 184f83e2daab2b2832fd93570a6e8655 1773578265
+obj /usr/share/slsh/help/print.hlp b4a99a79f62d7b74b1ade3cbf5a3095d 1773578264
+obj /usr/share/slsh/help/glob.hlp b6b84520a76d743394d6e2f978d59a78 1773578264
+obj /usr/share/slsh/help/slsmg.hlp 10d46df576a864742fb61eab270ff3fd 1773578265
+obj /usr/share/slsh/help/forkfuns.hlp b1985b4ad51148a76cd071eac39db229 1773578265
+obj /usr/share/slsh/help/structfuns.hlp b0b718c8c02d6565d02b613f8b53f6c8 1773578264
+obj /usr/share/slsh/help/onigfuns.hlp f3876a44c33d483c089fcc1cf916412d 1773578265
+obj /usr/share/slsh/help/pcrefuns.hlp 43e3991a507afe3fe0e9209ed5d172f8 1773578265
+obj /usr/share/slsh/help/fswalk.hlp fbf4ef4f24f32c09a240cb75518b5b3b 1773578264
+obj /usr/share/slsh/help/listfuns.hlp 30dd537e7b3ecfcfb8a5fe1777d2968a 1773578264
+obj /usr/share/slsh/help/jsonfuns.hlp b26ea2508d2eeef8d90652f2ba9fe8a9 1773578265
+obj /usr/share/slsh/help/readascii.hlp cf05c7cd1b21d78bc3e378117751f819 1773578264
+obj /usr/share/slsh/help/chksumfuns.hlp 096a1465a2cd9e71125697ab2984ac1d 1773578265
+obj /usr/share/slsh/help/histfuns.hlp 399b52383c39f24c0ce840a5d3beff5d 1773578265
+obj /usr/share/slsh/help/randfuns.hlp 4e5b41f06d8db488d4524740bc5a021c 1773578265
+obj /usr/share/slsh/help/timestamp.hlp b6f2e6415145e156055c63d8b693ebe9 1773578264
+obj /usr/share/slsh/arrayfuns.sl f2baa5fcb287aa657906ff82036fbd29 1773578263
+obj /usr/share/slsh/sldbsock.sl 1b5dc6c61e323cc8b74c9dc363ed2c8f 1773578264
+obj /usr/share/slsh/zlib.sl 35274e48b5275913be8593f70538168c 1773578265
+obj /usr/share/slsh/socket.sl 0f2639d2f7d4f9ecf2dfaf9f636a8b8a 1773578265
+obj /usr/share/slsh/termios.sl c7e6c4ced397a363e8a000fc5bc8b543 1773578265
+obj /usr/share/slsh/base64.sl 7bc81422fc639f2d69be9201661161a4 1773578265
+dir /usr/share/slsh/statslib
+obj /usr/share/slsh/statslib/ad_test.sl d835a07af398b9ddc00f9c13513d0858 1773578265
+obj /usr/share/slsh/statslib/ks_test.sl 3b5d7767e4acb0f00fc5dbea1d0c1800 1773578265
+obj /usr/share/slsh/statslib/kuiper.sl 01394ce8f2fcc7f187083ed07f12133d 1773578265
+obj /usr/share/slsh/slshhelp.sl 24854daf51c543d12a12bf6d63895e9f 1773578264
+obj /usr/share/slsh/structfuns.sl 5f45b4a47f2c8387f0727b9fbb8feca0 1773578264
+obj /usr/share/slsh/png.sl 29862faa1be4a3cec41025b58ad7a5a6 1773578265
+obj /usr/share/slsh/process.sl 585cf1c6befca888ec988c2351094c87 1773578263
+dir /usr/share/slsh/cmaps
+obj /usr/share/slsh/cmaps/cubicyf.map b56217def6e530771645fa1cb5c96594 1773578265
+obj /usr/share/slsh/cmaps/split.map 766c5794ff7ba8a51802c64ea6500a10 1773578265
+obj /usr/share/slsh/cmaps/seis.map 822a30bc752ce25df1b7c5ca382431f2 1773578265
+obj /usr/share/slsh/cmaps/ds9sls.map e3728911424d9197c7d96c3b09c6bbf8 1773578265
+obj /usr/share/slsh/cmaps/edge.map 8b561b12ccd34c3c568f63ff0fb67cf0 1773578265
+obj /usr/share/slsh/cmaps/red2green.map 5d04aae207d653e5a66e47f362455f47 1773578265
+obj /usr/share/slsh/cmaps/cool.map 22f726ce1c714bc7ef2847335dff8111 1773578265
+obj /usr/share/slsh/cmaps/relief.map 35ab89f1d18c486facf81837d2cc701f 1773578265
+obj /usr/share/slsh/cmaps/cubicl.map 02356f26115691a6f9f331b4777a807c 1773578265
+obj /usr/share/slsh/cmaps/gebco.map bd1a2c9824255c6009506b6d402396e5 1773578265
+obj /usr/share/slsh/cmaps/jet.map 3fabe62425903f3db3e8e0664dd7c9ac 1773578265
+obj /usr/share/slsh/cmaps/coolwarm.map e56872e24fb4de417bb170f9e4d56dcf 1773578265
+obj /usr/share/slsh/cmaps/sealand.map 73b14cd85a658eec3277e6262813ea79 1773578265
+obj /usr/share/slsh/cmaps/no_green.map 2d5b50e4fbcce103bc4234ef790aada3 1773578265
+obj /usr/share/slsh/cmaps/topo.map 55f9c2038387de35c614e7d9177c311d 1773578265
+obj /usr/share/slsh/cmaps/ds9b.map ab809ff5b0bffc516c435d1efe13770d 1773578265
+obj /usr/share/slsh/cmaps/haxby.map 040c2e4b67d168ef16cfe16f34f0be00 1773578265
+obj /usr/share/slsh/cmaps/polar.map 3cee4be4bb8f3b8f452703820ca7c5e1 1773578265
+obj /usr/share/slsh/cmaps/drywet.map d0bfa5bf56e8510b77ff73bac2242834 1773578265
+obj /usr/share/slsh/cmaps/wysiwyg.map 40143310054cff26f4a03bcb4256ef9b 1773578265
+obj /usr/share/slsh/cmaps/ocean.map 7868315d41d7f3b2441c2051a60a3f4f 1773578265
+obj /usr/share/slsh/cmaps/rainbow.map 56a97684fa5afb1634009df356aa38e1 1773578265
+obj /usr/share/slsh/cmaps/hot.map dfb93dd83019d8f2650387c9be6da2c8 1773578265
+obj /usr/share/slsh/cmaps/copper.map 5a888b0a793a75a189ccc1c471a821c8 1773578265
+obj /usr/share/slsh/cmaps/globe.map e45893941a8740c286a822bd98b4c4b7 1773578265
+obj /usr/share/slsh/cmaps/gray.map da4c2a44f9fab415dce204588f5f2388 1773578265
+obj /usr/share/slsh/cmdopt.sl 807b6afdfda1807df1abc8723ece4a2d 1773578263
+obj /usr/share/slsh/sysconf.sl 6936556918098db2121df3471196f092 1773578265
+obj /usr/share/slsh/glob.sl 6351686163162d37b9b582d8b98be8df 1773578263
+obj /usr/share/slsh/iconv.sl c086fcfa75b61c08f4f302671edaa6ea 1773578265
+obj /usr/share/slsh/fork.sl 054f7145ae264490c1333e76eee6f955 1773578265
+obj /usr/share/slsh/histogram.sl c4d5af01cf797247e2f3ace8224f2efa 1773578265
+obj /usr/share/slsh/profile.sl 98a7c987f36cc30c9d2c9a067d0bb4c5 1773578263
+obj /usr/share/slsh/fswalk.sl b864557b58a6b300bebdee2fbaa8a456 1773578263
+obj /usr/share/slsh/onig.sl 2cd38a87305115e1e44db10799bcf961 1773578265
+obj /usr/share/slsh/pcre.sl 51176264a96b62e806cce66f650626a1 1773578265
+obj /usr/share/slsh/slshrl.sl 79a3c2f89c1e80484fe930b9ecfd288a 1773578264
+obj /usr/share/slsh/readascii.sl 54920e937084f6e25ab8a039ec6f9193 1773578263
+obj /usr/share/slsh/listfuns.sl b7b01333fda6b9b86184f9e8cb67dc23 1773578263
+obj /usr/share/slsh/select.sl c72fe93258a056dd943e8e026dc0eab9 1773578265
+dir /usr/share/slsh/rline
+obj /usr/share/slsh/rline/editor.sl 083dfa10bad5250057ea0a74016c1887 1773578264
+obj /usr/share/slsh/rline/histsrch.sl a9602739037ef53465be823c29612058 1773578264
+obj /usr/share/slsh/rline/emacskeys.sl 76ab61f14fc3a3b4f5be86054b994df4 1773578264
+obj /usr/share/slsh/rline/slrline.rc dfb515dff87a1abf485e75214cb0370e 1773578264
+obj /usr/share/slsh/rline/complete.sl 83039cd788359eef1361040b7351107e 1773578264
+obj /usr/share/slsh/rline/history.sl 94828b99e2b4db91427ea82706944833 1773578264
+obj /usr/share/slsh/rline/vikeys.sl 4ae0f0a1a4afc56515310a98e8074798 1773578264
+obj /usr/share/slsh/rline/editfuns.sl f6e09a83474d235f1d531629f1a2b5f6 1773578264
+obj /usr/share/slsh/print.sl 47c7d61b398fd6fd29bd0d04da8de48b 1773578263
+obj /usr/share/slsh/stats.sl 422928dd5fbd33e008ada4fc5ae82a1f 1773578265
+obj /usr/share/slsh/varray.sl a9db8a67878b1c61d17f7bdd9e6b72b3 1773578265
+obj /usr/share/slsh/rand.sl 90e54a116fdda87c0c00fdecb82d1e35 1773578265
+obj /usr/share/slsh/timestamp.sl eed7359614aa1639cb5ee9e58738c259 1773578264
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/slsh.1.bz2 87bf68ab8288ede5aa08f4034b3aab92 1773578264
+dir /usr/lib64
+dir /usr/lib64/slang
+dir /usr/lib64/slang/v2
+dir /usr/lib64/slang/v2/modules
+obj /usr/lib64/slang/v2/modules/socket-module.so 675e27c8423a792c8de6f9ed9659f038 1773578269
+obj /usr/lib64/slang/v2/modules/pcre-module.so 19d48ad5b71b5e15bc048a4b2cc8573c 1773578269
+obj /usr/lib64/slang/v2/modules/varray-module.so fb59d19c666ab945c4eb654436098699 1773578269
+obj /usr/lib64/slang/v2/modules/stats-module.so eb956974761cd86c1ce9ffde311f85fe 1773578269
+obj /usr/lib64/slang/v2/modules/sysconf-module.so 44ade6b2a51f391412ded5165eebe0f2 1773578269
+obj /usr/lib64/slang/v2/modules/zlib-module.so 588881150f57d811a4612b3aebd83010 1773578269
+obj /usr/lib64/slang/v2/modules/fcntl-module.so eaf610eec757fe686cebfdea519b7fe6 1773578269
+obj /usr/lib64/slang/v2/modules/fork-module.so 60501a9e060a78a9a9f5383ed7164649 1773578269
+obj /usr/lib64/slang/v2/modules/chksum-module.so 7542b581f4c8e3ec3bc23dec50983149 1773578269
+obj /usr/lib64/slang/v2/modules/histogram-module.so f4d2c4c3cff31a2c42196a9d5053baf8 1773578269
+obj /usr/lib64/slang/v2/modules/termios-module.so 65045b9e1e91d7d5fa8bcfc6cf558bf4 1773578269
+obj /usr/lib64/slang/v2/modules/csv-module.so c1c6eb25b4df993d24454f5ef95f0e2a 1773578269
+obj /usr/lib64/slang/v2/modules/iconv-module.so c1794a288966927661e75d9c3dca11bd 1773578269
+obj /usr/lib64/slang/v2/modules/rand-module.so 2b352fbbb14bd3f7839462e8aed61324 1773578269
+obj /usr/lib64/slang/v2/modules/json-module.so 4848b7f458ad16555c3147ce889d7153 1773578269
+obj /usr/lib64/slang/v2/modules/base64-module.so 84821125e468c3e5309c5e054918c672 1773578269
+obj /usr/lib64/slang/v2/modules/select-module.so 730c1962b9f7e024c1abd634889e90d5 1773578269
+obj /usr/lib64/slang/v2/modules/slsmg-module.so 3f40d68ea211d2872f306d29c5b45ad7 1773578269
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/slang.pc bf71ce4bc0af399fa0ea5d8fc097c422 1773578263
+obj /usr/lib64/libslang.so.2.3.3 7fd3a1f67c8bb0f445261ccf788257f0 1773578270
+sym /usr/lib64/libslang.so.2 -> libslang.so.2.3.3 1789836463
+sym /usr/lib64/libslang.so -> libslang.so.2 1789836463
+dir /usr/bin
+obj /usr/bin/slsh 5a81e658f9d12f0bfc5319b54af8387d 1773578269
+dir /usr/include
+obj /usr/include/slcurses.h f8ebf845c4256eeac5a9df38edeaebac 1773578263
+obj /usr/include/slang.h fe606913b7e0aff7acf4073a5e5dde90 1773578263
+dir /usr/lib

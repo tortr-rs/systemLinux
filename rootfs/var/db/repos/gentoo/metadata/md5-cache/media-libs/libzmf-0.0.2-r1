@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=dev-libs/icu:= dev-libs/librevenge media-libs/libpng:0= virtual/zlib:= dev-libs/boost test? ( dev-util/cppunit )
+DESCRIPTION=Library for parsing Zoner Callisto/Draw documents
+EAPI=8
+HOMEPAGE=https://wiki.documentfoundation.org/DLP/Libraries/libzmf
+IUSE=debug test tools
+KEYWORDS=amd64 ~arm arm64 ~loong ppc ppc64 ~riscv x86
+LICENSE=MPL-2.0
+RDEPEND=dev-libs/icu:= dev-libs/librevenge media-libs/libpng:0= virtual/zlib:=
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=http://dev-www.libreoffice.org/src/libzmf/libzmf-0.0.2.tar.xz
+_md5_=6bce1627bb658688ea775552c9a035a4

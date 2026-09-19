@@ -1,0 +1,11 @@
+DEFINED_PHASES=prepare
+DEPEND=media-video/mplayer media-video/mjpegtools[png] media-video/dvdauthor virtual/imagemagick-tools media-video/ffmpeg:0
+DESCRIPTION=A package to convert movies to DVD format and to build DVDs with
+EAPI=8
+HOMEPAGE=http://videotrans.sourceforge.net/
+KEYWORDS=~amd64
+LICENSE=BSD
+RDEPEND=media-video/mplayer media-video/mjpegtools[png] media-video/dvdauthor virtual/imagemagick-tools media-video/ffmpeg:0 www-client/lynx app-shells/bash app-alternatives/bc
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/videotrans/videotrans-1.6.1.tar.bz2
+_md5_=c9f7451d183fb82cc42c9129ec5cfba7

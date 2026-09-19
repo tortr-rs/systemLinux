@@ -1,0 +1,15 @@
+BDEPEND=virtual/pkgconfig virtual/pkgconfig
+DEFINED_PHASES=compile install postinst prepare
+DEPEND=hidapi? ( dev-libs/hidapi:= ) !hidapi? ( virtual/libusb:= )
+DESCRIPTION=Led controller for Logitech G- Keyboards
+EAPI=7
+HOMEPAGE=https://github.com/MatMoul/g810-led
+INHERIT=systemd toolchain-funcs udev
+IUSE=+hidapi
+KEYWORDS=~amd64
+LICENSE=GPL-3
+RDEPEND=hidapi? ( dev-libs/hidapi:= ) !hidapi? ( virtual/libusb:= )
+SLOT=0
+SRC_URI=https://github.com/MatMoul/g810-led/archive/v0.4.2.tar.gz -> g810-led-0.4.2.tar.gz
+_eclasses_=systemd	a964c0cbe818b5729da1dbfcee5be861	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5	udev	1a23882bb73bc31c64a6f00a5e515f34
+_md5_=ad1a5c2bedc5b531ce65235a63ac8fa7

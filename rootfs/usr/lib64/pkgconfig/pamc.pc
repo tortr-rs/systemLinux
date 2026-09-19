@@ -1,0 +1,10 @@
+prefix=/usr
+includedir=${prefix}/include
+libdir=${prefix}/lib64
+
+Name: libpamc
+Description: The PAM client API library and binary prompt support. Rarely used.
+URL: http://www.linux-pam.org/
+Version: 1.7.2
+Libs: -L${libdir} -lpamc
+Cflags: -I${includedir}

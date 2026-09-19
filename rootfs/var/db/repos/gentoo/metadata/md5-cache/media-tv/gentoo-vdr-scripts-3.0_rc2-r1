@@ -1,0 +1,14 @@
+BDEPEND=acct-group/vdr acct-user/vdr
+DEFINED_PHASES=install postinst
+DEPEND=acct-group/vdr acct-user/vdr
+DESCRIPTION=Scripts necessary for use of VDR as a set-top-box
+EAPI=8
+HOMEPAGE=https://gitweb.gentoo.org/proj/gentoo-vdr-scripts.git/about/
+INHERIT=tmpfiles user-info
+KEYWORDS=amd64 ~arm ~arm64 ~ppc x86
+LICENSE=GPL-2
+RDEPEND=acct-group/vdr acct-user/vdr app-admin/sudo sys-process/wait_on_pid virtual/tmpfiles
+SLOT=0
+SRC_URI=https://github.com/madmartin/gentoo-vdr-scripts/archive/refs/tags/gentoo-vdr-scripts-3.0_rc2.tar.gz
+_eclasses_=tmpfiles	e0b49bcd7a0daea941c0fbe4cb35ff4e	user-info	9bc91a5977c2453c0a861b26f65057ea
+_md5_=f5766c727d65fc68a8591aeb6a06f4e8

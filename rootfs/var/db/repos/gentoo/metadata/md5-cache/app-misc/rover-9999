@@ -1,0 +1,13 @@
+BDEPEND=virtual/pkgconfig >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install unpack
+DEPEND=sys-libs/ncurses:=[unicode(+)]
+DESCRIPTION=simple file browser for the terminal
+EAPI=8
+HOMEPAGE=https://lecram.github.io/p/rover/
+INHERIT=toolchain-funcs git-r3
+LICENSE=public-domain
+PROPERTIES=live
+RDEPEND=sys-libs/ncurses:=[unicode(+)]
+SLOT=0
+_eclasses_=git-r3	e6c2f983e006e805160436c75a0c1562	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=5d427722a596fda07aeba7ac64af508e

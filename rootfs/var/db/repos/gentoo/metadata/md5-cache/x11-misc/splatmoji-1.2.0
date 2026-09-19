@@ -1,0 +1,15 @@
+DEFINED_PHASES=install postinst test
+DEPEND=test? ( app-misc/jq dev-util/shunit2 )
+DESCRIPTION=Quickly look up and input emoji and/or emoticons
+EAPI=7
+HOMEPAGE=https://github.com/cspeterson/splatmoji/
+INHERIT=optfeature
+IUSE=test
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=app-shells/bash x11-misc/rofi x11-misc/xdotool x11-misc/xsel
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://github.com/cspeterson/splatmoji/archive/v1.2.0.tar.gz -> splatmoji-1.2.0.tar.gz
+_eclasses_=optfeature	58cc13bdc4e9a204077e1e7c9a1d7988
+_md5_=0dd4d33051ea7517e296053158658e33

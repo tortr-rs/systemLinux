@@ -1,0 +1,146 @@
+dir /usr
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/sed-4.10-r1
+obj /usr/share/doc/sed-4.10-r1/AUTHORS.bz2 7fcd638253be8864dfd0e9955d382cfc 1784481781
+obj /usr/share/doc/sed-4.10-r1/BUGS.bz2 ec780a614a9ae3ae8e4a83f02eaf18c5 1784481781
+obj /usr/share/doc/sed-4.10-r1/ChangeLog.bz2 278f194d92b731500fed939b23f6f720 1784481781
+obj /usr/share/doc/sed-4.10-r1/NEWS.bz2 92d2cf5c864dfe5d0862fc78b7bcc4fc 1784481781
+obj /usr/share/doc/sed-4.10-r1/README.bz2 11dc496af0d1815a65f012d2008492d8 1784481781
+obj /usr/share/doc/sed-4.10-r1/THANKS.bz2 639a3dcb7fdc99acb6b9576869cf98c7 1784481781
+dir /usr/share/info
+obj /usr/share/info/sed.info.bz2 aa5b94a5a223787290c39a8fd9f121ee 1784481781
+dir /usr/share/locale
+dir /usr/share/locale/af
+dir /usr/share/locale/af/LC_MESSAGES
+obj /usr/share/locale/af/LC_MESSAGES/sed.mo ed8dfa2ebfa8c8ebac96de3bf09f841c 1784481780
+dir /usr/share/locale/ar
+dir /usr/share/locale/ar/LC_MESSAGES
+obj /usr/share/locale/ar/LC_MESSAGES/sed.mo 024056dca37dbb718d4011f0110df37b 1784481780
+dir /usr/share/locale/ast
+dir /usr/share/locale/ast/LC_MESSAGES
+obj /usr/share/locale/ast/LC_MESSAGES/sed.mo 051d27e9c6cccdd0d7df991c3004bda0 1784481780
+dir /usr/share/locale/be
+dir /usr/share/locale/be/LC_MESSAGES
+obj /usr/share/locale/be/LC_MESSAGES/sed.mo ec86258d38319e6cd4c1c90f46cab007 1784481780
+dir /usr/share/locale/bg
+dir /usr/share/locale/bg/LC_MESSAGES
+obj /usr/share/locale/bg/LC_MESSAGES/sed.mo d1e328096f321016d9dc0b19d147fb9b 1784481780
+dir /usr/share/locale/ca
+dir /usr/share/locale/ca/LC_MESSAGES
+obj /usr/share/locale/ca/LC_MESSAGES/sed.mo 56b84d3a9e05d8dc1934463715060fe3 1784481780
+dir /usr/share/locale/cs
+dir /usr/share/locale/cs/LC_MESSAGES
+obj /usr/share/locale/cs/LC_MESSAGES/sed.mo d00c976a559f06650779e085cfab2652 1784481780
+dir /usr/share/locale/da
+dir /usr/share/locale/da/LC_MESSAGES
+obj /usr/share/locale/da/LC_MESSAGES/sed.mo 3679497ab79c5803e374c4246f95febd 1784481780
+dir /usr/share/locale/de
+dir /usr/share/locale/de/LC_MESSAGES
+obj /usr/share/locale/de/LC_MESSAGES/sed.mo ed1a6e7fbc67a1ea16a728492557ed1b 1784481780
+dir /usr/share/locale/el
+dir /usr/share/locale/el/LC_MESSAGES
+obj /usr/share/locale/el/LC_MESSAGES/sed.mo 5c12bf6ea25bfd8799bcac9446a034ce 1784481780
+dir /usr/share/locale/eo
+dir /usr/share/locale/eo/LC_MESSAGES
+obj /usr/share/locale/eo/LC_MESSAGES/sed.mo 4fa6d0789636b159b3f19740ae7af293 1784481780
+dir /usr/share/locale/es
+dir /usr/share/locale/es/LC_MESSAGES
+obj /usr/share/locale/es/LC_MESSAGES/sed.mo f48e0b70e5148d02bba9d199c026a91c 1784481780
+dir /usr/share/locale/et
+dir /usr/share/locale/et/LC_MESSAGES
+obj /usr/share/locale/et/LC_MESSAGES/sed.mo 08ca840bd182e81008b7b82e7caeb25a 1784481780
+dir /usr/share/locale/eu
+dir /usr/share/locale/eu/LC_MESSAGES
+obj /usr/share/locale/eu/LC_MESSAGES/sed.mo f84d9a3c1c0c5f68da45813e9b02580f 1784481780
+dir /usr/share/locale/fi
+dir /usr/share/locale/fi/LC_MESSAGES
+obj /usr/share/locale/fi/LC_MESSAGES/sed.mo cab6bcfa2e3be3fbbb1cfd6314286a9c 1784481780
+dir /usr/share/locale/fr
+dir /usr/share/locale/fr/LC_MESSAGES
+obj /usr/share/locale/fr/LC_MESSAGES/sed.mo 7fb08cea634b13a0abbcbacb903ca1ea 1784481780
+dir /usr/share/locale/ga
+dir /usr/share/locale/ga/LC_MESSAGES
+obj /usr/share/locale/ga/LC_MESSAGES/sed.mo edc333ea69ea399abd510b0cd77d993b 1784481780
+dir /usr/share/locale/gl
+dir /usr/share/locale/gl/LC_MESSAGES
+obj /usr/share/locale/gl/LC_MESSAGES/sed.mo 0c881ffac2f0ec4a603b33e39adc34d2 1784481780
+dir /usr/share/locale/he
+dir /usr/share/locale/he/LC_MESSAGES
+obj /usr/share/locale/he/LC_MESSAGES/sed.mo 533558db08a5b6cee243e1c00867046b 1784481780
+dir /usr/share/locale/hr
+dir /usr/share/locale/hr/LC_MESSAGES
+obj /usr/share/locale/hr/LC_MESSAGES/sed.mo 80a996d84ac02dc8f5f7642d2af9af7a 1784481780
+dir /usr/share/locale/hu
+dir /usr/share/locale/hu/LC_MESSAGES
+obj /usr/share/locale/hu/LC_MESSAGES/sed.mo cf76e58a441c73cfbcbeb4cf0152b0cb 1784481780
+dir /usr/share/locale/id
+dir /usr/share/locale/id/LC_MESSAGES
+obj /usr/share/locale/id/LC_MESSAGES/sed.mo 53655c174963606dd710ed0f7844a546 1784481780
+dir /usr/share/locale/it
+dir /usr/share/locale/it/LC_MESSAGES
+obj /usr/share/locale/it/LC_MESSAGES/sed.mo d51ee103d2fdce48eb8c34c4e10c1c95 1784481780
+dir /usr/share/locale/ja
+dir /usr/share/locale/ja/LC_MESSAGES
+obj /usr/share/locale/ja/LC_MESSAGES/sed.mo ec118f978fe24dbce1f673d28655981c 1784481781
+dir /usr/share/locale/ka
+dir /usr/share/locale/ka/LC_MESSAGES
+obj /usr/share/locale/ka/LC_MESSAGES/sed.mo e2253001349f8f0669a5ce081e21bdd1 1784481781
+dir /usr/share/locale/ko
+dir /usr/share/locale/ko/LC_MESSAGES
+obj /usr/share/locale/ko/LC_MESSAGES/sed.mo 235b3ea91cebeb98fa72c8f5ae9257a4 1784481781
+dir /usr/share/locale/nb
+dir /usr/share/locale/nb/LC_MESSAGES
+obj /usr/share/locale/nb/LC_MESSAGES/sed.mo 5cc91527b9e0747ee1a73eebe59c1c5c 1784481781
+dir /usr/share/locale/nl
+dir /usr/share/locale/nl/LC_MESSAGES
+obj /usr/share/locale/nl/LC_MESSAGES/sed.mo 44e93b1356c8f862222dd198c1a95cc5 1784481781
+dir /usr/share/locale/pl
+dir /usr/share/locale/pl/LC_MESSAGES
+obj /usr/share/locale/pl/LC_MESSAGES/sed.mo 8b4ec30c5df9e9dba382b57068547605 1784481781
+dir /usr/share/locale/pt
+dir /usr/share/locale/pt/LC_MESSAGES
+obj /usr/share/locale/pt/LC_MESSAGES/sed.mo ea44caf3123a6d6d26d3320de91fccef 1784481781
+dir /usr/share/locale/pt_BR
+dir /usr/share/locale/pt_BR/LC_MESSAGES
+obj /usr/share/locale/pt_BR/LC_MESSAGES/sed.mo 741b3f684cf27aa4b0e75ffd6ed1741b 1784481781
+dir /usr/share/locale/ro
+dir /usr/share/locale/ro/LC_MESSAGES
+obj /usr/share/locale/ro/LC_MESSAGES/sed.mo bb0036c545bdbbd8171c984f497c1553 1784481781
+dir /usr/share/locale/ru
+dir /usr/share/locale/ru/LC_MESSAGES
+obj /usr/share/locale/ru/LC_MESSAGES/sed.mo d650f5f572dcf836a420ce74b8b1f46f 1784481781
+dir /usr/share/locale/sk
+dir /usr/share/locale/sk/LC_MESSAGES
+obj /usr/share/locale/sk/LC_MESSAGES/sed.mo 7505c3f438733fe7141a20be17f130d8 1784481781
+dir /usr/share/locale/sl
+dir /usr/share/locale/sl/LC_MESSAGES
+obj /usr/share/locale/sl/LC_MESSAGES/sed.mo 48e3c8ed860535426dbecc9f131ba823 1784481781
+dir /usr/share/locale/sr
+dir /usr/share/locale/sr/LC_MESSAGES
+obj /usr/share/locale/sr/LC_MESSAGES/sed.mo d238723afa400f5b1952ec9f81225fe1 1784481781
+dir /usr/share/locale/sv
+dir /usr/share/locale/sv/LC_MESSAGES
+obj /usr/share/locale/sv/LC_MESSAGES/sed.mo ab145b5809d77de0087730a10407f51d 1784481781
+dir /usr/share/locale/tr
+dir /usr/share/locale/tr/LC_MESSAGES
+obj /usr/share/locale/tr/LC_MESSAGES/sed.mo e9947ce66b6c61a87991ab2f841a4501 1784481781
+dir /usr/share/locale/uk
+dir /usr/share/locale/uk/LC_MESSAGES
+obj /usr/share/locale/uk/LC_MESSAGES/sed.mo 03bb71b6929e8cc686dc0083b21c4e5d 1784481781
+dir /usr/share/locale/vi
+dir /usr/share/locale/vi/LC_MESSAGES
+obj /usr/share/locale/vi/LC_MESSAGES/sed.mo d1c42ee4047edf1fa128f63f920a2060 1784481781
+dir /usr/share/locale/zh_CN
+dir /usr/share/locale/zh_CN/LC_MESSAGES
+obj /usr/share/locale/zh_CN/LC_MESSAGES/sed.mo 51981331403f06c6cb6f4ab0e1447ffe 1784481781
+dir /usr/share/locale/zh_TW
+dir /usr/share/locale/zh_TW/LC_MESSAGES
+obj /usr/share/locale/zh_TW/LC_MESSAGES/sed.mo b30315eb7447e71d45c6d921d2494afd 1784481781
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/gsed.1.bz2 7325e30106bdbaa61393db57eb4b12fa 1784481781
+sym /usr/share/man/man1/sed.1.bz2 -> gsed.1.bz2 1789354126
+dir /bin
+obj /bin/gsed fbd7d7664a9b70fc2490e14db91ef600 1784481782
+sym /bin/sed -> gsed 1789354126

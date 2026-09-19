@@ -1,0 +1,4 @@
+dir /usr
+dir /usr/share
+dir /usr/share/info
+obj /usr/share/info/info.info.bz2 f5abfd7c91bafd2574b32d315df134a0 1763313467

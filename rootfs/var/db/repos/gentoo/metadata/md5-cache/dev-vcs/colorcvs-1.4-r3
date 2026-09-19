@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst prepare
+DESCRIPTION=A tool based on colorgcc to beautify cvs output
+EAPI=8
+HOMEPAGE=https://packages.gentoo.org/package/dev-vcs/colorcvs
+INHERIT=prefix
+KEYWORDS=amd64 ppc x86
+LICENSE=GPL-2
+RDEPEND=dev-lang/perl dev-vcs/cvs
+SLOT=0
+SRC_URI=https://dev.gentoo.org/~jlec/distfiles/colorcvs-1.4.tar.bz2
+_eclasses_=prefix	2765cb74ebcf9f9ac73893d4503c8cb6
+_md5_=d3ec9123123662ce37d6eacd679d4121

@@ -1,0 +1,14 @@
+BDEPEND=app-text/rman sys-devel/gcc >=x11-misc/imake-1.0.8-r1
+DEFINED_PHASES=compile configure install
+DEPEND=x11-libs/libX11 x11-libs/libXext x11-libs/libXt x11-base/xorg-proto
+DESCRIPTION=Set the X root window to an image of the Earth
+EAPI=7
+HOMEPAGE=https://hewgill.com/xearth/original/
+INHERIT=flag-o-matic toolchain-funcs
+KEYWORDS=~alpha amd64 ppc ppc64 x86
+LICENSE=xearth
+RDEPEND=x11-libs/libX11 x11-libs/libXext x11-libs/libXt
+SLOT=0
+SRC_URI=ftp://cag.lcs.mit.edu/pub/tuna/xearth-1.1.tar.gz ftp://ftp.cs.colorado.edu/users/tuna/xearth-1.1.tar.gz
+_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=3ff4b6daa02fdb552423c14ec9d03384

@@ -1,0 +1,1 @@
+>=x11-libs/cairo-1.15.10[svg(+)] x11-base/xorg-proto dev-lang/python:3.14[threads(+)]

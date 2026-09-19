@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install
+DEPEND=dev-build/netsurf-buildsystem
+DESCRIPTION=Framebuffer abstraction library, written in C
+EAPI=7
+HOMEPAGE=https://www.netsurf-browser.org/projects/librosprite/
+INHERIT=netsurf
+KEYWORDS=amd64 ~arm ~arm64 ~ppc ~ppc64 ~riscv ~x86
+LICENSE=MIT
+SLOT=0
+SRC_URI=https://download.netsurf-browser.org/libs/releases/librosprite-0.1.3-src.tar.gz
+_eclasses_=netsurf	3a16932a52467058f19b48ced2e15c4a	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=a3480e7ebd792a399e5d4b7cf128595a

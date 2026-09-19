@@ -1,0 +1,1 @@
+>=dev-libs/libxml2-2.10.3:2/16= >=dev-libs/libxslt-1.1.38 dev-lang/python:3.14 >=sys-libs/glibc-2.43-r2

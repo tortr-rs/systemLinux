@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=sys-libs/ncurses:0=
+DESCRIPTION=Classic networked version of T*tris
+EAPI=7
+HOMEPAGE=http://www.netris.org/
+INHERIT=flag-o-matic toolchain-funcs
+KEYWORDS=~amd64 ~arm64 ~mips ~x86
+LICENSE=GPL-2
+RDEPEND=sys-libs/ncurses:0=
+SLOT=0
+SRC_URI=ftp://ftp.netris.org/pub/netris/netris-0.52.tar.gz mirror://debian/pool/main/n/netris/netris_0.52-10.debian.tar.xz
+_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=237ecc2a3bd698929b7676db80b4bd27

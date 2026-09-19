@@ -1,0 +1,11 @@
+iso_workspace/
+*.iso
+bbash_source/
+evim_source/
+rootfs/etc/.pwd.lock
+rootfs/var/log/
+rootfs/var/tmp/
+rootfs/var/cache/
+rootfs/root/
+rootfs/etc/portage/gnupg/
+rootfs/etc/ssl/private/

@@ -1,0 +1,19 @@
+dir /usr
+dir /usr/bin
+sym /usr/bin/2to3 -> ../lib/python-exec/python-exec2 1789353919
+sym /usr/bin/idle -> ../lib/python-exec/python-exec2 1789353919
+sym /usr/bin/pydoc -> ../lib/python-exec/python-exec2 1789353919
+sym /usr/bin/python -> python-exec2c 1789353919
+sym /usr/bin/python-config -> ../lib/python-exec/python-exec2 1789353919
+obj /usr/bin/python-exec2c ae67e18f935285cbc94eeff1532053e4 1780763937
+sym /usr/bin/python3 -> python-exec2c 1789353919
+sym /usr/bin/python3-config -> ../lib/python-exec/python-exec2 1789353919
+sym /usr/bin/pyvenv -> ../lib/python-exec/python-exec2 1789353919
+dir /usr/lib
+dir /usr/lib/python-exec
+obj /usr/lib/python-exec/python-exec2 9f892b9159d633616d0e68b39d2d5ef9 1780763936
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/python-exec-2.4.10
+obj /usr/share/doc/python-exec-2.4.10/NEWS.bz2 24b53529ab0c718a07676d42fee677a7 1780763937
+obj /usr/share/doc/python-exec-2.4.10/README.bz2 cb19bc40b60019563688808ce1fd21bb 1780763936

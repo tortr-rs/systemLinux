@@ -1,0 +1,80 @@
+/usr/x86_64-pc-linux-gnu/gcc-bin/15/x86_64-pc-linux-gnu-gfortran libc.so.6,ld-linux-x86-64.so.2
+/usr/x86_64-pc-linux-gnu/gcc-bin/15/x86_64-pc-linux-gnu-gcov libz.so.1,libc.so.6,ld-linux-x86-64.so.2
+/usr/x86_64-pc-linux-gnu/gcc-bin/15/x86_64-pc-linux-gnu-c++ libc.so.6,ld-linux-x86-64.so.2
+/usr/x86_64-pc-linux-gnu/gcc-bin/15/x86_64-pc-linux-gnu-g++ libc.so.6,ld-linux-x86-64.so.2
+/usr/x86_64-pc-linux-gnu/gcc-bin/15/x86_64-pc-linux-gnu-gcc libc.so.6,ld-linux-x86-64.so.2
+/usr/x86_64-pc-linux-gnu/gcc-bin/15/x86_64-pc-linux-gnu-cpp libc.so.6,ld-linux-x86-64.so.2
+/usr/x86_64-pc-linux-gnu/gcc-bin/15/x86_64-pc-linux-gnu-gcc-ranlib libc.so.6
+/usr/x86_64-pc-linux-gnu/gcc-bin/15/gcc-ranlib libc.so.6
+/usr/x86_64-pc-linux-gnu/gcc-bin/15/x86_64-pc-linux-gnu-gcc-nm libc.so.6
+/usr/x86_64-pc-linux-gnu/gcc-bin/15/gcc-nm libc.so.6
+/usr/x86_64-pc-linux-gnu/gcc-bin/15/x86_64-pc-linux-gnu-gcc-ar libc.so.6
+/usr/x86_64-pc-linux-gnu/gcc-bin/15/gcc-ar libc.so.6
+/usr/x86_64-pc-linux-gnu/gcc-bin/15/gcov-dump libc.so.6,ld-linux-x86-64.so.2
+/usr/x86_64-pc-linux-gnu/gcc-bin/15/gcov-tool libc.so.6,ld-linux-x86-64.so.2
+/usr/x86_64-pc-linux-gnu/gcc-bin/15/lto-dump libmpc.so.3,libmpfr.so.6,libgmp.so.10,libz.so.1,libzstd.so.1,libm.so.6,libc.so.6,ld-linux-x86-64.so.2
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/libcc1.so.0.0.0 libstdc++.so.6,libc.so.6,libgcc_s.so.1
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/libgcc_s.so.1 libc.so.6,ld-linux-x86-64.so.2
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/libstdc++.so.6.0.34 libm.so.6,libc.so.6,ld-linux-x86-64.so.2,libgcc_s.so.1
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/liblsan_preinit.o 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/liblsan.so.0.0.0 libc.so.6,ld-linux-x86-64.so.2,libgcc_s.so.1
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/libasan_preinit.o 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/libasan.so.8.0.0 libm.so.6,libc.so.6,libgcc_s.so.1
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/libubsan.so.1.0.0 libstdc++.so.6,libc.so.6,libgcc_s.so.1
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/libtsan_preinit.o 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/libtsan.so.2.0.0 libm.so.6,libc.so.6,libgcc_s.so.1
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/libhwasan_preinit.o 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/libhwasan.so.0.0.0 libc.so.6,ld-linux-x86-64.so.2,libgcc_s.so.1
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/libquadmath.so.0.0.0 libm.so.6,libc.so.6
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/libgfortran.so.5.0.0 libm.so.6,libgcc_s.so.1,libc.so.6,ld-linux-x86-64.so.2
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/libgomp.so.1.0.0 libc.so.6
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/libgomp-plugin-nvptx.so.1.0.0 libgomp.so.1,libc.so.6
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/libitm.so.1.0.0 libc.so.6
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/libatomic.so.1.2.0 libc.so.6
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/32/libgcc_s.so.1 libc.so.6,ld-linux.so.2
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/32/libstdc++.so.6.0.34 libm.so.6,libc.so.6,ld-linux.so.2,libgcc_s.so.1
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/32/libasan_preinit.o 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/32/libasan.so.8.0.0 libm.so.6,libc.so.6,ld-linux.so.2,libgcc_s.so.1
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/32/libubsan.so.1.0.0 libstdc++.so.6,libc.so.6,ld-linux.so.2,libgcc_s.so.1
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/32/libquadmath.so.0.0.0 libm.so.6,libc.so.6
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/32/libgfortran.so.5.0.0 libm.so.6,libgcc_s.so.1,libc.so.6,ld-linux.so.2
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/32/libgomp.so.1.0.0 libc.so.6
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/32/libitm.so.1.0.0 libc.so.6
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/32/libatomic.so.1.2.0 libc.so.6
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/32/crtoffloadtableS.o 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/32/crtoffloadtable.o 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/32/crtoffloadend.o 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/32/crtoffloadbegin.o 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/32/crtfastmath.o 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/32/crtprec80.o 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/32/crtprec64.o 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/32/crtprec32.o 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/32/crtendS.o 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/32/crtend.o 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/32/crtbeginT.o 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/32/crtbeginS.o 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/32/crtbegin.o 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/crtoffloadtableS.o 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/crtoffloadtable.o 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/crtoffloadend.o 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/crtoffloadbegin.o 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/crtfastmath.o 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/crtprec80.o 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/crtprec64.o 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/crtprec32.o 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/crtendS.o 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/crtend.o 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/crtbeginT.o 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/crtbeginS.o 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/crtbegin.o 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/plugin/libcp1plugin.so.0.0.0 libstdc++.so.6,libc.so.6,libgcc_s.so.1
+/usr/lib/gcc/x86_64-pc-linux-gnu/15/plugin/libcc1plugin.so.0.0.0 libstdc++.so.6,libc.so.6,libgcc_s.so.1
+/usr/libexec/gcc/x86_64-pc-linux-gnu/15/g++-mapper-server libc.so.6,ld-linux-x86-64.so.2
+/usr/libexec/gcc/x86_64-pc-linux-gnu/15/plugin/gengtype libc.so.6
+/usr/libexec/gcc/x86_64-pc-linux-gnu/15/lto-wrapper libc.so.6,ld-linux-x86-64.so.2
+/usr/libexec/gcc/x86_64-pc-linux-gnu/15/collect2 libc.so.6,ld-linux-x86-64.so.2
+/usr/libexec/gcc/x86_64-pc-linux-gnu/15/lto1 libmpc.so.3,libmpfr.so.6,libgmp.so.10,libz.so.1,libzstd.so.1,libm.so.6,libc.so.6,ld-linux-x86-64.so.2
+/usr/libexec/gcc/x86_64-pc-linux-gnu/15/f951 libz.so.1,libmpc.so.3,libmpfr.so.6,libgmp.so.10,libzstd.so.1,libm.so.6,libc.so.6,ld-linux-x86-64.so.2
+/usr/libexec/gcc/x86_64-pc-linux-gnu/15/cc1plus libmpc.so.3,libmpfr.so.6,libgmp.so.10,libz.so.1,libzstd.so.1,libm.so.6,libc.so.6,ld-linux-x86-64.so.2
+/usr/libexec/gcc/x86_64-pc-linux-gnu/15/cc1 libmpc.so.3,libmpfr.so.6,libgmp.so.10,libz.so.1,libzstd.so.1,libm.so.6,libc.so.6,ld-linux-x86-64.so.2
+/usr/libexec/gcc/x86_64-pc-linux-gnu/15/liblto_plugin.so libc.so.6

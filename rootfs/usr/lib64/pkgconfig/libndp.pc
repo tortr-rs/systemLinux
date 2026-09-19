@@ -1,0 +1,10 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=/usr/lib64
+includedir=${prefix}/include
+
+Name: libndp
+Description: Neighbour discovery library.
+Version: 1.9
+Libs: -L${libdir} -lndp
+Cflags: -I${includedir}

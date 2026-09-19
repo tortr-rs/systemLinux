@@ -1,0 +1,2 @@
+/usr/bin/curl libcurl.so.4,libz.so.1,libc.so.6
+/usr/lib64/libcurl.so.4.8.0 libcares.so.2,libpsl.so.5,libssl.so.3,libcrypto.so.3,libz.so.1,libc.so.6

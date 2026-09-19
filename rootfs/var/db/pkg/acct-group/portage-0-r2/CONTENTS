@@ -1,0 +1,4 @@
+dir /usr
+dir /usr/lib
+dir /usr/lib/sysusers.d
+obj /usr/lib/sysusers.d/acct-group-portage.conf 45d1ef143d5aef0c74972b87614f9556 1711301141

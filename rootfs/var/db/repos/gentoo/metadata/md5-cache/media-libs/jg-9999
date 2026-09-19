@@ -1,0 +1,11 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install unpack
+DESCRIPTION=Reference Implementation of The Jolly Good API
+EAPI=9
+HOMEPAGE=https://jgemu.gitlab.io/
+INHERIT=git-r3
+LICENSE=ZLIB
+PROPERTIES=live
+SLOT=1
+_eclasses_=git-r3	e6c2f983e006e805160436c75a0c1562
+_md5_=871064ca217bb80e69bb41e5530f0804

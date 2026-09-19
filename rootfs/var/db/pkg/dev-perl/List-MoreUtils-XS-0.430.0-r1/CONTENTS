@@ -1,0 +1,20 @@
+dir /usr
+dir /usr/lib64
+dir /usr/lib64/perl5
+dir /usr/lib64/perl5/vendor_perl
+dir /usr/lib64/perl5/vendor_perl/5.42
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/List
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/List/MoreUtils
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/List/MoreUtils/XS.pm bf41dfe84426559433a4ece7a763669b 1763921725
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/List
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/List/MoreUtils
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/List/MoreUtils/XS
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/List/MoreUtils/XS/.packlist 1f2325f8a7690502d346916bfa568cf8 1763921725
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/List/MoreUtils/XS/XS.so 8467b3055c440f1cff0095ec1973319b 1763921726
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/List-MoreUtils-XS-0.430.0-r1
+obj /usr/share/doc/List-MoreUtils-XS-0.430.0-r1/Changes.bz2 7bb6dc816010d96a851f9279b3fad9ce 1763921725
+obj /usr/share/doc/List-MoreUtils-XS-0.430.0-r1/README.md.bz2 c979e67de2eae51b95446ac3e88a904f 1763921725

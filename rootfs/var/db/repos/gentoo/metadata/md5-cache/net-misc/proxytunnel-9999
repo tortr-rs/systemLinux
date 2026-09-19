@@ -1,0 +1,14 @@
+BDEPEND=virtual/pkgconfig >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install prepare unpack
+DEPEND=dev-libs/openssl:= app-text/asciidoc app-text/xmlto
+DESCRIPTION=Connect stdin and stdout to a server via an HTTPS proxy
+EAPI=7
+HOMEPAGE=https://github.com/proxytunnel/proxytunnel/ https://proxytunnel.sourceforge.net/
+INHERIT=flag-o-matic toolchain-funcs git-r3
+IUSE=static
+LICENSE=GPL-2
+PROPERTIES=live
+RDEPEND=dev-libs/openssl:=
+SLOT=0
+_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	git-r3	e6c2f983e006e805160436c75a0c1562	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=a20766adada887d4a2408f48ceb4ba66

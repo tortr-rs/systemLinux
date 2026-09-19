@@ -1,0 +1,15 @@
+BDEPEND=virtual/pkgconfig nls? ( sys-devel/gettext )
+DEFINED_PHASES=configure install prepare
+DEPEND=x11-libs/gtk+:2 dev-libs/glib:2 nls? ( virtual/libintl )
+DESCRIPTION=Game that helps young kids learn their letters and numbers
+EAPI=8
+HOMEPAGE=https://lln.sourceforge.net/
+INHERIT=desktop
+IUSE=nls
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=x11-libs/gtk+:2 dev-libs/glib:2 nls? ( virtual/libintl )
+SLOT=0
+SRC_URI=mirror://gentoo/lletters_0.1.95+gtk2.orig.tar.gz mirror://gentoo/lletters_0.1.95+gtk2-3.diff.gz https://downloads.sourceforge.net/lln/lletters-media-0.1.9a.tar.gz
+_eclasses_=desktop	e447b5f77146d69797e9f03ff177f3f1
+_md5_=2d407d5f2cf910f9b3cb76c6faf74826

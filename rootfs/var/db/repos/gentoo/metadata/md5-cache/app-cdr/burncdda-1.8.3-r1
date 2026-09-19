@@ -1,0 +1,11 @@
+DEFINED_PHASES=install
+DESCRIPTION=Console app for copying burning audio cds
+EAPI=8
+HOMEPAGE=https://burncdda.sourceforge.net/
+IUSE=flac vorbis
+KEYWORDS=amd64 ppc ~sparc x86
+LICENSE=GPL-2
+RDEPEND=app-cdr/cdrdao app-cdr/cdrtools dev-util/dialog media-sound/normalize media-sound/sox flac? ( media-libs/flac ) vorbis? ( media-sound/vorbis-tools )
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/burncdda/burncdda-1.8.3.tar.gz
+_md5_=64fb9525a41c5c127b97829b30b38c37

@@ -1,0 +1,11 @@
+DEFINED_PHASES=install postinst prepare
+DESCRIPTION=Simple information system script
+EAPI=7
+HOMEPAGE=https://github.com/dylanaraps/neofetch
+INHERIT=optfeature prefix
+KEYWORDS=amd64 arm arm64 ~hppa ~loong ~mips ~ppc ppc64 ~riscv ~sparc x86 ~arm64-macos ~x64-macos
+LICENSE=MIT
+SLOT=0
+SRC_URI=https://github.com/dylanaraps/neofetch/archive/7.1.0/neofetch-7.1.0.tar.gz
+_eclasses_=optfeature	58cc13bdc4e9a204077e1e7c9a1d7988	prefix	2765cb74ebcf9f9ac73893d4503c8cb6
+_md5_=b3422db2ee47ab1d0a7dd626b10f519e

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<!-- maintainer-needed -->
+	<use>
+		<flag name="client">Build and install Snapcast client component</flag>
+		<flag name="pipewire">Build with PipeWire support</flag>
+		<flag name="sdl">Build client with SDL2 support</flag>
+		<flag name="server">Build and install Snapcast server component</flag>
+		<flag name="soxr">Build with audio resampler support with <pkg>media-libs/soxr</pkg></flag>
+		<flag name="tremor">Build with TREMOR version of vorbis</flag>
+	</use>
+	<upstream>
+		<maintainer status="active">
+			<name>Johannes Pohl</name>
+			<email>github@badaix.de</email>
+		</maintainer>
+		<bugs-to>https://github.com/snapcast/snapcast/issues</bugs-to>
+		<remote-id type="github">snapcast/snapcast</remote-id>
+	</upstream>
+	<longdescription lang="en">
+		Snapcast plays audio streams time sychronized on multiple devices over 
+		network using a server and a client component. The server picks up an 
+		audio stream from a fifo pipe, thus it can be combined with any audio 
+		source that is able to write to a pipe.
+	</longdescription>
+</pkgmetadata>

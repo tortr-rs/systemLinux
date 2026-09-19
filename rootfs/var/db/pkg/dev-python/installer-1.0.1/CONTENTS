@@ -1,0 +1,67 @@
+dir /usr
+dir /usr/lib
+dir /usr/lib/python3.14
+dir /usr/lib/python3.14/site-packages
+dir /usr/lib/python3.14/site-packages/installer
+obj /usr/lib/python3.14/site-packages/installer/__init__.py 7a00b7fe0277fdc58c4fb80af29d829b 1778523177
+obj /usr/lib/python3.14/site-packages/installer/__main__.py d908ced06f2dcc865a51010e8990653a 1778523177
+dir /usr/lib/python3.14/site-packages/installer/__pycache__
+obj /usr/lib/python3.14/site-packages/installer/__pycache__/__init__.cpython-314.opt-1.pyc a5cd14d880245a6e495d03300ab4fb95 1788715530
+obj /usr/lib/python3.14/site-packages/installer/__pycache__/__init__.cpython-314.opt-2.pyc 763cb313287c130606bdecd2984f087a 1788715530
+obj /usr/lib/python3.14/site-packages/installer/__pycache__/__init__.cpython-314.pyc a5cd14d880245a6e495d03300ab4fb95 1788715530
+obj /usr/lib/python3.14/site-packages/installer/__pycache__/__main__.cpython-314.opt-1.pyc 6d724fd0142c1d3bd575b6d334560c2e 1788715530
+obj /usr/lib/python3.14/site-packages/installer/__pycache__/__main__.cpython-314.opt-2.pyc c410b79fd19f99eb352aca9a41369597 1788715530
+obj /usr/lib/python3.14/site-packages/installer/__pycache__/__main__.cpython-314.pyc 920af20ef54e412cf5e9dcd3d5652d79 1788715530
+obj /usr/lib/python3.14/site-packages/installer/__pycache__/_core.cpython-314.opt-1.pyc 99e7aa13733baff3f9e87918a2cffa77 1788715530
+obj /usr/lib/python3.14/site-packages/installer/__pycache__/_core.cpython-314.opt-2.pyc 3fb37507da35c2a1127056d8c1bfc563 1788715530
+obj /usr/lib/python3.14/site-packages/installer/__pycache__/_core.cpython-314.pyc 99e7aa13733baff3f9e87918a2cffa77 1788715530
+obj /usr/lib/python3.14/site-packages/installer/__pycache__/destinations.cpython-314.opt-1.pyc b0191fee8385adca647035846fc878e6 1788715530
+obj /usr/lib/python3.14/site-packages/installer/__pycache__/destinations.cpython-314.opt-2.pyc 2697e64a7b73008f20b6403e8ecf28ea 1788715530
+obj /usr/lib/python3.14/site-packages/installer/__pycache__/destinations.cpython-314.pyc b0191fee8385adca647035846fc878e6 1788715530
+obj /usr/lib/python3.14/site-packages/installer/__pycache__/exceptions.cpython-314.opt-1.pyc 1dea8ac71c303d4aaf4b434452d04db9 1788715530
+obj /usr/lib/python3.14/site-packages/installer/__pycache__/exceptions.cpython-314.opt-2.pyc 024cee005b47b97913188d4e6f2326a3 1788715530
+obj /usr/lib/python3.14/site-packages/installer/__pycache__/exceptions.cpython-314.pyc 1dea8ac71c303d4aaf4b434452d04db9 1788715530
+obj /usr/lib/python3.14/site-packages/installer/__pycache__/records.cpython-314.opt-1.pyc f66871b90bce049486fdff9ad346d14c 1788715530
+obj /usr/lib/python3.14/site-packages/installer/__pycache__/records.cpython-314.opt-2.pyc bc2fd99d2a74c3d13459549766ffe866 1788715530
+obj /usr/lib/python3.14/site-packages/installer/__pycache__/records.cpython-314.pyc 0c1bbabf61aae35d2c9e109b46818e59 1788715530
+obj /usr/lib/python3.14/site-packages/installer/__pycache__/scripts.cpython-314.opt-1.pyc 10a3e6357bdb792d1fea882f34c8aa57 1788715530
+obj /usr/lib/python3.14/site-packages/installer/__pycache__/scripts.cpython-314.opt-2.pyc 8555000d932ed38bd8af73408a611937 1788715530
+obj /usr/lib/python3.14/site-packages/installer/__pycache__/scripts.cpython-314.pyc 10a3e6357bdb792d1fea882f34c8aa57 1788715530
+obj /usr/lib/python3.14/site-packages/installer/__pycache__/sources.cpython-314.opt-1.pyc 2758642297e7819237860c1966553ba8 1788715530
+obj /usr/lib/python3.14/site-packages/installer/__pycache__/sources.cpython-314.opt-2.pyc bb99d73b25dbc6b45d9b0d8ff76d00a0 1788715530
+obj /usr/lib/python3.14/site-packages/installer/__pycache__/sources.cpython-314.pyc 5f024796406ec7bd7ea849e6f6e5d146 1788715530
+obj /usr/lib/python3.14/site-packages/installer/__pycache__/utils.cpython-314.opt-1.pyc 2d23fa0a67e3cda6b0d851e428f83a17 1788715530
+obj /usr/lib/python3.14/site-packages/installer/__pycache__/utils.cpython-314.opt-2.pyc 9a351c74dd0f2f4902f5464b391ab66f 1788715530
+obj /usr/lib/python3.14/site-packages/installer/__pycache__/utils.cpython-314.pyc 1c6b915db86dd86b8d988259fd23acad 1788715530
+obj /usr/lib/python3.14/site-packages/installer/_core.py 33909f9bf640f7b43f162987caf6948d 1778523177
+dir /usr/lib/python3.14/site-packages/installer/_scripts
+obj /usr/lib/python3.14/site-packages/installer/_scripts/__init__.py efb2dd5b7e06fd5ec5178765089080f8 1778523177
+dir /usr/lib/python3.14/site-packages/installer/_scripts/__pycache__
+obj /usr/lib/python3.14/site-packages/installer/_scripts/__pycache__/__init__.cpython-314.opt-1.pyc 53edaf87eedb2406de91a05bbdc09b53 1788715530
+obj /usr/lib/python3.14/site-packages/installer/_scripts/__pycache__/__init__.cpython-314.opt-2.pyc b2cd1b91a8aae6a9f671464a8573be8d 1788715530
+obj /usr/lib/python3.14/site-packages/installer/_scripts/__pycache__/__init__.cpython-314.pyc 53edaf87eedb2406de91a05bbdc09b53 1788715530
+obj /usr/lib/python3.14/site-packages/installer/_scripts/t32.exe 07894acc08732f8b6adade78d3038376 1778523177
+obj /usr/lib/python3.14/site-packages/installer/_scripts/t64-arm.exe f4935e39cd1008b6677ecaff658b51d4 1778523177
+obj /usr/lib/python3.14/site-packages/installer/_scripts/t64.exe 19d621a4b2d26d8fa8002548a1b04a32 1778523177
+obj /usr/lib/python3.14/site-packages/installer/_scripts/t_arm.exe bc88e8e2f05ed76b3ad72a134c15427c 1778523177
+obj /usr/lib/python3.14/site-packages/installer/_scripts/w32.exe 2e91e902dcf13c131281786258a279a3 1778523177
+obj /usr/lib/python3.14/site-packages/installer/_scripts/w64-arm.exe 79ef49f5145a0b66a49bf177fa5fd85f 1778523177
+obj /usr/lib/python3.14/site-packages/installer/_scripts/w64.exe d65d7ad7e65f344463755bb62d8ebf38 1778523177
+obj /usr/lib/python3.14/site-packages/installer/_scripts/w_arm.exe 5df0ea9538ba30035c67e8a48957c424 1778523177
+obj /usr/lib/python3.14/site-packages/installer/destinations.py 2fe6dd8314c8741dda0b78890c885298 1778523177
+obj /usr/lib/python3.14/site-packages/installer/exceptions.py 431c3cc593434787a8756b5471d4478d 1778523177
+obj /usr/lib/python3.14/site-packages/installer/py.typed d41d8cd98f00b204e9800998ecf8427e 1778523177
+obj /usr/lib/python3.14/site-packages/installer/records.py 2aa32cade06385c6aeda78beaa45288c 1778523177
+obj /usr/lib/python3.14/site-packages/installer/scripts.py 2f24e13e6ac841b0f7eb58e572be78d4 1778523177
+obj /usr/lib/python3.14/site-packages/installer/sources.py 2ab85461ee4838d2fa9075ee47654893 1778523177
+obj /usr/lib/python3.14/site-packages/installer/utils.py c869db163f56ec9b9e3c07af0b8bda14 1778523177
+dir /usr/lib/python3.14/site-packages/installer-1.0.1.dist-info
+obj /usr/lib/python3.14/site-packages/installer-1.0.1.dist-info/METADATA cba9547e681db182a8b991e4acb7b236 1451606400
+obj /usr/lib/python3.14/site-packages/installer-1.0.1.dist-info/RECORD 3a3e1da39633c18c610ca99fb69e44c6 1451606400
+obj /usr/lib/python3.14/site-packages/installer-1.0.1.dist-info/WHEEL eca1d2e32987c5c9fd85f21a0c92d672 1451606400
+dir /usr/lib/python3.14/site-packages/installer-1.0.1.dist-info/licenses
+obj /usr/lib/python3.14/site-packages/installer-1.0.1.dist-info/licenses/LICENSE 5038641aec7a77451e31da828ebfae00 1778523176
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/installer-1.0.1
+obj /usr/share/doc/installer-1.0.1/README.md.bz2 3eeea737324fa1aae5dd8eff36dd2bf2 1788715530

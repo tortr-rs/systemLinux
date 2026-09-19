@@ -1,0 +1,2 @@
+/usr/lib64/libndp.so.0.3.0 libc.so.6,ld-linux-x86-64.so.2
+/usr/bin/ndptool libndp.so.0,libc.so.6

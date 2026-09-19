@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install test
+DESCRIPTION=EXIF JPEG camera setting parser and thumbnail remover
+EAPI=8
+HOMEPAGE=http://www.sentex.net/~mwandel/jhead
+INHERIT=flag-o-matic toolchain-funcs
+KEYWORDS=~alpha amd64 ppc ppc64 ~sparc x86
+LICENSE=public-domain
+SLOT=0
+SRC_URI=https://github.com/Matthias-Wandel/jhead/archive/refs/tags/3.08.tar.gz -> jhead-3.08.tgz
+_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=dd06c7541913c6a0a1cd9d1844751fbb

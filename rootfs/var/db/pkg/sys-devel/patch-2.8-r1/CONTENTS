@@ -1,0 +1,15 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/gpatch eba67a09505c39664d1d1e1366831388 1749404938
+sym /usr/bin/patch -> gpatch 1789354113
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/patch-2.8-r1
+obj /usr/share/doc/patch-2.8-r1/AUTHORS.bz2 8968c124ed75dec93e3e78ee1e336d41 1749404937
+obj /usr/share/doc/patch-2.8-r1/ChangeLog.bz2 36381b100f47e422d7fd4c5a160710e9 1749404937
+obj /usr/share/doc/patch-2.8-r1/NEWS.bz2 0b57659ca189ec63bde968b78eb4ca7f 1749404937
+obj /usr/share/doc/patch-2.8-r1/README.bz2 b38f8beb78b3eeaa42313a15c51d870a 1749404937
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/gpatch.1.bz2 83cd50cb436d22cbf18658001342bdfb 1749404937
+sym /usr/share/man/man1/patch.1.bz2 -> gpatch.1.bz2 1789354113

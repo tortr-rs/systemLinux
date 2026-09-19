@@ -1,0 +1,23 @@
+dir /usr
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/simdjson-4.6.2
+obj /usr/share/doc/simdjson-4.6.2/CONTRIBUTORS.bz2 8cec5e826ac8bf702cb2b127dc412c9e 1789851249
+obj /usr/share/doc/simdjson-4.6.2/AUTHORS ea2741df1d5b94e364e3e8b480da3ec8 1789851249
+obj /usr/share/doc/simdjson-4.6.2/HACKING.md.bz2 0ae2fd65ec5fa8c7745bcf6e61e67c6c 1789851249
+obj /usr/share/doc/simdjson-4.6.2/README.md.bz2 28f6371657d10e8f2c4cf88b2241f687 1789851249
+obj /usr/share/doc/simdjson-4.6.2/CONTRIBUTING.md.bz2 3d9b372e4cb8f2a4c7a24c159aede0fc 1789851249
+dir /usr/lib64
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/simdjson.pc bb06fd9e9be1e67405f0de5c6b71a9cb 1789851242
+dir /usr/lib64/cmake
+dir /usr/lib64/cmake/simdjson
+obj /usr/lib64/cmake/simdjson/simdjson-config.cmake e33b31c256915ff0b420cd2dce7df409 1789851242
+obj /usr/lib64/cmake/simdjson/simdjsonTargets.cmake e0e22638c17346c2dc92437eb48382ea 1789851242
+obj /usr/lib64/cmake/simdjson/simdjsonTargets-relwithdebinfo.cmake c4e2dbe68862d0311857ef0a25de50a1 1789851242
+obj /usr/lib64/cmake/simdjson/simdjson-config-version.cmake 6cc4f2eb7e46b28733822ef11d4a7614 1789851242
+obj /usr/lib64/libsimdjson.so.33.0.0 bfe30cd8279fb9743b73979f2b7557e6 1789851249
+dir /usr/include
+obj /usr/include/simdjson.h df1dea0c0254cd97c1a6d25461d99c90 1776460926
+sym /usr/lib64/libsimdjson.so.33 -> libsimdjson.so.33.0.0 1789851248
+sym /usr/lib64/libsimdjson.so -> libsimdjson.so.33 1789851248

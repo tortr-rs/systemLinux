@@ -1,0 +1,13 @@
+BDEPEND=app-arch/unzip X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DEFINED_PHASES=install postinst postrm prepare setup
+DESCRIPTION=Fonts for the Khmer language of Cambodia
+EAPI=7
+HOMEPAGE=http://www.khmeros.info/drupal/?q=en/download/fonts
+INHERIT=font
+IUSE=X
+KEYWORDS=amd64 ~arm64 ~loong ~riscv x86
+LICENSE=LGPL-2.1
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/khmer/All_KhmerOS_5.0.zip
+_eclasses_=font	6d0c60c855c05ae2ba808d300440ded2
+_md5_=01611c5d224c16c926db013ca4c27638

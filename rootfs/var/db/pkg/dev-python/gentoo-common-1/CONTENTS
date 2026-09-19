@@ -1,0 +1,4 @@
+dir /usr
+dir /usr/lib
+dir /usr/lib/python
+obj /usr/lib/python/EXTERNALLY-MANAGED 1e0e78e0b661aa4d1b217f27dd1a27c0 1710327769

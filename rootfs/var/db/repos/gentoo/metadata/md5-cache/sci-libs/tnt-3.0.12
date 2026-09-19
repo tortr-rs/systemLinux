@@ -1,0 +1,10 @@
+BDEPEND=app-arch/unzip
+DEFINED_PHASES=install
+DESCRIPTION=Template Numerical Toolkit: C++ headers for array and matrices
+EAPI=7
+HOMEPAGE=https://math.nist.gov/tnt/
+KEYWORDS=~amd64 ~x86
+LICENSE=public-domain
+SLOT=0
+SRC_URI=https://math.nist.gov/tnt/tnt_3_0_12.zip
+_md5_=70b194ab17e39722d5c7c483744ce4bf

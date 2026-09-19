@@ -1,0 +1,15 @@
+BDEPEND=app-arch/unzip
+DEFINED_PHASES=install unpack
+DESCRIPTION=Extension for converting text to numbers
+EAPI=8
+HOMEPAGE=https://extensions.libreoffice.org/extensions/ct2n-convert-text-to-number-and-dates
+INHERIT=office-ext-r1
+IUSE=office_implementation_libreoffice
+KEYWORDS=amd64 ~x86
+LICENSE=LGPL-3
+RDEPEND=office_implementation_libreoffice? ( || ( app-office/libreoffice app-office/libreoffice-bin ) )
+REQUIRED_USE=|| ( office_implementation_libreoffice )
+SLOT=0
+SRC_URI=https://extensions.libreoffice.org/extensions/ct2n-convert-text-to-number-and-dates/1.5/@@download/file/converttexttonumber-1-5.0.oxt
+_eclasses_=office-ext-r1	a26e95a93a1a0fcd3daa3b2fc19d475b
+_md5_=015e654516c4b8bff40418a3e5602be7

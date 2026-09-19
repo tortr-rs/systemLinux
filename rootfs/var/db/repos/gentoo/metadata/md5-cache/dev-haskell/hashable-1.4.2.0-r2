@@ -1,0 +1,16 @@
+BDEPEND=app-text/dos2unix
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test
+DEPEND=>=dev-haskell/base-orphans-0.8.6:=[profile?] <dev-haskell/base-orphans-0.10:=[profile?] >=dev-haskell/data-array-byte-0.1.0.1:=[profile?] <dev-haskell/data-array-byte-0.2:=[profile?] >=dev-lang/ghc-8.4.3:= >=dev-haskell/cabal-2.2.0.1 test? ( dev-haskell/hunit >=dev-haskell/quickcheck-2.4.0.1 >=dev-haskell/random-1.0 <dev-haskell/random-1.3 >=dev-haskell/test-framework-0.3.3 dev-haskell/test-framework-hunit >=dev-haskell/test-framework-quickcheck2-0.2.9 ) hscolour? ( dev-haskell/hscolour )
+DESCRIPTION=A class for types that can be converted to a hash value
+EAPI=8
+HOMEPAGE=https://github.com/haskell-unordered-containers/hashable
+INHERIT=haskell-cabal
+IUSE=random-initial-seed doc hscolour profile test
+KEYWORDS=~amd64 ~arm64 ~ppc64 ~riscv ~x86
+LICENSE=BSD
+RDEPEND=>=dev-haskell/base-orphans-0.8.6:=[profile?] <dev-haskell/base-orphans-0.10:=[profile?] >=dev-haskell/data-array-byte-0.1.0.1:=[profile?] <dev-haskell/data-array-byte-0.2:=[profile?] >=dev-lang/ghc-8.4.3:= dev-lang/ghc:=[profile?]
+RESTRICT=test !test? ( test )
+SLOT=0/1.4.2.0
+SRC_URI=https://hackage.haskell.org/package/hashable-1.4.2.0/hashable-1.4.2.0.tar.gz https://hackage.haskell.org/package/hashable-1.4.2.0/revision/1.cabal -> hashable-1.4.2.0-rev1.cabal
+_eclasses_=ghc-package	8e4f6eb2d0e798049f6fcaf3b84c0d4a	haskell-cabal	1138de808f4356a4380a4f7cc6d4d8a3	multilib	fc812e8eb2170022c28272d80a1f9e77	multiprocessing	45d0620f25c2f063ad6276ecd9ed9399	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=bd82532738862fc8b62c39ba8b6246c6

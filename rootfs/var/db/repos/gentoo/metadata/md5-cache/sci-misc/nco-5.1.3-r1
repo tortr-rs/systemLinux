@@ -1,0 +1,16 @@
+BDEPEND=sys-apps/texinfo
+DEFINED_PHASES=configure install pretend setup test
+DEPEND=>=sci-libs/netcdf-4:=[dap=,hdf5?,tools(+)] gsl? ( sci-libs/gsl:= ) ncap2? ( dev-cpp/antlr-cpp:2= ) udunits? ( >=sci-libs/udunits-2 ) test? ( >=sci-libs/netcdf-4[tools(+)] )
+DESCRIPTION=Command line utilities for operating on netCDF files
+EAPI=8
+HOMEPAGE=http://nco.sourceforge.net/
+INHERIT=toolchain-funcs
+IUSE=dap gsl hdf5 ncap2 openmp test udunits
+KEYWORDS=amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=>=sci-libs/netcdf-4:=[dap=,hdf5?,tools(+)] gsl? ( sci-libs/gsl:= ) ncap2? ( dev-cpp/antlr-cpp:2= ) udunits? ( >=sci-libs/udunits-2 )
+RESTRICT=!test? ( test )
+SLOT=0/5.1.3
+SRC_URI=http://nco.sf.net/src/nco-5.1.3.tar.gz
+_eclasses_=toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=45b2c75d5147a78a8d3acb018c087460

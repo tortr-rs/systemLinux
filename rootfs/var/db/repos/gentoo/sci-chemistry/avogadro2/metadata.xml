@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="project">
+		<email>sci-chemistry@gentoo.org</email>
+		<name>Gentoo Chemistry Project</name>
+	</maintainer>
+	<use>
+		<flag name="rpc">Enable communication between programs using the RPC protocol and standard JSON messages</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">OpenChemistry/avogadroapp</remote-id>
+	</upstream>
+</pkgmetadata>

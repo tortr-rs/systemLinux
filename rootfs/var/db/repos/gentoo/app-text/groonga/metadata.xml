@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<!-- maintainer-needed -->
+	<use>
+		<flag name="apache-arrow">Enable support for Apache Arrow</flag>
+		<flag name="blosc">Allow using blosc compression via <pkg>dev-libs/c-blosc2</pkg></flag>
+		<flag name="json">Enable JSON parser</flag>
+		<flag name="mecab">Use <pkg>app-text/mecab</pkg> for morphological analysis</flag>
+		<flag name="msgpack">Enable <pkg>dev-libs/msgpack</pkg> used for suggestion</flag>
+		<flag name="stemmer">Enable stemming token filter using <pkg>dev-libs/snowball-stemmer</pkg></flag>
+		<flag name="suggest-learner">Build groonga-suggest-learner to learn suggest result from groonga-suggest-httpd or query logs</flag>
+		<flag name="xxhash">Enable drilldown by hashed key using <pkg>dev-libs/xxhash</pkg></flag>
+	</use>
+	<upstream>
+		<remote-id type="github">groonga/groonga</remote-id>
+	</upstream>
+</pkgmetadata>

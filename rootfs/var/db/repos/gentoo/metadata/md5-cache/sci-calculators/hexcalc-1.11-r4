@@ -1,0 +1,14 @@
+BDEPEND=app-text/rman sys-devel/gcc >=x11-misc/imake-1.0.8-r1
+DEFINED_PHASES=compile configure install
+DEPEND=x11-libs/libX11 x11-libs/libXaw x11-libs/libXt x11-base/xorg-proto
+DESCRIPTION=Simple hex calculator for X
+EAPI=8
+HOMEPAGE=https://wiki.gentoo.org/wiki/No_homepage
+INHERIT=flag-o-matic toolchain-funcs
+KEYWORDS=amd64 ~ppc ~x86
+LICENSE=HPND
+RDEPEND=x11-libs/libX11 x11-libs/libXaw x11-libs/libXt
+SLOT=0
+SRC_URI=mirror://gentoo/hexcalc-1.11.tar.Z
+_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=8270223649502005f5c7b8edd4554303

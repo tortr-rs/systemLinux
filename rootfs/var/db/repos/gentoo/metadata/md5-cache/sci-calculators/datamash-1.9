@@ -1,0 +1,14 @@
+BDEPEND=nls? ( sys-devel/gettext ) openssl? ( dev-libs/openssl:= )
+DEFINED_PHASES=configure
+DESCRIPTION=Command-line program for basic numeric, textual and statistical operations
+EAPI=8
+HOMEPAGE=https://www.gnu.org/software/datamash/
+INHERIT=branding
+IUSE=nls openssl
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3+
+RDEPEND=nls? ( virtual/libintl ) openssl? ( dev-libs/openssl:= )
+SLOT=0
+SRC_URI=mirror://gnu/datamash/datamash-1.9.tar.gz
+_eclasses_=branding	7bcece3faa73dd0fc3e597013510d53a
+_md5_=50847edbd5cab871934f8de8a86f7e93

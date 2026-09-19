@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install test
+DESCRIPTION=Backtracking YACC - modified from Berkeley YACC
+EAPI=8
+HOMEPAGE=https://www.siber.com/btyacc
+INHERIT=toolchain-funcs
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=public-domain
+SLOT=0
+SRC_URI=https://www.siber.com/btyacc/btyacc-3-0.tar.gz
+_eclasses_=toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=893f22efd26b1f03dfc0567b27f96859

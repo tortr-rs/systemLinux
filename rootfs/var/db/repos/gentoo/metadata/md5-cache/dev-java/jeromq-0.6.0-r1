@@ -1,0 +1,16 @@
+DEFINED_PHASES=compile install preinst prepare setup test
+DEPEND=>=dev-java/jnacl-1.0-r1:0 >=virtual/jdk-11:* >=dev-java/java-config-2.2.0-r3 source? ( app-arch/zip ) test? ( dev-java/junit:4 )
+DESCRIPTION=Pure Java implementation of libzmq
+EAPI=8
+HOMEPAGE=https://github.com/zeromq/jeromq
+INHERIT=java-pkg-2 java-pkg-simple
+IUSE=doc source test
+KEYWORDS=amd64 arm64 ppc64
+LICENSE=MPL-2.0
+PROPERTIES=test_network
+RDEPEND=>=virtual/jre-1.8:* >=dev-java/java-config-2.2.0-r3 source? ( app-arch/zip )
+RESTRICT=test !test? ( test )
+SLOT=0
+SRC_URI=https://github.com/zeromq/jeromq/archive/v0.6.0.tar.gz -> jeromq-0.6.0.tar.gz
+_eclasses_=java-pkg-2	438c2725ea326202d7fc1eb31af76813	java-pkg-simple	df1fc43a5017ec8f5d23007b23731474	java-utils-2	4fa0be92748bc228f31bd845d285d7f9
+_md5_=b8ee7117cbf4d2c2ec26c1888b559c6d

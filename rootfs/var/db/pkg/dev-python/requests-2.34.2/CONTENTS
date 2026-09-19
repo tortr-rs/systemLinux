@@ -1,0 +1,91 @@
+dir /usr
+dir /usr/lib
+dir /usr/lib/python3.14
+dir /usr/lib/python3.14/site-packages
+dir /usr/lib/python3.14/site-packages/requests
+obj /usr/lib/python3.14/site-packages/requests/__init__.py 7cba726b994f0b7aa4ff9d3bf63437ca 1788715702
+dir /usr/lib/python3.14/site-packages/requests/__pycache__
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/__init__.cpython-314.opt-1.pyc 865a88720392fdd77153bd1c5fbc5ef6 1788715702
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/__init__.cpython-314.opt-2.pyc 14d664bcb522da2c4d6cacb274f34a39 1788715702
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/__init__.cpython-314.pyc 865a88720392fdd77153bd1c5fbc5ef6 1788715702
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/__version__.cpython-314.opt-1.pyc 43944bcdd03cf134a7955f716bede9be 1788715702
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/__version__.cpython-314.opt-2.pyc 43944bcdd03cf134a7955f716bede9be 1788715702
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/__version__.cpython-314.pyc 43944bcdd03cf134a7955f716bede9be 1788715702
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/_internal_utils.cpython-314.opt-1.pyc 25c8dfc7302d0f7f71a525603c9a23d3 1788715702
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/_internal_utils.cpython-314.opt-2.pyc 04ba1d82946b37eb3cef407b714670b8 1788715702
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/_internal_utils.cpython-314.pyc 331659f34239c6b7032b403ba211ded2 1788715702
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/_types.cpython-314.opt-1.pyc 4ca240dcb198a0fecbd23d0eca0dc6bf 1788715702
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/_types.cpython-314.opt-2.pyc 47dcd6b200ca48bb8c33fd174a1e8b5e 1788715702
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/_types.cpython-314.pyc 4ca240dcb198a0fecbd23d0eca0dc6bf 1788715702
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/adapters.cpython-314.opt-1.pyc f9928c4e15de4a7988e0b01eee6b7175 1788715702
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/adapters.cpython-314.opt-2.pyc 2a2932d43aef41200fd42fe0220eea26 1788715702
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/adapters.cpython-314.pyc ada32800171067bc8e09a2ce44527005 1788715702
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/api.cpython-314.opt-1.pyc 5b4b0944144f6dc990737693167e5e15 1788715702
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/api.cpython-314.opt-2.pyc 5c49df193d2ad23763639ecdce0572c3 1788715702
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/api.cpython-314.pyc 5b4b0944144f6dc990737693167e5e15 1788715702
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/auth.cpython-314.opt-1.pyc b369cf77259ef47751540e9b3b9b0b12 1788715702
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/auth.cpython-314.opt-2.pyc eca7cfdb48ad48984c21c5ba798a7452 1788715702
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/auth.cpython-314.pyc b369cf77259ef47751540e9b3b9b0b12 1788715702
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/certs.cpython-314.opt-1.pyc 55cfd4115d97141953670f5a9a3824a7 1788715702
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/certs.cpython-314.opt-2.pyc ca9de5b945df493f90cc6b72f0b3d31a 1788715702
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/certs.cpython-314.pyc 55cfd4115d97141953670f5a9a3824a7 1788715702
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/compat.cpython-314.opt-1.pyc 8c6418c1bb186b56b3f595c6beb7606a 1788715702
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/compat.cpython-314.opt-2.pyc b6e4c4b251d326b3f1dab0e21431a82b 1788715702
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/compat.cpython-314.pyc 8c6418c1bb186b56b3f595c6beb7606a 1788715702
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/cookies.cpython-314.opt-1.pyc ef1a648bd9a75c4b197457f20cc7cd2e 1788715703
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/cookies.cpython-314.opt-2.pyc 81f06c6d2aa02f7770e26214a0bb2548 1788715703
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/cookies.cpython-314.pyc f120da51418fce26dd42ead94ee3be0a 1788715703
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/exceptions.cpython-314.opt-1.pyc 474cacb4094cca72913f86e336acdd68 1788715703
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/exceptions.cpython-314.opt-2.pyc 85ae14e2f7487cfea5bfb6b6faa7a945 1788715703
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/exceptions.cpython-314.pyc 474cacb4094cca72913f86e336acdd68 1788715703
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/help.cpython-314.opt-1.pyc 19d618d89aa099681ed388ceb34864a2 1788715703
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/help.cpython-314.opt-2.pyc ccb24aea31e92b3b8306f848815aa2da 1788715703
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/help.cpython-314.pyc 19d618d89aa099681ed388ceb34864a2 1788715703
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/hooks.cpython-314.opt-1.pyc 1bb03ea2be3c707af2fa3c5efd644a02 1788715703
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/hooks.cpython-314.opt-2.pyc 8f842bf3251968b7e2269b9c507efa6f 1788715703
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/hooks.cpython-314.pyc 1bb03ea2be3c707af2fa3c5efd644a02 1788715703
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/models.cpython-314.opt-1.pyc f3da8d3ed8c8cc12929115ac613c0e6e 1788715703
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/models.cpython-314.opt-2.pyc bb2c03c6ee0f365131a3337c44b8ffd5 1788715703
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/models.cpython-314.pyc f3da8d3ed8c8cc12929115ac613c0e6e 1788715703
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/packages.cpython-314.opt-1.pyc 834a6a93f8af7c810c5a497600865218 1788715703
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/packages.cpython-314.opt-2.pyc 834a6a93f8af7c810c5a497600865218 1788715703
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/packages.cpython-314.pyc 834a6a93f8af7c810c5a497600865218 1788715703
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/sessions.cpython-314.opt-1.pyc 0f0e7c67fa898535a43d332638cbe173 1788715703
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/sessions.cpython-314.opt-2.pyc f64dee6f4647138d03e3efb8b9cabd0c 1788715703
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/sessions.cpython-314.pyc 1845624f09d4f8968ba9eff1ac717c7c 1788715703
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/status_codes.cpython-314.opt-1.pyc e22cd8e19e32c81ec426ea73665b542a 1788715703
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/status_codes.cpython-314.opt-2.pyc 1ad73bedfbf101cdf5775ab984ec1e5c 1788715703
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/status_codes.cpython-314.pyc e22cd8e19e32c81ec426ea73665b542a 1788715703
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/structures.cpython-314.opt-1.pyc 5d4c131d0cc44dda1907278348da7df4 1788715703
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/structures.cpython-314.opt-2.pyc 556bc751b62628e00c93f3ccead1ba6e 1788715703
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/structures.cpython-314.pyc 5d4c131d0cc44dda1907278348da7df4 1788715703
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/utils.cpython-314.opt-1.pyc cd27cbc7985fef0936e019f18c759733 1788715703
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/utils.cpython-314.opt-2.pyc 9f72605d92d4f3eb0974a7a607367eba 1788715703
+obj /usr/lib/python3.14/site-packages/requests/__pycache__/utils.cpython-314.pyc cd27cbc7985fef0936e019f18c759733 1788715703
+obj /usr/lib/python3.14/site-packages/requests/__version__.py 1438da9e5ec4c11db9c645ac5fc615e3 1788715702
+obj /usr/lib/python3.14/site-packages/requests/_internal_utils.py c759f175207b27cc41b8e978cfbde7d9 1788715702
+obj /usr/lib/python3.14/site-packages/requests/_types.py e9b4f11c55a2606b2386945a076f5456 1788715702
+obj /usr/lib/python3.14/site-packages/requests/adapters.py e48ed2d9026aa2aaa95b44b96b243b14 1788715702
+obj /usr/lib/python3.14/site-packages/requests/api.py 94f13759c7b3a3d93ee82af85297fbf5 1788715702
+obj /usr/lib/python3.14/site-packages/requests/auth.py 816832714f01f1dfde70a50c3acff67e 1788715702
+obj /usr/lib/python3.14/site-packages/requests/certs.py a047e45ad1d8262784a724e788b68804 1788715702
+obj /usr/lib/python3.14/site-packages/requests/compat.py fac4b4349276810e238e98bbc238e5b6 1788715702
+obj /usr/lib/python3.14/site-packages/requests/cookies.py 48433101f43297d743a3403b1484f997 1788715702
+obj /usr/lib/python3.14/site-packages/requests/exceptions.py f1ca7a2a5e297e69bc7f3cbffc93b476 1788715702
+obj /usr/lib/python3.14/site-packages/requests/help.py fa10510bfdee5ae8b31a63b5274af75e 1788715702
+obj /usr/lib/python3.14/site-packages/requests/hooks.py 5d267079d910c67f91e6f25be2ef4300 1788715702
+obj /usr/lib/python3.14/site-packages/requests/models.py 45de4963dbbe198ec7b26c4031e64329 1788715702
+obj /usr/lib/python3.14/site-packages/requests/packages.py 93627108fee7284c7f390b0f02fd3c68 1788715702
+obj /usr/lib/python3.14/site-packages/requests/py.typed d41d8cd98f00b204e9800998ecf8427e 1788715702
+obj /usr/lib/python3.14/site-packages/requests/sessions.py f6083bcda6e531c08d1acfccd7950e23 1788715702
+obj /usr/lib/python3.14/site-packages/requests/status_codes.py 1ec3b78cfc0d6ad5d499699b9a551bc6 1788715702
+obj /usr/lib/python3.14/site-packages/requests/structures.py e6ee30308da0f88041a5f61c298599e5 1788715702
+obj /usr/lib/python3.14/site-packages/requests/utils.py 7eaa4eb5c5a90214ca2d430020461dc8 1788715702
+dir /usr/lib/python3.14/site-packages/requests-2.34.2.dist-info
+obj /usr/lib/python3.14/site-packages/requests-2.34.2.dist-info/METADATA cea2a71721226ea104b65de355ff122f 1788715702
+obj /usr/lib/python3.14/site-packages/requests-2.34.2.dist-info/WHEEL d8484b2712d6275b37660ce7c74212ff 1788715702
+obj /usr/lib/python3.14/site-packages/requests-2.34.2.dist-info/top_level.txt 197b4deb87ffa3decd9f045926a86cd0 1788715702
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/requests-2.34.2
+obj /usr/share/doc/requests-2.34.2/README.md.bz2 2dff753d8f25b434a54bc9b51dc949f7 1788715703

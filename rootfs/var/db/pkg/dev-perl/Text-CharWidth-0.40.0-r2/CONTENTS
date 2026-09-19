@@ -1,0 +1,18 @@
+dir /usr
+dir /usr/lib64
+dir /usr/lib64/perl5
+dir /usr/lib64/perl5/vendor_perl
+dir /usr/lib64/perl5/vendor_perl/5.42
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/Text
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/Text/CharWidth.pm 202e49d79a8513b4e65298049106a357 1763921353
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Text
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Text/CharWidth
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Text/CharWidth/.packlist 9f45dacc491d1395b92f6598d5a593f9 1763921353
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Text/CharWidth/CharWidth.so a975a9db6d4c3ed6832079ffe6d04608 1763921356
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/Text-CharWidth-0.40.0-r2
+obj /usr/share/doc/Text-CharWidth-0.40.0-r2/Changes.bz2 69678bb1bc69bf261b2fa8d869097ad0 1763921353
+obj /usr/share/doc/Text-CharWidth-0.40.0-r2/README.bz2 666eabf1a72aedfb885418bab2346830 1763921354

@@ -1,0 +1,20 @@
+dir /usr
+dir /usr/lib64
+dir /usr/lib64/perl5
+dir /usr/lib64/perl5/vendor_perl
+dir /usr/lib64/perl5/vendor_perl/5.42
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/Params
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/Params/Util
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/Params/Util/PP.pm e902195f8b740fdc485f3ea8fb973cd6 1763921714
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/Params/Util.pm 89fac2a5d87e044e834a4dde26ee3360 1763921714
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Params
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Params/Util
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Params/Util/.packlist 49556ea66a9bb361c1612b6938f3eb69 1763921714
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Params/Util/Util.so b641ac6e67e740ab2bd2e2a47aa99055 1763921716
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/Params-Util-1.102.0
+obj /usr/share/doc/Params-Util-1.102.0/Changes.bz2 2ea587c190f56fdb1aeb416ffd5d0ba3 1763921714
+obj /usr/share/doc/Params-Util-1.102.0/README.md.bz2 c2df1e0046af938f53148c5a1d053491 1763921714

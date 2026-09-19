@@ -1,0 +1,1 @@
+|| ( dev-lang/python:3.14 dev-lang/python:3.13 dev-lang/python:3.12 ) >=app-misc/pax-utils-1.3.3 sys-devel/bison >=sys-devel/binutils-2.27 >=sys-devel/gcc-6.2 sys-devel/gnuconfig virtual/pkgconfig

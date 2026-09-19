@@ -1,0 +1,37 @@
+dir /usr
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/brotli-1.1.0
+obj /usr/share/doc/brotli-1.1.0/README.md.bz2 1d6cdcb9b4e64a3feb072d4a4e7d4843 1789851223
+obj /usr/share/doc/brotli-1.1.0/CONTRIBUTING.md.bz2 6890a73ce1a1ed968673c9188f43891e 1789851223
+dir /usr/share/man
+dir /usr/share/man/man3
+obj /usr/share/man/man3/brotli_encode.h.3.bz2 9afaa2d66e653ed003d4e1a5cb8aa60f 1789851223
+obj /usr/share/man/man3/brotli_constants.h.3.bz2 46548746b766cc87b4d7a47963acbe2c 1789851223
+obj /usr/share/man/man3/brotli_decode.h.3.bz2 b5a5ea17774b130c13af71edd30158fe 1789851223
+obj /usr/share/man/man3/brotli_types.h.3.bz2 f994862fc87018d19b83b1952de37f54 1789851223
+dir /usr/share/man/man1
+obj /usr/share/man/man1/brotli.1.bz2 86fc8581263f4a5fdcb9689fa788e39b 1789851223
+dir /usr/lib64
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/libbrotlienc.pc 6a014cae3027b25170fdc58056a479c0 1789851217
+obj /usr/lib64/pkgconfig/libbrotlicommon.pc 1507e044a6d50cce16072b99aa829543 1789851217
+obj /usr/lib64/pkgconfig/libbrotlidec.pc af663262f6eb18a4e319d4b4a6ee4460 1789851217
+obj /usr/lib64/libbrotlienc.so.1.1.0 7a9736e21f92d767b58ed09877a11711 1789851224
+obj /usr/lib64/libbrotlidec.so.1.1.0 fe20d97159c6d9bf2c2d11023051a9e2 1789851224
+obj /usr/lib64/libbrotlicommon.so.1.1.0 e647803227f2a6838ebda0e8bc681acd 1789851224
+sym /usr/lib64/libbrotlidec.so.1 -> libbrotlidec.so.1.1.0 1789851223
+dir /usr/bin
+obj /usr/bin/brotli 886a00404d1c3f0f652bc0a7293d72e3 1789851224
+dir /usr/include
+dir /usr/include/brotli
+obj /usr/include/brotli/types.h 4d772e4c18afe1d9051a92b0ea1aefab 1693306829
+obj /usr/include/brotli/shared_dictionary.h fd846ff8d94f0216bf2fd7b361aba916 1693306829
+obj /usr/include/brotli/port.h 2e952f12f1b80a2f69098e181d49919a 1693306829
+obj /usr/include/brotli/decode.h c973ece03855b037af7660ce09bab262 1693306829
+obj /usr/include/brotli/encode.h 4427cb791804f9f0be1981ad0b32670f 1693306829
+sym /usr/lib64/libbrotlicommon.so.1 -> libbrotlicommon.so.1.1.0 1789851223
+sym /usr/lib64/libbrotlicommon.so -> libbrotlicommon.so.1 1789851223
+sym /usr/lib64/libbrotlienc.so.1 -> libbrotlienc.so.1.1.0 1789851223
+sym /usr/lib64/libbrotlidec.so -> libbrotlidec.so.1 1789851223
+sym /usr/lib64/libbrotlienc.so -> libbrotlienc.so.1 1789851223
