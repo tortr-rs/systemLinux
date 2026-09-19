@@ -1,0 +1,78 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/rhash 01e34599cd696e3d2d047d47ffa36387 1782669256
+sym /usr/bin/sfv-hash -> rhash 1789353875
+sym /usr/bin/tiger-hash -> rhash 1789353875
+sym /usr/bin/tth-hash -> rhash 1789353875
+sym /usr/bin/whirlpool-hash -> rhash 1789353875
+dir /usr/include
+obj /usr/include/rhash.h 21e9c33222d6838fd7752275d1f92330 1782669255
+obj /usr/include/rhash_torrent.h 63fa98780801cf06a264e8ac0d058ddc 1782669255
+dir /usr/lib64
+obj /usr/lib64/librhash.so.1.4.6 00d3210fad64e9a17ed03151a6e2ffb2 1782669256
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/librhash.pc 591ad7e12c4286dc5690db80a9266260 1782669255
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/rhash-1.4.6-r1
+obj /usr/share/doc/rhash-1.4.6-r1/ChangeLog.bz2 9610ad366a5d0218136b0f6c06768e4f 1782669255
+obj /usr/share/doc/rhash-1.4.6-r1/README.md.bz2 e112fef9204de19ae9c60a2b007df85f 1782669255
+dir /usr/share/locale
+dir /usr/share/locale/ca
+dir /usr/share/locale/ca/LC_MESSAGES
+obj /usr/share/locale/ca/LC_MESSAGES/rhash.mo 65882753a0412cc2ffd791d35db4cbe2 1782669255
+dir /usr/share/locale/de
+dir /usr/share/locale/de/LC_MESSAGES
+obj /usr/share/locale/de/LC_MESSAGES/rhash.mo 59a98e122e40684b3932640901e372ae 1782669255
+dir /usr/share/locale/en_AU
+dir /usr/share/locale/en_AU/LC_MESSAGES
+obj /usr/share/locale/en_AU/LC_MESSAGES/rhash.mo df16024d584e959c5e3e894eace858f6 1782669255
+dir /usr/share/locale/es
+dir /usr/share/locale/es/LC_MESSAGES
+obj /usr/share/locale/es/LC_MESSAGES/rhash.mo 11b4240d6d4dc6cdd1075d30ae6bd5ee 1782669255
+dir /usr/share/locale/fr
+dir /usr/share/locale/fr/LC_MESSAGES
+obj /usr/share/locale/fr/LC_MESSAGES/rhash.mo 837e19703668f0f3a09e14254db8177e 1782669255
+dir /usr/share/locale/gl
+dir /usr/share/locale/gl/LC_MESSAGES
+obj /usr/share/locale/gl/LC_MESSAGES/rhash.mo 20962d5c2c3442a8e68ade65552e2a77 1782669255
+dir /usr/share/locale/it
+dir /usr/share/locale/it/LC_MESSAGES
+obj /usr/share/locale/it/LC_MESSAGES/rhash.mo 405a4064285c49953e831676ae880b07 1782669255
+dir /usr/share/locale/pt_BR
+dir /usr/share/locale/pt_BR/LC_MESSAGES
+obj /usr/share/locale/pt_BR/LC_MESSAGES/rhash.mo bb14b43e9c78cbfce0f6373f5149dde7 1782669255
+dir /usr/share/locale/ro
+dir /usr/share/locale/ro/LC_MESSAGES
+obj /usr/share/locale/ro/LC_MESSAGES/rhash.mo e90f58038ce5b9a4e0b3ba0b94ae9781 1782669255
+dir /usr/share/locale/ru
+dir /usr/share/locale/ru/LC_MESSAGES
+obj /usr/share/locale/ru/LC_MESSAGES/rhash.mo 3df826c01007c21ddf59114d07f82502 1782669255
+dir /usr/share/locale/uk
+dir /usr/share/locale/uk/LC_MESSAGES
+obj /usr/share/locale/uk/LC_MESSAGES/rhash.mo 9a8dce3e3f14e768dafbbbe83eab2a31 1782669255
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/rhash.1.bz2 daff0d86738d2270bb3c57adb5a4590d 1782669255
+sym /usr/share/man/man1/sfv-hash.1.bz2 -> rhash.1.bz2 1789353875
+sym /usr/share/man/man1/tiger-hash.1.bz2 -> rhash.1.bz2 1789353875
+sym /usr/share/man/man1/tth-hash.1.bz2 -> rhash.1.bz2 1789353875
+sym /usr/share/man/man1/whirlpool-hash.1.bz2 -> rhash.1.bz2 1789353875
+dir /etc
+obj /etc/rhashrc de1f1e0d07fa48930a34670cd2880e51 1782669255
+sym /usr/share/man/man1/magnet-link.1.bz2 -> rhash.1.bz2 1789353875
+sym /usr/share/man/man1/has160-hash.1.bz2 -> rhash.1.bz2 1789353875
+sym /usr/share/man/man1/gost12-512-hash.1.bz2 -> rhash.1.bz2 1789353875
+sym /usr/share/man/man1/gost12-256-hash.1.bz2 -> rhash.1.bz2 1789353875
+sym /usr/share/man/man1/edonr512-hash.1.bz2 -> rhash.1.bz2 1789353875
+sym /usr/share/man/man1/edonr256-hash.1.bz2 -> rhash.1.bz2 1789353875
+sym /usr/share/man/man1/ed2k-link.1.bz2 -> rhash.1.bz2 1789353875
+sym /usr/lib64/librhash.so.1 -> librhash.so.1.4.6 1789353875
+sym /usr/lib64/librhash.so -> librhash.so.1 1789353875
+sym /usr/bin/magnet-link -> rhash 1789353875
+sym /usr/bin/has160-hash -> rhash 1789353875
+sym /usr/bin/gost12-512-hash -> rhash 1789353875
+sym /usr/bin/gost12-256-hash -> rhash 1789353875
+sym /usr/bin/edonr512-hash -> rhash 1789353875
+sym /usr/bin/edonr256-hash -> rhash 1789353875
+sym /usr/bin/ed2k-link -> rhash 1789353875

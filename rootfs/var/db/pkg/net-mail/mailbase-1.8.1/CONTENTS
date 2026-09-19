@@ -1,0 +1,20 @@
+dir /var
+sym /var/mail -> spool/mail 1789354251
+dir /usr
+dir /usr/share
+dir /usr/share/man
+dir /usr/share/man/man5
+obj /usr/share/man/man5/mailcap.5.bz2 81fff032988f4bb168a02b9440c2b29c 1748798155
+dir /etc
+dir /etc/mail
+obj /etc/mail/aliases a5623a262865054bd43c914e740a2e52 1748798155
+obj /etc/mailcap 7458cc13078e06f5486dcdae7ed3541e 1748798155
+dir /etc/pam.d
+obj /etc/pam.d/imap be60e6618694cdaa289f16c303c98a31 1748798155
+sym /etc/pam.d/imap4 -> imap 1789354251
+sym /etc/pam.d/imap4s -> imap 1789354251
+sym /etc/pam.d/imaps -> imap 1789354251
+obj /etc/pam.d/pop be60e6618694cdaa289f16c303c98a31 1748798155
+sym /etc/pam.d/pop3 -> pop 1789354251
+sym /etc/pam.d/pop3s -> pop 1789354251
+sym /etc/pam.d/pops -> pop 1789354251

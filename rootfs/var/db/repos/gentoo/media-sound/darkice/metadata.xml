@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="project">
+		<email>sound@gentoo.org</email>
+		<name>Gentoo Sound project</name>
+	</maintainer>
+	<use>
+		<flag name="fdk">Build with HE-AAC support using <pkg>media-libs/fdk-aac</pkg></flag>
+		<flag name="twolame">Build with twolame support using <pkg>media-sound/twolame</pkg></flag>
+	</use>
+	<upstream>
+		<remote-id type="github">rafael2k/darkice</remote-id>
+	</upstream>
+</pkgmetadata>

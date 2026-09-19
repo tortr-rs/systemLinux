@@ -1,0 +1,13 @@
+DEFINED_PHASES=install
+DESCRIPTION=SG-1000, SC-3000, SF-7000, SSC, SMS, GG, COLECO, and OMV emulator
+EAPI=7
+HOMEPAGE=https://www.smspower.org/meka/
+INHERIT=wrapper
+KEYWORDS=~x86
+LICENSE=mekanix
+RDEPEND=media-libs/libpng x11-libs/libXext x11-libs/libXpm x11-libs/libX11 virtual/zlib:=
+RESTRICT=strip
+SLOT=0
+SRC_URI=https://www.smspower.org/meka/releases/mekanix070.tgz
+_eclasses_=wrapper	ebaa3beeb43f7e533872b6c37168c7ad
+_md5_=304f064f3b3fd236d4ca85ddc2dd98cb

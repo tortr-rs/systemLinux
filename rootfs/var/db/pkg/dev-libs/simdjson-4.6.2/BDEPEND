@@ -1,0 +1,1 @@
+sys-apps/file sys-apps/grep virtual/pkgconfig app-alternatives/ninja >=dev-build/cmake-3.28.5

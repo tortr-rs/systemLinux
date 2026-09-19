@@ -1,0 +1,15 @@
+BDEPEND=virtual/fortran
+DEFINED_PHASES=compile install prepare setup
+DEPEND=x11-libs/libX11 virtual/fortran
+DESCRIPTION=Design and analysis of subsonic isolated airfoils
+EAPI=8
+HOMEPAGE=https://web.mit.edu/drela/Public/web/xfoil/
+INHERIT=fortran-2 flag-o-matic toolchain-funcs
+IUSE=doc examples
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2+
+RDEPEND=x11-libs/libX11 virtual/fortran
+SLOT=0
+SRC_URI=https://web.mit.edu/drela/Public/web/xfoil/xfoil6.99.tgz doc? ( https://web.mit.edu/drela/Public/web/xfoil/dataflow.pdf )
+_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	fortran-2	ae6d43513003405bd4a48698fc20370a	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=29cc5cade39d744cfc1d039a068f9c9b

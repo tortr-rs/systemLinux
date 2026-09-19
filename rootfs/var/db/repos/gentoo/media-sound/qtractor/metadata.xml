@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="project">
+		<email>proaudio@gentoo.org</email>
+		<name>Gentoo ProAudio Project</name>
+	</maintainer>
+	<use>
+		<flag name="dssi">Enable support for DSSI Soft Synth Interface</flag>
+		<flag name="osc">Enable support for Open Sound Control via <pkg>media-libs/liblo</pkg>, deprecated since 1.6.0 (built-in OSC available)</flag>
+		<flag name="rubberband">Enable support for in-place audio clip pitch-shifting through the rubberband library</flag>
+	</use>
+	<upstream>
+		<remote-id type="sourceforge">qtractor</remote-id>
+		<remote-id type="github">rncbc/qtractor</remote-id>
+	</upstream>
+</pkgmetadata>

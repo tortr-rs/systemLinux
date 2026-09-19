@@ -1,0 +1,11 @@
+DEFINED_PHASES=-
+DEPEND=media-libs/xine-lib media-libs/alsa-lib
+DESCRIPTION=Utility for Xine decoding support in transKode
+EAPI=8
+HOMEPAGE=https://sourceforge.net/projects/transkode
+KEYWORDS=amd64 ppc x86
+LICENSE=GPL-2
+RDEPEND=media-libs/xine-lib media-libs/alsa-lib
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/transkode/xineadump-0.1.tar.bz2
+_md5_=d9f5fd614c852aeef89a56341681ee5e

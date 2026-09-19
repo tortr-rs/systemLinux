@@ -1,0 +1,33 @@
+# Copyright 1999-2026 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=8
+
+DISTUTILS_USE_PEP517=setuptools
+PYTHON_COMPAT=( python3_{12..15} )
+
+inherit distutils-r1 pypi
+
+DESCRIPTION="Helping users and developers to get information about the environment"
+HOMEPAGE="
+	https://gitlab.com/dpizetta/helpdev/
+	https://pypi.org/project/helpdev/
+"
+
+LICENSE="MIT"
+SLOT="0"
+KEYWORDS="amd64 arm64 x86"
+
+RDEPEND="
+	dev-python/psutil[${PYTHON_USEDEP}]
+"
+BDEPEND="
+	test? (
+		dev-python/pip[${PYTHON_USEDEP}]
+	)
+"
+
+distutils_enable_sphinx docs \
+	dev-python/sphinx-rtd-theme
+EPYTEST_PLUGINS=()
+distutils_enable_tests pytest

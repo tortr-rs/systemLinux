@@ -1,0 +1,46 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/config_data 549e0dd83068b69d00af24a0900b995f 1763921624
+dir /usr/lib64
+dir /usr/lib64/perl5
+dir /usr/lib64/perl5/vendor_perl
+dir /usr/lib64/perl5/vendor_perl/5.42
+dir /usr/lib64/perl5/vendor_perl/5.42/Module
+dir /usr/lib64/perl5/vendor_perl/5.42/Module/Build
+obj /usr/lib64/perl5/vendor_perl/5.42/Module/Build/API.pod 5ab6471f4db05ed87bb14f7faeebfabe 1763921623
+obj /usr/lib64/perl5/vendor_perl/5.42/Module/Build/Authoring.pod 9c250bb17f0a0d0d1ad415423d53d83f 1763921623
+obj /usr/lib64/perl5/vendor_perl/5.42/Module/Build/Base.pm 10744f6ec0b46aa96248056bd7abae4c 1763921623
+obj /usr/lib64/perl5/vendor_perl/5.42/Module/Build/Bundling.pod cee7be264a5df7dfd6cba5dbf452dc9d 1763921623
+obj /usr/lib64/perl5/vendor_perl/5.42/Module/Build/Compat.pm 3f8d6fb0453bba1a473a922ed589a717 1763921623
+obj /usr/lib64/perl5/vendor_perl/5.42/Module/Build/Config.pm f49d9e585f7f9ecb07670f4f98595449 1763921623
+obj /usr/lib64/perl5/vendor_perl/5.42/Module/Build/ConfigData.pm 0b35390652a46285095a339e167a1f19 1763921623
+obj /usr/lib64/perl5/vendor_perl/5.42/Module/Build/Cookbook.pm 6e112074cd01d2dcb9e1feeca335ce3e 1763921623
+obj /usr/lib64/perl5/vendor_perl/5.42/Module/Build/Dumper.pm 022cdb936dc2739b04017bfb577addf1 1763921623
+obj /usr/lib64/perl5/vendor_perl/5.42/Module/Build/Notes.pm fcab06af4295ed01bf2ae2b66a38cae4 1763921623
+obj /usr/lib64/perl5/vendor_perl/5.42/Module/Build/PPMMaker.pm a846e0c1c7862030f5604ab51303d06d 1763921623
+dir /usr/lib64/perl5/vendor_perl/5.42/Module/Build/Platform
+obj /usr/lib64/perl5/vendor_perl/5.42/Module/Build/Platform/Default.pm fa91e15b8a19d2be973a860be61cece7 1763921623
+obj /usr/lib64/perl5/vendor_perl/5.42/Module/Build/Platform/MacOS.pm d5d939baf18f81bfc34db17183e01be5 1763921623
+obj /usr/lib64/perl5/vendor_perl/5.42/Module/Build/Platform/Unix.pm 33b6b0ced720d320c5157b7adef761d5 1763921623
+obj /usr/lib64/perl5/vendor_perl/5.42/Module/Build/Platform/VMS.pm 017ecf3c39ddbb2af4da65b36499042d 1763921623
+obj /usr/lib64/perl5/vendor_perl/5.42/Module/Build/Platform/VOS.pm 330a051ee8c4399f1264e6122cf02bfb 1763921624
+obj /usr/lib64/perl5/vendor_perl/5.42/Module/Build/Platform/Windows.pm ef5a43c411e29fc9da1371f2b0112508 1763921624
+obj /usr/lib64/perl5/vendor_perl/5.42/Module/Build/Platform/aix.pm 414ed8d4bb4abb267c6aff46ff0aec92 1763921624
+obj /usr/lib64/perl5/vendor_perl/5.42/Module/Build/Platform/cygwin.pm ec18f058a259a19f5736b9f707f28b0a 1763921624
+obj /usr/lib64/perl5/vendor_perl/5.42/Module/Build/Platform/darwin.pm 31fb38df0aa48aa191414a13a227466d 1763921624
+obj /usr/lib64/perl5/vendor_perl/5.42/Module/Build/Platform/os2.pm 9345327afa6b47831cb2bf06668d5490 1763921624
+obj /usr/lib64/perl5/vendor_perl/5.42/Module/Build/PodParser.pm 555f09f27af7a6984561636ad9b2b9e8 1763921623
+obj /usr/lib64/perl5/vendor_perl/5.42/Module/Build.pm 4b19a4ceda038d94284a47f6e657eccc 1763921623
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Module
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Module/Build
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Module/Build/.packlist 6e473bc84403e3613a714cdb63b2a5da 1763921623
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/Module-Build-0.423.400-r5
+obj /usr/share/doc/Module-Build-0.423.400-r5/Changes.bz2 dcd85d410d031a806596f7c53831b030 1763921624
+obj /usr/share/doc/Module-Build-0.423.400-r5/README.bz2 565f8f4dc209b8d9f4716678c7e6c76b 1763921624
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/config_data.1.bz2 9c80b890e4406307f3998bf9e739bbe3 1763921623

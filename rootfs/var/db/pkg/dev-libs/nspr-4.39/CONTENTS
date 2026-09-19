@@ -1,0 +1,87 @@
+dir /usr
+dir /usr/src
+dir /usr/share
+dir /usr/share/aclocal
+obj /usr/share/aclocal/nspr.m4 60636b4564e13c47e5820dc7f8ea9ef2 1777985335
+dir /usr/lib64
+obj /usr/lib64/libplc4.so 4d84c9996c0fa14f2c786797ac31124a 1782292550
+obj /usr/lib64/libplds4.so 8cb1e356d97c7f329e670052d7a89c69 1782292550
+obj /usr/lib64/libnspr4.so 86fbc2c501cbafebefc2685445c4a3da 1782292550
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/nspr.pc dbdff545cda33d6179c2e03b881652b9 1782292542
+dir /usr/bin
+obj /usr/bin/x86_64-pc-linux-gnu-nspr-config 8375fac315a19d9e0d0828136e2e6514 1782292550
+sym /usr/bin/nspr-config -> x86_64-pc-linux-gnu-nspr-config 1789836418
+dir /usr/include
+dir /usr/include/nspr
+obj /usr/include/nspr/plarenas.h 55d9994f7ecf3bbcdb86b2f7a76de121 1777985335
+obj /usr/include/nspr/prprf.h 23b4993d847b70c708cbaf3dab0d2335 1777985335
+obj /usr/include/nspr/prio.h 17f06cbae62dec0d7b7e1b94000dada7 1777985335
+obj /usr/include/nspr/prproces.h 253bb318f18a1ecff24a10376f89378f 1777985335
+obj /usr/include/nspr/prcpucfg.h fcf850b8f542f9b5f49a94807d40f8cf 1777985335
+obj /usr/include/nspr/prcmon.h db51961d5cb2afb5737e033542a9e6e9 1777985335
+obj /usr/include/nspr/plstr.h e1533c447c8bd8eec07568c8fe5fcf06 1777985335
+obj /usr/include/nspr/prlock.h 009ee3d894fb5ab1c5b94c6371f1f24a 1777985335
+obj /usr/include/nspr/prinet.h 887864c1c4925542a1ead8566c138240 1777985335
+obj /usr/include/nspr/prerror.h 1e73ae94aac226ab8409a457179bf1b0 1777985335
+obj /usr/include/nspr/prolock.h 0179f5ec42fd77cda9f33d9a2205eb9f 1777985335
+obj /usr/include/nspr/pripcsem.h a7703e7f199858d03828b4db901f73ca 1777985335
+obj /usr/include/nspr/plgetopt.h 7209e7221e1d8fee67e2fc9145ed3586 1777985335
+obj /usr/include/nspr/prlink.h 0f00f64841b8a382647ac31fb2a348ff 1777985335
+obj /usr/include/nspr/plerror.h 0a1d0ec7b1610b21db05e1df0425fd60 1777985335
+obj /usr/include/nspr/prcountr.h 04eae447f239896149132ea2ac6c1b35 1777985335
+obj /usr/include/nspr/prmwait.h ed25cfca2127ee0d19e7d08d386bfb8e 1777985335
+obj /usr/include/nspr/prinit.h 5583826fad3583b44b7cf40426052a27 1777985335
+obj /usr/include/nspr/plhash.h 403944ee50fa3fa852ff75fdac20b4cb 1777985335
+obj /usr/include/nspr/prvrsion.h 4066280dde3583d377dccba7db7beb08 1777985335
+dir /usr/include/nspr/obsolete
+obj /usr/include/nspr/obsolete/prsem.h 1a753212bdeb3104bcf28f744d0205fb 1777985335
+obj /usr/include/nspr/obsolete/probslet.h e1e9d8f61e4157e30024963e00256ce4 1777985335
+obj /usr/include/nspr/obsolete/protypes.h 24a7e4f9befa02e6430b22416ad5adb3 1777985335
+obj /usr/include/nspr/obsolete/pralarm.h c5bb8f025f8fbb4026724e193b93c844 1777985335
+obj /usr/include/nspr/prdtoa.h 6cc56c9ab94650648bed8983460f077b 1777985335
+obj /usr/include/nspr/prtime.h f2974850505b8a077596eeaa4adb5947 1777985335
+obj /usr/include/nspr/prmem.h ef12330cd02295799e6584435eec43ab 1777985335
+obj /usr/include/nspr/prinrval.h 764b63e14cb51ed7de9b328fe54dd70a 1777985335
+obj /usr/include/nspr/prnetdb.h 1286b4f987f2eaed31047d37901126ca 1777985335
+obj /usr/include/nspr/prpdce.h c0c1f66e9b0b057e0d4851b08c661640 1777985335
+obj /usr/include/nspr/prlong.h 681bbb39ef51f43bbaff6a6851e95056 1777985335
+obj /usr/include/nspr/prerr.h f1902f3d9b0ca04a3a2c82847a268424 1777985335
+obj /usr/include/nspr/prbit.h 63f9d2d5ff7c88fd457fb9c8f684ec78 1777985335
+obj /usr/include/nspr/prtpool.h ece3e358f6017850490cf4c2247bb2dd 1777985335
+obj /usr/include/nspr/prshm.h 52032bdaba12323818b3f278692976d2 1777985335
+obj /usr/include/nspr/prlog.h da0cf4ffc99133f924f0f8e1b321504f 1777985335
+obj /usr/include/nspr/plarena.h fca2933d64460249878f060acca71efd 1777985335
+obj /usr/include/nspr/prthread.h fcb340c72477133bd938b04013b646fa 1777985335
+obj /usr/include/nspr/plbase64.h 8ac742e3aba47fc32af0c8db9451aa01 1777985335
+dir /usr/include/nspr/md
+obj /usr/include/nspr/md/_darwin.cfg 3dee9032ed20cf3cb3e9613da0b69ea2 1777985335
+obj /usr/include/nspr/md/_linux.cfg fcf850b8f542f9b5f49a94807d40f8cf 1777985335
+obj /usr/include/nspr/md/_aix32.cfg c998d86b3e54c4d571388b5472682914 1777985335
+obj /usr/include/nspr/md/_win95.cfg b677efcfd4898a67fb859af0c868f980 1777985335
+obj /usr/include/nspr/md/_nto.cfg 9f2dd31bfabc25be1f14c187655c33b5 1777985335
+obj /usr/include/nspr/md/_solaris.cfg 7eb97dda65a90d3e9ba20ec4082036cf 1777985335
+obj /usr/include/nspr/md/_qnx.cfg f168255ff900d6aae10d5e6c8801812d 1777985335
+obj /usr/include/nspr/md/_netbsd.cfg 3fd6b83d59a9db93e7a351fc84b5eead 1777985335
+obj /usr/include/nspr/md/_freebsd.cfg f465a799319645446b6e89edcb3e72b2 1777985335
+obj /usr/include/nspr/md/_openbsd.cfg 13ec28817d7585cc47181db5cf103ded 1777985335
+obj /usr/include/nspr/md/_winnt.cfg 92bb2a8ce071b3e7e23beec980f59306 1777985335
+obj /usr/include/nspr/md/_aix64.cfg 30d801754283e77bf802bf4ed3a63c12 1777985335
+obj /usr/include/nspr/md/_riscos.cfg 7e7763c2c8b1d377b7292aee753f63e3 1777985335
+obj /usr/include/nspr/prcvar.h 86716ed2a482b8362860c778c4b04ebb 1777985335
+obj /usr/include/nspr/prclist.h 115d4c35398ef08816b65b1d24acd03d 1777985335
+obj /usr/include/nspr/pratom.h a2554fca580304741fb8a30856607616 1777985335
+obj /usr/include/nspr/prrwlock.h 65c5fe7bbaa2fa6d5c043d74a97d34bc 1777985335
+obj /usr/include/nspr/nspr.h 9db6d2233d17e5494423e81296e0cba1 1777985335
+obj /usr/include/nspr/prtrace.h ee1f274cb94323a04ab138849e1df463 1777985335
+obj /usr/include/nspr/prrng.h a8b70148134270990c7273156298b5a6 1777985335
+obj /usr/include/nspr/prenv.h 820706a748cd9d3733db93c2f7c40dcc 1777985335
+obj /usr/include/nspr/prtypes.h dc57305761e927db2c16d915347e74ad 1777985335
+dir /usr/include/nspr/private
+obj /usr/include/nspr/private/pprio.h bce5333f8422c990ff0dea431d515102 1777985335
+obj /usr/include/nspr/private/prpriv.h a95d42bcbfd2c5d8d3d5e187ff79f98a 1777985335
+obj /usr/include/nspr/private/pprthred.h c438b6bd08245c129724b7794be8e480 1777985335
+obj /usr/include/nspr/prshma.h 97bde073dee4fd2eed99237c4b525b9a 1777985335
+obj /usr/include/nspr/prsystem.h d91aae9edc5b8d23de90f06043f189a0 1777985335
+obj /usr/include/nspr/prmon.h b89cfeff76e2920548993e39a805aed7 1777985335
+dir /usr/lib

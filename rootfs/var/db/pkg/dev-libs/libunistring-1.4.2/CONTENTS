@@ -1,0 +1,36 @@
+dir /usr
+dir /usr/include
+obj /usr/include/unicase.h 3a9aa2655b7fc3d62dccfe87c0004f8f 1783271934
+obj /usr/include/uniconv.h ac2c52e6bcd91e9bbf2b4e1adfdb1553 1783271934
+obj /usr/include/unictype.h 500be80161bbb30d5ae528e4f50a4d80 1783271934
+obj /usr/include/unigbrk.h 34472dd9b6a04a4ab85675136c3aea30 1783271934
+obj /usr/include/unilbrk.h ad3ce8b7cf0019bf11f162f894380379 1783271934
+obj /usr/include/unimetadata.h b670f8c059999f376cd86223db8c4dd3 1783271934
+obj /usr/include/uniname.h 72300def8d2f07779363e193d6fc3bd8 1783271934
+obj /usr/include/uninorm.h 3d55fb4540cd1be530858319f2ecd93f 1783271934
+obj /usr/include/unistdio.h 7de32c937a565e575a26b29017c2776d 1783271934
+obj /usr/include/unistr.h f5f7bc493f1941ce57cb2a4d43de5636 1783271934
+dir /usr/include/unistring
+obj /usr/include/unistring/cdefs.h a163ba5d40bedf9518730a886e39558c 1783271934
+obj /usr/include/unistring/iconveh.h cef91ae67884d614e527888a27cb3510 1783271934
+obj /usr/include/unistring/inline.h 5b1471a8390062294e10558aa4f08de0 1783271934
+obj /usr/include/unistring/localcharset.h 4066d025c24df8ed81739ce22eddbb54 1783271934
+obj /usr/include/unistring/stdint.h 6ed08eb7255696de29af271cf420d707 1783271934
+obj /usr/include/unistring/version.h d820bf1ab80d64c4f8be935d84ec8c80 1783271934
+obj /usr/include/unistring/woe32dll.h 819461e8433fab5b0e115a2ac9249df5 1783271934
+obj /usr/include/unitypes.h 53875878daccf86cafba3d37efc32dab 1783271934
+obj /usr/include/uniwbrk.h b1c4f560304b8d940e89adf1d5304a76 1783271934
+obj /usr/include/uniwidth.h 0cb2841f3bb44f26be557be3bb8c960d 1783271934
+dir /usr/lib64
+sym /usr/lib64/libunistring.so -> libunistring.so.5.2.1 1789353944
+sym /usr/lib64/libunistring.so.5 -> libunistring.so.5.2.1 1789353944
+obj /usr/lib64/libunistring.so.5.2.1 40049d753482b6cd9f21a012d7378cbb 1783271936
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/libunistring-1.4.2
+obj /usr/share/doc/libunistring-1.4.2/AUTHORS.bz2 338fb473fd0847175dc0c07c30520088 1783271935
+obj /usr/share/doc/libunistring-1.4.2/BUGS.bz2 2dde368760f8e0792c4bc8bd5fbac97d 1783271935
+obj /usr/share/doc/libunistring-1.4.2/ChangeLog.bz2 40d85969e43d62b2bfd60550963f0776 1783271935
+obj /usr/share/doc/libunistring-1.4.2/NEWS.bz2 6bc1ba1a2a0df6e51834ce4d6c7e4060 1783271935
+obj /usr/share/doc/libunistring-1.4.2/README.bz2 dfd1cd84016095da7def3cc3f75ae32e 1783271934
+obj /usr/share/doc/libunistring-1.4.2/THANKS 30b99a5f82bd478ca34859d562fc661c 1783271935

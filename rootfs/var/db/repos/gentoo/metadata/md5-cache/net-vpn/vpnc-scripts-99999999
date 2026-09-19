@@ -1,0 +1,12 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install unpack
+DESCRIPTION=Connect scripts for use with vpnc and openconnect (and similar clients)
+EAPI=8
+HOMEPAGE=https://gitlab.com/openconnect/vpnc-scripts
+INHERIT=git-r3
+LICENSE=GPL-2+
+PROPERTIES=live
+RDEPEND=!<net-vpn/vpnc-0.5.3_p550-r3
+SLOT=0
+_eclasses_=git-r3	e6c2f983e006e805160436c75a0c1562
+_md5_=2a2e7fc5430c5dc50c357d992c0726fd

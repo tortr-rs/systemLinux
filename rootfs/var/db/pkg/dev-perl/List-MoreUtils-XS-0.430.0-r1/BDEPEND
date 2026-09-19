@@ -1,0 +1,1 @@
+!<dev-perl/List-MoreUtils-0.417.1 >=virtual/perl-XSLoader-0.220.0 virtual/perl-Carp >=dev-perl/Config-AutoConf-0.315.0 virtual/perl-ExtUtils-MakeMaker virtual/perl-File-Path virtual/perl-File-Spec >=dev-lang/perl-5.38.2-r3[-perl_features_debug,-perl_features_ithreads,-perl_features_quadmath]

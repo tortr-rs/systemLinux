@@ -1,0 +1,28 @@
+dir /usr
+dir /usr/bin
+sym /usr/bin/trove-classifiers -> ../lib/python-exec/python-exec2 1789354019
+dir /usr/lib
+dir /usr/lib/python-exec
+dir /usr/lib/python-exec/python3.14
+obj /usr/lib/python-exec/python3.14/trove-classifiers 29e225e11e8cb0d6016b5a6816740b98 1788715569
+dir /usr/lib/python3.14
+dir /usr/lib/python3.14/site-packages
+dir /usr/lib/python3.14/site-packages/trove_classifiers
+obj /usr/lib/python3.14/site-packages/trove_classifiers/__init__.py 94973eafb2d92630e3f68796a42e6754 1788715569
+obj /usr/lib/python3.14/site-packages/trove_classifiers/__main__.py 50914f0cc8327a169ede98be8c2d1d41 1788715569
+dir /usr/lib/python3.14/site-packages/trove_classifiers/__pycache__
+obj /usr/lib/python3.14/site-packages/trove_classifiers/__pycache__/__init__.cpython-314.opt-1.pyc b8c2cd3619ee096c718b86a48ede2141 1788715569
+obj /usr/lib/python3.14/site-packages/trove_classifiers/__pycache__/__init__.cpython-314.opt-2.pyc b8c2cd3619ee096c718b86a48ede2141 1788715569
+obj /usr/lib/python3.14/site-packages/trove_classifiers/__pycache__/__init__.cpython-314.pyc b8c2cd3619ee096c718b86a48ede2141 1788715569
+obj /usr/lib/python3.14/site-packages/trove_classifiers/__pycache__/__main__.cpython-314.opt-1.pyc e73e4b7ae6f3d5f3873be3ac084676d4 1788715569
+obj /usr/lib/python3.14/site-packages/trove_classifiers/__pycache__/__main__.cpython-314.opt-2.pyc e73e4b7ae6f3d5f3873be3ac084676d4 1788715569
+obj /usr/lib/python3.14/site-packages/trove_classifiers/__pycache__/__main__.cpython-314.pyc e73e4b7ae6f3d5f3873be3ac084676d4 1788715569
+obj /usr/lib/python3.14/site-packages/trove_classifiers/py.typed d41d8cd98f00b204e9800998ecf8427e 1788715569
+dir /usr/lib/python3.14/site-packages/trove_classifiers-2026.6.1.19.dist-info
+obj /usr/lib/python3.14/site-packages/trove_classifiers-2026.6.1.19.dist-info/METADATA f581cff8504e44ae8f11e940bca6452a 1788715569
+obj /usr/lib/python3.14/site-packages/trove_classifiers-2026.6.1.19.dist-info/WHEEL a5ebf9ab2d4e1b8f00d2a5deeaf4c6e4 1788715569
+obj /usr/lib/python3.14/site-packages/trove_classifiers-2026.6.1.19.dist-info/entry_points.txt cc8a525b38ad445a3fff715376714411 1788715569
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/trove-classifiers-2026.6.1.19
+obj /usr/share/doc/trove-classifiers-2026.6.1.19/README.md.bz2 a58b85435586fa2b8125963c478d3ef6 1788715570

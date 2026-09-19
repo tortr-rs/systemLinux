@@ -1,0 +1,1 @@
+>=dev-python/pysocks-1.5.8[python_targets_python3_14(-)] <dev-python/pysocks-2.0[python_targets_python3_14(-)] dev-lang/python:3.14[ssl(+)]

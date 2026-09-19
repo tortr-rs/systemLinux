@@ -1,0 +1,16 @@
+BDEPEND=test? ( www-servers/nginx[debug(-)] ) www-servers/nginx:=[modules(-)] test? ( dev-perl/Test-Nginx ) test? ( www-nginx/ngx-lua-module www-nginx/ngx-xss )
+DEFINED_PHASES=compile configure install postinst prepare test
+DEPEND=www-servers/nginx:=[modules(-)]
+DESCRIPTION=An NGINX module bringing the power of "echo", "sleep", "time" and more to NGINX
+EAPI=8
+HOMEPAGE=https://github.com/openresty/echo-nginx-module
+INHERIT=nginx-module
+IUSE=test
+KEYWORDS=amd64 arm64
+LICENSE=BSD-2
+RDEPEND=www-servers/nginx:=[modules(-)]
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://github.com/openresty/echo-nginx-module/archive/refs/tags/v0.63.tar.gz -> ngx-echo-0.63.tar.gz
+_eclasses_=eapi9-pipestatus	d2c134036ac31c3085aebc9147f572bd	edo	a5e294016aa84979fcb2459749eb80b2	flag-o-matic	fd3558f73f6503093adee69adf41020d	nginx-module	4a55377d4937a5605798987b53365f3b	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=c9a059b71d4dae81ee6d1f9856930825

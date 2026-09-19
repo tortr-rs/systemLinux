@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install prepare test unpack
+DEPEND=dev-lang/perl
+DESCRIPTION=Minimalistic personal calendar program
+EAPI=8
+HOMEPAGE=http://www.lightandmatter.com/when/when.html https://bitbucket.org/ben-crowell/when
+INHERIT=vcs-snapshot
+KEYWORDS=amd64 ppc x86
+LICENSE=|| ( Artistic GPL-2 )
+RDEPEND=dev-lang/perl
+SLOT=0
+SRC_URI=https://bitbucket.org/ben-crowell/when/get/1.1.45.tar.gz -> when-1.1.45.tar.gz
+_eclasses_=vcs-snapshot	05efecc60246abc94da28ed8adf74c4d
+_md5_=ea7517d4d34c1faf16d3f4a7576954eb

@@ -1,0 +1,68 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/asn1Coding 07f07feb7b0e9c98e049f835cf183a43 1769966229
+obj /usr/bin/asn1Decoding 521e0b8ddfa233e54e8b17a8492bd741 1769966229
+obj /usr/bin/asn1Parser 9d1b852353bdd2f0f4164dd7dd1e0214 1769966229
+dir /usr/include
+obj /usr/include/libtasn1.h 5ce1daa248f7b828f740a1d3b8e47a1e 1769966228
+dir /usr/lib64
+obj /usr/lib64/libtasn1.so.6.6.5 e374d95c7a38c4a1509d8d32eded103e 1769966229
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/libtasn1.pc ec179fbca4ac3c6dd6480ecca54cd7ff 1769966228
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/libtasn1-4.21.0
+obj /usr/share/doc/libtasn1-4.21.0/AUTHORS.bz2 8f4ab32bab556e22e9c916dd49001c84 1769966228
+obj /usr/share/doc/libtasn1-4.21.0/ChangeLog.bz2 ae9bf75040ea47229c374071ca47740e 1769966228
+obj /usr/share/doc/libtasn1-4.21.0/NEWS.bz2 340cf8c35c97773f73732905584daa48 1769966228
+obj /usr/share/doc/libtasn1-4.21.0/README.md.bz2 bf92ea3b0924a36b37d32e0802b7297b 1769966228
+obj /usr/share/doc/libtasn1-4.21.0/THANKS.bz2 1770884f66a57eeac9d674e495f7f846 1769966228
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/asn1Coding.1.bz2 69e638f766069c3035cd6d159a856193 1769966228
+obj /usr/share/man/man1/asn1Decoding.1.bz2 52f7dab773f6e924b8be56d6a0215178 1769966228
+obj /usr/share/man/man1/asn1Parser.1.bz2 ac8794693c79ea95114e7e5ec7e596c5 1769966228
+dir /usr/share/man/man3
+obj /usr/share/man/man3/asn1_array2tree.3.bz2 1c1c7e8442b6f028be7817b7181bd25d 1769966228
+obj /usr/share/man/man3/asn1_bit_der.3.bz2 8e3d58112f4d539205c221cf9bda3525 1769966228
+obj /usr/share/man/man3/asn1_check_version.3.bz2 c2045c3952460dbf9ae1040baff48a68 1769966228
+obj /usr/share/man/man3/asn1_copy_node.3.bz2 ae114581eceb1788d789c43654184e64 1769966228
+obj /usr/share/man/man3/asn1_create_element.3.bz2 25701b80701c95da9798872c38b15818 1769966228
+obj /usr/share/man/man3/asn1_decode_simple_ber.3.bz2 e1df59cb6c3cc1f5b517dd350c3c425b 1769966228
+obj /usr/share/man/man3/asn1_decode_simple_der.3.bz2 31fe4707e4e994463843a2fb46552c3e 1769966228
+obj /usr/share/man/man3/asn1_delete_element.3.bz2 dea49f9c84d260cfe12f94e26bb42fc0 1769966228
+obj /usr/share/man/man3/asn1_delete_structure.3.bz2 58642bfdf0b5809c05a14c3408a2d458 1769966228
+obj /usr/share/man/man3/asn1_delete_structure2.3.bz2 584ed5e76f2ebcba3cd193dfd4018e7b 1769966228
+obj /usr/share/man/man3/asn1_der_coding.3.bz2 ff1fd0a85efe95f96fe6a9d31cab43ef 1769966228
+obj /usr/share/man/man3/asn1_der_decoding.3.bz2 41b7bfe131a5611fec07cb6556d72a60 1769966228
+obj /usr/share/man/man3/asn1_der_decoding2.3.bz2 acb5f9eef89de361100aa4c7bddaacf0 1769966228
+obj /usr/share/man/man3/asn1_der_decoding_element.3.bz2 77302ff91cc39c0a7b9daca84c11823c 1769966228
+obj /usr/share/man/man3/asn1_der_decoding_startEnd.3.bz2 42ba7514f16223725ce6d5fbd02a8033 1769966228
+obj /usr/share/man/man3/asn1_dup_node.3.bz2 de14447f1896881839daf6b2e7c07142 1769966228
+obj /usr/share/man/man3/asn1_encode_simple_der.3.bz2 7b8c760609a522d71e3bc901a1b792b5 1769966228
+obj /usr/share/man/man3/asn1_expand_any_defined_by.3.bz2 a9a8c118ba542b02c1dc82bae1c4d99a 1769966228
+obj /usr/share/man/man3/asn1_expand_octet_string.3.bz2 c8fbbb664cc87c8653afcfc2f8d84488 1769966228
+obj /usr/share/man/man3/asn1_find_node.3.bz2 c5d719ceaff47ec1347226fd5e849997 1769966228
+obj /usr/share/man/man3/asn1_find_structure_from_oid.3.bz2 d9de65f77a9b05f34f5cc524db34f231 1769966228
+obj /usr/share/man/man3/asn1_get_bit_der.3.bz2 52511773e20dfcef967e76a3721e0551 1769966228
+obj /usr/share/man/man3/asn1_get_length_ber.3.bz2 c1d277c01b441793e190aa5963f4d061 1769966228
+obj /usr/share/man/man3/asn1_get_length_der.3.bz2 edccc5903ab63a4624db3e312de23d9a 1769966228
+obj /usr/share/man/man3/asn1_get_object_id_der.3.bz2 d07156da61e6e10b45202cb10184a97d 1769966228
+obj /usr/share/man/man3/asn1_get_octet_der.3.bz2 b36b84c94c38148f7492af1ee03e34fa 1769966228
+obj /usr/share/man/man3/asn1_get_tag_der.3.bz2 6457701f456b6bc3206ca25ea1236324 1769966228
+obj /usr/share/man/man3/asn1_length_der.3.bz2 e52df822a45e7738a146a1004e115e6d 1769966228
+obj /usr/share/man/man3/asn1_number_of_elements.3.bz2 99411de68b57e9567609118651208a2f 1769966228
+obj /usr/share/man/man3/asn1_object_id_der.3.bz2 8b4f4bbafbaafee618cdefdba9a688b9 1769966228
+obj /usr/share/man/man3/asn1_octet_der.3.bz2 3284cdbe639a45fc2b3c1d3f35aee927 1769966228
+obj /usr/share/man/man3/asn1_parser2array.3.bz2 a618a3d70e881ab5e3dfa34eb024d284 1769966228
+obj /usr/share/man/man3/asn1_parser2tree.3.bz2 fcb76aec23a4cb3cef20ba1eeeebae05 1769966228
+obj /usr/share/man/man3/asn1_perror.3.bz2 298920f57f9b4125c55b5cce99d937b5 1769966228
+obj /usr/share/man/man3/asn1_print_structure.3.bz2 04c859d64ef382815bf45bc2c8daea03 1769966228
+obj /usr/share/man/man3/asn1_read_node_value.3.bz2 53c5cbf80ff1b12b990cd4badb2e3be5 1769966228
+obj /usr/share/man/man3/asn1_read_tag.3.bz2 d5c4cd25d457d41db83a5e06da4e01a7 1769966228
+obj /usr/share/man/man3/asn1_read_value.3.bz2 aec5667d416cea73d5a706ac4d540802 1769966228
+obj /usr/share/man/man3/asn1_read_value_type.3.bz2 dbb50ebbf0e977fa4f309decfce23ed0 1769966228
+obj /usr/share/man/man3/asn1_strerror.3.bz2 b9fc78969a2309be9cfaf2039c48b208 1769966228
+obj /usr/share/man/man3/asn1_write_value.3.bz2 f9361e4983de5b9357f7c163c9c1d741 1769966228
+sym /usr/lib64/libtasn1.so.6 -> libtasn1.so.6.6.5 1789353941
+sym /usr/lib64/libtasn1.so -> libtasn1.so.6.6.5 1789353941

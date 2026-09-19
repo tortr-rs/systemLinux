@@ -1,0 +1,14 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=compile configure install
+DEPEND=!app-text/lv sys-libs/ncurses:0=
+DESCRIPTION=Really tiny vi clone, for things like rescue disks
+EAPI=8
+HOMEPAGE=https://www.pell.portland.or.us/~orc/Code/levee/
+INHERIT=toolchain-funcs
+KEYWORDS=amd64 ~arm64 ppc ~sparc x86
+LICENSE=levee
+RDEPEND=!app-text/lv sys-libs/ncurses:0=
+SLOT=0
+SRC_URI=https://www.pell.portland.or.us/~orc/Code/levee/levee-4.0.tar.bz2 https://dev.gentoo.org/~sam/distfiles/app-editors/levee/levee-4.0-patches.tar.xz
+_eclasses_=toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=9c1a698cce005bb0c67160da23470776

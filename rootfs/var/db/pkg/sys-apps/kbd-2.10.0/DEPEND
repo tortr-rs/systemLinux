@@ -1,0 +1,1 @@
+app-alternatives/gzip app-arch/bzip2 !app-misc/vlock sys-libs/pam virtual/zlib:0/1=

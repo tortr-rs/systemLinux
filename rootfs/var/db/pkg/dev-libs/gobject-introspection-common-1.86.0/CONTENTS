@@ -1,0 +1,6 @@
+dir /usr
+dir /usr/share
+dir /usr/share/gobject-introspection-1.0
+obj /usr/share/gobject-introspection-1.0/Makefile.introspection 63172d417211243012bce17588623ab5 1783329162
+dir /usr/share/aclocal
+obj /usr/share/aclocal/introspection.m4 b63befbe5aa3e62262f2b7e9dc533abe 1783329162

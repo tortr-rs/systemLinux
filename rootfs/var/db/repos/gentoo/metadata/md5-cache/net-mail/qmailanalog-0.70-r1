@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=sys-apps/groff
+DESCRIPTION=collection of tools to help you analyze qmail's activity record
+EAPI=7
+HOMEPAGE=http://cr.yp.to/qmailanalog.html
+INHERIT=fixheadtails toolchain-funcs
+KEYWORDS=~amd64 ~sparc x86
+LICENSE=freedist public-domain
+SLOT=0
+SRC_URI=http://cr.yp.to/software/qmailanalog-0.70.tar.gz
+_eclasses_=fixheadtails	1721997ed44d035654efe12da50797ef	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=8e5f070903bf788259337f729693701d

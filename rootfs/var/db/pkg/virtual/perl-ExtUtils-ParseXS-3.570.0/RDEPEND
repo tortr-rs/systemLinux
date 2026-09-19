@@ -1,0 +1,1 @@
+|| ( =dev-lang/perl-5.42* ~perl-core/ExtUtils-ParseXS-3.570.0 ) dev-lang/perl:0/5.42= !<perl-core/ExtUtils-ParseXS-3.570.0 !>perl-core/ExtUtils-ParseXS-3.570.0-r999

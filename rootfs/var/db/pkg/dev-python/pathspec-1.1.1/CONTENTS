@@ -1,0 +1,151 @@
+dir /usr
+dir /usr/lib
+dir /usr/lib/python3.14
+dir /usr/lib/python3.14/site-packages
+dir /usr/lib/python3.14/site-packages/pathspec
+obj /usr/lib/python3.14/site-packages/pathspec/__init__.py c7099bff1d57a6634e2b96da201d3e98 1788715598
+dir /usr/lib/python3.14/site-packages/pathspec/__pycache__
+obj /usr/lib/python3.14/site-packages/pathspec/__pycache__/__init__.cpython-314.opt-1.pyc f013b037fb486763c210684d5044657a 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/__pycache__/__init__.cpython-314.opt-2.pyc 90ae95800c2fb2e24621b79b9d5e7ea0 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/__pycache__/__init__.cpython-314.pyc f013b037fb486763c210684d5044657a 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/__pycache__/_meta.cpython-314.opt-1.pyc 4d2dddfd05451f06744f67becbfcf662 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/__pycache__/_meta.cpython-314.opt-2.pyc 1129c5035843b1b150c3ea9bd234bcaf 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/__pycache__/_meta.cpython-314.pyc 4d2dddfd05451f06744f67becbfcf662 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/__pycache__/_typing.cpython-314.opt-1.pyc b740eb690e923f248467afa4d0987122 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/__pycache__/_typing.cpython-314.opt-2.pyc 8130e3b024f61947c112dfd2db6bb8ad 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/__pycache__/_typing.cpython-314.pyc b740eb690e923f248467afa4d0987122 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/__pycache__/_version.cpython-314.opt-1.pyc bff08d9e113fed36b96eb47ff8914ed0 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/__pycache__/_version.cpython-314.opt-2.pyc b60f26d6095ff2b6483fe4c6cf2da887 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/__pycache__/_version.cpython-314.pyc bff08d9e113fed36b96eb47ff8914ed0 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/__pycache__/backend.cpython-314.opt-1.pyc 4a39ca6941888027ea4a1ba88ca850a4 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/__pycache__/backend.cpython-314.opt-2.pyc f235ee089d6e08f42fd351de577786db 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/__pycache__/backend.cpython-314.pyc 4a39ca6941888027ea4a1ba88ca850a4 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/__pycache__/gitignore.cpython-314.opt-1.pyc 97222698c17460cc2d34aeb972a636d0 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/__pycache__/gitignore.cpython-314.opt-2.pyc e5cf69be219cdf501a6339f0d928d66e 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/__pycache__/gitignore.cpython-314.pyc 97222698c17460cc2d34aeb972a636d0 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/__pycache__/pathspec.cpython-314.opt-1.pyc c9ce6fd437c5fd848333d948d35280fe 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/__pycache__/pathspec.cpython-314.opt-2.pyc 093c439420e006be29619198f8ff8959 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/__pycache__/pathspec.cpython-314.pyc c9ce6fd437c5fd848333d948d35280fe 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/__pycache__/pattern.cpython-314.opt-1.pyc 221d27c51978cd42aebbd722045de566 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/__pycache__/pattern.cpython-314.opt-2.pyc a763f3525766b7b6143248bf47085c4e 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/__pycache__/pattern.cpython-314.pyc 4df212704abe74062cd3e140d0866f70 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/__pycache__/util.cpython-314.opt-1.pyc 2cc1836169c278a62182904d0b0a0c68 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/__pycache__/util.cpython-314.opt-2.pyc e6c64c5b2290836d92394c144e75be3f 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/__pycache__/util.cpython-314.pyc c97eb5f4f61ece862629109958059ee1 1788715598
+dir /usr/lib/python3.14/site-packages/pathspec/_backends
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/__init__.py 2aee83bc44b3920e6db259d1d88368bc 1788715598
+dir /usr/lib/python3.14/site-packages/pathspec/_backends/__pycache__
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/__pycache__/__init__.cpython-314.opt-1.pyc a400f4a0a5e5309e8cc073a06adc45bb 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/__pycache__/__init__.cpython-314.opt-2.pyc b060b1712f9510b7ae8b7d9b6d845c17 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/__pycache__/__init__.cpython-314.pyc a400f4a0a5e5309e8cc073a06adc45bb 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/__pycache__/_utils.cpython-314.opt-1.pyc 68b2df6d218786151b3d7d4d3d1d37e3 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/__pycache__/_utils.cpython-314.opt-2.pyc e85815277bf026af81fcddff685e41b3 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/__pycache__/_utils.cpython-314.pyc 68b2df6d218786151b3d7d4d3d1d37e3 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/__pycache__/agg.cpython-314.opt-1.pyc 5774cac273bbbf2afa2dc7b388a1b6c0 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/__pycache__/agg.cpython-314.opt-2.pyc 232c79252e48ca48ff33e904f75123be 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/__pycache__/agg.cpython-314.pyc 5774cac273bbbf2afa2dc7b388a1b6c0 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/_utils.py af8488f5cf6f1a489b3a8dc78ac05867 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/agg.py c5168069612ac9b8e8bbcb2a658b05cd 1788715598
+dir /usr/lib/python3.14/site-packages/pathspec/_backends/hyperscan
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/hyperscan/__init__.py d41d8cd98f00b204e9800998ecf8427e 1788715598
+dir /usr/lib/python3.14/site-packages/pathspec/_backends/hyperscan/__pycache__
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/hyperscan/__pycache__/__init__.cpython-314.opt-1.pyc ec2ebbbbbd05bde79ac9de43b38b6603 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/hyperscan/__pycache__/__init__.cpython-314.opt-2.pyc ec2ebbbbbd05bde79ac9de43b38b6603 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/hyperscan/__pycache__/__init__.cpython-314.pyc ec2ebbbbbd05bde79ac9de43b38b6603 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/hyperscan/__pycache__/_base.cpython-314.opt-1.pyc b9f5d5db10c4180c8a6ea1c85d979145 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/hyperscan/__pycache__/_base.cpython-314.opt-2.pyc 32091b9d9874012a32a5476dd246a2ad 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/hyperscan/__pycache__/_base.cpython-314.pyc b9f5d5db10c4180c8a6ea1c85d979145 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/hyperscan/__pycache__/base.cpython-314.opt-1.pyc 3e5286272955903ca1e07b92ba57a817 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/hyperscan/__pycache__/base.cpython-314.opt-2.pyc 339f9f81d047f59b6ed2e38d6328b5ec 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/hyperscan/__pycache__/base.cpython-314.pyc 3e5286272955903ca1e07b92ba57a817 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/hyperscan/__pycache__/gitignore.cpython-314.opt-1.pyc 9e4aa93f165fd6544fa7ab9f62e2cc9a 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/hyperscan/__pycache__/gitignore.cpython-314.opt-2.pyc ff4aa1eb4595185044003fc97b21daae 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/hyperscan/__pycache__/gitignore.cpython-314.pyc 0b368326891d51127889598c9196fd66 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/hyperscan/__pycache__/pathspec.cpython-314.opt-1.pyc f5a245e3ac5e1573b09f35fc7a041f99 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/hyperscan/__pycache__/pathspec.cpython-314.opt-2.pyc bd95d75ff9a166fe6e71326704751c20 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/hyperscan/__pycache__/pathspec.cpython-314.pyc 1c60b258a22cccbdc00dba9189ad3096 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/hyperscan/_base.py e5362ada77f6237d517281a138b1bcb9 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/hyperscan/base.py 6d41076fd594f4f340b387a2aa596874 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/hyperscan/gitignore.py c070b7f63e64efb5db13fa6cf0b42a43 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/hyperscan/pathspec.py f6a280771432a535274308aa975ad64a 1788715598
+dir /usr/lib/python3.14/site-packages/pathspec/_backends/re2
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/re2/__init__.py d41d8cd98f00b204e9800998ecf8427e 1788715598
+dir /usr/lib/python3.14/site-packages/pathspec/_backends/re2/__pycache__
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/re2/__pycache__/__init__.cpython-314.opt-1.pyc efad200bec435ab44f494399c7eaf3c9 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/re2/__pycache__/__init__.cpython-314.opt-2.pyc efad200bec435ab44f494399c7eaf3c9 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/re2/__pycache__/__init__.cpython-314.pyc efad200bec435ab44f494399c7eaf3c9 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/re2/__pycache__/_base.cpython-314.opt-1.pyc 60283d4a3a71674a1bc2168145308a5b 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/re2/__pycache__/_base.cpython-314.opt-2.pyc 0f430a07e9f05f427840105e1cac4dfd 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/re2/__pycache__/_base.cpython-314.pyc 60283d4a3a71674a1bc2168145308a5b 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/re2/__pycache__/base.cpython-314.opt-1.pyc 465f5b3bb66ac8eef81ba9fa9fdf03da 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/re2/__pycache__/base.cpython-314.opt-2.pyc 0733deeb892a0896c45f3bf7c173b8f0 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/re2/__pycache__/base.cpython-314.pyc 465f5b3bb66ac8eef81ba9fa9fdf03da 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/re2/__pycache__/gitignore.cpython-314.opt-1.pyc 77e1571563b8ad0609251a4ff2e0f245 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/re2/__pycache__/gitignore.cpython-314.opt-2.pyc ec2dea85fc87adb606afa264059d2eef 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/re2/__pycache__/gitignore.cpython-314.pyc 6d5908b1f64dec68501fcdd07c50cb42 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/re2/__pycache__/pathspec.cpython-314.opt-1.pyc a569862a8ccd887aa3780b8a96e03850 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/re2/__pycache__/pathspec.cpython-314.opt-2.pyc cace618540b5b74f33fdb7a9e2218562 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/re2/__pycache__/pathspec.cpython-314.pyc 9a50783bba24a7ef1c29e173d5b65eee 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/re2/_base.py 07cca7547ceb41cf8bd1753c7cdf90bb 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/re2/base.py bad94421aba15d0f3daf562e0cafaa45 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/re2/gitignore.py 559a4fdeeb615ce0e50b932277d75337 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/re2/pathspec.py 4fe0ba1cf905ca0f41fe7bb1ec8695b0 1788715598
+dir /usr/lib/python3.14/site-packages/pathspec/_backends/simple
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/simple/__init__.py d41d8cd98f00b204e9800998ecf8427e 1788715598
+dir /usr/lib/python3.14/site-packages/pathspec/_backends/simple/__pycache__
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/simple/__pycache__/__init__.cpython-314.opt-1.pyc a45c6f7fb860f52d038a49072049d721 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/simple/__pycache__/__init__.cpython-314.opt-2.pyc a45c6f7fb860f52d038a49072049d721 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/simple/__pycache__/__init__.cpython-314.pyc a45c6f7fb860f52d038a49072049d721 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/simple/__pycache__/gitignore.cpython-314.opt-1.pyc 9d1da53173d3bb99dd4edabe247d159d 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/simple/__pycache__/gitignore.cpython-314.opt-2.pyc b345a066bbd3c04eac5becd96c2586f5 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/simple/__pycache__/gitignore.cpython-314.pyc 9d1da53173d3bb99dd4edabe247d159d 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/simple/__pycache__/pathspec.cpython-314.opt-1.pyc 53c8a8eb338694ed319308bdebf9bc7f 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/simple/__pycache__/pathspec.cpython-314.opt-2.pyc e0844b3ecb1a9a1d36b82126726b107c 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/simple/__pycache__/pathspec.cpython-314.pyc 53c8a8eb338694ed319308bdebf9bc7f 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/simple/gitignore.py 2c85210515b9cc4319b1ce7fa7fa5d0c 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_backends/simple/pathspec.py 3289367e640da2519ba8a3f46504d422 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_meta.py 62c122e8695a0dc199db8968b76bc2f0 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_typing.py 373996c9a5bd5e999a460723e3598194 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/_version.py 35a24dbb230f961ee90e76e084daebc4 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/backend.py db66b3c0ad0dd290c0c7f9f2ad141159 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/gitignore.py 55dbe1b287becff63afb06cbd8e8b85c 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/pathspec.py b415b0c337787092a620efe394dfe930 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/pattern.py 48e3b98d21ef031c81a00bacdf6075a7 1788715598
+dir /usr/lib/python3.14/site-packages/pathspec/patterns
+obj /usr/lib/python3.14/site-packages/pathspec/patterns/__init__.py 1bb79e4f753bcc7c7ad99d86a905ee05 1788715598
+dir /usr/lib/python3.14/site-packages/pathspec/patterns/__pycache__
+obj /usr/lib/python3.14/site-packages/pathspec/patterns/__pycache__/__init__.cpython-314.opt-1.pyc e443ceaf4e1ea5f9a3a6bec3e0bfb7a7 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/patterns/__pycache__/__init__.cpython-314.opt-2.pyc d07c6d550063f8cafadd7b3eb3405a7c 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/patterns/__pycache__/__init__.cpython-314.pyc e443ceaf4e1ea5f9a3a6bec3e0bfb7a7 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/patterns/__pycache__/gitwildmatch.cpython-314.opt-1.pyc 4b7922d26ef745b2326cde3704f5c636 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/patterns/__pycache__/gitwildmatch.cpython-314.opt-2.pyc a605ba3d806f938684a5938a96775c1a 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/patterns/__pycache__/gitwildmatch.cpython-314.pyc 4b7922d26ef745b2326cde3704f5c636 1788715598
+dir /usr/lib/python3.14/site-packages/pathspec/patterns/gitignore
+obj /usr/lib/python3.14/site-packages/pathspec/patterns/gitignore/__init__.py ee1fbeb8df8f3d4bca1ce82940f0568a 1788715598
+dir /usr/lib/python3.14/site-packages/pathspec/patterns/gitignore/__pycache__
+obj /usr/lib/python3.14/site-packages/pathspec/patterns/gitignore/__pycache__/__init__.cpython-314.opt-1.pyc c79869e00463c72b8b9925cd361f142e 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/patterns/gitignore/__pycache__/__init__.cpython-314.opt-2.pyc 00565c981ff907377b6af6af2abb920f 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/patterns/gitignore/__pycache__/__init__.cpython-314.pyc c79869e00463c72b8b9925cd361f142e 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/patterns/gitignore/__pycache__/base.cpython-314.opt-1.pyc 445fc2b922d9355e35525af448cb3bd7 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/patterns/gitignore/__pycache__/base.cpython-314.opt-2.pyc f317116d252c1b8ae37c3298c14ac24c 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/patterns/gitignore/__pycache__/base.cpython-314.pyc 445fc2b922d9355e35525af448cb3bd7 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/patterns/gitignore/__pycache__/basic.cpython-314.opt-1.pyc 763f27c511ebbe5ed51064b0f426ec02 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/patterns/gitignore/__pycache__/basic.cpython-314.opt-2.pyc 35f23d00b0ba2850cddcfb06fc7b9a4c 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/patterns/gitignore/__pycache__/basic.cpython-314.pyc 2f27a4edbd561fc8498e057f840fd434 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/patterns/gitignore/__pycache__/spec.cpython-314.opt-1.pyc 6171d8f998fabc6c48209b7c41983772 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/patterns/gitignore/__pycache__/spec.cpython-314.opt-2.pyc 69bd05d64847434db3c6b4acda534e43 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/patterns/gitignore/__pycache__/spec.cpython-314.pyc 7f5444af962b855bff847e7694157802 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/patterns/gitignore/base.py b07742c1b5d9488a2c296bffe9b68dca 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/patterns/gitignore/basic.py a41a7d65182b1c4588e587f6cdde99b0 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/patterns/gitignore/spec.py d739a49122865a2ad1a852c25f9656be 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/patterns/gitwildmatch.py c32e1a2d2438ee3ea0b5efb67e983be2 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/py.typed a9bc6cdbcf7579a217b2812b6398f6d7 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec/util.py b0c993cf5b5e2845f5ad707856e37258 1788715598
+dir /usr/lib/python3.14/site-packages/pathspec-1.1.1.dist-info
+obj /usr/lib/python3.14/site-packages/pathspec-1.1.1.dist-info/METADATA b75af04bc2bf3e3f48baf9a197fdfb1a 1788715598
+obj /usr/lib/python3.14/site-packages/pathspec-1.1.1.dist-info/WHEEL 5b30b1d0507423be616800616cb80db3 1788715598
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/pathspec-1.1.1
+obj /usr/share/doc/pathspec-1.1.1/README-dist.rst.bz2 c3c395f21e4bbacc36d2570ccebcbf35 1788715598
+obj /usr/share/doc/pathspec-1.1.1/README.rst.bz2 3a67f8b702c5b0bdfb4d7d8420d29d5f 1788715598

@@ -1,0 +1,24 @@
+dir /usr
+dir /usr/include
+obj /usr/include/zconf.h 7a9cc60f815405a72c658c23ce667a21 1776619063
+obj /usr/include/zlib.h 068c260be35209fb8458428c461dc536 1776619063
+dir /usr/lib64
+sym /usr/lib64/libz.so -> libz.so.1.3.2 1789354117
+sym /usr/lib64/libz.so.1 -> libz.so.1.3.2 1789354117
+obj /usr/lib64/libz.so.1.3.2 e79a1f8ce4df255b371b1a6e23941028 1776619063
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/zlib.pc e507c056af3b26231d28905e3c2628f3 1776619063
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/zlib-1.3.2-r1
+obj /usr/share/doc/zlib-1.3.2-r1/ChangeLog.bz2 0707b3a719d1285d584039d88caec832 1776619063
+obj /usr/share/doc/zlib-1.3.2-r1/FAQ.bz2 2cbceb041d7f1bc5b16c2459fd31946f 1776619063
+obj /usr/share/doc/zlib-1.3.2-r1/README.bz2 e4b9ae27c43c5ccb9b27d372924bd746 1776619063
+obj /usr/share/doc/zlib-1.3.2-r1/algorithm.txt.bz2 9ac4e823809d110519eb1a847749990b 1776619063
+obj /usr/share/doc/zlib-1.3.2-r1/rfc1950.txt.bz2 f8a202b177cd70b346552b82dda01d34 1776619063
+obj /usr/share/doc/zlib-1.3.2-r1/rfc1951.txt.bz2 ae9d5af5197cb1212b22fe81259959a5 1776619063
+obj /usr/share/doc/zlib-1.3.2-r1/rfc1952.txt.bz2 ad8beb5ec4ab80b62a9fcceec1cd16d8 1776619063
+obj /usr/share/doc/zlib-1.3.2-r1/txtvsbin.txt.bz2 7e9f8406bb692878dbe192eabb1e74e9 1776619063
+dir /usr/share/man
+dir /usr/share/man/man3
+obj /usr/share/man/man3/zlib.3.bz2 c657b2dda0ae79b17ed130ca1f02d509 1776619063

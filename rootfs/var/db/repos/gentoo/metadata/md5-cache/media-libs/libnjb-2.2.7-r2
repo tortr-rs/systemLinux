@@ -1,0 +1,15 @@
+BDEPEND=>=app-portage/elt-patches-20250306 virtual/pkgconfig
+DEFINED_PHASES=configure install postinst postrm prepare
+DEPEND=virtual/libusb:0 doc? ( app-text/doxygen )
+DESCRIPTION=Library for communicating with the Creative Nomad JukeBox digital audio player
+EAPI=8
+HOMEPAGE=https://libnjb.sourceforge.net
+INHERIT=libtool udev
+IUSE=doc static-libs
+KEYWORDS=amd64 ~arm64 ppc ppc64 x86
+LICENSE=BSD
+RDEPEND=virtual/libusb:0
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/libnjb/libnjb-2.2.7.tar.gz
+_eclasses_=libtool	6a96cd90e5da8c7c615015479f46f1a4	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5	udev	1a23882bb73bc31c64a6f00a5e515f34
+_md5_=b6a2b2675e68a1fcc37c9c9e60e27eeb

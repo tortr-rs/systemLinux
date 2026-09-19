@@ -1,0 +1,26 @@
+dir /etc
+dir /etc/fonts
+dir /etc/fonts/conf.avail
+obj /etc/fonts/conf.avail/60-liberation.conf 68c95b9b6f163642b4b2419dfbb79b61 1724836885
+dir /usr
+dir /usr/share
+dir /usr/share/fonts
+dir /usr/share/fonts/liberation-fonts
+obj /usr/share/fonts/liberation-fonts/LiberationSerif-Bold.ttf 184a866d565bae797baa39458fde7ac4 1724836885
+obj /usr/share/fonts/liberation-fonts/LiberationMono-Italic.ttf fe762a65e22e23c935aff8eda38eaaf3 1724836885
+obj /usr/share/fonts/liberation-fonts/LiberationMono-Regular.ttf e59b87dce1497a1ba08d472667722916 1724836885
+obj /usr/share/fonts/liberation-fonts/LiberationSerif-Italic.ttf 31defdf69fc00c20b9caabe3e76d53e1 1724836885
+obj /usr/share/fonts/liberation-fonts/LiberationSans-Italic.ttf 333f554fddaa0faf89afc3621a6a18c8 1724836885
+obj /usr/share/fonts/liberation-fonts/LiberationMono-Bold.ttf e52e17953632fd6f1da5e51c84a6dea7 1724836885
+obj /usr/share/fonts/liberation-fonts/LiberationSerif-BoldItalic.ttf 23e615c7010f0ad9f1d2817009733cb9 1724836885
+obj /usr/share/fonts/liberation-fonts/LiberationSans-Regular.ttf d7b4e92b03deb1865aa61328fd5ff400 1724836885
+obj /usr/share/fonts/liberation-fonts/LiberationSerif-Regular.ttf 732ab01395f607bf178d0f32d841cc71 1724836885
+obj /usr/share/fonts/liberation-fonts/LiberationSans-Bold.ttf ab3823f8c454609eab661b54751fd55e 1724836885
+obj /usr/share/fonts/liberation-fonts/LiberationSans-BoldItalic.ttf ad144bbd42d9dccb07db1aae6682b98b 1724836885
+obj /usr/share/fonts/liberation-fonts/LiberationMono-BoldItalic.ttf 00bed708fb7614c12c92cfd16f1fb7b8 1724836885
+dir /usr/share/doc
+dir /usr/share/doc/liberation-fonts-2.1.5
+obj /usr/share/doc/liberation-fonts-2.1.5/TODO.bz2 513cf0f3c472a803a592a0bd4d5c8547 1724836885
+obj /usr/share/doc/liberation-fonts-2.1.5/README.md.bz2 3d34a50e41cdd04686609c08c7b2a50f 1724836885
+obj /usr/share/doc/liberation-fonts-2.1.5/ChangeLog.bz2 82cb19f91fd6c79d4483a4913cf34dd1 1724836885
+obj /usr/share/doc/liberation-fonts-2.1.5/AUTHORS.bz2 99b908e540464674f4dc5789183273bf 1724836885

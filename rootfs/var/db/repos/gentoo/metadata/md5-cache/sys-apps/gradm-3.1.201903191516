@@ -1,0 +1,14 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=compile install postinst prepare
+DEPEND=app-alternatives/yacc app-alternatives/lex pam? ( sys-libs/pam )
+DESCRIPTION=Administrative interface for the grsecurity Role Based Access Control system
+EAPI=7
+HOMEPAGE=https://www.grsecurity.net/
+INHERIT=flag-o-matic toolchain-funcs udev
+IUSE=pam
+KEYWORDS=~alpha amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc x86
+LICENSE=GPL-2
+SLOT=0
+SRC_URI=https://dev.gentoo.org/~slashbeast/distfiles/gradm/gradm-3.1-201903191516.tar.gz
+_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5	udev	1a23882bb73bc31c64a6f00a5e515f34
+_md5_=39beac22525b773bddd39a859719d0b8

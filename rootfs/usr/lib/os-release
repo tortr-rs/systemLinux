@@ -1,0 +1,6 @@
+NAME="systemLinux"
+ID=systemlinux
+PRETTY_NAME="systemLinux v0.1"
+ANSI_COLOR="0;34"
+HOME_URL="https://github.com"
+LOGOS="linux"

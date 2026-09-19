@@ -1,0 +1,15 @@
+BDEPEND=app-text/rman sys-devel/gcc >=x11-misc/imake-1.0.8-r1 svg? ( virtual/pkgconfig )
+DEFINED_PHASES=compile configure install prepare
+DEPEND=x11-libs/gdk-pixbuf-xlib x11-libs/libX11 x11-libs/libXpm x11-libs/libXt svg? ( dev-libs/glib:2 gnome-base/librsvg:2 x11-libs/gtk+:2 )
+DESCRIPTION=eXtended XKB - assign different keymaps to different windows
+EAPI=7
+HOMEPAGE=https://sourceforge.net/projects/xxkb/
+INHERIT=toolchain-funcs
+IUSE=svg
+KEYWORDS=amd64 ppc x86
+LICENSE=Artistic-2
+RDEPEND=x11-libs/gdk-pixbuf-xlib x11-libs/libX11 x11-libs/libXpm x11-libs/libXt svg? ( dev-libs/glib:2 gnome-base/librsvg:2 x11-libs/gtk+:2 )
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/xxkb/xxkb-1.11.1-src.tar.gz svg? ( https://dev.gentoo.org/~jsmolic/distfiles/xxkb-flags.tar.bz2 )
+_eclasses_=toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=688045e48a9b34852913508957988d0c

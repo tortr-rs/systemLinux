@@ -1,0 +1,74 @@
+#!/bin/sh
+#
+# Automatically generated from manual-not-found.in
+#
+# Copyright 2025-2026 Free Software Foundation, Inc.
+# 
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.
+
+AWK=gawk
+
+if test $AWK = '@'AWK@ ; then
+  AWK=awk
+fi
+
+interactive=0
+if test x$1 = x--interactive ; then
+  shift
+  interactive=1
+fi
+
+pwd=`pwd`
+hook_dir=`dirname $0`
+
+url_msg=
+
+if test -f "$hook_dir/gnu-manuals-locations.dat" ; then
+  lookup_file=$hook_dir/gnu-manuals-locations.dat
+
+  url=`cat "$lookup_file" | $AWK -v prog="$1" \
+     '/^#/ {}
+      $1 == prog {
+        url=$2 ; for (v in file_vars) gsub("@" v "@",file_vars[v],url) ;
+        print url ; exit }
+      $1 == "@setvar" && NF == 3 { file_vars[$2] = $3 }
+'`
+  # Note: keep awk program in sync with separate gnu-manuals.awk file, only
+  # installed on MS-Windows.
+
+  if test -z "$url" ; then
+    # If we don't know anything about this manual, just revert to Info's
+    # default behaviour, probably trying to load the manpage.
+    exit 1
+  fi
+  url_msg="You could try visiting the following URL in a web browser to download
+the Info manual, or to read the '$1' manual in other formats:\n\n$url"
+fi
+
+manpage_exists=0
+if man -w "$1" >/dev/null ; then
+  manpage_exists=1
+fi
+
+msg="An Info manual called '$1' was not found on your system.
+
+$url_msg
+"
+
+if test $interactive = 0; then
+if test $manpage_exists = 1 ; then
+msg="${msg}
+You could try loading the manpage instead, with the link below:
+
+* Menu:
+
+* (*manpages*)$1::	$1 man page
+"
+fi
+fi
+
+echo "$msg"
+
+exit 0

@@ -1,0 +1,13 @@
+DEFINED_PHASES=install nofetch prepare
+DESCRIPTION=Experimental and artistic puzzler set in a microbial world
+EAPI=7
+HOMEPAGE=https://www.cipherprime.com/games/splice/
+INHERIT=desktop wrapper
+KEYWORDS=-* ~amd64 ~x86
+LICENSE=all-rights-reserved
+RDEPEND=virtual/glu virtual/opengl x11-libs/libX11 x11-libs/libXcursor x11-libs/libXext
+RESTRICT=bindist fetch splitdebug
+SLOT=0
+SRC_URI=splice-linux-1353389454.tar.gz
+_eclasses_=desktop	e447b5f77146d69797e9f03ff177f3f1	wrapper	ebaa3beeb43f7e533872b6c37168c7ad
+_md5_=e0f91a1771804a83f92039e1014ccc9f

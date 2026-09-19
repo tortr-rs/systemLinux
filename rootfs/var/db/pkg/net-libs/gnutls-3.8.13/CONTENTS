@@ -1,0 +1,95 @@
+dir /usr
+dir /usr/include
+dir /usr/include/gnutls
+obj /usr/include/gnutls/abstract.h b4ebc8b6107fcaaffbad836c46d97124 1780248166
+obj /usr/include/gnutls/compat.h 299da151c9df258d72ed259a0579b57a 1780248166
+obj /usr/include/gnutls/crypto.h ca9d4415f043b607dc8ac05469594c86 1780248166
+obj /usr/include/gnutls/dtls.h 8ce6bbcab053b03cd31c89a2c352baa9 1780248166
+obj /usr/include/gnutls/gnutls.h fb9eee39d018317e872a803d762bd236 1780248166
+obj /usr/include/gnutls/gnutlsxx.h 9ecae1f3d2efcbdbaf5729ab753e520a 1780248166
+obj /usr/include/gnutls/hpke.h f903646c990b8301e7e9bb184944067d 1780248166
+obj /usr/include/gnutls/ocsp.h 35f3f7d954b150f11125b58dfd6f6696 1780248166
+obj /usr/include/gnutls/openpgp.h d97ea1c4c0b4c164dcc9da2c9841e7b0 1780248166
+obj /usr/include/gnutls/openssl.h 75393b338dd321f38d856d80641cd295 1780248166
+obj /usr/include/gnutls/pkcs11.h 0f5a84118692f2b7834f99ffa0659471 1780248166
+obj /usr/include/gnutls/pkcs12.h 44f0b56701329061f775f8f1cd8e7c4d 1780248166
+obj /usr/include/gnutls/pkcs7.h c2c8d1faa41cb1b52d12a4859937d32d 1780248166
+obj /usr/include/gnutls/self-test.h 0b6fe67f6a5a44d9d82c98cc55148ed7 1780248166
+obj /usr/include/gnutls/socket.h 8f46da38cdc8f58fd96bbc3bcb840b5a 1780248166
+obj /usr/include/gnutls/system-keys.h 3a0568e0b6e3a423348416167e3e599c 1780248166
+obj /usr/include/gnutls/tpm.h a65bc56befc48f4b9fdd0f220b997746 1780248166
+obj /usr/include/gnutls/urls.h 290741820f0a7ec885f428eefe9cc146 1780248166
+obj /usr/include/gnutls/x509-ext.h 54a358544347e2f3d969c4de8f5b24dc 1780248166
+obj /usr/include/gnutls/x509.h df9f808cac9087cbfcc2f93fe7fa74bb 1780248166
+dir /usr/lib64
+obj /usr/lib64/libgnutls-openssl.so.27.0.2 f85f61de6fcb44fa03d55e5385eb8082 1780248167
+obj /usr/lib64/libgnutls.so.30.42.0 64495b070e2f2dd6a5ec49d6a33423e1 1780248167
+obj /usr/lib64/libgnutlsxx.so.30.0.0 a4a5878e7b39805f8984dfa56fa0632e 1780248167
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/gnutls.pc c262e446f8f299626901f2c09fcb1158 1780248166
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/gnutls-3.8.13
+obj /usr/share/doc/gnutls-3.8.13/README.md.bz2 08d2d9f3564bcb0e1c06813908b8bb21 1780248167
+obj /usr/share/doc/gnutls-3.8.13/certtool.cfg.bz2 8911385a96dd150339bebdee4b3e4647 1780248167
+dir /usr/share/locale
+dir /usr/share/locale/cs
+dir /usr/share/locale/cs/LC_MESSAGES
+obj /usr/share/locale/cs/LC_MESSAGES/gnutls.mo ee878136c4f447c57018df29243832ca 1780248166
+dir /usr/share/locale/de
+dir /usr/share/locale/de/LC_MESSAGES
+obj /usr/share/locale/de/LC_MESSAGES/gnutls.mo 8521996878779b5b60e8f3325efe0f8d 1780248166
+dir /usr/share/locale/eo
+dir /usr/share/locale/eo/LC_MESSAGES
+obj /usr/share/locale/eo/LC_MESSAGES/gnutls.mo 4237cbc1b0148fa96d9e6d7a7b32aec1 1780248166
+dir /usr/share/locale/es
+dir /usr/share/locale/es/LC_MESSAGES
+obj /usr/share/locale/es/LC_MESSAGES/gnutls.mo 14a34f14bbeeea26818417ec1fb78ac1 1780248166
+dir /usr/share/locale/fi
+dir /usr/share/locale/fi/LC_MESSAGES
+obj /usr/share/locale/fi/LC_MESSAGES/gnutls.mo dd409f37f827c31fb47f45509dbf2f5c 1780248166
+dir /usr/share/locale/fr
+dir /usr/share/locale/fr/LC_MESSAGES
+obj /usr/share/locale/fr/LC_MESSAGES/gnutls.mo 4bab1d2048e9d878540e285f08b86952 1780248166
+dir /usr/share/locale/it
+dir /usr/share/locale/it/LC_MESSAGES
+obj /usr/share/locale/it/LC_MESSAGES/gnutls.mo b0f278bcdea5cfed50d1a173a7a09cc2 1780248166
+dir /usr/share/locale/ka
+dir /usr/share/locale/ka/LC_MESSAGES
+obj /usr/share/locale/ka/LC_MESSAGES/gnutls.mo 8af8dc51f3f97ed29fc9f681c71d953e 1780248166
+dir /usr/share/locale/ms
+dir /usr/share/locale/ms/LC_MESSAGES
+obj /usr/share/locale/ms/LC_MESSAGES/gnutls.mo d393c5cb0b847ee97d1fe2c257fc3051 1780248166
+dir /usr/share/locale/nl
+dir /usr/share/locale/nl/LC_MESSAGES
+obj /usr/share/locale/nl/LC_MESSAGES/gnutls.mo 414fcb89ff96dbedd630b202e301c436 1780248166
+dir /usr/share/locale/pl
+dir /usr/share/locale/pl/LC_MESSAGES
+obj /usr/share/locale/pl/LC_MESSAGES/gnutls.mo 3932298cfe507979d57575f087a7a0e6 1780248166
+dir /usr/share/locale/pt_BR
+dir /usr/share/locale/pt_BR/LC_MESSAGES
+obj /usr/share/locale/pt_BR/LC_MESSAGES/gnutls.mo ad9bb4bae27d6aec66d2d9a6b939f530 1780248166
+dir /usr/share/locale/ro
+dir /usr/share/locale/ro/LC_MESSAGES
+obj /usr/share/locale/ro/LC_MESSAGES/gnutls.mo 1c0a252d314313c987f84ab20a18423e 1780248166
+dir /usr/share/locale/sr
+dir /usr/share/locale/sr/LC_MESSAGES
+obj /usr/share/locale/sr/LC_MESSAGES/gnutls.mo e6ac2fa243f40421c709764595190809 1780248166
+dir /usr/share/locale/sv
+dir /usr/share/locale/sv/LC_MESSAGES
+obj /usr/share/locale/sv/LC_MESSAGES/gnutls.mo 619c2798f2df76e4062aa74e92f345bc 1780248166
+dir /usr/share/locale/uk
+dir /usr/share/locale/uk/LC_MESSAGES
+obj /usr/share/locale/uk/LC_MESSAGES/gnutls.mo 88fa30da36db2b04ef4e4a32ebe768e9 1780248166
+dir /usr/share/locale/vi
+dir /usr/share/locale/vi/LC_MESSAGES
+obj /usr/share/locale/vi/LC_MESSAGES/gnutls.mo 29e51ae04287655fac62f8020bfcabf7 1780248166
+dir /usr/share/locale/zh_CN
+dir /usr/share/locale/zh_CN/LC_MESSAGES
+obj /usr/share/locale/zh_CN/LC_MESSAGES/gnutls.mo b2679ab3ce410274d9595074d07cec5c 1780248166
+sym /usr/lib64/libgnutlsxx.so.30 -> libgnutlsxx.so.30.0.0 1789354039
+sym /usr/lib64/libgnutlsxx.so -> libgnutlsxx.so.30.0.0 1789354039
+sym /usr/lib64/libgnutls.so.30 -> libgnutls.so.30.42.0 1789354039
+sym /usr/lib64/libgnutls.so -> libgnutls.so.30.42.0 1789354039
+sym /usr/lib64/libgnutls-openssl.so.27 -> libgnutls-openssl.so.27.0.2 1789354039
+sym /usr/lib64/libgnutls-openssl.so -> libgnutls-openssl.so.27.0.2 1789354039

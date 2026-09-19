@@ -1,0 +1,13 @@
+BDEPEND=net-misc/wget
+DEFINED_PHASES=install test unpack
+DESCRIPTION=High-performance programming language for technical computing
+EAPI=8
+HOMEPAGE=https://julialang.org/
+INHERIT=edo
+LICENSE=MIT
+PROPERTIES=live
+RDEPEND=|| ( >=app-arch/7zip-24.09[symlink(+)] app-arch/p7zip )
+RESTRICT=strip
+SLOT=9999
+_eclasses_=edo	a5e294016aa84979fcb2459749eb80b2
+_md5_=023635dac54a37b6755521a44e8f2df9

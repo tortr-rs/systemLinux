@@ -1,0 +1,1 @@
+app-text/docbook-xml-dtd:4.1.2 app-text/xmlto sys-devel/gettext virtual/pkgconfig >=dev-build/meson-1.2.3 app-alternatives/ninja dev-build/meson-format-array

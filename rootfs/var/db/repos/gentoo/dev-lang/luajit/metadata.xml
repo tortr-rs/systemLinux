@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person" proxied="yes">
+    <email>holger@applied-asynchrony.com</email>
+    <name>Holger Hoffstätte</name>
+  </maintainer>
+  <maintainer type="project" proxied="proxy">
+    <email>proxy-maint@gentoo.org</email>
+    <name>Proxy Maintainers</name>
+  </maintainer>
+  <use>
+    <flag name="lua52compat">
+      Enable some upwards-compatible features
+      from Lua 5.2 that are unlikely to break existing code.
+    </flag>
+  </use>
+  <upstream>
+    <remote-id type="github">LuaJIT/LuaJIT</remote-id>
+    <remote-id type="cpe">cpe:/a:luajit:luajit</remote-id>
+  </upstream>
+</pkgmetadata>

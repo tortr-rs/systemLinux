@@ -1,0 +1,76 @@
+dir /usr
+dir /usr/include
+dir /usr/include/attr
+obj /usr/include/attr/attributes.h a78d6f0233f011d84810bc843963df60 1786297063
+obj /usr/include/attr/error_context.h cb81ec9fe7117119f2492af7da824754 1786297063
+obj /usr/include/attr/libattr.h e8f546cdbff5fa2397e839b00c0865d8 1786297063
+obj /usr/include/attr/xattr.h b60baecbe50cda11234bfee7550b3aff 1786297063
+dir /usr/lib64
+obj /usr/lib64/libattr.so.1.1.2600 958714d246563c1cc46900c55aec6e06 1786297064
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/libattr.pc 94f65be300c6e22731b53218a6cdd61f 1786297063
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/attr-2.6.0
+obj /usr/share/doc/attr-2.6.0/CHANGES.bz2 65699d10b02967cdcf3e38da32339765 1786297063
+obj /usr/share/doc/attr-2.6.0/COPYING.LGPL.bz2 191eb6945bd43999ae4ccd4cd963fb87 1786297063
+obj /usr/share/doc/attr-2.6.0/COPYING.bz2 3664dc3df3322e4ef69f5a3a536f0c00 1786297063
+obj /usr/share/doc/attr-2.6.0/README.bz2 a9e0a243d465f8fec7899f6aeedbd2fb 1786297063
+dir /usr/share/locale
+dir /usr/share/locale/cs
+dir /usr/share/locale/cs/LC_MESSAGES
+obj /usr/share/locale/cs/LC_MESSAGES/attr.mo 2bc87d14e701bfe34dbf4bd68c34bf93 1786297063
+dir /usr/share/locale/de
+dir /usr/share/locale/de/LC_MESSAGES
+obj /usr/share/locale/de/LC_MESSAGES/attr.mo 061b935f3deb0ab0e5a9188a5356a428 1786297063
+dir /usr/share/locale/en@boldquot
+dir /usr/share/locale/en@boldquot/LC_MESSAGES
+obj /usr/share/locale/en@boldquot/LC_MESSAGES/attr.mo 0b24c00973398a0d7727558ddc96f540 1786297063
+dir /usr/share/locale/en@quot
+dir /usr/share/locale/en@quot/LC_MESSAGES
+obj /usr/share/locale/en@quot/LC_MESSAGES/attr.mo 0d9517d84796f4f83b50e8f3166eb41e 1786297063
+dir /usr/share/locale/es
+dir /usr/share/locale/es/LC_MESSAGES
+obj /usr/share/locale/es/LC_MESSAGES/attr.mo 52aa9443e5e2def122874d6521be7d97 1786297063
+dir /usr/share/locale/fr
+dir /usr/share/locale/fr/LC_MESSAGES
+obj /usr/share/locale/fr/LC_MESSAGES/attr.mo 09e83658609a3a21589b08596608f666 1786297063
+dir /usr/share/locale/gl
+dir /usr/share/locale/gl/LC_MESSAGES
+obj /usr/share/locale/gl/LC_MESSAGES/attr.mo 179c3c134cadf936c82d0422bc0c04f2 1786297063
+dir /usr/share/locale/ka
+dir /usr/share/locale/ka/LC_MESSAGES
+obj /usr/share/locale/ka/LC_MESSAGES/attr.mo 3bfc7e3715b20eeeb01b4698c40fe695 1786297063
+dir /usr/share/locale/nl
+dir /usr/share/locale/nl/LC_MESSAGES
+obj /usr/share/locale/nl/LC_MESSAGES/attr.mo 51a2e3ad6d463516d4cf43b517825bdb 1786297063
+dir /usr/share/locale/pl
+dir /usr/share/locale/pl/LC_MESSAGES
+obj /usr/share/locale/pl/LC_MESSAGES/attr.mo 37a0ffb94797d12a3fa14c105e312748 1786297063
+dir /usr/share/locale/sv
+dir /usr/share/locale/sv/LC_MESSAGES
+obj /usr/share/locale/sv/LC_MESSAGES/attr.mo 8e752fadde53b7df04a04414a69948a2 1786297063
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/attr.1.bz2 ae1c1ea38fdb022131daef41808d51d1 1786297063
+obj /usr/share/man/man1/getfattr.1.bz2 a5176a8a33c62ccf83e447e58cfd6862 1786297063
+obj /usr/share/man/man1/setfattr.1.bz2 378282250dd3309cc40b21fd6ef76d92 1786297063
+dir /usr/share/man/man3
+obj /usr/share/man/man3/attr_get.3.bz2 42acf82fa84ed972c5aaa10e5f1a0adc 1786297063
+sym /usr/share/man/man3/attr_getf.3.bz2 -> attr_get.3.bz2 1789354074
+obj /usr/share/man/man3/attr_list.3.bz2 923020f71ede9d8b9f6fa92f1c00142e 1786297063
+sym /usr/share/man/man3/attr_listf.3.bz2 -> attr_list.3.bz2 1789354074
+obj /usr/share/man/man3/attr_multi.3.bz2 6c740a26eb64f4aaf0d7175bc77a1915 1786297063
+sym /usr/share/man/man3/attr_multif.3.bz2 -> attr_multi.3.bz2 1789354074
+obj /usr/share/man/man3/attr_remove.3.bz2 38fa8699b3a7c6c0ae0d40cbf10014c5 1786297063
+sym /usr/share/man/man3/attr_removef.3.bz2 -> attr_remove.3.bz2 1789354074
+obj /usr/share/man/man3/attr_set.3.bz2 9f6fbcde7b6b3547791bdb2f804e9b8a 1786297063
+sym /usr/share/man/man3/attr_setf.3.bz2 -> attr_set.3.bz2 1789354074
+dir /etc
+obj /etc/xattr.conf 4458c7cb2cac9f20531da8a00be14dd9 1786297063
+dir /bin
+obj /bin/attr 0902584e400e1315105ef197a1352c5b 1786297064
+obj /bin/getfattr 1d5e6313f81080468fa37cf7530e5cf2 1786297064
+obj /bin/setfattr 988f0ae87225f44e288521dce5889ced 1786297064
+sym /usr/lib64/libattr.so.1 -> libattr.so.1.1.2600 1789354074
+sym /usr/lib64/libattr.so -> libattr.so.1.1.2600 1789354074

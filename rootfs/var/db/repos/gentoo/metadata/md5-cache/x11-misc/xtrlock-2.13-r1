@@ -1,0 +1,14 @@
+BDEPEND=sys-devel/gcc >=x11-misc/imake-1.0.8-r1
+DEFINED_PHASES=compile configure install
+DEPEND=virtual/libcrypt:= x11-libs/libX11 x11-base/xorg-proto
+DESCRIPTION=A simplistic screen locking program for X
+EAPI=7
+HOMEPAGE=http://ftp.debian.org/debian/pool/main/x/xtrlock/
+INHERIT=toolchain-funcs
+KEYWORDS=amd64 ppc x86
+LICENSE=GPL-3
+RDEPEND=virtual/libcrypt:= x11-libs/libX11
+SLOT=0
+SRC_URI=mirror://debian/pool/main/x/xtrlock/xtrlock_2.13.tar.xz
+_eclasses_=toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=528d58fc560c53cf448c1f63c766906f

@@ -1,0 +1,1 @@
+|| ( =dev-lang/perl-5.44* =dev-lang/perl-5.42* ~perl-core/CPAN-2.380.0 ) dev-lang/perl:0/5.42= !<perl-core/CPAN-2.380.0 !>perl-core/CPAN-2.380.0-r999

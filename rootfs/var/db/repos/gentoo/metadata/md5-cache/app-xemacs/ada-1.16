@@ -1,0 +1,12 @@
+DEFINED_PHASES=install unpack
+DESCRIPTION=Ada language support
+EAPI=8
+HOMEPAGE=http://xemacs.org/
+INHERIT=xemacs-packages
+KEYWORDS=~alpha amd64 ppc ppc64 ~riscv ~sparc x86
+LICENSE=GPL-2+
+RDEPEND=app-xemacs/xemacs-base app-editors/xemacs
+SLOT=0
+SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/ada-1.16-pkg.tar.gz
+_eclasses_=xemacs-packages	0881340b2a7ce6a0bb29fbbe42154944
+_md5_=bee8b380e755980d6aa3b26588073e80

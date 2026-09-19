@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install postinst
+DESCRIPTION=Shell script that generates a self-extractible tar.gz
+EAPI=8
+HOMEPAGE=https://makeself.io/
+INHERIT=optfeature
+KEYWORDS=amd64 ~hppa ppc x86
+LICENSE=GPL-2+
+RESTRICT=test
+SLOT=0
+SRC_URI=https://github.com/megastep/makeself/archive/refs/tags/release-2.5.0.tar.gz -> makeself-2.5.0.tar.gz
+_eclasses_=optfeature	58cc13bdc4e9a204077e1e7c9a1d7988
+_md5_=db46c13832fcb9c7dc51391f85790d36

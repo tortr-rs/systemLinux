@@ -1,0 +1,13 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install postinst unpack
+DESCRIPTION=Utility to change the binutils version being used
+EAPI=8
+HOMEPAGE=https://wiki.gentoo.org/wiki/Project:Toolchain
+INHERIT=git-r3
+IUSE=+native-symlinks
+LICENSE=GPL-2 GPL-2+
+PROPERTIES=live
+RDEPEND=sys-apps/gentoo-functions
+SLOT=0
+_eclasses_=git-r3	e6c2f983e006e805160436c75a0c1562
+_md5_=f78c1090e010ca922ef759f7889b2376

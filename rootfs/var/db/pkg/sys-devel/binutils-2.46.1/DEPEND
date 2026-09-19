@@ -1,0 +1,1 @@
+>=sys-devel/binutils-config-3 virtual/zlib:0/1= dev-libs/elfutils[debuginfod(-)] app-arch/zstd:0/1=

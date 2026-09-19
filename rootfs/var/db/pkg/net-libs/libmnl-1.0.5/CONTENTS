@@ -1,0 +1,14 @@
+dir /usr
+dir /usr/include
+dir /usr/include/libmnl
+obj /usr/include/libmnl/libmnl.h e006dd0b1a1a2f99919dc11e7966dfa6 1710327797
+dir /usr/lib64
+obj /usr/lib64/libmnl.so.0.2.0 55be98362586033baa9ee93f3900071e 1710327798
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/libmnl.pc 0a0238b993fa1be786cecadaae0e8164 1710327797
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/libmnl-1.0.5
+obj /usr/share/doc/libmnl-1.0.5/README.bz2 833a406684b4b799ef8eff9ecea8c600 1710327797
+sym /usr/lib64/libmnl.so.0 -> libmnl.so.0.2.0 1789354050
+sym /usr/lib64/libmnl.so -> libmnl.so.0.2.0 1789354050

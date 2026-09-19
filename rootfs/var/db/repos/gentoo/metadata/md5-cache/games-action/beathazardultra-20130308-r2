@@ -1,0 +1,15 @@
+BDEPEND=app-arch/unzip
+DEFINED_PHASES=install nofetch prepare unpack
+DESCRIPTION=Intense music-driven arcade shooter powered by your music
+EAPI=7
+HOMEPAGE=http://www.coldbeamgames.com/
+INHERIT=desktop unpacker wrapper
+IUSE=bundled-libs
+KEYWORDS=-* ~amd64 ~x86
+LICENSE=all-rights-reserved
+RDEPEND=virtual/opengl amd64? ( !bundled-libs? ( >=media-libs/libpng-compat-1.2.51:1.2[abi_x86_32(-)] >=virtual/jpeg-0-r2[abi_x86_32(-)] ) >=x11-libs/gtk+-2.24.23:2[abi_x86_32(-)] >=virtual/opengl-7.0-r1[abi_x86_32(-)] >=x11-libs/libX11-1.6.2[abi_x86_32(-)] >=x11-libs/libXcursor-1.1.14[abi_x86_32(-)] >=x11-libs/libXinerama-1.1.3[abi_x86_32(-)] >=x11-libs/libXrandr-1.4.2[abi_x86_32(-)] ) x86? ( x11-libs/gtk+:2 x11-libs/libX11 x11-libs/libXcursor x11-libs/libXinerama x11-libs/libXrandr !bundled-libs? ( media-libs/libpng-compat:1.2 virtual/jpeg ) )
+RESTRICT=bindist fetch splitdebug
+SLOT=0
+SRC_URI=beathazard-installer_03-08-13
+_eclasses_=desktop	e447b5f77146d69797e9f03ff177f3f1	eapi9-pipestatus	d2c134036ac31c3085aebc9147f572bd	multiprocessing	45d0620f25c2f063ad6276ecd9ed9399	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5	unpacker	a89c769f7dcf68bd2a6d23da9ede2ad2	wrapper	ebaa3beeb43f7e533872b6c37168c7ad
+_md5_=c65d080bca10fc1739aeae0a6a6d4130

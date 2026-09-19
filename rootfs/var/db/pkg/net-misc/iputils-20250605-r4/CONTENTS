@@ -1,0 +1,40 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/arping e648bf1572ed53f645d9521785fdc6dd 1783272648
+obj /usr/bin/ping 6f871a5f6b52a4905e9971ecfaae1ac0 1783272648
+sym /usr/bin/ping4 -> ping 1789354251
+sym /usr/bin/ping6 -> ping 1789354251
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/iputils-20250605-r4
+obj /usr/share/doc/iputils-20250605-r4/CHANGES.bz2 b5a404b495e3be6290f7253a4b436ea1 1783272646
+obj /usr/share/doc/iputils-20250605-r4/README.md.bz2 86ab80504c98052c930f40179046e28c 1783272646
+dir /usr/share/iputils
+obj /usr/share/iputils/arping.html 66d3eda4f4498ed295355a60a48c9e29 1749132620
+obj /usr/share/iputils/ping.html 95ba5b56e9cabb1959d405e70ebe7f46 1749132620
+dir /usr/share/locale
+dir /usr/share/locale/de
+dir /usr/share/locale/de/LC_MESSAGES
+obj /usr/share/locale/de/LC_MESSAGES/iputils.mo 429febe7177a1c59c9db5646c2466c89 1783272645
+dir /usr/share/locale/fr
+dir /usr/share/locale/fr/LC_MESSAGES
+obj /usr/share/locale/fr/LC_MESSAGES/iputils.mo 579cd8e9f579a3a5098e0c49c59c2e41 1783272645
+dir /usr/share/locale/ja
+dir /usr/share/locale/ja/LC_MESSAGES
+obj /usr/share/locale/ja/LC_MESSAGES/iputils.mo 2d8ee93c638682640a44466ad5de0667 1783272645
+dir /usr/share/locale/pt_BR
+dir /usr/share/locale/pt_BR/LC_MESSAGES
+obj /usr/share/locale/pt_BR/LC_MESSAGES/iputils.mo 6daa9a0a1ecf7e80f5a558d753fcbe07 1783272645
+dir /usr/share/locale/tr
+dir /usr/share/locale/tr/LC_MESSAGES
+obj /usr/share/locale/tr/LC_MESSAGES/iputils.mo 29c455e39d815e395501fb1b378b78a6 1783272645
+dir /usr/share/locale/uk
+dir /usr/share/locale/uk/LC_MESSAGES
+obj /usr/share/locale/uk/LC_MESSAGES/iputils.mo 9da913ad91cd6cac346f0933f106a4e6 1783272645
+dir /usr/share/locale/zh_CN
+dir /usr/share/locale/zh_CN/LC_MESSAGES
+obj /usr/share/locale/zh_CN/LC_MESSAGES/iputils.mo 138e821d7321801abb0feaff97a22972 1783272645
+dir /usr/share/man
+dir /usr/share/man/man8
+obj /usr/share/man/man8/arping.8.bz2 5ac70243806cd42fbfd72ef727220aa9 1749132620
+obj /usr/share/man/man8/ping.8.bz2 6f555a88dcbaaa67c48d7e7f88f12528 1749132620

@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install
+DESCRIPTION=Run a network service at low privilege level and restricted file system access
+EAPI=8
+HOMEPAGE=http://ftp.porcupine.org/pub/security/index.html
+INHERIT=toolchain-funcs
+KEYWORDS=amd64 arm ppc x86
+LICENSE=BSD
+SLOT=0
+SRC_URI=http://ftp.porcupine.org/pub/security/chrootuid1.3.tar.gz
+_eclasses_=toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=a1d2020628d3633d675ecff249a293f5

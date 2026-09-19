@@ -1,0 +1,13 @@
+prefix=/usr
+includedir=${prefix}/include
+
+sysconfdir=/etc
+distconfdir=/usr/lib
+module_directory=/lib/modules
+module_signatures=legacy
+module_compressions=zstd xz zlib
+
+Name: kmod
+Description: Tools to deal with kernel modules
+Version: 34.2
+Cflags: -I${includedir}

@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+# Copyright, the authors of the Linux man-pages project
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+set -Eefuo pipefail;
+shopt -s lastpipe;
+
+printf '%s\n' "${!#}.XXXXXX" \
+| sed 's,.*/,,' \
+| xargs mktemp -t \
+| read -r tmp;
+
+man -Tpdf "$@" >"$tmp";
+xdg-open "$tmp";

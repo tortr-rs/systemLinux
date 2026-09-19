@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>mjo@gentoo.org</email>
+  </maintainer>
+  <maintainer type="project">
+    <email>sci-mathematics@gentoo.org</email>
+  </maintainer>
+
+  <use>
+    <flag name="hipo">
+      Build the new factorization-based interior-point solver requiring
+      <pkg>sci-libs/amd</pkg>, <pkg>sci-libs/metis</pkg>, and
+      <pkg>virtual/cblas</pkg>.
+    </flag>
+  </use>
+
+  <upstream>
+    <remote-id type="github">ERGO-Code/HiGHS</remote-id>
+  </upstream>
+</pkgmetadata>

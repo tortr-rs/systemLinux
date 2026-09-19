@@ -1,0 +1,16 @@
+BDEPEND=nls? ( sys-devel/gettext )
+DEFINED_PHASES=compile install postinst postrm preinst prepare
+DEPEND=dev-games/physfs media-libs/libpng:= media-libs/libsdl2[joystick,opengl,sound,video] media-libs/libvorbis media-libs/sdl2-ttf virtual/jpeg virtual/opengl nls? ( virtual/libintl ) dev-util/desktop-file-utils x11-misc/shared-mime-info
+DESCRIPTION=Clone of Super Monkey Ball using SDL/OpenGL
+EAPI=7
+HOMEPAGE=https://neverball.org
+INHERIT=desktop eapi8-dosym toolchain-funcs xdg
+IUSE=nls
+KEYWORDS=~amd64 ~arm64 ~x86
+LICENSE=GPL-2+ IJG
+RDEPEND=dev-games/physfs media-libs/libpng:= media-libs/libsdl2[joystick,opengl,sound,video] media-libs/libvorbis media-libs/sdl2-ttf virtual/jpeg virtual/opengl nls? ( virtual/libintl ) media-fonts/dejavu media-fonts/wqy-microhei
+RESTRICT=test
+SLOT=0
+SRC_URI=https://neverball.org/neverball-1.6.0.tar.gz
+_eclasses_=desktop	e447b5f77146d69797e9f03ff177f3f1	eapi8-dosym	5ac4857ad078256d939c44f7c64197a9	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5	xdg	3ef49a87c52c8b77c476351195dfe575	xdg-utils	42869b3c8d86a70ef3cf75165a395e09
+_md5_=504d6ec982b9b7806f9f49523fe73fd0

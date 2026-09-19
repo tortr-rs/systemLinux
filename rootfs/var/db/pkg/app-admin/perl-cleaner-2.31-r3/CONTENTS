@@ -1,0 +1,7 @@
+dir /usr
+dir /usr/sbin
+obj /usr/sbin/perl-cleaner a6fe14b6339b34899a6a5cdf48e3afc4 1784481435
+dir /usr/share
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/perl-cleaner.1.bz2 df7aa78ee079834e34364e20f2be4653 1784481435

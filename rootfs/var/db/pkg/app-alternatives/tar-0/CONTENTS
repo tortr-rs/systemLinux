@@ -1,0 +1,7 @@
+dir /usr
+dir /usr/share
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/tar.1 d1c5145aa7f8ae3c6f4db3eff35e4aaf 1710328054
+dir /bin
+sym /bin/tar -> gtar 1789353861

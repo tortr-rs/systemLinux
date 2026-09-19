@@ -1,0 +1,24 @@
+dir /usr
+dir /usr/lib
+dir /usr/lib/python3.14
+dir /usr/lib/python3.14/site-packages
+dir /usr/lib/python3.14/site-packages/jaraco
+dir /usr/lib/python3.14/site-packages/jaraco/text
+obj /usr/lib/python3.14/site-packages/jaraco/text/Lorem ipsum.txt 4ce7501f6608f6ce4011d627979e1ae4 1788715613
+obj /usr/lib/python3.14/site-packages/jaraco/text/__init__.py aa00694f86f1870dd4f0a73b32e8a2e3 1788715613
+dir /usr/lib/python3.14/site-packages/jaraco/text/__pycache__
+obj /usr/lib/python3.14/site-packages/jaraco/text/__pycache__/__init__.cpython-314.opt-1.pyc 551b8d1bbf7902d586b888dcb84d3d17 1788715613
+obj /usr/lib/python3.14/site-packages/jaraco/text/__pycache__/__init__.cpython-314.opt-2.pyc 7c8a10af5710ae2c37af163ddbc23084 1788715613
+obj /usr/lib/python3.14/site-packages/jaraco/text/__pycache__/__init__.cpython-314.pyc 39b2436dd6a89e3a04edcdd08137f7ff 1788715613
+obj /usr/lib/python3.14/site-packages/jaraco/text/__pycache__/layouts.cpython-314.opt-1.pyc 3ee362b8da3919a6d53f8a79678f22f4 1788715613
+obj /usr/lib/python3.14/site-packages/jaraco/text/__pycache__/layouts.cpython-314.opt-2.pyc aa0a257098c8015ce0f82f7ce6ee6395 1788715613
+obj /usr/lib/python3.14/site-packages/jaraco/text/__pycache__/layouts.cpython-314.pyc 3ee362b8da3919a6d53f8a79678f22f4 1788715613
+obj /usr/lib/python3.14/site-packages/jaraco/text/layouts.py 212eeb42750c74e879093a0df0322cbb 1788715613
+obj /usr/lib/python3.14/site-packages/jaraco/text/py.typed d41d8cd98f00b204e9800998ecf8427e 1788715613
+dir /usr/lib/python3.14/site-packages/jaraco_text-4.3.0.dist-info
+obj /usr/lib/python3.14/site-packages/jaraco_text-4.3.0.dist-info/METADATA b91c8938fa1e1919796633a0d613d24f 1788715613
+obj /usr/lib/python3.14/site-packages/jaraco_text-4.3.0.dist-info/WHEEL a5ebf9ab2d4e1b8f00d2a5deeaf4c6e4 1788715613
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/jaraco-text-4.3.0
+obj /usr/share/doc/jaraco-text-4.3.0/README.rst.bz2 c7f0798339725ee720c0bb1a8c53d500 1788715614

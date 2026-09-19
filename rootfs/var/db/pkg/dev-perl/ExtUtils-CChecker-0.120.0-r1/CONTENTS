@@ -1,0 +1,17 @@
+dir /usr
+dir /usr/lib64
+dir /usr/lib64/perl5
+dir /usr/lib64/perl5/vendor_perl
+dir /usr/lib64/perl5/vendor_perl/5.42
+dir /usr/lib64/perl5/vendor_perl/5.42/ExtUtils
+obj /usr/lib64/perl5/vendor_perl/5.42/ExtUtils/CChecker.pm d241c465824312e2004f21456236f4d5 1763921696
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/ExtUtils
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/ExtUtils/CChecker
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/ExtUtils/CChecker/.packlist db6879b1b67599ffb6afa8ce36e065db 1763921696
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/ExtUtils-CChecker-0.120.0-r1
+obj /usr/share/doc/ExtUtils-CChecker-0.120.0-r1/Changes.bz2 5603268a42e14e578b47ada512401534 1763921697
+obj /usr/share/doc/ExtUtils-CChecker-0.120.0-r1/README.bz2 0622ecf0285140743a9f22fc4d151bfc 1763921697

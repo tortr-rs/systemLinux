@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install postinst
+DEPEND=sys-boot/dvhtool abi_mips_o32? ( sys-devel/kgcc64 )
+DESCRIPTION=ARCLoad - Bootloader for SGI IP22/IP32/IP27/IP28/IP30 Systems
+EAPI=8
+HOMEPAGE=https://www.linux-mips.org/wiki/ARCLoad
+INHERIT=toolchain-funcs
+IUSE=abi_mips_o32
+KEYWORDS=-* ~mips
+LICENSE=GPL-2+
+RESTRICT=strip
+SLOT=0
+SRC_URI=https://www.linux-mips.org/pub/linux/mips/people/skylark/arcload-0.5.tar.bz2 mirror://gentoo/arcload-0.50-patches-v1.tar.xz
+_eclasses_=toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=96d0f1a351744c232445d0c9780362f0

@@ -1,0 +1,57 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/scmp_sys_resolver 97cf0dfd1142fe5902e1ea2b28f8c222 1789319690
+dir /usr/include
+obj /usr/include/seccomp-syscalls.h 55135e0bc6f797e79a109f822729e153 1789319689
+obj /usr/include/seccomp.h ef9071453e5e3dd91859f568bf30c6ed 1789319689
+dir /usr/lib64
+obj /usr/lib64/libseccomp.so.2.6.1 0c207ad21738392ae576608579a6c33d 1789319690
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/libseccomp.pc 47bdc06010851542525f0d99c964347d 1789319690
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/libseccomp-2.6.1
+obj /usr/share/doc/libseccomp-2.6.1/CHANGELOG.bz2 bce03cf763f5981c669c9933cfe9b007 1789319690
+obj /usr/share/doc/libseccomp-2.6.1/CREDITS.bz2 6ee219ee636a601bd1b5491d493377f8 1789319690
+obj /usr/share/doc/libseccomp-2.6.1/README.md.bz2 0652d4bfc03ba4363729afaf79aaf507 1789319690
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/scmp_sys_resolver.1.bz2 8f7b877c9a3d60b6e38086eb989b4eba 1789319690
+dir /usr/share/man/man3
+obj /usr/share/man/man3/seccomp_api_get.3.bz2 455c06a3549206849f911e990dd2f76d 1789319690
+obj /usr/share/man/man3/seccomp_api_set.3 745b478bab4236cc1a092d3b1747df18 1789319690
+obj /usr/share/man/man3/seccomp_arch_add.3.bz2 e86e500169eb586c25f5c8dd8c631569 1789319690
+obj /usr/share/man/man3/seccomp_arch_exist.3 b021ebc08e96f11132705ba654259298 1789319690
+obj /usr/share/man/man3/seccomp_arch_native.3 b021ebc08e96f11132705ba654259298 1789319690
+obj /usr/share/man/man3/seccomp_arch_remove.3 b021ebc08e96f11132705ba654259298 1789319690
+obj /usr/share/man/man3/seccomp_arch_resolve_name.3 b021ebc08e96f11132705ba654259298 1789319690
+obj /usr/share/man/man3/seccomp_attr_get.3 b73f883afdf3257ccf4bf574c4a4a850 1789319690
+obj /usr/share/man/man3/seccomp_attr_set.3.bz2 b6e2d040f4ca171505bdf734fa2e6d58 1789319690
+obj /usr/share/man/man3/seccomp_export_bpf.3.bz2 accb3c09c0a4dcda85da684edffc1877 1789319690
+obj /usr/share/man/man3/seccomp_export_bpf_mem.3 68ddf46b9286fb120011f593eaa40705 1789319690
+obj /usr/share/man/man3/seccomp_export_pfc.3 68ddf46b9286fb120011f593eaa40705 1789319690
+obj /usr/share/man/man3/seccomp_init.3.bz2 6fcc3591cb89d2c9c377bc0416989d94 1789319690
+obj /usr/share/man/man3/seccomp_load.3.bz2 33d92f615d667ae7665cf93386f91f65 1789319690
+obj /usr/share/man/man3/seccomp_merge.3.bz2 50eed3344b27bd50643cafabe8c2f400 1789319690
+obj /usr/share/man/man3/seccomp_notify_alloc.3.bz2 0f9a06232d88158f00f84047a6c41f85 1789319690
+obj /usr/share/man/man3/seccomp_notify_fd.3 cf3f0253a6b06a15a29bc0cd9fc69867 1789319690
+obj /usr/share/man/man3/seccomp_notify_free.3 cf3f0253a6b06a15a29bc0cd9fc69867 1789319690
+obj /usr/share/man/man3/seccomp_notify_id_valid.3 cf3f0253a6b06a15a29bc0cd9fc69867 1789319690
+obj /usr/share/man/man3/seccomp_notify_receive.3 cf3f0253a6b06a15a29bc0cd9fc69867 1789319690
+obj /usr/share/man/man3/seccomp_notify_respond.3 cf3f0253a6b06a15a29bc0cd9fc69867 1789319690
+obj /usr/share/man/man3/seccomp_precompute.3.bz2 6e84bdfffad9be21980fd5053631f5bf 1789319690
+obj /usr/share/man/man3/seccomp_release.3.bz2 194ce4dea74639b3ebfa7bd66a125e1c 1789319690
+obj /usr/share/man/man3/seccomp_reset.3 f4c6e817297cb11eaf29a055e6b037b9 1789319690
+obj /usr/share/man/man3/seccomp_rule_add.3.bz2 248137e76b3b050a1bd038e9175fa275 1789319690
+obj /usr/share/man/man3/seccomp_rule_add_array.3 0b0c23a6905c75aaa8c0ee7bf8ee614d 1789319690
+obj /usr/share/man/man3/seccomp_rule_add_exact.3 0b0c23a6905c75aaa8c0ee7bf8ee614d 1789319690
+obj /usr/share/man/man3/seccomp_rule_add_exact_array.3 0b0c23a6905c75aaa8c0ee7bf8ee614d 1789319690
+obj /usr/share/man/man3/seccomp_syscall_priority.3.bz2 4e389b6a7ba9e377d56cb709a90ebd49 1789319690
+obj /usr/share/man/man3/seccomp_syscall_resolve_name.3.bz2 913b325ad37b794548d3ebfa61fea41b 1789319690
+obj /usr/share/man/man3/seccomp_syscall_resolve_name_arch.3 8b3cf8f70a176d09f390456852384475 1789319690
+obj /usr/share/man/man3/seccomp_syscall_resolve_name_rewrite.3 8b3cf8f70a176d09f390456852384475 1789319690
+obj /usr/share/man/man3/seccomp_syscall_resolve_num_arch.3 8b3cf8f70a176d09f390456852384475 1789319690
+obj /usr/share/man/man3/seccomp_transaction_start.3.bz2 e23f767938655ecda612b43a6cdacb4a 1789319690
+obj /usr/share/man/man3/seccomp_version.3.bz2 ff180b2a2bd1d1a0f8411f2e0523e75b 1789319690
+sym /usr/lib64/libseccomp.so.2 -> libseccomp.so.2.6.1 1789354112
+sym /usr/lib64/libseccomp.so -> libseccomp.so.2.6.1 1789354112

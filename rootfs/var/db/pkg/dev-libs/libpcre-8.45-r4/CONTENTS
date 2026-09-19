@@ -1,0 +1,203 @@
+dir /usr
+dir /usr/src
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/libpcre-8.45-r4
+obj /usr/share/doc/libpcre-8.45-r4/NEWS.bz2 ffbff12516a97ddb5b98fbeb9c566b65 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/pcre-config.txt.bz2 55420f70dc5d97214cb91a5df85244de 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/LICENCE.bz2 c0fe572e6f834e5ffc60f34630e66c9b 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/pcre.txt.bz2 b717005675dcd5bbdbbe0a7f80fb590d 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/pcretest.txt.bz2 dd01176734320ddf3dd73b3a27ed3cd8 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/README.bz2 6540564f5c4aa823994bc0c6def002f5 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/pcregrep.txt.bz2 4dbb15aad3336616c30309dcd947d2c8 1774085353
+dir /usr/share/doc/libpcre-8.45-r4/html
+obj /usr/share/doc/libpcre-8.45-r4/html/pcre_dfa_exec.html d6f9e67a0280afd569ac56be79162b4b 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcrebuild.html 673f73caec3c00b31f87af2448f0658a 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcre_exec.html 843b1a535e4b74096e828d3146ea7b0b 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcreprecompile.html 8b3245d9497825513d347d0f97881c64 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/README.txt 827cbbf25310b7bd96bae3e2eea80a4d 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcre16.html 4a5725ac14d122a1103e7545cb542f87 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcre_version.html 9dd6b4507ac44e3bf194bbc4d16a607a 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcre_jit_stack_alloc.html 43df4765112b77ef5e2abe17c39641e9 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcreunicode.html d35a12f66b12f7ee7a476268148a75cf 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcre_maketables.html 4f2fc99be29dc78ca2dc23d3bcef9d00 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcre.html 661af8d5e1467f60c693faa14b90a95f 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcretest.html 4a06acc3a00b976053bd0cb14366aa26 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcrelimits.html d80e89495d6130fda65e973514b7dce7 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcresyntax.html e3870816530b99fd5df6893eb6174cca 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcre_get_substring.html b3dbd62c6b5ab33e13a008e1135faf8a 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcrecpp.html 5d819af52cc11da5fb895d3b208828bf 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcrejit.html b5bf680456fd960a49b7b3c7b1a9412c 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcre_free_study.html 92ca171dd9d4d4e23a109d5cb168a850 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/index.html 513e7914d2adec55f1f068cb413944aa 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcrepartial.html c5cee18d392975036fa1e37422d20cf9 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/NON-AUTOTOOLS-BUILD.txt 332ace9df30f0cb4757319ebd5171292 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcre_get_stringtable_entries.html 63319d085b59f953b8439ed8fe8af674 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcreapi.html e98749ab252abf3a59686614d3ecf3c8 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcre32.html 314190a4396a7a84eb2f5d20f010e67e 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcre_free_substring.html 053f2f0e8f499731fac9c55b87e0badd 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcre_fullinfo.html e3428ea600cb46c2d6a390e044e8294b 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcre_study.html 6f1bfa121cb74bea7c262d2f4a9dd94b 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcre_jit_exec.html 8bce934481280fb18bf77eda64b7c407 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcre_get_stringnumber.html c6dd2531a56e7beaabb056fc10e02f8c 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcredemo.html 9a103286ec805b1729eddd344369af0e 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcre_get_named_substring.html 9196f7d6e8530055f84117ad5e241fb2 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcre_jit_stack_free.html e01892b08961f3ba064a319e0447c036 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcresample.html 871f562253da91993e9ac6ee956f13fc 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcre_refcount.html 7f737aeea39d8f9d7f5ae2a2e2d6e5d8 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcre_utf16_to_host_byte_order.html f2f068995c8ee023d9c8f9c297dd0e0e 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcrestack.html 0f2b1715e6e17e10baf45c19b6c106df 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcre_compile2.html f4e314072a5485e765a9df9d80c9dfe2 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcre_copy_named_substring.html f11ef85dd5b356935c948328009f0fbd 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcreposix.html 7cb65239e37f6708e37915602704637f 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcre_pattern_to_host_byte_order.html 2db9f29d6a65528d2bfe03332a3b4c68 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcre_utf32_to_host_byte_order.html f632b9cec6398930291ce5169b208327 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcre_free_substring_list.html 6f0a4280e0eec92722b244c2df0a9eac 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcre_compile.html 923bdf92340fa292dd8644d0dcff1e60 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcre_get_substring_list.html be66c2fa49ec2ad3ad148854a0205780 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcreperform.html eacc004dd7ff6b1224ae92d3237a5ddd 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcre-config.html ff1c2fa7fba3640931d6309d8778d1b0 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcre_assign_jit_stack.html 23e77bbe00a68c87ac231e6659bea32d 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcrecallout.html bcfb171ccd6d3615ed6ff13ce2ed4c65 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcrematching.html 2b8661ce758d582645b24acb32ce830f 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcre_config.html a9d2415a8900c59a9da63de254340665 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcregrep.html 9693321132f07296943ee16934460b4a 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcre_copy_substring.html 219aaaccb0199163cf2e1592bcf4bcb7 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcrepattern.html 91ce36bde609bc4f01d04b6bdc64f004 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/html/pcrecompat.html b3db60871ffd27ca397e2aa5db403158 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/COPYING 266ebc3ff74ee9ce6fad65577667c0f4 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/ChangeLog.bz2 4582984b1cb9a6a6a9ccfe22d9d8b45d 1774085353
+obj /usr/share/doc/libpcre-8.45-r4/AUTHORS.bz2 19a7d3cd487a82e7f3d5d7e4ec562710 1774085353
+dir /usr/share/man
+dir /usr/share/man/man3
+obj /usr/share/man/man3/pcre.3.bz2 2fdebf95b72a640ff5a609d06fceb959 1774085353
+obj /usr/share/man/man3/pcre_version.3.bz2 a23014b75caff99ab07ed0638aea59cf 1774085353
+obj /usr/share/man/man3/pcrelimits.3.bz2 38e9c711ca63ef5959f28af1178ee4a8 1774085353
+obj /usr/share/man/man3/pcresample.3.bz2 aa1ca3f48de65e041b935f78a3c28730 1774085353
+obj /usr/share/man/man3/pcre_study.3.bz2 e8925026821d352c05702766e1ea48d3 1774085353
+obj /usr/share/man/man3/pcrecpp.3.bz2 89733301fb2544d90d4458ce0d3c2ee8 1774085353
+obj /usr/share/man/man3/pcre_free_substring.3.bz2 9b7767133aa679fd1055a9eace0c55a6 1774085353
+obj /usr/share/man/man3/pcrecompat.3.bz2 5aafe154e51bd18bb35e20187d5807f1 1774085353
+obj /usr/share/man/man3/pcrejit.3.bz2 8e383abe240aeded90ea915fa0d5a26b 1774085353
+obj /usr/share/man/man3/pcre_utf32_to_host_byte_order.3.bz2 e572b5b5011e3983d827e758b419ac8e 1774085353
+obj /usr/share/man/man3/pcrebuild.3.bz2 8fdba18649efb351b87bfd6f9089820f 1774085353
+obj /usr/share/man/man3/pcresyntax.3.bz2 b2c5e5e48b7d05ccbcd1e1092c5db448 1774085353
+sym /usr/share/man/man3/pcre32_utf32_to_host_byte_order.3.bz2 -> pcre_utf32_to_host_byte_order.3.bz2 1789836456
+obj /usr/share/man/man3/pcrematching.3.bz2 3e13be147912cdcbb0971fbe4af17ef2 1774085353
+obj /usr/share/man/man3/pcre_fullinfo.3.bz2 70be409868a08127c502795b74ba1f7e 1774085353
+obj /usr/share/man/man3/pcreperform.3.bz2 9259eebe1682ba2a9a7c4b88a7e49b56 1774085353
+obj /usr/share/man/man3/pcrepartial.3.bz2 55c8f1c70e46b4bad7d9618dc5ccc6f2 1774085353
+sym /usr/share/man/man3/pcre16_free_substring.3.bz2 -> pcre_free_substring.3.bz2 1789836456
+obj /usr/share/man/man3/pcre_compile.3.bz2 5b2ac76ac3f5e456c7b6b2e7aefff552 1774085353
+sym /usr/share/man/man3/pcre32_compile.3.bz2 -> pcre_compile.3.bz2 1789836456
+obj /usr/share/man/man3/pcre_utf16_to_host_byte_order.3.bz2 214b3351411de6b294c9d847e32973ba 1774085353
+sym /usr/share/man/man3/pcre32_fullinfo.3.bz2 -> pcre_fullinfo.3.bz2 1789836456
+obj /usr/share/man/man3/pcre_pattern_to_host_byte_order.3.bz2 35fc385c29e8d7b820907822232e466a 1774085353
+obj /usr/share/man/man3/pcre_copy_substring.3.bz2 2efdcb44b22bca328e76bf4c8b6fbd28 1774085353
+obj /usr/share/man/man3/pcreposix.3.bz2 272530994071cd19461a68ca68b0eef9 1774085353
+obj /usr/share/man/man3/pcreapi.3.bz2 49ce72398e1538dcece2e878a4169d1c 1774085353
+obj /usr/share/man/man3/pcre_compile2.3.bz2 10f27d51ba4aef629268c3a19f75cbd8 1774085353
+sym /usr/share/man/man3/pcre32_free_substring.3.bz2 -> pcre_free_substring.3.bz2 1789836456
+obj /usr/share/man/man3/pcreprecompile.3.bz2 ac4ebb4ac31b36af82bba3daa21e55de 1774085353
+obj /usr/share/man/man3/pcre_dfa_exec.3.bz2 4bf0f54804b56df0a4802deec7703cac 1774085353
+obj /usr/share/man/man3/pcre_free_study.3.bz2 52b34b55940352a191383106ccc68509 1774085353
+obj /usr/share/man/man3/pcre_jit_stack_free.3.bz2 214a8a5b68f7e6af57a4d12ac252e7e0 1774085353
+obj /usr/share/man/man3/pcre_get_named_substring.3.bz2 4d31bf24bec9dcdaf2b57832339f7dad 1774085353
+obj /usr/share/man/man3/pcre32.3.bz2 09f4d24cfac57dd6411a6222c07a920d 1774085353
+sym /usr/share/man/man3/pcre16_version.3.bz2 -> pcre_version.3.bz2 1789836456
+obj /usr/share/man/man3/pcredemo.3.bz2 efee309f983f7bcf7d26c7432f1eb71e 1774085353
+sym /usr/share/man/man3/pcre32_jit_stack_free.3.bz2 -> pcre_jit_stack_free.3.bz2 1789836456
+obj /usr/share/man/man3/pcrepattern.3.bz2 52291921742ef1890213bd6003f6110b 1774085353
+obj /usr/share/man/man3/pcre_refcount.3.bz2 3863ae3eb8ac49f2dbcf0da75bf4eae4 1774085353
+sym /usr/share/man/man3/pcre16_study.3.bz2 -> pcre_study.3.bz2 1789836456
+obj /usr/share/man/man3/pcre_free_substring_list.3.bz2 6736daeb63bab07e32eeb890ed124c51 1774085353
+obj /usr/share/man/man3/pcre16.3.bz2 11a17400cda613972fc4b9e0e8f126c5 1774085353
+obj /usr/share/man/man3/pcre_get_stringtable_entries.3.bz2 61a662afd983ee6196f6d96025dddafb 1774085353
+obj /usr/share/man/man3/pcreunicode.3.bz2 073ce48c2e30053dabc5ab3984a57c3d 1774085353
+sym /usr/share/man/man3/pcre16_pattern_to_host_byte_order.3.bz2 -> pcre_pattern_to_host_byte_order.3.bz2 1789836456
+sym /usr/share/man/man3/pcre32_get_stringtable_entries.3.bz2 -> pcre_get_stringtable_entries.3.bz2 1789836456
+obj /usr/share/man/man3/pcre_jit_stack_alloc.3.bz2 2ee00b47f16e386e142975867d0c4d71 1774085353
+obj /usr/share/man/man3/pcre_get_stringnumber.3.bz2 5605389ea0f6f56fc9df883240c0cdd5 1774085353
+sym /usr/share/man/man3/pcre16_get_named_substring.3.bz2 -> pcre_get_named_substring.3.bz2 1789836456
+obj /usr/share/man/man3/pcre_jit_exec.3.bz2 98dc7684013c27b05e6e5d62885a9f1b 1774085353
+obj /usr/share/man/man3/pcre_get_substring.3.bz2 5bc78755cabbc8c0b08ac56d2fed2a6e 1774085353
+obj /usr/share/man/man3/pcre_exec.3.bz2 f1e08535ad1aec9498f391071a3135f3 1774085353
+sym /usr/share/man/man3/pcre32_free_substring_list.3.bz2 -> pcre_free_substring_list.3.bz2 1789836456
+sym /usr/share/man/man3/pcre32_version.3.bz2 -> pcre_version.3.bz2 1789836456
+obj /usr/share/man/man3/pcrestack.3.bz2 967f40067557772e95e7a99a1a8672cf 1774085353
+obj /usr/share/man/man3/pcrecallout.3.bz2 a0deb30d937a8eb0adea05311926525c 1774085353
+obj /usr/share/man/man3/pcre_get_substring_list.3.bz2 b56b76d628140a411d8ba7690a078ee5 1774085353
+obj /usr/share/man/man3/pcre_config.3.bz2 4f2bac33c060b42e15cc89ee0f9bdfb2 1774085353
+sym /usr/share/man/man3/pcre16_get_stringtable_entries.3.bz2 -> pcre_get_stringtable_entries.3.bz2 1789836456
+sym /usr/share/man/man3/pcre32_study.3.bz2 -> pcre_study.3.bz2 1789836456
+sym /usr/share/man/man3/pcre16_get_substring_list.3.bz2 -> pcre_get_substring_list.3.bz2 1789836456
+obj /usr/share/man/man3/pcre_maketables.3.bz2 8539833f9a8294eecd817569cfb701f6 1774085353
+obj /usr/share/man/man3/pcre_copy_named_substring.3.bz2 fc6fec5acce3c9577efe775c1b6bbac6 1774085353
+obj /usr/share/man/man3/pcre_assign_jit_stack.3.bz2 40997b942f52326aab2e5486b990b38b 1774085353
+dir /usr/share/man/man1
+obj /usr/share/man/man1/pcregrep.1.bz2 4bfd538b729babb405a4f1e76d72b20e 1774085353
+obj /usr/share/man/man1/pcre-config.1.bz2 56eb741bfdd226717dd8baef28655acd 1774085353
+obj /usr/share/man/man1/pcretest.1.bz2 e143440a4f531badc19e2f2f4d6185ff 1774085353
+dir /usr/lib64
+obj /usr/lib64/libpcreposix.so.0.0.7 56ba3ea0a5a548add5344d396c2c382d 1774085356
+obj /usr/lib64/libpcre.so.1.2.13 ea2f1e28e84710e9e6515afd77a82688 1774085356
+obj /usr/lib64/libpcrecpp.so.0.0.2 158f856cd22e1cf3f1757049bfc95057 1774085356
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/libpcreposix.pc 72c089231f09c8a5ad5d56c7f69e621a 1774085353
+obj /usr/lib64/pkgconfig/libpcrecpp.pc b809867343112d360980a5c780601155 1774085353
+obj /usr/lib64/pkgconfig/libpcre.pc c1d4bf5fff329ce660833a60f4c74681 1774085353
+sym /usr/lib64/libpcrecpp.so.0 -> libpcrecpp.so.0.0.2 1789836456
+sym /usr/lib64/libpcrecpp.so -> libpcrecpp.so.0.0.2 1789836456
+sym /usr/lib64/libpcreposix.so -> libpcreposix.so.0.0.7 1789836456
+sym /usr/lib64/libpcre.so -> libpcre.so.1.2.13 1789836456
+sym /usr/lib64/libpcre.so.1 -> libpcre.so.1.2.13 1789836456
+sym /usr/lib64/libpcreposix.so.0 -> libpcreposix.so.0.0.7 1789836456
+dir /usr/bin
+obj /usr/bin/pcregrep 8dbfe4eb6127634b4212ba166d1cca80 1774085356
+obj /usr/bin/x86_64-pc-linux-gnu-pcre-config 9623a34bd470e5b6fd981ba878aac0d6 1774085353
+sym /usr/bin/pcre-config -> x86_64-pc-linux-gnu-pcre-config 1789836456
+obj /usr/bin/pcretest ec27b9bd0ff984e0cb96db00a02232fd 1774085356
+dir /usr/include
+obj /usr/include/pcreposix.h 9c67f0d3ea8d1494e04125afe9c3eb31 1774085353
+obj /usr/include/pcre.h 0837628f873ca907378e474446331ebc 1774085353
+obj /usr/include/pcrecpparg.h f907364a60cda13f1916726a65c9bd6c 1774085353
+obj /usr/include/pcre_scanner.h 524fc49143dd83fa94d12e0b180d6be6 1774085353
+obj /usr/include/pcrecpp.h 7c2dded866f6678ea8d139a8328ad585 1774085353
+obj /usr/include/pcre_stringpiece.h d78187510a0ba7cfed979e2acb0e5bd0 1774085353
+dir /usr/lib
+sym /usr/share/man/man3/pcre32_copy_named_substring.3.bz2 -> pcre_copy_named_substring.3.bz2 1789836456
+sym /usr/share/man/man3/pcre16_config.3.bz2 -> pcre_config.3.bz2 1789836456
+sym /usr/share/man/man3/pcre16_get_stringnumber.3.bz2 -> pcre_get_stringnumber.3.bz2 1789836456
+sym /usr/share/man/man3/pcre16_maketables.3.bz2 -> pcre_maketables.3.bz2 1789836456
+sym /usr/share/man/man3/pcre32_jit_exec.3.bz2 -> pcre_jit_exec.3.bz2 1789836456
+sym /usr/share/man/man3/pcre32_exec.3.bz2 -> pcre_exec.3.bz2 1789836456
+sym /usr/share/man/man3/pcre16_dfa_exec.3.bz2 -> pcre_dfa_exec.3.bz2 1789836456
+sym /usr/share/man/man3/pcre16_copy_named_substring.3.bz2 -> pcre_copy_named_substring.3.bz2 1789836456
+sym /usr/share/man/man3/pcre32_maketables.3.bz2 -> pcre_maketables.3.bz2 1789836456
+sym /usr/share/man/man3/pcre32_get_stringnumber.3.bz2 -> pcre_get_stringnumber.3.bz2 1789836456
+sym /usr/share/man/man3/pcre32_compile2.3.bz2 -> pcre_compile2.3.bz2 1789836456
+sym /usr/share/man/man3/pcre16_free_substring_list.3.bz2 -> pcre_free_substring_list.3.bz2 1789836456
+sym /usr/share/man/man3/pcre16_jit_exec.3.bz2 -> pcre_jit_exec.3.bz2 1789836456
+sym /usr/share/man/man3/pcre16_fullinfo.3.bz2 -> pcre_fullinfo.3.bz2 1789836456
+sym /usr/share/man/man3/pcre32_refcount.3.bz2 -> pcre_refcount.3.bz2 1789836456
+sym /usr/share/man/man3/pcre16_copy_substring.3.bz2 -> pcre_copy_substring.3.bz2 1789836456
+sym /usr/share/man/man3/pcre16_assign_jit_stack.3.bz2 -> pcre_assign_jit_stack.3.bz2 1789836456
+sym /usr/share/man/man3/pcre16_compile2.3.bz2 -> pcre_compile2.3.bz2 1789836456
+sym /usr/share/man/man3/pcre16_refcount.3.bz2 -> pcre_refcount.3.bz2 1789836456
+sym /usr/share/man/man3/pcre32_pattern_to_host_byte_order.3.bz2 -> pcre_pattern_to_host_byte_order.3.bz2 1789836456
+sym /usr/share/man/man3/pcre32_get_substring_list.3.bz2 -> pcre_get_substring_list.3.bz2 1789836456
+sym /usr/share/man/man3/pcre16_free_study.3.bz2 -> pcre_free_study.3.bz2 1789836456
+sym /usr/share/man/man3/pcre32_get_substring.3.bz2 -> pcre_get_substring.3.bz2 1789836456
+sym /usr/share/man/man3/pcre32_get_named_substring.3.bz2 -> pcre_get_named_substring.3.bz2 1789836456
+sym /usr/share/man/man3/pcre32_config.3.bz2 -> pcre_config.3.bz2 1789836456
+sym /usr/share/man/man3/pcre32_assign_jit_stack.3.bz2 -> pcre_assign_jit_stack.3.bz2 1789836456
+sym /usr/share/man/man3/pcre16_utf16_to_host_byte_order.3.bz2 -> pcre_utf16_to_host_byte_order.3.bz2 1789836456
+sym /usr/share/man/man3/pcre16_compile.3.bz2 -> pcre_compile.3.bz2 1789836456
+sym /usr/share/man/man3/pcre16_get_substring.3.bz2 -> pcre_get_substring.3.bz2 1789836456
+sym /usr/share/man/man3/pcre32_copy_substring.3.bz2 -> pcre_copy_substring.3.bz2 1789836456
+sym /usr/share/man/man3/pcre16_jit_stack_alloc.3.bz2 -> pcre_jit_stack_alloc.3.bz2 1789836456
+sym /usr/share/man/man3/pcre16_exec.3.bz2 -> pcre_exec.3.bz2 1789836456
+sym /usr/share/man/man3/pcre32_jit_stack_alloc.3.bz2 -> pcre_jit_stack_alloc.3.bz2 1789836456
+sym /usr/share/man/man3/pcre32_free_study.3.bz2 -> pcre_free_study.3.bz2 1789836456
+sym /usr/share/man/man3/pcre32_dfa_exec.3.bz2 -> pcre_dfa_exec.3.bz2 1789836456
+sym /usr/share/man/man3/pcre16_jit_stack_free.3.bz2 -> pcre_jit_stack_free.3.bz2 1789836456

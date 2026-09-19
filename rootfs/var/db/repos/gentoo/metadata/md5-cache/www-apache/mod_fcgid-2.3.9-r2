@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst setup
+DEPEND==www-servers/apache-2*
+DESCRIPTION=Binary-compatible alternative to mod_fastcgi with better process management
+EAPI=7
+HOMEPAGE=https://httpd.apache.org/mod_fcgid/
+INHERIT=apache-module depend.apache
+KEYWORDS=amd64 ~hppa ppc ~ppc64 x86
+LICENSE=GPL-2
+RDEPEND==www-servers/apache-2*
+SLOT=0
+SRC_URI=mirror://apache/httpd/mod_fcgid/mod_fcgid-2.3.9.tar.bz2
+_eclasses_=apache-module	2778fecd257078e9c921796782f6ede1	depend.apache	3b9c533be911d4550c8972e4dfb6434a
+_md5_=5b3ffd00e0b97c8fdaed99c05ce55a9e

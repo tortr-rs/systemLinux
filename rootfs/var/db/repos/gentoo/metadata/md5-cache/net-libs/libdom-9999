@@ -1,0 +1,16 @@
+BDEPEND=dev-build/netsurf-buildsystem virtual/pkgconfig >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install test unpack
+DEPEND=dev-libs/libparserutils dev-libs/libwapcaplet net-libs/libhubbub xml? ( expat? ( dev-libs/expat ) !expat? ( dev-libs/libxml2:= ) ) test? ( dev-perl/XML-XPath dev-perl/libxml-perl dev-perl/Switch )
+DESCRIPTION=implementation of the W3C DOM, written in C
+EAPI=8
+HOMEPAGE=https://www.netsurf-browser.org/projects/libdom/
+INHERIT=git-r3 netsurf
+IUSE=expat test xml
+LICENSE=MIT
+PROPERTIES=live
+RDEPEND=dev-libs/libparserutils dev-libs/libwapcaplet net-libs/libhubbub xml? ( expat? ( dev-libs/expat ) !expat? ( dev-libs/libxml2:= ) )
+REQUIRED_USE=test? ( xml )
+RESTRICT=!test? ( test )
+SLOT=0/9999
+_eclasses_=git-r3	e6c2f983e006e805160436c75a0c1562	netsurf	3a16932a52467058f19b48ced2e15c4a	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=bdee0f2cedbf69460df503075f1520c7

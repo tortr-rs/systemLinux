@@ -1,0 +1,33 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/gnupg-key-manage 55183535b606c7856ce6c8cdc7d0f5d1 1786297205
+obj /usr/bin/gpgme-config 4ea245ae30dea26c7af06c8837cf57e5 1786297203
+obj /usr/bin/gpgme-json a8d33e4bbae2e579e8131d9900d55fec 1786297205
+obj /usr/bin/gpgme-tool 2649872a1daf5a74d7666f391404d18d 1786297205
+dir /usr/include
+obj /usr/include/gpgme.h 731893023e435551d3cd369161b69773 1786297203
+dir /usr/lib64
+obj /usr/lib64/libgpgme.so.45.1.2 86db3bfc0c01f5ea5f31a7054d95c78c 1786297205
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/gpgme-glib.pc 6a853fa821b49d950ac033c210db914c 1786297203
+obj /usr/lib64/pkgconfig/gpgme.pc 91be5ba9aef299205e60a1a605e15cda 1786297203
+dir /usr/share
+dir /usr/share/aclocal
+obj /usr/share/aclocal/gpgme.m4 4e46cf302b7c403d7cbd1a61bd325da0 1786297203
+dir /usr/share/doc
+dir /usr/share/doc/gpgme-2.1.2
+obj /usr/share/doc/gpgme-2.1.2/AUTHORS.bz2 eeb8143e495d6c149a2c63fa3c88c4de 1786297204
+obj /usr/share/doc/gpgme-2.1.2/ChangeLog.bz2 f72f9e51ae59d8b4519ce4867e16fbae 1786297204
+obj /usr/share/doc/gpgme-2.1.2/NEWS.bz2 5b9f74027cea473ba53d412044512a73 1786297204
+obj /usr/share/doc/gpgme-2.1.2/README.bz2 ed2e1a04d0b99ae2345b6ef088eb0b82 1786297204
+obj /usr/share/doc/gpgme-2.1.2/THANKS.bz2 d2b3a0c157ae174755380e5d8c992391 1786297204
+obj /usr/share/doc/gpgme-2.1.2/TODO.bz2 c6879da704cb3b18925984207fe540c9 1786297204
+dir /usr/share/info
+obj /usr/share/info/gpgme.info-1.bz2 1d1c337a8782b9490c6d9e046b48522f 1786297204
+obj /usr/share/info/gpgme.info-2.bz2 7009891d37588dcd67e33b2d977a6755 1786297204
+obj /usr/share/info/gpgme.info.bz2 397887ce4db65be662feb2b8b56a5ed3 1786297204
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/gpgme-json.1.bz2 9516b6bc6ce9c088b0db8272e5050107 1786297204
+sym /usr/lib64/libgpgme.so.45 -> libgpgme.so.45.1.2 1789354046
+sym /usr/lib64/libgpgme.so -> libgpgme.so.45.1.2 1789354046

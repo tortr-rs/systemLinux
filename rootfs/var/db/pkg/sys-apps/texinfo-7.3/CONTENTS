@@ -1,0 +1,678 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/info c678d0b3f80d64e7d9023a541206e856 1776619592
+obj /usr/bin/install-info cf0510e30b90f65a6a10beeda512c771 1776619592
+obj /usr/bin/pdftexi2dvi ee302e37ad4bfb744b5ecb5bda42344a 1776619590
+obj /usr/bin/pod2texi 0318831c8c294cc7073d986140d9ee75 1776619590
+obj /usr/bin/texi2any 14f543672f4bda141b074600404b8992 1776619590
+obj /usr/bin/texi2dvi f61a49b53a87138cbf50398cb4d910dc 1776619590
+obj /usr/bin/texi2pdf ee302e37ad4bfb744b5ecb5bda42344a 1776619590
+obj /usr/bin/texindex 942d30859a425acf844698e93b1aea70 1776619590
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/texinfo-7.3
+obj /usr/share/doc/texinfo-7.3/AUTHORS.bz2 c76d8079bd6eabccb3fd1c04b5fbae24 1776619591
+obj /usr/share/doc/texinfo-7.3/ChangeLog.bz2 42808b0971595385f41d6175a5107212 1776619590
+obj /usr/share/doc/texinfo-7.3/NEWS.bz2 5a7b5415fc227342890f4f9b7bc752fc 1776619591
+obj /usr/share/doc/texinfo-7.3/README-hacking.bz2 0f8b8d5d3ace125cb1bc076bd5d46094 1776619590
+obj /usr/share/doc/texinfo-7.3/README.bz2 3a217dfb97548d91b42e0a9ee5fe9a52 1776619590
+obj /usr/share/doc/texinfo-7.3/TODO.bz2 3c19226895d46adcf618f4a3b9067dfc 1776619591
+dir /usr/share/info
+obj /usr/share/info/info-stnd.info.bz2 69cca203d566e23b44b72e31ac8c3522 1776619590
+obj /usr/share/info/texi2any_api.info.bz2 6975183b6ea886ed58c3fb93cb198f82 1776619590
+obj /usr/share/info/texi2any_internals.info-1.bz2 0c62b9fd4a336c608d275812b8051490 1776619590
+obj /usr/share/info/texi2any_internals.info-2.bz2 82eb2169e7ec604575420877f90c7f84 1776619590
+obj /usr/share/info/texi2any_internals.info.bz2 ca258a2535a336125463b0282f83ad1b 1776619590
+obj /usr/share/info/texinfo.info-1.bz2 1f06872c40826ba509842f7ebd964354 1776619590
+obj /usr/share/info/texinfo.info-2.bz2 3404f9d6894fee6cd049d78d004da60a 1776619590
+obj /usr/share/info/texinfo.info-3.bz2 941f85b4a6f16c9f5524c417e1a1aa4f 1776619590
+obj /usr/share/info/texinfo.info-4.bz2 d9169705b69eb4a498042f7ada2d927e 1776619590
+obj /usr/share/info/texinfo.info.bz2 d320696b20b8b8ace792065920610763 1776619590
+dir /usr/share/locale
+dir /usr/share/locale/ca
+dir /usr/share/locale/ca/LC_MESSAGES
+obj /usr/share/locale/ca/LC_MESSAGES/texinfo.mo bc1a8c2ba574e09475554f74380c9018 1776619590
+obj /usr/share/locale/ca/LC_MESSAGES/texinfo_document.mo 05086a1ff6ee2727176cd8e493106633 1776619590
+dir /usr/share/locale/cs
+dir /usr/share/locale/cs/LC_MESSAGES
+obj /usr/share/locale/cs/LC_MESSAGES/texinfo.mo c46e4a99da7bd6cab00b7476e1912ac5 1776619590
+obj /usr/share/locale/cs/LC_MESSAGES/texinfo_document.mo 8dd3c925d18094ce4ad8317a40062388 1776619590
+dir /usr/share/locale/da
+dir /usr/share/locale/da/LC_MESSAGES
+obj /usr/share/locale/da/LC_MESSAGES/texinfo.mo 140a2f36a669456ad18114d135be506e 1776619590
+dir /usr/share/locale/de
+dir /usr/share/locale/de/LC_MESSAGES
+obj /usr/share/locale/de/LC_MESSAGES/texinfo.mo cb4b483d2a20d54c7fffd046a0cadd5a 1776619590
+obj /usr/share/locale/de/LC_MESSAGES/texinfo_document.mo 841246e42bd311b09886b91b78f5d390 1776619590
+dir /usr/share/locale/el
+dir /usr/share/locale/el/LC_MESSAGES
+obj /usr/share/locale/el/LC_MESSAGES/texinfo.mo 90ee5feea7929d46fa9fe42e4840ecfb 1776619590
+dir /usr/share/locale/eo
+dir /usr/share/locale/eo/LC_MESSAGES
+obj /usr/share/locale/eo/LC_MESSAGES/texinfo.mo 35b4e52c684164aed635a55c1dc79725 1776619590
+obj /usr/share/locale/eo/LC_MESSAGES/texinfo_document.mo 188226ad7c5684e0a16efe45d5ce04b5 1776619590
+dir /usr/share/locale/es
+dir /usr/share/locale/es/LC_MESSAGES
+obj /usr/share/locale/es/LC_MESSAGES/texinfo.mo cc58d800d682e288b75926e6a8d4c99e 1776619590
+obj /usr/share/locale/es/LC_MESSAGES/texinfo_document.mo b5cda0880b19893035e6140974b4be94 1776619590
+dir /usr/share/locale/fi
+dir /usr/share/locale/fi/LC_MESSAGES
+obj /usr/share/locale/fi/LC_MESSAGES/texinfo.mo 5627b348aeec24e2b8df8d607d02fc68 1776619590
+obj /usr/share/locale/fi/LC_MESSAGES/texinfo_document.mo 15b14da3b660fefbbf2f4dc4ee1b6ec7 1776619590
+dir /usr/share/locale/fr
+dir /usr/share/locale/fr/LC_MESSAGES
+obj /usr/share/locale/fr/LC_MESSAGES/texinfo.mo 304ed92c1961520fd852128476d24126 1776619590
+obj /usr/share/locale/fr/LC_MESSAGES/texinfo_document.mo 7f3ea996e5e189b850c26160172edddc 1776619590
+dir /usr/share/locale/he
+dir /usr/share/locale/he/LC_MESSAGES
+obj /usr/share/locale/he/LC_MESSAGES/texinfo.mo 3333d162b5507ec7eb12a08d145c2403 1776619590
+dir /usr/share/locale/hr
+dir /usr/share/locale/hr/LC_MESSAGES
+obj /usr/share/locale/hr/LC_MESSAGES/texinfo.mo a4804aa08afcb503717574871d4b713f 1776619590
+obj /usr/share/locale/hr/LC_MESSAGES/texinfo_document.mo aa5ac5aef9fe16d1d20a7861a0e4b693 1776619590
+dir /usr/share/locale/hu
+dir /usr/share/locale/hu/LC_MESSAGES
+obj /usr/share/locale/hu/LC_MESSAGES/texinfo.mo 282537bee950cae4af7f50616c91d9ab 1776619590
+obj /usr/share/locale/hu/LC_MESSAGES/texinfo_document.mo a33c1cf88970178d8fd695d0e2bc0dce 1776619590
+dir /usr/share/locale/id
+dir /usr/share/locale/id/LC_MESSAGES
+obj /usr/share/locale/id/LC_MESSAGES/texinfo.mo 4bad53391bc5c59970283b24a0ac9499 1776619590
+dir /usr/share/locale/it
+dir /usr/share/locale/it/LC_MESSAGES
+obj /usr/share/locale/it/LC_MESSAGES/texinfo.mo 7b2601c6e922d0e88103934b241a4460 1776619590
+obj /usr/share/locale/it/LC_MESSAGES/texinfo_document.mo 8bd93dbfb48383e5a82db8457f9cd54e 1776619590
+dir /usr/share/locale/ja
+dir /usr/share/locale/ja/LC_MESSAGES
+obj /usr/share/locale/ja/LC_MESSAGES/texinfo.mo 7258a5417f40c44ee452f772bd1a5cc1 1776619590
+dir /usr/share/locale/ka
+dir /usr/share/locale/ka/LC_MESSAGES
+obj /usr/share/locale/ka/LC_MESSAGES/texinfo.mo 858c529081a31bb0d118252ad01cf96d 1776619590
+obj /usr/share/locale/ka/LC_MESSAGES/texinfo_document.mo f009a612063fb6d69f701b016ed76578 1776619590
+dir /usr/share/locale/nb
+dir /usr/share/locale/nb/LC_MESSAGES
+obj /usr/share/locale/nb/LC_MESSAGES/texinfo.mo 41f52fab14d795aabc2d3bd090dc0fcc 1776619590
+obj /usr/share/locale/nb/LC_MESSAGES/texinfo_document.mo 5fef2c252dc4d95ee42dbc505ce9349d 1776619590
+dir /usr/share/locale/nl
+dir /usr/share/locale/nl/LC_MESSAGES
+obj /usr/share/locale/nl/LC_MESSAGES/texinfo.mo 8f1353922c1cbf75f7db621ffcd38810 1776619590
+obj /usr/share/locale/nl/LC_MESSAGES/texinfo_document.mo ec5b49a0f28a19cd2ca5f87e747c1757 1776619590
+dir /usr/share/locale/pl
+dir /usr/share/locale/pl/LC_MESSAGES
+obj /usr/share/locale/pl/LC_MESSAGES/texinfo.mo 8d4262db05022e2e9c07295f59613b68 1776619590
+obj /usr/share/locale/pl/LC_MESSAGES/texinfo_document.mo 0fd3e58c0a8fa1c8a2e4691c3c77f3b5 1776619590
+dir /usr/share/locale/pt
+dir /usr/share/locale/pt/LC_MESSAGES
+obj /usr/share/locale/pt/LC_MESSAGES/texinfo.mo 17b2e2a4e50bfa0d7c867a940830d8e9 1776619590
+obj /usr/share/locale/pt/LC_MESSAGES/texinfo_document.mo cab714b19c6a30b0ff6c922a61f3981b 1776619590
+dir /usr/share/locale/pt_BR
+dir /usr/share/locale/pt_BR/LC_MESSAGES
+obj /usr/share/locale/pt_BR/LC_MESSAGES/texinfo.mo 5098d264ae13f4f634cef2d629c509a1 1776619590
+obj /usr/share/locale/pt_BR/LC_MESSAGES/texinfo_document.mo dc4c33f1060854bf2a5836f67fcae51c 1776619590
+dir /usr/share/locale/ro
+dir /usr/share/locale/ro/LC_MESSAGES
+obj /usr/share/locale/ro/LC_MESSAGES/texinfo.mo d82e1d8adc6efc3303398d171f725c78 1776619590
+obj /usr/share/locale/ro/LC_MESSAGES/texinfo_document.mo bab4b8f3d857b23f8539da36087d5041 1776619590
+dir /usr/share/locale/ru
+dir /usr/share/locale/ru/LC_MESSAGES
+obj /usr/share/locale/ru/LC_MESSAGES/texinfo.mo b3a6f00323d48d54f200838d23fe4f8a 1776619590
+dir /usr/share/locale/rw
+dir /usr/share/locale/rw/LC_MESSAGES
+obj /usr/share/locale/rw/LC_MESSAGES/texinfo.mo 67f35f8cb097daf962529bf4b41f4644 1776619590
+dir /usr/share/locale/sk
+dir /usr/share/locale/sk/LC_MESSAGES
+obj /usr/share/locale/sk/LC_MESSAGES/texinfo.mo 86c67bc57f82ffa1e36caac14b2c8698 1776619590
+obj /usr/share/locale/sk/LC_MESSAGES/texinfo_document.mo a203ae3281628423999e662fb7b0019c 1776619590
+dir /usr/share/locale/sl
+dir /usr/share/locale/sl/LC_MESSAGES
+obj /usr/share/locale/sl/LC_MESSAGES/texinfo.mo e146947d22e668970dfea57c0f771e85 1776619590
+dir /usr/share/locale/sr
+dir /usr/share/locale/sr/LC_MESSAGES
+obj /usr/share/locale/sr/LC_MESSAGES/texinfo.mo 01ec8d0ec67ee67eac1ff7d09163ec9d 1776619590
+obj /usr/share/locale/sr/LC_MESSAGES/texinfo_document.mo 91ed4391453bba3887e4da8f717e960a 1776619590
+dir /usr/share/locale/sv
+dir /usr/share/locale/sv/LC_MESSAGES
+obj /usr/share/locale/sv/LC_MESSAGES/texinfo.mo 3e7dcfeeb2587704ebc47cadbd6dcd88 1776619590
+obj /usr/share/locale/sv/LC_MESSAGES/texinfo_document.mo 5b5dec4dbafdb41551e056f875dcff07 1776619590
+dir /usr/share/locale/tr
+dir /usr/share/locale/tr/LC_MESSAGES
+obj /usr/share/locale/tr/LC_MESSAGES/texinfo.mo 212e086aa7f06358b29e8362bdc05980 1776619590
+dir /usr/share/locale/uk
+dir /usr/share/locale/uk/LC_MESSAGES
+obj /usr/share/locale/uk/LC_MESSAGES/texinfo.mo 8d98279f0ce740a23ee835f986cd9d58 1776619590
+obj /usr/share/locale/uk/LC_MESSAGES/texinfo_document.mo 24dba754413979fcf87474e3f49ad556 1776619590
+dir /usr/share/locale/vi
+dir /usr/share/locale/vi/LC_MESSAGES
+obj /usr/share/locale/vi/LC_MESSAGES/texinfo.mo 1e4c8c7725b55c66913504d69ee7e081 1776619590
+dir /usr/share/locale/zh_CN
+dir /usr/share/locale/zh_CN/LC_MESSAGES
+obj /usr/share/locale/zh_CN/LC_MESSAGES/texinfo.mo 8865f1e70319b757c7098bb2681e220b 1776619590
+dir /usr/share/locale/zh_TW
+dir /usr/share/locale/zh_TW/LC_MESSAGES
+obj /usr/share/locale/zh_TW/LC_MESSAGES/texinfo.mo 5fe2fd1563e7c706644948960bd881a6 1776619590
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/info.1.bz2 6e3d5ea9a25f3e8a96d333f42c6c6a0e 1776619590
+obj /usr/share/man/man1/install-info.1.bz2 a328b6e7ab959bea190224d065570090 1776619590
+obj /usr/share/man/man1/makeinfo.1.bz2 0191004a05d17d555a1bec92bef029d9 1776619590
+obj /usr/share/man/man1/pdftexi2dvi.1 b1ff6c52b536ebc390cb9c63ce49de9a 1776619590
+obj /usr/share/man/man1/pod2texi.1.bz2 22f24f24d059d0b6fce391a53d63ad68 1776619590
+obj /usr/share/man/man1/texi2any.1 f8bd4e8bdabe918f2112e5da41bb3cef 1776619590
+obj /usr/share/man/man1/texi2dvi.1.bz2 7397690a05ef71c0e31c276f662a1e8b 1776619590
+obj /usr/share/man/man1/texi2pdf.1 b1ff6c52b536ebc390cb9c63ce49de9a 1776619590
+obj /usr/share/man/man1/texindex.1.bz2 ef9711302a89fd60a3e23c8dfe2e38f4 1776619590
+dir /usr/share/man/man5
+obj /usr/share/man/man5/info.5.bz2 6fa7c653efd616ff54b207dc6c15d7ad 1776619590
+obj /usr/share/man/man5/texinfo.5.bz2 3897b69141d669084b85644bf8bfa425 1776619590
+dir /usr/share/texi2any
+dir /usr/share/texi2any/Pod-Simple-Texinfo
+dir /usr/share/texi2any/Pod-Simple-Texinfo/Pod
+dir /usr/share/texi2any/Pod-Simple-Texinfo/Pod/Simple
+obj /usr/share/texi2any/Pod-Simple-Texinfo/Pod/Simple/Texinfo.pm 2cc933f33386155396fe1b6b56886b86 1776619590
+dir /usr/share/texi2any/Texinfo
+obj /usr/share/texi2any/Texinfo/Commands.pm ab6e07aaa0cd701ddc4911686bd916aa 1776619590
+obj /usr/share/texi2any/Texinfo/Commands.pod e16433c62e907758d320e1726dfa55a7 1776619590
+obj /usr/share/texi2any/Texinfo/CommandsValues.pm 09b1a676123fe6423aba0f0f7d2105b6 1776619590
+obj /usr/share/texi2any/Texinfo/CommandsValues.pod 06d7fb318b4ff902073bda5bbc8fc732 1776619590
+obj /usr/share/texi2any/Texinfo/Common.pm 2f1a52832bd5e83e6b0d8e7eee8917a9 1776619590
+obj /usr/share/texi2any/Texinfo/Config.pm a577f6af3bdf7e0b07912ae4a5ea388d 1776619590
+obj /usr/share/texi2any/Texinfo/ConfigXS.pm 1773159973d7f5ab5f806ab9cc130d7c 1776619590
+dir /usr/share/texi2any/Texinfo/Convert
+obj /usr/share/texi2any/Texinfo/Convert/ConvertXS.pm e9bbf2863f5b79a2df1835a40ff3796b 1776619590
+obj /usr/share/texi2any/Texinfo/Convert/Converter.pm 092285cc4fefe6074920e4f02a818b5e 1776619590
+obj /usr/share/texi2any/Texinfo/Convert/DocBook.pm 70081e21a21bba869cdc4a4e35de6782 1776619590
+obj /usr/share/texi2any/Texinfo/Convert/HTML.pm 33123e81953569597f413ee6bb2f6b3b 1776619590
+obj /usr/share/texi2any/Texinfo/Convert/IXIN.pm c3b80517ad51a071f41d6212459432c3 1776619590
+obj /usr/share/texi2any/Texinfo/Convert/IXINSXML.pm dcd601771aab50f2d5a3ebc766cfa017 1776619590
+obj /usr/share/texi2any/Texinfo/Convert/Info.pm 2c641df1bf6d7615ed1425eadf6722e3 1776619590
+obj /usr/share/texi2any/Texinfo/Convert/LaTeX.pm 9bdc9ff99ec8a53340a6c368851f8a67 1776619590
+obj /usr/share/texi2any/Texinfo/Convert/NodeNameNormalization.pm 44beb25ee220fab0ecd810cd98e8b30a 1776619590
+obj /usr/share/texi2any/Texinfo/Convert/Paragraph.pm 7787d121800a20dd97d96910303e1538 1776619590
+obj /usr/share/texi2any/Texinfo/Convert/ParagraphNonXS.pm 5424cc80144032a6f042f309e2e59354 1776619590
+obj /usr/share/texi2any/Texinfo/Convert/PlainTexinfo.pm 6ea8244890e58a4b527cb3df0156ae8d 1776619590
+obj /usr/share/texi2any/Texinfo/Convert/Plaintext.pm 9c097f77936d70f2ee23044908c9c91e 1776619590
+obj /usr/share/texi2any/Texinfo/Convert/ReadDocBook.pm c6a67293d9a3120597db84358772e30e 1776619590
+obj /usr/share/texi2any/Texinfo/Convert/TestReader.pm 1fe57a4f84d4cf8ea5df9d76e79397aa 1776619590
+obj /usr/share/texi2any/Texinfo/Convert/Texinfo.pm 89ba86eb1bd4072562217eef2e63abe6 1776619590
+obj /usr/share/texi2any/Texinfo/Convert/TexinfoMarkup.pm dff1449e8ed95e860031a7e31fdbb500 1776619590
+obj /usr/share/texi2any/Texinfo/Convert/TexinfoNonXS.pm cf4b8cf59a2771a39cdc4222beeb5297 1776619590
+obj /usr/share/texi2any/Texinfo/Convert/TexinfoSXML.pm 063cab2a5d7129745dd4dbc21284a376 1776619590
+obj /usr/share/texi2any/Texinfo/Convert/TexinfoXML.pm f400669b02e3d7bc276f0ce37d0e3f0e 1776619590
+obj /usr/share/texi2any/Texinfo/Convert/TexinfoXS.pm fdae2d13aee98a85de92a3a7a206c8a4 1776619590
+obj /usr/share/texi2any/Texinfo/Convert/Text.pm 9022caeab39d7b6cc441eaf1d9747a3f 1776619590
+obj /usr/share/texi2any/Texinfo/Convert/TextContent.pm de7ad8c06037a335db321a90f58869cb 1776619590
+obj /usr/share/texi2any/Texinfo/Convert/TreeElementConverter.pm 0c9fa848d2f488ae8baeb04f4529378f 1776619590
+obj /usr/share/texi2any/Texinfo/Convert/TreeElementConverterXS.pm 3e697e34df32bf503edb758fad7700aa 1776619590
+obj /usr/share/texi2any/Texinfo/Convert/TreeElementReadDocBook.pm d72a874090f175d566650febf5d7f372 1776619590
+obj /usr/share/texi2any/Texinfo/Convert/Unicode.pm 6ef3f9d94506c86fa4b0f0ad55c551a8 1776619590
+obj /usr/share/texi2any/Texinfo/Convert/Utils.pm d3b96b81757ec18a33699a3f0af1105b 1776619590
+obj /usr/share/texi2any/Texinfo/DebugTree.pm dac2169a840f740748956bcef19192d2 1776619590
+obj /usr/share/texi2any/Texinfo/Document.pm 938bf89273b37a2cf5575224b838db46 1776619590
+obj /usr/share/texi2any/Texinfo/DocumentXS.pm 7708e358cc33f4774f550bb73aab60c0 1776619590
+obj /usr/share/texi2any/Texinfo/Documentlanguages.pm 642e25e4a06b37e6030cb08b23a86227 1776619590
+obj /usr/share/texi2any/Texinfo/HTMLData.pm 6021834eb8d327c0c869da03726c7697 1776619590
+obj /usr/share/texi2any/Texinfo/HTMLDataCSS.pm cad0c34727b1c1684743ea7248f1bd93 1776619590
+obj /usr/share/texi2any/Texinfo/Indices.pm 1abfd20a006464015d9ab9ffa5da6983 1776619590
+obj /usr/share/texi2any/Texinfo/IndicesXS.pm 1c7487d4be1c4d0c34d84aa5b031618d 1776619590
+obj /usr/share/texi2any/Texinfo/ManipulateTree.pm 5bfdb6310d4783d158f69bb6760233c7 1776619590
+obj /usr/share/texi2any/Texinfo/MiscXS.pm ba7c4524e2931aa5c6ec4b08b4e9ecf8 1776619590
+obj /usr/share/texi2any/Texinfo/ModulePath.pm 8bf3331c2c7d0fceda758b18a54e8690 1776619590
+obj /usr/share/texi2any/Texinfo/Options.pm f46dc910507f56391a74a2cf353ad407 1776619590
+obj /usr/share/texi2any/Texinfo/OutputUnits.pm e205200e6742364116d7469358d651b6 1776619590
+obj /usr/share/texi2any/Texinfo/Parser.pm 918dfb55ea5c398b0f7d143258e6c6e1 1776619590
+obj /usr/share/texi2any/Texinfo/ParserNonXS.pm 64edbe209ffc0a321604ecb03318e201 1776619590
+obj /usr/share/texi2any/Texinfo/Reader.pm 05039255414f6c1afd4623f988819b51 1776619590
+obj /usr/share/texi2any/Texinfo/ReaderNonXS.pm 6959e2a4b1f48acbd858dda8116bc6df 1776619590
+obj /usr/share/texi2any/Texinfo/Report.pm 0a92012659cb334023e97935d328cfca 1776619590
+obj /usr/share/texi2any/Texinfo/StructTransfXS.pm 2e61e097b8686dd45e28307e62f37ad3 1776619590
+obj /usr/share/texi2any/Texinfo/Structuring.pm 239b4c1a12413a031d45ba3cf0fac4de 1776619590
+obj /usr/share/texi2any/Texinfo/Tests.pm bffa26322758b64a4a49f303175ece07 1776619590
+obj /usr/share/texi2any/Texinfo/Transformations.pm 1daa974d3571a201327842f84fde3092 1776619590
+obj /usr/share/texi2any/Texinfo/Translations.pm a3f3b123923d12c1f7ec3c5614e4643e 1776619590
+obj /usr/share/texi2any/Texinfo/TreeElement.pm e20bdbb9bbbe80d46181a9e345c0cfd0 1776619590
+obj /usr/share/texi2any/Texinfo/TreeElementNonXS.pm 357aa06b0fce97579008a2991312f4ef 1776619590
+obj /usr/share/texi2any/Texinfo/UnicodeData.pm f2d859a4199e0130e4b9bdb023fd58ae 1776619590
+obj /usr/share/texi2any/Texinfo/XSLoader.pm b03f2b0cd1714c561a7f9e36397b0168 1776619590
+dir /usr/share/texi2any/ext
+obj /usr/share/texi2any/ext/epub3.pm 1b332ff199932877f52778638f85f673 1776619590
+obj /usr/share/texi2any/ext/highlight_syntax.pm 311ff4d0f605fa8051ea5907b51c02b4 1776619590
+obj /usr/share/texi2any/ext/latex2html.pm 81fe9bdbb30d5012f9b58a08161a0e89 1776619590
+obj /usr/share/texi2any/ext/tex4ht.pm f43d90941c26265f9b276a2d424765fb 1776619590
+dir /usr/share/texi2any/init
+obj /usr/share/texi2any/init/book.pm 6b83f7f96504686ad18f8b27f4900fec 1776619590
+obj /usr/share/texi2any/init/chm.pm a4924425e4ad4de7f70d5308d22661fa 1776619590
+obj /usr/share/texi2any/init/documentation_examples.pm 110d1ec340e1b71ba815cc65a8f4d1ed 1776619590
+obj /usr/share/texi2any/init/html32.pm 004c986830279d24dff77e54806e6e32 1776619590
+obj /usr/share/texi2any/init/sc_formatting_with_css.pm 646c70ab272d2e4ce6aa057bd1e72aeb 1776619590
+dir /usr/share/texi2any/js
+obj /usr/share/texi2any/js/info.css 28332f87fd1cfb97523196638e26851d 1776619590
+obj /usr/share/texi2any/js/info.js a25aeb553023b21144e22d5a05267d7e 1776619590
+obj /usr/share/texi2any/js/modernizr.js 1cbefca38a2cdf9b5ccb2e15b4df789c 1776619590
+dir /usr/share/texi2any/lib
+dir /usr/share/texi2any/lib/Text-Unidecode
+dir /usr/share/texi2any/lib/Text-Unidecode/lib
+dir /usr/share/texi2any/lib/Text-Unidecode/lib/Text
+dir /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x00.pm a4aebb8c52420d0203d9622cbf76318d 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x01.pm e84c230458858f1e522deb341d9295e1 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x02.pm 78f395415084e750043c119296a54412 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x03.pm 94a8dc1b27d5a6effa20bf4b6cede18d 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x04.pm e911a793d451d3c674ae2328c86e1d64 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x05.pm 581489eb26f39466cb0a68fe2c82ea39 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x06.pm fca0f6f75cbda1ee4038ce2f93d448cf 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x07.pm db082882ced91bf24c94e6c66a707c4e 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x08.pm 60c077fe795351daece02a52da7e02f8 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x09.pm 6de65347d4c54878f6699b7d475e8052 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x0a.pm 8ff469360c02abbe96544024e8d04b8b 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x0b.pm 239cf74448a35b295185c7f1878acb43 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x0c.pm 1777a8d7f483c9e83eedf46ed180133f 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x0d.pm 0d539b28903dc87374e179292c7b4631 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x0e.pm 3e3bed62a079d6e081bc9e680dd5f1fc 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x0f.pm 38e7a9227818fa6bddb4540721ec222f 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x10.pm 6de6fb0bc83976566c3d4a68ee0b2095 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x11.pm fb765eb079cc2ecd35a9afd008069c63 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x12.pm 83d4ad3b098e327435f7253def03e3bd 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x13.pm 08519980251ef71438dbd353f1d896db 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x14.pm c83bf4dbb7f896dc0f1db616c686f866 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x15.pm 43a7e3bdf2e78732610d48db548676f0 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x16.pm 632112cae400c02c7aff00e46d199c13 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x17.pm 85197f0bf3f07541c62abd2855f880fb 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x18.pm 888e5b6589def6f571ace96410935f10 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x19.pm bf95bb9c5bbd7402f3b1b66285c5b302 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x1a.pm 03fd1abcd38f804a16f7b0fa59010161 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x1b.pm f61d8e74853dde889e664251f73ba92d 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x1c.pm 2129892b7f0acf6de187f2e97dadabb0 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x1d.pm caca1200a9270d78c2280fa0d25ee3ec 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x1e.pm c1d7e656b7e702596efef5e1285bf71c 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x1f.pm 6953059d7f99f87c15809444a13c815d 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x20.pm ef126efc7ef904f474a184db870f9775 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x21.pm 6e57b4efa1f7ec00945e2e14d71a2f30 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x22.pm bd3b7a2cfeba966caec293f7855ca1cc 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x23.pm 7c67d64ce75554b96a9791f5c0d96265 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x24.pm 2aaaf1f30e2372e2680f461b8f92d80d 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x25.pm 40ee9986162774066752c6647c78c69f 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x26.pm aa263a4026c178bea06c7bc892295590 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x27.pm 1d82c91761df62a593206962cfcf4f30 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x28.pm e54cf188264a00e765e35c39c2e08ef9 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x29.pm 5cdab42635daa320388cdeced5e300cb 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x2a.pm 578c7cd27cc0814c665bb5bd5ddde790 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x2b.pm 7b1e5a83a499f71fa4f715f6d361748d 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x2c.pm 977a382637056b2138970a2fc28f7c9a 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x2d.pm b1f9e82472745630f0a5b735cb3444c6 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x2e.pm 1665c754c9d8ae4cf0210d24a72affd0 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x2f.pm d426d0ac48d66809a349fb1bf51a5b5c 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x30.pm 4de026c67809d9b1c7f95671fcd1d9fb 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x31.pm dab641098f391f0aaf6d735cef7a114d 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x32.pm e0da71410cfeda5a82c79dd8f795a003 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x33.pm a7c99e952f8ef7d4b7e27237f5d8aec8 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x34.pm c360c92d21ce3499ec4eae5a6e37cb10 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x35.pm 5bfedbd75a42e10ea5b3d83d2e32f778 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x36.pm 6b60578c725e144627ab76f5c40f26be 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x37.pm 0eeb034b8fae718f2934457e407006c9 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x38.pm 83bad8dd770ea94183b853d05e5c5d53 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x39.pm 9b3ee1481f0c0c95c3fbdf01ced4a184 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x3a.pm 9d372317d49e164d33ec5c6324695700 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x3b.pm 313e30dfcca77d065a43bb0dde08e112 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x3c.pm d2bc7e55a14f91b17f34ca4de1deff7c 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x3d.pm fa4f58043c42087170bd4c1f32171728 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x3e.pm 624aeb25b1b9783bb370be0c26ce04ed 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x3f.pm 3fd0add42ce186d2ad8391da736ccb06 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x40.pm 680cd1289bdbe2d573e19ebfd04dde9f 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x41.pm 4fcd2b3f5b63a48404c3075931429c6d 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x42.pm 660fab2c157b8a0e47c90a8aee9d5db6 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x43.pm 80f69ae1a5965c5df110a488bf33928c 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x44.pm 42f93f7659b99cfc6e709ea388f38821 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x45.pm 3761213aa4de9955a8bb396f5595d70d 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x46.pm 653a56dc7a8d4db0c6da568fc6eec93a 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x47.pm 20fc1fd54f01d418fc67bc138f1b6082 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x48.pm 8a754e14da05250ee0c1fa0cf8ef947c 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x49.pm cdcad0932089b4e3f821be171f6cca62 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x4a.pm 5ce9c17c8cd8860076fcb715e7f4aee8 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x4b.pm ec65315b473a80cdb0b19628436a506a 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x4c.pm 8258c16522ca776532ae9aaf5b29c206 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x4d.pm 6b308c242934b6ccb25094a886982749 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x4e.pm bcdd24dfcc4d8e7efb7e16eeff89069d 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x4f.pm 3af279c8140391ff79cf55408da6b7aa 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x50.pm 2b1ebf26b588befa4f4382e4cd0403ba 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x51.pm 39284f984089ca5361d5478a4c0e0f84 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x52.pm fa4bc195f97f4f8c58ed7f7524d24a50 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x53.pm e31fee2034144f26e707ba2ab19d9fde 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x54.pm aaa8ed157ba896113f14d3b408ec8e65 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x55.pm 82036b5f5f2df899c4ffe88305bf9a9f 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x56.pm be754f1b87115e6eec6f3027697b86bd 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x57.pm ba7f8ca69d9ffcdb011680a401c87e97 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x58.pm b9b15aef0fa81b158e511aa70218e352 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x59.pm a1af99ba16d154dd237b1b11e0858bd9 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x5a.pm 661b469be5499256179af322ee83771f 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x5b.pm 67d59986b9940cdf3fc1229822f6f42d 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x5c.pm 81a81bc90debb97775198645f4abbc76 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x5d.pm 6545f76027f66c4bb2be868fca54e546 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x5e.pm 820d9cf0e70c8931c9c9387847c52085 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x5f.pm 9bfb97e46b2819b680be4c8bcd76de20 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x60.pm 67a6f2a96f2695bd21a82cbb8750eb83 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x61.pm faef75e3e69b8ae835b9ae091ab253bf 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x62.pm 46bf181fe219e93573ee7923a363080b 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x63.pm a293016044ee28eff4cd30e75ba20525 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x64.pm 35eb9f8964f235af5c16383d55fcd0ae 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x65.pm 62fa5e40478da4f7d912540ba96c5fe9 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x66.pm 1c4868e29154044c9dad12c2fdc6fa27 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x67.pm cbf2b6561fecc11523963b600a99f031 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x68.pm 91c7cde362bfd5cd5a93f309fd4c6eec 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x69.pm ab3018bb27aaa82bbf20b94827897187 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x6a.pm 906b934794acdaeedd2938d710d8c86d 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x6b.pm fe2847683df8bf3492c9255a92548655 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x6c.pm 26c72cfc8e9bc90ccfef8718a98ebc30 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x6d.pm 27318e163b9294fdc0fdd3e6769e5cc0 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x6e.pm d55759d31030c216690f5786a4c3d9d5 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x6f.pm 44d83f9f99ac2e34dc0e689f788cf9cd 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x70.pm d5743130cbfeff92a92fd81c34fc5754 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x71.pm d933f1f46618c008e43654cbca480998 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x72.pm d69f81215d652eff94f2109e597af1cf 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x73.pm ab4db0e5d40f9884622dd49feb4432e8 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x74.pm 088810f81d004fc8881d4656a000487d 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x75.pm 4fbc5521577f3cea80dff14be133de47 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x76.pm de3c47b71ea1c94bd737b2300bc53609 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x77.pm de5dd3ac5d341711f25ebcbb988fbb18 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x78.pm fb7ff82496f1a385f42152b00783fa98 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x79.pm 0ab8ddfa312bd7c7c184f95b9024298b 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x7a.pm 9deaa7ca1c502dface2f45179445ed6c 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x7b.pm f969d9daf73c907c28ae06957d8e441b 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x7c.pm 81e8e68ff9e3415bc8d0c82153695feb 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x7d.pm f44161acc19fefdfa9dbd8aa6db56fc2 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x7e.pm ae3a2856324953e8ca9666d3b459a98e 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x7f.pm 94d58c6e90c5b2281c80fbadf30a3337 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x80.pm 7456a1413a1eb7852173a99b5b92efa3 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x81.pm 0c8a1fca36c9634b0a31a7e474d97500 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x82.pm 0a8072b58c653a9dcb96de21c460be79 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x83.pm 4f7b63841d0ec71b2edaee4891ade23b 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x84.pm 3eafe09fdd85be1275d0ddf94e5963a3 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x85.pm 5185f27e95eb85b9e053846e0e8ec107 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x86.pm 3d7da2c676610b20c915a59f4a65fedb 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x87.pm 63a25fc907c78a2cb80700d2c077a8f7 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x88.pm e2dcb0a629700185c112f8ed67f3cdc7 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x89.pm 131c740f1ecc89b68a90359b31aa388a 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x8a.pm 5dcc3cf7a2341420b83784ba088bf816 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x8b.pm 0afdf684ac5e8597b506a4dc5f6588a3 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x8c.pm 8237e6660276d5e8c73727fcdefe5e98 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x8d.pm b2c3902fa22c6fabc160e8ffb33c1f5b 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x8e.pm c6ba6c6ce4f11c5ef7cc65e86bd67334 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x8f.pm be08a740e6104149071357e2434132c5 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x90.pm 077d2d534448457f38540ef4d6c2e5a0 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x91.pm 673e2bf66eefbdc4c6ad29192a4b0223 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x92.pm 867d059fa6634abfb93a6853477ae43a 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x93.pm 9ddb00495411020fde9ef99313c134e9 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x94.pm e3f83d35494d93c9fc3f92d84294cf94 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x95.pm 616b1797c8632cf211d07ff3a384615b 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x96.pm b9c22cbacbc291d0d71c0aaed105a6ba 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x97.pm 136c21e4531723eb47ea008104b1cbd8 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x98.pm f183635c17509559cdb41156f08af899 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x99.pm 5cce47b883c6ac00a4c9fd8a248cfb94 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x9a.pm eeb5dac4077bc2215f516a95158be34b 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x9b.pm 1253a3dc63f2e5027c5aa9d53568495b 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x9c.pm 11b608265b322b6e8e09edc6ab37e296 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x9d.pm 1ce5e54e417494616c46885030a32c60 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x9e.pm 9778010c471172eb73ea52e55817df7e 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/x9f.pm b082d15d5004a9f0d2a6f35544683724 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xa0.pm e61b25594393d08e310c7bda505fd298 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xa1.pm 62e14a5e95567ff9f52a2eda83ba42d5 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xa2.pm 73db804e07485706c57e4f1e2413d524 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xa3.pm 7a29cb3421bbad4c797e66f01544cea7 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xa4.pm c40578c1a1fae1f7039c04c8080f1965 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xa5.pm 91f671ae4e2bad1ffd0e7259c7f61bbc 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xa6.pm 3d71d384131d6bba1596128e147464da 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xa7.pm 63e6a22255f91eb2c8afc7061d44a5c0 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xa8.pm 29b20d8ea0e373325b5bfcfbc3148d6f 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xa9.pm 7540226a3c8635755b5861c5c6edc36a 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xaa.pm 5f2bf1441500224c74b8cd6f30944056 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xab.pm 5fa8f5d3f90aaae2dbea7944726e581c 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xac.pm 607b84bb98cc8cdfb88886e5ded3aa45 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xad.pm b0bb1d6140fdbe560e31b33482e7e66b 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xae.pm 138aec9296b34698314a4b59dc2eaf66 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xaf.pm a2ffa3959a579135da0b877882783ec0 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xb0.pm b17732b6a6452b9d1c0d3da6ad8fca04 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xb1.pm 6a24480bf7cd5ce63a27339b0f2cf8bf 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xb2.pm 043ac568ea46f84ee254014fce493e6d 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xb3.pm 9171e4c62a48da9c8fc67dc2a3aff2ca 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xb4.pm 26291fef12dc83d457c11f13455115b3 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xb5.pm 1b68af52eab69d661a3304d1dd054c90 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xb6.pm fe6fe3646aeea33058a079a307f911ba 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xb7.pm f44eb99f60c9340d5722b2775b4c3a33 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xb8.pm 860c9fd1ba1ef6fe180435097a1410bb 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xb9.pm 66f9c906652e9375327da7e625bcdc98 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xba.pm a4d5b0320813ba01bc3afca9a929e1b8 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xbb.pm 4ada51b8c91ff88a62784a470a07fb33 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xbc.pm 1649046fe43fc7ad8be27093902bd471 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xbd.pm af3e224bdca269bcd02b2f5a5606773f 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xbe.pm 0632d00a5bd1de54baab830c4ef2e101 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xbf.pm 4418336eb403a7fba3a1eb8b26553058 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xc0.pm e2540712a2a88c570d3748310e9a2de1 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xc1.pm 6dd81ed30c16bf1dd840c8a94e270d0c 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xc2.pm add030f16aba94b21d8641fb873294d5 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xc3.pm f8a15be41c63f2ba22d62a48f555a393 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xc4.pm 422a3efab1082646f3b547db43c15536 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xc5.pm bd1039f158ff0415d246f6be480630d7 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xc6.pm 7ba3b77e6966fe24a9c58d5500de8d78 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xc7.pm 0d44c468008b43ca48d0334f4e1032f1 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xc8.pm d9449e75c576ecdcbf8186ffa2dd145b 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xc9.pm 74e52ad9c879463ca440a11e8ca65be8 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xca.pm 980fa047d2ba4a16514f18bd3c31484a 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xcb.pm 722581c7076f4c7a4070e7e6f55933a9 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xcc.pm 97913589ebc93fcd515982c68c9d47b8 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xcd.pm ae3cf1c48867c4b8cf55c45031c8ea13 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xce.pm 4e766a8c9b6141b622cfaa52de230a34 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xcf.pm 27f3124d8d63129bd718f041305eb94f 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xd0.pm 2975b792a496a5875349276d88d45921 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xd1.pm f829c2d2ef8dc2cd847ab0ec8f22ee41 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xd2.pm b142223f996c512d797c842f80393a01 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xd3.pm 5575760ad156718a50d36bfe20e194d1 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xd4.pm 74b8e1d25dc6474aca3c605bea23aa9f 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xd5.pm bcbf12521fd6cf3ec6eeccd4bdb67db7 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xd6.pm 64ee4061406f1b77cad8208e5476f8ce 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xd7.pm f028a67422e58a0e14d5741f6d540999 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xd8.pm e1d499b33bc520f00e435ec2c2405b5b 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xd9.pm 84be81b8620380bdd81652466b449266 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xda.pm fc476097dcaa4a6961afa660bc83d079 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xdb.pm 977d46770463576d192630e532606700 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xdc.pm e2f76a7263387cc30d74f6cbc1480a71 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xdd.pm 9275eba8bb401a05ef7074f90d468700 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xde.pm de94eec14a3594834270723ad39bc03c 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xdf.pm 3bded8e60a4ebb2d25d9621170d3e0d9 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xe0.pm f8740c82c5116348e952c976559c75d3 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xe1.pm 4dc0194040bacfe3d9bb2139efdaf5ac 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xe2.pm 0319592d274eb0d6a10b555fae3712cb 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xe3.pm a136a8c75216ea210d6a5a75a9f0f789 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xe4.pm 8b993a93f7a6d396d49636c06dd1f019 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xe5.pm 61aadfadf9ec002a8f51eeae4335cb89 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xe6.pm 377bb1f48851b666a87814855133f7aa 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xe7.pm 2cb120174b1244f0163128764ca6febc 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xe8.pm 545a42c37b23488e134838f2b1a78d66 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xe9.pm 38666764acb58b2b2c7d9fc2273052b9 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xea.pm f10fd914b91c12cd1e747e4c9af8325f 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xeb.pm fd4c79ef881b0a6d0f77683bea1ea5dc 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xec.pm d837f6c3c4fcfa6b9f681609d4295dc1 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xed.pm 3ba16709e6de5936ecb3a6a7ddd47f55 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xee.pm 3171b1e5f2b98051403d8aab4e836563 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xef.pm c67c2e148d12c22c508c69e23395a472 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xf0.pm 5f399660be7bbae77f84acb88054b2f5 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xf1.pm d575e3a9c3e6bc1423700691390afa60 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xf2.pm bd0346a377de331e93a31514bf944951 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xf3.pm 7e504b657876468784110684aeef5f34 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xf4.pm cb0d3d2729bef1d438710aa4f7b9ed53 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xf5.pm 21a09eaf5fb7ac0168bdc1c68874ad7b 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xf6.pm 37a4f83d0d95daf93aabc4e472639fef 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xf7.pm 086bb77997fe8a38a989d581c9286e49 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xf8.pm 9fe51fe263af3cf5cbf23a19274f2119 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xf9.pm d9df4613b72bb5801b18e9defe500f88 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xfa.pm 84325b76568928a453288d169b79d5de 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xfb.pm 75bc53986ed0bc07d4c0f987c5b48ff3 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xfc.pm fe37260265b49b6c7c00869525454c47 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xfd.pm 133dc956912e09f9a791b247e8f1a3f3 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xfe.pm ffe24cb4a61e615c1b4a7fa4fa97ce73 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode/xff.pm 8f5f0011fcb3b0151186a70d13913a68 1776619590
+obj /usr/share/texi2any/lib/Text-Unidecode/lib/Text/Unidecode.pm 62594e9e5df34182535bc758c3829ca9 1776619590
+dir /usr/share/texi2any/lib/Unicode-EastAsianWidth
+dir /usr/share/texi2any/lib/Unicode-EastAsianWidth/lib
+dir /usr/share/texi2any/lib/Unicode-EastAsianWidth/lib/Unicode
+obj /usr/share/texi2any/lib/Unicode-EastAsianWidth/lib/Unicode/EastAsianWidth.pm 80fecf2287123c1340eef888d8260bd8 1776619590
+dir /usr/share/texi2any/lib/libintl-perl
+dir /usr/share/texi2any/lib/libintl-perl/lib
+dir /usr/share/texi2any/lib/libintl-perl/lib/Locale
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/Messages.pm 52e1298e14b80bb59eceef28e1a24a2f 1776619590
+dir /usr/share/texi2any/lib/libintl-perl/lib/Locale/Recode
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/Recode/_Aliases.pm bd356079751c67e316cdbb24c561e2b0 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/Recode/_Conversions.pm 7e3be9e83d8d8977173d2b503f6dac6f 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/Recode.pm 8af3e2614aa3ed8fd16e4851fe3c9be9 1776619590
+dir /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/ASMO_449.pm febcb7a041ce71938f4fc8163a9caefb 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/ATARI_ST.pm 4fc37d66ec0dfe6dd3ca1412659db269 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/ATARI_ST_EURO.pm cebce5e150a782a6f391ca672cf3ecdb 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/CP10007.pm 90ecc50e8552f94752ef30a166f08054 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/CP1250.pm 31cc38ab187b1d8860747d17de886fec 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/CP1251.pm a5da3d5c2de55d1e77f58eb1074fd674 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/CP1252.pm 71dfaa960ccc68c7465ea5bb007049d6 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/CP1253.pm a27c4de58fa3ff8929a3e888dafbcd1c 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/CP1254.pm 895f9767affabf4cdc695e52a491d1a1 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/CP1256.pm 1053508f07267a00fb36e8825f8bfbb6 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/CP1257.pm 86af3b7fd3c584faad2ae442512aca45 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/CSN_369103.pm fe3ba1ceebfeb75c26518e157f698fc1 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/CWI.pm 87963aaa3805315c1ea47868284aedbf 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/DEC_MCS.pm c3edf67ee21944345c8fc05e1df5defb 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/EBCDIC_AT_DE.pm 4434d427168f5bdc07b1264d0855e3b8 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/EBCDIC_AT_DE_A.pm f855c124a4d98159b46e44816987ab7e 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/EBCDIC_CA_FR.pm 04d2c96625e7c6a6becf2221434d3efe 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/EBCDIC_DK_NO.pm dbc3b2c0fb9fc0c31a7566191cc30a4b 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/EBCDIC_DK_NO_A.pm 2349360d5738c433041b6dfaf8be4cde 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/EBCDIC_ES.pm 95a94809e3ee0b7a90929dc847a1b6da 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/EBCDIC_ES_A.pm 64807023930b830106651bd9f69aac8d 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/EBCDIC_ES_S.pm ed591ae8a3d045d65a7aba8e858bdb96 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/EBCDIC_FI_SE.pm 91f3b6c2260320d007dc1750f72f2e1c 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/EBCDIC_FI_SE_A.pm e2c49625e3e360587e0ec637f6e01fa8 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/EBCDIC_FR.pm 47fd1821ee17fbb90a0cd0eafe01a3aa 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/EBCDIC_IS_FRISS.pm e9de4652f3a03f9589bfbb8b47356567 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/EBCDIC_IT.pm 15f064c1dd75563fb9fddfb28d08333f 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/EBCDIC_PT.pm d1733c85f0038f7a8c4cf8081ceb1160 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/EBCDIC_UK.pm 056728adace70ec6f08c93f0eb149499 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/EBCDIC_US.pm d257a883c3b665cb15c00011a7842157 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/ECMA_CYRILLIC.pm 4100312b9db12fa3c23bc35fb1b2301f 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/GEORGIAN_ACADEMY.pm 6281c6b312d3021b5a212ae24a8a26fc 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/GEORGIAN_PS.pm 088ac1c9138bfbd82274e58cfaae76e5 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/GOST_19768_74.pm a7e91c940fdad6eff0f6b882f76791f4 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/GREEK7.pm 008883f04ab95252f7507c55c371b550 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/GREEK7_OLD.pm afabfeb765b933162bfbe5d13cab0588 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/GREEK_CCITT.pm e17e7a0fd99fa7606b0dba81d7941767 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/HP_ROMAN8.pm 4ab33079637c84c550adff51609b6d9c 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM037.pm ab77522f0b8df26e94bde67cf2d1344c 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM038.pm b195a1bb45f3bc65c1ce4c3b9159aaaa 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM1004.pm 6ea6f31861dddf7c92651cb051076649 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM1026.pm 7893a3a2b9d12d1e8c88078ed594e9d0 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM1047.pm 260f6a2784f493036e2cc2e041a1e90a 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM256.pm 67e167e9765871f94cbb585433b390e0 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM273.pm 3b5555d42ab6039f576db1619adb8b90 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM274.pm 77a8e1e78b8b4e24e0d80a19354a0a30 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM275.pm e99dab0f5c785e1af17f5797c7b7a608 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM277.pm 124111a6bb80f9d01a9937b2caf0806d 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM278.pm ee0bf730e3d015ab00fc22a4321e7d12 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM280.pm 3105a04640e30d6d7de9b46324f0d7bb 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM281.pm 6f9216a6e0f58ea6fe8570bce3a2b9f7 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM284.pm 18c48ebb9aa6c217b597e6a55ddbb2e9 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM285.pm 91405216e79a0e326562222e8b5a500d 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM290.pm e9a49c10fa275d74551bfb6ece1b920d 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM297.pm 932c8d2b64c40b8574ec34a4c8022755 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM420.pm 18b4e7875bf819d14dcd7e0859570383 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM423.pm 0743e2e9edf85d2cbc6e7e56378269fb 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM424.pm 25224a3b3d7377df5f9864f72e6ca4c2 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM437.pm 06f8b9214c6c7afe09c58d8b92c74d9c 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM500.pm 7e0db124492ccd598510f7b5efd26ae1 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM850.pm 64bb5dd9cc9ce76cbf7d7973f93204aa 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM851.pm 3a6d30404daa21311651b150ce6e7ddc 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM852.pm a5f7764e183d813de6041b31039f61a3 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM855.pm ef38e3f0c3bd55b61e65f9cd99d03659 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM857.pm f79ac2fc442e4dffcd1e2c26fd6da6dd 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM860.pm 8f5cfb031e55705e6b6c83bde58d02b3 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM861.pm bd5c0ac0c653cb28a323855a3c6a24fb 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM862.pm ae5c8e8b69dc2c4be8900efd841a3e67 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM863.pm caffb314e7c7f33a68e7ac3a9e3fa14b 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM864.pm 061ca270aa3bd22f870c05d85eb388bc 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM865.pm 9f4ef114f5e40622db0f96f405f7606d 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM866.pm 1373f28515a4ecee42409599d98f5f87 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM868.pm 2f41c3e11106e8c670b00b1b4fadbd85 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM869.pm 782496ce52657283833d6d6fb4273125 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM870.pm b8f9e448c716a14762e8fdd1feb946b0 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM871.pm 428e11171d253a21c729798f0b603693 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM874.pm 7f75c0afa0ccffb77097790a534d8578 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM875.pm 3e6dd121e6dc39e48f20b3f366c6a437 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM880.pm 150cbcd4b8b736b0169cc7ae680b82d7 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM891.pm e4b9001af14eb872d1420ea9c86f8354 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM903.pm c0491d1f9b7b4fde99fb3a379328ccf7 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM904.pm 9d56fc6ec135699cd993f60cb363a411 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM905.pm 030f46174aa9530c1944efeab19abf43 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IBM918.pm 3cb35d500cd6ea47c02479f48f89950b 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/IEC_P27_1.pm 9d411ea89bb33895d0503fedaea9978c 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/INIS.pm 4de04a8d955ab9562992e83b78ef2dc3 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/INIS_8.pm 3fad9f3a22ab0d549c5f9f16734fb38d 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/INIS_CYRILLIC.pm bae1b46446af20b8890617466ce4420a 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/ISO_10367_BOX.pm 8cf58aed53d7baef385036b8e7b2dddd 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/ISO_2033_1983.pm 0e065e3353a131cb20efc693d17beed4 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/ISO_5427.pm b97af1d6c1370ec97304e95daa7c2beb 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/ISO_5427_EXT.pm c1bf862661c4c619953a8c86ad408ccb 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/ISO_5428.pm 49282b7d443296eb47dd665ebc88e534 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/ISO_8859_1.pm f33a82a052360d3cb2fa13fbc82f216f 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/ISO_8859_10.pm 22312432dd6820e2b6580589a250cb4d 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/ISO_8859_11.pm 4e1092c6ad761ab20febe7eccfb39ab7 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/ISO_8859_13.pm dc2afc9a6c0c7a03e9422d7a0f75c6e0 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/ISO_8859_14.pm ca65091c7f0ff2ddcfc785fb828bb1db 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/ISO_8859_15.pm 68414e03cdad3f2f678349b3f11532c4 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/ISO_8859_16.pm d84ed39e71904c0a57ab8197a8e4d2fa 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/ISO_8859_2.pm bb025d43b88ecb886b8ccfdc2c099553 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/ISO_8859_3.pm f8afdcc760b790329d96348d994585cb 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/ISO_8859_4.pm 80b9d53112703b61eb2c74d7552a7c20 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/ISO_8859_5.pm 626ac7d18dbed5f02d06ab2e2dc9340a 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/ISO_8859_6.pm 3490027d760e04a72088b62dd7e08b80 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/ISO_8859_7.pm 942f8878978b0b03a54330c4182dcd9a 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/ISO_8859_8.pm 5669e23292703313d1fe25d45273fcb6 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/ISO_8859_9.pm 9654ea3e7f539e3e1e98f39b8d88ead8 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/KOI8_R.pm debf358dc9e4e9d3a25266176610ce99 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/KOI8_RU.pm f3f7add99b90b4a1cd32dea85d99f7e0 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/KOI8_T.pm cf8acd77fec4471fe14690e8703ba4ea 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/KOI8_U.pm 63c3362a49bf88f381d785858f083650 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/KOI_8.pm b5607cf74465fd55808f12d33f2e8bd1 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/LATIN_GREEK.pm c828271e3ae967a25829b59495c9c32a 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/LATIN_GREEK_1.pm 1df42da190f67f034caec70d3b1e6ebf 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/MACARABIC.pm 4bf012c960973595ef44a103b3cab8a5 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/MACCROATIAN.pm 0c7e01160169900a3929578f19ae08bc 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/MACCYRILLIC.pm 66f5100b8de1d734f60cb9e923fb2de5 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/MACGREEK.pm 429048424419f0414ed1b562a9f0bb64 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/MACHEBREW.pm 607258fe2d08df8750f2b62dfa0f4a07 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/MACICELAND.pm 5468fd3d39927db36912eb85c966aa91 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/MACINTOSH.pm d1e6ed50280b900f8d55d8ef12914069 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/MACROMANIA.pm 169e747f735e1d6ecbc568cf4b927eab 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/MACTHAI.pm 29707775a05376bd9ad92a2c74e45062 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/MACTURKISH.pm 921f74b595dbc57c81f6a5835efd52e1 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/MACUKRAINE.pm 8754e408063c0eab7a8c11536f3a83c4 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/MAC_IS.pm 5132d4cb4a55b1ab9d4a5a075eadbf96 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/MAC_SAMI.pm efec51c7825b151b6b8e02f987778f4a 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/MAC_UK.pm d20e21705c1c2218397a053bc7fa626b 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/NATS_DANO.pm 4a70c467daa8f5702f5eaf7b422be608 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/NATS_SEFI.pm 4bd6ae44fad5255e6c8e12b1af4373a7 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/NEXTSTEP.pm a354ea2d5982cc525640988135a04d71 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/SAMI_WS2.pm fb78622cbcb896416c3ab52f564ca357 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/TIS_620.pm bd11c2deb05d965258c7a18a529b049d 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/US_ASCII.pm 90beeb6d8ac61e8b0e34ed55e295374d 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/UTF_8.pm 13892646eb59763e1be05ea2f1f22dbb 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/VISCII.pm 610f936a14ad0835fc6e0caa379e9030 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData/_Encode.pm accd13ef906c2a55d60143ddac1a4ebf 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/RecodeData.pm c039f422555fb015b0106b8a94e8f4ed 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/TextDomain.pm d13074929f4023ad0c826135a1193fce 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/Util.pm 469d63d853d1f885f26f749a79080c9e 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/gettext_dumb.pm 79c007b93fc46eb7624d6a83a7d61aa5 1776619590
+obj /usr/share/texi2any/lib/libintl-perl/lib/Locale/gettext_pp.pm a3f3d41cfc3c62b29cf3cccd2bd584fc 1776619590
+obj /usr/share/texi2any/load_txi_modules a3c8128d899188e4cdf246a4c639261e 1776619590
+dir /usr/share/texinfo
+dir /usr/share/texinfo/htmlxref.d
+obj /usr/share/texinfo/htmlxref.d/Texinfo_GNU.cnf c6082ff8ba9562484ac293041cf45d73 1776619590
+obj /usr/share/texinfo/htmlxref.d/Texinfo_nonGNU.cnf 1aef86e4fdc6f0fcbb81367f3d4a5b6e 1776619590
+dir /usr/share/texinfo/info-hooks
+obj /usr/share/texinfo/info-hooks/gnu-manuals-locations.dat 89d848b4af7165b0f290e894b72423a8 1776619590
+obj /usr/share/texinfo/info-hooks/manual-not-found 61e2a67b5678c7184280ff6b972bb31c 1776619590
+obj /usr/share/texinfo/texindex.awk 44bf5f66bf4b91a35404a6b8d88ff210 1776619590
+obj /usr/share/texinfo/texinfo.dtd e5ef46760d65cfa15c287bae6f6026cc 1776619590
+sym /usr/bin/makeinfo -> texi2any 1789354183

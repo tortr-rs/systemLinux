@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile install postinst postrm prepare
+DEPEND=>=dev-lang/mlton-20180207 doc? ( virtual/latex-base app-text/texi2html ) emacs? ( >=app-editors/emacs-23.1:* )
+DESCRIPTION=Implementation of the logical framework LF
+EAPI=8
+HOMEPAGE=https://twelf.org/
+INHERIT=elisp-common flag-o-matic
+IUSE=doc emacs examples
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD-2
+RDEPEND=>=dev-lang/mlton-20180207 doc? ( virtual/latex-base app-text/texi2html ) emacs? ( >=app-editors/emacs-23.1:* )
+RESTRICT=test
+SLOT=0/1.7.1
+SRC_URI=https://github.com/standardml/twelf/releases/download/v1.7.1/twelf-src-1.7.1.tar.gz
+_eclasses_=elisp-common	af0b23d31469d538d402c81481e6343e	flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=2c34b6285c42b99a136410b655ed3b01

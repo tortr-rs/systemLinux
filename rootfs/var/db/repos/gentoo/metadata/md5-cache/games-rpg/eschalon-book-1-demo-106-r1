@@ -1,0 +1,13 @@
+DEFINED_PHASES=install
+DESCRIPTION=Classic role-playing game
+EAPI=7
+HOMEPAGE=https://basiliskgames.com/eschalon-book-i/
+INHERIT=desktop wrapper
+KEYWORDS=~amd64 ~x86
+LICENSE=eschalon-book-1-demo
+RDEPEND=>=media-libs/freetype-2.5.0.1[abi_x86_32(-)] x11-libs/libX11[abi_x86_32(-)] x11-libs/libXxf86vm[abi_x86_32(-)] virtual/glu[abi_x86_32(-)] virtual/opengl[abi_x86_32(-)]
+RESTRICT=strip
+SLOT=0
+SRC_URI=https://dev.gentoo.org/~calchan/distfiles/eschalon-book-1-demo-106.tar.gz
+_eclasses_=desktop	e447b5f77146d69797e9f03ff177f3f1	wrapper	ebaa3beeb43f7e533872b6c37168c7ad
+_md5_=636898f4171cd0e816351745e2ceaeb1

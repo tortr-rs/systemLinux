@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>dlan@gentoo.org</email>
+		<name>Yixun Lan</name>
+	</maintainer>
+	<use>
+		<flag name="glib">Enable <pkg>dev-libs/glib</pkg> support</flag>
+		<flag name="tools">Build some useful gpio tools that use libgpiod.</flag>
+	</use>
+</pkgmetadata>

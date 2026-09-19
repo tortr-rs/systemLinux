@@ -1,0 +1,47 @@
+dir /usr
+dir /usr/lib
+dir /usr/lib/python3.14
+dir /usr/lib/python3.14/site-packages
+dir /usr/lib/python3.14/site-packages/pluggy
+obj /usr/lib/python3.14/site-packages/pluggy/__init__.py a0512b657ebdc4fd627f758f4744676c 1788715681
+dir /usr/lib/python3.14/site-packages/pluggy/__pycache__
+obj /usr/lib/python3.14/site-packages/pluggy/__pycache__/__init__.cpython-314.opt-1.pyc 6f5e569a8dee5a62592aeb4b414e2683 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy/__pycache__/__init__.cpython-314.opt-2.pyc 6f5e569a8dee5a62592aeb4b414e2683 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy/__pycache__/__init__.cpython-314.pyc 6f5e569a8dee5a62592aeb4b414e2683 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy/__pycache__/_callers.cpython-314.opt-1.pyc 424ba3d0a5f2c06f90a2f2a678734c8c 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy/__pycache__/_callers.cpython-314.opt-2.pyc c60b3b9cfe541fa30d877e8b3b052107 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy/__pycache__/_callers.cpython-314.pyc 424ba3d0a5f2c06f90a2f2a678734c8c 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy/__pycache__/_hooks.cpython-314.opt-1.pyc 617cabe976eb272b5065cb5e73094060 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy/__pycache__/_hooks.cpython-314.opt-2.pyc e13b9dbfe438f390b291b78dbd46d6c5 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy/__pycache__/_hooks.cpython-314.pyc b271313229b6776fc643e5da7ab235e5 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy/__pycache__/_manager.cpython-314.opt-1.pyc f573c2953bf7a56f4caefc403f1ff253 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy/__pycache__/_manager.cpython-314.opt-2.pyc 5a7533d55bea88460046906bf65ad1ad 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy/__pycache__/_manager.cpython-314.pyc 3068065dfc9f6b00d6ad4cc54fe36234 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy/__pycache__/_result.cpython-314.opt-1.pyc 4534e4d483d534824882e7d35e8213cb 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy/__pycache__/_result.cpython-314.opt-2.pyc 521930ff354aa9256501e9cd1cda1f91 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy/__pycache__/_result.cpython-314.pyc 4534e4d483d534824882e7d35e8213cb 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy/__pycache__/_tracing.cpython-314.opt-1.pyc a6e82cf355eb38e83863f2109ab1205f 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy/__pycache__/_tracing.cpython-314.opt-2.pyc 0095ddd6ee8e3e36bb07d355c70a2109 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy/__pycache__/_tracing.cpython-314.pyc 85e2ee9f175e5357ec599cb8466f0ccf 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy/__pycache__/_version.cpython-314.opt-1.pyc 182c04e813a1d188cdbbfa8c8b549202 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy/__pycache__/_version.cpython-314.opt-2.pyc 182c04e813a1d188cdbbfa8c8b549202 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy/__pycache__/_version.cpython-314.pyc 182c04e813a1d188cdbbfa8c8b549202 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy/__pycache__/_warnings.cpython-314.opt-1.pyc a38b861e61783c704e3ddca76e3fef03 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy/__pycache__/_warnings.cpython-314.opt-2.pyc dee1cfc7522bce5f0a123b4fb5130db0 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy/__pycache__/_warnings.cpython-314.pyc a38b861e61783c704e3ddca76e3fef03 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy/_callers.py 52014cde8cd180a9ce11c26f650da87f 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy/_hooks.py aaca656923cbfc076e00fc0a2e501c40 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy/_manager.py 47c75386c879a822b566b7ed0467ff23 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy/_result.py f67e22f86f0110ad0e56d7dba644edbf 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy/_tracing.py 8e1768c6ee87c12182f64a08b9b2900d 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy/_version.py 11914a3f648f9d72b429b6d75658fd8c 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy/_warnings.py df385a93e4467673cc5b0301b2f891f0 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy/py.typed d41d8cd98f00b204e9800998ecf8427e 1788715681
+dir /usr/lib/python3.14/site-packages/pluggy-1.6.0.dist-info
+obj /usr/lib/python3.14/site-packages/pluggy-1.6.0.dist-info/METADATA 14b838857ccb50b15f0ae50ec5e21413 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy-1.6.0.dist-info/WHEEL d8484b2712d6275b37660ce7c74212ff 1788715681
+obj /usr/lib/python3.14/site-packages/pluggy-1.6.0.dist-info/top_level.txt b81113156d7d3039bb839fa74bed02cd 1788715681
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/pluggy-1.6.0
+obj /usr/share/doc/pluggy-1.6.0/README.rst.bz2 05a6435d2c9489177f79e375c2d9d01f 1788715682

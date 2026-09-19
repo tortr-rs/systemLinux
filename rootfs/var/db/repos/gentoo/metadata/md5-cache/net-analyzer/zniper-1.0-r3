@@ -1,0 +1,14 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=compile install prepare
+DEPEND=net-libs/libpcap sys-libs/ncurses:=
+DESCRIPTION=Displays and kill active TCP connections seen by the selected interface
+EAPI=8
+HOMEPAGE=http://www.signedness.org/tools/
+INHERIT=toolchain-funcs
+KEYWORDS=amd64 x86
+LICENSE=BSD
+RDEPEND=net-libs/libpcap sys-libs/ncurses:=
+SLOT=0
+SRC_URI=https://dev.gentoo.org/~jsmolic/distfiles/zniper-1.0.tgz
+_eclasses_=toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=77163b550c4e8058da9548971e730ccb

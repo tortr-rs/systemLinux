@@ -1,0 +1,49 @@
+dir /usr
+dir /usr/include
+dir /usr/include/readline
+obj /usr/include/readline/chardefs.h dd6ee12c868d93b2417540ffe14a31bb 1767534557
+obj /usr/include/readline/history.h dca656ed809a0de2dcd2771cb9aee436 1767534557
+obj /usr/include/readline/keymaps.h 4174d5e02ce3504d4075b50ea62862bf 1767534557
+obj /usr/include/readline/readline.h ee31324034a8900b858ed9b526a700a8 1767534557
+obj /usr/include/readline/rlconf.h 8db0de94cb1e20bf7cfe3a031562eb22 1767534557
+obj /usr/include/readline/rlmbutil.h 1e811e1e6383132d7c3a9414d2721fe6 1767534557
+obj /usr/include/readline/rlstdc.h 58698eea0dcaa378f53dab1422ceb64b 1767534557
+obj /usr/include/readline/rltypedefs.h eb8586e3b4491e64d803c55a889a8493 1767534557
+obj /usr/include/readline/tilde.h 9228b7c96b20abc7fc48559137a9377c 1767534557
+dir /usr/lib64
+sym /usr/lib64/libhistory.so -> libhistory.so.8 1789354108
+sym /usr/lib64/libhistory.so.8 -> libhistory.so.8.3 1789354108
+obj /usr/lib64/libhistory.so.8.3 97d7da33810377ba4fcf6668262101c5 1767534558
+sym /usr/lib64/libreadline.so -> libreadline.so.8 1789354108
+sym /usr/lib64/libreadline.so.8 -> libreadline.so.8.3 1789354108
+obj /usr/lib64/libreadline.so.8.3 de7112383c14bc6593692ffbafbd9fd7 1767534558
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/history.pc 7ed6b48f0cc8d71089309626a36c776a 1767534557
+obj /usr/lib64/pkgconfig/readline.pc 4c9b9683e9f6035dc6aad08373bbe7b7 1767534557
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/readline-8.3_p3
+obj /usr/share/doc/readline-8.3_p3/CHANGELOG.bz2 84e0a067da851a8bdedb967780d3bab0 1767534557
+obj /usr/share/doc/readline-8.3_p3/CHANGES.bz2 63f4f3800763e649f85305946712e551 1767534557
+obj /usr/share/doc/readline-8.3_p3/INSTALL.bz2 a16d9767498d055117160e70f6dbf59c 1767534557
+obj /usr/share/doc/readline-8.3_p3/NEWS.bz2 cf7bdba6ccf3ad28b4c8b294a22a5c6d 1767534557
+obj /usr/share/doc/readline-8.3_p3/README.bz2 31365a36d185440987fba541e994db44 1767534557
+obj /usr/share/doc/readline-8.3_p3/USAGE.bz2 d9a422147ea168db64c8e5f7f6036eab 1767534557
+dir /usr/share/doc/readline-8.3_p3/html
+obj /usr/share/doc/readline-8.3_p3/html/history.html a0ec2953df0d07a42d3d1c03cbed4fa0 1767534557
+obj /usr/share/doc/readline-8.3_p3/html/readline.html 96f06187ee2e74044b7e7e1d646cd230 1767534557
+obj /usr/share/doc/readline-8.3_p3/html/rluserman.html f1096bc6a44bbb91f95971cb47796c33 1767534557
+dir /usr/share/doc/readline-8.3_p3/ps
+obj /usr/share/doc/readline-8.3_p3/ps/history.ps.bz2 f7e851e8ba3ce6641d7f5a3525ebf276 1767534557
+obj /usr/share/doc/readline-8.3_p3/ps/history_3.ps.bz2 252d24fb003a2eb9837a453c847d08a0 1767534557
+obj /usr/share/doc/readline-8.3_p3/ps/readline.ps.bz2 a8b0658153471c78b20cfc1561d2a437 1767534557
+obj /usr/share/doc/readline-8.3_p3/ps/readline_3.ps.bz2 0d275786c32487f3345108a40d5d17c7 1767534557
+obj /usr/share/doc/readline-8.3_p3/ps/rluserman.ps.bz2 ef203be373cbc1709ec404d647be78a5 1767534557
+dir /usr/share/info
+obj /usr/share/info/history.info.bz2 78bf4b72797312a64760dba34d05adfe 1767534557
+obj /usr/share/info/readline.info.bz2 bc4229812c49a83e3e3f9c5476f14327 1767534557
+obj /usr/share/info/rluserman.info.bz2 55d3a42afe02f7f407df531a962b88be 1767534557
+dir /usr/share/man
+dir /usr/share/man/man3
+obj /usr/share/man/man3/history.3.bz2 e17fef482f8bb6dc2c7690804fa5142b 1767534557
+obj /usr/share/man/man3/readline.3.bz2 cce13d180e79aa302bf344b6de85e0d7 1767534557

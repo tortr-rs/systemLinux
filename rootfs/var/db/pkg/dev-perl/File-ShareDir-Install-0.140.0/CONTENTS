@@ -1,0 +1,19 @@
+dir /usr
+dir /usr/lib64
+dir /usr/lib64/perl5
+dir /usr/lib64/perl5/vendor_perl
+dir /usr/lib64/perl5/vendor_perl/5.42
+dir /usr/lib64/perl5/vendor_perl/5.42/File
+dir /usr/lib64/perl5/vendor_perl/5.42/File/ShareDir
+obj /usr/lib64/perl5/vendor_perl/5.42/File/ShareDir/Install.pm 076493d4c18ea53e6bb27d1ed5d25952 1763921577
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/File
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/File/ShareDir
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/File/ShareDir/Install
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/File/ShareDir/Install/.packlist 3e9f75e5088ea043a69e4db9e66a7ef5 1763921577
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/File-ShareDir-Install-0.140.0
+obj /usr/share/doc/File-ShareDir-Install-0.140.0/Changes.bz2 6cd5c93d5fc588f3ecd93a7dae62404a 1763921578
+obj /usr/share/doc/File-ShareDir-Install-0.140.0/README.bz2 dac5903d7717b05d1e65ba7ad036905e 1763921578

@@ -1,0 +1,10 @@
+prefix=/usr
+includedir=${prefix}/include
+libdir=${prefix}/lib64
+
+Name: libkmod
+Description: Library to deal with kernel modules
+Version: 34.2
+Requires.private: libzstd >=  1.4.4, liblzma >=  4.99, zlib >=  0
+Libs: -L${libdir} -lkmod
+Cflags: -I${includedir}

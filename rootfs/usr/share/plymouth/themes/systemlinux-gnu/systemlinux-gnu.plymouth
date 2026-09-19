@@ -1,0 +1,10 @@
+[Plymouth Theme]
+Name=systemLinux GNU Text
+Description=Brutalist text mode splash displaying the GNU Horns mascot logo
+ModuleName=ubuntu-text
+
+[ubuntu-text]
+title=systemLinux v0.2
+black=0x000000
+white=0xffffff
+light_cyan=0x00ffff

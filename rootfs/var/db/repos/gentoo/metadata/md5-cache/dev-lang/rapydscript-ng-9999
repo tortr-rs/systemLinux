@@ -1,0 +1,12 @@
+BDEPEND=app-arch/libarchive net-libs/nodejs >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install test unpack
+DESCRIPTION=Pythonic JavaScript that doesn't suck
+EAPI=8
+HOMEPAGE=https://github.com/kovidgoyal/rapydscript-ng
+INHERIT=git-r3 edo
+LICENSE=BSD
+PROPERTIES=live
+RDEPEND=net-libs/nodejs
+SLOT=0
+_eclasses_=edo	a5e294016aa84979fcb2459749eb80b2	git-r3	e6c2f983e006e805160436c75a0c1562
+_md5_=12d546ba9cb96d819ea12dd59fa40385

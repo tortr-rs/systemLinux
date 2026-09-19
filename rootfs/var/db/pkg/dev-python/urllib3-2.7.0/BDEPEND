@@ -1,0 +1,1 @@
+dev-python/hatch-vcs[python_targets_python3_14(-)] dev-lang/python:3.14[ssl(+)] >=dev-python/gpep517-16[python_targets_python3_14(-)] dev-python/hatchling[python_targets_python3_14(-)]

@@ -1,0 +1,22 @@
+--- a/settings.cc
++++ b/settings.cc
+@@ -101,14 +101,14 @@
+ string defaultPDFViewer="open";
+ string defaultHTMLViewer="open";
+ #else
+-string defaultPSViewer="evince";
+-string defaultPDFViewer="evince";
+-string defaultHTMLViewer="google-chrome";
++string defaultPSViewer="xdg-open";
++string defaultPDFViewer="xdg-open";
++string defaultHTMLViewer="xdg-open";
+ #endif
+ string defaultGhostscript="gs";
+ string defaultGhostscriptLibrary="";
+-string defaultDisplay="display";
+-string defaultAnimate="magick";
++string defaultDisplay="xdg-open";
++string defaultAnimate="xdg-open";
+ void queryRegistry() {}
+ const string dirsep="/";
+ 

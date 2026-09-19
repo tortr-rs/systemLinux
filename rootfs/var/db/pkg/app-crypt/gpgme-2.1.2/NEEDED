@@ -1,0 +1,4 @@
+/usr/lib64/libgpgme.so.45.1.2 libassuan.so.9,libgpg-error.so.0,libc.so.6,ld-linux-x86-64.so.2
+/usr/bin/gnupg-key-manage libgpgme.so.45,libgpg-error.so.0,libc.so.6
+/usr/bin/gpgme-json libm.so.6,libgpgme.so.45,libgpg-error.so.0,libc.so.6
+/usr/bin/gpgme-tool libgpgme.so.45,libassuan.so.9,libgpg-error.so.0,libc.so.6

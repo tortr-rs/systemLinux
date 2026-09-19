@@ -1,0 +1,1 @@
+|| ( =dev-lang/perl-5.42* ~perl-core/ExtUtils-MakeMaker-7.760.0 ) dev-lang/perl:0/5.42= !<perl-core/ExtUtils-MakeMaker-7.760.0 !>perl-core/ExtUtils-MakeMaker-7.760.0-r999

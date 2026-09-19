@@ -1,0 +1,1 @@
+app-text/scdoc >=dev-build/meson-1.7.0 virtual/pkgconfig virtual/pkgconfig >=dev-build/meson-1.2.3 app-alternatives/ninja dev-build/meson-format-array

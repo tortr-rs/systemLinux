@@ -1,0 +1,1 @@
+bluetooth build debug +ensurepip examples gdbm jit libedit +ncurses pgo +readline +sqlite +ssl tail-call-interp test tk valgrind +llvm_slot_19 verify-sig

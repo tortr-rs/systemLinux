@@ -1,0 +1,1 @@
+|| ( >=app-arch/xz-utils-5.4.0 app-arch/plzip app-arch/pdlzip app-arch/lzip )

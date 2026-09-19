@@ -1,0 +1,15 @@
+BDEPEND=xft? ( virtual/pkgconfig )
+DEFINED_PHASES=configure install postinst prepare
+DEPEND=x11-libs/libX11:= xft? ( x11-libs/libXft:= ) x11-base/xorg-proto
+DESCRIPTION=Vietnamese input keyboard for X
+EAPI=8
+HOMEPAGE=https://xvnkb.sourceforge.net/
+INHERIT=toolchain-funcs
+IUSE=spell xft
+KEYWORDS=amd64 ppc x86
+LICENSE=GPL-2+
+RDEPEND=x11-libs/libX11:= xft? ( x11-libs/libXft:= )
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/xvnkb/xvnkb-0.2.11.tar.bz2
+_eclasses_=toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=faa30cebd6ed2dedc0762eb0d1b3c016

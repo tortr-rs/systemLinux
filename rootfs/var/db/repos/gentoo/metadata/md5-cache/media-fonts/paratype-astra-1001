@@ -1,0 +1,13 @@
+BDEPEND=app-arch/unzip X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DEFINED_PHASES=install postinst postrm setup
+DESCRIPTION=ParaType Astra Sans/Serif fonts metrically compatible with Times New Roman
+EAPI=7
+HOMEPAGE=https://www.paratype.ru/cinfo/news.asp?NewsId=3469
+INHERIT=font
+IUSE=X X
+KEYWORDS=amd64 ~arm64 ~loong ~riscv x86
+LICENSE=OFL-1.1
+SLOT=0
+SRC_URI=http://astralinux.com/images/fonts/PTAstraSans&Serif_TTF_ver1001.zip -> paratype-astra-1001.zip
+_eclasses_=font	6d0c60c855c05ae2ba808d300440ded2
+_md5_=7b82a66c0f4eeeb5897f6d8cc9cd2293

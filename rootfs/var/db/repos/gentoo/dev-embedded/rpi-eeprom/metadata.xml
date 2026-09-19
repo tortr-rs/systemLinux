@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>ceamac@gentoo.org</email>
+		<name>Viorel Munteanu</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">raspberrypi/rpi-eeprom</remote-id>
+	</upstream>
+	<use>
+		<flag name="pi4">Install firmware files for the Raspberry Pi 4</flag>
+		<flag name="pi5">Install firmware files for the Raspberry Pi 5</flag>
+	</use>
+</pkgmetadata>

@@ -1,0 +1,17 @@
+prefix=/usr
+exec_prefix=${prefix}
+includedir=${prefix}/include
+libdir=/usr/lib64
+datarootdir=/usr/share
+datadir=/usr/share
+
+Name: libpkgconf
+Description: a library for accessing and manipulating development framework configuration
+URL: https://github.com/pkgconf/pkgconf
+Maintainer: Ariadne Conill <ariadne@ariadne.space>
+License: ISC
+License.file: ${datadir}/doc/pkgconf/COPYING
+Source: https://github.com/pkgconf/pkgconf
+Version: 3.0.7
+CFlags: -I${includedir}/pkgconf
+Libs: -L${libdir} -lpkgconf

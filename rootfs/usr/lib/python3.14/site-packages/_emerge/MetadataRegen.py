@@ -1,0 +1,225 @@
+# Copyright 1999-2025 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+import asyncio
+
+from _emerge.EbuildMetadataPhase import EbuildMetadataPhase
+
+import portage
+from portage import os
+from portage.cache.cache_errors import CacheError
+from portage.dep import _repo_separator
+from portage.util._async.AsyncScheduler import AsyncScheduler
+
+
+async def metadata_regen_retry(*args, max_tries=3, **kwargs) -> int:
+    """
+    Since MetadataRegen is not well suited for internal retry, create
+    a new MetadataRegen instance for each retry. Returns the returncode
+    from the last MetadataRegen instance, which will only be non-zero
+    if all retries failed.
+    """
+    tries = max_tries
+    scheduler = MetadataRegen(*args, **kwargs)
+    scheduler.start()
+    try:
+        await scheduler.async_wait()
+    except asyncio.CancelledError:
+        scheduler.terminate()
+        await scheduler.async_wait()
+        raise
+    cpv_failed = scheduler.cpv_failed.copy()
+    tries -= 1
+    while scheduler.cp_retry and tries > 0:
+        kwargs["cp_iter"] = iter(scheduler.cp_retry)
+        scheduler = MetadataRegen(*args, **kwargs)
+        scheduler.start()
+        try:
+            await scheduler.async_wait()
+        except asyncio.CancelledError:
+            scheduler.terminate()
+            await scheduler.async_wait()
+            raise
+        cpv_failed.update(scheduler.cpv_failed)
+        cpv_failed.difference_update(scheduler.cpv_successful)
+        tries -= 1
+
+    # Account for failures from all MetadataRegen instances, since we
+    # only retry when the returncode is unexpected.
+    if cpv_failed:
+        scheduler.returncode |= 1
+
+    return scheduler.returncode
+
+
+class MetadataRegen(AsyncScheduler):
+    def __init__(self, portdb, cp_iter=None, consumer=None, write_auxdb=True, **kwargs):
+        AsyncScheduler.__init__(self, **kwargs)
+        self._portdb = portdb
+        self._write_auxdb = write_auxdb
+        self._global_cleanse = False
+        if cp_iter is None:
+            cp_iter = self._iter_every_cp()
+            # We can globally cleanse stale cache only if we
+            # iterate over every single cp.
+            self._global_cleanse = True
+        self._cp_iter = cp_iter
+        self._consumer = consumer
+
+        self._valid_pkgs = set()
+        self._cp_set = set()
+        self._process_iter = self._iter_metadata_processes()
+        self._running_tasks = set()
+        self.cp_retry = set()
+        self.cpv_failed = set()
+        self.cpv_successful = set()
+
+    def _next_task(self):
+        return next(self._process_iter)
+
+    def _iter_every_cp(self):
+        # List categories individually, in order to start yielding quicker,
+        # and in order to reduce latency in case of a signal interrupt.
+        cp_all = self._portdb.cp_all
+        for category in sorted(self._portdb.categories):
+            yield from cp_all(categories=(category,))
+
+    def _iter_metadata_processes(self):
+        portdb = self._portdb
+        valid_pkgs = self._valid_pkgs
+        cp_set = self._cp_set
+        consumer = self._consumer
+        config_pool = []
+
+        portage.writemsg_stdout("Regenerating cache entries...\n")
+        for cp in self._cp_iter:
+            if self._terminated.is_set():
+                break
+            cp_set.add(cp)
+            portage.writemsg_stdout(f"Processing {cp}\n")
+            # We iterate over portdb.porttrees, since it's common to
+            # tweak this attribute in order to adjust repo selection.
+            for mytree in portdb.porttrees:
+                repo = portdb.repositories.get_repo_for_location(mytree)
+                cpv_list = portdb.cp_list(cp, mytree=[repo.location])
+                for cpv in cpv_list:
+                    if self._terminated.is_set():
+                        break
+                    valid_pkgs.add(cpv)
+                    ebuild_path, repo_path = portdb.findname2(cpv, myrepo=repo.name)
+                    if ebuild_path is None:
+                        raise AssertionError(
+                            f"ebuild not found for '{cpv}{_repo_separator}{repo.name}'"
+                        )
+                    metadata, ebuild_hash = portdb._pull_valid_cache(
+                        cpv, ebuild_path, repo_path
+                    )
+                    if metadata is not None:
+                        if consumer is not None:
+                            consumer(cpv, repo_path, metadata, ebuild_hash, True)
+                        continue
+
+                    if config_pool:
+                        settings = config_pool.pop()
+                    else:
+                        settings = portage.config(clone=portdb.settings)
+
+                    deallocate_config = self.scheduler.create_future()
+                    deallocate_config.add_done_callback(
+                        lambda future: config_pool.append(future.result())
+                    )
+
+                    yield EbuildMetadataPhase(
+                        cpv=cpv,
+                        ebuild_hash=ebuild_hash,
+                        portdb=portdb,
+                        repo_path=repo_path,
+                        settings=settings,
+                        deallocate_config=deallocate_config,
+                        write_auxdb=self._write_auxdb,
+                    )
+
+    def _cleanup(self):
+        super()._cleanup()
+
+        portdb = self._portdb
+        dead_nodes = {}
+
+        if self._terminated.is_set():
+            portdb.flush_cache()
+            return
+
+        if self._global_cleanse:
+            for mytree in portdb.porttrees:
+                try:
+                    dead_nodes[mytree] = set(portdb.auxdb[mytree])
+                except CacheError as e:
+                    portage.writemsg(
+                        "Error listing cache entries for "
+                        + f"'{mytree}': {e}, continuing...\n",
+                        noiselevel=-1,
+                    )
+                    del e
+                    dead_nodes = None
+                    break
+        else:
+            cp_set = self._cp_set
+            cpv_getkey = portage.cpv_getkey
+            for mytree in portdb.porttrees:
+                try:
+                    dead_nodes[mytree] = {
+                        cpv for cpv in portdb.auxdb[mytree] if cpv_getkey(cpv) in cp_set
+                    }
+                except CacheError as e:
+                    portage.writemsg(
+                        "Error listing cache entries for "
+                        + f"'{mytree}': {e}, continuing...\n",
+                        noiselevel=-1,
+                    )
+                    del e
+                    dead_nodes = None
+                    break
+
+        if dead_nodes:
+            for y in self._valid_pkgs:
+                for mytree in portdb.porttrees:
+                    if portdb.findname2(y, mytree=mytree)[0]:
+                        dead_nodes[mytree].discard(y)
+
+            for mytree, nodes in dead_nodes.items():
+                auxdb = portdb.auxdb[mytree]
+                for y in nodes:
+                    try:
+                        del auxdb[y]
+                    except (KeyError, CacheError):
+                        pass
+
+        portdb.flush_cache()
+
+    def _task_exit(self, metadata_process):
+        if metadata_process.returncode == os.EX_OK:
+            self.cpv_successful.add(metadata_process.cpv)
+        else:
+            self.cpv_failed.add(metadata_process.cpv)
+            if metadata_process.returncode != 1:
+                # Retry if the returncode was unexpected.
+                self.cp_retry.add(metadata_process.cpv.cp)
+            self._valid_pkgs.discard(metadata_process.cpv)
+            if not self._terminated_tasks:
+                portage.writemsg(
+                    f"Error processing {metadata_process.cpv} with returncode {metadata_process.returncode}, continuing...\n",
+                    noiselevel=-1,
+                )
+
+        if self._consumer is not None:
+            # On failure, still notify the consumer (in this case the metadata
+            # argument is None).
+            self._consumer(
+                metadata_process.cpv,
+                metadata_process.repo_path,
+                metadata_process.metadata,
+                metadata_process.ebuild_hash,
+                metadata_process.eapi_supported,
+            )
+
+        AsyncScheduler._task_exit(self, metadata_process)

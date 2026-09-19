@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install preinst prepare setup test
+DEPEND=>=virtual/jdk-1.8:* >=dev-java/java-config-2.2.0-r3
+DESCRIPTION=Generates META-INF/services files automatically
+EAPI=8
+HOMEPAGE=https://metainf-services.kohsuke.org/
+INHERIT=java-pkg-2 java-pkg-simple
+KEYWORDS=amd64
+LICENSE=MIT
+RDEPEND=>=virtual/jre-1.8:* >=dev-java/java-config-2.2.0-r3
+SLOT=0
+SRC_URI=https://github.com/kohsuke/metainf-services/archive/metainf-services-1.11.tar.gz
+_eclasses_=java-pkg-2	438c2725ea326202d7fc1eb31af76813	java-pkg-simple	df1fc43a5017ec8f5d23007b23731474	java-utils-2	4fa0be92748bc228f31bd845d285d7f9
+_md5_=67b69c06c1e4c3d2be6cb1d7f1c96165

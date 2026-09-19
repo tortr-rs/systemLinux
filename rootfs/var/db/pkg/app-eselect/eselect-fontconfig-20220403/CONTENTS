@@ -1,0 +1,5 @@
+dir /usr
+dir /usr/share
+dir /usr/share/eselect
+dir /usr/share/eselect/modules
+obj /usr/share/eselect/modules/fontconfig.eselect fab6362b3eb6b7781eed983dea8d374a 1710684829

@@ -1,0 +1,17 @@
+dir /usr
+dir /usr/lib64
+dir /usr/lib64/perl5
+dir /usr/lib64/perl5/vendor_perl
+dir /usr/lib64/perl5/vendor_perl/5.42
+dir /usr/lib64/perl5/vendor_perl/5.42/YAML
+obj /usr/lib64/perl5/vendor_perl/5.42/YAML/Tiny.pm 87785c0e0bab2b4c9b05a90f3d1da05f 1763921339
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/YAML
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/YAML/Tiny
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/YAML/Tiny/.packlist 9fa628b7a4d2ab6934f44ce4a06c125f 1763921339
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/YAML-Tiny-1.760.0-r1
+obj /usr/share/doc/YAML-Tiny-1.760.0-r1/Changes.bz2 8010b211dbf155ad10e4257e0ebedddb 1763921339
+obj /usr/share/doc/YAML-Tiny-1.760.0-r1/README.bz2 92e241b5f56db27782ebd3852c2935f9 1763921339

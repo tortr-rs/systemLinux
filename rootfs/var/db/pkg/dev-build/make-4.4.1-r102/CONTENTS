@@ -1,0 +1,119 @@
+dir /usr
+dir /usr/share
+dir /usr/share/locale
+dir /usr/share/locale/he
+dir /usr/share/locale/he/LC_MESSAGES
+obj /usr/share/locale/he/LC_MESSAGES/make.mo 9874db4b819b7402aff00bb821870468 1789851063
+dir /usr/share/locale/es
+dir /usr/share/locale/es/LC_MESSAGES
+obj /usr/share/locale/es/LC_MESSAGES/make.mo 3ccf9d75ff6c05701f576c45ac6ef18a 1789851063
+dir /usr/share/locale/sv
+dir /usr/share/locale/sv/LC_MESSAGES
+obj /usr/share/locale/sv/LC_MESSAGES/make.mo 11435434303fbf09dd749e1078c536ca 1789851063
+dir /usr/share/locale/fi
+dir /usr/share/locale/fi/LC_MESSAGES
+obj /usr/share/locale/fi/LC_MESSAGES/make.mo 682bfa9f44879b20c7f8d14cf9e8152c 1789851063
+dir /usr/share/locale/tr
+dir /usr/share/locale/tr/LC_MESSAGES
+obj /usr/share/locale/tr/LC_MESSAGES/make.mo b0eb7a2102487f985e1c39f93f9f6ac8 1789851063
+dir /usr/share/locale/pt
+dir /usr/share/locale/pt/LC_MESSAGES
+obj /usr/share/locale/pt/LC_MESSAGES/make.mo 49f40757aa1b38aea5d3d659d240aba5 1789851063
+dir /usr/share/locale/nl
+dir /usr/share/locale/nl/LC_MESSAGES
+obj /usr/share/locale/nl/LC_MESSAGES/make.mo 8b42d276bb029ce6c74b7f8bf5f77058 1789851063
+dir /usr/share/locale/hr
+dir /usr/share/locale/hr/LC_MESSAGES
+obj /usr/share/locale/hr/LC_MESSAGES/make.mo 56264770f1c5f87ecef2cfa2f8b6c225 1789851063
+dir /usr/share/locale/zh_TW
+dir /usr/share/locale/zh_TW/LC_MESSAGES
+obj /usr/share/locale/zh_TW/LC_MESSAGES/make.mo cb746176a5a52d3228dbc3a877b26e15 1789851063
+dir /usr/share/locale/ro
+dir /usr/share/locale/ro/LC_MESSAGES
+obj /usr/share/locale/ro/LC_MESSAGES/make.mo 4b9925de7c2407c9e3bc8c1decd9b855 1789851063
+dir /usr/share/locale/ko
+dir /usr/share/locale/ko/LC_MESSAGES
+obj /usr/share/locale/ko/LC_MESSAGES/make.mo 35241eccc56a8bdfa800f63b6d5baa3c 1789851063
+dir /usr/share/locale/bg
+dir /usr/share/locale/bg/LC_MESSAGES
+obj /usr/share/locale/bg/LC_MESSAGES/make.mo 2de8799bdf8460a2df73d36ee48ab8f1 1789851063
+dir /usr/share/locale/be
+dir /usr/share/locale/be/LC_MESSAGES
+obj /usr/share/locale/be/LC_MESSAGES/make.mo a49b1f3bd9defd4a819eb44b416eaf93 1789851063
+dir /usr/share/locale/gl
+dir /usr/share/locale/gl/LC_MESSAGES
+obj /usr/share/locale/gl/LC_MESSAGES/make.mo 925a65b60a55864a091a5fb6609b232e 1789851063
+dir /usr/share/locale/vi
+dir /usr/share/locale/vi/LC_MESSAGES
+obj /usr/share/locale/vi/LC_MESSAGES/make.mo e82d0c203a0830368b64426c818013db 1789851063
+dir /usr/share/locale/ru
+dir /usr/share/locale/ru/LC_MESSAGES
+obj /usr/share/locale/ru/LC_MESSAGES/make.mo ba30e6ed15950e49c92fa0b61900259f 1789851063
+dir /usr/share/locale/da
+dir /usr/share/locale/da/LC_MESSAGES
+obj /usr/share/locale/da/LC_MESSAGES/make.mo 76eea78d7c64b5ba52380dbc73bc13cc 1789851063
+dir /usr/share/locale/uk
+dir /usr/share/locale/uk/LC_MESSAGES
+obj /usr/share/locale/uk/LC_MESSAGES/make.mo 03e0fafcfa87f9db192f0f5dd9fee550 1789851063
+dir /usr/share/locale/id
+dir /usr/share/locale/id/LC_MESSAGES
+obj /usr/share/locale/id/LC_MESSAGES/make.mo 573824db43273fc012b699ad0eec373b 1789851063
+dir /usr/share/locale/pt_BR
+dir /usr/share/locale/pt_BR/LC_MESSAGES
+obj /usr/share/locale/pt_BR/LC_MESSAGES/make.mo 4fecce1e412abbcff230618fbd520555 1789851063
+dir /usr/share/locale/fr
+dir /usr/share/locale/fr/LC_MESSAGES
+obj /usr/share/locale/fr/LC_MESSAGES/make.mo 19ee33ffc5247c883c635901e3b7f46a 1789851063
+dir /usr/share/locale/ga
+dir /usr/share/locale/ga/LC_MESSAGES
+obj /usr/share/locale/ga/LC_MESSAGES/make.mo 6610fe02c11ee199f4f9dd0f6ea9de80 1789851063
+dir /usr/share/locale/ja
+dir /usr/share/locale/ja/LC_MESSAGES
+obj /usr/share/locale/ja/LC_MESSAGES/make.mo 31d8b160b4318b9b1e91c6ef5b7ee162 1789851063
+dir /usr/share/locale/lt
+dir /usr/share/locale/lt/LC_MESSAGES
+obj /usr/share/locale/lt/LC_MESSAGES/make.mo b722d7f2ee660fc0472541a0417ca269 1789851063
+dir /usr/share/locale/cs
+dir /usr/share/locale/cs/LC_MESSAGES
+obj /usr/share/locale/cs/LC_MESSAGES/make.mo a899ee81d5a45dabd205d20e08c18878 1789851063
+dir /usr/share/locale/it
+dir /usr/share/locale/it/LC_MESSAGES
+obj /usr/share/locale/it/LC_MESSAGES/make.mo 6fa7778ace82118cd68c3a6848aabd35 1789851063
+dir /usr/share/locale/de
+dir /usr/share/locale/de/LC_MESSAGES
+obj /usr/share/locale/de/LC_MESSAGES/make.mo f5201ffd2ddcb26308938bc27334632c 1789851063
+dir /usr/share/locale/sr
+dir /usr/share/locale/sr/LC_MESSAGES
+obj /usr/share/locale/sr/LC_MESSAGES/make.mo bcc70edc86d8d0b007218d993d44eb8f 1789851063
+dir /usr/share/locale/pl
+dir /usr/share/locale/pl/LC_MESSAGES
+obj /usr/share/locale/pl/LC_MESSAGES/make.mo b46dc6b8151b741598d5ffb613076ee5 1789851063
+dir /usr/share/locale/zh_CN
+dir /usr/share/locale/zh_CN/LC_MESSAGES
+obj /usr/share/locale/zh_CN/LC_MESSAGES/make.mo 74c88795427964ce16dfd465957cdc91 1789851063
+dir /usr/share/info
+obj /usr/share/info/make.info-1.bz2 12856227a3a2520748d11d798fc66676 1789851063
+obj /usr/share/info/make.info-2.bz2 ae354f862edd0979dd9e93a3ee596aaa 1789851063
+obj /usr/share/info/make.info-3.bz2 8cef94e41733a8b575538cf7f45adb1b 1789851063
+obj /usr/share/info/make.info.bz2 388849d14c320d4c55298e770ad461be 1789851063
+dir /usr/share/doc
+dir /usr/share/doc/make-4.4.1-r102
+obj /usr/share/doc/make-4.4.1-r102/README.customs.bz2 cea80dc190a31a78428ae99707f9a2a8 1789851063
+obj /usr/share/doc/make-4.4.1-r102/NEWS.bz2 8af8a31b83ccfa060b8548dc8faffad2 1789851063
+obj /usr/share/doc/make-4.4.1-r102/README.VMS.bz2 69dc4069e5b2a4b025d397f44471592e 1789851063
+obj /usr/share/doc/make-4.4.1-r102/README.OS2.bz2 37a4887617e057ede7a67c2fde319f11 1789851063
+obj /usr/share/doc/make-4.4.1-r102/README.zOS.bz2 d8ae243b088e37374dfb1662cc362650 1789851063
+obj /usr/share/doc/make-4.4.1-r102/README.bz2 37312240f9e71fea0cae2c5ee6af96dd 1789851063
+obj /usr/share/doc/make-4.4.1-r102/README.Amiga.bz2 969e0e9bd053718c4da37e85fa94426c 1789851063
+obj /usr/share/doc/make-4.4.1-r102/README.W32.bz2 8aa6e2ce5da1189d85a36548fc3700c8 1789851063
+obj /usr/share/doc/make-4.4.1-r102/README.DOS.bz2 ac61d791a5ccbb35d9db6e31d1be0b50 1789851063
+obj /usr/share/doc/make-4.4.1-r102/AUTHORS.bz2 bf7159b8e2e51b313b8199e41bf613e0 1789851063
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/gmake.1.bz2 9d983727a0ebea7a6173a1afede464ff 1789851063
+sym /usr/share/man/man1/make.1.bz2 -> gmake.1.bz2 1789851064
+dir /usr/bin
+obj /usr/bin/gmake c0e7f5addd4b9002766709c5e4a5a8ef 1789851064
+sym /usr/bin/make -> gmake 1789851063
+dir /usr/include
+obj /usr/include/gnumake.h e310acabe26bcda8bc97aad4c86bb9da 1789851063

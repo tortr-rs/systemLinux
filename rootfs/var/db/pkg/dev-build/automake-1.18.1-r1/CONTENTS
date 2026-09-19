@@ -1,0 +1,148 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/aclocal-1.18 a7fb73a3dc18cd7a611f83eb0782ccaf 1780764251
+obj /usr/bin/automake-1.18 f97264489415bece66ce76f5f317bb87 1780764251
+dir /usr/share
+dir /usr/share/aclocal-1.18
+obj /usr/share/aclocal-1.18/amversion.m4 b0907ef036d921b4f495a788024b6bc6 1780764251
+obj /usr/share/aclocal-1.18/ar-lib.m4 0e159fabbeee00714764dd1541c3f7ce 1780764251
+obj /usr/share/aclocal-1.18/as.m4 c0b7e833cc132e6febafb894836883a2 1780764251
+obj /usr/share/aclocal-1.18/auxdir.m4 21258e8725b0f697b60ce34d6fa63e00 1780764251
+obj /usr/share/aclocal-1.18/cond-if.m4 1a9222bfc1d4e1db90a617143eaea34b 1780764251
+obj /usr/share/aclocal-1.18/cond.m4 7021e2a27efc05bbc6dc4af04e7552bf 1780764251
+obj /usr/share/aclocal-1.18/depend.m4 f0f181a85162737a72561da3e03fe16a 1780764251
+obj /usr/share/aclocal-1.18/depout.m4 7d1f2592525518806bcf01f4a736c3f7 1780764251
+obj /usr/share/aclocal-1.18/dmalloc.m4 573d1198a9210939105236cb63fa921f 1780764251
+obj /usr/share/aclocal-1.18/extra-recurs.m4 b0d6f7f5056298fd7997dff2896ed8b5 1780764251
+obj /usr/share/aclocal-1.18/gcj.m4 000547e61cb7e58c3666b254b6c0122b 1780764251
+obj /usr/share/aclocal-1.18/init.m4 1bef6369561750b650e3f58be9196162 1780764251
+obj /usr/share/aclocal-1.18/install-sh.m4 3bc1f9b6d588532c30c3d1f77b7c0845 1780764251
+dir /usr/share/aclocal-1.18/internal
+obj /usr/share/aclocal-1.18/internal/ac-config-macro-dirs.m4 9d5df63ab48403d7cd46460964797e87 1780764251
+obj /usr/share/aclocal-1.18/lead-dot.m4 0bef9e0d998a8d2ad1a651b9136c1495 1780764251
+obj /usr/share/aclocal-1.18/lex.m4 d3d0769f1d7175d9dfdaf48f4e0472e9 1780764251
+obj /usr/share/aclocal-1.18/lispdir.m4 d1da6d77d72519adeba13991a7de6463 1780764251
+obj /usr/share/aclocal-1.18/maintainer.m4 f5aa493ec0a380e9d98fe09650a26313 1780764251
+obj /usr/share/aclocal-1.18/make.m4 ffae31a9ac200c2ee14d1547ab51389e 1780764251
+obj /usr/share/aclocal-1.18/missing.m4 fba32ea8e6b19e1e6353e0f5cf0bcbc8 1780764251
+obj /usr/share/aclocal-1.18/mkdirp.m4 0d247a5203cc9b72a6f2935977edb482 1780764251
+obj /usr/share/aclocal-1.18/obsolete.m4 580e824a444fbb7bec9a68a60f17755b 1780764251
+obj /usr/share/aclocal-1.18/options.m4 e12d3376e8f845ffb473e43b4db7a38a 1780764251
+obj /usr/share/aclocal-1.18/prog-cc-c-o.m4 70ea722f71b90e62d112edc84b660442 1780764251
+obj /usr/share/aclocal-1.18/python.m4 ee61293f0d3a2266fcd08b8f276f8734 1780764251
+obj /usr/share/aclocal-1.18/rmf.m4 a5183c105ea94c7f58aaa3f709ba1714 1780764251
+obj /usr/share/aclocal-1.18/runlog.m4 32842d852612d2d781ce988ed1578232 1780764251
+obj /usr/share/aclocal-1.18/sanity.m4 36475b3c2900bf9d42d51c4500541612 1780764251
+obj /usr/share/aclocal-1.18/silent.m4 a711baf1cc3e5a8533a914d52fb6cfea 1780764251
+obj /usr/share/aclocal-1.18/strip.m4 3c461b31686bee4c5f0e4e7b063852af 1780764251
+obj /usr/share/aclocal-1.18/substnot.m4 240cc958c020c8964aeb08690f3231a8 1780764251
+obj /usr/share/aclocal-1.18/tar.m4 4913edc73741bb289f3150e9ef4fac7e 1780764251
+obj /usr/share/aclocal-1.18/upc.m4 22d66cc54a7f7ff95acc1ac8dfd3c26f 1780764251
+obj /usr/share/aclocal-1.18/vala.m4 70d154b674ac2b74dacb497a70b9a08c 1780764251
+obj /usr/share/aclocal-1.18/xargsn.m4 ccebaa322764dcfcc27cd35a139cb7f4 1780764251
+dir /usr/share/automake-1.18
+dir /usr/share/automake-1.18/Automake
+obj /usr/share/automake-1.18/Automake/ChannelDefs.pm 1a85e374ed5391460036dfff10c1d221 1780764251
+obj /usr/share/automake-1.18/Automake/Channels.pm f648abbf3ee1905cf4a29971f60c4331 1780764251
+obj /usr/share/automake-1.18/Automake/Condition.pm bb8cd85e4cb299a0d1443238e6c8b935 1780764251
+obj /usr/share/automake-1.18/Automake/Config.pm ad1f7c23bed4e3ebf79a47c6d2ea2fa6 1780764251
+obj /usr/share/automake-1.18/Automake/Configure_ac.pm e2243d843095c711f4f07ec12fbb5ce6 1780764251
+obj /usr/share/automake-1.18/Automake/DisjConditions.pm 754e525d3688810d4487c8a485d6ccd3 1780764251
+obj /usr/share/automake-1.18/Automake/FileUtils.pm 2433585a4a24d19210b55ac6d233eb76 1780764251
+obj /usr/share/automake-1.18/Automake/General.pm 9bde1599130ffd6127b2df58782b7fec 1780764251
+obj /usr/share/automake-1.18/Automake/Getopt.pm d21fd8dbb888052be08d954e4d9a5e9c 1780764251
+obj /usr/share/automake-1.18/Automake/Item.pm 13b7832dc7362849d8ce763e49425871 1780764251
+obj /usr/share/automake-1.18/Automake/ItemDef.pm 41f2a0fc8f5c5641738d9786b8f47bdb 1780764251
+obj /usr/share/automake-1.18/Automake/Language.pm 63693bd61681d815f3d1f7a629a3ef09 1780764251
+obj /usr/share/automake-1.18/Automake/Location.pm b205706804aff57ce9a00f6a8d635644 1780764251
+obj /usr/share/automake-1.18/Automake/Options.pm de4c6b9633fa86c96666ed012f633044 1780764251
+obj /usr/share/automake-1.18/Automake/Rule.pm 563fa74fdee2ef9f0e410b613e3c1f2a 1780764251
+obj /usr/share/automake-1.18/Automake/RuleDef.pm 2706ba2fe9c35e65555755e832826cb0 1780764251
+obj /usr/share/automake-1.18/Automake/VarDef.pm 035ec99e5472b62b02f9929db173ce3a 1780764251
+obj /usr/share/automake-1.18/Automake/Variable.pm 0838c52c26374eb34370e63941206163 1780764251
+obj /usr/share/automake-1.18/Automake/Version.pm b8141ab64f598eea29afdf3b63c892a2 1780764251
+obj /usr/share/automake-1.18/Automake/Wrap.pm bff24938d2dcceb5b1e61e4414d602ad 1780764251
+obj /usr/share/automake-1.18/Automake/XFile.pm f9949ff8677aca66506aa1ba68e06f21 1780764251
+obj /usr/share/automake-1.18/COPYING 1ebbd3e34237af26da5dc08a4e440464 1780764251
+obj /usr/share/automake-1.18/INSTALL 95ab3bd34620dc31553c1bd782b9c9d4 1780764251
+dir /usr/share/automake-1.18/am
+obj /usr/share/automake-1.18/am/check.am f669565b132f74aab9ee528345334afb 1780764251
+obj /usr/share/automake-1.18/am/check2.am 8c4d6f6c0fe9cd7fb3935de31a73d464 1780764251
+obj /usr/share/automake-1.18/am/clean-hdr.am 62e53274f7e476b5915ca32e4ca912e0 1780764251
+obj /usr/share/automake-1.18/am/clean.am 6afe661b6eebe2ad8052237d41702419 1780764251
+obj /usr/share/automake-1.18/am/compile.am b4e9abe56418de0d98656c2eb79c018b 1780764251
+obj /usr/share/automake-1.18/am/configure.am 9340ce58d0d5be73fb98dce2162a9d1c 1780764251
+obj /usr/share/automake-1.18/am/data.am 8e682f8a1c93a316ad89de6340d4db16 1780764251
+obj /usr/share/automake-1.18/am/dejagnu.am 4542e02a8a9cec9033669832782a8726 1780764251
+obj /usr/share/automake-1.18/am/depend.am 791c28786fa97875ef523243e1d7e63d 1780764251
+obj /usr/share/automake-1.18/am/depend2.am e77d07e029dcac7ffd9f76e9e03e6e4f 1780764251
+obj /usr/share/automake-1.18/am/distdir.am 60bdd661ce8a2721693d0e58f91bd091 1780764251
+obj /usr/share/automake-1.18/am/footer.am 0acb7d6cc577be97377ff238bc644ad9 1780764251
+obj /usr/share/automake-1.18/am/header-vars.am 6cb2b29b795cf51b529cf55528db7bfb 1780764251
+obj /usr/share/automake-1.18/am/header.am 5b5f5ba8c390278eb36ea8ba263da768 1780764251
+obj /usr/share/automake-1.18/am/inst-vars.am d1e5334a5674af51a55b1756c6a2d948 1780764251
+obj /usr/share/automake-1.18/am/install.am 29ced58b6c8e53a06cac1647b93e80d1 1780764251
+obj /usr/share/automake-1.18/am/java.am fa18a62cac000d239044de93257c411b 1780764251
+obj /usr/share/automake-1.18/am/lang-compile.am f32ce7299537d791b00f0d08326a3b2a 1780764251
+obj /usr/share/automake-1.18/am/lex.am 4dd4402cc4a428c97155137595442288 1780764251
+obj /usr/share/automake-1.18/am/library.am bdeaf3310f84c5dd31bf33cc84cfdb92 1780764251
+obj /usr/share/automake-1.18/am/libs.am 74122e00046035cc69bc7c5ed554573f 1780764251
+obj /usr/share/automake-1.18/am/libtool.am 015b485e1340c8383b50cf79ece401b0 1780764251
+obj /usr/share/automake-1.18/am/lisp.am ffda0fec583bbc997cd33c468b56e47b 1780764251
+obj /usr/share/automake-1.18/am/ltlib.am eeea9858dc77661321a8d9e3e361a1c0 1780764251
+obj /usr/share/automake-1.18/am/ltlibrary.am ba1ae1b83c5b8a9c206ec1a2d390f22e 1780764251
+obj /usr/share/automake-1.18/am/mans-vars.am 8dbaedf7f34b11a71aa8d939559de361 1780764251
+obj /usr/share/automake-1.18/am/mans.am 2b824b948c0901c33ed398e4ae0d22c2 1780764251
+obj /usr/share/automake-1.18/am/program.am 1a731c2093880b304619ccaf46f1d148 1780764251
+obj /usr/share/automake-1.18/am/progs.am 591994c8071471429f269496bb83a733 1780764251
+obj /usr/share/automake-1.18/am/python.am 25da9f369a3d3d6c47403905ab63064d 1780764251
+obj /usr/share/automake-1.18/am/remake-hdr.am 8f5132dd42c682a6e250e38a5de78e78 1780764251
+obj /usr/share/automake-1.18/am/scripts.am df54c12cb3a7309d13b416f1a4768c90 1780764251
+obj /usr/share/automake-1.18/am/subdirs.am 7127f573c6b1c707120d1eed885648af 1780764251
+obj /usr/share/automake-1.18/am/tags.am ebeed1d3debdb03d11e789742283c39a 1780764251
+obj /usr/share/automake-1.18/am/texi-vers.am 1621506048ab8a4dc25e747fc5bb28df 1780764251
+obj /usr/share/automake-1.18/am/texibuild.am 787c07185b69cf9f62d33844316b4d2a 1780764251
+obj /usr/share/automake-1.18/am/texinfos.am a6deee11f9da2321bcfeb75d47cbd039 1780764251
+obj /usr/share/automake-1.18/am/vala.am c7a442cc39280f67160f0ced720f82ec 1780764251
+obj /usr/share/automake-1.18/am/yacc.am 09275a1a22e1fdcc4e898434f8291233 1780764251
+obj /usr/share/automake-1.18/ar-lib 13c5ad4b3ac179066cdcad9d826fc1f0 1780764251
+obj /usr/share/automake-1.18/compile c8bf7af59b6ee92bed765f3cf0db7494 1780764251
+sym /usr/share/automake-1.18/config.guess -> ../gnuconfig/config.guess 1789353905
+sym /usr/share/automake-1.18/config.sub -> ../gnuconfig/config.sub 1789353905
+obj /usr/share/automake-1.18/depcomp 3b5fa568fb66a356933116f701ca65b4 1780764251
+obj /usr/share/automake-1.18/install-sh 3164811cdb61f914adf196e0cb65f988 1780764251
+obj /usr/share/automake-1.18/mdate-sh be0c0b8f34fbaee14f6690d8d0e2f71c 1780764251
+obj /usr/share/automake-1.18/missing ad42e47c40ea9b211323fbfefa210125 1780764251
+obj /usr/share/automake-1.18/mkinstalldirs 79ed7cf6be24c0176bb896ae0a35582f 1780764251
+obj /usr/share/automake-1.18/py-compile dd8734cba78695a8612fd398b9ac80f9 1780764251
+obj /usr/share/automake-1.18/tap-driver.sh 37d29ddf31cd0bc8a36326ab835f8d4b 1780764251
+obj /usr/share/automake-1.18/test-driver 2c54d96a5fe8431c6c693167861b39b1 1780764251
+obj /usr/share/automake-1.18/texinfo.tex cbcc9e966bbd4668cd70782bc20b28aa 1780764251
+obj /usr/share/automake-1.18/ylwrap 03ed97a73d132b8fe99d98987c0dc425 1780764251
+dir /usr/share/automake-1.18.1
+dir /usr/share/automake-1.18.1/info
+obj /usr/share/automake-1.18.1/info/.keepinfodir d41d8cd98f00b204e9800998ecf8427e 1780764252
+sym /usr/share/automake-1.18.1/info/automake-1.18.1.info-1.bz2 -> automake.info-1.bz2 1789353905
+sym /usr/share/automake-1.18.1/info/automake-1.18.1.info-2.bz2 -> automake.info-2.bz2 1789353905
+sym /usr/share/automake-1.18.1/info/automake-1.18.1.info.bz2 -> automake.info.bz2 1789353905
+sym /usr/share/automake-1.18.1/info/automake-history-1.18.1.info.bz2 -> automake-history.info.bz2 1789353905
+obj /usr/share/automake-1.18.1/info/automake-history.info.bz2 e08f9b95643cdfcd775efaacb7404e9f 1780764251
+obj /usr/share/automake-1.18.1/info/automake.info-1.bz2 c6c7714d689f1ff6e4e6397bab908030 1780764251
+obj /usr/share/automake-1.18.1/info/automake.info-2.bz2 b8492b23bfa7c0befa3c358fb6f3ca30 1780764251
+obj /usr/share/automake-1.18.1/info/automake.info.bz2 13dcae5e8bafa5bae554122ef6b1c117 1780764251
+obj /usr/share/automake-1.18.1/info/dir 449d3a5b41aa4c0f5110ce1a1fdec0d6 1780764251
+dir /usr/share/doc
+dir /usr/share/doc/automake-1.18.1-r1
+obj /usr/share/doc/automake-1.18.1-r1/AUTHORS.bz2 eaed887d605c65d069fdbf0166e45e45 1780764252
+obj /usr/share/doc/automake-1.18.1-r1/ChangeLog.bz2 6d5e17a41acdcb5351ba4d263ad8e77d 1780764252
+obj /usr/share/doc/automake-1.18.1-r1/NEWS.bz2 fb4e5de155628a3364b3ec18161f0e32 1780764252
+obj /usr/share/doc/automake-1.18.1-r1/README.bz2 a41dc45b7ad4c02ee5786f8c2dafc093 1780764251
+obj /usr/share/doc/automake-1.18.1-r1/THANKS.bz2 4d9714390125ed9801d55075392a0e2d 1780764252
+obj /usr/share/doc/automake-1.18.1-r1/amhello-1.0.tar.bz2 30d75ad66667b758c0ec00604f1d9ef3 1780764251
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/aclocal-1.18.1.bz2 aa820d861c05bce525cd4fd8947b85a5 1780764251
+obj /usr/share/man/man1/automake-1.18.1.bz2 056522ed9070f35c074c301f5c7dd48c 1780764251
+dir /etc
+dir /etc/env.d
+obj /etc/env.d/06automake98981 6583956448bfaf7b2bbe9963c0500462 1780764252

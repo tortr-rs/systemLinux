@@ -1,0 +1,11 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install prepare unpack
+DESCRIPTION=Standalone tool for generating man pages with a simple syntax
+EAPI=8
+HOMEPAGE=https://git.sr.ht/~sircmpwn/scdoc
+INHERIT=toolchain-funcs git-r3
+LICENSE=MIT
+PROPERTIES=live
+SLOT=0
+_eclasses_=git-r3	e6c2f983e006e805160436c75a0c1562	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=67a6f623d1906085a40b755be45bec1a

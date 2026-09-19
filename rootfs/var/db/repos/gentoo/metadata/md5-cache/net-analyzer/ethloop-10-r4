@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install
+DESCRIPTION=Local simulator for testing Linux QoS disciplines
+EAPI=7
+HOMEPAGE=http://luxik.cdi.cz/~devik/qos/ethloop/
+INHERIT=toolchain-funcs
+KEYWORDS=~amd64 ~ppc x86
+LICENSE=all-rights-reserved
+RESTRICT=mirror bindist
+SLOT=0
+SRC_URI=http://luxik.cdi.cz/~devik/qos/ethloop/ethloop10.tgz
+_eclasses_=toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=342e94f1f69361973e248c427cf7e4c1

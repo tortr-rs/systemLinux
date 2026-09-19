@@ -1,0 +1,39 @@
+dir /usr
+dir /usr/bin
+sym /usr/bin/gpep517 -> ../lib/python-exec/python-exec2 1789353996
+dir /usr/lib
+dir /usr/lib/python-exec
+dir /usr/lib/python-exec/python3.14
+obj /usr/lib/python-exec/python3.14/gpep517 357bbcd72a2899009d20bb73c6916799 1788715536
+dir /usr/lib/python3.14
+dir /usr/lib/python3.14/site-packages
+dir /usr/lib/python3.14/site-packages/gpep517
+obj /usr/lib/python3.14/site-packages/gpep517/__init__.py 7f7bb26035dcc28d6bf3bb0fdef67c51 1788715536
+obj /usr/lib/python3.14/site-packages/gpep517/__main__.py 11128f8253c9c77d5b62631b8beac1b8 1788715536
+dir /usr/lib/python3.14/site-packages/gpep517/__pycache__
+obj /usr/lib/python3.14/site-packages/gpep517/__pycache__/__init__.cpython-314.opt-1.pyc f1af8876574397fd3e42e2cc666f1aee 1788715536
+obj /usr/lib/python3.14/site-packages/gpep517/__pycache__/__init__.cpython-314.opt-2.pyc 2d3d760f62ecc1f70f26bf1ef4b7ebe5 1788715536
+obj /usr/lib/python3.14/site-packages/gpep517/__pycache__/__init__.cpython-314.pyc f1af8876574397fd3e42e2cc666f1aee 1788715536
+obj /usr/lib/python3.14/site-packages/gpep517/__pycache__/__main__.cpython-314.opt-1.pyc 49f6edc084d5c91c938b0bf48bfd62d6 1788715536
+obj /usr/lib/python3.14/site-packages/gpep517/__pycache__/__main__.cpython-314.opt-2.pyc 1c285bb84b05def10816c017a1c6a5da 1788715536
+obj /usr/lib/python3.14/site-packages/gpep517/__pycache__/__main__.cpython-314.pyc 49f6edc084d5c91c938b0bf48bfd62d6 1788715536
+obj /usr/lib/python3.14/site-packages/gpep517/__pycache__/build.cpython-314.opt-1.pyc 9b016e4a888138ed2fd424c4b77c11d2 1788715536
+obj /usr/lib/python3.14/site-packages/gpep517/__pycache__/build.cpython-314.opt-2.pyc 9b016e4a888138ed2fd424c4b77c11d2 1788715536
+obj /usr/lib/python3.14/site-packages/gpep517/__pycache__/build.cpython-314.pyc 9b016e4a888138ed2fd424c4b77c11d2 1788715536
+obj /usr/lib/python3.14/site-packages/gpep517/__pycache__/install.cpython-314.opt-1.pyc e886722deb09e6edc2d07cff59328833 1788715536
+obj /usr/lib/python3.14/site-packages/gpep517/__pycache__/install.cpython-314.opt-2.pyc e886722deb09e6edc2d07cff59328833 1788715536
+obj /usr/lib/python3.14/site-packages/gpep517/__pycache__/install.cpython-314.pyc e886722deb09e6edc2d07cff59328833 1788715536
+obj /usr/lib/python3.14/site-packages/gpep517/__pycache__/qa.cpython-314.opt-1.pyc f682de019389129bb1357fca72ef60ca 1788715536
+obj /usr/lib/python3.14/site-packages/gpep517/__pycache__/qa.cpython-314.opt-2.pyc f682de019389129bb1357fca72ef60ca 1788715536
+obj /usr/lib/python3.14/site-packages/gpep517/__pycache__/qa.cpython-314.pyc f66475a04ad16b6c586df0e935009e0a 1788715536
+obj /usr/lib/python3.14/site-packages/gpep517/__pycache__/utils.cpython-314.opt-1.pyc 73e651eb8d353e356a4580e1fcd71f01 1788715536
+obj /usr/lib/python3.14/site-packages/gpep517/__pycache__/utils.cpython-314.opt-2.pyc 73e651eb8d353e356a4580e1fcd71f01 1788715536
+obj /usr/lib/python3.14/site-packages/gpep517/__pycache__/utils.cpython-314.pyc 73e651eb8d353e356a4580e1fcd71f01 1788715536
+obj /usr/lib/python3.14/site-packages/gpep517/build.py df83cb273e33741d92428f305e67b16b 1788715536
+obj /usr/lib/python3.14/site-packages/gpep517/install.py a514427432c5a6829cfe8b7ce882937d 1788715536
+obj /usr/lib/python3.14/site-packages/gpep517/qa.py ec7f8bad3bedf7f04bed645751c1c573 1788715536
+obj /usr/lib/python3.14/site-packages/gpep517/utils.py 791cef0bd85e4635087012b68683d4c5 1788715536
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/gpep517-20
+obj /usr/share/doc/gpep517-20/README.rst.bz2 4efa1820df250b01ccf1c01e3ef4620e 1788715536

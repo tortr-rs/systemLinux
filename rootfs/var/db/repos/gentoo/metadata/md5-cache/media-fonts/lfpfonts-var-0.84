@@ -1,0 +1,14 @@
+BDEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings ) X? ( media-gfx/ebdftopcf )
+DEFINED_PHASES=compile install postinst postrm setup
+DESCRIPTION=Linux Font Project variable-width fonts
+EAPI=7
+HOMEPAGE=https://sourceforge.net/projects/xfonts/
+INHERIT=font font-ebdftopcf
+IUSE=X X
+KEYWORDS=~alpha amd64 arm ~loong ppc ~riscv ~s390 ~sparc x86
+LICENSE=public-domain
+RESTRICT=strip binchecks
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/xfonts/lfpfonts-var-src-0.84.tar.bz2
+_eclasses_=font	6d0c60c855c05ae2ba808d300440ded2	font-ebdftopcf	39dc8195299452f48380cb51392cba37
+_md5_=312ef965fd3b303c1a52a6805f33cf34

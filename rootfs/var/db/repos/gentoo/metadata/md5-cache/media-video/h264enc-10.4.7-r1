@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst
+DESCRIPTION=Script to encode H.264/AVC/MPEG-4 Part 10 formats
+EAPI=7
+HOMEPAGE=https://h264enc.sourceforge.net/
+INHERIT=optfeature
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=media-video/mplayer[encode,x264] sys-apps/coreutils sys-apps/pv app-alternatives/bc sys-process/time
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/h264enc/h264enc-10.4.7.tar.gz
+_eclasses_=optfeature	58cc13bdc4e9a204077e1e7c9a1d7988
+_md5_=fe8a5f8888c38d876d31317ca72adc52

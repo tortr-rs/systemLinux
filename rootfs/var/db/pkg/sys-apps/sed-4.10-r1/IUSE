@@ -1,0 +1,1 @@
+acl nls selinux static test-full xattr verify-sig

@@ -1,0 +1,20 @@
+dir /usr
+dir /usr/src
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/libndp-1.9-r1
+obj /usr/share/doc/libndp-1.9-r1/README.bz2 5743b70f2ac7a03bc3524929f05f9dd2 1773600544
+dir /usr/share/man
+dir /usr/share/man/man8
+obj /usr/share/man/man8/ndptool.8.bz2 e34fda16d61e5f7fdb21519e6846bb55 1773600544
+dir /usr/lib64
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/libndp.pc 3098655d2f4f7344cabff27da6a6c962 1773600544
+obj /usr/lib64/libndp.so.0.3.0 63f1fd45b3c309c34db83fa823c135b5 1773600545
+dir /usr/bin
+obj /usr/bin/ndptool a71ebfc2117ed81733456389a0c95db6 1773600545
+dir /usr/include
+obj /usr/include/ndp.h 51841d584f8c12adba2c5a4dab2d71c3 1773600544
+dir /usr/lib
+sym /usr/lib64/libndp.so -> libndp.so.0.3.0 1789836501
+sym /usr/lib64/libndp.so.0 -> libndp.so.0.3.0 1789836501

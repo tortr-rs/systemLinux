@@ -1,0 +1,11 @@
+dir /usr
+dir /usr/share
+dir /usr/share/pkgconfig
+obj /usr/share/pkgconfig/mobile-broadband-provider-info.pc c82df7f11507117943e2aa9181a4eb07 1783243250
+dir /usr/share/doc
+dir /usr/share/doc/mobile-broadband-provider-info-20251101
+obj /usr/share/doc/mobile-broadband-provider-info-20251101/README.bz2 07e7b1da33547108156d40c99251a3cd 1783243254
+dir /usr/share/mobile-broadband-provider-info
+obj /usr/share/mobile-broadband-provider-info/serviceproviders.2.dtd 2dd0dd460d4a9bcb80c4a0dc6c7af810 1762876243
+obj /usr/share/mobile-broadband-provider-info/serviceproviders.xml a2c94dd0e28bd8ed80b0c223a4652017 1762876243
+obj /usr/share/mobile-broadband-provider-info/apns-conf.xml 403a6c58f677194c5cb44a497d3679ea 1783243251

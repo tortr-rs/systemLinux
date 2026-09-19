@@ -1,0 +1,22 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/funzip 4f4c58b8c0f6c343d0310da7aa8e6540 1789319547
+obj /usr/bin/unzip 88142fb418b26dab0a587ae741d5b384 1789319547
+obj /usr/bin/unzipsfx f05c3c98fd423d9f8f34c93af35d3ba1 1789319547
+obj /usr/bin/zipgrep 8bb9c49534f927b497245efdbeaec492 1789319546
+sym /usr/bin/zipinfo -> unzip 1789353868
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/unzip-6.0_p31
+obj /usr/share/doc/unzip-6.0_p31/BUGS.bz2 7640d46009e88867169c1ee187acbc9c 1789319547
+obj /usr/share/doc/unzip-6.0_p31/History.600.bz2 1a992270df4ad907a0aa645883909258 1789319547
+obj /usr/share/doc/unzip-6.0_p31/README.bz2 66dd2a9f5925d536a0ded247c853323e 1789319547
+obj /usr/share/doc/unzip-6.0_p31/ToDo.bz2 139395554425aa442168a22f6c3f83ec 1789319547
+obj /usr/share/doc/unzip-6.0_p31/WHERE.bz2 0caddafd8370dcf0af77b476cf06f12b 1789319547
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/funzip.1.bz2 b411b877d391f3cc6119cb0529262744 1789319547
+obj /usr/share/man/man1/unzip.1.bz2 7f50a3c49422e31dc248c561ab394aef 1789319547
+obj /usr/share/man/man1/unzipsfx.1.bz2 191d0948f7b4de6add051a2733ee8195 1789319547
+obj /usr/share/man/man1/zipgrep.1.bz2 4eaf073edb1384fd051bd3e5d7b90004 1789319547
+obj /usr/share/man/man1/zipinfo.1.bz2 23ed4a40cab0b91473775062411cf180 1789319547

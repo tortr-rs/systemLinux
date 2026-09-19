@@ -1,0 +1,1 @@
+-http2 -http3 -quic -curl_quic_openssl

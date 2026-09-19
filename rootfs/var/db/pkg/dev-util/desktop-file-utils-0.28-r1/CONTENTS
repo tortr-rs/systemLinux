@@ -1,0 +1,22 @@
+dir /usr
+dir /usr/src
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/desktop-file-utils-0.28-r1
+obj /usr/share/doc/desktop-file-utils-0.28-r1/NEWS.bz2 af5b10147c866c9268a9f3d6ad43fe6e 1782293324
+obj /usr/share/doc/desktop-file-utils-0.28-r1/HACKING.bz2 c17cb16540b7e82065f628d16b7ce4c2 1782293324
+obj /usr/share/doc/desktop-file-utils-0.28-r1/README.bz2 1b3163f5aed4f28172158726d4bf043c 1782293324
+obj /usr/share/doc/desktop-file-utils-0.28-r1/AUTHORS 15a63df96238f561ddfba3525d6615de 1782293324
+obj /usr/share/doc/desktop-file-utils-0.28-r1/ChangeLog.bz2 67aebca5b05d178043155cfabcc53d4f 1782293324
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/desktop-file-edit.1.bz2 18abc3d208ad5acd22db058dc49f671d 1782293322
+obj /usr/share/man/man1/desktop-file-install.1.bz2 18abc3d208ad5acd22db058dc49f671d 1729889568
+obj /usr/share/man/man1/desktop-file-validate.1.bz2 a36d4fd977da60ce8ba83fa28b044008 1729889568
+obj /usr/share/man/man1/update-desktop-database.1.bz2 173644fa75d18d3d396d85d9256b5ec2 1729889568
+dir /usr/bin
+obj /usr/bin/update-desktop-database d2eccefa31dde0d91e7b664cf5291523 1782293324
+obj /usr/bin/desktop-file-validate 84340302c5b6a317ddb6f44a821c69f6 1782293324
+obj /usr/bin/desktop-file-install 0489a6c3b7023b2a030ce560b2397890 1782293324
+sym /usr/bin/desktop-file-edit -> desktop-file-install 1789836482
+dir /usr/lib

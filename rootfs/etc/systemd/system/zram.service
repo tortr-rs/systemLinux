@@ -1,0 +1,11 @@
+[Unit]
+Description=systemLinux Dynamic Zram 3:1 Compression Allocator
+Before=local-fs.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/bin/sh -c 'modprobe zram && echo zstd > /sys/block/zram0/comp_algorithm && echo 4G > /sys/block/zram0/disksize && mkswap /dev/zram0 && swapon /dev/zram0 -p 32767'
+
+[Install]
+WantedBy=multi-user.target

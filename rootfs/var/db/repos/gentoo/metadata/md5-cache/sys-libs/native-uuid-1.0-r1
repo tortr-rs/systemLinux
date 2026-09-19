@@ -1,0 +1,10 @@
+DEFINED_PHASES=install unpack
+DEPEND=!!sys-libs/libuuid !!sys-apps/util-linux
+DESCRIPTION=.pc file for uuid
+EAPI=8
+HOMEPAGE=https://prefix.gentoo.org/
+KEYWORDS=~arm64-macos ~x64-macos
+LICENSE=BSD
+RDEPEND=!!sys-libs/libuuid !!sys-apps/util-linux
+SLOT=0
+_md5_=2df18c3330cc7a88e76c00968bf3a5a2

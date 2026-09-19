@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst
+DESCRIPTION=Rootkit Hunter scans for known and unknown rootkits, backdoors, and sniffers
+EAPI=8
+HOMEPAGE=https://rkhunter.sf.net/
+INHERIT=bash-completion-r1
+IUSE=selinux
+KEYWORDS=~alpha amd64 ~arm ~mips ppc x86
+LICENSE=GPL-2+
+RDEPEND=app-shells/bash dev-lang/perl sys-process/lsof[rpc] selinux? ( sec-policy/selinux-rkhunter )
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/rkhunter/rkhunter-1.4.6.tar.gz https://dev.gentoo.org/~sam/distfiles/app-forensics/rkhunter/rkhunter-1.4.6-grep-3.8.patch.xz
+_eclasses_=bash-completion-r1	4386cfb12ede6cd8f0c1987d2e88da5f	shell-completion	63a62de3ca49c798ee6e89f190e45d0e	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=4282ffb95eaad8ced31f6a58a8ab97d2

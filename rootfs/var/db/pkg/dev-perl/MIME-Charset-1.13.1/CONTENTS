@@ -1,0 +1,25 @@
+dir /usr
+dir /usr/lib64
+dir /usr/lib64/perl5
+dir /usr/lib64/perl5/vendor_perl
+dir /usr/lib64/perl5/vendor_perl/5.42
+dir /usr/lib64/perl5/vendor_perl/5.42/MIME
+dir /usr/lib64/perl5/vendor_perl/5.42/MIME/Charset
+obj /usr/lib64/perl5/vendor_perl/5.42/MIME/Charset/Defaults.pm.sample c2239082dec8584795f12df65fb280ac 1763921548
+obj /usr/lib64/perl5/vendor_perl/5.42/MIME/Charset/UTF.pm 5d39311d327adb1ecfcf3d2136cbec2e 1763921548
+obj /usr/lib64/perl5/vendor_perl/5.42/MIME/Charset/_Compat.pm 9bf800b3a396cc26f466e85c13a82da4 1763921548
+obj /usr/lib64/perl5/vendor_perl/5.42/MIME/Charset.pm 5dd6ce934a79121b6aed9c70e51e8423 1763921548
+dir /usr/lib64/perl5/vendor_perl/5.42/POD2
+dir /usr/lib64/perl5/vendor_perl/5.42/POD2/JA
+dir /usr/lib64/perl5/vendor_perl/5.42/POD2/JA/MIME
+obj /usr/lib64/perl5/vendor_perl/5.42/POD2/JA/MIME/Charset.pod c1d33034caa67db79a1e8e19db57a75a 1763921548
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/MIME
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/MIME/Charset
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/MIME/Charset/.packlist ef71e9a845b7a7394528d350cb46df71 1763921548
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/MIME-Charset-1.13.1
+obj /usr/share/doc/MIME-Charset-1.13.1/Changes.bz2 6ae5d07fc2559bca0fb2ffb526fb1ae4 1763921548
+obj /usr/share/doc/MIME-Charset-1.13.1/README.bz2 9252e92c06757a8ee4be1c69ee9490f6 1763921548

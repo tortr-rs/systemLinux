@@ -1,0 +1,24 @@
+dir /usr
+dir /usr/include
+obj /usr/include/microhttpd.h 981c5924499c71d57ec8fbd463277ffc 1771783332
+dir /usr/lib64
+obj /usr/lib64/libmicrohttpd.so.12.62.1 cf025bcd5f6d74bc65bf7ebed618a4b3 1771783333
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/libmicrohttpd.pc 26f36bc6b371aa7f1e3b739d4b384626 1771783332
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/libmicrohttpd-1.0.1-r1
+obj /usr/share/doc/libmicrohttpd-1.0.1-r1/AUTHORS.bz2 6d7a6e3fee2219bc72d98e606d3c6a6b 1771783333
+obj /usr/share/doc/libmicrohttpd-1.0.1-r1/COPYING.bz2 ed3526d3f6f34495fe3798cfa81d7515 1771783333
+obj /usr/share/doc/libmicrohttpd-1.0.1-r1/ChangeLog.bz2 094e29742fa67421090dec9aa07576e0 1771783333
+obj /usr/share/doc/libmicrohttpd-1.0.1-r1/NEWS.bz2 d76e44c68cbc5d981cf1b7cc65599e2f 1771783333
+obj /usr/share/doc/libmicrohttpd-1.0.1-r1/README.bz2 13768e86b673cdefe8d6d43ead1810d7 1771783333
+dir /usr/share/info
+obj /usr/share/info/libmicrohttpd-tutorial.info.bz2 e92224bf4263c07ccb5301914c1ada9e 1771783332
+obj /usr/share/info/libmicrohttpd.info.bz2 bedd6c3ceb43051a4271c60c5b28a22a 1771783332
+obj /usr/share/info/libmicrohttpd_performance_data.png d6bba670dd762cd2109f99a5e3e66e01 1771783332
+dir /usr/share/man
+dir /usr/share/man/man3
+obj /usr/share/man/man3/libmicrohttpd.3.bz2 496e354663a351ee76e8dbbeae2a26fe 1771783332
+sym /usr/lib64/libmicrohttpd.so.12 -> libmicrohttpd.so.12.62.1 1789354049
+sym /usr/lib64/libmicrohttpd.so -> libmicrohttpd.so.12.62.1 1789354049

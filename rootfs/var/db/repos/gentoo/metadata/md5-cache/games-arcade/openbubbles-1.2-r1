@@ -1,0 +1,13 @@
+DEFINED_PHASES=install
+DEPEND=media-libs/libsdl[sound,video] media-libs/sdl-image[png] media-libs/sdl-gfx
+DESCRIPTION=Clone of Evan Bailey's game Bubbles
+EAPI=8
+HOMEPAGE=https://web.archive.org/web/20101126190910/http://www.freewebs.com/lasindi/openbubbles/
+INHERIT=desktop
+KEYWORDS=~amd64 ~hppa ~x86
+LICENSE=GPL-2+
+RDEPEND=media-libs/libsdl[sound,video] media-libs/sdl-image[png] media-libs/sdl-gfx
+SLOT=0
+SRC_URI=https://web.archive.org/web/20101126190910/http://www.freewebs.com/lasindi/openbubbles/openbubbles-1.2.tar.bz2
+_eclasses_=desktop	e447b5f77146d69797e9f03ff177f3f1
+_md5_=21c2980198c0db8d5d316daa77f94313

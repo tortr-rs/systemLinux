@@ -1,0 +1,126 @@
+https://salsa.debian.org/med-team/mafft/-/commit/73d7be1d2ee617b3cd533e62adc2536b5c8330a9
+
+From: Michael R. Crusoe <crusoe@debian.org>
+Subject: Add GCC-16 compatibility
+Forwarded: katoh@ifrec.osaka-u.ac.jp
+
+--- a/core/constants.c
++++ b/core/constants.c
+@@ -1537,7 +1537,7 @@
+ 	}
+ }
+ 
+-void freeconstants()
++void freeconstants(void)
+ {
+ 	if( n_disLN ) FreeDoubleMtx( n_disLN ); n_disLN = NULL;
+ 	if( n_dis ) FreeIntMtx( n_dis ); n_dis = NULL;
+--- a/core/defs.c
++++ b/core/defs.c
+@@ -139,7 +139,7 @@
+ int terminalmargin = 100;
+ 
+ 
+-void initglobalvariables()
++void initglobalvariables(void)
+ {
+ 	commonAlloc1 = 0;
+ 	commonAlloc2 = 0;
+--- a/core/io.c
++++ b/core/io.c
+@@ -1063,8 +1063,7 @@
+      return( !noteofflag );
+ }
+ 
+-int getaline_fp_eof_new(s, l, fp)  /* end of file -> return 1 */
+-char    s[] ; int l ; FILE *fp ;
++int getaline_fp_eof_new( char s[], int l, FILE *fp )  /* end of file -> return 1 */
+ {
+         int c = 0, i = 0 ;
+ 		int noteofflag = 0;
+@@ -1079,8 +1078,7 @@
+ 		return( !noteofflag );
+ }
+ 
+-int myfgets(s, l, fp)  /* l以上は、行末まで読み飛ばす */
+-char    s[] ; int l ; FILE *fp ;
++int myfgets( char s[], int l, FILE *fp )  /* l以上は、行末まで読み飛ばす */
+ {
+         int     c = 0, i = 0 ;
+ 
+@@ -5505,7 +5503,7 @@
+ 		}
+ 	}
+ }
+-static void showaamtxexample()
++static void showaamtxexample(void)
+ {
+ 	fprintf( stderr, "Format error in aa matrix\n" );
+ 	fprintf( stderr, "# Example:\n" );
+--- a/core/mltaln.h
++++ b/core/mltaln.h
+@@ -166,7 +166,7 @@
+ extern char rnaprediction;
+ 
+ /* sengen no ichi ha koko dake de ha nai */
+-extern void constants();
++extern void constants( int nseq, char **seq );
+ extern char **Calignm1();
+ extern char **Dalignm1();
+ extern char **align0();
+@@ -179,24 +179,24 @@
+ extern double substitution_nid( char *, char * );
+ extern double substitution_hosei( char *, char * );
+ extern double ipower( double, int );
+-extern double translate_and_Calign();
+-extern double A__align();
++extern double translate_and_Calign( char **mseq1, char **mseq2, double *effarr1, double *effarr2, int clus1, int clus2, int alloclen );
++extern double A__align( double **scoringmtx, int penalty, int penalty_ex, char **seq1, char **seq2, double *eff1, double *eff2, int icyc, int jcyc, int alloclen, int constraint, double *impmatch, char *gs1, char *gs2, char *ge1, char *ge2, int *, int, int *, int headgp, int tailgp, int firstmem, int calledby, double ***cpmxchild0, double ***cpmxchild1, double ***cpmxresult, double orieff1, double orieff2 );
+ extern double A__align11();
+-extern double A__align_gapmap();
+-extern double partA__align();
++extern double A__align_gapmap( char **seq1, char **seq2, double *eff1, double *eff2, int icyc, int jcyc, int alloclen, int constraint, double *impmatch, int *gapmap1, int *gapmap2 );
++extern double partA__align( char **seq1, char **seq2, double *eff1, double *eff2, int icyc, int jcyc, int alloclen, int constraint, double *impmatch, int start1, int end1, int start2, int end2, int *gapmap1, int *gapmap2, char *, char *, char *, char *, int *, int, int * );
+ extern double L__align11( double **scoringmtx, double scoreoffset, char **seq1, char **seq2, int alloclen, int *off1pt, int *off2pt );
+-extern double G__align11();
+-extern double Falign();
+-extern double Falign_localhom();
++extern double G__align11( double **scoringmtx, char **seq1, char **seq2, int alloclen, int headgp, int tailgp  );
++extern double Falign( int **whichmtx, double ***scoringmatrices, double **scoreingmtx, char  **seq1, char  **seq2, double *eff1, double *eff2, double **eff1s, double **eff2s, int    clus1, int    clus2, int alloclen, int *fftlog, int *, int, int * );
++extern double Falign_localhom( int **which, double ***scoringmatrices, double **scoreingmtx, char  **seq1, char  **seq2, double *eff1, double *eff2, double **eff1s, double **eff2s, int    clus1, int    clus2, int alloclen, int constraint, double *totalimpmatch, int *gapmap1, int *gapmap2, int *chudanpt, int chudanref, int *chudanres );
+ extern double Conalign();
+ extern double Aalign();
+ extern double imp_match_out_sc( int, int );
+ extern double part_imp_match_out_sc( int, int );
+-extern void ErrorExit();
+-extern void cpmx_calc();
++extern void ErrorExit( char *message );
++extern void cpmx_calc( char **seq, double **cpmx, double *eff, int lgth, int clus );
+ extern void intergroup_score( char **, char **, double *, double *, int, int, int, double * );
+ extern int conjuctionfortbfast();
+-extern int fastconjuction();
++extern int fastconjuction( int *memlist, char **seq, char **aseq, double *peff, double *eff, char name[M][B], char aname[M][B], char *d );
+ extern char seqcheck( char ** );
+ 
+ typedef struct _LocalHom
+--- a/core/mltaln9.c
++++ b/core/mltaln9.c
+@@ -15232,7 +15232,7 @@
+ 		}
+ 	}
+ }
+-void FreeCommonIP()
++void FreeCommonIP(void)
+ {
+ 	if( commonIP ) FreeIntMtx( commonIP ); 
+ 	commonIP = NULL;
+--- a/core/version.c
++++ b/core/version.c
+@@ -1,6 +1,6 @@
+ #include "mltaln.h"
+ 
+-int main()
++int main(void)
+ {
+ 	fprintf( stdout, VERSION );
+ 	return( 0 );

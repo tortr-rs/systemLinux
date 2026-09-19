@@ -1,0 +1,12 @@
+BDEPEND=sys-libs/ncurses >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install unpack
+DESCRIPTION=Terminfo for kitty, a GPU-based terminal emulator
+EAPI=8
+HOMEPAGE=https://sw.kovidgoyal.net/kitty/
+INHERIT=git-r3
+LICENSE=GPL-3
+PROPERTIES=live
+RESTRICT=test
+SLOT=0
+_eclasses_=git-r3	e6c2f983e006e805160436c75a0c1562
+_md5_=3e8e3e54a7afbfab0907ce789ac20f5c

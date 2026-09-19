@@ -1,0 +1,131 @@
+dir /usr
+dir /usr/src
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/pygobject-3.56.3
+obj /usr/share/doc/pygobject-3.56.3/README.rst.bz2 136ff9d547089985f0efafcaf2cd71ac 1783243292
+obj /usr/share/doc/pygobject-3.56.3/NEWS.bz2 a3d39a318f436d60fe9d6e6ad35ea93f 1783243293
+dir /usr/lib64
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/pygobject-3.0.pc 732402d1cb14717685edcc23eb605756 1783243270
+dir /usr/include
+dir /usr/include/pygobject-3.0
+obj /usr/include/pygobject-3.0/pygobject-types.h 9e2a1b9d1245c0451d32f49020c88c6a 1778271032
+obj /usr/include/pygobject-3.0/pygobject.h 82f3c624f88c34cce862213b575e041e 1778271032
+dir /usr/lib
+dir /usr/lib/python3.14
+dir /usr/lib/python3.14/site-packages
+dir /usr/lib/python3.14/site-packages/gi
+obj /usr/lib/python3.14/site-packages/gi/_gi_cairo.cpython-314-x86_64-linux-gnu.so e1a382c6e494f5c7755ebb660fc5ec59 1783243296
+dir /usr/lib/python3.14/site-packages/gi/repository
+obj /usr/lib/python3.14/site-packages/gi/repository/__init__.py 909c8aa757101325df0dc76d300fe402 1778271032
+dir /usr/lib/python3.14/site-packages/gi/repository/__pycache__
+obj /usr/lib/python3.14/site-packages/gi/repository/__pycache__/__init__.cpython-314.opt-1.pyc 20a1bce00bddbdc90e9721a3a3968b6f 1783243292
+obj /usr/lib/python3.14/site-packages/gi/repository/__pycache__/__init__.cpython-314.opt-2.pyc 20a1bce00bddbdc90e9721a3a3968b6f 1783243292
+obj /usr/lib/python3.14/site-packages/gi/repository/__pycache__/__init__.cpython-314.pyc 20a1bce00bddbdc90e9721a3a3968b6f 1783243292
+obj /usr/lib/python3.14/site-packages/gi/_enum.py c602564d4bf7f19fd07d3e5160fcdd6d 1778271032
+obj /usr/lib/python3.14/site-packages/gi/_signature.py 0d089af43c1833cb1cb19f28f9bdc2fb 1778271032
+obj /usr/lib/python3.14/site-packages/gi/_gi.cpython-314-x86_64-linux-gnu.so 136c8bf901a6320664121ef9468228e0 1783243296
+obj /usr/lib/python3.14/site-packages/gi/types.py 96a290dbdb7993a1c395b2ae78fe4145 1778271032
+obj /usr/lib/python3.14/site-packages/gi/_constants.py e78e4eded18ea8baae959de042fcefe7 1778271032
+obj /usr/lib/python3.14/site-packages/gi/_signalhelper.py e12fe12911ca7c725fc750ecb0440fa9 1778271032
+obj /usr/lib/python3.14/site-packages/gi/importer.py 18b892aa70662724365ddce95e0ffd79 1778271032
+obj /usr/lib/python3.14/site-packages/gi/_ossighelper.py b2eec65d455a6592bb80b07252295880 1778271032
+obj /usr/lib/python3.14/site-packages/gi/events.py 7d83263d7d4e748555068293ed4cd23d 1778271032
+obj /usr/lib/python3.14/site-packages/gi/_error.py 6575facf0cded1dba0caf3308f262fef 1778271032
+dir /usr/lib/python3.14/site-packages/gi/overrides
+obj /usr/lib/python3.14/site-packages/gi/overrides/GIMarshallingTests.py 7c5539fe214e27cb726ebba3e6a7dff8 1778271032
+obj /usr/lib/python3.14/site-packages/gi/overrides/GdkPixbuf.py 516e18a15eb39da9766f6b9a3ef03fc3 1778271032
+obj /usr/lib/python3.14/site-packages/gi/overrides/GLib.py 70fa044ddd11a0ea461e8f785a5f0e6b 1778271032
+obj /usr/lib/python3.14/site-packages/gi/overrides/Gio.py 850fe08cdecfe6c0d5fed783d8e99522 1778271032
+obj /usr/lib/python3.14/site-packages/gi/overrides/GLibUnix.py 9cf42d1330249f341973e12f67d3d15a 1778271032
+obj /usr/lib/python3.14/site-packages/gi/overrides/Gdk.py fbbbc16df1564508ae8e01827a3a5d0d 1778271032
+obj /usr/lib/python3.14/site-packages/gi/overrides/Gtk.py a1739694a582659414f75b1bd65198af 1778271032
+obj /usr/lib/python3.14/site-packages/gi/overrides/__init__.py bb02f7b804cce3a2cefaeda19b81cbbd 1778271032
+dir /usr/lib/python3.14/site-packages/gi/overrides/__pycache__
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/Gio.cpython-314.opt-1.pyc 438f68fc4cc5ab383c8ed66c65a09e0e 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/GdkPixbuf.cpython-314.opt-1.pyc 96158c9d2e26a00c7efe01b1d82a2c82 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/__init__.cpython-314.opt-1.pyc 30a2b4c2f4e670ff6da6083067274803 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/GioUnix.cpython-314.opt-2.pyc 05a21acba24b5a2faf0f4cce7c296b78 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/GioUnix.cpython-314.pyc 05a21acba24b5a2faf0f4cce7c296b78 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/GLibUnix.cpython-314.opt-1.pyc ce07938319f266eb031afd61ef7da939 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/GObject.cpython-314.pyc 469eb8961beb5533112608bead5e11cc 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/Gio.cpython-314.opt-2.pyc 3d9a37fddcc29764eaade3e231a6b18f 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/Gtk.cpython-314.pyc ef4a571df1b0081782f0bb1608aaaf23 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/Gtk.cpython-314.opt-1.pyc 011686f914a70af3c0b3e798a7a37c63 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/Pango.cpython-314.opt-1.pyc cf371fbad578117cc8d802e99f46cfb0 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/GIMarshallingTests.cpython-314.pyc 0100065dd3b6896affe85ea72846ffbd 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/GioUnix.cpython-314.opt-1.pyc 05a21acba24b5a2faf0f4cce7c296b78 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/__init__.cpython-314.opt-2.pyc d3e5615752ab06e36bff36c9e5b2800b 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/Gdk.cpython-314.opt-1.pyc 788a41c16657724e25c6b5608c6f2447 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/GLib.cpython-314.opt-1.pyc a4657f0287adadad4b08d91e53dd319a 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/Pango.cpython-314.pyc cf371fbad578117cc8d802e99f46cfb0 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/GLib.cpython-314.pyc bd99b1a7ebbccfc198c0309ee18a9543 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/Gio.cpython-314.pyc 80f7fa44380f52b976e2e650f9f12708 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/Pango.cpython-314.opt-2.pyc cf371fbad578117cc8d802e99f46cfb0 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/GObject.cpython-314.opt-2.pyc d2ba430f749051abc6a9683d4ab9c9ef 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/GLib.cpython-314.opt-2.pyc bb56a0555d95c7e7f5060abcb8d4b5af 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/GLibUnix.cpython-314.opt-2.pyc ce07938319f266eb031afd61ef7da939 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/__init__.cpython-314.pyc 7a1d0e643720aa1df7424099fd279917 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/Gtk.cpython-314.opt-2.pyc 919d2cee3a93738bacd23ae78971d77f 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/GLibUnix.cpython-314.pyc ce07938319f266eb031afd61ef7da939 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/GObject.cpython-314.opt-1.pyc 85d3ad174ea72dfe97db457dbc653bfd 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/Gdk.cpython-314.pyc 788a41c16657724e25c6b5608c6f2447 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/GdkPixbuf.cpython-314.pyc 96158c9d2e26a00c7efe01b1d82a2c82 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/GdkPixbuf.cpython-314.opt-2.pyc 96158c9d2e26a00c7efe01b1d82a2c82 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/Gdk.cpython-314.opt-2.pyc 8d8f16348752e46d72b6299ca6047b5a 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/GIMarshallingTests.cpython-314.opt-1.pyc 0100065dd3b6896affe85ea72846ffbd 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/__pycache__/GIMarshallingTests.cpython-314.opt-2.pyc 73969dd6ad439ea5d6c27aa26e729589 1783243292
+obj /usr/lib/python3.14/site-packages/gi/overrides/Pango.py f5a74bbb7db87104ddfa656a93675ecc 1778271032
+obj /usr/lib/python3.14/site-packages/gi/overrides/GioUnix.py 25b134e48d0ea884984db83d8394edb2 1778271032
+obj /usr/lib/python3.14/site-packages/gi/overrides/GObject.py eb15869d30fda20964ad2efbce59d199 1778271032
+obj /usr/lib/python3.14/site-packages/gi/_propertyhelper.py de59b9295ae4619db0c8aec2b11bcbef 1778271032
+obj /usr/lib/python3.14/site-packages/gi/module.py a00b7db2436c4bc7ee256322d75244ca 1778271032
+obj /usr/lib/python3.14/site-packages/gi/__init__.py d4c87f081f9141117df28e843008e6b1 1778271032
+obj /usr/lib/python3.14/site-packages/gi/_gtktemplate.py fd0d9b9997a1800169cc88b4811b2d86 1778271032
+dir /usr/lib/python3.14/site-packages/gi/__pycache__
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/__init__.cpython-314.opt-1.pyc 9641775fae91e06ef6f55fc0f72e8101 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/_ossighelper.cpython-314.opt-1.pyc 076b479d80ea315e4a4babf6d92775ec 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/_gtktemplate.cpython-314.opt-1.pyc c9bcabf147f1aa46906a9496044281d0 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/_signature.cpython-314.opt-1.pyc 2a555f29c00f8d3cf9d2c2e7c43fcc53 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/importer.cpython-314.pyc ec8d0052f5acc3b3f2a57cb19e33af45 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/module.cpython-314.pyc c1114747ccd3c74b30eec6f9e2666a02 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/_propertyhelper.cpython-314.opt-1.pyc 2b1d49c5c5075405ba4a48a757c3b5f9 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/docstring.cpython-314.pyc a2eb77116aacb2eb1b0e30b71d60bda2 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/types.cpython-314.opt-1.pyc 94804906ed9d449fef3d3856bb0b3948 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/_constants.cpython-314.opt-1.pyc a8a3a112859063813035b2a1b680316e 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/__init__.cpython-314.opt-2.pyc 38c51043d348a502fe39fb9e7563c800 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/_enum.cpython-314.opt-1.pyc 90342c633026fb411517b73d26a579f0 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/events.cpython-314.pyc 99a6fc270218b929944b849030afbfb6 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/docstring.cpython-314.opt-2.pyc 6655eebe5f9375cca83ea1330515657f 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/_signalhelper.cpython-314.pyc e3e3dc6bc649f7d146bb9d89f5df625d 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/_propertyhelper.cpython-314.opt-2.pyc 3b89c39aced76445c1d19a83a3357e61 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/_constants.cpython-314.opt-2.pyc a8a3a112859063813035b2a1b680316e 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/events.cpython-314.opt-1.pyc aab36d1d922074172a707e0c98f9edf2 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/_gtktemplate.cpython-314.opt-2.pyc 317b8a1339d52ab59244162fd04457d4 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/_ossighelper.cpython-314.opt-2.pyc f3a0936995caa72cb267709e77255a1f 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/module.cpython-314.opt-2.pyc 4466ace40b942a187831fe622e319895 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/docstring.cpython-314.opt-1.pyc a2eb77116aacb2eb1b0e30b71d60bda2 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/_ossighelper.cpython-314.pyc 9ead6111ef9b92682a728d4b4f4242b8 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/_constants.cpython-314.pyc a8a3a112859063813035b2a1b680316e 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/_signalhelper.cpython-314.opt-2.pyc 44080796004f878c0090146f0d102524 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/_signature.cpython-314.opt-2.pyc 2a555f29c00f8d3cf9d2c2e7c43fcc53 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/_error.cpython-314.opt-2.pyc edc8c1a039f75d68c3fcbabbfd671eb0 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/types.cpython-314.pyc 94804906ed9d449fef3d3856bb0b3948 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/module.cpython-314.opt-1.pyc e135dd635bcebd4777b05eb3e19b6430 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/importer.cpython-314.opt-2.pyc 100a734416fe3e2f64c2c80a816353c2 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/_enum.cpython-314.pyc 90342c633026fb411517b73d26a579f0 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/_signalhelper.cpython-314.opt-1.pyc e3e3dc6bc649f7d146bb9d89f5df625d 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/events.cpython-314.opt-2.pyc a381c3f558e684bc506cdc82376cd08a 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/__init__.cpython-314.pyc 9641775fae91e06ef6f55fc0f72e8101 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/_enum.cpython-314.opt-2.pyc 90342c633026fb411517b73d26a579f0 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/_error.cpython-314.pyc 34af572b4ff8e6c38388f2dbc35eabaa 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/_propertyhelper.cpython-314.pyc 2b1d49c5c5075405ba4a48a757c3b5f9 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/_error.cpython-314.opt-1.pyc 34af572b4ff8e6c38388f2dbc35eabaa 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/_signature.cpython-314.pyc 2a555f29c00f8d3cf9d2c2e7c43fcc53 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/_gtktemplate.cpython-314.pyc 0f5ea738b8d96556de0e1b8c49191c68 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/types.cpython-314.opt-2.pyc aea358bbacdabc2394e109aa450e246b 1783243292
+obj /usr/lib/python3.14/site-packages/gi/__pycache__/importer.cpython-314.opt-1.pyc ec8d0052f5acc3b3f2a57cb19e33af45 1783243292
+obj /usr/lib/python3.14/site-packages/gi/docstring.py e9ffc780dd3ec31328af98bf2118bf03 1778271032
+dir /usr/lib/python3.14/site-packages/PyGObject-3.56.3.dist-info
+obj /usr/lib/python3.14/site-packages/PyGObject-3.56.3.dist-info/METADATA 327d403d4cd50582e52c9c21a89dabe1 1783243270

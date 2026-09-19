@@ -1,0 +1,509 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/catman 12e39d9c9fea4a4102985ef1c04c421a 1771175985
+obj /usr/bin/lexgrog 96fdf1de95cd8b852a423631848b858a 1771175985
+obj /usr/bin/man d2247c3918de0a3a8acfbdd96a788f3d 1771175985
+obj /usr/bin/man-recode de5fcfd6192f77ecb87a907d05775e18 1771175985
+obj /usr/bin/mandb 3dec900582a8613c56dc80aa2c8c6b4f 1771175985
+obj /usr/bin/manpath 7b3441eb07570074db04ae61fd798be0 1771175985
+obj /usr/bin/whatis 8d6434b8160ea8f69744595b5a0be3cf 1771175985
+dir /usr/lib
+dir /usr/lib/systemd
+dir /usr/lib/systemd/system
+obj /usr/lib/systemd/system/man-db.service 5046728f65b5de4daec54278f5ec0ecc 1771175982
+obj /usr/lib/systemd/system/man-db.timer f5d99ce6b14c06512a38041655416198 1771175982
+dir /usr/lib/tmpfiles.d
+obj /usr/lib/tmpfiles.d/man-db.conf 90e3f7ab6ab9597f6ef3b238fb4cc5c0 1771175982
+dir /usr/lib64
+dir /usr/lib64/man-db
+obj /usr/lib64/man-db/libman-2.13.1.so 1bea9e5a4e7078fa088e028f6b63a71f 1771175985
+sym /usr/lib64/man-db/libman.so -> libman-2.13.1.so 1789354263
+obj /usr/lib64/man-db/libmandb-2.13.1.so b1a0485595807ebf4559d8ce51fe6f3d 1771175985
+sym /usr/lib64/man-db/libmandb.so -> libmandb-2.13.1.so 1789354263
+dir /usr/libexec
+dir /usr/libexec/man-db
+obj /usr/libexec/man-db/globbing bdbd0a9a154ced61bd53b922ff87f6c8 1771175985
+obj /usr/libexec/man-db/manconv 818b7d14df4ab02e2bfc001b84c2a4e1 1771175985
+obj /usr/libexec/man-db/zsoelim e520e24cb88660169bc5bc0eec0cf032 1771175985
+dir /usr/sbin
+obj /usr/sbin/accessdb d767e3b59f08d40de922b0c0ff52815a 1771175985
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/man-db-2.13.1-r1
+obj /usr/share/doc/man-db-2.13.1-r1/ChangeLog.bz2 6db13c77714328176f6794d35780ef42 1771175984
+obj /usr/share/doc/man-db-2.13.1-r1/FAQ.bz2 b9895187e63fd3b5b81c653604be7489 1771175984
+obj /usr/share/doc/man-db-2.13.1-r1/HACKING.md.bz2 b00fb0c284cae346b78e0d32344d1323 1771175984
+obj /usr/share/doc/man-db-2.13.1-r1/README.md.bz2 a9eb2e27d295c399fa7c461dabd93bd7 1771175984
+obj /usr/share/doc/man-db-2.13.1-r1/TODO.bz2 b2c13d2dfec087d821cd9ff0910b64f0 1771175984
+obj /usr/share/doc/man-db-2.13.1-r1/man-db-manual.ps.bz2 55021d905366b1f04e9df43ea8df2a98 1771175984
+obj /usr/share/doc/man-db-2.13.1-r1/man-db-manual.txt.bz2 75e88782a4f29d8fd15fa09b29cc753a 1771175984
+dir /usr/share/locale
+dir /usr/share/locale/af
+dir /usr/share/locale/af/LC_MESSAGES
+obj /usr/share/locale/af/LC_MESSAGES/man-db-gnulib.mo 7ce6741b9a4fd9cedcf11de084528f71 1771175982
+dir /usr/share/locale/ast
+dir /usr/share/locale/ast/LC_MESSAGES
+obj /usr/share/locale/ast/LC_MESSAGES/man-db.mo f9bb91739b83944282257575cc05e2cd 1771175984
+dir /usr/share/locale/be
+dir /usr/share/locale/be/LC_MESSAGES
+obj /usr/share/locale/be/LC_MESSAGES/man-db-gnulib.mo 72362885940391af6c9472588d457bb3 1771175982
+dir /usr/share/locale/bg
+dir /usr/share/locale/bg/LC_MESSAGES
+obj /usr/share/locale/bg/LC_MESSAGES/man-db-gnulib.mo 1515e63bc24b0d2ecf27bb005623168c 1771175982
+dir /usr/share/locale/ca
+dir /usr/share/locale/ca/LC_MESSAGES
+obj /usr/share/locale/ca/LC_MESSAGES/man-db-gnulib.mo 0ceb6206892923dd6cdcdda77eda67cc 1771175982
+obj /usr/share/locale/ca/LC_MESSAGES/man-db.mo 8acd994bf6ee0432d996e350da026570 1771175984
+dir /usr/share/locale/cs
+dir /usr/share/locale/cs/LC_MESSAGES
+obj /usr/share/locale/cs/LC_MESSAGES/man-db-gnulib.mo c36f65869db046d4a0229d90d831db86 1771175982
+obj /usr/share/locale/cs/LC_MESSAGES/man-db.mo ffafc3cd28da352c67913bf347edb8eb 1771175984
+dir /usr/share/locale/da
+dir /usr/share/locale/da/LC_MESSAGES
+obj /usr/share/locale/da/LC_MESSAGES/man-db-gnulib.mo 8894868c7261dd8d8b6d12a92b90a93e 1771175982
+obj /usr/share/locale/da/LC_MESSAGES/man-db.mo 9a6bfae3e35b2afcc5e5cb744f034f73 1771175984
+dir /usr/share/locale/de
+dir /usr/share/locale/de/LC_MESSAGES
+obj /usr/share/locale/de/LC_MESSAGES/man-db-gnulib.mo 0bd23598e69a37c7a2122c4a2db9b718 1771175982
+obj /usr/share/locale/de/LC_MESSAGES/man-db.mo c3ae250b101b065cc7aaef5e177a6693 1771175984
+dir /usr/share/locale/el
+dir /usr/share/locale/el/LC_MESSAGES
+obj /usr/share/locale/el/LC_MESSAGES/man-db-gnulib.mo 4532c4c7b9cc08154d67790799bcfbd7 1771175982
+dir /usr/share/locale/eo
+dir /usr/share/locale/eo/LC_MESSAGES
+obj /usr/share/locale/eo/LC_MESSAGES/man-db-gnulib.mo 4a1cef91ced1f08bcc307e3b92b5ae86 1771175982
+obj /usr/share/locale/eo/LC_MESSAGES/man-db.mo e468071dd9f47e6c23378a9dfbf965da 1771175984
+dir /usr/share/locale/es
+dir /usr/share/locale/es/LC_MESSAGES
+obj /usr/share/locale/es/LC_MESSAGES/man-db-gnulib.mo 6f53226cbb9d56860074552419448a65 1771175982
+obj /usr/share/locale/es/LC_MESSAGES/man-db.mo ef6699ca99301095f011bf45ef8910dd 1771175984
+dir /usr/share/locale/et
+dir /usr/share/locale/et/LC_MESSAGES
+obj /usr/share/locale/et/LC_MESSAGES/man-db-gnulib.mo 0a772dbab77ac0d795249e891e563fbc 1771175982
+dir /usr/share/locale/eu
+dir /usr/share/locale/eu/LC_MESSAGES
+obj /usr/share/locale/eu/LC_MESSAGES/man-db-gnulib.mo 72a4696c106b25b92a908b03645d0633 1771175982
+dir /usr/share/locale/fi
+dir /usr/share/locale/fi/LC_MESSAGES
+obj /usr/share/locale/fi/LC_MESSAGES/man-db-gnulib.mo 239f84887f9ca561c45275668256692e 1771175982
+obj /usr/share/locale/fi/LC_MESSAGES/man-db.mo f2600150ac4cc9590f0af04ec32f4429 1771175984
+dir /usr/share/locale/fr
+dir /usr/share/locale/fr/LC_MESSAGES
+obj /usr/share/locale/fr/LC_MESSAGES/man-db-gnulib.mo fcaec1462540161a81254ad7c04706e8 1771175982
+obj /usr/share/locale/fr/LC_MESSAGES/man-db.mo 776730437cf5c8b06ea1098fc60d74e2 1771175984
+dir /usr/share/locale/ga
+dir /usr/share/locale/ga/LC_MESSAGES
+obj /usr/share/locale/ga/LC_MESSAGES/man-db-gnulib.mo f0b3ee7601543d7fbf4454c63c76daf3 1771175982
+dir /usr/share/locale/gl
+dir /usr/share/locale/gl/LC_MESSAGES
+obj /usr/share/locale/gl/LC_MESSAGES/man-db-gnulib.mo 0f720f5830fa54aa390cbfedbe89c34b 1771175982
+dir /usr/share/locale/hu
+dir /usr/share/locale/hu/LC_MESSAGES
+obj /usr/share/locale/hu/LC_MESSAGES/man-db-gnulib.mo 8116837a096299d26be3599712eb92ab 1771175982
+dir /usr/share/locale/id
+dir /usr/share/locale/id/LC_MESSAGES
+obj /usr/share/locale/id/LC_MESSAGES/man-db.mo 7c2fd5e4e0e4be5838ea06eb8df1e6e3 1771175984
+dir /usr/share/locale/it
+dir /usr/share/locale/it/LC_MESSAGES
+obj /usr/share/locale/it/LC_MESSAGES/man-db-gnulib.mo f62064fde64f68143f0867a1f08af239 1771175982
+obj /usr/share/locale/it/LC_MESSAGES/man-db.mo 5311bb8b2815f10afcd7b2136353cd94 1771175984
+dir /usr/share/locale/ja
+dir /usr/share/locale/ja/LC_MESSAGES
+obj /usr/share/locale/ja/LC_MESSAGES/man-db-gnulib.mo b6fbae67934a5aa6e264e5c4a0d60048 1771175982
+obj /usr/share/locale/ja/LC_MESSAGES/man-db.mo 748c9ed3f89293ce44245ffbc66cd4d9 1771175984
+dir /usr/share/locale/ka
+dir /usr/share/locale/ka/LC_MESSAGES
+obj /usr/share/locale/ka/LC_MESSAGES/man-db-gnulib.mo c26f2b4e3715e67c66f13cb48db06624 1771175982
+obj /usr/share/locale/ka/LC_MESSAGES/man-db.mo cf849d0c071d70d7aac85611f8887b4e 1771175984
+dir /usr/share/locale/ko
+dir /usr/share/locale/ko/LC_MESSAGES
+obj /usr/share/locale/ko/LC_MESSAGES/man-db-gnulib.mo c8660b5eb7f8db93adc0d531bfbc69f8 1771175982
+obj /usr/share/locale/ko/LC_MESSAGES/man-db.mo a16da4d9f064a2a929f5729e266c65f3 1771175984
+dir /usr/share/locale/ms
+dir /usr/share/locale/ms/LC_MESSAGES
+obj /usr/share/locale/ms/LC_MESSAGES/man-db-gnulib.mo aefc08d79fdc5f1116364ffaabf1398d 1771175982
+dir /usr/share/locale/nb
+dir /usr/share/locale/nb/LC_MESSAGES
+obj /usr/share/locale/nb/LC_MESSAGES/man-db-gnulib.mo b34c3c1f2c19d888dc490883817cc6d1 1771175982
+dir /usr/share/locale/nl
+dir /usr/share/locale/nl/LC_MESSAGES
+obj /usr/share/locale/nl/LC_MESSAGES/man-db-gnulib.mo 8005836e5aac87eec4c29123909f8720 1771175982
+obj /usr/share/locale/nl/LC_MESSAGES/man-db.mo ebb83b7a6c1f0d6ac0f4fc7184776a1b 1771175984
+dir /usr/share/locale/pl
+dir /usr/share/locale/pl/LC_MESSAGES
+obj /usr/share/locale/pl/LC_MESSAGES/man-db-gnulib.mo dc93fd3213ed0219738a13703d4a5769 1771175982
+obj /usr/share/locale/pl/LC_MESSAGES/man-db.mo a27bf48d45bb5db146dad461944f1c1f 1771175984
+dir /usr/share/locale/pt
+dir /usr/share/locale/pt/LC_MESSAGES
+obj /usr/share/locale/pt/LC_MESSAGES/man-db-gnulib.mo d73a128fd5677048f28897acc2abb950 1771175982
+obj /usr/share/locale/pt/LC_MESSAGES/man-db.mo 7ab9357e310d0d58092fae33719065ce 1771175984
+dir /usr/share/locale/pt_BR
+dir /usr/share/locale/pt_BR/LC_MESSAGES
+obj /usr/share/locale/pt_BR/LC_MESSAGES/man-db-gnulib.mo 9b86c55e4b48d2993e6c20916c5fe3a8 1771175982
+obj /usr/share/locale/pt_BR/LC_MESSAGES/man-db.mo 0fb04886d318739a5efa279138da4532 1771175984
+dir /usr/share/locale/ro
+dir /usr/share/locale/ro/LC_MESSAGES
+obj /usr/share/locale/ro/LC_MESSAGES/man-db-gnulib.mo ecf168dd923635d2328ed2e44d903e9c 1771175982
+obj /usr/share/locale/ro/LC_MESSAGES/man-db.mo b8b6e5b2daba93894154aa8fc61c1851 1771175984
+dir /usr/share/locale/ru
+dir /usr/share/locale/ru/LC_MESSAGES
+obj /usr/share/locale/ru/LC_MESSAGES/man-db-gnulib.mo 3c91cc9e9ccef45b178e261820ad92e9 1771175982
+obj /usr/share/locale/ru/LC_MESSAGES/man-db.mo d7b1b4ba152036c3263a00cf86619295 1771175984
+dir /usr/share/locale/sk
+dir /usr/share/locale/sk/LC_MESSAGES
+obj /usr/share/locale/sk/LC_MESSAGES/man-db-gnulib.mo 5e68dd0b550955c9c5ffbf3be5a0a752 1771175982
+dir /usr/share/locale/sl
+dir /usr/share/locale/sl/LC_MESSAGES
+obj /usr/share/locale/sl/LC_MESSAGES/man-db-gnulib.mo 01b570285339ebc12123a2179ded548e 1771175982
+dir /usr/share/locale/sr
+dir /usr/share/locale/sr/LC_MESSAGES
+obj /usr/share/locale/sr/LC_MESSAGES/man-db-gnulib.mo de768d25b7aa55b38f576896f75bf777 1771175982
+obj /usr/share/locale/sr/LC_MESSAGES/man-db.mo fd24ed73449c18cf583b3e3cac2503b2 1771175984
+dir /usr/share/locale/sv
+dir /usr/share/locale/sv/LC_MESSAGES
+obj /usr/share/locale/sv/LC_MESSAGES/man-db-gnulib.mo 7fa6cc9ab011b170251bb7869afbff00 1771175982
+obj /usr/share/locale/sv/LC_MESSAGES/man-db.mo 91cb127cd7163aa948b51b7a6fd3c17d 1771175984
+dir /usr/share/locale/tr
+dir /usr/share/locale/tr/LC_MESSAGES
+obj /usr/share/locale/tr/LC_MESSAGES/man-db-gnulib.mo ac742e09c5b6baec68a0568f48398e12 1771175982
+obj /usr/share/locale/tr/LC_MESSAGES/man-db.mo 05ee3c16f05417e9d80852bae26d92ed 1771175984
+dir /usr/share/locale/uk
+dir /usr/share/locale/uk/LC_MESSAGES
+obj /usr/share/locale/uk/LC_MESSAGES/man-db-gnulib.mo 29a238402bfce66720a7c8eb04ae9cef 1771175982
+obj /usr/share/locale/uk/LC_MESSAGES/man-db.mo feb71126eb8c067ac556da7abbb7672f 1771175984
+dir /usr/share/locale/vi
+dir /usr/share/locale/vi/LC_MESSAGES
+obj /usr/share/locale/vi/LC_MESSAGES/man-db-gnulib.mo 9e4d121b5d79dd6e8434ccf7279044e1 1771175982
+obj /usr/share/locale/vi/LC_MESSAGES/man-db.mo 80377be8e03b4d96749f342e96f1cfa8 1771175984
+dir /usr/share/locale/zh_CN
+dir /usr/share/locale/zh_CN/LC_MESSAGES
+obj /usr/share/locale/zh_CN/LC_MESSAGES/man-db-gnulib.mo e34fdecb493f64ad074c7776147f3f85 1771175982
+obj /usr/share/locale/zh_CN/LC_MESSAGES/man-db.mo e5e508e89ad5d7ecdd903bbb34b46411 1771175984
+dir /usr/share/locale/zh_TW
+dir /usr/share/locale/zh_TW/LC_MESSAGES
+obj /usr/share/locale/zh_TW/LC_MESSAGES/man-db-gnulib.mo 9f4e89481b532b245fe5b179571d8cf9 1771175982
+obj /usr/share/locale/zh_TW/LC_MESSAGES/man-db.mo 2d81095535ffb8a3accdc9121041f95e 1771175984
+dir /usr/share/man
+dir /usr/share/man/da
+dir /usr/share/man/da/man1
+obj /usr/share/man/da/man1/apropos.1.bz2 c172fb40fbeb1ec2c9309d01e2fa9e19 1771175984
+obj /usr/share/man/da/man1/lexgrog.1.bz2 158e7358c7150b53e8c110553d3e0c20 1771175984
+obj /usr/share/man/da/man1/man-recode.1.bz2 d4182f5897963ce0156f61a16c31231e 1771175984
+obj /usr/share/man/da/man1/man.1.bz2 244c83ef79589feb39ed8d47c31c7103 1771175984
+obj /usr/share/man/da/man1/manconv.1.bz2 87913fde1ed99af01e9d010073513830 1771175984
+obj /usr/share/man/da/man1/manpath.1.bz2 5341ae9ed0470fda326d3c890b4098f1 1771175984
+obj /usr/share/man/da/man1/whatis.1.bz2 7a92d75fc7d7dd373e415d4c8c3b5d3f 1771175984
+obj /usr/share/man/da/man1/zsoelim.1.bz2 f9a37c8fbd9051cf6ea08ae0e4c33b28 1771175984
+dir /usr/share/man/da/man5
+obj /usr/share/man/da/man5/manpath.5.bz2 69e86b557ae9280b3752312b056b6354 1771175984
+dir /usr/share/man/da/man8
+obj /usr/share/man/da/man8/accessdb.8.bz2 9399ba5fd32798919c53d5f01a95600a 1771175984
+obj /usr/share/man/da/man8/catman.8.bz2 1a4f10a910e293058488c82abfa02e10 1771175984
+obj /usr/share/man/da/man8/mandb.8.bz2 624d9cac33c2dae46f460ca7c1dcafed 1771175984
+dir /usr/share/man/de
+dir /usr/share/man/de/man1
+obj /usr/share/man/de/man1/apropos.1.bz2 76fc6b7f317c3216e34771281a97789d 1771175984
+obj /usr/share/man/de/man1/lexgrog.1.bz2 8f31e4d57539e2477f5054b1fc797e59 1771175984
+obj /usr/share/man/de/man1/man-recode.1.bz2 77d1226c8db39f3b5b0deaa547b6f81c 1771175984
+obj /usr/share/man/de/man1/man.1.bz2 5a6c9b21e30e0980bc9684e423f104ba 1771175984
+obj /usr/share/man/de/man1/manconv.1.bz2 8db3881cdd1e0fd1a1e4ee136dd1dfe5 1771175984
+obj /usr/share/man/de/man1/manpath.1.bz2 0661b32136d09aa4c83aac7bb5443ebd 1771175984
+obj /usr/share/man/de/man1/whatis.1.bz2 79b5d9b0367dce8d536dc99df1fc596f 1771175984
+obj /usr/share/man/de/man1/zsoelim.1.bz2 024ff2f35f710ce5a02478cdf05dde66 1771175984
+dir /usr/share/man/de/man5
+obj /usr/share/man/de/man5/manpath.5.bz2 6a97e52b423ef4f01cd0aed5706210d4 1771175984
+dir /usr/share/man/de/man8
+obj /usr/share/man/de/man8/accessdb.8.bz2 9ca6f32c299f0a1232d313dd1044f418 1771175984
+obj /usr/share/man/de/man8/catman.8.bz2 d75f87d55aa76bcc40e1896372a63c55 1771175984
+obj /usr/share/man/de/man8/mandb.8.bz2 3e1f39ffb9cc6115ab6e745f5abcd5f1 1771175984
+dir /usr/share/man/es
+dir /usr/share/man/es/man1
+obj /usr/share/man/es/man1/apropos.1.bz2 8f325dcda69e9d245306e538c4e1469d 1771175984
+obj /usr/share/man/es/man1/lexgrog.1.bz2 4455f3520c83eccd316a9b6ac8f2ca95 1771175984
+obj /usr/share/man/es/man1/man-recode.1.bz2 93d6f979502a325373923718bec4cb91 1771175984
+obj /usr/share/man/es/man1/man.1.bz2 36d56f3fe7718a2b29b5241866b9f06f 1771175984
+obj /usr/share/man/es/man1/manconv.1.bz2 11b5d8e9e9da0372586adab007f8b814 1771175984
+obj /usr/share/man/es/man1/manpath.1.bz2 6b5bddc1771fc76d9ccfc54d2336b1ee 1771175984
+obj /usr/share/man/es/man1/whatis.1.bz2 6cf75376d0ea19581a129f63fdcd5d53 1771175984
+obj /usr/share/man/es/man1/zsoelim.1.bz2 f56cc46b8b5b38442ff71d4968527fec 1771175984
+dir /usr/share/man/es/man5
+obj /usr/share/man/es/man5/manpath.5.bz2 009f6236e52ffd737b194f364be3095f 1771175984
+dir /usr/share/man/es/man8
+obj /usr/share/man/es/man8/accessdb.8.bz2 894807a6c7fb9c8e9cdb78d0fb10004d 1771175984
+obj /usr/share/man/es/man8/catman.8.bz2 ec7f9aa83c6139a0b4af93a5ac4d91da 1771175984
+obj /usr/share/man/es/man8/mandb.8.bz2 aee6609d22585d828f5fbc33e08147ba 1771175984
+dir /usr/share/man/fr
+dir /usr/share/man/fr/man1
+obj /usr/share/man/fr/man1/apropos.1.bz2 7a16833c42b17e2a574c7ae9df5c2384 1771175984
+obj /usr/share/man/fr/man1/lexgrog.1.bz2 60b57f475df04da59684971e0be6ed51 1771175984
+obj /usr/share/man/fr/man1/man-recode.1.bz2 1a9b52177c3c636c1e977f1c67e5e137 1771175984
+obj /usr/share/man/fr/man1/man.1.bz2 5d30e4d6a3de2abce42edc1c18a606ec 1771175984
+obj /usr/share/man/fr/man1/manconv.1.bz2 d329ceab458ecddfcaf06e4786ae4f2d 1771175984
+obj /usr/share/man/fr/man1/manpath.1.bz2 8c4b8d5196be73509820268645051bd2 1771175984
+obj /usr/share/man/fr/man1/whatis.1.bz2 5e6ceff8ce31bd074ceef024d379cee4 1771175984
+obj /usr/share/man/fr/man1/zsoelim.1.bz2 180b91b0a9263e90b685275b56733333 1771175984
+dir /usr/share/man/fr/man5
+obj /usr/share/man/fr/man5/manpath.5.bz2 74c7c135d5b9f6c632dba67812237919 1771175984
+dir /usr/share/man/fr/man8
+obj /usr/share/man/fr/man8/accessdb.8.bz2 0c42162e4a4f9d8abef6a3a0582fbab8 1771175984
+obj /usr/share/man/fr/man8/catman.8.bz2 15b82c199c97831818048bc5d20e197e 1771175984
+obj /usr/share/man/fr/man8/mandb.8.bz2 8eedd9aa0c3b93d5e11183857ee6a20b 1771175984
+dir /usr/share/man/id
+dir /usr/share/man/id/man1
+obj /usr/share/man/id/man1/apropos.1.bz2 ce3c1ce8126908a5d437097eb26460bf 1771175984
+obj /usr/share/man/id/man1/lexgrog.1.bz2 70e6b64e5dc5d2cd7e6d7b05883f7948 1771175984
+obj /usr/share/man/id/man1/man-recode.1.bz2 541c5ca46a65af472194382e2719e26b 1771175984
+obj /usr/share/man/id/man1/man.1.bz2 9bf89a7b2f3c69fda7a48506ae490588 1771175984
+obj /usr/share/man/id/man1/manconv.1.bz2 8d026e991fcb98a0ccee32e5ddd91f94 1771175984
+obj /usr/share/man/id/man1/manpath.1.bz2 5f0a1de3186bb6f8bae691088f249939 1771175984
+obj /usr/share/man/id/man1/whatis.1.bz2 17b177b6864b1514a51187c6f6e81e75 1771175984
+obj /usr/share/man/id/man1/zsoelim.1.bz2 d9f7d3de28a05125c2838ff62921bdf2 1771175984
+dir /usr/share/man/id/man5
+obj /usr/share/man/id/man5/manpath.5.bz2 fc315264f6038635005804428981e689 1771175984
+dir /usr/share/man/id/man8
+obj /usr/share/man/id/man8/accessdb.8.bz2 07ff950ad8176262e7c2220449f815a3 1771175984
+obj /usr/share/man/id/man8/catman.8.bz2 2821e28f08eeaac5244fdcdf6c1474cf 1771175984
+obj /usr/share/man/id/man8/mandb.8.bz2 d43b40eea4fdd0bf563ccdf70c780fc5 1771175984
+dir /usr/share/man/it
+dir /usr/share/man/it/man1
+obj /usr/share/man/it/man1/apropos.1.bz2 f3dd8605da8e482a2ae0c764a71de395 1771175984
+obj /usr/share/man/it/man1/man.1.bz2 23e2e3266a68b91e6272dcd61f429db0 1771175984
+obj /usr/share/man/it/man1/manpath.1.bz2 5b160ce806f3314ca08771e9b483eb95 1771175984
+obj /usr/share/man/it/man1/whatis.1.bz2 d79536c2433f6210a55d7487ebada27b 1771175984
+obj /usr/share/man/it/man1/zsoelim.1.bz2 59867ed970ed1d4746e0b91639c60416 1771175984
+dir /usr/share/man/it/man5
+obj /usr/share/man/it/man5/manpath.5.bz2 ae3a13eb806e5acab19b693a101409a7 1771175984
+dir /usr/share/man/it/man8
+obj /usr/share/man/it/man8/accessdb.8.bz2 78e9d85b7bf6ec78704004c49cc55ad6 1771175984
+obj /usr/share/man/it/man8/catman.8.bz2 c6f9673ba0ccb78a8755ebcdba65fc8a 1771175984
+obj /usr/share/man/it/man8/mandb.8.bz2 58691a385d9b3a3ff282f3d7ba9702f0 1771175984
+dir /usr/share/man/ja
+dir /usr/share/man/ja/man1
+obj /usr/share/man/ja/man1/apropos.1.bz2 3a6cbbecb90a915906f57ecc5bf0545f 1771175984
+obj /usr/share/man/ja/man1/lexgrog.1.bz2 fc69db64ffa802088eae1fa609f4932b 1771175984
+obj /usr/share/man/ja/man1/man-recode.1.bz2 6e91ef15c1d7255c58f48fc377c46d27 1771175984
+obj /usr/share/man/ja/man1/man.1.bz2 12037971ca07293d2f961ad05686df5d 1771175984
+obj /usr/share/man/ja/man1/manconv.1.bz2 aad1633e2a039cd5c7a65f9620fb5261 1771175984
+obj /usr/share/man/ja/man1/manpath.1.bz2 2d75273d9dad6232093369436d1af8a5 1771175984
+obj /usr/share/man/ja/man1/whatis.1.bz2 42c267493f0b1b0470bb43fbb15a3bd2 1771175984
+obj /usr/share/man/ja/man1/zsoelim.1.bz2 4de0cce000a4d8aa60e1446a249f11fc 1771175984
+dir /usr/share/man/ja/man5
+obj /usr/share/man/ja/man5/manpath.5.bz2 31a37b4b8a8e3af286c7b0c3dd348eb7 1771175984
+dir /usr/share/man/ja/man8
+obj /usr/share/man/ja/man8/accessdb.8.bz2 36f1cbf7277b5e5c3170c767b1e4c7c2 1771175984
+obj /usr/share/man/ja/man8/catman.8.bz2 50f6ed26a2e1800a9dd51f8e3bb0d0e0 1771175984
+obj /usr/share/man/ja/man8/mandb.8.bz2 b992206e37075568506ec498bcc76656 1771175984
+dir /usr/share/man/ko
+dir /usr/share/man/ko/man1
+obj /usr/share/man/ko/man1/apropos.1.bz2 a4411b5a284e3ca7cca793b4628b7d4a 1771175984
+obj /usr/share/man/ko/man1/lexgrog.1.bz2 9b042e3794d7a274006c255564b1b0d5 1771175984
+obj /usr/share/man/ko/man1/man-recode.1.bz2 ee486810f2ebf46ad2a0db84d1df7413 1771175984
+obj /usr/share/man/ko/man1/man.1.bz2 e39ae7b945d6dd864663166efa7b202e 1771175984
+obj /usr/share/man/ko/man1/manconv.1.bz2 d1ca755768494617ba1cd8759c72d6ee 1771175984
+obj /usr/share/man/ko/man1/manpath.1.bz2 5a16bc3e9a4ec7c38afb9f1477d66ac9 1771175984
+obj /usr/share/man/ko/man1/whatis.1.bz2 613ccfc4d94beacc15db254081a24908 1771175984
+obj /usr/share/man/ko/man1/zsoelim.1.bz2 794d0d155a89853cfe95e0ec4af88c3a 1771175984
+dir /usr/share/man/ko/man5
+obj /usr/share/man/ko/man5/manpath.5.bz2 505bdccefb609c7b2c58f4275fea7deb 1771175984
+dir /usr/share/man/ko/man8
+obj /usr/share/man/ko/man8/accessdb.8.bz2 5418f920f5978db6b391b7ceffa8eb04 1771175984
+obj /usr/share/man/ko/man8/catman.8.bz2 90070f3727deb174bdf0e0fc86712381 1771175984
+obj /usr/share/man/ko/man8/mandb.8.bz2 9493b7d3d5525ed6810ac19eb9bb1fcc 1771175984
+dir /usr/share/man/man1
+obj /usr/share/man/man1/apropos.1.bz2 0d50f5828b77b2baed547decbe89517a 1771175984
+obj /usr/share/man/man1/lexgrog.1.bz2 612d3758ad973f79bfbefd9b99c90809 1771175984
+obj /usr/share/man/man1/man-recode.1.bz2 a68701316735adfe81ff6492a473009a 1771175984
+obj /usr/share/man/man1/man.1.bz2 bbcb594dc4687611164fbd18d5f221ac 1771175984
+obj /usr/share/man/man1/manconv.1.bz2 10d7d448fc4d5d231daab280692084eb 1771175984
+obj /usr/share/man/man1/manpath.1.bz2 d917c7e6583fdc4b85114716ff8e9b6b 1771175984
+obj /usr/share/man/man1/whatis.1.bz2 90849dd9fb8a9eddfbaec09694a88121 1771175984
+obj /usr/share/man/man1/zsoelim.1.bz2 d133d05ca2a135e5a62861d82acad08e 1771175984
+dir /usr/share/man/man5
+obj /usr/share/man/man5/manpath.5.bz2 86e02191f118daf9c8f07927c285a311 1771175984
+dir /usr/share/man/man8
+obj /usr/share/man/man8/accessdb.8.bz2 fb8bdea359ba4aa434418babae44d691 1771175984
+obj /usr/share/man/man8/catman.8.bz2 b7b96541cc34a800de9a17f906061242 1771175984
+obj /usr/share/man/man8/mandb.8.bz2 d5477c5b6d718b63e78ba5f80e2336ea 1771175984
+dir /usr/share/man/nl
+dir /usr/share/man/nl/man1
+obj /usr/share/man/nl/man1/apropos.1.bz2 2880415715ef964d2ba1f840fd4b8d50 1771175984
+obj /usr/share/man/nl/man1/lexgrog.1.bz2 bfacad3fbd00a21058bbdc5a8e3c4467 1771175984
+obj /usr/share/man/nl/man1/man-recode.1.bz2 5b053e59784b93cdbc9a2692374fea31 1771175984
+obj /usr/share/man/nl/man1/man.1.bz2 ca0938c61053083372f8aa53c4d279d3 1771175984
+obj /usr/share/man/nl/man1/manconv.1.bz2 1de9c6c5d285de6594ead421baeab0ec 1771175984
+obj /usr/share/man/nl/man1/manpath.1.bz2 e8d1b598b2ac35b85782ae4d6f903a5a 1771175984
+obj /usr/share/man/nl/man1/whatis.1.bz2 70cd94f57f8227ec1d000fab0b2b0cda 1771175984
+obj /usr/share/man/nl/man1/zsoelim.1.bz2 639c9bf4882d60703427b7a4c282a146 1771175984
+dir /usr/share/man/nl/man5
+obj /usr/share/man/nl/man5/manpath.5.bz2 61cb5e3b8411d1baca55b87542edce96 1771175984
+dir /usr/share/man/nl/man8
+obj /usr/share/man/nl/man8/accessdb.8.bz2 7ffca61158cdc490fc8ed594395a0803 1771175984
+obj /usr/share/man/nl/man8/catman.8.bz2 4acd9818e119cf0fe0f0a3c5471a9494 1771175984
+obj /usr/share/man/nl/man8/mandb.8.bz2 3a7a0416d30a2c644014eafc3ee81dc6 1771175984
+dir /usr/share/man/pl
+dir /usr/share/man/pl/man1
+obj /usr/share/man/pl/man1/apropos.1.bz2 aab0fdca856769e60c4b3a959083c750 1771175984
+obj /usr/share/man/pl/man1/lexgrog.1.bz2 2246fa4b0e90e37ca1723d82d411c642 1771175984
+obj /usr/share/man/pl/man1/man-recode.1.bz2 38443228651e8dc6fb7c206ad8a1cb49 1771175984
+obj /usr/share/man/pl/man1/man.1.bz2 e41935465958341c38e1313899cef58f 1771175984
+obj /usr/share/man/pl/man1/manconv.1.bz2 b8d142fc186e63aabb28465fc357442b 1771175984
+obj /usr/share/man/pl/man1/manpath.1.bz2 ee43ca68a31be504759440365962b563 1771175984
+obj /usr/share/man/pl/man1/whatis.1.bz2 3541f667ae349356db26a7e347210d6e 1771175984
+obj /usr/share/man/pl/man1/zsoelim.1.bz2 75840bc45abbf53684af01e8a686256f 1771175984
+dir /usr/share/man/pl/man5
+obj /usr/share/man/pl/man5/manpath.5.bz2 0e433ac4ddac156b59911dd02d31f639 1771175984
+dir /usr/share/man/pl/man8
+obj /usr/share/man/pl/man8/accessdb.8.bz2 604562644916932ccbc712f514682601 1771175984
+obj /usr/share/man/pl/man8/catman.8.bz2 04f8d430a6f262983e53406ae999ce1f 1771175984
+obj /usr/share/man/pl/man8/mandb.8.bz2 2bd2f4b7e94264685961981ce8a70f36 1771175984
+dir /usr/share/man/pt
+dir /usr/share/man/pt/man1
+obj /usr/share/man/pt/man1/apropos.1.bz2 b44cb713eaa02bfe9d20e301d6e73683 1771175984
+obj /usr/share/man/pt/man1/lexgrog.1.bz2 ed25f9e30508c4ce37716068129a73ea 1771175984
+obj /usr/share/man/pt/man1/man-recode.1.bz2 00e7c892ca801cd112b43a7ac0c13130 1771175984
+obj /usr/share/man/pt/man1/man.1.bz2 209494223e51a842e52759d2b6554858 1771175984
+obj /usr/share/man/pt/man1/manconv.1.bz2 4d4ffb0b276f5df5bd4ff01405ad441f 1771175984
+obj /usr/share/man/pt/man1/manpath.1.bz2 e0a91679e13ea8f70f6cf8b3464c0d1b 1771175984
+obj /usr/share/man/pt/man1/whatis.1.bz2 3365684959d6805348a987c941494642 1771175984
+obj /usr/share/man/pt/man1/zsoelim.1.bz2 905b8b169e3e5552bdac385181c40009 1771175984
+dir /usr/share/man/pt/man5
+obj /usr/share/man/pt/man5/manpath.5.bz2 736ea339043cab6601171664777c5219 1771175984
+dir /usr/share/man/pt/man8
+obj /usr/share/man/pt/man8/accessdb.8.bz2 f2b90283a8158b29dff7c64c0da32466 1771175984
+obj /usr/share/man/pt/man8/catman.8.bz2 07b10eb4bdd527a2fc496afdf6520fd5 1771175984
+obj /usr/share/man/pt/man8/mandb.8.bz2 1402ee1c09604e9edaebd74532f38a73 1771175984
+dir /usr/share/man/pt_BR
+dir /usr/share/man/pt_BR/man1
+obj /usr/share/man/pt_BR/man1/apropos.1.bz2 8e60be2ee10fe81e0598a90836f47960 1771175984
+obj /usr/share/man/pt_BR/man1/lexgrog.1.bz2 80249dff3db644bd3db2208e9198bae8 1771175984
+obj /usr/share/man/pt_BR/man1/man-recode.1.bz2 5acb48a27fa78903e1e6f09ae2aa833b 1771175984
+obj /usr/share/man/pt_BR/man1/man.1.bz2 02442bcac87dcbdd36ea7912bc1cf3dd 1771175984
+obj /usr/share/man/pt_BR/man1/manconv.1.bz2 dee14c704aba2742b12747ab08125787 1771175984
+obj /usr/share/man/pt_BR/man1/manpath.1.bz2 6a9525168cc3b0ac9ea8071463e6b5d7 1771175984
+obj /usr/share/man/pt_BR/man1/whatis.1.bz2 6b5440c38b0f48a58a7a6dd6ab5d18cf 1771175984
+obj /usr/share/man/pt_BR/man1/zsoelim.1.bz2 012119da8d7fa7b1bbd589ee6e29e7a6 1771175984
+dir /usr/share/man/pt_BR/man5
+obj /usr/share/man/pt_BR/man5/manpath.5.bz2 c4c8c29c17fcdc269e67633eb9b5fbde 1771175984
+dir /usr/share/man/pt_BR/man8
+obj /usr/share/man/pt_BR/man8/accessdb.8.bz2 9a23f4319fbba8a15b125364539a0ceb 1771175984
+obj /usr/share/man/pt_BR/man8/catman.8.bz2 0462f88c1c38286cdeee0b1c6dff0498 1771175984
+obj /usr/share/man/pt_BR/man8/mandb.8.bz2 716755fdbf4df4b3dc7fb6589363bebc 1771175984
+dir /usr/share/man/ro
+dir /usr/share/man/ro/man1
+obj /usr/share/man/ro/man1/apropos.1.bz2 fd3788619f7bc7ed3a5bd3d461d19723 1771175984
+obj /usr/share/man/ro/man1/lexgrog.1.bz2 2a31b88b1bc19b07f7718963f7191e1c 1771175984
+obj /usr/share/man/ro/man1/man-recode.1.bz2 10b32c38429c5dc4f5fd02deb83c09a8 1771175984
+obj /usr/share/man/ro/man1/man.1.bz2 55c3b8bc35620476148eb7569bdb27a2 1771175984
+obj /usr/share/man/ro/man1/manconv.1.bz2 c0e9fc7edf3ff89b3577c495b4ce0f27 1771175984
+obj /usr/share/man/ro/man1/manpath.1.bz2 abb2580228cf271911e932c35ce21011 1771175984
+obj /usr/share/man/ro/man1/whatis.1.bz2 a9ee923749978a1d87fb79bd3298dd5c 1771175984
+obj /usr/share/man/ro/man1/zsoelim.1.bz2 1c8678231b7ffb25de0329a221b37f88 1771175984
+dir /usr/share/man/ro/man5
+obj /usr/share/man/ro/man5/manpath.5.bz2 ea27d8383fa68a13cb55da4b40c02bbb 1771175984
+dir /usr/share/man/ro/man8
+obj /usr/share/man/ro/man8/accessdb.8.bz2 309245427ac89cd99250b33e758bd7f1 1771175984
+obj /usr/share/man/ro/man8/catman.8.bz2 203779723f9d2bb1bad861c56b7058f4 1771175984
+obj /usr/share/man/ro/man8/mandb.8.bz2 5030d45c7270d0c61a6af5c19fb6bad3 1771175984
+dir /usr/share/man/ru
+dir /usr/share/man/ru/man1
+obj /usr/share/man/ru/man1/apropos.1.bz2 034be388f63262a73f12e84bb1b6103d 1771175984
+obj /usr/share/man/ru/man1/lexgrog.1.bz2 cfa21a9776ad28629fd1a52766825311 1771175984
+obj /usr/share/man/ru/man1/man-recode.1.bz2 1bb1ad7300ee387ec48e72fa398a17d8 1771175984
+obj /usr/share/man/ru/man1/man.1.bz2 176615583154fa5f9822ea5926fbb306 1771175984
+obj /usr/share/man/ru/man1/manconv.1.bz2 3826a84a9063349331a3ced5ec67d518 1771175984
+obj /usr/share/man/ru/man1/manpath.1.bz2 674f1530f75cd0f114c345a3fde50a6e 1771175984
+obj /usr/share/man/ru/man1/whatis.1.bz2 cc6773cf7648fdc5d70986a03cedf3f5 1771175984
+obj /usr/share/man/ru/man1/zsoelim.1.bz2 dc6061a61c219ae83c9475553ec97bd3 1771175984
+dir /usr/share/man/ru/man5
+obj /usr/share/man/ru/man5/manpath.5.bz2 ec3898681ceead727c93f2cf32c737a9 1771175984
+dir /usr/share/man/ru/man8
+obj /usr/share/man/ru/man8/accessdb.8.bz2 8e2b7b0220607cbe3a8c682cedc4fd7f 1771175984
+obj /usr/share/man/ru/man8/catman.8.bz2 a426cd90edcfaf8a0d25bd239b0592b4 1771175984
+obj /usr/share/man/ru/man8/mandb.8.bz2 83522953e6a0837357152de61bebe71a 1771175984
+dir /usr/share/man/sr
+dir /usr/share/man/sr/man1
+obj /usr/share/man/sr/man1/apropos.1.bz2 ac83b9c808c16b80f441bc10ef031d61 1771175984
+obj /usr/share/man/sr/man1/lexgrog.1.bz2 e5c6119430e7b4e22001d91b76de7885 1771175984
+obj /usr/share/man/sr/man1/man-recode.1.bz2 21eb4f3e7f4446d40fd9b9e767d52c97 1771175984
+obj /usr/share/man/sr/man1/man.1.bz2 8f5359facb799a5987ed008b00b51592 1771175984
+obj /usr/share/man/sr/man1/manconv.1.bz2 63ad2e3fb116d8a46b914de8058e3efc 1771175984
+obj /usr/share/man/sr/man1/manpath.1.bz2 eab77c2e764370c6cb9b414073b1e937 1771175984
+obj /usr/share/man/sr/man1/whatis.1.bz2 801786c593d9a2a5a51ef19b05451fff 1771175984
+obj /usr/share/man/sr/man1/zsoelim.1.bz2 9514aca1d9a5732d0b4944f152cc0aa3 1771175984
+dir /usr/share/man/sr/man5
+obj /usr/share/man/sr/man5/manpath.5.bz2 e773d4a39a08b7f4b4a21753ccd26037 1771175984
+dir /usr/share/man/sr/man8
+obj /usr/share/man/sr/man8/accessdb.8.bz2 1a9a2fb708b0f1dc9271be519c1b83ab 1771175984
+obj /usr/share/man/sr/man8/catman.8.bz2 c7deeb36e393c4fb9bb02cc4055877a7 1771175984
+obj /usr/share/man/sr/man8/mandb.8.bz2 082caf171801a96855ab709d16c139e2 1771175984
+dir /usr/share/man/sv
+dir /usr/share/man/sv/man1
+obj /usr/share/man/sv/man1/apropos.1.bz2 e26fccb82ca46b26fbcbe1c4c8fe3ecd 1771175984
+obj /usr/share/man/sv/man1/lexgrog.1.bz2 f12504c4e97979ce9f0e9a131f1b1d55 1771175984
+obj /usr/share/man/sv/man1/man-recode.1.bz2 be8b05676e1a6ba2d759411dd3435bef 1771175984
+obj /usr/share/man/sv/man1/man.1.bz2 e13b689124fd0759a9013d4b3230ae9b 1771175984
+obj /usr/share/man/sv/man1/manconv.1.bz2 4a6dfafbf0e86bb498c7508dbf3849ab 1771175984
+obj /usr/share/man/sv/man1/manpath.1.bz2 3f751121efac9a40ab008429461a1023 1771175984
+obj /usr/share/man/sv/man1/whatis.1.bz2 c03f282ba804244c585ee3ce81bd658e 1771175984
+obj /usr/share/man/sv/man1/zsoelim.1.bz2 2232a36e3e44e97bd377f3bf8a973d50 1771175984
+dir /usr/share/man/sv/man5
+obj /usr/share/man/sv/man5/manpath.5.bz2 caf74bc3d48358526d5ddce8d977bf95 1771175984
+dir /usr/share/man/sv/man8
+obj /usr/share/man/sv/man8/accessdb.8.bz2 fe1c4f59a793c16897fa448b1340b167 1771175984
+obj /usr/share/man/sv/man8/catman.8.bz2 0b121d33c2770c22aa2bfe6785950343 1771175984
+obj /usr/share/man/sv/man8/mandb.8.bz2 e9af9f6e7ba346488c1539f95926ffaa 1771175984
+dir /usr/share/man/tr
+dir /usr/share/man/tr/man1
+obj /usr/share/man/tr/man1/apropos.1.bz2 fb90ea36ccd14d5b3a20a78f29c49ab1 1771175984
+obj /usr/share/man/tr/man1/lexgrog.1.bz2 0b5dfc8bebcb33305f162e763d540118 1771175984
+obj /usr/share/man/tr/man1/man-recode.1.bz2 dcffecbc937a823eb50ffc28dd3ae924 1771175984
+obj /usr/share/man/tr/man1/man.1.bz2 351f6f3fc233bbdf1fa76856726b280f 1771175984
+obj /usr/share/man/tr/man1/manconv.1.bz2 88bd6c9dc125162288a31ee386531226 1771175984
+obj /usr/share/man/tr/man1/manpath.1.bz2 12e7b7b7ca93106cfff33a69aafbbc83 1771175984
+obj /usr/share/man/tr/man1/whatis.1.bz2 ff981242699f46f2c5ef9e3c49c5180f 1771175984
+obj /usr/share/man/tr/man1/zsoelim.1.bz2 6087369a25e4bd3411bf9b3956b9da95 1771175984
+dir /usr/share/man/tr/man5
+obj /usr/share/man/tr/man5/manpath.5.bz2 84a062f685b2357c5a108eb68c2dc971 1771175984
+dir /usr/share/man/tr/man8
+obj /usr/share/man/tr/man8/accessdb.8.bz2 080f5bca387f6109384d0eb66e26ed16 1771175984
+obj /usr/share/man/tr/man8/catman.8.bz2 68a50da39af3baffcb08faec3f90f6c7 1771175984
+obj /usr/share/man/tr/man8/mandb.8.bz2 93c2804d6c32bbe336f777e3236594f4 1771175984
+dir /usr/share/man/uk
+dir /usr/share/man/uk/man1
+obj /usr/share/man/uk/man1/apropos.1.bz2 d1124831267d9c1a34ea13563d600581 1771175984
+obj /usr/share/man/uk/man1/lexgrog.1.bz2 dd5d0f81512ad264d9666c993ab7d26c 1771175984
+obj /usr/share/man/uk/man1/man-recode.1.bz2 378983b1b5c67625d609e1d3cecdb95a 1771175984
+obj /usr/share/man/uk/man1/man.1.bz2 a8b69251cffce36e644274f7483155b8 1771175984
+obj /usr/share/man/uk/man1/manconv.1.bz2 cc4b79f49ce79d4d58ad952527d1ed2c 1771175984
+obj /usr/share/man/uk/man1/manpath.1.bz2 b774e703d22efd295d84df72f65f5ccb 1771175984
+obj /usr/share/man/uk/man1/whatis.1.bz2 9322fa295df6d3878080b5ab08311241 1771175984
+obj /usr/share/man/uk/man1/zsoelim.1.bz2 f05669e95fc9ceebc0bbc551e5da46e0 1771175984
+dir /usr/share/man/uk/man5
+obj /usr/share/man/uk/man5/manpath.5.bz2 3bba320ef7781802e3f593ed579f1a7b 1771175984
+dir /usr/share/man/uk/man8
+obj /usr/share/man/uk/man8/accessdb.8.bz2 2c007db5e36bbd1f5475a6b00034aea3 1771175984
+obj /usr/share/man/uk/man8/catman.8.bz2 8234047ec20da0b9bc56919b9cba24e6 1771175984
+obj /usr/share/man/uk/man8/mandb.8.bz2 2c6fb184062ea63da8ea04b3ed63771c 1771175984
+dir /usr/share/man/zh_CN
+dir /usr/share/man/zh_CN/man1
+obj /usr/share/man/zh_CN/man1/apropos.1.bz2 a7d871862eee9c7f68e02dfd42aaa560 1771175984
+obj /usr/share/man/zh_CN/man1/lexgrog.1.bz2 e481fbccda98866959225f11b4f52e8a 1771175984
+obj /usr/share/man/zh_CN/man1/man-recode.1.bz2 71a56675d48fa96425a017ffdd642ebd 1771175984
+obj /usr/share/man/zh_CN/man1/man.1.bz2 05f60713882704e1074f37bef6e35dc9 1771175984
+obj /usr/share/man/zh_CN/man1/manconv.1.bz2 2eb82b0609a61be887c5d3147f460843 1771175984
+obj /usr/share/man/zh_CN/man1/manpath.1.bz2 53f98c09cf99841e4a83eca4d87f31d3 1771175984
+obj /usr/share/man/zh_CN/man1/whatis.1.bz2 a404574eaa1d2b82e46dd1e8e7b54f1d 1771175984
+obj /usr/share/man/zh_CN/man1/zsoelim.1.bz2 b08b8338afe1bdf3464e03b9f44f4a4d 1771175984
+dir /usr/share/man/zh_CN/man5
+obj /usr/share/man/zh_CN/man5/manpath.5.bz2 93667e0640ec5f986286d36e4b8177aa 1771175984
+dir /usr/share/man/zh_CN/man8
+obj /usr/share/man/zh_CN/man8/accessdb.8.bz2 829b97b499c50df0b5f5a592c1ca0408 1771175984
+obj /usr/share/man/zh_CN/man8/catman.8.bz2 b1b18e068ad8d9569546d07b86592027 1771175984
+obj /usr/share/man/zh_CN/man8/mandb.8.bz2 ad7fc3be5e7fe9821a2a5802229fbacc 1771175984
+dir /etc
+dir /etc/cron.daily
+obj /etc/cron.daily/man-db 865b204b20c31dd735cca3915657906d 1771175984
+obj /etc/man_db.conf 97f6db6ecb51086b1d8521e1635b4e8c 1771175982
+dir /etc/sandbox.d
+obj /etc/sandbox.d/15man-db 9f61a601d06bd2f8ee26710991d0a7f4 1771175984
+sym /usr/bin/apropos -> whatis 1789354263

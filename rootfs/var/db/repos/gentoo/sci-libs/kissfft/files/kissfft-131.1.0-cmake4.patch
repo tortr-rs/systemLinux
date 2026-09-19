@@ -1,0 +1,13 @@
+Taken from: https://github.com/mborgerding/kissfft/pull/101.patch (merged)
+CMake 4 dropped support for CMake versions <= 3.5.
+--- a/kissfft-config.cmake.in
++++ b/kissfft-config.cmake.in
+@@ -24,7 +24,7 @@
+ 
+ @PACKAGE_INIT@
+ 
+-cmake_minimum_required(VERSION 3.3)
++cmake_minimum_required(VERSION 3.10)
+ 
+ # Set include glob of config files using SHARED/static component, BUILD_SHARED_LIBS by default
+ set(_kissfft_shared_detected OFF)

@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst
+DEPEND=net-proxy/squid
+DESCRIPTION=A redirector for Squid
+EAPI=7
+HOMEPAGE=http://squirm.foote.com.au
+INHERIT=toolchain-funcs
+KEYWORDS=~amd64 ~ppc x86
+LICENSE=GPL-2
+RDEPEND=net-proxy/squid
+SLOT=0
+SRC_URI=http://squirm.foote.com.au/squirm-1.26.tgz
+_eclasses_=toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=87ccd9b05bd000dbc6c0061c175141bf

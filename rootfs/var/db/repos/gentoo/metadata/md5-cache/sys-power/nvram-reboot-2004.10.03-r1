@@ -1,0 +1,11 @@
+DEFINED_PHASES=install postinst postrm preinst prerm pretend
+DESCRIPTION=PowerOff Boot-Images for nvram-wakeup (not needed for GRUB)
+EAPI=7
+HOMEPAGE=https://sourceforge.net/projects/nvram-wakeup/
+INHERIT=mount-boot
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/nvram-wakeup/reboot-2004.10.03.tar.bz2
+_eclasses_=mount-boot	2457686015a19b48bcaedc5f7cc19505	mount-boot-utils	2551bac1a772f4b6beacb494a750ae92
+_md5_=66d72e155e09e2656adc27bfd5cea3fe

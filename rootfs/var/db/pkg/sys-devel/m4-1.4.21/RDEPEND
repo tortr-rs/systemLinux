@@ -1,0 +1,1 @@
+virtual/libiconv sys-devel/gettext virtual/libintl >=sys-libs/glibc-2.42-r5

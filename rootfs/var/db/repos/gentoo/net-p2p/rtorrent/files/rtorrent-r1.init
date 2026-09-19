@@ -1,0 +1,17 @@
+#!/sbin/openrc-run
+# Distributed under the terms of the GNU General Public License v2
+
+description="rTorrent BitTorrent client"
+
+command="/usr/bin/rtorrent"
+command_args="-o system.daemon.set=true ${EXTRA_ARGS}"
+command_background=true
+command_user="${USER}"
+pidfile="/run/rtorrent.pid"
+output_log="${LOGFILE:-/dev/null}"
+
+depend()
+{
+   use net ypbind nis
+   after slapd mysqld postgresql
+}

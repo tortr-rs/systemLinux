@@ -1,0 +1,1 @@
+|| ( app-doc/info-manual >=app-editors/emacs-26:* ) >=sys-libs/ncurses-5.2-r2:0/6= >=dev-lang/perl-5.8.1 virtual/libintl >=sys-libs/glibc-2.42-r5

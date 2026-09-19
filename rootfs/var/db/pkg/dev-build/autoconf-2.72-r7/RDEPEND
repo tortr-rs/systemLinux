@@ -1,0 +1,1 @@
+>=dev-lang/perl-5.10 >=sys-devel/m4-1.4.16 >=dev-build/autoconf-wrapper-20231224 sys-devel/gnuconfig !~dev-build/autoconf-2.72:2.5

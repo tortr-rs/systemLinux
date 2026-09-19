@@ -1,0 +1,13 @@
+BDEPEND=app-arch/unzip X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DEFINED_PHASES=install postinst postrm prepare setup
+DESCRIPTION=Mixing mplus and IPA fonts
+EAPI=7
+HOMEPAGE=https://mix-mplus-ipa.osdn.jp/
+INHERIT=font
+IUSE=X
+KEYWORDS=~amd64 ~loong ~x86
+LICENSE=mplus-fonts IPAfont
+SLOT=0
+SRC_URI=mirror://sourceforge.jp/mix-mplus-ipa/59021/migmix-1m-20130617.zip mirror://sourceforge.jp/mix-mplus-ipa/59021/migmix-1p-20130617.zip mirror://sourceforge.jp/mix-mplus-ipa/59021/migmix-2m-20130617.zip mirror://sourceforge.jp/mix-mplus-ipa/59021/migmix-2p-20130617.zip mirror://sourceforge.jp/mix-mplus-ipa/59022/migu-1p-20130617.zip mirror://sourceforge.jp/mix-mplus-ipa/59022/migu-1c-20130617.zip mirror://sourceforge.jp/mix-mplus-ipa/59022/migu-1m-20130617.zip mirror://sourceforge.jp/mix-mplus-ipa/59022/migu-2m-20130617.zip
+_eclasses_=font	6d0c60c855c05ae2ba808d300440ded2
+_md5_=4529ccd74603c7a2cb3488f6c47fa86c

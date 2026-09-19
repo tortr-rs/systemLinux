@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer type="project">
+  <email>gnu-emacs@gentoo.org</email>
+  <name>Gentoo GNU Emacs project</name>
+</maintainer>
+<stabilize-allarches restrict="&lt;app-emacs/emacs-jabber-0.10.0"/>
+<upstream>
+  <remote-id type="sourceforge">emacs-jabber</remote-id>
+  <remote-id type="codeberg">emacs-jabber/emacs-jabber</remote-id>
+</upstream>
+</pkgmetadata>

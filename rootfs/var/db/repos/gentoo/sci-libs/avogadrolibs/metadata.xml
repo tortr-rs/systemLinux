@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="project">
+		<email>sci-chemistry@gentoo.org</email>
+		<name>Gentoo Chemistry Project</name>
+	</maintainer>
+	<use>
+		<flag name="archive">Enable archive support using <pkg>app-arch/libarchive</pkg></flag>
+		<flag name="jkqtplotter">Enable charts and spectra using <pkg>sci-libs/jkqtplotter</pkg></flag>
+		<flag name="spglib">Find and set the Hall number for a crystal using <pkg>sci-libs/spglib</pkg></flag>
+	</use>
+	<upstream>
+		<remote-id type="github">OpenChemistry/avogadrolibs</remote-id>
+	</upstream>
+</pkgmetadata>

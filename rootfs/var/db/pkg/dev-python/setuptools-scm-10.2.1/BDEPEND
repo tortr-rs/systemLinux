@@ -1,0 +1,1 @@
+=dev-python/vcs-versioning-2*[python_targets_python3_14(-)] >=dev-python/vcs-versioning-2.2[python_targets_python3_14(-)] dev-lang/python:3.14 >=dev-python/gpep517-16[python_targets_python3_14(-)] dev-python/setuptools[python_targets_python3_14(-)]

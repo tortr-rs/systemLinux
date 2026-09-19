@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install prepare
+DEPEND=>=sys-libs/pam-0.75
+DESCRIPTION=Terminal locking program with few additional features
+EAPI=7
+HOMEPAGE=http://unbeatenpath.net/software/away/
+INHERIT=pam toolchain-funcs flag-o-matic
+KEYWORDS=amd64 ppc ppc64 ~sparc x86
+LICENSE=GPL-2
+RDEPEND=>=sys-libs/pam-0.75
+SLOT=0
+SRC_URI=mirror://gentoo/away-0.9.5.tar.bz2
+_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	pam	b56d0c9c20fc5b553f13c8ae165a10a5	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=072ea5f6456ea71bafd808ee97750c80

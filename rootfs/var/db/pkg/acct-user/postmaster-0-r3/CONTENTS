@@ -1,0 +1,8 @@
+dir /var
+dir /var/spool
+dir /var/spool/mail
+obj /var/spool/mail/.keep_acct-user_postmaster-0 d41d8cd98f00b204e9800998ecf8427e 1782668921
+dir /usr
+dir /usr/lib
+dir /usr/lib/sysusers.d
+obj /usr/lib/sysusers.d/acct-user-postmaster.conf 71b6c96f5665cfa148352d713c4ad120 1782668921

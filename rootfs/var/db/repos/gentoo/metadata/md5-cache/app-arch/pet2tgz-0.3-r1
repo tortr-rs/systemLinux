@@ -1,0 +1,9 @@
+DEFINED_PHASES=-
+DESCRIPTION=Puppy Linux .pet to .tar.gz converter
+EAPI=7
+HOMEPAGE=https://sourceforge.net/projects/pet2tgz/
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/pet2tgz/pet2tgz-0.3.tar.gz
+_md5_=6f618e65776a0ed4f3822227525015f9

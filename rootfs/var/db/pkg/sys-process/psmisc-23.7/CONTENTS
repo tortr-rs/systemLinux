@@ -1,0 +1,202 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/killall b059b5486db085b59cb58fab5f2c6071 1770571748
+obj /usr/bin/peekfd 79ae56dcdc311bbc19818e30d1e8b3a6 1770571748
+obj /usr/bin/prtstat e23f1eca9304bfa100440bc3f053ee8b 1770571748
+obj /usr/bin/pslog 6f769259ae7579562364b894174bce1b 1770571748
+obj /usr/bin/pstree 9954f32fb51853d68b1fa278c473f41c 1770571748
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/psmisc-23.7
+obj /usr/share/doc/psmisc-23.7/AUTHORS.bz2 36fb3422c43b2cace2af787ed12affe8 1770571747
+obj /usr/share/doc/psmisc-23.7/ChangeLog.bz2 e6f988db41ce6d1fb7a0d6e5e480e881 1770571747
+obj /usr/share/doc/psmisc-23.7/NEWS 31e82239cf1c405bbdc64aa807d6b36e 1770571747
+obj /usr/share/doc/psmisc-23.7/README b50faa6ebadf26b2cbccff2777d3155a 1770571747
+dir /usr/share/locale
+dir /usr/share/locale/bg
+dir /usr/share/locale/bg/LC_MESSAGES
+obj /usr/share/locale/bg/LC_MESSAGES/psmisc.mo 0d03ca82422809e420e6b0aeb8c72574 1770571747
+dir /usr/share/locale/ca
+dir /usr/share/locale/ca/LC_MESSAGES
+obj /usr/share/locale/ca/LC_MESSAGES/psmisc.mo f4850f9da0d00af298199297ea4f5c63 1770571747
+dir /usr/share/locale/cs
+dir /usr/share/locale/cs/LC_MESSAGES
+obj /usr/share/locale/cs/LC_MESSAGES/psmisc.mo 288debc079974cfbe7bad73eb04fa9d4 1770571747
+dir /usr/share/locale/da
+dir /usr/share/locale/da/LC_MESSAGES
+obj /usr/share/locale/da/LC_MESSAGES/psmisc.mo 0e8ea4dc66e8e24bace97e057567740b 1770571747
+dir /usr/share/locale/de
+dir /usr/share/locale/de/LC_MESSAGES
+obj /usr/share/locale/de/LC_MESSAGES/psmisc.mo 4f0edc75256fbd5730b2a7bf89f4504e 1770571747
+dir /usr/share/locale/el
+dir /usr/share/locale/el/LC_MESSAGES
+obj /usr/share/locale/el/LC_MESSAGES/psmisc.mo dc39bcef43c1ee960094fb91eb3669b7 1770571747
+dir /usr/share/locale/eo
+dir /usr/share/locale/eo/LC_MESSAGES
+obj /usr/share/locale/eo/LC_MESSAGES/psmisc.mo 52ccd174d1c773e5acb01c375a0c57a3 1770571747
+dir /usr/share/locale/es
+dir /usr/share/locale/es/LC_MESSAGES
+obj /usr/share/locale/es/LC_MESSAGES/psmisc.mo f56cc857afc439f6b065754998c4a091 1770571747
+dir /usr/share/locale/eu
+dir /usr/share/locale/eu/LC_MESSAGES
+obj /usr/share/locale/eu/LC_MESSAGES/psmisc.mo c06ca79309446cc3be9e278d7c6834a1 1770571747
+dir /usr/share/locale/fi
+dir /usr/share/locale/fi/LC_MESSAGES
+obj /usr/share/locale/fi/LC_MESSAGES/psmisc.mo 496d54e89f7be5aea249bae1789c1b82 1770571747
+dir /usr/share/locale/fr
+dir /usr/share/locale/fr/LC_MESSAGES
+obj /usr/share/locale/fr/LC_MESSAGES/psmisc.mo bdd18774b59c45a17e46b56a2037d33f 1770571747
+dir /usr/share/locale/hr
+dir /usr/share/locale/hr/LC_MESSAGES
+obj /usr/share/locale/hr/LC_MESSAGES/psmisc.mo 11ba301688a83e61894b2889281dcfa6 1770571747
+dir /usr/share/locale/hu
+dir /usr/share/locale/hu/LC_MESSAGES
+obj /usr/share/locale/hu/LC_MESSAGES/psmisc.mo 27ee59b400b7f515d508d892ffe386c0 1770571747
+dir /usr/share/locale/id
+dir /usr/share/locale/id/LC_MESSAGES
+obj /usr/share/locale/id/LC_MESSAGES/psmisc.mo f5d37195ac1ad3330c8fbfaa8c911000 1770571747
+dir /usr/share/locale/it
+dir /usr/share/locale/it/LC_MESSAGES
+obj /usr/share/locale/it/LC_MESSAGES/psmisc.mo bed2820105840a6a21da080b45de6b7b 1770571747
+dir /usr/share/locale/ja
+dir /usr/share/locale/ja/LC_MESSAGES
+obj /usr/share/locale/ja/LC_MESSAGES/psmisc.mo 43362421e9ca0ef1fe49e85e5dfab975 1770571747
+dir /usr/share/locale/ka
+dir /usr/share/locale/ka/LC_MESSAGES
+obj /usr/share/locale/ka/LC_MESSAGES/psmisc.mo b2b7c26de0f488c17c66afcfc62341ee 1770571747
+dir /usr/share/locale/ko
+dir /usr/share/locale/ko/LC_MESSAGES
+obj /usr/share/locale/ko/LC_MESSAGES/psmisc.mo 8ea6045574cb1b0e2305e07bbdc158f8 1770571747
+dir /usr/share/locale/nb
+dir /usr/share/locale/nb/LC_MESSAGES
+obj /usr/share/locale/nb/LC_MESSAGES/psmisc.mo 843ea776bdd1a5700ba969472b6b21ba 1770571747
+dir /usr/share/locale/nl
+dir /usr/share/locale/nl/LC_MESSAGES
+obj /usr/share/locale/nl/LC_MESSAGES/psmisc.mo 6b585e8e48922d19e580fb33dd82a42c 1770571747
+dir /usr/share/locale/pl
+dir /usr/share/locale/pl/LC_MESSAGES
+obj /usr/share/locale/pl/LC_MESSAGES/psmisc.mo 42fe255536162d9c0d05b42bc15d44fd 1770571747
+dir /usr/share/locale/pt
+dir /usr/share/locale/pt/LC_MESSAGES
+obj /usr/share/locale/pt/LC_MESSAGES/psmisc.mo 6ca1f1711f942660d539bc6e6dab63db 1770571747
+dir /usr/share/locale/pt_BR
+dir /usr/share/locale/pt_BR/LC_MESSAGES
+obj /usr/share/locale/pt_BR/LC_MESSAGES/psmisc.mo 50c6f6582dc169ea7e9590c1088a70b1 1770571747
+dir /usr/share/locale/ro
+dir /usr/share/locale/ro/LC_MESSAGES
+obj /usr/share/locale/ro/LC_MESSAGES/psmisc.mo eba540e2ef0b0723b939a8a016f276e0 1770571747
+dir /usr/share/locale/ru
+dir /usr/share/locale/ru/LC_MESSAGES
+obj /usr/share/locale/ru/LC_MESSAGES/psmisc.mo b0231ca1fd4cae15e9d0a286ffda9055 1770571747
+dir /usr/share/locale/sr
+dir /usr/share/locale/sr/LC_MESSAGES
+obj /usr/share/locale/sr/LC_MESSAGES/psmisc.mo 8167827eca6eabdd086ff7deebe557af 1770571747
+dir /usr/share/locale/sv
+dir /usr/share/locale/sv/LC_MESSAGES
+obj /usr/share/locale/sv/LC_MESSAGES/psmisc.mo 49c813e0c9081afe9478d1a7fc7625e6 1770571747
+dir /usr/share/locale/uk
+dir /usr/share/locale/uk/LC_MESSAGES
+obj /usr/share/locale/uk/LC_MESSAGES/psmisc.mo d846837869ff51d6afa5796a179464f2 1770571747
+dir /usr/share/locale/vi
+dir /usr/share/locale/vi/LC_MESSAGES
+obj /usr/share/locale/vi/LC_MESSAGES/psmisc.mo b0dd2215291dacafeeef7a220c150880 1770571747
+dir /usr/share/locale/zh_CN
+dir /usr/share/locale/zh_CN/LC_MESSAGES
+obj /usr/share/locale/zh_CN/LC_MESSAGES/psmisc.mo d0ad70bdfeb537e6ddf0122afbaddb12 1770571747
+dir /usr/share/locale/zh_TW
+dir /usr/share/locale/zh_TW/LC_MESSAGES
+obj /usr/share/locale/zh_TW/LC_MESSAGES/psmisc.mo ba326bd5104b61048d90dbfdbdb83708 1770571747
+dir /usr/share/man
+dir /usr/share/man/da
+dir /usr/share/man/da/man1
+obj /usr/share/man/da/man1/prtstat.1.bz2 7529075cb9107900bde5d21308a8ae01 1770571747
+obj /usr/share/man/da/man1/pslog.1.bz2 bd915961cabf9d087041f3595a682cc8 1770571747
+dir /usr/share/man/de
+dir /usr/share/man/de/man1
+obj /usr/share/man/de/man1/fuser.1.bz2 1dca1a6a0bd04245fa0953edba522986 1770571747
+obj /usr/share/man/de/man1/killall.1.bz2 1a663de6c8804fa848d4dd6bd754fd5f 1770571747
+obj /usr/share/man/de/man1/peekfd.1.bz2 2aa352d5fa64840070d5875604be11f1 1770571747
+obj /usr/share/man/de/man1/prtstat.1.bz2 57a1b0b079d5c0ac5aa9b2f248220932 1770571747
+obj /usr/share/man/de/man1/pslog.1.bz2 6c195aa461a9d25b0e90030e6023ab00 1770571747
+obj /usr/share/man/de/man1/pstree.1.bz2 5c96f3207460b01d33ac1383aabfc7ee 1770571747
+dir /usr/share/man/fr
+dir /usr/share/man/fr/man1
+obj /usr/share/man/fr/man1/fuser.1.bz2 7dc2ce9872145aa7e76f3ac4b7841344 1770571747
+obj /usr/share/man/fr/man1/killall.1.bz2 a48cb8dffff117f5bb24b3b79264c53c 1770571747
+obj /usr/share/man/fr/man1/peekfd.1.bz2 b74ca68a2d64f7e72451af2fe1397e4e 1770571747
+obj /usr/share/man/fr/man1/prtstat.1.bz2 22be30e67846c6934e88aff995e2fd75 1770571747
+obj /usr/share/man/fr/man1/pslog.1.bz2 0f6572846357ebd98842af6e9b85cfdd 1770571747
+obj /usr/share/man/fr/man1/pstree.1.bz2 855cec062d4ce9e655d0a35e60419ef1 1770571747
+dir /usr/share/man/hr
+dir /usr/share/man/hr/man1
+obj /usr/share/man/hr/man1/fuser.1.bz2 07311ad82218ffb490878aea872d1d45 1770571747
+obj /usr/share/man/hr/man1/killall.1.bz2 4be3ce3c9bba13e4f05d93c52620c209 1770571747
+obj /usr/share/man/hr/man1/peekfd.1.bz2 9ca9c2a35570cb03fc96a91f8c13834f 1770571747
+obj /usr/share/man/hr/man1/prtstat.1.bz2 53ff7f8dd2bc7f373092972a706c063d 1770571747
+obj /usr/share/man/hr/man1/pslog.1.bz2 df222a3e7ba961ad6aac62f3742dc9fe 1770571747
+obj /usr/share/man/hr/man1/pstree.1.bz2 d8e574d2254f5642635f1532d8d634ed 1770571747
+dir /usr/share/man/ko
+dir /usr/share/man/ko/man1
+obj /usr/share/man/ko/man1/fuser.1.bz2 16737554e460a0d4424993a8bba47de9 1770571747
+obj /usr/share/man/ko/man1/killall.1.bz2 0f793c412e609fb0139c352f22caa151 1770571747
+obj /usr/share/man/ko/man1/peekfd.1.bz2 2021c32b1bc7a757eb1e5cf95afe2ed9 1770571747
+obj /usr/share/man/ko/man1/prtstat.1.bz2 dde5d31867143e955af43f4e12f70225 1770571747
+obj /usr/share/man/ko/man1/pslog.1.bz2 4fb31d2b123b80ea0f05ba162964aca2 1770571747
+obj /usr/share/man/ko/man1/pstree.1.bz2 f3b805691e2c05524f48c86cc5c77a24 1770571747
+dir /usr/share/man/man1
+obj /usr/share/man/man1/fuser.1.bz2 e309aed3e83bf57aed92cb419e8b849e 1770571747
+obj /usr/share/man/man1/killall.1.bz2 0d271cb2d8a1b1c64cffc012a3e5596a 1770571747
+obj /usr/share/man/man1/peekfd.1.bz2 c0efd29079f0c9d6a47c83c663750933 1770571747
+obj /usr/share/man/man1/prtstat.1.bz2 d1e5eb066e7d8a11518e8e6b960ab932 1770571747
+obj /usr/share/man/man1/pslog.1.bz2 5ce0aa7b465a4fcddfa4d2e98597ef41 1770571747
+obj /usr/share/man/man1/pstree.1.bz2 724fc7e686964156fba0e1bd21a3b043 1770571747
+dir /usr/share/man/pt_BR
+dir /usr/share/man/pt_BR/man1
+obj /usr/share/man/pt_BR/man1/fuser.1.bz2 6fefe2653a20abcae3734859d8e88596 1770571747
+obj /usr/share/man/pt_BR/man1/killall.1.bz2 29624c9c3eb5538b15fea23872290f52 1770571747
+obj /usr/share/man/pt_BR/man1/peekfd.1.bz2 e4dd156fb65425bbfaf829d85718dfa6 1770571747
+obj /usr/share/man/pt_BR/man1/prtstat.1.bz2 64cb830248a95e5219ec2a48d4d6b115 1770571747
+obj /usr/share/man/pt_BR/man1/pslog.1.bz2 1287e708131c6ecadce8c947aadd056f 1770571747
+obj /usr/share/man/pt_BR/man1/pstree.1.bz2 76a63bf8ced5d12558a30a3a053312d7 1770571747
+dir /usr/share/man/ro
+dir /usr/share/man/ro/man1
+obj /usr/share/man/ro/man1/fuser.1.bz2 a6027d6b2d14af70ed37e32141c8745a 1770571747
+obj /usr/share/man/ro/man1/killall.1.bz2 c95fb8dcca38063e88e8c67ec4f676b8 1770571747
+obj /usr/share/man/ro/man1/peekfd.1.bz2 27857141045545067c7cbf263a919871 1770571747
+obj /usr/share/man/ro/man1/prtstat.1.bz2 45705be0d812d418d1e0f8cf4db24b35 1770571747
+obj /usr/share/man/ro/man1/pslog.1.bz2 9ee7103b2fc781932eacd77ca2ba8407 1770571747
+obj /usr/share/man/ro/man1/pstree.1.bz2 71e8ec957fe207980572e45754fc6f4b 1770571747
+dir /usr/share/man/ru
+dir /usr/share/man/ru/man1
+obj /usr/share/man/ru/man1/fuser.1.bz2 7bfd105ef90e09888b732884d43d926e 1770571747
+obj /usr/share/man/ru/man1/killall.1.bz2 3e7a013ded7ad492822ff5ea22e36ce1 1770571747
+obj /usr/share/man/ru/man1/peekfd.1.bz2 a6b2199480be8cc0a078b94e4d09270a 1770571747
+obj /usr/share/man/ru/man1/prtstat.1.bz2 a854d6fc52fbc3b574478e98ca0e65a6 1770571747
+obj /usr/share/man/ru/man1/pslog.1.bz2 5aca550ddbdc08733e28b017cf2b9b28 1770571747
+obj /usr/share/man/ru/man1/pstree.1.bz2 e17b100abada76962e5a08728909b1dd 1770571747
+dir /usr/share/man/sr
+dir /usr/share/man/sr/man1
+obj /usr/share/man/sr/man1/fuser.1.bz2 752430de833249fe5eb05ddf6e5e7795 1770571747
+obj /usr/share/man/sr/man1/killall.1.bz2 f43f87abe138b9204e92fe31d51ea278 1770571747
+obj /usr/share/man/sr/man1/peekfd.1.bz2 3524fb4a80f97d3ebf9a9e8fbffc4a4c 1770571747
+obj /usr/share/man/sr/man1/prtstat.1.bz2 4f96c8a02f4b1e7ea1ecf32328be3fbb 1770571747
+obj /usr/share/man/sr/man1/pslog.1.bz2 1836ae803cf430f268ca5c9b98b86049 1770571747
+obj /usr/share/man/sr/man1/pstree.1.bz2 e7542bdb8ddc3fe269cde15a1efc3bd4 1770571747
+dir /usr/share/man/sv
+dir /usr/share/man/sv/man1
+obj /usr/share/man/sv/man1/fuser.1.bz2 a290d3884ac67dd488e1804a1bc75bdf 1770571747
+obj /usr/share/man/sv/man1/killall.1.bz2 c021ffdf9b95e9fc41a4a1257c127d0a 1770571747
+obj /usr/share/man/sv/man1/peekfd.1.bz2 6aaaf8204d44751b3f479bc59b3cd329 1770571747
+obj /usr/share/man/sv/man1/prtstat.1.bz2 4489debbdb6b4163e8b357f172b8497d 1770571747
+obj /usr/share/man/sv/man1/pslog.1.bz2 bc2b3fd0264f5729a90b1dcde1849702 1770571747
+obj /usr/share/man/sv/man1/pstree.1.bz2 ead390adea682eb25921eb1f0cdb87f2 1770571747
+dir /usr/share/man/uk
+dir /usr/share/man/uk/man1
+obj /usr/share/man/uk/man1/fuser.1.bz2 1ab5eca56d4f7c61fd07f300a6da29a2 1770571747
+obj /usr/share/man/uk/man1/killall.1.bz2 008b844132098fbf2f7ba96f417fc441 1770571747
+obj /usr/share/man/uk/man1/peekfd.1.bz2 09d064984c32cd8e829429e7feda0bd5 1770571747
+obj /usr/share/man/uk/man1/prtstat.1.bz2 13ff74c19ab00bc5d329f300567dea2d 1770571747
+obj /usr/share/man/uk/man1/pslog.1.bz2 6f9097ecb5ea645c1353bd039740b9e3 1770571747
+obj /usr/share/man/uk/man1/pstree.1.bz2 27d69348a3ca39b3305e4723aca83e87 1770571747
+dir /bin
+obj /bin/fuser b858ad69e235185395acd68086523763 1770571748

@@ -1,0 +1,71 @@
+dir /usr
+dir /usr/bin
+sym /usr/bin/normalizer -> ../lib/python-exec/python-exec2 1789353986
+dir /usr/lib
+dir /usr/lib/python-exec
+dir /usr/lib/python-exec/python3.14
+obj /usr/lib/python-exec/python3.14/normalizer 69e95f96d9e72371cbe8690a4ae045f9 1786902152
+dir /usr/lib/python3.14
+dir /usr/lib/python3.14/site-packages
+dir /usr/lib/python3.14/site-packages/charset_normalizer
+obj /usr/lib/python3.14/site-packages/charset_normalizer/__init__.py 307f5a947843fd468106001212156178 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/__main__.py fb780dc34cd71306500b916e316a2cbd 1786902152
+dir /usr/lib/python3.14/site-packages/charset_normalizer/__pycache__
+obj /usr/lib/python3.14/site-packages/charset_normalizer/__pycache__/__init__.cpython-314.opt-1.pyc 4001784b516a0bac13a009846f1d7f14 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/__pycache__/__init__.cpython-314.opt-2.pyc 1fb88d5a3e0af0b7606e0e3625e4f9e6 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/__pycache__/__init__.cpython-314.pyc 4001784b516a0bac13a009846f1d7f14 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/__pycache__/__main__.cpython-314.opt-1.pyc be69137ae6194c9cf83555f19034836e 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/__pycache__/__main__.cpython-314.opt-2.pyc be69137ae6194c9cf83555f19034836e 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/__pycache__/__main__.cpython-314.pyc be69137ae6194c9cf83555f19034836e 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/__pycache__/api.cpython-314.opt-1.pyc 145503c456e83259ba1470145c296178 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/__pycache__/api.cpython-314.opt-2.pyc d3ef6ee63198890bd82a6bb39cae1f4c 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/__pycache__/api.cpython-314.pyc 145503c456e83259ba1470145c296178 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/__pycache__/cd.cpython-314.opt-1.pyc 3df8b924875c3239ceff62a3bbc15e83 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/__pycache__/cd.cpython-314.opt-2.pyc 0f9ccebb0f41d255365c072c28ffff4b 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/__pycache__/cd.cpython-314.pyc 3df8b924875c3239ceff62a3bbc15e83 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/__pycache__/constant.cpython-314.opt-1.pyc 0554251a89bc1086bf5f485949addd92 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/__pycache__/constant.cpython-314.opt-2.pyc 0554251a89bc1086bf5f485949addd92 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/__pycache__/constant.cpython-314.pyc 0554251a89bc1086bf5f485949addd92 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/__pycache__/legacy.cpython-314.opt-1.pyc 7d58e22e55bb3cf9c428f60a6f4d45ce 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/__pycache__/legacy.cpython-314.opt-2.pyc 04c2ff02ed13d8bcb8606ccec79eb138 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/__pycache__/legacy.cpython-314.pyc 7d58e22e55bb3cf9c428f60a6f4d45ce 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/__pycache__/md.cpython-314.opt-1.pyc 017b047487dfb05486f53003efc3b24d 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/__pycache__/md.cpython-314.opt-2.pyc ea43337fa41648b3e30c25c1f5fa1298 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/__pycache__/md.cpython-314.pyc 017b047487dfb05486f53003efc3b24d 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/__pycache__/models.cpython-314.opt-1.pyc 2c9037a15562e3006cc3a9022708686b 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/__pycache__/models.cpython-314.opt-2.pyc ada1adb45fbbe08a468da35694e88425 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/__pycache__/models.cpython-314.pyc 2c9037a15562e3006cc3a9022708686b 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/__pycache__/utils.cpython-314.opt-1.pyc 53263254348d758f42c03473504958a2 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/__pycache__/utils.cpython-314.opt-2.pyc 2d5813f02c4e7bdb5e97878d06727f61 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/__pycache__/utils.cpython-314.pyc 53263254348d758f42c03473504958a2 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/__pycache__/version.cpython-314.opt-1.pyc d31b40c63815c2da2f52419618b3abce 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/__pycache__/version.cpython-314.opt-2.pyc d9583a5af23c3f050e60bdd3abce8da2 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/__pycache__/version.cpython-314.pyc d31b40c63815c2da2f52419618b3abce 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/api.py ab268aab7dfe7cc8556a055843ab8b8d 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/cd.py 323b8b6659d18b2bad969929453f917c 1786902152
+dir /usr/lib/python3.14/site-packages/charset_normalizer/cli
+obj /usr/lib/python3.14/site-packages/charset_normalizer/cli/__init__.py b1bbd2ff8505ff3edd43b1857907f2fb 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/cli/__main__.py ffadf8bd84a6473fd7d0793ffa6bde9a 1786902152
+dir /usr/lib/python3.14/site-packages/charset_normalizer/cli/__pycache__
+obj /usr/lib/python3.14/site-packages/charset_normalizer/cli/__pycache__/__init__.cpython-314.opt-1.pyc 6ac9199ac13c72287e22391de814e0e7 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/cli/__pycache__/__init__.cpython-314.opt-2.pyc 6ac9199ac13c72287e22391de814e0e7 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/cli/__pycache__/__init__.cpython-314.pyc 6ac9199ac13c72287e22391de814e0e7 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/cli/__pycache__/__main__.cpython-314.opt-1.pyc 8e44c8a525f1c2207dc1531fb1b3dcac 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/cli/__pycache__/__main__.cpython-314.opt-2.pyc 70974dfc0daf93bf7d1f76998f69e9ce 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/cli/__pycache__/__main__.cpython-314.pyc 8e44c8a525f1c2207dc1531fb1b3dcac 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/constant.py 295e4ca9e4013b1d90d7c21c61c8c99d 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/legacy.py d8d03a4cef695fcf147f7380a27fa005 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/md.py 1fcb108a1ff26c7a2b0a9bcb026059c0 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/models.py 1935b3c81b45c5c0005d234c23e38136 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/py.typed d41d8cd98f00b204e9800998ecf8427e 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/utils.py 22b4a4231e9769bf8e801189961e55cc 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer/version.py 4900ef11c84fa14f269187382a6a179f 1786902152
+dir /usr/lib/python3.14/site-packages/charset_normalizer-3.4.9.dist-info
+obj /usr/lib/python3.14/site-packages/charset_normalizer-3.4.9.dist-info/METADATA 44c3855471d7ea594b4a1980a0a20684 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer-3.4.9.dist-info/WHEEL d8484b2712d6275b37660ce7c74212ff 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer-3.4.9.dist-info/entry_points.txt 946b4fcd3fcface4499fbdd19855ffaf 1786902152
+obj /usr/lib/python3.14/site-packages/charset_normalizer-3.4.9.dist-info/top_level.txt 2272ed22c63ebee3f83cd23e68ee7407 1786902152
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/charset-normalizer-3.4.9
+obj /usr/share/doc/charset-normalizer-3.4.9/README.md.bz2 21b039c7f6753cebfcafbf4cc86f3e71 1786902153

@@ -1,0 +1,1 @@
+>=dev-libs/gobject-introspection-common-1.86.0 >=dev-libs/glib-2.82.0:2[introspection] dev-libs/libffi:0/8= dev-python/setuptools[python_targets_python3_14(-)] virtual/pkgconfig dev-lang/python:3.14[xml(+)]

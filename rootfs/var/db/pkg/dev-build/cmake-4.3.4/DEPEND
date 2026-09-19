@@ -1,0 +1,1 @@
+>=app-arch/libarchive-3.8.0:0/13= app-crypt/rhash:0/1= >=dev-libs/expat-2.0.1 >=dev-libs/jsoncpp-1.9.2-r2:0/27= >=dev-libs/libuv-1.51.0-r1:0/1= >=net-misc/curl-7.21.5[ssl] virtual/zlib:0/1= virtual/pkgconfig sys-libs/ncurses:0/6=

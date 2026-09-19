@@ -1,0 +1,1 @@
+>=dev-python/certifi-2017.4.17[python_targets_python3_14(-)] <dev-python/charset-normalizer-4[python_targets_python3_14(-)] <dev-python/idna-4[python_targets_python3_14(-)] <dev-python/urllib3-3[python_targets_python3_14(-)] dev-lang/python:3.14[threads(+)]

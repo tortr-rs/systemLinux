@@ -1,0 +1,11 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=/usr/lib64
+includedir=${prefix}/include
+
+Name: libmagic
+Description: Magic number recognition library
+Version: 5.48
+Libs: -L${libdir} -lmagic
+Libs.private: -lseccomp -lbz2 -lz 
+Cflags: -I${includedir}

@@ -1,0 +1,1 @@
+|| ( =dev-lang/perl-5.44* =dev-lang/perl-5.42* ~perl-core/podlators-6.0.2 ) dev-lang/perl:0/5.42= !<perl-core/podlators-6.0.2 !>perl-core/podlators-6.0.2-r999

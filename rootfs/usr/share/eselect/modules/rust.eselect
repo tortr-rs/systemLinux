@@ -1,0 +1,346 @@
+# Copyright 1999-2021 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+DESCRIPTION="Manage the Rust compiler versions"
+MAINTAINER="rust@gentoo.org"
+VERSION="20200419"
+
+ENV_D_PATH="${EROOT%/}/etc/env.d"
+BIN_DIR="${EROOT%/}/usr/bin"
+
+inherit package-manager path-manipulation
+
+# find a list of missing or broken symlinks
+# each compiler installs a list of provided programs.
+# this function checks if a symlink for a provided program
+# is missing or broken for the current active Rust implementation
+find_missing_broken_symlinks() {
+	local -a missing_symlinks
+	local required_symlinks=( "/usr/bin/rustc" $(get_last_set_symlinks) )
+
+	local target=$(get_current_target)
+	if [ "${target}" != "NOT_SET" ]; then
+		# make sure we add new symlinks for new targets,
+		# i.e. after changed USE flags
+		required_symlinks+=( $(get_symlinks ${target}) )
+	fi
+
+	required_symlinks=( $(printf "%s\n" "${required_symlinks[@]}" | sort -u) )
+
+	local i
+	for i in "${required_symlinks[@]}"; do
+		local symlink="${EROOT%/}${i}"
+
+		if [[ -L "${symlink}" && -e "${symlink}" ]]; then
+			# existing symlink
+			continue
+		else
+			missing_symlinks+=( "${symlink}" )
+		fi
+	done
+
+	echo "${missing_symlinks[@]}"
+}
+
+# find a list of installed rust compilers
+# each compiler provider should install
+# a config file named provider-$pkgname-$pkgver
+# in "${ENV_D_PATH}/rust" directory
+# this function prints list of $pkgname-$pkgver values
+find_targets() {
+	local f fn
+	local -a providers
+	local -a providers_unsorted
+	local -a providers_sorted
+	for f in "${ENV_D_PATH}"/rust/provider-*; do
+		[[ -f ${f} ]] || continue
+		fn="${f##*/provider-}"
+		if [[ "${fn}" == rust-bin-* ]]; then
+			providers_unsorted+=( "${fn##rust-bin-}-mysortA" )
+		elif [[ "${fn}" == rust-* ]]; then
+			providers_unsorted+=( "${fn##rust-}-mysortZ" )
+		else
+			die -q "Unsupported rust provider file '${f}' found."
+		fi
+	done
+
+	IFS=$'\n' LC_COLLATE=C providers_sorted=( $(sort <<<"${providers_unsorted[*]}") )
+
+	for fn in "${providers_sorted[@]}"; do
+		if [[ "${fn}" == *-mysortA ]]; then
+			providers+=( "rust-bin-${fn%%-mysortA}" )
+		else
+			providers+=( "rust-${fn%%-mysortZ}" )
+		fi
+	done
+
+	echo "${providers[@]}"
+}
+
+#get rustc postfix
+get_postfix() {
+	local target=$1
+	echo "${target}" | cut -d- -f2-
+}
+
+#get current target
+get_current_target() {
+	local i targets=( $(find_targets) )
+	for (( i = 0; i < ${#targets[@]}; i++ )); do
+		if [[ rustc-$(get_postfix ${targets[i]}) = \
+			$(basename "$(canonicalise "${BIN_DIR}/rustc")") ]]; then
+			echo $i
+			return 0
+		fi
+	done
+	echo "NOT_SET"
+}
+
+#get symlinks list from file or the default value
+get_symlinks_from_file() {
+	local filename=$1
+	local symlinks=()
+	local i
+	if [[ -e ${filename} ]]; then
+		for i in $(cat "${filename}"); do
+			symlinks+=($i)
+		done
+	fi
+
+	if [ ${#symlinks[@]} -eq 0 ]; then
+		echo /usr/bin/rustdoc
+	else
+		echo "${symlinks[@]}"
+	fi
+
+}
+
+#get last set symlinks
+get_last_set_symlinks() {
+	local symlinks=( $(get_symlinks_from_file "${ENV_D_PATH}/rust/last-set") )
+	echo "${symlinks[@]}"
+}
+
+#get lists of symlinks
+get_symlinks() {
+	local target=$1
+	if [ "${target}" == "NOT_SET" ]; then
+		echo /usr/bin/rustdoc
+		return
+	fi
+	if is_number "${target}"; then
+		local targets=( $(find_targets) )
+		target=${targets[target]}
+	fi
+
+	local symlinks=( $(get_symlinks_from_file "${ENV_D_PATH}/rust/provider-${target}") )
+	echo "${symlinks[@]}"
+}
+
+# remove symlink if exists
+remove_symlink() {
+	local symlink=$1
+
+	if [[ -L ${symlink} ]]; then
+		# existing symlink
+		rm ${symlink} || die -q "Couldn't remove existing symlink ${symlink}"
+	elif [[ -e ${symlink} ]]; then
+		# we have something strange
+		die -q "${symlink} exists but is not a symlink"
+	fi
+}
+
+# set symlink if source exists
+set_symlink() {
+	local source=$1
+	local dest=$2
+
+	remove_symlink "${dest}"
+
+	if [[ -e ${dest%/*}/${source} ]]; then
+		mkdir -p "$(dirname ${dest})" || die -q "directory creation failed for $(dirname ${dest})"
+		ln -s "${source}" "${dest}" || die -q "${dest} symlink setting failed"
+	else
+		false
+	fi
+}
+
+# unset the rust version
+unset_version() {
+	local symlinks=( $(get_last_set_symlinks) )
+	for i in "${symlinks[@]}"; do
+		remove_symlink "${EROOT%/}${i}"
+	done
+	remove_symlink "${BIN_DIR}/rustc"
+	rm -f "${ENV_D_PATH}/rust/last-set" \
+		|| die -q "rm -f ${ENV_D_PATH}/rust/last-set failed"
+}
+
+# set the rust version
+# each compiler provider should install
+# files named rustc-$postfix and rustdoc-$postfix
+# in ${BIN_DIR} directory
+# $postfix is defined as the part of $pkgname-$pkgver after the first -
+# for dev-lang/rust-bin-9999 ebuild it would be bin-9999
+set_version() {
+	local target=$1
+
+	if is_number "${target}"; then
+		local targets=( $(find_targets) )
+		target=${targets[target-1]}
+	fi
+
+	target_postfix=$(get_postfix ${target})
+
+	[[ -z ${target_postfix} || ! -x "${BIN_DIR}/rustc-${target_postfix}" ]] \
+		&& die -q "Target \"$1\" doesn't appear to be valid!"
+
+	unset_version
+
+	set_symlink "rustc-${target_postfix}" "${BIN_DIR}/rustc"
+
+	local symlinks=( $(get_symlinks ${target}) )
+	for i in "${symlinks[@]}"; do
+		set_symlink "${i##*/}-${target_postfix}" "${EROOT%/}${i}"
+	done
+
+	cp "${ENV_D_PATH}/rust/provider-${target}" \
+		"${ENV_D_PATH}/rust/last-set" \
+		|| die -q "symlink list copying failed"
+}
+
+### cleanup action ###
+describe_cleanup() {
+	echo "This action is not to be called manually."
+}
+
+do_cleanup() {
+	[[ -z ${*} ]] || die -q "This function does not expect any arguments"
+
+	# Do we need to clean up?
+	local missing_symlinks=( $(find_missing_broken_symlinks) )
+	if [[ ${#missing_symlinks[@]} -eq 0 ]]; then
+		echo "Nothing to clean up."
+		return
+	fi
+
+	unset_version
+
+	local targets=( $(find_targets) )
+
+	if [[ ${#targets[@]} -ne 0 ]]; then
+		echo "Marking the latest still installed version as default..."
+		do_set ${#targets[@]}
+	else
+		echo "No Rust profiles left on the system. Stale symlinks removed."
+	fi
+}
+
+### list action ###
+
+describe_list() {
+	echo "List available Rust versions"
+}
+
+do_list() {
+	local i
+	local targets=( $(find_targets) )
+	local target=$(get_current_target)
+
+	if is_number "${target}"; then
+		targets[target]=$(highlight_marker "${targets[target]}")
+	fi
+
+	write_list_start "Available Rust versions:"
+	write_numbered_list -m "(none found)" "${targets[@]}"
+}
+
+### set action ###
+
+describe_set() {
+	echo "Set active Rust version"
+}
+
+describe_set_parameters() {
+	echo "<target>"
+}
+
+describe_set_options() {
+	echo "target : Target number (from 'list' action)"
+}
+
+do_set() {
+	[[ -z $1 ]] && die -q "You didn't tell me what to set the version to"
+	[[ $# -gt 1 ]] && die -q "Too many parameters"
+
+	set_version "$1" || die -q "Couldn't set new active version"
+}
+
+### show action ###
+
+describe_show() {
+	echo "Show the current Rust implementation"
+}
+
+do_show() {
+	[[ -z "${*}" ]] || die -q "Too many parameters"
+	write_list_start "Current Rust implementation:"
+
+	local targets=( $(find_targets) )
+	local target=$(get_current_target)
+
+	if is_number "${target}"; then
+		write_kv_list_entry "${targets[target]}" ""
+	else
+		write_kv_list_entry "(unset)" ""
+	fi
+}
+
+### update action ###
+
+describe_update() {
+	echo "Switch to the most recent Rust compiler"
+}
+
+describe_update_options() {
+	echo "--if-unset    : Do not override existing implementation"
+}
+
+do_update() {
+	local if_unset="0"
+	while [[ $# -gt 0 ]]; do
+		case "$1" in
+			--if-unset)
+				if_unset="1"
+				;;
+			*)
+				die -q "Unrecognized argument '$1'"
+				;;
+		esac
+		shift
+	done
+
+	if [[ "${if_unset}" == "1" ]]; then
+		local missing_symlinks=( $(find_missing_broken_symlinks) )
+		if [[ ${#missing_symlinks[@]} -eq 0 ]]; then
+			return
+		else
+			echo "Not all symlinks set. Will switch to the most recent Rust compiler!"
+		fi
+	fi
+
+	local targets=( $(find_targets) )
+	do_set ${#targets[@]}
+}
+
+### unset action ###
+
+describe_unset() {
+	echo 'DEPRECATED: Use "cleanup" action instead!'
+}
+
+do_unset() {
+	do_cleanup
+}
+
+# vim: set ft=eselect :

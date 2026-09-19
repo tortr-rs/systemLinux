@@ -1,0 +1,12 @@
+DEFINED_PHASES=install prepare
+DESCRIPTION=Small telnet daemon derived from the Axis tools
+EAPI=8
+HOMEPAGE=https://wiki.gentoo.org/wiki/No_homepage
+INHERIT=flag-o-matic toolchain-funcs
+KEYWORDS=~amd64 ~arm ~ppc ~s390 ~sparc ~x86
+LICENSE=GPL-2
+RDEPEND=sys-apps/shadow
+SLOT=0
+SRC_URI=mirror://gentoo/utelnetd-0.1.11.tar.gz
+_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=557c75c3cd15cda22e36cd32f232a45e

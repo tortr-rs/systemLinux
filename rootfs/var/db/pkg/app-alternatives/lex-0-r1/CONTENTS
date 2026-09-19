@@ -1,0 +1,10 @@
+dir /usr
+dir /usr/bin
+sym /usr/bin/lex -> flex 1789353859
+dir /usr/share
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/lex.1 430aa06b9de65f509f29821cb88afeb8 1710328044
+dir /etc
+dir /etc/env.d
+obj /etc/env.d/90lex 2943520d0024f760cd9096d3edfb573d 1710328044

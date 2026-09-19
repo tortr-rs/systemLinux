@@ -1,0 +1,69 @@
+=head1 NAME
+
+Texinfo::CommandsValues - Associations of information to Texinfo @-commands
+
+=head1 SYNOPSIS
+
+  use Texinfo::CommandsValues;
+
+  my $command_text = $Texinfo::CommandsValues::nobrace_symbol_text{'@'};
+
+=head1 NOTES
+
+The Texinfo Perl module main purpose is to be used in C<texi2any> to convert
+Texinfo to other formats.  There is no promise of API stability.
+
+=head1 DESCRIPTION
+
+Texinfo::CommandsValues holds hashes with information on @-commands.
+Only hashes relevant for conversion of @-commands are documented.
+
+=head1 @-COMMAND ASSOCIATED INFORMATION
+
+Hashes are defined as C<our> variables, and are therefore available
+outside of the module.
+
+=over
+
+=item %nobrace_symbol_text
+X<C<%nobrace_symbol_text>>
+
+Values are ASCII representation of single character non-alphabetical commands
+without brace such as C<*> or C<:>.  The value may be an empty string.
+
+=item %text_brace_no_arg_commands
+X<C<%text_brace_no_arg_commands>>
+
+Values are ASCII representation of commands with empty braces such as
+C<atchar>, C<LaTeX>, C<arrow>, C<quoteleft> or C<AA>.
+
+=item %unicode_diacritics
+X<C<%unicode_diacritics>>
+
+Keys are Texinfo accent commands, such as C<'> or C<ogonek>.  Values are
+strings of hexadecimal numbers representing the Unicode codepoint of the
+diacritic associated to the accent command.  A diacritic is a zero-length
+character that should be combined with adjacent characters to have the whole
+interpreted as an accented character.
+
+=back
+
+=head1 SEE ALSO
+
+L<Texinfo::Commands>.  L<Texinfo::Convert::Unicode>.
+
+=head1 AUTHOR
+
+Patrice Dumas, E<lt>pertusus@free.frE<gt>
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright 2010- Free Software Foundation, Inc.  See the source file for
+all copyright years.
+
+This library is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 3 of the License, or (at
+your option) any later version.
+
+=cut

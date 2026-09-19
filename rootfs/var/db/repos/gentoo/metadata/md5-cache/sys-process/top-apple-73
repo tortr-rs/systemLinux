@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install postinst prepare
+DESCRIPTION=Apple's top from Mac OS X Lion 10.7
+EAPI=8
+HOMEPAGE=http://www.opensource.apple.com/
+INHERIT=toolchain-funcs
+KEYWORDS=~x64-macos
+LICENSE=APSL-2 BSD
+SLOT=0
+SRC_URI=http://www.opensource.apple.com/tarballs/top/top-73.tar.gz http://www.opensource.apple.com/source/libutil/libutil-11/libutil.h?txt -> libutil-11-top-73.h
+_eclasses_=toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=bea09ca2aff5d6744ef8d10d2c236edc

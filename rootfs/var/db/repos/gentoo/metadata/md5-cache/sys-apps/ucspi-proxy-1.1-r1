@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=>=dev-libs/bglibs-2.04
+DESCRIPTION=Proxy program for two connections set up by a UCSPI server and a UCSPI client
+EAPI=8
+HOMEPAGE=https://untroubled.org/ucspi-proxy/
+INHERIT=flag-o-matic toolchain-funcs
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2+
+RDEPEND=>=dev-libs/bglibs-2.04
+SLOT=0
+SRC_URI=https://untroubled.org/ucspi-proxy/archive/ucspi-proxy-1.1.tar.gz
+_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=25093a68c9c964ba687e65eab55e5f58

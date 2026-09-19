@@ -1,0 +1,14 @@
+DEFINED_PHASES=install nofetch postinst prepare
+DESCRIPTION=Puzzle game that puts you inside and ambient and mysterious universe
+EAPI=8
+HOMEPAGE=http://www.nicalis.com/nightsky/
+INHERIT=desktop
+IUSE=bundled-libs
+KEYWORDS=-* ~amd64 ~x86
+LICENSE=all-rights-reserved
+RDEPEND=virtual/glu virtual/opengl x11-libs/libX11 x11-libs/libXext x11-libs/libXi x11-libs/libXxf86vm !bundled-libs? ( media-libs/freealut media-libs/freeglut media-libs/libogg media-libs/libvorbis media-libs/openal virtual/zlib:= )
+RESTRICT=bindist fetch
+SLOT=0
+SRC_URI=nightskyhd-linux-1324519044.tar.gz
+_eclasses_=desktop	e447b5f77146d69797e9f03ff177f3f1
+_md5_=e68e2df1ca430a23cd90f53ea8f404c5

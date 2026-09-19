@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile install setup
+DEPEND=dev-libs/openssl:0= lua_single_target_luajit? ( dev-lang/luajit:= )
+DESCRIPTION=A HTTP benchmarking tool
+EAPI=8
+HOMEPAGE=https://github.com/wg/wrk
+INHERIT=lua-single toolchain-funcs
+IUSE=+lua_single_target_luajit
+KEYWORDS=amd64 x86
+LICENSE=Apache-2.0 BSD MIT
+RDEPEND=dev-libs/openssl:0= lua_single_target_luajit? ( dev-lang/luajit:= )
+REQUIRED_USE=^^ ( lua_single_target_luajit )
+SLOT=0
+SRC_URI=https://github.com/wg/wrk/archive/4.2.0.tar.gz -> wrk-4.2.0.tar.gz
+_eclasses_=lua-single	75fe955a36b18e199213c8739eaebdbb	lua-utils	7c89927eda6f21c4c48136247077ab37	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=2c516e26b5916d50d05c461ced749e94

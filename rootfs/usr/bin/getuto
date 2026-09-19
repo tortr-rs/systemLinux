@@ -1,0 +1,243 @@
+#!/bin/bash
+
+# This bash script maintains /etc/portage/gnupg in a Gentoo installation.
+# It should be run as root always before downloading and installing binary
+# packages.
+
+# If the directory does not exist yet, it will be set up such that
+# the Gentoo Release Engineering keys are trusted for signing binary
+# packages.
+# The keys are taken from sec-keys/openpgp-keys-gentoo-release.
+# If the directory already exists, then all keys in it will be refreshed
+# from keyservers.
+# In addition sanity checks and corrections are performed ...
+
+# Runtime requirements:
+# app-crypt/gnupg
+# dev-libs/openssl
+# sec-keys/openpgp-keys-gentoo-release
+# sys-apps/gentoo-functions
+
+[[ ${PORTAGE_DEBUG} || ${GETUTO_DEBUG} ]] && set -x
+[[ $(whoami) == 'root' ]] || { echo "${0} must be run as root!" ; exit 100 ; }
+
+# Allow GPG to be overridden for debugging, like GPG='gpg --debug-basic'
+: ${GPG:=gpg}
+
+export GNUPGHOME="${ROOT%/}"/etc/portage/gnupg
+
+LASTRUNFILE=${GNUPGHOME}/.getuto.last
+QUIET='1'
+QUIET_GPG=''
+
+# These should be greater than the timeouts specified below in dirmngr.conf
+GPG_TIMEOUT_TERM='1.75m'
+GPG_TIMEOUT_KILL='2.5m'
+
+: ${GETUTO_EXTERNAL_REFRESH:-0}
+
+[[ ${PORTAGE_DEBUG} || ${GETUTO_DEBUG} || $1 == '-v' ]] && QUIET=''
+#  If QUIET is enabled, pass '--quiet' and suppress GPG homedir permission warnings
+#  These permission warnings cannot be suppressed using gpg.conf
+[[ -n ${QUIET} ]] && QUIET_GPG='--quiet --no-permission-warning'
+
+if [[ -f /lib/gentoo/functions.sh && -v TERM && -n "${TERM}" && "${TERM}" != dumb ]] ; then
+	source /lib/gentoo/functions.sh
+else
+	ebegin() {
+		echo "$@"
+	}
+	eend() {
+		true
+	}
+	einfo() {
+		echo "$@"
+	}
+fi
+
+gpgconf --kill all
+set -e
+
+mykeyservers=(
+	"hkps://keys.openpgp.org"
+	"hkps://keys.gentoo.org"
+)
+
+getuto_refresh() {
+	DAY=86400
+	NOW=$(date +%s)
+	if [[ -f ${LASTRUNFILE} ]] ; then
+		LST=$(date -r ${LASTRUNFILE} +%s)
+	else
+		LST='0'
+	fi
+
+	if (( ${NOW} - ${DAY} >= ${LST} )) ; then
+		einfo "Updating GnuPG keyring for package signatures" >&3
+
+		# Always re-import the system keys because it might be our only source of updates
+		# for e.g. revocations, renewals, etc if we're on a firewalled machine.
+		${GPG} ${QUIET_GPG} --batch --import "${ROOT%/}"/usr/share/openpgp-keys/gentoo-release.asc
+
+		if [[ ${GETUTO_EXTERNAL_REFRESH} == 1 ]] ; then
+			# Refresh all keys from the keyserver if we can.
+			for keyserver in "${mykeyservers[@]}" ; do
+				# TODO: keys.openpgp.org lacks a UID for our keys, need to verify email
+				timeout -f -k ${GPG_TIMEOUT_KILL} ${GPG_TIMEOUT_TERM} ${GPG} ${QUIET_GPG} --batch --keyserver "${keyserver}" --refresh-keys || true
+			done
+			# We only sign (-> ultimate trust) the keys we originally import, so this is fine and
+			# just serves as an additional refresh method.
+			${GPG} --batch --with-colons --list-keys | grep "^uid" | cut -d: -f10 | \
+				sed -n 's/.*<\([^>]\+@[^>]\+\.[^>]\+\)>.*/\1/p' | sort -u | \
+				xargs ${GPG} ${QUIET_GPG} --auto-key-locate=clear,nodefault,wkd --locate-key || true
+		fi
+
+		touch ${LASTRUNFILE}
+	else
+		[[ -n ${QUIET} ]] || einfo "GnuPG keyring for package signatures already up-to-date." >&3
+	fi
+}
+
+# The directory does not exist yet.
+if [[ ! -d ${GNUPGHOME} ]] ; then
+	ebegin "Initializing ${GNUPGHOME}"
+
+	# Do all work in a staging directory then rename it to avoid issues
+	# from interrupted initialisation.
+	GNUPGHOME_orig=${GNUPGHOME}
+	GNUPGHOME=${GNUPGHOME}.getuto.tmp
+	rm -rf ${GNUPGHOME}
+
+	mkdir -p "${GNUPGHOME}"
+	chmod u=rwx,go=rx "${GNUPGHOME}"
+
+	cat > "${GNUPGHOME}"/dirmngr.conf <<-EOF
+	honor-http-proxy
+	no-use-tor
+
+	# The default of "recursive-resolver" (see "man dirmngr") may cause
+	# problems with corporate networks, where this is often prohibited.
+	# It's better to setup the DNS resolver of your choice correctly
+	# preferably with DNSSEC checks enabled and use the following setting:
+	standard-resolver
+
+	resolver-timeout 90
+	connect-timeout 90
+	EOF
+
+	cat > "${GNUPGHOME}"/gpg-agent.conf <<-EOF
+	disable-scdaemon
+	EOF
+
+	cat > "${GNUPGHOME}"/gpg.conf <<-EOF
+	no-greeting
+	EOF
+
+	# Generate a local ultimate trust anchor key.
+	PASS="$(openssl rand -base64 32)"
+
+	KEY_CONFIG_FILE="$(mktemp)"
+	chmod 600 "${KEY_CONFIG_FILE}"
+
+	cat > "${KEY_CONFIG_FILE}" <<-EOF
+	%echo Generating Portage local OpenPGP trust key
+	Key-Type: RSA
+	Key-Length: 3072
+	Subkey-Type: RSA
+	Subkey-Length: 3072
+	Name-Real: Portage Local Trust Key
+	Name-Comment: local signing only
+	Name-Email: portage@localhost
+	Expire-Date: 0
+	Passphrase: ${PASS}
+	%commit
+	%echo done
+	EOF
+
+	${GPG} ${QUIET_GPG} --batch --generate-key "${KEY_CONFIG_FILE}"
+	rm -f "${KEY_CONFIG_FILE}"
+
+	touch "${GNUPGHOME}/pass"
+	chmod 600 "${GNUPGHOME}/pass"
+	echo "${PASS}" > "${GNUPGHOME}/pass"
+
+	${GPG} ${QUIET_GPG} --batch --list-secret-keys --keyid-format=long --with-colons \
+		| grep "^fpr" \
+		| sed -n 's/^fpr:::::::::\([[:alnum:]]\+\):/\1/p' \
+	> "${GNUPGHOME}/mykeyid"
+	mykeyid=$(<"${GNUPGHOME}/mykeyid")
+
+	# Import all release engineering keys.
+	if [[ ! -f "${ROOT%/}"/usr/share/openpgp-keys/gentoo-release.asc ]] ; then
+		echo "\"${ROOT%/}\"/usr/share/openpgp-keys/gentoo-release.asc not found. Is sec-keys/openpgp-keys-gentoo-release installed?"
+		exit 1
+	fi
+
+	${GPG} ${QUIET_GPG} --batch --import "${ROOT%/}"/usr/share/openpgp-keys/gentoo-release.asc
+
+	# List all release engineering keys (https://serverfault.com/a/946428)
+	myrelkeys=$(${GPG} ${QUIET_GPG} --batch --list-keys --keyid-format=long --with-colons \
+			| grep "^fpr" \
+			| sed -n 's/^fpr:::::::::\([[:alnum:]]\+\):/\1/p' \
+			| grep -v "${mykeyid}")
+
+	# TODO: keys.openpgp.org lacks a UID for our keys, need to verify email
+	if [[ ${GETUTO_EXTERNAL_REFRESH} == 1 ]] ; then
+		for keyserver in "${mykeyservers[@]}" ; do
+			timeout -f -k ${GPG_TIMEOUT_KILL} ${GPG_TIMEOUT_TERM} ${GPG} ${QUIET_GPG} --batch --keyserver "${keyserver}" --recv-keys ${myrelkeys} || true
+		done
+		# We only sign (-> ultimate trust) the keys we originally import, so this is fine and
+		# just serves as an additional refresh method.
+		${GPG} --batch --with-colons --list-keys | grep "^uid" | cut -d: -f10 | \
+				sed -n 's/.*<\([^>]\+@[^>]\+\.[^>]\+\)>.*/\1/p' | sort -u | \
+				xargs ${GPG} ${QUIET_GPG} --auto-key-locate=clear,nodefault,wkd --locate-key || true
+	fi
+
+	# Locally sign all release engineering keys.
+	for relkeyid in ${myrelkeys} ; do
+		# We have to use --quick-lsign-key for this to work with batch: https://dev.gnupg.org/T1606
+		if ! ${GPG} ${QUIET_GPG} --batch --yes --no-tty --passphrase-file="${GNUPGHOME}/pass" --pinentry-mode loopback --quick-lsign-key "${relkeyid}" ; then
+			# But that won't work for subkeys, so fallback to a hackier method.
+			set -o pipefail
+			echo -e "y\ny\n" | ${GPG} ${QUIET_GPG} --command-fd 0 --yes --no-tty --passphrase-file="${GNUPGHOME}/pass" --pinentry-mode loopback --lsign-key "${relkeyid}"
+			set +o pipefail
+		fi
+	done
+
+	# Update the trustdb
+	${GPG} ${QUIET_GPG} --batch --check-trustdb
+
+	# Make sure the trustdb is world-readable.
+	chmod ugo+r "${GNUPGHOME}/trustdb.gpg"
+
+	# Clean up.
+	gpgconf --kill all
+
+	# The keyring directory is fully initialised now, so move it over.
+	mv ${GNUPGHOME} ${GNUPGHOME_orig}
+	GNUPGHOME=${GNUPGHOME_orig}
+
+	touch ${LASTRUNFILE}
+
+	eend
+else
+	# The keydir already exists, so our job is to just to refresh and check
+	# permissions.
+
+	# We want to be able to filter error messages
+	export LC_ALL=C.UTF-8
+
+	{
+		if [[ -n ${QUIET} ]] ; then
+		    getuto_refresh >/dev/null 2>&1
+		else
+		    getuto_refresh
+		fi
+	} 3>&1
+fi
+
+# Make sure the trustdb is world-readable (again).
+chmod ugo+r "${GNUPGHOME}/trustdb.gpg"
+
+# Clean up.
+gpgconf --kill all

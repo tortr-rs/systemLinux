@@ -1,0 +1,230 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/debuginfod 477466e5807a52ad1e3359a27e620713 1779643586
+obj /usr/bin/debuginfod-find 1a563e5e92c6fe46e41b159f79cbb47b 1779643586
+obj /usr/bin/eu-addr2line 97690af4b487d041b336d978e9bd62ba 1779643586
+obj /usr/bin/eu-ar 2767bd77defa2ed22d64f62e1806ca88 1779643586
+obj /usr/bin/eu-elfclassify ff83e448a6cffb4f5d5e004d9e6c9fe1 1779643586
+obj /usr/bin/eu-elfcmp 02d6ea9810fb59202db4c189637cf139 1779643586
+obj /usr/bin/eu-elfcompress bb8e73e36c91a8bd4c174cdf15f22e4e 1779643586
+obj /usr/bin/eu-elflint 692cd4328839e7cfc2fe01045f9f1d8f 1779643586
+obj /usr/bin/eu-findtextrel 66ece56e1fb286260a55f811b74da6ad 1779643586
+obj /usr/bin/eu-make-debug-archive 54bf7c97ffcf292fa064e2eeb303a023 1779643585
+obj /usr/bin/eu-nm 6980b517b62a6fed7d99b3cb84b1f232 1779643586
+obj /usr/bin/eu-objdump bf0dfdea8150898ddce10fdd3efe914d 1779643586
+obj /usr/bin/eu-ranlib e2fa994e0dd3fb980ed035f41d2a75ea 1779643586
+obj /usr/bin/eu-readelf f3d92417d17fb79fc73ebb8193bbecd4 1779643586
+obj /usr/bin/eu-size 583fce8d93555ca2c9688587a38bccb3 1779643586
+obj /usr/bin/eu-srcfiles 690fd2f1518f50483f73c672b7860010 1779643586
+obj /usr/bin/eu-stack 70d7a3510a6c0c474c6682c5ad3bac67 1779643586
+obj /usr/bin/eu-strings 159a666f5492fb96e375945d88333174 1779643586
+obj /usr/bin/eu-strip 9c7469aa7c261985c56e3ba22d66d3b6 1779643586
+obj /usr/bin/eu-unstrip 7cb017a77077876a5c8accba52da9d9e 1779643586
+dir /usr/include
+obj /usr/include/dwarf.h 7ed88de9d9844f2a5dee3fb68a5ec6e9 1779643585
+dir /usr/include/elfutils
+obj /usr/include/elfutils/debuginfod.h b814015759e8f3fe291e12fe83ef47e8 1779643585
+obj /usr/include/elfutils/elf-knowledge.h 25e40ec168ae0a8943c366aa3e040d1c 1779643585
+obj /usr/include/elfutils/known-dwarf.h 954df5feef4a491ff8d738697a5f4c1e 1779643585
+obj /usr/include/elfutils/libasm.h b717398ea93ae76ab215c3a864e4c895 1779643585
+obj /usr/include/elfutils/libdw.h 5b50ef44c8a97469bdeae58064f6e380 1779643585
+obj /usr/include/elfutils/libdwelf.h e9509f8bcebc6bccc44b85b60dcd649c 1779643585
+obj /usr/include/elfutils/libdwfl.h cd2117f23bf5bab91e1736bb68f726c1 1779643585
+obj /usr/include/elfutils/libdwfl_stacktrace.h 1b640e720fc2cdde53daebf0bd264e9f 1779643585
+obj /usr/include/elfutils/version.h 90f4e477eab3fc70fadd3d26db2cab75 1779643585
+obj /usr/include/gelf.h 3274e23726c21d5b64158e7c2123e18f 1779643585
+obj /usr/include/libelf.h 619d0b51ad33b36bf4128f32bd6d449f 1779643585
+obj /usr/include/nlist.h ce6c40d6edbd166d0326d342a677d82c 1779643585
+dir /usr/include/x86_64-pc-linux-gnu
+dir /usr/include/x86_64-pc-linux-gnu/elfutils
+obj /usr/include/x86_64-pc-linux-gnu/elfutils/debuginfod.h 053f81b7da95c6a36be2602225ace8f7 1779643585
+dir /usr/lib64
+obj /usr/lib64/libasm-0.195.so 7dd654ea33ca96e9a3bac34a2c797266 1779643586
+sym /usr/lib64/libasm.so.1 -> libasm-0.195.so 1789354068
+obj /usr/lib64/libdebuginfod-0.195.so da32fa7ac9a56233a638d50528e8e4fc 1779643586
+sym /usr/lib64/libdebuginfod.so -> libdebuginfod-0.195.so 1789354068
+sym /usr/lib64/libdebuginfod.so.1 -> libdebuginfod-0.195.so 1789354068
+obj /usr/lib64/libdw-0.195.so 5dae857660c9f747357c94cc39ada3ec 1779643586
+sym /usr/lib64/libdw.so.1 -> libdw-0.195.so 1789354068
+obj /usr/lib64/libelf-0.195.so 0178672f550880faed847cb14d5afe76 1779643586
+sym /usr/lib64/libelf.so.1 -> libelf-0.195.so 1789354068
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/libdebuginfod.pc ffc5b8c44f9f6ba43c0ad8b6464aa0e8 1779643585
+obj /usr/lib64/pkgconfig/libdw.pc 14f8c941cae26d0f04537ec44e61b656 1779643585
+obj /usr/lib64/pkgconfig/libelf.pc 73e7e85126ce81c41a3295632adf4aa0 1779643585
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/elfutils-0.195
+obj /usr/share/doc/elfutils-0.195/AUTHORS.bz2 47d56ee990329ef3023c144c7b62faf1 1779643585
+obj /usr/share/doc/elfutils-0.195/ChangeLog.bz2 28b5db875898af1f2f23ff66896f9b6f 1779643585
+obj /usr/share/doc/elfutils-0.195/NEWS.bz2 43125ee63bf76b8167e05d6361fb48fc 1779643585
+obj /usr/share/doc/elfutils-0.195/NOTES.bz2 0ce10c2ae1b12f7327aa376f76d90e72 1779643586
+obj /usr/share/doc/elfutils-0.195/README.bz2 98ff7c3950d248bf17dc28e1818e71bc 1779643585
+obj /usr/share/doc/elfutils-0.195/THANKS.bz2 5f8fbc3c9f11b08fcded4b176ca39ba3 1779643586
+obj /usr/share/doc/elfutils-0.195/TODO.bz2 c4e5a8f1a4ec58d36779a349750825c4 1779643586
+dir /usr/share/fish
+dir /usr/share/fish/vendor_conf.d
+obj /usr/share/fish/vendor_conf.d/debuginfod.fish 6639752a373562596d3497bfc2f03cb1 1779643585
+dir /usr/share/locale
+dir /usr/share/locale/de
+dir /usr/share/locale/de/LC_MESSAGES
+obj /usr/share/locale/de/LC_MESSAGES/elfutils.mo c0c88cabd1ba50902636b333656938ba 1779643585
+dir /usr/share/locale/en@boldquot
+dir /usr/share/locale/en@boldquot/LC_MESSAGES
+obj /usr/share/locale/en@boldquot/LC_MESSAGES/elfutils.mo 87b1354af5e5a5f34fe2726dfb4522c3 1779643585
+dir /usr/share/locale/en@quot
+dir /usr/share/locale/en@quot/LC_MESSAGES
+obj /usr/share/locale/en@quot/LC_MESSAGES/elfutils.mo e0a3a7d2746ceb10b8ec4d1695cbc7fc 1779643585
+dir /usr/share/locale/es
+dir /usr/share/locale/es/LC_MESSAGES
+obj /usr/share/locale/es/LC_MESSAGES/elfutils.mo 30a32651d3eb8cb0076f3cfea3869c75 1779643585
+dir /usr/share/locale/ja
+dir /usr/share/locale/ja/LC_MESSAGES
+obj /usr/share/locale/ja/LC_MESSAGES/elfutils.mo a544bb1c5cadf0cad80326158cf11462 1779643585
+dir /usr/share/locale/pl
+dir /usr/share/locale/pl/LC_MESSAGES
+obj /usr/share/locale/pl/LC_MESSAGES/elfutils.mo 730e511ec6718725ff0a9e841a3a8ddd 1779643585
+dir /usr/share/locale/uk
+dir /usr/share/locale/uk/LC_MESSAGES
+obj /usr/share/locale/uk/LC_MESSAGES/elfutils.mo b6740627fac6ae8372ca9c7684dd3d06 1779643585
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/debuginfod-find.1.bz2 b1d21184c1f89dc32e19888b9d313d39 1779643585
+obj /usr/share/man/man1/eu-elfclassify.1.bz2 e50150304112d1709dabfedeb0e1acaa 1779643585
+obj /usr/share/man/man1/eu-readelf.1.bz2 b97f3ae28ca2bb4522398014c52d0da5 1779643585
+obj /usr/share/man/man1/eu-srcfiles.1.bz2 019837609f4f69d333ba5ab6241ad19b 1779643585
+dir /usr/share/man/man3
+obj /usr/share/man/man3/debuginfod_add_http_header.3 d36da3c0d390eeedfbe29f2bff6be452 1779643585
+obj /usr/share/man/man3/debuginfod_begin.3 d36da3c0d390eeedfbe29f2bff6be452 1779643585
+obj /usr/share/man/man3/debuginfod_end.3 d36da3c0d390eeedfbe29f2bff6be452 1779643585
+obj /usr/share/man/man3/debuginfod_find_debuginfo.3.bz2 a5d68f24805865e6007e00262ec409f4 1779643585
+obj /usr/share/man/man3/debuginfod_find_executable.3 d36da3c0d390eeedfbe29f2bff6be452 1779643585
+obj /usr/share/man/man3/debuginfod_find_metadata.3 d36da3c0d390eeedfbe29f2bff6be452 1779643585
+obj /usr/share/man/man3/debuginfod_find_section.3 d36da3c0d390eeedfbe29f2bff6be452 1779643585
+obj /usr/share/man/man3/debuginfod_find_source.3 d36da3c0d390eeedfbe29f2bff6be452 1779643585
+obj /usr/share/man/man3/debuginfod_get_url.3 d36da3c0d390eeedfbe29f2bff6be452 1779643585
+obj /usr/share/man/man3/debuginfod_get_user_data.3 d36da3c0d390eeedfbe29f2bff6be452 1779643585
+obj /usr/share/man/man3/debuginfod_set_progressfn.3 d36da3c0d390eeedfbe29f2bff6be452 1779643585
+obj /usr/share/man/man3/debuginfod_set_user_data.3 d36da3c0d390eeedfbe29f2bff6be452 1779643585
+obj /usr/share/man/man3/elf32_checksum.3.bz2 90572c4e5cae5b98b1f7237062c0f2d2 1779643585
+obj /usr/share/man/man3/elf32_fsize.3.bz2 f35680e5409e790bde081731e8990cf7 1779643585
+obj /usr/share/man/man3/elf32_getchdr.3.bz2 dfc55de2a8efeb21cdbff95b988554a0 1779643585
+obj /usr/share/man/man3/elf32_getehdr.3.bz2 b4aee081d0b6fb04bb6daacc5371b278 1779643585
+obj /usr/share/man/man3/elf32_getphdr.3.bz2 de5ade00448fb7d9aebc7a64892977cf 1779643585
+obj /usr/share/man/man3/elf32_getshdr.3.bz2 819d7dae179344ded63d14a97fa410d1 1779643585
+obj /usr/share/man/man3/elf32_newehdr.3.bz2 0dbb05e8bcc032b22290a12bfdd0e1e0 1779643585
+obj /usr/share/man/man3/elf32_newphdr.3.bz2 1115f17bc89b7ec0818ca5a2a636a7f7 1779643585
+obj /usr/share/man/man3/elf32_offscn.3.bz2 7c1e8b23654f0a87119fd9bb4250090a 1779643585
+obj /usr/share/man/man3/elf32_xlatetof.3 25d4392297900c529c320b55bbd426ac 1779643585
+obj /usr/share/man/man3/elf32_xlatetom.3.bz2 c79c7dec1ac6ab7216f632bd137af6d9 1779643585
+obj /usr/share/man/man3/elf64_checksum.3 cbfd30696b2700d2e2839f7b0055ee38 1779643585
+obj /usr/share/man/man3/elf64_fsize.3 9dd505f970f353904c99b08c30f54176 1779643585
+obj /usr/share/man/man3/elf64_getchdr.3 3a41c2519e9048aa2cd1082c68a79452 1779643585
+obj /usr/share/man/man3/elf64_getehdr.3.bz2 118fa1ac1b3806b51c11c8fc16617ed8 1779643585
+obj /usr/share/man/man3/elf64_getphdr.3 433856abea4cbd80c81d9035251b6480 1779643585
+obj /usr/share/man/man3/elf64_getshdr.3 ee9a517da3e8ac90bb507af98b61a009 1779643585
+obj /usr/share/man/man3/elf64_newehdr.3 7db632d385915804050a3b168cfff901 1779643585
+obj /usr/share/man/man3/elf64_newphdr.3 ced06e148579ecb45426c8e299ef70fa 1779643585
+obj /usr/share/man/man3/elf64_offscn.3.bz2 15cfb900e08e92b5e7bfe22f65e786b1 1779643585
+obj /usr/share/man/man3/elf64_xlatetof.3 25d4392297900c529c320b55bbd426ac 1779643585
+obj /usr/share/man/man3/elf64_xlatetom.3 25d4392297900c529c320b55bbd426ac 1779643585
+obj /usr/share/man/man3/elf_begin.3.bz2 a8e1d9b295f07b7f3d3b449a38b4916d 1779643585
+obj /usr/share/man/man3/elf_clone.3.bz2 f30d4ba873a75168240bfdd5172cdbce 1779643585
+obj /usr/share/man/man3/elf_cntl.3.bz2 e878849502c3ad755fbc0a6a72e707f3 1779643585
+obj /usr/share/man/man3/elf_end.3.bz2 2bc442330aa9097cbb379e08be6e0525 1779643585
+obj /usr/share/man/man3/elf_errmsg.3.bz2 251f8fba9e70d24106ba407da7a746a0 1779643585
+obj /usr/share/man/man3/elf_errno.3.bz2 f1aaf5bbd24cddf03b986b9172f3b7c4 1779643585
+obj /usr/share/man/man3/elf_fill.3.bz2 aa3212c63e76319431ab3a5bc7d0abd7 1779643585
+obj /usr/share/man/man3/elf_flagdata.3 8af9797f91cca9d976562a7a96f2c19a 1779643585
+obj /usr/share/man/man3/elf_flagehdr.3 8af9797f91cca9d976562a7a96f2c19a 1779643585
+obj /usr/share/man/man3/elf_flagelf.3.bz2 d3b495a64de7f4a1e7f1af21c90038ca 1779643585
+obj /usr/share/man/man3/elf_flagphdr.3 8af9797f91cca9d976562a7a96f2c19a 1779643585
+obj /usr/share/man/man3/elf_flagscn.3 8af9797f91cca9d976562a7a96f2c19a 1779643585
+obj /usr/share/man/man3/elf_flagshdr.3 8af9797f91cca9d976562a7a96f2c19a 1779643585
+obj /usr/share/man/man3/elf_getarhdr.3.bz2 8b812fea1b19e68ac289d0f51869b9a3 1779643585
+obj /usr/share/man/man3/elf_getaroff.3.bz2 bdc43951a4337d64815ca4f9e2a9dc38 1779643585
+obj /usr/share/man/man3/elf_getarsym.3.bz2 a4c1ac730554fc476f1410485c4e5b9e 1779643585
+obj /usr/share/man/man3/elf_getbase.3.bz2 1732ee22ede2812d8627a546c4ac48cd 1779643585
+obj /usr/share/man/man3/elf_getdata.3.bz2 fd78359a3bae1b6d015bcc69484dc7c1 1779643585
+obj /usr/share/man/man3/elf_getdata_rawchunk.3.bz2 1dfcd7b9519fcb2cec649c9a5ef65dd0 1779643585
+obj /usr/share/man/man3/elf_getident.3.bz2 1d1d182aa06818156e82cf84fdb74ab1 1779643585
+obj /usr/share/man/man3/elf_getphdrnum.3.bz2 b2b9c1b8946566bae6754696dd85550b 1779643585
+obj /usr/share/man/man3/elf_getscn.3.bz2 939d612cbe5ad9629324b5b2a7caf0ef 1779643585
+obj /usr/share/man/man3/elf_getshdrnum.3.bz2 d3c62816a375dd4b64f6391e79d45958 1779643585
+obj /usr/share/man/man3/elf_getshdrstrndx.3.bz2 2b497f5a843389d29a47f897d8c8f5ea 1779643585
+obj /usr/share/man/man3/elf_getshnum.3 918d7471dac72759b393e7631ac8ea96 1779643585
+obj /usr/share/man/man3/elf_getshstrndx.3 287606eac7eeb0eab13d0d9d04cf36fe 1779643585
+obj /usr/share/man/man3/elf_gnu_hash.3 3431c4b5dc8eef99375cbb99402d4f96 1779643585
+obj /usr/share/man/man3/elf_hash.3.bz2 c3a2525018d70b6e6cde08a662ef2b89 1779643585
+obj /usr/share/man/man3/elf_kind.3.bz2 a36f4cabab98dfeb8f4911e8f9041e20 1779643585
+obj /usr/share/man/man3/elf_memory.3.bz2 5fdcbdb5ad4cd43546b55ac16f22c926 1779643585
+obj /usr/share/man/man3/elf_ndxscn.3.bz2 ef39ff818feee97f67fa627da088dde3 1779643585
+obj /usr/share/man/man3/elf_newdata.3.bz2 f6cd996a2149e9481dc9f74a0a3b7aa7 1779643585
+obj /usr/share/man/man3/elf_newscn.3.bz2 40f94b36e93042aa9a913d64054cbdc9 1779643585
+obj /usr/share/man/man3/elf_next.3.bz2 9d7946f9e78ab778ee708698883eeb06 1779643585
+obj /usr/share/man/man3/elf_nextscn.3.bz2 f5b8c4526429a2b8e0ec2f40fb511c83 1779643585
+obj /usr/share/man/man3/elf_rand.3.bz2 1f79b985693871c2404ee3046082902d 1779643585
+obj /usr/share/man/man3/elf_rawdata.3.bz2 1d016e7ed8677869c2d8334e26b2e79d 1779643585
+obj /usr/share/man/man3/elf_rawfile.3.bz2 972cc92e986a81e38e75bafbbd372792 1779643585
+obj /usr/share/man/man3/elf_scnshndx.3.bz2 e4cdee6a6f4b75c2ad000a48e4dddd81 1779643585
+obj /usr/share/man/man3/elf_strptr.3.bz2 f883949d313b2c4f79fe67e6b8fc35f5 1779643585
+obj /usr/share/man/man3/elf_update.3.bz2 0a8b3f20f8f76f45e92cc285259417ad 1779643585
+obj /usr/share/man/man3/elf_version.3.bz2 7003cb02fe393a4cfa10eb51e771d7dd 1779643585
+obj /usr/share/man/man3/gelf.3 1853a8c553e0cebb48926c936156d872 1779643585
+obj /usr/share/man/man3/gelf_checksum.3.bz2 9c8d3fc778ffef7280437ecd59ccca90 1779643585
+obj /usr/share/man/man3/gelf_fsize.3.bz2 29029bf7db5e82762478e0e1e28091bf 1779643585
+obj /usr/share/man/man3/gelf_getauxv.3.bz2 0ef178b8ec7182eee09c90822f0eaf78 1779643585
+obj /usr/share/man/man3/gelf_getchdr.3.bz2 e752c718cfc0b2aafc893098447a1197 1779643585
+obj /usr/share/man/man3/gelf_getclass.3.bz2 2afed84cc0503e13c4034ef579747eda 1779643585
+obj /usr/share/man/man3/gelf_getdyn.3.bz2 31e4f6439b653aebcf4f3105205632f0 1779643585
+obj /usr/share/man/man3/gelf_getehdr.3.bz2 073aba8407fef4cb73e1e632f128c0e1 1779643585
+obj /usr/share/man/man3/gelf_getlib.3.bz2 9a5c13ff7123f28604e57f99eddf4aa5 1779643585
+obj /usr/share/man/man3/gelf_getmove.3.bz2 f6fb0f3cbd4df243737fc0a5dd2c85f9 1779643585
+obj /usr/share/man/man3/gelf_getnote.3.bz2 732c65ee198b5f5f6a79f8cff254867b 1779643585
+obj /usr/share/man/man3/gelf_getphdr.3.bz2 0c438a4db96473210ff404c53ba26177 1779643585
+obj /usr/share/man/man3/gelf_getrel.3.bz2 76ef80005bc3f7517ef5714df2eb973b 1779643585
+obj /usr/share/man/man3/gelf_getrela.3 9ed92b152a701ea685af741d3f3904ee 1779643585
+obj /usr/share/man/man3/gelf_getshdr.3.bz2 9eb565acbcc9cb61fd674024917c904f 1779643585
+obj /usr/share/man/man3/gelf_getsym.3.bz2 15f2693f57ac3995f874d6c9e401f436 1779643585
+obj /usr/share/man/man3/gelf_getsyminfo.3.bz2 6e3f5822b5528aa9e14c80a6f9fff5e6 1779643585
+obj /usr/share/man/man3/gelf_getsymshndx.3.bz2 9555e86241a8fc45cde6dfc2ec998661 1779643585
+obj /usr/share/man/man3/gelf_getverdaux.3 2f3ff81f31ea6799789cb59cc5165838 1779643585
+obj /usr/share/man/man3/gelf_getverdef.3 2f3ff81f31ea6799789cb59cc5165838 1779643585
+obj /usr/share/man/man3/gelf_getvernaux.3 2f3ff81f31ea6799789cb59cc5165838 1779643585
+obj /usr/share/man/man3/gelf_getverneed.3 2f3ff81f31ea6799789cb59cc5165838 1779643585
+obj /usr/share/man/man3/gelf_getversym.3.bz2 55295d409bf2f8ee5dfb0af77e761b8a 1779643585
+obj /usr/share/man/man3/gelf_newehdr.3.bz2 3023a447791f1f84215ca1451ce93e22 1779643585
+obj /usr/share/man/man3/gelf_newphdr.3.bz2 5c295dea94f21e348c2fec009f92978b 1779643585
+obj /usr/share/man/man3/gelf_offscn.3.bz2 0360f8688cd622fcea1cf02c1f6bebdb 1779643585
+obj /usr/share/man/man3/gelf_update_auxv.3.bz2 f7ce2356e15048c6fb22fe97046b5e49 1779643585
+obj /usr/share/man/man3/gelf_update_dyn.3.bz2 5aadd4b021c8590f50158f119624fccc 1779643585
+obj /usr/share/man/man3/gelf_update_ehdr.3.bz2 c400c27a5e1c0c92c31efde479a4f0ea 1779643585
+obj /usr/share/man/man3/gelf_update_lib.3.bz2 1caa736490673df9fa3918c6b1629c93 1779643585
+obj /usr/share/man/man3/gelf_update_move.3.bz2 ed31f884c4cc2c812ae4ca551180de59 1779643585
+obj /usr/share/man/man3/gelf_update_phdr.3.bz2 5865aa9b819a0d942a1d8a06e6661d0b 1779643585
+obj /usr/share/man/man3/gelf_update_rel.3.bz2 fad5ce154170d164a2be5276cb466350 1779643585
+obj /usr/share/man/man3/gelf_update_rela.3 525827054257f2098f4f1f93acb1029d 1779643585
+obj /usr/share/man/man3/gelf_update_shdr.3.bz2 328c9728b6810d18de7736be3b122869 1779643585
+obj /usr/share/man/man3/gelf_update_sym.3.bz2 3a8352c10124bb85e5fa78390594683f 1779643585
+obj /usr/share/man/man3/gelf_update_syminfo.3.bz2 c20c676bca7963af8e23540fe9330399 1779643585
+obj /usr/share/man/man3/gelf_update_symshndx.3.bz2 a0598780e47e43968311cf671a1ea1e6 1779643585
+obj /usr/share/man/man3/gelf_update_verdaux.3 ec767329ce9caacaebd6fa01ddf3deb0 1779643585
+obj /usr/share/man/man3/gelf_update_verdef.3 ec767329ce9caacaebd6fa01ddf3deb0 1779643585
+obj /usr/share/man/man3/gelf_update_vernaux.3 ec767329ce9caacaebd6fa01ddf3deb0 1779643585
+obj /usr/share/man/man3/gelf_update_verneed.3 ec767329ce9caacaebd6fa01ddf3deb0 1779643585
+obj /usr/share/man/man3/gelf_update_versym.3.bz2 7ad1f4e30d42ed5559599f95515910b1 1779643585
+obj /usr/share/man/man3/gelf_xlatetof.3 927b00113502eb43815b2410f4e8d568 1779643585
+obj /usr/share/man/man3/gelf_xlatetom.3.bz2 38608b22f054269a6f3c2caaab0dba54 1779643585
+obj /usr/share/man/man3/libelf.3.bz2 71b7ef8859201cb953af906bc38246f6 1779643585
+dir /usr/share/man/man7
+obj /usr/share/man/man7/debuginfod-client-config.7.bz2 27cdb5faf4f4c596995e4256c2b6b227 1779643585
+dir /usr/share/man/man8
+obj /usr/share/man/man8/debuginfod.8.bz2 542418a40a981a7508b32bd6d82bc43d 1779643585
+obj /usr/share/man/man8/debuginfod.service.8.bz2 260255e1da8573ac09cbd769fac22c5e 1779643585
+dir /etc
+dir /etc/profile.d
+obj /etc/profile.d/debuginfod.csh 24354bd42f4c182b28d56b8d5648a7fc 1779643585
+obj /etc/profile.d/debuginfod.sh de00b7d680d5769b74e055ced932ec0a 1779643585
+sym /usr/lib64/libelf.so -> libelf.so.1 1789354068
+sym /usr/lib64/libdw.so -> libdw.so.1 1789354068
+sym /usr/lib64/libasm.so -> libasm.so.1 1789354068

@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install prepare
+DESCRIPTION=Console program to recover files based on their headers and footers
+EAPI=7
+HOMEPAGE=https://foremost.sourceforge.net/
+INHERIT=toolchain-funcs prefix
+KEYWORDS=amd64 ppc x86 ~arm64-macos ~x64-macos
+LICENSE=public-domain
+SLOT=0
+SRC_URI=https://foremost.sourceforge.net/pkg/foremost-1.5.7.tar.gz
+_eclasses_=prefix	2765cb74ebcf9f9ac73893d4503c8cb6	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=5096521686dd6503f26744bba0b2431b

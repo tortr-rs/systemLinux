@@ -1,0 +1,20 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/npth-config 9a12128b9a487a650c2b80f2d7619699 1774199883
+dir /usr/include
+obj /usr/include/npth.h a1557cf7a98c3e0d9730695d2f6661f2 1774199883
+dir /usr/lib64
+obj /usr/lib64/libnpth.so.0.3.0 102c69aeedd8955d94f01676fa73495f 1774199883
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/npth.pc 2d448bdd8feb125b7ec826bc8c580229 1774199883
+dir /usr/share
+dir /usr/share/aclocal
+obj /usr/share/aclocal/npth.m4 f61de6101f4d74c6899d21b03928bb8a 1774199883
+dir /usr/share/doc
+dir /usr/share/doc/npth-1.8
+obj /usr/share/doc/npth-1.8/AUTHORS.bz2 78023c618f8c4b93cfb5ea3e808426b6 1774199883
+obj /usr/share/doc/npth-1.8/ChangeLog.bz2 c0fcca6ccb6d3418dca2f1b07e3882a4 1774199883
+obj /usr/share/doc/npth-1.8/NEWS.bz2 552747fd7347da2ef7a27e6a2a72d056 1774199883
+obj /usr/share/doc/npth-1.8/README.bz2 fdc86e4c800bf4f61ffcda0e9f5237bc 1774199883
+sym /usr/lib64/libnpth.so.0 -> libnpth.so.0.3.0 1789353959
+sym /usr/lib64/libnpth.so -> libnpth.so.0.3.0 1789353959

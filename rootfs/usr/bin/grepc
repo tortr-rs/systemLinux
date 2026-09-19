@@ -1,0 +1,77 @@
+#!/bin/bash
+#
+# Copyright, the authors of the Linux man-pages project
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+set -Eefuo pipefail;
+trap 'exit 2;' ERR;
+
+
+# Defaults:
+A='';
+B='';
+C='';
+c='';
+h='-H';
+i='';
+l='';
+m='';
+n='';
+t='';
+x='c';
+
+
+grepc_err()
+{
+	>&2 printf '%s\n' "$(basename "$0"): error: $*";
+	exit 2;
+}
+
+
+while getopts "A:B:C:chilm:nt:x:" opt; do
+	case "$opt" in
+	A)	A="-A$OPTARG";		;;
+	B)	B="-B$OPTARG";		;;
+	C)	C="-C$OPTARG";		;;
+	c)	c='-c';			;;
+	h)	h='-h';			;;
+	i)	i='-i';			;;
+	l)	l='-l';			;;
+	m)	m="-m$OPTARG";		;;
+	n)	n='-n';			;;
+	t)	t="$t -t$OPTARG";	;;
+	x)	x="$OPTARG";		;;
+	\? | *)	exit 2;			;;
+	esac;
+done;
+shift $((OPTIND-1));
+
+if test $# -lt 1; then
+	grepc_err "Missing identifier.";
+fi;
+identifier="$1";
+shift;
+
+
+patterns="$(mktemp -t grepc.patterns.XXXXXX)";
+
+
+# shellcheck disable=SC2086  # $t may contain zero or more flags
+"grepc_$x" $t "$identifier" >"$patterns";
+
+
+export opts="$A $B $C $c $h $i $l -M $m $n";
+
+
+if test -z "$*"; then
+	# shellcheck disable=SC2086  # $opts may contain zero or more flags
+	pcre2grep $opts -f "$patterns" || test $? -eq 1;
+else
+	find "$@" -type f -print0 \
+	| if test -z "$c"; then
+		xargs -0 sh -c 'grep -lZPI $i -e "$0" -- "$@" || test $? -eq 1;' "$identifier";
+	else
+		cat;
+	fi \
+	| xargs -0 sh -c 'pcre2grep $opts -f "$0" -- "$@" || test $? -eq 1;' "$patterns";
+fi;

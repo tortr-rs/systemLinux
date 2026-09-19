@@ -1,0 +1,123 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/idn2 66fe393360596765a6679db6679e2345 1746348819
+dir /usr/include
+obj /usr/include/idn2.h eafa389ef33e39735a62093a1add6a52 1746348818
+dir /usr/lib64
+sym /usr/lib64/libidn2.so -> libidn2.so.0.4.0 1789354037
+sym /usr/lib64/libidn2.so.0 -> libidn2.so.0.4.0 1789354037
+obj /usr/lib64/libidn2.so.0.4.0 15e1ca5299cd89b6ac6ddcae5186d90c 1746348819
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/libidn2.pc cae0f29f55b14c0162df61ce0b2b093a 1746348818
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/libidn2-2.3.8
+obj /usr/share/doc/libidn2-2.3.8/AUTHORS.bz2 5dcdaefb74bf61addc92527fcb42e615 1746348819
+obj /usr/share/doc/libidn2-2.3.8/ChangeLog.bz2 7bb09513545f6e2ca830d20cc1659e0b 1746348818
+obj /usr/share/doc/libidn2-2.3.8/NEWS.bz2 7e1a0db0af1ae8fe910aa548707a384f 1746348819
+obj /usr/share/doc/libidn2-2.3.8/README.bz2 fff8bb126a7d2218f99d32244fbe06a8 1746348818
+obj /usr/share/doc/libidn2-2.3.8/README.md.bz2 fff8bb126a7d2218f99d32244fbe06a8 1746348818
+dir /usr/share/info
+obj /usr/share/info/libidn2.info.bz2 e1de4b884efe0a16a29c403a88332f0a 1746348818
+dir /usr/share/locale
+dir /usr/share/locale/cs
+dir /usr/share/locale/cs/LC_MESSAGES
+obj /usr/share/locale/cs/LC_MESSAGES/libidn2.mo 5b519262791a54fa3f57ab27392d57d6 1746348818
+dir /usr/share/locale/da
+dir /usr/share/locale/da/LC_MESSAGES
+obj /usr/share/locale/da/LC_MESSAGES/libidn2.mo 2ae1e0c02633b711fff7403442300a5f 1746348818
+dir /usr/share/locale/de
+dir /usr/share/locale/de/LC_MESSAGES
+obj /usr/share/locale/de/LC_MESSAGES/libidn2.mo 32c503aeb77c2bdd2225a7db0f6fd3b5 1746348818
+dir /usr/share/locale/eo
+dir /usr/share/locale/eo/LC_MESSAGES
+obj /usr/share/locale/eo/LC_MESSAGES/libidn2.mo 5b5f686ecdff704cbb7df4ba66b83776 1746348818
+dir /usr/share/locale/es
+dir /usr/share/locale/es/LC_MESSAGES
+obj /usr/share/locale/es/LC_MESSAGES/libidn2.mo cf5ccf1d8f26c069406efb4a296d20f1 1746348818
+dir /usr/share/locale/fi
+dir /usr/share/locale/fi/LC_MESSAGES
+obj /usr/share/locale/fi/LC_MESSAGES/libidn2.mo a8c65925ca60f0b836ba4777b0dbcd87 1746348818
+dir /usr/share/locale/fr
+dir /usr/share/locale/fr/LC_MESSAGES
+obj /usr/share/locale/fr/LC_MESSAGES/libidn2.mo 4e9c3e34eacf90354835653bf1a17346 1746348818
+dir /usr/share/locale/fur
+dir /usr/share/locale/fur/LC_MESSAGES
+obj /usr/share/locale/fur/LC_MESSAGES/libidn2.mo 8c60bec0272d7f47a1d31191363f99d1 1746348818
+dir /usr/share/locale/hr
+dir /usr/share/locale/hr/LC_MESSAGES
+obj /usr/share/locale/hr/LC_MESSAGES/libidn2.mo 6913f03edd2d0a610f56affe8baf0115 1746348818
+dir /usr/share/locale/hu
+dir /usr/share/locale/hu/LC_MESSAGES
+obj /usr/share/locale/hu/LC_MESSAGES/libidn2.mo 5bf49240b94f9b1056e7c21363650cf0 1746348818
+dir /usr/share/locale/id
+dir /usr/share/locale/id/LC_MESSAGES
+obj /usr/share/locale/id/LC_MESSAGES/libidn2.mo 5a3f58817bc46ff3cfc219a74d20b225 1746348818
+dir /usr/share/locale/it
+dir /usr/share/locale/it/LC_MESSAGES
+obj /usr/share/locale/it/LC_MESSAGES/libidn2.mo 7e5dbd43708f69bc4c83819ea4c7da67 1746348818
+dir /usr/share/locale/ja
+dir /usr/share/locale/ja/LC_MESSAGES
+obj /usr/share/locale/ja/LC_MESSAGES/libidn2.mo 72cebe5a7263e4034fe7ff660021637a 1746348818
+dir /usr/share/locale/ka
+dir /usr/share/locale/ka/LC_MESSAGES
+obj /usr/share/locale/ka/LC_MESSAGES/libidn2.mo 3035aeedace50bc52605b19a04662930 1746348818
+dir /usr/share/locale/ko
+dir /usr/share/locale/ko/LC_MESSAGES
+obj /usr/share/locale/ko/LC_MESSAGES/libidn2.mo 67dbfa7e420e12ccf39d6fec0c4cacca 1746348818
+dir /usr/share/locale/lv
+dir /usr/share/locale/lv/LC_MESSAGES
+obj /usr/share/locale/lv/LC_MESSAGES/libidn2.mo c824c7c6ae629a66547813e32cb67096 1746348818
+dir /usr/share/locale/nl
+dir /usr/share/locale/nl/LC_MESSAGES
+obj /usr/share/locale/nl/LC_MESSAGES/libidn2.mo 5c17a1a60c06024a8398ecd37bf56d3a 1746348818
+dir /usr/share/locale/pl
+dir /usr/share/locale/pl/LC_MESSAGES
+obj /usr/share/locale/pl/LC_MESSAGES/libidn2.mo 661973dfdc6bd50c2812a7e7122634e1 1746348818
+dir /usr/share/locale/pt_BR
+dir /usr/share/locale/pt_BR/LC_MESSAGES
+obj /usr/share/locale/pt_BR/LC_MESSAGES/libidn2.mo 89b5dc4787b7441f3db7d87f25c1bd84 1746348818
+dir /usr/share/locale/ro
+dir /usr/share/locale/ro/LC_MESSAGES
+obj /usr/share/locale/ro/LC_MESSAGES/libidn2.mo 2bab5ee8134e1ad8883d56da5e1c3580 1746348818
+dir /usr/share/locale/ru
+dir /usr/share/locale/ru/LC_MESSAGES
+obj /usr/share/locale/ru/LC_MESSAGES/libidn2.mo a644661151a616116da1b8fd01fb1518 1746348818
+dir /usr/share/locale/sr
+dir /usr/share/locale/sr/LC_MESSAGES
+obj /usr/share/locale/sr/LC_MESSAGES/libidn2.mo 414051939f9986cc21517e22f911a934 1746348818
+dir /usr/share/locale/sv
+dir /usr/share/locale/sv/LC_MESSAGES
+obj /usr/share/locale/sv/LC_MESSAGES/libidn2.mo a2fb6bffe7eed17b42bb57f57ce41ba1 1746348818
+dir /usr/share/locale/uk
+dir /usr/share/locale/uk/LC_MESSAGES
+obj /usr/share/locale/uk/LC_MESSAGES/libidn2.mo 12d126a051458d3cfaffdde7027fc749 1746348818
+dir /usr/share/locale/vi
+dir /usr/share/locale/vi/LC_MESSAGES
+obj /usr/share/locale/vi/LC_MESSAGES/libidn2.mo e30a4ea1c303e0e52eda93ddc23ce6d1 1746348818
+dir /usr/share/locale/zh_CN
+dir /usr/share/locale/zh_CN/LC_MESSAGES
+obj /usr/share/locale/zh_CN/LC_MESSAGES/libidn2.mo 2f15a9b5fbcfcc3c2b1da31fbd58b768 1746348818
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/idn2.1.bz2 d1ad9412a06ff0152d55edf8d03611f1 1746348818
+dir /usr/share/man/man3
+obj /usr/share/man/man3/idn2_check_version.3.bz2 4e13c9c9056fde8dd871272e5711d18e 1746348818
+obj /usr/share/man/man3/idn2_free.3.bz2 f533ee7d8f3bc9dc804305959c97e9ec 1746348818
+obj /usr/share/man/man3/idn2_lookup_u8.3.bz2 d555b4c5f8d4f657c300cbfdf9b89c73 1746348818
+obj /usr/share/man/man3/idn2_lookup_ul.3.bz2 4a41840a7711ae28c50d96216efc5f55 1746348818
+obj /usr/share/man/man3/idn2_register_u8.3.bz2 2faaeba58d16b9ef7e3ca98e9ea8de57 1746348818
+obj /usr/share/man/man3/idn2_register_ul.3.bz2 594a20b5a2240f5401779ec2d971522d 1746348818
+obj /usr/share/man/man3/idn2_strerror.3.bz2 67d10acb93d49c3615719e1c8f744a47 1746348818
+obj /usr/share/man/man3/idn2_strerror_name.3.bz2 669082dabe972e5314ad68ac13d26f58 1746348818
+obj /usr/share/man/man3/idn2_to_ascii_4i.3.bz2 1336440de0c0cdfd0e9c715deeb39dd1 1746348818
+obj /usr/share/man/man3/idn2_to_ascii_4i2.3.bz2 67da300da923aa79e6db3aabb6b33ae5 1746348818
+obj /usr/share/man/man3/idn2_to_ascii_4z.3.bz2 2bcc1b9430a88a0b23328242f1e4a37c 1746348818
+obj /usr/share/man/man3/idn2_to_ascii_8z.3.bz2 2bbefc2fdc924e114ecff123b63dfe43 1746348818
+obj /usr/share/man/man3/idn2_to_ascii_lz.3.bz2 0ddc16d6e09009cf5b95a5dcf38b1341 1746348818
+obj /usr/share/man/man3/idn2_to_unicode_44i.3.bz2 dbc451552bf80b1cbcd4b70d1ba5cf03 1746348818
+obj /usr/share/man/man3/idn2_to_unicode_4z4z.3.bz2 a4d82f3ae84cc2af036ec388cd02deb4 1746348818
+obj /usr/share/man/man3/idn2_to_unicode_8z4z.3.bz2 fec36166b37ad35f282689e7e908825a 1746348818
+obj /usr/share/man/man3/idn2_to_unicode_8z8z.3.bz2 c637aaf91d218b331c2d65eefd196a07 1746348818
+obj /usr/share/man/man3/idn2_to_unicode_8zlz.3.bz2 de5c443e75149f596a3e3ec2de68746b 1746348818
+obj /usr/share/man/man3/idn2_to_unicode_lzlz.3.bz2 b77ac0414b1548ea0ebd6921572a71bf 1746348818

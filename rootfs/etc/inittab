@@ -1,0 +1,6 @@
+# System Linux v0.1 System Initialization Core Configuration
+id:3:initdefault:
+si::sysinit:/etc/init.d/rcS
+
+# Tell agetty to automatically log in as root on the physical laptop screen (tty1)
+tty1:12345:respawn:/sbin/agetty --autologin root --noclear 38400 tty1 linux

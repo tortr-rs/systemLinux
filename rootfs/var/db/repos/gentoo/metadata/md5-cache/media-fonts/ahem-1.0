@@ -1,0 +1,13 @@
+BDEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DEFINED_PHASES=install postinst postrm setup
+DESCRIPTION=Font to help test writers develop predictable tests
+EAPI=7
+HOMEPAGE=https://github.com/Kozea/Ahem
+INHERIT=font
+IUSE=X
+KEYWORDS=amd64 ~loong ~ppc64 ~riscv ~x86
+LICENSE=CC0-1.0
+SLOT=0
+SRC_URI=https://github.com/Kozea/Ahem/archive/1.0.tar.gz -> ahem-1.0.tar.gz
+_eclasses_=font	6d0c60c855c05ae2ba808d300440ded2
+_md5_=79f64fca30e98f1950c7b15a492bef6c

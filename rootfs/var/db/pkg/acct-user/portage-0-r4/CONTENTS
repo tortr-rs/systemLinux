@@ -1,0 +1,9 @@
+dir /var
+dir /var/lib
+dir /var/lib/portage
+dir /var/lib/portage/home
+obj /var/lib/portage/home/.keep_acct-user_portage-0 d41d8cd98f00b204e9800998ecf8427e 1766337414
+dir /usr
+dir /usr/lib
+dir /usr/lib/sysusers.d
+obj /usr/lib/sysusers.d/acct-user-portage.conf bdca2bad4d7f2dffb746fcef17d1c3a5 1766337415

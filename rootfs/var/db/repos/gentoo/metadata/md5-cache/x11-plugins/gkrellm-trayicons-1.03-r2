@@ -1,0 +1,14 @@
+BDEPEND=virtual/pkgconfig virtual/pkgconfig
+DEFINED_PHASES=compile configure install
+DEPEND=app-admin/gkrellm:2[X]
+DESCRIPTION=Configurable Tray Icons for GKrellM
+EAPI=8
+HOMEPAGE=http://gkrellm.srcbox.net/Plugins.html
+INHERIT=gkrellm-plugin multilib toolchain-funcs
+KEYWORDS=amd64 ~ppc ~sparc x86
+LICENSE=GPL-2
+RDEPEND=app-admin/gkrellm:2[X]
+SLOT=0
+SRC_URI=mirror://gentoo/gkrellm-trayicons-1.03.tar.gz
+_eclasses_=gkrellm-plugin	d8395837f74d64ec58546cd0fb70cee6	multilib	fc812e8eb2170022c28272d80a1f9e77	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=6a0003c70e859bf6c36f6fd9c71195ee

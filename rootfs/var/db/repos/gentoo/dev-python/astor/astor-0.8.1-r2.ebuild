@@ -1,0 +1,32 @@
+# Copyright 1999-2026 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=8
+
+DISTUTILS_USE_PEP517=setuptools
+PYTHON_COMPAT=( python3_{12..15} python3_{14,15}t )
+
+inherit distutils-r1 pypi
+
+DESCRIPTION="Read/rewrite/write Python ASTs"
+HOMEPAGE="
+	https://pypi.org/project/astor/
+	https://github.com/berkerpeksag/astor/
+"
+
+LICENSE="BSD"
+SLOT="0"
+KEYWORDS="~alpha amd64 arm arm64 ~hppa ~loong ~mips ppc ppc64 ~riscv ~s390 ~sparc x86"
+
+PATCHES=(
+	"${FILESDIR}/${P}-tests-bigint.patch"
+	# https://github.com/berkerpeksag/astor/pull/233
+	"${FILESDIR}/${P}-py314.patch"
+)
+
+EPYTEST_PLUGINS=()
+distutils_enable_tests pytest
+
+EPYTEST_IGNORE=(
+	tests/test_rtrip.py
+)

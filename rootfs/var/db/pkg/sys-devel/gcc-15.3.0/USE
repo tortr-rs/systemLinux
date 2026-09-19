@@ -1,0 +1,1 @@
+abi_x86_64 amd64 cet cxx default-stack-clash-protection default-znow elibc_glibc fortran kernel_linux multilib nls openmp pie sanitize ssp zstd

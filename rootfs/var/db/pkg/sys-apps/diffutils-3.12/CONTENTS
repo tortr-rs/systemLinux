@@ -1,0 +1,132 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/cmp 936740dbdbea2896c328f8491bddb8f1 1746205151
+obj /usr/bin/diff 4e0ef4ca84a14927e35cc9d664e8a5ac 1746205151
+obj /usr/bin/diff3 467e1d449fb01c083dbd966719ba802f 1746205151
+obj /usr/bin/sdiff 02d0e40540b616a2d6979a68d2ed5367 1746205151
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/diffutils-3.12
+obj /usr/share/doc/diffutils-3.12/AUTHORS.bz2 ca8344efe6e89f6f24c94c6e78bdce84 1746205149
+obj /usr/share/doc/diffutils-3.12/ChangeLog.bz2 fcad8e6b957fc5fe376d1a9bd5fd1cdd 1746205149
+obj /usr/share/doc/diffutils-3.12/NEWS.bz2 0bc5957866c3695b2a4c0705351f3cf0 1746205149
+obj /usr/share/doc/diffutils-3.12/README.bz2 14cacf3bfb289bee22d57f54241b6e54 1746205149
+obj /usr/share/doc/diffutils-3.12/THANKS.bz2 0e7c4422877406e52083105d7f021c6e 1746205149
+obj /usr/share/doc/diffutils-3.12/TODO.bz2 77e450ed391b3ff2a93070d55ede98fa 1746205149
+dir /usr/share/info
+obj /usr/share/info/diffutils.info.bz2 df16c0092d5a8b99c51de634a3996310 1746205149
+dir /usr/share/locale
+dir /usr/share/locale/bg
+dir /usr/share/locale/bg/LC_MESSAGES
+obj /usr/share/locale/bg/LC_MESSAGES/diffutils.mo 97b862f9b99a93bd74946d212898d84f 1746205149
+dir /usr/share/locale/ca
+dir /usr/share/locale/ca/LC_MESSAGES
+obj /usr/share/locale/ca/LC_MESSAGES/diffutils.mo 0dc4a9235d4402589c4a4cd9b04d0dd1 1746205149
+dir /usr/share/locale/cs
+dir /usr/share/locale/cs/LC_MESSAGES
+obj /usr/share/locale/cs/LC_MESSAGES/diffutils.mo e217416f27e744aff5c87af0b190bf3b 1746205149
+dir /usr/share/locale/da
+dir /usr/share/locale/da/LC_MESSAGES
+obj /usr/share/locale/da/LC_MESSAGES/diffutils.mo c15f06a03599f05b4f2df1343197f4dd 1746205149
+dir /usr/share/locale/de
+dir /usr/share/locale/de/LC_MESSAGES
+obj /usr/share/locale/de/LC_MESSAGES/diffutils.mo 9800bbdf3e7190f37949ab1fe27b9624 1746205149
+dir /usr/share/locale/el
+dir /usr/share/locale/el/LC_MESSAGES
+obj /usr/share/locale/el/LC_MESSAGES/diffutils.mo 3fbc314f1ae0cbbb72465cee18f6583c 1746205149
+dir /usr/share/locale/eo
+dir /usr/share/locale/eo/LC_MESSAGES
+obj /usr/share/locale/eo/LC_MESSAGES/diffutils.mo 3aa988f80e7fa428e36c020f0099f23c 1746205149
+dir /usr/share/locale/es
+dir /usr/share/locale/es/LC_MESSAGES
+obj /usr/share/locale/es/LC_MESSAGES/diffutils.mo 3be49fa1c3390f0ccd30e8d736371b03 1746205149
+dir /usr/share/locale/fi
+dir /usr/share/locale/fi/LC_MESSAGES
+obj /usr/share/locale/fi/LC_MESSAGES/diffutils.mo 125c59820087c70a45878aef3d82618f 1746205149
+dir /usr/share/locale/fr
+dir /usr/share/locale/fr/LC_MESSAGES
+obj /usr/share/locale/fr/LC_MESSAGES/diffutils.mo 781dd77f42d10229114e5dac9851a63c 1746205149
+dir /usr/share/locale/ga
+dir /usr/share/locale/ga/LC_MESSAGES
+obj /usr/share/locale/ga/LC_MESSAGES/diffutils.mo f8ece774fe82879cf67734be5470630b 1746205149
+dir /usr/share/locale/gl
+dir /usr/share/locale/gl/LC_MESSAGES
+obj /usr/share/locale/gl/LC_MESSAGES/diffutils.mo 84a185c82d837c49f9f8ad1f40e808bf 1746205149
+dir /usr/share/locale/he
+dir /usr/share/locale/he/LC_MESSAGES
+obj /usr/share/locale/he/LC_MESSAGES/diffutils.mo 3f47666c2764e440552190c26379ab45 1746205149
+dir /usr/share/locale/hr
+dir /usr/share/locale/hr/LC_MESSAGES
+obj /usr/share/locale/hr/LC_MESSAGES/diffutils.mo f59ec4f6aabd9467d6d794b58c1505e7 1746205149
+dir /usr/share/locale/hu
+dir /usr/share/locale/hu/LC_MESSAGES
+obj /usr/share/locale/hu/LC_MESSAGES/diffutils.mo bae79a7c922715ef1a2cdd8a7124f062 1746205149
+dir /usr/share/locale/id
+dir /usr/share/locale/id/LC_MESSAGES
+obj /usr/share/locale/id/LC_MESSAGES/diffutils.mo 86685c21aa58b493404b4202aa2c751d 1746205149
+dir /usr/share/locale/it
+dir /usr/share/locale/it/LC_MESSAGES
+obj /usr/share/locale/it/LC_MESSAGES/diffutils.mo 5350c98549df7087113166fae110cbf8 1746205149
+dir /usr/share/locale/ja
+dir /usr/share/locale/ja/LC_MESSAGES
+obj /usr/share/locale/ja/LC_MESSAGES/diffutils.mo f0e02e7465b266a9042d3e0313106375 1746205149
+dir /usr/share/locale/ka
+dir /usr/share/locale/ka/LC_MESSAGES
+obj /usr/share/locale/ka/LC_MESSAGES/diffutils.mo 67d0ffac4ff558456badf218fbb67353 1746205149
+dir /usr/share/locale/ko
+dir /usr/share/locale/ko/LC_MESSAGES
+obj /usr/share/locale/ko/LC_MESSAGES/diffutils.mo 4d3de801f7813b9b8d43dab6835ca506 1746205149
+dir /usr/share/locale/lv
+dir /usr/share/locale/lv/LC_MESSAGES
+obj /usr/share/locale/lv/LC_MESSAGES/diffutils.mo 929b4ecc07cda9b20737b6bab4654431 1746205149
+dir /usr/share/locale/ms
+dir /usr/share/locale/ms/LC_MESSAGES
+obj /usr/share/locale/ms/LC_MESSAGES/diffutils.mo a6ffa3186fa89133901113f9521325ab 1746205149
+dir /usr/share/locale/nb
+dir /usr/share/locale/nb/LC_MESSAGES
+obj /usr/share/locale/nb/LC_MESSAGES/diffutils.mo a41098f2afe14ffd03db657a66fdbff6 1746205149
+dir /usr/share/locale/nl
+dir /usr/share/locale/nl/LC_MESSAGES
+obj /usr/share/locale/nl/LC_MESSAGES/diffutils.mo 63624e4f06ccf963f0896b3ef06d0b96 1746205149
+dir /usr/share/locale/pl
+dir /usr/share/locale/pl/LC_MESSAGES
+obj /usr/share/locale/pl/LC_MESSAGES/diffutils.mo d2493dbf0b34ffb74bee77d28212f776 1746205149
+dir /usr/share/locale/pt
+dir /usr/share/locale/pt/LC_MESSAGES
+obj /usr/share/locale/pt/LC_MESSAGES/diffutils.mo e4bede767256404c24277e7b36cc1793 1746205149
+dir /usr/share/locale/pt_BR
+dir /usr/share/locale/pt_BR/LC_MESSAGES
+obj /usr/share/locale/pt_BR/LC_MESSAGES/diffutils.mo 03c35f786c875e342c7767c4fe524ffa 1746205149
+dir /usr/share/locale/ro
+dir /usr/share/locale/ro/LC_MESSAGES
+obj /usr/share/locale/ro/LC_MESSAGES/diffutils.mo 1eb588e13406fcc513e2604431fcc8ff 1746205149
+dir /usr/share/locale/ru
+dir /usr/share/locale/ru/LC_MESSAGES
+obj /usr/share/locale/ru/LC_MESSAGES/diffutils.mo e3ac3db76fccc281ad1774fd27fab35b 1746205149
+dir /usr/share/locale/sr
+dir /usr/share/locale/sr/LC_MESSAGES
+obj /usr/share/locale/sr/LC_MESSAGES/diffutils.mo 1d5686946ffc2d43a2a579922acbe01d 1746205149
+dir /usr/share/locale/sv
+dir /usr/share/locale/sv/LC_MESSAGES
+obj /usr/share/locale/sv/LC_MESSAGES/diffutils.mo c1e984aed71269e1de4af44ee45b035a 1746205149
+dir /usr/share/locale/tr
+dir /usr/share/locale/tr/LC_MESSAGES
+obj /usr/share/locale/tr/LC_MESSAGES/diffutils.mo fc7dd4bb67c1e8d99f80a8591ab6c743 1746205149
+dir /usr/share/locale/uk
+dir /usr/share/locale/uk/LC_MESSAGES
+obj /usr/share/locale/uk/LC_MESSAGES/diffutils.mo 2ac7cfe95cbe1429462c2e4fb5e66dc4 1746205149
+dir /usr/share/locale/vi
+dir /usr/share/locale/vi/LC_MESSAGES
+obj /usr/share/locale/vi/LC_MESSAGES/diffutils.mo 5f32f2d57b25af72b6b8ca151648842f 1746205149
+dir /usr/share/locale/zh_CN
+dir /usr/share/locale/zh_CN/LC_MESSAGES
+obj /usr/share/locale/zh_CN/LC_MESSAGES/diffutils.mo cf8c2b1eeee542bfd7c253d47362858f 1746205149
+dir /usr/share/locale/zh_TW
+dir /usr/share/locale/zh_TW/LC_MESSAGES
+obj /usr/share/locale/zh_TW/LC_MESSAGES/diffutils.mo 58004c74335f144844bcbf3ccd8d6989 1746205149
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/cmp.1.bz2 18f39827dd887706c01055bda4873fcc 1746205149
+obj /usr/share/man/man1/diff.1.bz2 1148df9ae5a915aaca1ebc82fc3cd61c 1746205149
+obj /usr/share/man/man1/diff3.1.bz2 8dfbca89958fbc33522463c64534303b 1746205149
+obj /usr/share/man/man1/sdiff.1.bz2 da950530be7e5c6600d32f4e0942ecfa 1746205149

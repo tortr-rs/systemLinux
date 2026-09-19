@@ -1,0 +1,11 @@
+dir /usr
+dir /usr/share
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/gunzip.1 3176d28475ee48855eaaec3d64236e43 1710327934
+obj /usr/share/man/man1/gzip.1 969835e786469add3c30232a8c2855f5 1710327934
+obj /usr/share/man/man1/zcat.1 3176d28475ee48855eaaec3d64236e43 1710327934
+dir /bin
+sym /bin/gunzip -> gunzip-reference 1789353857
+sym /bin/gzip -> gzip-reference 1789353857
+sym /bin/zcat -> zcat-reference 1789353857

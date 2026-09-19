@@ -1,0 +1,14 @@
+BDEPEND=app-text/sdcv zlib? ( app-arch/gzip app-text/dictd )
+DEFINED_PHASES=compile install
+DESCRIPTION=Stardict Dictionary Turkish to German
+EAPI=8
+HOMEPAGE=http://download.huzheng.org/freedict.de/
+INHERIT=stardict
+IUSE=+zlib
+KEYWORDS=amd64 ~riscv x86
+LICENSE=GPL-2
+RESTRICT=strip
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/stardict/stardict-freedict-tur-deu-2.4.2.tar.bz2
+_eclasses_=edo	a5e294016aa84979fcb2459749eb80b2	stardict	fa190c2cfa280c7f5b3149123d3f8a36
+_md5_=ce5694c3dfd34de163cd688538c72899

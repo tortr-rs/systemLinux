@@ -1,0 +1,12 @@
+prefix=/usr
+includedir=${prefix}/include
+libdir=${prefix}/lib64
+
+modules=1
+
+Name: libXML
+Description: libXML library version2.
+Version: 2.15.3
+Libs: -L${libdir} -lxml2
+Libs.private: -lm -pthread
+Cflags: -I${includedir}/libxml2

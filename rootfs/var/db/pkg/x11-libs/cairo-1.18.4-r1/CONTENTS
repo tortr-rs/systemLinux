@@ -1,0 +1,48 @@
+dir /usr
+dir /usr/src
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/cairo-1.18.4-r1
+obj /usr/share/doc/cairo-1.18.4-r1/NEWS.bz2 ba13bfdf140e50427af5919db6ab82ca 1780428474
+obj /usr/share/doc/cairo-1.18.4-r1/README.md.bz2 2a8bb912a4d1a54f2acacdd05f5251c1 1780428474
+obj /usr/share/doc/cairo-1.18.4-r1/AUTHORS.bz2 22afc2fa5205b3c69ea6d01b90c89f8d 1780428474
+obj /usr/share/doc/cairo-1.18.4-r1/BUGS.bz2 85dcdc9645c617254bf89011bf214f7c 1780428474
+dir /usr/lib64
+dir /usr/lib64/cairo
+obj /usr/lib64/cairo/libcairo-trace.so 5d891a91802b71b0163f667235585551 1780428479
+obj /usr/lib64/libcairo-script-interpreter.so.2.11804.4 596ba7e9b6d26508f7e77ce03a7f588b 1780428479
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/cairo-ps.pc a88658ce7eece48e6ea246dfd6af7bf8 1780428460
+obj /usr/lib64/pkgconfig/cairo.pc 09697ca886d717d3d42130b674dde82f 1780428460
+obj /usr/lib64/pkgconfig/cairo-png.pc fe7f4c65ac750dc29d4834ba48342771 1780428460
+obj /usr/lib64/pkgconfig/cairo-pdf.pc 8553902a88895ac9076a5203fe4a71f6 1780428460
+obj /usr/lib64/pkgconfig/cairo-gobject.pc 474509ea2ec2a0d408b2f7b158d17199 1780428460
+obj /usr/lib64/pkgconfig/cairo-script-interpreter.pc d18c623a26b0e4cb43203ee453a2046d 1780428460
+obj /usr/lib64/pkgconfig/cairo-svg.pc d3a4b74db2838904137b4cdb1f3327a9 1780428460
+obj /usr/lib64/pkgconfig/cairo-script.pc 4dba9451c0a2dc3b815e43cb6ae0b0ce 1780428460
+obj /usr/lib64/pkgconfig/cairo-ft.pc 16bf76f3cd7aa3435f589489d613940e 1780428460
+obj /usr/lib64/pkgconfig/cairo-fc.pc 9f978cd16a2585b8e37631b74073c19b 1780428460
+obj /usr/lib64/libcairo.so.2.11804.4 7cc4779e7938f64ed2d7c7c9ea5ee786 1780428479
+sym /usr/lib64/libcairo-script-interpreter.so.2 -> libcairo-script-interpreter.so.2.11804.4 1789836495
+obj /usr/lib64/libcairo-gobject.so.2.11804.4 97ffaf0d5bb8178074de1207ce9b4d97 1780428479
+sym /usr/lib64/libcairo.so.2 -> libcairo.so.2.11804.4 1789836495
+dir /usr/bin
+obj /usr/bin/cairo-trace 3464e51dc8fea8d33f22b708ddcacfab 1780428460
+dir /usr/include
+dir /usr/include/cairo
+obj /usr/include/cairo/cairo-pdf.h bd9320fd843510ec077bc96d35b103f9 1741440205
+obj /usr/include/cairo/cairo-deprecated.h cfa52bee933b8222ac26087316276036 1741440205
+obj /usr/include/cairo/cairo-script-interpreter.h 9e032ff9c2a76e53908bbc4d7f2260e7 1741440205
+obj /usr/include/cairo/cairo-ps.h 82dab946fb8dd24f90ae59f3f01766ef 1741440205
+obj /usr/include/cairo/cairo.h 79c73ba4683ed1c5e439e35a0341166f 1741440205
+obj /usr/include/cairo/cairo-svg.h 837276de5d75a42b14247cf66f7bbe02 1741440205
+obj /usr/include/cairo/cairo-ft.h aaf53455413bf4ac3ac9a47d21adb465 1741440205
+obj /usr/include/cairo/cairo-features.h 3b12c3350a5c7bd44d670ccaae96a12d 1780428460
+obj /usr/include/cairo/cairo-script.h 7fef62a958cf62c99a02181c27d0a9e9 1741440205
+obj /usr/include/cairo/cairo-version.h 7606b2971a58eb51119d1fadf48b2b33 1741440205
+obj /usr/include/cairo/cairo-gobject.h 243cf1ba5081b09f2be0c11ab735a782 1741440205
+dir /usr/lib
+sym /usr/lib64/libcairo.so -> libcairo.so.2 1789836495
+sym /usr/lib64/libcairo-gobject.so.2 -> libcairo-gobject.so.2.11804.4 1789836495
+sym /usr/lib64/libcairo-script-interpreter.so -> libcairo-script-interpreter.so.2 1789836495
+sym /usr/lib64/libcairo-gobject.so -> libcairo-gobject.so.2 1789836495

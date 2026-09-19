@@ -1,0 +1,1 @@
+virtual/libcrypt:0/2=[abi_x86_64(-)] >=virtual/libintl-0-r1[abi_x86_64(-)] sys-libs/gdbm:0/6=[abi_x86_64(-)] >=sys-apps/systemd-254:0/2=

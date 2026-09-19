@@ -1,0 +1,4 @@
+dir /usr
+dir /usr/lib
+dir /usr/lib/sysusers.d
+obj /usr/lib/sysusers.d/acct-group-nullmail.conf 84d5050b94356103b5177ff53a55c8d7 1789850926

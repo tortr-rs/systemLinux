@@ -1,0 +1,20 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/dumpelf be36af35e4c08695abfd9ae822a06189 1780764852
+obj /usr/bin/lddtree cb3b6ab849975f56f8b9f22b33b289ef 1764029206
+obj /usr/bin/pspax 40c09d9101ed53f73c92b64bb8ddf401 1780764852
+obj /usr/bin/scanelf 14379d6d7ed452ed671b03781ee7c1c6 1780764852
+obj /usr/bin/scanmacho 8705298342b5ddac4183a94ae37e39ab 1780764852
+obj /usr/bin/symtree 022b624ac422d8300fac67209c88b4c4 1764029206
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/pax-utils-1.3.10
+obj /usr/share/doc/pax-utils-1.3.10/BUGS.bz2 d02d7576e5c77fa86cb4a9c2c95d91a3 1780764852
+obj /usr/share/doc/pax-utils-1.3.10/README.md.bz2 87e23a4bd4e550c3622c14bd4c538cfc 1780764852
+obj /usr/share/doc/pax-utils-1.3.10/TODO.bz2 0b271864a292f62b5357a0c9436c9fa0 1780764852
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/dumpelf.1.bz2 d96414fce1f8c3cb495ddfe3e104d30a 1764029541
+obj /usr/share/man/man1/pspax.1.bz2 7b32774a6dc6dff1e5f151325600c754 1764029541
+obj /usr/share/man/man1/scanelf.1.bz2 0b63a12b5b27d2b10b8cfd094c6cff75 1764029541
+obj /usr/share/man/man1/scanmacho.1.bz2 33d5be7b92fb3c3c9a41e170fec696e5 1764029541

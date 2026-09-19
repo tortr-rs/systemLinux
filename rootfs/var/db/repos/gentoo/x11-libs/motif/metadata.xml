@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>ulm@gentoo.org</email>
+  </maintainer>
+  <use>
+    <flag name="xcursor">
+      Add support for cursors (<pkg>x11-libs/libXcursor</pkg>)
+    </flag>
+    <flag name="xrandr">
+      Add support for monitor information (<pkg>x11-libs/libXrandr</pkg>)
+    </flag>
+    <flag name="xrender">
+      Add support for transparency (<pkg>x11-libs/libXrender</pkg>)
+    </flag>
+  </use>
+  <upstream>
+    <remote-id type="github">thentenaar/motif</remote-id>
+  </upstream>
+</pkgmetadata>

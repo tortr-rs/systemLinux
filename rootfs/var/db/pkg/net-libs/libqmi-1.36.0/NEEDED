@@ -1,0 +1,4 @@
+/usr/libexec/qmi-proxy libqmi-glib.so.5,libglib-2.0.so.0,libgobject-2.0.so.0,libc.so.6
+/usr/bin/qmi-firmware-update libqmi-glib.so.5,libglib-2.0.so.0,libgio-2.0.so.0,libgobject-2.0.so.0,libmbim-glib.so.4,libgudev-1.0.so.0,libc.so.6
+/usr/bin/qmicli libqmi-glib.so.5,libglib-2.0.so.0,libgio-2.0.so.0,libgobject-2.0.so.0,libqrtr-glib.so.0,libmbim-glib.so.4,libc.so.6
+/usr/lib64/libqmi-glib.so.5.11.0 libglib-2.0.so.0,libgio-2.0.so.0,libgobject-2.0.so.0,libqrtr-glib.so.0,libmbim-glib.so.4,libc.so.6

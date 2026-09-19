@@ -1,0 +1,35 @@
+dir /usr
+dir /usr/lib64
+dir /usr/lib64/perl5
+dir /usr/lib64/perl5/vendor_perl
+dir /usr/lib64/perl5/vendor_perl/5.42
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/XS
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/XS/Parse
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/XS/Parse/Infix
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/XS/Parse/Infix/Builder.pm d1532ebe6d249e0cae294931ae83f3c6 1764527159
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/XS/Parse/Infix/Builder_data.pm 630badb68e034c214c0f576f4ad3f7f2 1764527159
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/XS/Parse/Infix.pm 3d3b1969e8edd0b503d941861eb175e0 1764527159
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/XS/Parse/Keyword
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/XS/Parse/Keyword/Builder.pm 545ffd0a092106f7eda4b48a20a96706 1764527159
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/XS/Parse/Keyword/Builder_data.pm b72928fe443811521b795cb4390b4536 1764527159
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/XS/Parse/Keyword.pm 2e852a3b4533082a8db190e6b19af64f 1764527159
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/XS
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/XS/Parse
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/XS/Parse/Keyword
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/XS/Parse/Keyword/.packlist 23034ccbe75d6fad0a08e6d199dd99e6 1764527159
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/XS/Parse/Keyword/Keyword.so 49206607408f5a1a0807a8f2c02dab4e 1764527161
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/share
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/share/module
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/share/module/XS-Parse-Infix
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/share/module/XS-Parse-Infix/include
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/share/module/XS-Parse-Infix/include/XSParseInfix.h cdea1060050e08c9bdc466e2b7e2cde1 1764527159
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/share/module/XS-Parse-Keyword
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/share/module/XS-Parse-Keyword/include
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/share/module/XS-Parse-Keyword/include/XSParseKeyword.h f68281cac58dbe150e624f078dd2e11e 1764527159
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/XS-Parse-Keyword-0.490.0-r1
+obj /usr/share/doc/XS-Parse-Keyword-0.490.0-r1/Changes.bz2 f7fd7af657c10534fa8905e98c8a1ba6 1764527159
+obj /usr/share/doc/XS-Parse-Keyword-0.490.0-r1/README.bz2 396e07855bd0061a55816cd0169f39b3 1764527160

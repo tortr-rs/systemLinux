@@ -1,0 +1,28 @@
+dir /usr
+dir /usr/src
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/libqrtr-glib-1.4.0
+obj /usr/share/doc/libqrtr-glib-1.4.0/NEWS.bz2 424d8f473e953394e551b3a0b72ccc53 1779527547
+obj /usr/share/doc/libqrtr-glib-1.4.0/README.md.bz2 59534c79a2df9768c00dfeb2a2bce8ad 1779527547
+obj /usr/share/doc/libqrtr-glib-1.4.0/AUTHORS.bz2 d9becc2d346bd65b1dc0335321f62ee8 1779527547
+dir /usr/share/gir-1.0
+obj /usr/share/gir-1.0/Qrtr-1.0.gir 5147c3de641c82b108c21fd2affe24e3 1779527546
+dir /usr/lib64
+dir /usr/lib64/girepository-1.0
+obj /usr/lib64/girepository-1.0/Qrtr-1.0.typelib b698614508d18816c238e8ffa137825f 1779527546
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/qrtr-glib.pc 781a53b812a3f56efc4af986d653b88f 1779527544
+obj /usr/lib64/libqrtr-glib.so.0.0.1 81f73552becc5dc1739eec09dc42eb64 1779527549
+dir /usr/include
+dir /usr/include/libqrtr-glib
+obj /usr/include/libqrtr-glib/qrtr-types.h be686ffedcb6d03338cc0b95a5515a8b 1767289221
+obj /usr/include/libqrtr-glib/qrtr-utils.h c80a3a750923ab7113b9d0ea971aecb8 1767289221
+obj /usr/include/libqrtr-glib/libqrtr-glib.h 4c3fabb1957c86aaec93871b5138067d 1767289221
+obj /usr/include/libqrtr-glib/qrtr-node.h 526add6368f6c140f18a15c308772853 1767289221
+obj /usr/include/libqrtr-glib/qrtr-client.h 6c8952e10256bbfb5a6b2137280d3e9c 1767289221
+obj /usr/include/libqrtr-glib/qrtr-version.h 3a01ecfe62bfb7aff35ef4390016631c 1779527544
+obj /usr/include/libqrtr-glib/qrtr-bus.h 1d7b42cb30e36de2306a90547e0d0ee0 1767289221
+dir /usr/lib
+sym /usr/lib64/libqrtr-glib.so.0 -> libqrtr-glib.so.0.0.1 1789836507
+sym /usr/lib64/libqrtr-glib.so -> libqrtr-glib.so.0 1789836507

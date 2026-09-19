@@ -1,0 +1,13 @@
+BDEPEND=test? ( dev-python/lit dev-util/dejagnu ) >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=setup unpack
+DESCRIPTION=Collection of tools for use with nvptx-none GCC toolchains
+EAPI=8
+HOMEPAGE=https://github.com/SourceryTools/nvptx-tools https://gcc.gnu.org/wiki/nvptx https://gcc.gnu.org/wiki/Offloading
+INHERIT=git-r3
+IUSE=test
+LICENSE=GPL-3
+PROPERTIES=live
+RESTRICT=!test? ( test )
+SLOT=0
+_eclasses_=git-r3	e6c2f983e006e805160436c75a0c1562
+_md5_=6e7f3f66e27304bbd72eeead6c20ee7a

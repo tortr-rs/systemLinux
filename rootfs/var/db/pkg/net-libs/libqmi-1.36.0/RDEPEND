@@ -1,0 +1,1 @@
+>=dev-libs/glib-2.56 >=dev-libs/libgudev-232 >=net-libs/libmbim-1.18.0 >=net-libs/libqrtr-glib-1.0.0:0/0= >=sys-libs/glibc-2.42-r7

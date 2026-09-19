@@ -1,0 +1,39 @@
+dir /usr
+dir /usr/lib
+obj /usr/lib/os-release 19abd0c3352c2b407265d95b635ad042 1775409149
+dir /usr/share
+dir /usr/share/baselayout
+obj /usr/share/baselayout/fstab 7af8a512a676ef12a37bf4741c92c037 1757831534
+obj /usr/share/baselayout/group c56392485ff54c23fe54478e4b08d6dc 1757831534
+obj /usr/share/baselayout/issue.devfix cc73dead9f4bbbe484b6aa2f1a69573d 1757831534
+obj /usr/share/baselayout/passwd 86924eb702d57f6edf10f4026f9b5b33 1757831534
+obj /usr/share/baselayout/shadow f7d5752bbdba93cf61804478d3ba6b60 1757831534
+dir /usr/share/doc
+dir /usr/share/doc/baselayout-2.18-r1
+obj /usr/share/doc/baselayout-2.18-r1/ChangeLog.bz2 fdc25c55619b4e8bfe73ee7044bc31e2 1775409149
+dir /lib
+dir /lib/modprobe.d
+obj /lib/modprobe.d/aliases.conf 803c3bbaea8a33d974c8b838a373926b 1757831534
+obj /lib/modprobe.d/i386.conf f9e3eac60200d41dd5569eeabb4eddff 1757831534
+dir /lib/sysctl.d
+obj /lib/sysctl.d/00protected-links.conf 5ac33a6788430fb5a68c0dc3326c8cde 1757831534
+obj /lib/sysctl.d/40-ping_group_range.conf c2212c0678a865b36a31b9c9c2c5647c 1757831534
+dir /etc
+dir /etc/env.d
+obj /etc/env.d/50baselayout f7c29d7f47cccefda54c159c13e28e92 1775409148
+obj /etc/filesystems e237f44197dbbc89c2da71706b521648 1757831534
+obj /etc/gentoo-release 4ba2339a4feb0abab161d4b6b53dd2c0 1775409149
+obj /etc/hosts 4a50bf3f42b9ef0db5c38937d49e7184 1757831534
+obj /etc/inputrc 8e4f2d84f7a0182b8e49a9991f6792aa 1757831534
+obj /etc/issue 1e86bf515d128e107c3de36f2c2f5365 1757831534
+obj /etc/issue.logo 7c9f10a730015b98a2b7df8d9a9fe0f2 1757831534
+sym /etc/mtab -> ../proc/self/mounts 1789353733
+obj /etc/networks ecb4b5c6e2a114fb003a43adb95e5ad5 1757831534
+sym /etc/os-release -> ../usr/lib/os-release 1789353733
+obj /etc/profile 280ee30ce17cff2731ab730e6d9680b1 1757831534
+obj /etc/protocols 5db3ba9dac6190805d0b5eda4d5112f4 1757831534
+obj /etc/services dc8d7344940484548860111b0d9ef7b8 1757831534
+obj /etc/shells 4c89974909366e6b1eac119c5fc2d7ef 1757831534
+dir /var
+sym /var/run -> ../run 1789353733
+sym /var/lock -> ../run/lock 1789353733

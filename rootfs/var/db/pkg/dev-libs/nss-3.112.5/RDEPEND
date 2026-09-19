@@ -1,0 +1,1 @@
+>=dev-libs/nspr-4.36[abi_x86_64(-)] >=dev-db/sqlite-3.8.2[abi_x86_64(-)] >=virtual/zlib-1.2.8-r1:0/1=[abi_x86_64(-)] virtual/pkgconfig >=sys-libs/glibc-2.42-r5

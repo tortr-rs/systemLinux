@@ -1,0 +1,15 @@
+BDEPEND=doc? ( app-text/htmldoc )
+DEFINED_PHASES=compile install test
+DEPEND=sys-libs/readline:= sys-libs/ncurses:=
+DESCRIPTION=Automatic algebraic manipulator
+EAPI=8
+HOMEPAGE=https://github.com/mfillpot/mathomatic
+INHERIT=toolchain-funcs flag-o-matic
+IUSE=doc gnuplot
+KEYWORDS=amd64 ~ppc ~x86
+LICENSE=LGPL-2.1
+RDEPEND=sys-libs/readline:= sys-libs/ncurses:= gnuplot? ( sci-visualization/gnuplot )
+SLOT=0
+SRC_URI=https://github.com/mfillpot/mathomatic/archive/mathomatic-16.0.5.tar.gz
+_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=b531602d0a0b89c888acc292e3b9e08c

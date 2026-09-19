@@ -1,0 +1,17 @@
+BDEPEND=test? ( ruby_targets_ruby32? ( dev-ruby/curses[ruby_targets_ruby32(-)] ) ruby_targets_ruby33? ( dev-ruby/curses[ruby_targets_ruby33(-)] ) ) ruby_targets_ruby32? ( doc? ( dev-ruby/yard[ruby_targets_ruby32(-)] ) test? ( dev-ruby/rspec[ruby_targets_ruby32(-)] ) ) ruby_targets_ruby33? ( doc? ( dev-ruby/yard[ruby_targets_ruby33(-)] ) test? ( dev-ruby/rspec[ruby_targets_ruby33(-)] ) ) ruby_targets_ruby32? ( dev-lang/ruby:3.2 ) ruby_targets_ruby33? ( dev-lang/ruby:3.3 )
+DEFINED_PHASES=compile configure install prepare setup test unpack
+DEPEND=ruby_targets_ruby32? ( dev-lang/ruby:3.2 ) ruby_targets_ruby33? ( dev-lang/ruby:3.3 )
+DESCRIPTION=A Linux editor for the masses
+EAPI=8
+HOMEPAGE=https://git.sr.ht/~pistos/diakonos
+INHERIT=ruby-ng
+IUSE=doc test test ruby_targets_ruby32 ruby_targets_ruby33
+KEYWORDS=~amd64 ~riscv ~x86
+LICENSE=MIT
+RDEPEND=ruby_targets_ruby32? ( dev-ruby/curses[ruby_targets_ruby32(-)] ) ruby_targets_ruby33? ( dev-ruby/curses[ruby_targets_ruby33(-)] ) ruby_targets_ruby32? ( dev-lang/ruby:3.2 ) ruby_targets_ruby33? ( dev-lang/ruby:3.3 )
+REQUIRED_USE=|| ( ruby_targets_ruby32 ruby_targets_ruby33 )
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://git.sr.ht/~pistos/diakonos/archive/v0.9.12.tar.gz -> diakonos-0.9.12.tar.gz
+_eclasses_=multilib	fc812e8eb2170022c28272d80a1f9e77	ruby-ng	705ab926556cb5cb4811999dd0c670b0	ruby-utils	70349884e22849da218b0f0c4a32da54	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=09dc4e862b0a19e287ab9c2152812fc2

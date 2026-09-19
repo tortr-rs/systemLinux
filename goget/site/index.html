@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>goget — source-first package manager</title>
+<meta name="description" content="goget builds packages from source by default — preferring a tagged release's source archive over a full git clone — and only falls back to a prebuilt binary when it can prove — architecture, musl vs glibc, glibc version — that the binary will actually run on your machine.">
+<style>
+  :root{
+    --bg: #f5f7f6;
+    --bg-alt: #ffffff;
+    --ink: #14201c;
+    --ink-dim: #58685f;
+    --border: #dde5e1;
+    --accent: #0f7a5c;
+    --accent-ink: #ffffff;
+    --code-bg: #10201a;
+    --code-ink: #eaf3ee;
+    --code-dim: #7fa393;
+    --amber: #a9670f;
+    --red: #b3392b;
+    --tag-bg: #e7efeb;
+    --shadow: 0 1px 2px rgba(20,32,28,0.06);
+    --mono: "SF Mono", ui-monospace, "Cascadia Code", "JetBrains Mono", Menlo, Consolas, monospace;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg: #0e1512;
+      --bg-alt: #141d19;
+      --ink: #eaf3ee;
+      --ink-dim: #93a89d;
+      --border: #263631;
+      --accent: #35c795;
+      --accent-ink: #0e1512;
+      --code-bg: #0a1310;
+      --code-ink: #eaf3ee;
+      --code-dim: #648577;
+      --amber: #e0a54a;
+      --red: #e0685a;
+      --tag-bg: #1a2621;
+      --shadow: 0 1px 2px rgba(0,0,0,0.4);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: #0e1512;
+    --bg-alt: #141d19;
+    --ink: #eaf3ee;
+    --ink-dim: #93a89d;
+    --border: #263631;
+    --accent: #35c795;
+    --accent-ink: #0e1512;
+    --code-bg: #0a1310;
+    --code-ink: #eaf3ee;
+    --code-dim: #648577;
+    --amber: #e0a54a;
+    --red: #e0685a;
+    --tag-bg: #1a2621;
+    --shadow: 0 1px 2px rgba(0,0,0,0.4);
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:var(--sans); line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{ max-width: 880px; margin:0 auto; padding-inline: 24px; }
+
+  header.top{
+    position: sticky; top:0; z-index:10;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom:1px solid var(--border);
+  }
+  .topbar{ display:flex; align-items:center; justify-content:space-between; padding-block:14px; }
+  .brand{ display:flex; align-items:center; gap:10px; font-weight:700; font-size:1.05rem; color:var(--ink); text-decoration:none; font-family:var(--mono); }
+  .brand .dot{ width:10px; height:10px; border-radius:3px; background:var(--accent); display:inline-block; }
+  nav.links{ display:flex; gap:22px; }
+  nav.links a{ color:var(--ink-dim); text-decoration:none; font-size:0.92rem; }
+  nav.links a:hover{ color:var(--ink); }
+
+  .hero{ padding-block: 72px 48px; }
+  .kicker{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:var(--mono); font-size:0.78rem; color:var(--accent);
+    background: var(--tag-bg); border:1px solid var(--border);
+    padding:5px 10px; border-radius:100px; margin-bottom:22px;
+  }
+  .kicker::before{ content:"●"; font-size:0.6rem; }
+  h1{ font-size: clamp(2.2rem, 5vw, 3.4rem); line-height:1.06; margin:0 0 18px; letter-spacing:-0.02em; }
+  h1 em{ font-style:normal; color:var(--accent); }
+  .lede{ font-size:1.15rem; color:var(--ink-dim); max-width:62ch; margin:0 0 32px; }
+  .cta-row{ display:flex; gap:12px; flex-wrap:wrap; }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:11px 18px; border-radius:8px; font-weight:600; font-size:0.94rem;
+    text-decoration:none; border:1px solid transparent; cursor:pointer;
+  }
+  .btn.primary{ background:var(--accent); color:var(--accent-ink); }
+  .btn.ghost{ background:transparent; color:var(--ink); border-color:var(--border); }
+  .btn.ghost:hover{ border-color: var(--ink-dim); }
+
+  .term{
+    margin-top:44px; background:var(--code-bg); color:var(--code-ink);
+    border-radius:12px; overflow:hidden; box-shadow: var(--shadow);
+    font-family:var(--mono); font-size:0.86rem;
+  }
+  .term .bar{ display:flex; gap:6px; padding:11px 14px; border-bottom:1px solid rgba(255,255,255,0.08); }
+  .term .bar span{ width:10px; height:10px; border-radius:50%; background:#324b41; display:inline-block; }
+  .term pre{ margin:0; padding:20px; overflow-x:auto; white-space:pre-wrap; }
+  .term .c-cmd{ color: var(--code-ink); }
+  .term .c-prompt{ color: var(--code-dim); }
+  .term .c-out{ color: var(--code-dim); }
+  .term .c-ok{ color: var(--accent); }
+  .term .c-warn{ color: var(--amber); }
+  .term .c-bad{ color: var(--red); }
+
+  section{ padding-block: 46px; border-top:1px solid var(--border); }
+  section h2{ font-size:1.6rem; margin:0 0 8px; letter-spacing:-0.01em; }
+  section > .sub{ color:var(--ink-dim); margin:0 0 30px; max-width:64ch; }
+
+  .cards{ display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; }
+  @media (max-width: 720px){ .cards{ grid-template-columns:1fr; } }
+  .card{
+    background:var(--bg-alt); border:1px solid var(--border); border-radius:12px;
+    padding:20px; display:flex; flex-direction:column; gap:10px;
+  }
+  .card h3{ margin:0; font-size:1.02rem; }
+  .card p{ margin:0; color:var(--ink-dim); font-size:0.92rem; flex-grow:1; }
+  .card .tag{ align-self:flex-start; font-size:0.72rem; font-family:var(--mono); color:var(--ink-dim); background:var(--tag-bg); padding:3px 8px; border-radius:100px; }
+
+  .checklist{ list-style:none; margin:0; padding:0; display:grid; gap:12px; }
+  .checklist li{ display:flex; gap:12px; align-items:flex-start; font-size:0.95rem; }
+  .checklist .mark{ flex-shrink:0; width:22px; height:22px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.8rem; margin-top:1px; }
+  .checklist .mark.ok{ background: color-mix(in srgb, var(--accent) 18%, transparent); color: var(--accent); }
+  .checklist .mark.bad{ background: color-mix(in srgb, var(--red) 18%, transparent); color: var(--red); }
+  .checklist strong{ display:block; }
+  .checklist span.desc{ color:var(--ink-dim); font-size:0.9rem; }
+
+  .confpanel{
+    background:var(--code-bg); color:var(--code-ink); border-radius:12px;
+    padding:20px; font-family:var(--mono); font-size:0.85rem; overflow-x:auto;
+    box-shadow: var(--shadow);
+  }
+  .confpanel .c-key{ color: var(--accent); }
+  .confpanel .c-comment{ color: var(--code-dim); }
+
+  table.flagtable{ width:100%; border-collapse:collapse; margin-top:14px; font-size:0.88rem; }
+  table.flagtable th{ text-align:left; color:var(--ink-dim); font-weight:600; font-size:0.76rem; text-transform:uppercase; letter-spacing:0.03em; padding:7px 10px; border-bottom:1px solid var(--border); }
+  table.flagtable td{ padding:8px 10px; border-bottom:1px solid var(--border); vertical-align:top; }
+  table.flagtable tr:last-child td{ border-bottom:none; }
+  table.flagtable code{ font-family:var(--mono); font-size:0.86em; color:var(--accent); white-space:nowrap; }
+
+  .steps{ counter-reset: step; list-style:none; padding:0; margin:0; display:grid; gap:14px; }
+  .steps li{ display:flex; gap:14px; align-items:flex-start; }
+  .steps li::before{
+    counter-increment: step; content: counter(step);
+    flex-shrink:0; width:26px; height:26px; border-radius:50%;
+    background:var(--tag-bg); border:1px solid var(--border);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--mono); font-size:0.8rem; color:var(--ink-dim);
+  }
+  .steps code{ font-family:var(--mono); background:var(--tag-bg); padding:2px 7px; border-radius:5px; font-size:0.9em; }
+  .steps p{ margin:2px 0 0; color: var(--ink-dim); font-size:0.9rem;}
+
+  .specforms{ list-style:none; margin:0; padding:0; display:grid; gap:8px; }
+  .specforms li{ display:flex; gap:14px; align-items:baseline; font-size:0.9rem; }
+  .specforms code{ font-family:var(--mono); background:var(--tag-bg); padding:3px 9px; border-radius:6px; color:var(--ink); flex-shrink:0; min-width:15ch; }
+  .specforms span{ color:var(--ink-dim); }
+
+  footer{ padding-block:40px 60px; border-top:1px solid var(--border); }
+  footer .row{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; }
+  footer p{ color:var(--ink-dim); font-size:0.85rem; margin:0; }
+  footer a{ color:var(--ink-dim); }
+
+  ::selection{ background: var(--accent); color:var(--accent-ink); }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap topbar">
+    <a class="brand" href="#top"><span class="dot"></span>goget</a>
+    <nav class="links">
+      <a href="#how">How it works</a>
+      <a href="#compat">Compat checks</a>
+      <a href="#config">Config</a>
+      <a href="#build">Build</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="hero" id="top">
+    <span class="kicker">source-first package manager · Go · Linux</span>
+    <h1>Build from source.<br>Fetch a binary only when it's <em>proven</em> to run.</h1>
+    <p class="lede">
+      goget gets a repo's source &mdash; preferring a straight HTTP download of
+      the latest tagged release's source archive over a full <code>git
+      clone</code>, falling back to git when there's no tag &mdash; and builds
+      it with whatever build system it actually uses: CMake, Make, or
+      Autotools. If there's no source build available, it can fall back to a
+      GitHub release binary, but only after checking architecture,
+      musl-vs-glibc, and the exact glibc version it needs against your host. A
+      binary that fails any check is treated as if it doesn't exist.
+    </p>
+    <div class="cta-row">
+      <a class="btn primary" href="#how">See how it resolves a repo</a>
+      <a class="btn ghost" href="https://github.com/tortr-rs/goget" target="_blank" rel="noopener">View source on GitHub</a>
+    </div>
+
+    <div class="term">
+      <div class="bar"><span></span><span></span><span></span></div>
+      <pre><span class="c-prompt">$</span> <span class="c-cmd">goget build fastfetch</span>
+<span class="c-out">Found fastfetch-cli/fastfetch on github.com -- proceed? [Y/n]</span> <span class="c-cmd">y</span>
+<span class="c-out">goget: downloading source archive for fastfetch 2.68.1...
+goget: using release 2.68.1 source archive for fastfetch
+goget: detected CMake build system for fastfetch</span>
+<span class="c-ok">✓ built and installed fastfetch</span>
+
+<span class="c-prompt">$</span> <span class="c-cmd">goget fetch some-old-tool</span>
+<span class="c-warn">! some-old-tool-linux-amd64 needs glibc 2.38, host has 2.31 -- skipping</span>
+<span class="c-out">No compatible prebuilt binary available -- must build from source. Continue?</span> <span class="c-cmd">[Y/n]</span></pre>
+    </div>
+  </section>
+
+  <section id="how">
+    <h2>One spec, four shapes</h2>
+    <p class="sub">Full URL, SSH remote, bare <code>host/owner/repo</code>, or just the name &mdash; goget parses whichever one you happen to have on hand.</p>
+    <ul class="specforms">
+      <li><code>fastfetch</code><span>bare short name &mdash; searched across GitHub, GitLab, and Codeberg, sorted by stars</span></li>
+      <li><code>antirez/kilo</code><span>owner/repo, assumed to be on github.com</span></li>
+      <li><code>gitlab.com/owner/repo</code><span>explicit host/owner/repo, any of the three hosts</span></li>
+      <li><code>git@github.com:owner/repo.git</code><span>SSH remote, scp-style or <code>ssh://</code></span></li>
+    </ul>
+  </section>
+
+  <section id="fetch-detail">
+    <h2>Picking the right binary out of a real release</h2>
+    <p class="sub">Release tarballs are messy: multiple platforms, sometimes a binary and a same-named completion script sitting side by side. goget filters for architecture and OS by name, then disambiguates what's left.</p>
+    <div class="cards">
+      <div class="card">
+        <span class="tag">1. filter</span>
+        <h3>Right OS, right arch</h3>
+        <p>Matches <code>uname -m</code> against the asset name and drops anything for macOS, Windows, or a BSD before it's even downloaded.</p>
+      </div>
+      <div class="card">
+        <span class="tag">2. disambiguate</span>
+        <h3>bin/ beats loose files</h3>
+        <p>When an archive has two files with the same name (a binary and a bash-completion script, say), the one under a <code>bin/</code> path wins, then the one with the executable bit set.</p>
+      </div>
+      <div class="card">
+        <span class="tag">3. verify</span>
+        <h3>Checksum if there is one</h3>
+        <p>A <code>.sha256</code>/<code>checksums.txt</code>-style file is verified if present &mdash; warns and continues if absent, hard-fails on a mismatch.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="compat">
+    <h2>Compatibility isn't optional</h2>
+    <p class="sub">A release existing isn't the same as it running. Every candidate binary goes through the same checks before it's trusted.</p>
+    <ul class="checklist">
+      <li>
+        <span class="mark ok">✓</span>
+        <div><strong>Architecture</strong><span class="desc">the asset's declared architecture must match this host's <code>uname -m</code></span></div>
+      </li>
+      <li>
+        <span class="mark ok">✓</span>
+        <div><strong>musl vs glibc</strong><span class="desc">a musl binary on a glibc host (or vice versa) is rejected outright, regardless of version</span></div>
+      </li>
+      <li>
+        <span class="mark ok">✓</span>
+        <div><strong>glibc version</strong><span class="desc">the binary's minimum required glibc (from its <code>GLIBC_x.y</code> symbol versions) can't exceed what the host actually has</span></div>
+      </li>
+      <li>
+        <span class="mark bad">✕</span>
+        <div><strong>Anything that fails</strong><span class="desc">is treated as if no release exists at all &mdash; goget offers to build from source instead of installing something broken</span></div>
+      </li>
+    </ul>
+  </section>
+
+  <section id="config">
+    <h2>goget.conf</h2>
+    <p class="sub">One small config file: a host allow-list and USE flags that turn into real build options.</p>
+    <div class="confpanel">
+<pre><span class="c-comment"># ~/.config/goget/goget.conf</span>
+<span class="c-key">pkg.repos</span>{github.on gitlab.on codeberg.on}
+
+<span class="c-comment"># global default for every package</span>
+<span class="c-key">pkg.USE</span>{wayland.on x11.on pulseaudio.off}
+
+<span class="c-comment"># per-package override beats the global block above</span>
+<span class="c-key">pkg.fastfetch.USE</span>{pulseaudio.on}</pre>
+    </div>
+    <table class="flagtable">
+      <thead><tr><th>USE flag</th><th>build option</th></tr></thead>
+      <tbody>
+        <tr><td><code>wayland</code></td><td><code>-DENABLE_WAYLAND</code></td></tr>
+        <tr><td><code>x11</code></td><td><code>-DENABLE_XCB_RANDR</code> and <code>-DENABLE_XRANDR</code></td></tr>
+        <tr><td><code>pulseaudio</code></td><td><code>-DENABLE_PULSE</code></td></tr>
+      </tbody>
+    </table>
+    <p class="sub" style="margin-top:14px;">If a package resolves to a host you've disabled, goget asks once &mdash; <strong>Once</strong> proceeds without touching the file, <strong>Always</strong> flips it permanently, <strong>Cancel</strong> exits clean. It only ever applies to the package you actually asked for.</p>
+  </section>
+
+  <section id="build">
+    <h2>Building goget itself</h2>
+    <p class="sub">Go, standard library only &mdash; no third-party modules, no libcurl, no libarchive. <code>CGO_ENABLED=0</code> means the result is a genuinely static binary.</p>
+    <ol class="steps">
+      <li><div><code>git clone https://github.com/tortr-rs/goget.git</code><p>Clone the source.</p></div></li>
+      <li><div><code>make</code><p>Runs <code>CGO_ENABLED=0 go build</code>. Nothing to fetch &mdash; <code>net/http</code>, <code>encoding/json</code>, <code>archive/tar</code>+<code>zip</code>, and <code>debug/elf</code> cover everything a source-first package manager needs.</p></div></li>
+      <li><div><code>sudo make install</code><p>Installs to <code>/usr/local/bin/goget</code>.</p></div></li>
+      <li><div><code>goget build &lt;repo&gt;</code><p>Point it at anything and see what it finds.</p></div></li>
+    </ol>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap row">
+    <p>goget is source-first by design: a working build beats a maybe-compatible binary.</p>
+    <p><a href="https://github.com/tortr-rs/goget" target="_blank" rel="noopener">github.com/tortr-rs/goget</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

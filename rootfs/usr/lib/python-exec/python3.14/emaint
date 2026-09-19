@@ -1,0 +1,70 @@
+#!/usr/bin/python3.14
+# Copyright 2005-2025 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+"""System health checks and maintenance utilities.
+"""
+
+import signal
+
+
+# Inherit from KeyboardInterrupt to avoid a traceback from asyncio.
+class SignalInterrupt(KeyboardInterrupt):
+    def __init__(self, signum):
+        self.signum = signum
+
+
+try:
+
+    def signal_interrupt(signum, _frame):
+        raise SignalInterrupt(signum)
+
+    def debug_signal(_signum, _frame):
+        import pdb
+
+        pdb.set_trace()
+
+    # Prevent "[Errno 32] Broken pipe" exceptions when writing to a pipe.
+    signal.signal(signal.SIGPIPE, signal.SIG_DFL)
+    signal.signal(signal.SIGTERM, signal_interrupt)
+    signal.signal(signal.SIGUSR1, debug_signal)
+
+    import sys
+    import errno
+    from os import path as osp
+
+    if osp.isfile(
+        osp.join(
+            osp.dirname(osp.dirname(osp.realpath(__file__))), ".portage_not_installed"
+        )
+    ):
+        sys.path.insert(
+            0, osp.join(osp.dirname(osp.dirname(osp.realpath(__file__))), "lib")
+        )
+    import portage
+
+    portage._internal_caller = True
+    from portage.emaint.main import emaint_main
+    from portage.util._eventloop.global_event_loop import global_event_loop
+
+    if __name__ == "__main__":
+        try:
+            emaint_main(sys.argv[1:])
+        except OSError as e:
+            if e.errno == errno.EACCES:
+                print("\nemaint: Need superuser access")
+                sys.exit(1)
+            else:
+                raise
+        finally:
+            # Only close the event loop for __main__,
+            # since outside of __main__ it would close the
+            # event loop for child processes when using
+            # the multiprocessing spawn start method.
+            global_event_loop().close()
+
+except KeyboardInterrupt as e:
+    # Prevent traceback on ^C
+    signum = getattr(e, "signum", signal.SIGINT)
+    signal.signal(signum, signal.SIG_DFL)
+    signal.raise_signal(signum)

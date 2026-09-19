@@ -1,0 +1,10 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=/usr/lib64
+includedir=${prefix}/include
+plugindir=/usr/lib64/pppd/2.5.4
+
+Name: pppd
+Description: Point-to-Point Protocol (PPP) daemon
+Version: 2.5.4
+Cflags: -I${includedir}

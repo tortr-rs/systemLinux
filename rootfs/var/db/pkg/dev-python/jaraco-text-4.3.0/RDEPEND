@@ -1,0 +1,1 @@
+>=dev-python/jaraco-context-4.1.1-r1[python_targets_python3_14(-)] >=dev-python/jaraco-functools-3.5.0-r1[python_targets_python3_14(-)] dev-lang/python:3.14

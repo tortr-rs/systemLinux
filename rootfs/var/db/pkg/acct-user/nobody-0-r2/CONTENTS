@@ -1,0 +1,7 @@
+dir /var
+dir /var/empty
+obj /var/empty/.keep_acct-user_nobody-0 d41d8cd98f00b204e9800998ecf8427e 1782684888
+dir /usr
+dir /usr/lib
+dir /usr/lib/sysusers.d
+obj /usr/lib/sysusers.d/acct-user-nobody.conf 77bba0738d42877b992af52bf235ab1c 1782684888

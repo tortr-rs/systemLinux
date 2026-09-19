@@ -1,0 +1,13 @@
+BDEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DEFINED_PHASES=install postinst postrm setup
+DESCRIPTION=Humanist sans-serif typeface with a calligraphic, dynamic feeling
+EAPI=7
+HOMEPAGE=https://www.huertatipografica.com/en/fonts/alegreya-sans-ht
+INHERIT=font
+IUSE=X
+KEYWORDS=amd64 ~arm ~arm64 ~loong ~riscv x86
+LICENSE=OFL-1.1
+SLOT=0
+SRC_URI=https://github.com/huertatipografica/Alegreya-Sans/archive/v2.008.tar.gz -> alegreya-sans-2.008.tar.gz
+_eclasses_=font	6d0c60c855c05ae2ba808d300440ded2
+_md5_=bfe99752762283e60f58c883a6358a2a

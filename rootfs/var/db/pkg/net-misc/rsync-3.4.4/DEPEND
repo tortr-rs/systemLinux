@@ -1,0 +1,1 @@
+>=dev-libs/popt-1.19 virtual/acl dev-libs/openssl:0/3= >=dev-libs/xxhash-0.8 virtual/libiconv

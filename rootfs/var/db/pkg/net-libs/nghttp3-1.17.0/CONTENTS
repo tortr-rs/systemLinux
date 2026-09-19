@@ -1,0 +1,18 @@
+dir /usr
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/nghttp3-1.17.0
+obj /usr/share/doc/nghttp3-1.17.0/README.rst.bz2 a2d82d480c8d794c36088f4837d93dbe 1789851033
+obj /usr/share/doc/nghttp3-1.17.0/README 859a37bf51d2c5c75e000c7645c77752 1789851033
+obj /usr/share/doc/nghttp3-1.17.0/ChangeLog.bz2 47f0d134b452583c74d75f8500c4db0f 1789851034
+obj /usr/share/doc/nghttp3-1.17.0/AUTHORS.bz2 bfe9b1d9347e83ee2f3302a5ddd47b6f 1789851034
+dir /usr/lib64
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/libnghttp3.pc 9ebff5b6a906c03a49b6baa018ad0c6d 1789851033
+obj /usr/lib64/libnghttp3.so.9.8.0 45474ea69584037528bcf6cc7eb877ee 1789851034
+dir /usr/include
+dir /usr/include/nghttp3
+obj /usr/include/nghttp3/version.h ed67f5ac6bb2bd7d479438cac7895cc8 1789851033
+obj /usr/include/nghttp3/nghttp3.h fd98a77b470e1dd546b4ab41101a8c69 1789851033
+sym /usr/lib64/libnghttp3.so -> libnghttp3.so.9.8.0 1789851033
+sym /usr/lib64/libnghttp3.so.9 -> libnghttp3.so.9.8.0 1789851033

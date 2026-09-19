@@ -1,0 +1,13 @@
+DEFINED_PHASES=install
+DEPEND=media-libs/libsdl[video]
+DESCRIPTION=Remake of the Sinclair Spectrum game of the same name
+EAPI=8
+HOMEPAGE=https://wiki.gentoo.org/wiki/No_homepage
+INHERIT=desktop
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2+
+RDEPEND=media-libs/libsdl[video]
+SLOT=0
+SRC_URI=mirror://gentoo/deathchase3d-0.9.tar.gz
+_eclasses_=desktop	e447b5f77146d69797e9f03ff177f3f1
+_md5_=200b67f71c27e8d7ab704cbcc7021d03

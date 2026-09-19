@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install prepare
+DEPEND=x11-wm/windowmaker x11-libs/libXpm
+DESCRIPTION=Dockapp for checking pop3 accounts
+EAPI=8
+HOMEPAGE=https://www.dockapps.net/wmpop3
+INHERIT=toolchain-funcs
+KEYWORDS=amd64 ~sparc x86
+LICENSE=GPL-2+
+RDEPEND=x11-wm/windowmaker x11-libs/libXpm
+SLOT=0
+SRC_URI=https://www.dockapps.net/download/WMPop3-0.5.6a.tar.gz
+_eclasses_=toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=4af75bd35a1916f5770802a462eeb6c6

@@ -1,0 +1,1 @@
+!app-crypt/gnupg[-alternatives(-)] !=app-crypt/freepg-2.5.12_p1-r0 !=app-crypt/gnupg-2.4.8-r1 !=app-crypt/gnupg-2.5.13-r1 >=app-crypt/gnupg-2.4.8-r2[alternatives(-),nls,ssl]

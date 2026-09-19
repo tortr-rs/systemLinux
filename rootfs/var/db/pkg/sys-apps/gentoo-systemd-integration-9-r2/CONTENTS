@@ -1,0 +1,18 @@
+dir /usr
+dir /usr/lib
+dir /usr/lib/sysctl.d
+obj /usr/lib/sysctl.d/60-gentoo.conf b69e8dd31226cd3c6231313ac112f5db 1771795825
+dir /usr/lib/systemd
+dir /usr/lib/systemd/system-environment-generators
+obj /usr/lib/systemd/system-environment-generators/10-gentoo-path 18725e9e5141f9ca8e163df4fc9eca77 1771795825
+dir /usr/lib/systemd/system-generators
+obj /usr/lib/systemd/system-generators/gentoo-local-generator e7c7b2a9ebc2cca065842b8ed1f3a6f2 1771795825
+dir /usr/lib/systemd/system-preset
+obj /usr/lib/systemd/system-preset/99-default.preset 4a9e704568f5f575d82632c014e5a2d8 1771795825
+dir /usr/lib/udev
+dir /usr/lib/udev/rules.d
+obj /usr/lib/udev/rules.d/40-gentoo.rules 2596958257c95252aea050f0b3969619 1771795825
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/gentoo-systemd-integration-9-r2
+obj /usr/share/doc/gentoo-systemd-integration-9-r2/NEWS.bz2 e4eca2d44999e95daa9f8c0ab6dccf58 1771795825

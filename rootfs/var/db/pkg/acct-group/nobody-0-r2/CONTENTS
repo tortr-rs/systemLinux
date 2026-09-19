@@ -1,0 +1,4 @@
+dir /usr
+dir /usr/lib
+dir /usr/lib/sysusers.d
+obj /usr/lib/sysusers.d/acct-group-nobody.conf 2bf028e825ab9852a62231cb0959f0a0 1711315974

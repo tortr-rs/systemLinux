@@ -1,0 +1,107 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/x86_64-pc-linux-gnu-xslt-config 8d89b8deb1dbd9ffb795fe67f2166d8e 1786902213
+sym /usr/bin/xslt-config -> x86_64-pc-linux-gnu-xslt-config 1789353949
+obj /usr/bin/xsltproc 37eba41963210ddf14317340c3eadc52 1786902214
+dir /usr/include
+dir /usr/include/libexslt
+obj /usr/include/libexslt/exslt.h e3f739c7235640b1ba7c8e8928a63c82 1786902213
+obj /usr/include/libexslt/exsltconfig.h 29e55125a2626087b99afe3639321dbd 1786902213
+obj /usr/include/libexslt/exsltexports.h 4a24ae19aba4feafb1acd0e8d4e880cb 1786902213
+dir /usr/include/libxslt
+obj /usr/include/libxslt/attributes.h 2dd0d8f663f0bfbb044589e38c531265 1786902213
+obj /usr/include/libxslt/documents.h 22a35bd1102fd1ac301e50cf650a8b8a 1786902213
+obj /usr/include/libxslt/extensions.h 45e4867f0daebf1eb905471a4be5184c 1786902213
+obj /usr/include/libxslt/extra.h 94fe9ce1c0c47724aae4a1bcb8c29433 1786902213
+obj /usr/include/libxslt/functions.h 052fd28e9971416b2bbebdc3d1103c4e 1786902213
+obj /usr/include/libxslt/imports.h 66e26ad969e3c37fdeedcbc2716d7cf3 1786902213
+obj /usr/include/libxslt/keys.h 77a11ee3de841d02d3461b829cfcc11e 1786902213
+obj /usr/include/libxslt/namespaces.h c784b4b8e80274491fe023ce26d4847b 1786902213
+obj /usr/include/libxslt/numbersInternals.h 27c2c21ab1535f84710fe1c8c8829018 1786902213
+obj /usr/include/libxslt/pattern.h adf6b78e6c68a7d34ae680f6dc3f5240 1786902213
+obj /usr/include/libxslt/preproc.h 43092de4393f5033e08aea3b9ecb9012 1786902213
+obj /usr/include/libxslt/security.h 1b24b61ea6afe01d18c647c94b1245c7 1786902213
+obj /usr/include/libxslt/templates.h 6901f4c8fad239b588b9f6d4cdfef5ac 1786902213
+obj /usr/include/libxslt/transform.h ccbcce4553f3231003b1944002814246 1786902213
+obj /usr/include/libxslt/transformInternals.h d034084359f34dc640b1944c107dc8e8 1786902213
+obj /usr/include/libxslt/variables.h 08a56c0d4d50e48e897bf5eb4554d525 1786902213
+obj /usr/include/libxslt/xslt.h 0c08b8e7223b72f822a58457520b6387 1786902213
+obj /usr/include/libxslt/xsltInternals.h bba1fa0c21b057828bb3056fe124dd75 1786902213
+obj /usr/include/libxslt/xsltconfig.h a8fe1050d31762544f26843c8f035d41 1786902213
+obj /usr/include/libxslt/xsltexports.h f9de2ff0a2e168ccf84d1bed6339d41d 1786902213
+obj /usr/include/libxslt/xsltlocale.h da1d63c112c339b051a9155359b6d2d7 1786902213
+obj /usr/include/libxslt/xsltutils.h 9eeea4bbd2cbafc8a7ed24420cb9b11c 1786902213
+dir /usr/include/x86_64-pc-linux-gnu
+dir /usr/include/x86_64-pc-linux-gnu/libxslt
+obj /usr/include/x86_64-pc-linux-gnu/libxslt/xsltconfig.h 2dd0a06fe8109a896d8c0863e5976871 1786902213
+dir /usr/lib64
+dir /usr/lib64/cmake
+dir /usr/lib64/cmake/libxslt
+obj /usr/lib64/cmake/libxslt/FindGcrypt.cmake 421707a9c1a8b77f468427176e31f917 1786902213
+obj /usr/lib64/cmake/libxslt/libxslt-config.cmake f4c7210c4d27e6dbc27fdece1b132e33 1786902213
+obj /usr/lib64/libexslt.so.0.8.25 3040e187b27e26517ab40fa14facb6fb 1786902214
+obj /usr/lib64/libxslt.so.1.1.45 0f979ab459b87478d176c460e1d3995e 1786902214
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/libexslt.pc 0c10bb446d9643b9868b2a5184a89504 1786902213
+obj /usr/lib64/pkgconfig/libxslt.pc 6ce3ea6c5cc0c0184611abb4f99438cf 1786902213
+obj /usr/lib64/xsltConf.sh 10a9901f453919a3ba84e0da2f165a56 1786902213
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/libxslt-1.1.45
+obj /usr/share/doc/libxslt-1.1.45/AUTHORS.bz2 49d9d88ba5b0dc42b9d66c0be03583bf 1786902213
+obj /usr/share/doc/libxslt-1.1.45/NEWS.bz2 d4c6471b15ab805a797d97aaf04b8db5 1786902213
+obj /usr/share/doc/libxslt-1.1.45/README.md.bz2 97040aab28d5070d25cb0ce4af7d49f8 1786902213
+obj /usr/share/doc/libxslt-1.1.45/TODO.bz2 7048adb4844296e450e43259737e96bb 1786902213
+obj /usr/share/doc/libxslt-1.1.45/xsltproc.html 3867d18c3d31c11a292f16da227914a0 1786902213
+dir /usr/share/gtk-doc
+dir /usr/share/gtk-doc/html
+dir /usr/share/gtk-doc/html/libexslt
+obj /usr/share/gtk-doc/html/libexslt/general.html 6418ba9e50128b2f885cb198c72de73e 1786902213
+obj /usr/share/gtk-doc/html/libexslt/home.png f6192f4292d744423df690e785d60fdf 1786902213
+obj /usr/share/gtk-doc/html/libexslt/index.html be9a0eb3575f0056a3bbdb7fd0a270ec 1786902213
+obj /usr/share/gtk-doc/html/libexslt/left.png f771308152ab24a69682daed70ce136d 1786902213
+obj /usr/share/gtk-doc/html/libexslt/libexslt-exslt.html db98ca986c3e743abd43ae2e3261b390 1786902213
+obj /usr/share/gtk-doc/html/libexslt/libexslt-exsltexports.html b75dc9247f7f6a37e8f45fad152496d9 1786902213
+obj /usr/share/gtk-doc/html/libexslt/libexslt.devhelp2 e1dae0a0b81b19c123104234c65aa655 1786902213
+obj /usr/share/gtk-doc/html/libexslt/right.png ebd7e6d206d73850d77d305ab548f957 1786902213
+obj /usr/share/gtk-doc/html/libexslt/style.css a7b180ebf583ed0c315d70d6a4890f79 1786902213
+obj /usr/share/gtk-doc/html/libexslt/up.png 2f07d9272deb4ae870ca6821117877fa 1786902213
+dir /usr/share/gtk-doc/html/libxslt
+obj /usr/share/gtk-doc/html/libxslt/general.html efefb523ac765c8765cd5e7f7669e542 1786902213
+obj /usr/share/gtk-doc/html/libxslt/home.png f6192f4292d744423df690e785d60fdf 1786902213
+obj /usr/share/gtk-doc/html/libxslt/index.html 055d578a264a2066becad06aafc3cc81 1786902213
+obj /usr/share/gtk-doc/html/libxslt/left.png f771308152ab24a69682daed70ce136d 1786902213
+obj /usr/share/gtk-doc/html/libxslt/libxslt-attributes.html 399aceae759a78695f49dc6000905420 1786902213
+obj /usr/share/gtk-doc/html/libxslt/libxslt-documents.html 8e1367e1be304f07bd6ce16569b8e307 1786902213
+obj /usr/share/gtk-doc/html/libxslt/libxslt-extensions.html a993d53de78ce359d36b2941ca5578f7 1786902213
+obj /usr/share/gtk-doc/html/libxslt/libxslt-extra.html bd83df5ff5dc5ce6456907c06499fbff 1786902213
+obj /usr/share/gtk-doc/html/libxslt/libxslt-functions.html 85181cc1765fa290142a87adf079b7b8 1786902213
+obj /usr/share/gtk-doc/html/libxslt/libxslt-imports.html 3310a18cc5bb3abdf6fc84fa46356a76 1786902213
+obj /usr/share/gtk-doc/html/libxslt/libxslt-keys.html 9d6f3cea5650758168e9e841bcc39224 1786902213
+obj /usr/share/gtk-doc/html/libxslt/libxslt-namespaces.html 9e13ea0f9fcbc789484c7f860f48c484 1786902213
+obj /usr/share/gtk-doc/html/libxslt/libxslt-numbersInternals.html 6d114548733f0d1aafc4e5bcb283e212 1786902213
+obj /usr/share/gtk-doc/html/libxslt/libxslt-pattern.html dae1948f5c55febc63a45fb60648d513 1786902213
+obj /usr/share/gtk-doc/html/libxslt/libxslt-preproc.html ae6809d6269b9fad254becb073b452ee 1786902213
+obj /usr/share/gtk-doc/html/libxslt/libxslt-security.html 0e3aba777f94f4aedec75e40e103b2f1 1786902213
+obj /usr/share/gtk-doc/html/libxslt/libxslt-templates.html 95fc51f220b296e84688b5030ffbcfde 1786902213
+obj /usr/share/gtk-doc/html/libxslt/libxslt-transform.html 645fad77f3843417d0d007dc883cc98b 1786902213
+obj /usr/share/gtk-doc/html/libxslt/libxslt-variables.html c85780cd7c968cff0dd29259c4db8f7a 1786902213
+obj /usr/share/gtk-doc/html/libxslt/libxslt-xslt.html fa716a50050530eb53bd5602466c23b9 1786902213
+obj /usr/share/gtk-doc/html/libxslt/libxslt-xsltInternals.html ae036b08c5ece0236da7d744e6edf668 1786902213
+obj /usr/share/gtk-doc/html/libxslt/libxslt-xsltexports.html 69b35c48c93d3f33f1efa474e397cdf6 1786902213
+obj /usr/share/gtk-doc/html/libxslt/libxslt-xsltlocale.html 61f397567ca39fef25d0aa51882494a7 1786902213
+obj /usr/share/gtk-doc/html/libxslt/libxslt-xsltutils.html 96463a97c569cb6ff1c8232746d3c155 1786902213
+obj /usr/share/gtk-doc/html/libxslt/libxslt.devhelp2 44dfaadfc418760de2adbf2e90897e3d 1786902213
+obj /usr/share/gtk-doc/html/libxslt/right.png ebd7e6d206d73850d77d305ab548f957 1786902213
+obj /usr/share/gtk-doc/html/libxslt/style.css a7b180ebf583ed0c315d70d6a4890f79 1786902213
+obj /usr/share/gtk-doc/html/libxslt/up.png 2f07d9272deb4ae870ca6821117877fa 1786902213
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/xsltproc.1.bz2 a67c022c73381f9e057ead7a6ba92502 1786902213
+dir /usr/share/man/man3
+obj /usr/share/man/man3/libexslt.3.bz2 ea25fc9fa20a44cb0342a0adc917af17 1786902213
+obj /usr/share/man/man3/libxslt.3.bz2 a07213076e2ea2d62ff652b62536a7c3 1786902213
+sym /usr/lib64/libxslt.so.1 -> libxslt.so.1.1.45 1789353949
+sym /usr/lib64/libxslt.so -> libxslt.so.1.1.45 1789353949
+sym /usr/lib64/libexslt.so.0 -> libexslt.so.0.8.25 1789353949
+sym /usr/lib64/libexslt.so -> libexslt.so.0.8.25 1789353949

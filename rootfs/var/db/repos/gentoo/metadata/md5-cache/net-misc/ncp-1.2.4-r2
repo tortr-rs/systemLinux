@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install prepare
+DEPEND=>=dev-libs/libowfat-0.28-r1[-diet]
+DESCRIPTION=Utility for copying files in a LAN (npoll, npush)
+EAPI=7
+HOMEPAGE=https://www.fefe.de/ncp/
+INHERIT=toolchain-funcs
+KEYWORDS=~amd64 ~x86
+LICENSE=public-domain
+SLOT=0
+SRC_URI=https://dl.fefe.de/ncp-1.2.4.tar.bz2
+_eclasses_=toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=81a0cf4922f422e76e0aaecde20e4519

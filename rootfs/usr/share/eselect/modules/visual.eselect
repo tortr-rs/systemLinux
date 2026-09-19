@@ -1,0 +1,13 @@
+# -*-eselect-*-  vim: ft=eselect
+# Copyright 2009-2025 Gentoo Authors
+# Distributed under the terms of the GNU GPL version 2 or later
+
+EDITOR_VAR="VISUAL"
+EDITOR_ENVFILE="/etc/env.d/99editor"
+# list of most common cases only
+EDITOR_LIST="nano emacs mg vi vim xemacs"
+
+inherit editor-variable
+
+DESCRIPTION="Manage the ${EDITOR_VAR} environment variable"
+MAINTAINER="ulm@gentoo.org"

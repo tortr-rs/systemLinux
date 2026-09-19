@@ -1,0 +1,12 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${prefix}/lib64
+includedir=${prefix}/include/nss
+
+Name: NSS
+Description: Network Security Services
+Version: 3.112.5
+Requires: nspr >= 4.25
+Libs: -lfreebl -lssl3 -lsmime3 -lnss3 -lnssutil3
+Cflags: -I${includedir}/private -I${includedir}
+

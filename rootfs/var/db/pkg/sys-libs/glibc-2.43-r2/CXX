@@ -1,0 +1,1 @@
+x86_64-pc-linux-gnu-g++ -m64 -O2 -pipe -Wno-unused-command-line-argument

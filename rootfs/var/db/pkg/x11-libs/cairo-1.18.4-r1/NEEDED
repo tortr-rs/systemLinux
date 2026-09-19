@@ -1,0 +1,4 @@
+/usr/lib64/libcairo.so.2.11804.4 libm.so.6,libz.so.1,libpng16.so.16,libfontconfig.so.1,libfreetype.so.6,libpixman-1.so.0,libc.so.6
+/usr/lib64/libcairo-gobject.so.2.11804.4 libcairo.so.2,libglib-2.0.so.0,libgobject-2.0.so.0
+/usr/lib64/libcairo-script-interpreter.so.2.11804.4 libcairo.so.2,libm.so.6,libz.so.1,libfontconfig.so.1,libfreetype.so.6,libc.so.6
+/usr/lib64/cairo/libcairo-trace.so libz.so.1,libc.so.6

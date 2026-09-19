@@ -1,0 +1,24 @@
+dir /usr
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/ngtcp2-1.24.0
+obj /usr/share/doc/ngtcp2-1.24.0/README.rst.bz2 478185a65251e3bfbaca20d778604951 1789851050
+obj /usr/share/doc/ngtcp2-1.24.0/README 859a37bf51d2c5c75e000c7645c77752 1789851050
+obj /usr/share/doc/ngtcp2-1.24.0/ChangeLog.bz2 103f96e10ee8f29c91a236da3cb524fe 1789851050
+obj /usr/share/doc/ngtcp2-1.24.0/AUTHORS.bz2 ca1db9540ae7de0aeaea118d493aa63d 1789851050
+dir /usr/lib64
+obj /usr/lib64/libngtcp2.so.16.10.0 18df733e1d698709d1f4e665ac338c1a 1789851051
+sym /usr/lib64/libngtcp2.so -> libngtcp2.so.16.10.0 1789851049
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/libngtcp2.pc 3522f159ffb98d96b0b34a2ebf57852f 1789851049
+obj /usr/lib64/pkgconfig/libngtcp2_crypto_ossl.pc e1665e6b64091027cc4e83d137bac9b1 1789851049
+obj /usr/lib64/libngtcp2_crypto_ossl.so.0.3.0 d8a438b84d4a53c6e06a5ca6150206ed 1789851051
+sym /usr/lib64/libngtcp2_crypto_ossl.so -> libngtcp2_crypto_ossl.so.0.3.0 1789851049
+sym /usr/lib64/libngtcp2.so.16 -> libngtcp2.so.16.10.0 1789851049
+dir /usr/include
+dir /usr/include/ngtcp2
+obj /usr/include/ngtcp2/ngtcp2.h 7772853b3c84e237e850de7e19dccfbb 1789851049
+obj /usr/include/ngtcp2/version.h 33f9e74ffb3c7668af774086dbc77de3 1789851049
+obj /usr/include/ngtcp2/ngtcp2_crypto.h 421dc6a29c6c5ad6ae23a1bd89681fc2 1789851049
+obj /usr/include/ngtcp2/ngtcp2_crypto_ossl.h 640f4d2087ddd1d743e184110f18e630 1789851049
+sym /usr/lib64/libngtcp2_crypto_ossl.so.0 -> libngtcp2_crypto_ossl.so.0.3.0 1789851049

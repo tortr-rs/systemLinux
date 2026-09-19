@@ -1,0 +1,281 @@
+# -*-eselect-*-  vim: ft=eselect
+# Copyright 2005-2021 Gentoo Authors
+# Distributed under the terms of the GNU GPL version 2 or later
+
+inherit package-manager
+
+DESCRIPTION="Manage the iptables/arptables/ebtables symlinks"
+MAINTAINER="base-system@gentoo.org"
+VERSION="20200508"
+
+# a simple list of symlinks does for iptables
+IPTABLES_SYMLINKS=(
+	"iptables-xml"
+	"iptables" "iptables-restore" "iptables-save"
+)
+IP6TABLES_SYMLINKS=(
+	"ip6tables" "ip6tables-restore" "ip6tables-save"
+)
+
+# for arptables and ebtables we map names to legacy targets
+ARPTABLES_TARGETS=(
+	"arptables-legacy"
+	"xtables-nft-multi"
+)
+declare -A ARPTABLES_SYMLINKS=(
+	[arptables]="arptables-legacy"
+)
+
+EBTABLES_TARGETS=(
+	"ebtables-legacy"
+	"xtables-nft-multi"
+)
+declare -A EBTABLES_SYMLINKS=(
+	[ebtables]="ebtables-legacy"
+	[ebtables-restore]="ebtables-legacy-restore"
+	[ebtables-save]="ebtables-legacy-save"
+)
+
+# get which module is running
+get_module() {
+	local module
+	module="${BASH_SOURCE[0]##*/}"
+
+	printf -- '%s\n' "${module%.eselect}"
+}
+
+# find a list of symlink targets for the current module
+find_targets() {
+	local module target
+
+	module="$(get_module)"
+	case "${module}" in
+		iptables)
+			for target in "${EROOT}"/sbin/xtables-*-multi; do
+				[[ -x ${target} ]] && printf -- '%s\n' "${target##*/}"
+			done
+		;;
+		arptables)
+			for target in "${ARPTABLES_TARGETS[@]}"; do
+				[[ -x ${EROOT}/sbin/${target} ]] && printf -- '%s\n' "${target}"
+			done
+		;;
+		ebtables)
+			for target in "${EBTABLES_TARGETS[@]}"; do
+				[[ -x ${EROOT}/sbin/${target} ]] && printf -- '%s\n' "${target}"
+			done
+		;;
+		*) die "Invalid module name ${module}"
+	esac
+}
+
+# get the list of symlinks for the current module
+get_symlinks_list() {
+	local module
+	module="$(get_module)"
+
+	case "${module}" in
+		iptables)
+			printf -- '%s\n' "${IPTABLES_SYMLINKS[@]}"
+
+			if [[ ${1} == -a ]] || has_version 'net-firewall/iptables[ipv6(+)]'
+			then
+				printf -- '%s\n' "${IP6TABLES_SYMLINKS[@]}"
+			fi
+		;;
+		arptables) printf -- '%s\n' "${!ARPTABLES_SYMLINKS[@]}";;
+		ebtables) printf -- '%s\n' "${!EBTABLES_SYMLINKS[@]}";;
+		*) die "Invalid module name ${module}"
+	esac
+}
+
+# get the symlink target given a symlink name and the target implementation
+get_symlink_target() {	
+	local link="${1}" target="${2}" module
+	module="$(get_module)"
+
+	case "${module}" in
+		iptables) printf -- '%s\n' "${target}";;
+		arptables)
+			if [[ ${target} == *-legacy ]]; then
+				printf -- '%s\n' "${ARPTABLES_SYMLINKS[${link}]}"
+			else
+				printf -- '%s\n' "${target}"
+			fi
+		;;
+		ebtables)
+			if [[ ${target} == *-legacy ]]; then
+				printf -- '%s\n' "${EBTABLES_SYMLINKS[${link}]}"
+			else
+				printf -- '%s\n' "${target}"
+			fi
+		;;
+		*) die "Invalid module name ${module}"
+	esac
+}
+
+# set the symlinks for the current target
+set_symlinks() {
+	local target="${1}"
+	local retval=0
+
+	if is_number "${target}" && [[ ${target} -ge 1 ]]; then
+		local -a targets
+		readarray -t targets < <(find_targets)
+		target=${targets[$((target-1))]}
+	fi
+
+	if [[ -z ${target} || ! -f ${EROOT}/sbin/${target} ]]; then
+		die -q "Target \"${target}\" doesn't appear to be valid!"
+	fi
+
+	# create an array of symlinks to be created, then create them
+	# in a separate pass, it's done this way in an attempt to be atomic
+	# either all symlinks get updated, or none
+	local -a symlinks_list
+	readarray -t symlinks_list < <(get_symlinks_list)
+
+	local symlink
+	local -A do_symlinks
+	for symlink in "${symlinks_list[@]}"; do
+		local symlink_path="${EROOT}/sbin/${symlink}"
+
+		if [[ -L ${symlink_path} || ! -e ${symlink_path} ]]; then
+			do_symlinks["${symlink_path}"]="$(get_symlink_target "${symlink}" "${target}")"
+	
+		else
+			die -q "Could not create symlink at ${symlink_path}:" \
+				"path exits and is not a symlink"
+		fi
+	done
+
+	for symlink in "${!do_symlinks[@]}"; do
+		if ! ln -sfn "${do_symlinks["${symlink}"]}" "${symlink}"; then
+			write_error_message "Failed to create symlink at ${symlink}"
+			retval=1
+		fi
+	done
+
+	return "${retval}"
+}
+
+### show action ###
+
+describe_show() {
+	printf -- 'Show the current %s symlink\n' "$(get_module)"
+}
+
+do_show() {
+	local -a symlinks_list
+	readarray -t symlinks_list < <(get_symlinks_list)
+
+	local all_unset=1 symlink
+	write_list_start "Current $(get_module) symlinks:"
+	for symlink in "${symlinks_list[@]}"; do
+		symlink_path="${EROOT}/sbin/${symlink}"
+
+		if [[ -L ${symlink_path} ]]; then
+			local symlink_target
+			symlink_target=$(canonicalise "${symlink_path}")
+			write_kv_list_entry "${symlink}" "${symlink_target%/}"
+			all_unset=0
+		elif [[ ! -f ${symlink_path} ]]; then
+			write_kv_list_entry "${symlink}" "(unset)"
+	  fi
+	done
+
+	return "${all_unset}"
+}
+### list action ###
+
+describe_list() {
+	printf -- 'List available %s symlink targets\n' "$(get_module)"
+}
+
+do_list() {
+	local module
+	module="$(get_module)"
+
+	local -a targets_list symlinks_list
+	readarray -t targets_list < <(find_targets)
+	readarray -t symlinks_list < <(get_symlinks_list)
+
+	local -a targets_output
+
+	write_list_start "Available ${module} symlink targets:"
+	local symlink current_target
+	for symlink in "${symlinks_list[@]}"; do
+		local symlink_path="${EROOT}/sbin/${symlink}"
+		local target
+		for target in "${targets_list[@]}"; do
+			local symlink_target resolved_target
+			symlink_target="$(get_symlink_target "${symlink}" "${target}")"
+			resolved_target="$(basename "$(canonicalise "${symlink_path}")")"
+
+			if [[ ${resolved_target} == "${symlink_target}" ]]; then
+				if [[ -z ${current_target} ]]; then
+					current_target="${target}"
+					break
+				elif [[ ${current_target} != "${target}" ]]; then
+					write_warning_msg "Target mismatch"
+					unset current_target
+					break 2
+				fi
+			fi
+		done
+	done
+	for target in "${targets_list[@]}"; do
+		if [[ ${target} == "${current_target}" ]]; then
+			targets_output+=("$(highlight_marker "${target}")")
+		else
+			targets_output+=("${target}")
+		fi
+	done
+
+	write_numbered_list -m "(none found)" "${targets_output[@]}"
+}
+
+### set action ###
+
+describe_set() {
+	printf "Set a new $(get_module) symlink target\\n"
+}
+
+describe_set_options() {
+	printf -- "target : Target name or number (from 'list' action)\\n"
+}
+
+do_set() {
+	local target="${1}"
+
+	[[ -z ${target} ]] && die -q "You didn't tell me what to set the symlink to"
+	[[ ${#} -gt 1 ]] && die -q "Too many parameters"
+
+	set_symlinks "${target}" || die -q "Couldn't set symlinks"
+}
+
+### unset action ###
+
+describe_unset() {
+	printf -- 'Unset %s symlink targets\n' "$(get_module)"
+}
+
+do_unset() {
+	local retval=0
+
+	local -a symlinks_list
+	readarray -t symlinks_list < <(get_symlinks_list -a)
+
+	local symlink
+	for symlink in "${symlinks_list[@]}"; do
+		local symlink_path="${EROOT}/sbin/${symlink}"
+		if [[ -L ${symlink_path} ]]; then
+			unlink "${symlink_path}" || retval=${?}
+		elif [[ -e ${symlink_path} ]]; then
+			write_error_msg "Not removing non-symlink \"${symlink_path}\""
+			retval=1
+		fi
+	done
+
+	return ${retval}
+}

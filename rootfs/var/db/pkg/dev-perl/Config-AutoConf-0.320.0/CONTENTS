@@ -1,0 +1,17 @@
+dir /usr
+dir /usr/lib64
+dir /usr/lib64/perl5
+dir /usr/lib64/perl5/vendor_perl
+dir /usr/lib64/perl5/vendor_perl/5.42
+dir /usr/lib64/perl5/vendor_perl/5.42/Config
+obj /usr/lib64/perl5/vendor_perl/5.42/Config/AutoConf.pm 73eeb1a2f1bd329994df9883208c1652 1763921668
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Config
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Config/AutoConf
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Config/AutoConf/.packlist d4bf812161f7b94125c8ee94ddcb611e 1763921668
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/Config-AutoConf-0.320.0
+obj /usr/share/doc/Config-AutoConf-0.320.0/Changes.bz2 aef3aa6bf7a8f3ec8fb5ca345b9f4397 1763921668
+obj /usr/share/doc/Config-AutoConf-0.320.0/README.md.bz2 f0120b7be51673d70bf881d043976d2f 1763921668

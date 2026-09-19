@@ -1,0 +1,1 @@
+x86_32: libcrypt.so.1 libcrypt.so.2 x86_64: libcrypt.so.1 libcrypt.so.2

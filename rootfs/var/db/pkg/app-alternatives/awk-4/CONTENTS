@@ -1,0 +1,7 @@
+dir /usr
+dir /usr/bin
+sym /usr/bin/awk -> gawk 1789353853
+dir /usr/share
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/awk.1 748ae800cd84cad5941b41954eafdeca 1710328034

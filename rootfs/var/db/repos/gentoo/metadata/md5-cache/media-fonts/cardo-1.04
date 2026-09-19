@@ -1,0 +1,13 @@
+BDEPEND=app-arch/unzip X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DEFINED_PHASES=install postinst postrm setup
+DESCRIPTION=Unicode font for classicists, medievalists and linguists
+EAPI=7
+HOMEPAGE=http://scholarsfonts.net/cardofnt.html
+INHERIT=font
+IUSE=X
+KEYWORDS=amd64 ~loong ~riscv x86
+LICENSE=OFL-1.1
+SLOT=0
+SRC_URI=http://scholarsfonts.net/cardo104.zip
+_eclasses_=font	6d0c60c855c05ae2ba808d300440ded2
+_md5_=723b0134a36a584f495dc8396bfccc64

@@ -1,0 +1,17 @@
+dir /usr
+dir /usr/lib64
+dir /usr/lib64/perl5
+dir /usr/lib64/perl5/vendor_perl
+dir /usr/lib64/perl5/vendor_perl/5.42
+dir /usr/lib64/perl5/vendor_perl/5.42/Capture
+obj /usr/lib64/perl5/vendor_perl/5.42/Capture/Tiny.pm 39558d5f58d144d6f17d08088cc3193a 1763921325
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Capture
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Capture/Tiny
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Capture/Tiny/.packlist 85866ea646402d2a6aee001bf72d5b0f 1763921325
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/Capture-Tiny-0.500.0-r1
+obj /usr/share/doc/Capture-Tiny-0.500.0-r1/Changes.bz2 7aee8bc65b93f859c105d42179d0cc41 1763921325
+obj /usr/share/doc/Capture-Tiny-0.500.0-r1/README.bz2 b275200052980432bc05bcc2152dbf80 1763921326

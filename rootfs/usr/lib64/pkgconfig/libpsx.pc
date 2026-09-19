@@ -1,0 +1,11 @@
+prefix=/usr
+exec_prefix=
+libdir=/usr/lib64
+includedir=/usr/include
+
+Name: libpsx
+Description: libpsx - linux posix syscall API for threads
+Version: 2.78
+Libs: -L${libdir} -Wl,--no-as-needed -Wl,--whole-archive -lpsx -Wl,--no-whole-archive -Wl,--as-needed -lpthread
+Libs.private: 
+Cflags: -I${includedir}

@@ -1,0 +1,12 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install unpack
+DESCRIPTION=Send XMPP (Jabber) messages via command line
+EAPI=8
+HOMEPAGE=https://github.com/flowdalic/sendxmpp
+INHERIT=git-r3
+LICENSE=GPL-3+
+PROPERTIES=live
+RDEPEND=dev-java/scala-cli-bin !net-im/sendxmpp
+SLOT=0
+_eclasses_=git-r3	e6c2f983e006e805160436c75a0c1562
+_md5_=109ddb8db25c732da21baba4e000e2ee

@@ -1,0 +1,15 @@
+BDEPEND=app-text/rman sys-devel/gcc x11-misc/gccmakedep >=x11-misc/imake-1.0.8-r1
+DEFINED_PHASES=compile configure install
+DEPEND=x11-libs/libXaw
+DESCRIPTION=Fly about 3D-formed file system
+EAPI=7
+HOMEPAGE=https://xcruiser.sourceforge.net/
+INHERIT=toolchain-funcs
+KEYWORDS=~amd64 ~arm64 ~x86
+LICENSE=GPL-2+
+RDEPEND=x11-libs/libXaw
+RESTRICT=test
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/xcruiser/xcruiser-0.30.tar.gz
+_eclasses_=toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=c8f02ad72c18915722ddfa9140609c7b

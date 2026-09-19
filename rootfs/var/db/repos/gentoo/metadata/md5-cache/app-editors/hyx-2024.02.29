@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install
+DESCRIPTION=A minimalistic console hex editor with vim-like controls
+EAPI=8
+HOMEPAGE=https://yx7.cc/code/
+INHERIT=toolchain-funcs
+KEYWORDS=amd64 ppc ppc64 x86
+LICENSE=MIT
+SLOT=0
+SRC_URI=https://yx7.cc/code/hyx/hyx-2024.02.29.tar.xz
+_eclasses_=toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=5b85acd122a2cdb2bc777c68add93184

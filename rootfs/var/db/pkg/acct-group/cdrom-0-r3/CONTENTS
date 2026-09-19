@@ -1,0 +1,4 @@
+dir /usr
+dir /usr/lib
+dir /usr/lib/sysusers.d
+obj /usr/lib/sysusers.d/acct-group-cdrom.conf b4eb4b1ace1a7ccd579831890e737264 1711301147

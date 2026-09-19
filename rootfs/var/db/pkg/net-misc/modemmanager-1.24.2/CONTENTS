@@ -1,0 +1,326 @@
+dir /etc
+dir /etc/init.d
+obj /etc/init.d/modemmanager 9dd4bbb29096080820593587da0c933f 1789836540
+dir /etc/dbus-1
+dir /etc/dbus-1/system.d
+obj /etc/dbus-1/system.d/org.freedesktop.ModemManager1.conf 91eb7792b1dd55d40bc36cff94c96aac 1753733743
+dir /usr
+dir /usr/sbin
+obj /usr/sbin/ModemManager 48127f7c497f2ec289363a4c37c17461 1789836543
+dir /usr/share
+dir /usr/share/locale
+dir /usr/share/locale/he
+dir /usr/share/locale/he/LC_MESSAGES
+obj /usr/share/locale/he/LC_MESSAGES/ModemManager.mo 63e62dada0f68e84fd8892f69cfde40b 1789836537
+dir /usr/share/locale/sv
+dir /usr/share/locale/sv/LC_MESSAGES
+obj /usr/share/locale/sv/LC_MESSAGES/ModemManager.mo bf4290a1c34b4626d5ba7b9232040cf0 1789836537
+dir /usr/share/locale/fi
+dir /usr/share/locale/fi/LC_MESSAGES
+obj /usr/share/locale/fi/LC_MESSAGES/ModemManager.mo 9dcfd1b49bc6a6a009fd48ea46d0fa11 1789836537
+dir /usr/share/locale/tr
+dir /usr/share/locale/tr/LC_MESSAGES
+obj /usr/share/locale/tr/LC_MESSAGES/ModemManager.mo e9994978631e450c4ad3fca14366cd46 1789836537
+dir /usr/share/locale/nl
+dir /usr/share/locale/nl/LC_MESSAGES
+obj /usr/share/locale/nl/LC_MESSAGES/ModemManager.mo b7c78adebe75612817707f3a55fde3ef 1789836537
+dir /usr/share/locale/ca
+dir /usr/share/locale/ca/LC_MESSAGES
+obj /usr/share/locale/ca/LC_MESSAGES/ModemManager.mo 581a9c692ae2edae27d1bbfe2ad8a667 1789836536
+dir /usr/share/locale/gl
+dir /usr/share/locale/gl/LC_MESSAGES
+obj /usr/share/locale/gl/LC_MESSAGES/ModemManager.mo fcc160d53055fc356e54f463efc82424 1789836537
+dir /usr/share/locale/ka
+dir /usr/share/locale/ka/LC_MESSAGES
+obj /usr/share/locale/ka/LC_MESSAGES/ModemManager.mo 2ee050a4c17919ac1c9463faf4951ae2 1789836537
+dir /usr/share/locale/ru
+dir /usr/share/locale/ru/LC_MESSAGES
+obj /usr/share/locale/ru/LC_MESSAGES/ModemManager.mo ff4a5d6201a1cf028c73fd95c69d3d09 1789836537
+dir /usr/share/locale/da
+dir /usr/share/locale/da/LC_MESSAGES
+obj /usr/share/locale/da/LC_MESSAGES/ModemManager.mo 2811184db3421fc8ffa7d6447f7e8db7 1789836537
+dir /usr/share/locale/uk
+dir /usr/share/locale/uk/LC_MESSAGES
+obj /usr/share/locale/uk/LC_MESSAGES/ModemManager.mo b654c5a569d582f48de3e14e0c41956e 1789836537
+dir /usr/share/locale/fur
+dir /usr/share/locale/fur/LC_MESSAGES
+obj /usr/share/locale/fur/LC_MESSAGES/ModemManager.mo 18b6a424e25cae8d96b5df0c883e21ad 1789836537
+dir /usr/share/locale/id
+dir /usr/share/locale/id/LC_MESSAGES
+obj /usr/share/locale/id/LC_MESSAGES/ModemManager.mo 6f9e7894d0e4a723bebec106e284ea67 1789836537
+dir /usr/share/locale/pt_BR
+dir /usr/share/locale/pt_BR/LC_MESSAGES
+obj /usr/share/locale/pt_BR/LC_MESSAGES/ModemManager.mo 08219f4afd8fcd300f994dba1933380a 1789836537
+dir /usr/share/locale/fr
+dir /usr/share/locale/fr/LC_MESSAGES
+obj /usr/share/locale/fr/LC_MESSAGES/ModemManager.mo f91f7e093d0e9e1ff45fe4e1c8f8d010 1789836537
+dir /usr/share/locale/hu
+dir /usr/share/locale/hu/LC_MESSAGES
+obj /usr/share/locale/hu/LC_MESSAGES/ModemManager.mo 76f3142e03dce47595edfd719b95bea1 1789836537
+dir /usr/share/locale/lt
+dir /usr/share/locale/lt/LC_MESSAGES
+obj /usr/share/locale/lt/LC_MESSAGES/ModemManager.mo d2b6d8c206aeaf50cf0a345df3a1a282 1789836537
+dir /usr/share/locale/cs
+dir /usr/share/locale/cs/LC_MESSAGES
+obj /usr/share/locale/cs/LC_MESSAGES/ModemManager.mo 6251cf019e7212875fef11b094034fa3 1789836536
+dir /usr/share/locale/sk
+dir /usr/share/locale/sk/LC_MESSAGES
+obj /usr/share/locale/sk/LC_MESSAGES/ModemManager.mo 714fd6dcf450f66b65459f40bcc3304d 1789836537
+dir /usr/share/locale/it
+dir /usr/share/locale/it/LC_MESSAGES
+obj /usr/share/locale/it/LC_MESSAGES/ModemManager.mo b78189960c0bedbf64d88f0ca5742530 1789836537
+dir /usr/share/locale/de
+dir /usr/share/locale/de/LC_MESSAGES
+obj /usr/share/locale/de/LC_MESSAGES/ModemManager.mo 02e1ea0ba1ccfb5961f4edef66be81c6 1789836537
+dir /usr/share/locale/pl
+dir /usr/share/locale/pl/LC_MESSAGES
+obj /usr/share/locale/pl/LC_MESSAGES/ModemManager.mo b32b27207e74a112e3bf7b581f1fe524 1789836537
+dir /usr/share/locale/zh_CN
+dir /usr/share/locale/zh_CN/LC_MESSAGES
+obj /usr/share/locale/zh_CN/LC_MESSAGES/ModemManager.mo 195816960cd610d9d9c46290d7c798da 1789836537
+dir /usr/share/bash-completion
+dir /usr/share/bash-completion/completions
+obj /usr/share/bash-completion/completions/mmcli 274ac8cb1a981e433ae4927d1da7f397 1789836540
+dir /usr/share/icons
+dir /usr/share/icons/hicolor
+dir /usr/share/icons/hicolor/22x22
+dir /usr/share/icons/hicolor/22x22/apps
+obj /usr/share/icons/hicolor/22x22/apps/ModemManager.png c42aad1aec42bc4cd53a03613b43bda6 1753733743
+dir /usr/share/doc
+dir /usr/share/doc/modemmanager-1.24.2
+obj /usr/share/doc/modemmanager-1.24.2/NEWS.bz2 f6c8ed7d86bd4009b0a2097a0f73aec8 1789836540
+obj /usr/share/doc/modemmanager-1.24.2/README.md.bz2 7c5ea2ca19d4b0162a0cecd7d495cc0e 1789836539
+obj /usr/share/doc/modemmanager-1.24.2/AUTHORS.bz2 0b70b0253662ef9848bc1da1aab584cd 1789836539
+dir /usr/share/dbus-1
+dir /usr/share/dbus-1/interfaces
+obj /usr/share/dbus-1/interfaces/org.freedesktop.ModemManager1.Modem.Time.xml 44af4719510e44a1f93aa164f73265c7 1753733743
+obj /usr/share/dbus-1/interfaces/org.freedesktop.ModemManager1.Sim.xml 3f6b57e84a531bb1df292fb065754dca 1753733743
+obj /usr/share/dbus-1/interfaces/org.freedesktop.ModemManager1.Modem.ModemCdma.xml 8c26380f35816c73a88768f24e2fa6ef 1753733743
+obj /usr/share/dbus-1/interfaces/org.freedesktop.ModemManager1.Modem.Simple.xml b55516bc5149d86ca0782ef633dbd425 1753733743
+obj /usr/share/dbus-1/interfaces/org.freedesktop.ModemManager1.Sms.xml ba0d846eaaabbd7e22ecb446c3731b1c 1753733743
+obj /usr/share/dbus-1/interfaces/org.freedesktop.ModemManager1.xml 0c7cc0f650cab1244fdd771ea7bb3daa 1753733743
+obj /usr/share/dbus-1/interfaces/org.freedesktop.ModemManager1.Modem.Modem3gpp.ProfileManager.xml 8b04c1932b9bed5ddd9713e0a8115bf4 1753733743
+obj /usr/share/dbus-1/interfaces/org.freedesktop.ModemManager1.Modem.Firmware.xml cf18536d0eff421ded0b2642ffc001b7 1753733743
+obj /usr/share/dbus-1/interfaces/org.freedesktop.ModemManager1.Modem.Modem3gpp.xml 7e8d36b9f1edf68829445de127cd9f2f 1753733743
+obj /usr/share/dbus-1/interfaces/org.freedesktop.ModemManager1.Modem.CellBroadcast.xml a35a5eaaaf6438a35f32ad1de47fc88f 1753733743
+obj /usr/share/dbus-1/interfaces/org.freedesktop.ModemManager1.Modem.Voice.xml 31e6aafe3725d4de224dc217dc413088 1753733743
+obj /usr/share/dbus-1/interfaces/org.freedesktop.ModemManager1.Call.xml 8164ebef95b666c2b01fba8489ef65d5 1753733743
+obj /usr/share/dbus-1/interfaces/org.freedesktop.ModemManager1.Modem.Oma.xml 0fada8b3f46f429bbf419bd719358879 1753733743
+obj /usr/share/dbus-1/interfaces/org.freedesktop.ModemManager1.Modem.Sar.xml 2a1fe5a85bf62180f7d770f611d3dc3a 1753733743
+obj /usr/share/dbus-1/interfaces/org.freedesktop.ModemManager1.Modem.Messaging.xml 478569a2a5a7a27fea0c33e3518c42d5 1753733743
+obj /usr/share/dbus-1/interfaces/org.freedesktop.ModemManager1.Cbm.xml a7797d45a0dbb20ac431c0ec853ebe9d 1753733743
+obj /usr/share/dbus-1/interfaces/org.freedesktop.ModemManager1.Modem.Location.xml 9082ab9da33ed117387d0a7fe1a2d248 1753733743
+obj /usr/share/dbus-1/interfaces/org.freedesktop.ModemManager1.Modem.Modem3gpp.Ussd.xml d57dfb5200d93dfed29c249b7b719d51 1753733743
+obj /usr/share/dbus-1/interfaces/org.freedesktop.ModemManager1.Bearer.xml c4ec661f79ea2a028d7b9d31768d5f2a 1753733743
+obj /usr/share/dbus-1/interfaces/org.freedesktop.ModemManager1.Modem.xml 79101934eda22f3e0db2094ba67a329b 1753733743
+obj /usr/share/dbus-1/interfaces/org.freedesktop.ModemManager1.Modem.Signal.xml b3cd814404bfb070cc2cf3685c2bff49 1753733743
+dir /usr/share/dbus-1/system-services
+obj /usr/share/dbus-1/system-services/org.freedesktop.ModemManager1.service 51814ca68a51be4c72e2b69c187e5da6 1789836519
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/mmcli.1.bz2 9735190f458c490595195c7b6f92003f 1753733743
+dir /usr/share/man/man8
+obj /usr/share/man/man8/ModemManager.8.bz2 6d6f24d3376255be502db28fc0506329 1753733743
+dir /usr/share/ModemManager
+obj /usr/share/ModemManager/mm-foxconn-t77w968-carrier-mapping.conf 0b75d2819fb89dfd21476a79d1032379 1753733743
+dir /usr/share/ModemManager/connection.available.d
+obj /usr/share/ModemManager/connection.available.d/99-log-event 52c704e9fe641175b62381370a423d65 1753733743
+dir /usr/share/ModemManager/modem-setup.available.d
+obj /usr/share/ModemManager/modem-setup.available.d/0000:0000 42befe0f6d41d1550153d1b1a44b4b25 1753733743
+dir /usr/share/ModemManager/fcc-unlock.available.d
+obj /usr/share/ModemManager/fcc-unlock.available.d/2c7c dfa24baccc587a38d7ece3c977327990 1753733743
+obj /usr/share/ModemManager/fcc-unlock.available.d/1199 70c0cb5cc1935316e44d2a5a77e65a4e 1753733743
+obj /usr/share/ModemManager/fcc-unlock.available.d/105b 353af5fc5f367dbd1133d9b510929df5 1753733743
+sym /usr/share/ModemManager/fcc-unlock.available.d/2c7c:0314 -> 2c7c 1789836539
+sym /usr/share/ModemManager/fcc-unlock.available.d/1eac:1001 -> 2c7c 1789836539
+sym /usr/share/ModemManager/fcc-unlock.available.d/1eac:1007 -> 2c7c 1789836539
+sym /usr/share/ModemManager/fcc-unlock.available.d/105b:e0ab -> 105b 1789836539
+sym /usr/share/ModemManager/fcc-unlock.available.d/2c7c:0313 -> 2c7c 1789836539
+sym /usr/share/ModemManager/fcc-unlock.available.d/2c7c:030a -> 2c7c 1789836539
+sym /usr/share/ModemManager/fcc-unlock.available.d/413c:81a3 -> 1199 1789836539
+sym /usr/share/ModemManager/fcc-unlock.available.d/2c7c:0801 -> 2c7c 1789836539
+obj /usr/share/ModemManager/fcc-unlock.available.d/14c3 0df3d09c3239ac7647e15d25ff4627c4 1753733743
+sym /usr/share/ModemManager/fcc-unlock.available.d/105b:e0c3 -> 105b 1789836539
+dir /usr/share/gir-1.0
+obj /usr/share/gir-1.0/ModemManager-1.0.gir 5bceded4a2290b707e08f47be84f0168 1789836532
+dir /usr/lib64
+dir /usr/lib64/girepository-1.0
+obj /usr/lib64/girepository-1.0/ModemManager-1.0.typelib b1d14065254d53c38d7c23e71ca84341 1789836537
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/ModemManager.pc 1a03267d7f8e2c0b5f47a13b6455fb21 1789836520
+obj /usr/lib64/pkgconfig/mm-glib.pc 4b18c030ff62b6220fa911c5580241fc 1789836520
+obj /usr/lib64/libmm-glib.so.0.11.0 cb5ce2aec142a8db27246d7e0a68e20c 1789836543
+sym /usr/lib64/libmm-glib.so.0 -> libmm-glib.so.0.11.0 1789836539
+dir /usr/lib64/ModemManager
+obj /usr/lib64/ModemManager/libmm-plugin-ericsson-mbm.so 0bdadf5f97a57830917cdd7fd5a7ce05 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-netprisma.so ffec76b8cb8a249afeaa164b10269468 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-nokia-icera.so e701e3e9a700c39598333ecbc447822a 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-cinterion.so 4ae30035ece1098140ddf5491e94bed1 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-huawei.so 6476094f5bd3f2f17e6b3338291034f7 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-altair-lte.so c856bf953018f0fd55484bc0f4080f4e 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-rolling.so d602aa05b2ebe858c53ba04c3b196b60 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-mtk-legacy.so ac3c6c6b2f0206aef5e12bc67a3566fc 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-simtech.so 57357a6daf34ae79f8bcb7dab37d343c 1789836543
+obj /usr/lib64/ModemManager/libmm-shared-quectel.so 4c5257c873c479675792d89df95d5128 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-sierra-legacy.so bbcb989865c6247b0137c617aa45c5b3 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-gosuncn.so d77fe1157f17bc0f093cabd8bb253786 1789836543
+obj /usr/lib64/ModemManager/libmm-shared-sierra.so bfa16faec87bc52f969a2d5aff15b08d 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-broadmobi.so 0bf0c59910a57865b6de86dcee042121 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-zte.so 54f361af0dfd410106515b6cbfdf5f9e 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-anydata.so e4dd7163d47f47bd8b91b6b2ab9fb48c 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-quectel.so eb43170a9290533fcafecf1d177006c0 1789836543
+obj /usr/lib64/ModemManager/libmm-shared-xmm.so e12136faf2665c80691cc2ae04da7078 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-nokia.so 8eb4c8c954998ede4675aecb9c1d9c0d 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-novatel.so f101e0c00454e838c3b1e7fa7b15378f 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-dell.so 069a4501b7f6106ad11e4edf7089ab76 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-sierra.so 20534257e1e2edc1fd04fac6945c410d 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-pantech.so 1fba50749503c387dfdebc3d5eee6f8a 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-x22x.so e50cecd1b0eddcaa209e009eda830e57 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-ublox.so 3dab85ca8be5641a3dd9b245fd073b1d 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-telit.so 494cbb448fb5b5679ce4faff1df85092 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-option.so a5cdec705c58c7ae5609f06432fb95e0 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-mtk.so cc72d13631014f3352ae7ba8ea5ffa04 1789836543
+obj /usr/lib64/ModemManager/libmm-shared-option.so 908142afd0f7a3f17041976f33c9bc63 1789836543
+obj /usr/lib64/ModemManager/libmm-shared-foxconn.so 4e1eb3ada4b3eb5a926b3e1f832e1597 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-generic.so e9defd31f93c56d33de9ff37dbccf3ac 1789836543
+obj /usr/lib64/ModemManager/libmm-shared-icera.so a98ced0fd9d45b918643f63b79672075 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-intel.so 95629df9391b8cb3a323b47c6d6e6d0b 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-linktop.so 7fe564f9138a6f4cfe236e3797580c7f 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-thuraya.so b7c01cf290dd3432b2639933da09dc37 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-tplink.so 280437fc7e9c94f4b86db913b60ed064 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-option-hso.so 88702ecb2c853316f118850ab6de744d 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-dlink.so 09193091badd28a057565d284eb36b78 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-wavecom.so d3839ce00cb43635a179660d436fd8ed 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-novatel-lte.so ffb50bc34e3edb58ce10825c8ec59458 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-foxconn.so c16917ee099cafa5cdd11352f815993f 1789836543
+obj /usr/lib64/ModemManager/libmm-shared-novatel.so e1415fd224362c9211dcd0514f3e2a3a 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-via.so 13ff73ccfac39be3538ebe9cd8303876 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-haier.so d865cf61d03915981a0893d92617de32 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-cellient.so 5a55bfa4d35f83851dbf3bcded3df560 1789836543
+obj /usr/lib64/ModemManager/libmm-shared-telit.so fa9951cfa0ace0818ecad5e55941de56 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-fibocom.so beeff4d3c8cbc987f8583d70053a814e 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-longcheer.so 7ce4007acf733ac6d21ac8a8737dcca5 1789836543
+obj /usr/lib64/ModemManager/libmm-shared-mtk.so ad35d5ebf938f77355953182a1e86271 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-motorola.so 47f4f3a1942036e8ce3169afe6fd203a 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-qcom-soc.so 6aeb10386bfb933196a4604ff1effed6 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-iridium.so f379ea0bccf4954e3fc190e8061d23c7 1789836543
+obj /usr/lib64/ModemManager/libmm-shared-fibocom.so 46ebcd7a248727b3ee7e4a71f9be99a8 1789836543
+obj /usr/lib64/ModemManager/libmm-plugin-samsung.so fda3ea005b95fdad2cb9255ce8267d9b 1789836543
+dir /usr/bin
+obj /usr/bin/mmcli fe9bf89db3b30c6807295e40c6030759 1789836543
+dir /usr/include
+dir /usr/include/libmm-glib
+obj /usr/include/libmm-glib/mm-enums-types.h 441ce2181e75a42b4d969f8fd016e6de 1789836521
+obj /usr/include/libmm-glib/mm-network-rejection.h 5b4e41408b4a0c03ece41f6d759d50b4 1753733743
+obj /usr/include/libmm-glib/mm-modem-time.h 07e1ef600a2bcaa243e14f2e8b3bab76 1753733743
+obj /usr/include/libmm-glib/mm-sms-properties.h 4de3f53eac87c7fa5efb38d58bd7692e 1753733743
+obj /usr/include/libmm-glib/mm-signal.h 33d0ade5f63227f931274cd8de503317 1753733743
+obj /usr/include/libmm-glib/mm-bearer-ip-config.h 0b23c94564860f245c4b84d2fa1ebb57 1753733743
+obj /usr/include/libmm-glib/mm-cell-info-nr5g.h cc39ee55f137a2edce215c0f0379779d 1753733743
+obj /usr/include/libmm-glib/mm-cell-info.h 363e739871c7e9dc7d9073b7a455a595 1753733743
+obj /usr/include/libmm-glib/mm-location-common.h 2001a3fd0c955ee628d6986ee558e9b6 1753733743
+obj /usr/include/libmm-glib/mm-modem-firmware.h 545f792532f1ddda8419dbbcbce62e8c 1753733743
+obj /usr/include/libmm-glib/mm-call-audio-format.h b30f04bd0aef87119e46edf501aa1a71 1753733743
+obj /usr/include/libmm-glib/mm-cell-info-cdma.h d89a4a353d2688f81f263c3b56249121 1753733743
+obj /usr/include/libmm-glib/mm-sms.h 60b237d1ea904aba197b725c8de2165a 1753733743
+obj /usr/include/libmm-glib/mm-location-cdma-bs.h 63d3e838978190ff5106c3d2dd61fd20 1753733743
+obj /usr/include/libmm-glib/mm-location-gps-raw.h 132a9d555295570e2721a9f2a3fca86b 1753733743
+obj /usr/include/libmm-glib/mm-modem-oma.h 1a68e7a9a2c213fed6a755ca14da4159 1753733743
+obj /usr/include/libmm-glib/mm-compat.h fcad59c0434dda3a06522b17c1dba8b3 1753733743
+obj /usr/include/libmm-glib/mm-modem-voice.h 55fdb09d85e0150cc5b498074aee89c4 1753733743
+obj /usr/include/libmm-glib/mm-cell-info-umts.h 36a14af43e480f685c979219df542ed0 1753733743
+obj /usr/include/libmm-glib/mm-pco.h 59f10c144dc638b43ad301822ac7ad66 1753733743
+obj /usr/include/libmm-glib/mm-manager.h 85f9d77011598c466b2a1dba8bf297b5 1753733743
+obj /usr/include/libmm-glib/mm-gdbus-manager.h ae6caf73ff744ced36eadcc098d4c781 1789836521
+obj /usr/include/libmm-glib/mm-unlock-retries.h aecdc2de9bf99146e0d963a0c8eb9480 1753733743
+obj /usr/include/libmm-glib/mm-location-gps-nmea.h c75e8b46a84ee24048b78e7923bf9c78 1753733743
+obj /usr/include/libmm-glib/mm-call-properties.h 83d6449da2bb2927447e5a8d2ffd0a54 1753733743
+obj /usr/include/libmm-glib/mm-firmware-update-settings.h 8aead925fd4ad9ac06b7eb449a386cbc 1753733743
+obj /usr/include/libmm-glib/mm-object.h 743380eedf988d654b1a46ac39e2e949 1753733743
+obj /usr/include/libmm-glib/mm-sim-preferred-network.h 2ee6c14e59fd78372932b453954ebd41 1753733743
+obj /usr/include/libmm-glib/mm-modem-3gpp.h 382b6df9838ca03121cce794047b10e0 1753733743
+obj /usr/include/libmm-glib/mm-cell-info-tdscdma.h b68d74e05d1ec3b782b7711529860554 1753733743
+obj /usr/include/libmm-glib/mm-simple-connect-properties.h 75d50f3ccd409063f69c88cbe0d0ee49 1753733743
+obj /usr/include/libmm-glib/mm-modem-signal.h 3a7a3b5320b7fdcf25bc0a9d4475f3c9 1753733743
+obj /usr/include/libmm-glib/mm-modem-3gpp-ussd.h d9b68248f82a016db8f0811d9867239a 1753733743
+obj /usr/include/libmm-glib/mm-cell-info-gsm.h 53c7b1ebe1fab75ca8ddf32037c8a061 1753733743
+obj /usr/include/libmm-glib/mm-3gpp-profile.h 038a6375147e19fd8d9f4ea293e71798 1753733743
+obj /usr/include/libmm-glib/libmm-glib.h fb2b4e5be2cb66f1cef5f8ded41f7882 1753733743
+obj /usr/include/libmm-glib/mm-firmware-properties.h 1a3ad9141d9aa0273248cb78d177c22e 1753733743
+obj /usr/include/libmm-glib/mm-signal-threshold-properties.h 980ce95f19b639cf3217add72a68f81f 1753733743
+obj /usr/include/libmm-glib/mm-modem-sar.h 8cccb6bdf29ea42acc6571e08f80b4d9 1753733743
+obj /usr/include/libmm-glib/mm-cdma-manual-activation-properties.h 51dfb362acc07ed15ad13e2e25607b64 1753733743
+obj /usr/include/libmm-glib/mm-bearer-properties.h be8bfcc2b9b3b8bedae5da3b7e536193 1753733743
+obj /usr/include/libmm-glib/mm-nr5g-registration-settings.h 242286ae7f211859393054edf7be1860 1753733743
+obj /usr/include/libmm-glib/mm-sim.h 6edf3adaa1f4db778c1bede6839363c9 1753733743
+obj /usr/include/libmm-glib/mm-gdbus-sms.h f59fd6229265d77a8be8e84593db200f 1789836521
+obj /usr/include/libmm-glib/mm-bearer.h c0c2cbb8b3943342d56394f6b826c694 1753733743
+obj /usr/include/libmm-glib/mm-modem-cell-broadcast.h 2c824a60a3b0cf55c542f935586677a8 1753733743
+obj /usr/include/libmm-glib/mm-modem-3gpp-profile-manager.h 17b50d48d387170d399b601c30b0bf9c 1753733743
+obj /usr/include/libmm-glib/mm-errors-types.h 82641036e6135850ac0bcf1d3e88933f 1789836521
+obj /usr/include/libmm-glib/mm-modem-messaging.h 55fc3e5657f5aee0406a397d583b0cf7 1753733743
+obj /usr/include/libmm-glib/mm-kernel-event-properties.h e10ec3d13815bc0e23c9cea0d32184e1 1753733743
+obj /usr/include/libmm-glib/mm-cell-info-lte.h af213137f0cc6e9b9d68192660ac66d8 1753733743
+obj /usr/include/libmm-glib/mm-modem-cdma.h acbeec92ae36e0e183f817e9d91058c8 1753733743
+obj /usr/include/libmm-glib/mm-modem-location.h bc0e6097ea5c96f1421da39e3ae7837f 1753733743
+obj /usr/include/libmm-glib/mm-gdbus-sim.h bae19730cc996078bc4c975f887e032a 1789836521
+obj /usr/include/libmm-glib/mm-location-3gpp.h be615f475796eb85341f99730e4715c9 1753733743
+obj /usr/include/libmm-glib/mm-simple-status.h 1625832a6c775fe5a7357d3e3a97bb1e 1753733743
+obj /usr/include/libmm-glib/mm-modem-simple.h b0b734d2c83029e129031bfe97de0c07 1753733743
+obj /usr/include/libmm-glib/mm-cbm.h 83951d9a46367caf486268f952d0b2aa 1753733743
+obj /usr/include/libmm-glib/mm-flags-types.h 57531c8358c6014320f377401c74e190 1789836521
+obj /usr/include/libmm-glib/mm-gdbus-call.h f9e23b37cda2925ad722aa5b396ccd05 1789836521
+obj /usr/include/libmm-glib/mm-bearer-stats.h e34ba1ee51e8b256e69de506bee2cb16 1753733743
+obj /usr/include/libmm-glib/mm-helper-types.h 26b22eff01f04c7f5e4527ac1b0d6079 1753733743
+obj /usr/include/libmm-glib/mm-modem.h 9da734ddda053e5e24cbb14ab4bf2f5a 1753733743
+obj /usr/include/libmm-glib/mm-call.h 9d640becbc55fd49b6f8e100b31cabc5 1753733743
+obj /usr/include/libmm-glib/mm-gdbus-modem.h dc7679c8661d45ce9cfe98a3c7e466bc 1789836521
+obj /usr/include/libmm-glib/mm-gdbus-cbm.h 49e1ccb5f2f73c129fb58d27b39afd0b 1789836521
+obj /usr/include/libmm-glib/mm-gdbus-bearer.h 7fbb10cdf3b62f183ddb4f896f779741 1789836521
+obj /usr/include/libmm-glib/mm-network-timezone.h ca8d687285650a5a9831057d87097d51 1753733743
+dir /usr/include/ModemManager
+obj /usr/include/ModemManager/ModemManager-names.h 4b0dc2ed88f00002b447a880c1b9559a 1789836519
+obj /usr/include/ModemManager/ModemManager-enums.h 335cdef2257bf0816642ce30ed9f4c18 1753733743
+obj /usr/include/ModemManager/ModemManager-version.h 9f81267310017bdc311d5d782f8d1084 1789836519
+obj /usr/include/ModemManager/ModemManager.h 4bf2a0806f55090a1bd919154427f6b2 1753733743
+obj /usr/include/ModemManager/ModemManager-errors.h ff1c82fb10ff902dba8755645a342f2f 1753733743
+obj /usr/include/ModemManager/ModemManager-compat.h 43149fdd4e70500300c26ff816d7a4f1 1753733743
+dir /usr/lib
+dir /usr/lib/systemd
+dir /usr/lib/systemd/system
+obj /usr/lib/systemd/system/ModemManager.service 9a83c40d4d1d7d1af58afa78d7a90e5f 1789836519
+dir /usr/lib/udev
+dir /usr/lib/udev/rules.d
+obj /usr/lib/udev/rules.d/77-mm-nokia-port-types.rules a3ae45b81be058ccee2588d2da11aa25 1753733743
+obj /usr/lib/udev/rules.d/77-mm-rolling-port-types.rules 6957bc579529dd81aaf544570b6e7d42 1753733743
+obj /usr/lib/udev/rules.d/77-mm-mtk-legacy-port-types.rules 3bf8a939904095534ff1cac03da0cf40 1753733743
+obj /usr/lib/udev/rules.d/77-mm-gosuncn-port-types.rules b1218b7b956865ed0fb80746949b262f 1753733743
+obj /usr/lib/udev/rules.d/77-mm-fibocom-port-types.rules df7cd295ae1b4c7da66536b188762a1a 1753733743
+obj /usr/lib/udev/rules.d/80-mm-candidate.rules 10efc7fd658f81d9ca57b00c49d76974 1753733743
+obj /usr/lib/udev/rules.d/77-mm-netprisma-port-types.rules c77ba449af113ead7e0c3de5e4e0fa02 1753733743
+obj /usr/lib/udev/rules.d/77-mm-ericsson-mbm.rules 21c56a291a682300621384e6ea26ebf9 1753733743
+obj /usr/lib/udev/rules.d/77-mm-huawei-net-port-types.rules a329eeeb9ce30de30c498a55b2210295 1753733743
+obj /usr/lib/udev/rules.d/77-mm-x22x-port-types.rules 13d5bf63e73bf2246ccefe55164b479d 1753733743
+obj /usr/lib/udev/rules.d/77-mm-ublox-port-types.rules d44474545ccd692baf492332b402e1fa 1753733743
+obj /usr/lib/udev/rules.d/77-mm-telit-port-types.rules 07b2b9d12ef6eba49f79655421350973 1753733743
+obj /usr/lib/udev/rules.d/77-mm-cellient.rules 944d854b14999176efeacf3237c0c769 1753733743
+obj /usr/lib/udev/rules.d/77-mm-tplink-port-types.rules 595488d3df01a14e2d01750e32e18075 1753733743
+obj /usr/lib/udev/rules.d/77-mm-broadmobi-port-types.rules 718556a55b9ddef379c8ac29ef14e1af 1753733743
+obj /usr/lib/udev/rules.d/77-mm-simtech-port-types.rules 8d83a4d61182b44dd6d5a8250f499e9d 1753733743
+obj /usr/lib/udev/rules.d/77-mm-longcheer-port-types.rules fac92cf51874b0067fe9ce20990429ea 1753733743
+obj /usr/lib/udev/rules.d/77-mm-qcom-soc.rules fb4ffd5d886ac975ef33114b8ed71654 1753733743
+obj /usr/lib/udev/rules.d/77-mm-haier-port-types.rules a00b37b43b98972542ea098b26057b98 1753733743
+obj /usr/lib/udev/rules.d/77-mm-dell-port-types.rules 7ec906031e64eaafef9e43ba202a3357 1753733743
+obj /usr/lib/udev/rules.d/77-mm-dlink-port-types.rules 28a03db5ecb5c09d2bb17f9d51fce841 1753733743
+obj /usr/lib/udev/rules.d/77-mm-zte-port-types.rules 55e0725dad5ba3df0f41555de5f3c1fa 1753733743
+obj /usr/lib/udev/rules.d/77-mm-quectel-port-types.rules d521b7a3d9a02f294ca9950b5091240d 1753733743
+obj /usr/lib/udev/rules.d/77-mm-foxconn-port-types.rules 53dd55370ef8988dcdbc57db66e6563b 1753733743
+obj /usr/lib/udev/rules.d/77-mm-linktop-port-types.rules 255b4588a4710e49a987ab9e7d2a93a5 1753733743
+obj /usr/lib/udev/rules.d/77-mm-cinterion-port-types.rules 5f22b8e1ccf15c3b1399114934281e95 1753733743
+obj /usr/lib/udev/rules.d/77-mm-sierra.rules 7af1797a0d4036c501c8b17d32f39faf 1753733743
+sym /usr/lib64/libmm-glib.so -> libmm-glib.so.0 1789836539
+sym /usr/share/ModemManager/fcc-unlock.available.d/14c3:4d75 -> 14c3 1789836539
+sym /usr/share/ModemManager/fcc-unlock.available.d/03f0:4e1d -> 1199 1789836539
+sym /usr/share/ModemManager/fcc-unlock.available.d/1199:9079 -> 1199 1789836539
+sym /usr/share/ModemManager/fcc-unlock.available.d/1eac:1004 -> 2c7c 1789836539
+sym /usr/share/ModemManager/fcc-unlock.available.d/413c:81a8 -> 1199 1789836539

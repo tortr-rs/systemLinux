@@ -1,0 +1,15 @@
+BDEPEND=virtual/pkgconfig virtual/pkgconfig
+DEFINED_PHASES=configure install postinst postrm
+DEPEND=virtual/libusb:0
+DESCRIPTION=GEMBIRD SiS-PM control utility
+EAPI=8
+HOMEPAGE=https://sispmctl.sourceforge.net/
+INHERIT=systemd udev
+IUSE=static-libs
+KEYWORDS=~amd64 ~arm ~x86
+LICENSE=GPL-2+
+RDEPEND=virtual/libusb:0 acct-group/sispmctl
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/sispmctl/sispmctl-4.12.tar.gz
+_eclasses_=systemd	a964c0cbe818b5729da1dbfcee5be861	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5	udev	1a23882bb73bc31c64a6f00a5e515f34
+_md5_=ee2f32005a3fe0f42497c59f02b98862

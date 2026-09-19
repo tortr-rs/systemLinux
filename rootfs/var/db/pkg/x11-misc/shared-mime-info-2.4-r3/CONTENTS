@@ -1,0 +1,255 @@
+dir /usr
+dir /usr/src
+dir /usr/share
+dir /usr/share/locale
+dir /usr/share/locale/he
+dir /usr/share/locale/he/LC_MESSAGES
+obj /usr/share/locale/he/LC_MESSAGES/shared-mime-info.mo 20688e8dce543aea422b3aece5df2fa4 1773593903
+dir /usr/share/locale/es
+dir /usr/share/locale/es/LC_MESSAGES
+obj /usr/share/locale/es/LC_MESSAGES/shared-mime-info.mo 47ac22f89749bcd45f385dc6a8382c1c 1773593903
+dir /usr/share/locale/wa
+dir /usr/share/locale/wa/LC_MESSAGES
+obj /usr/share/locale/wa/LC_MESSAGES/shared-mime-info.mo 3f29553bbb85f4f82cf503e9fd896003 1773593903
+dir /usr/share/locale/sv
+dir /usr/share/locale/sv/LC_MESSAGES
+obj /usr/share/locale/sv/LC_MESSAGES/shared-mime-info.mo 1fa5162e236b50ed05ebcf06da4fbbd8 1773593903
+dir /usr/share/locale/af
+dir /usr/share/locale/af/LC_MESSAGES
+obj /usr/share/locale/af/LC_MESSAGES/shared-mime-info.mo 6e11c1c5d17c145657c33abc0d0bb0f4 1773593903
+dir /usr/share/locale/eo
+dir /usr/share/locale/eo/LC_MESSAGES
+obj /usr/share/locale/eo/LC_MESSAGES/shared-mime-info.mo a8a91222ecaf65fd9c78cd841f881acc 1773593903
+dir /usr/share/locale/fi
+dir /usr/share/locale/fi/LC_MESSAGES
+obj /usr/share/locale/fi/LC_MESSAGES/shared-mime-info.mo d8dca6883dc1f5f24dad6306d6614676 1773593903
+dir /usr/share/locale/ml
+dir /usr/share/locale/ml/LC_MESSAGES
+obj /usr/share/locale/ml/LC_MESSAGES/shared-mime-info.mo e59c29aebc8a73a82eaf9c192ff9842b 1773593903
+dir /usr/share/locale/sr@latin
+dir /usr/share/locale/sr@latin/LC_MESSAGES
+obj /usr/share/locale/sr@latin/LC_MESSAGES/shared-mime-info.mo 8d3808815d0ce35910bd791f8466e914 1773593903
+dir /usr/share/locale/tr
+dir /usr/share/locale/tr/LC_MESSAGES
+obj /usr/share/locale/tr/LC_MESSAGES/shared-mime-info.mo d56eba5a0b3dad30c1c0a47a14be80c7 1773593903
+dir /usr/share/locale/be@latin
+dir /usr/share/locale/be@latin/LC_MESSAGES
+obj /usr/share/locale/be@latin/LC_MESSAGES/shared-mime-info.mo 6122249cb4a666bfd1db5fbc1ee2436f 1773593903
+dir /usr/share/locale/kk
+dir /usr/share/locale/kk/LC_MESSAGES
+obj /usr/share/locale/kk/LC_MESSAGES/shared-mime-info.mo 94791134fe0a875734baf537985249e8 1773593903
+dir /usr/share/locale/pt
+dir /usr/share/locale/pt/LC_MESSAGES
+obj /usr/share/locale/pt/LC_MESSAGES/shared-mime-info.mo 4ef7d85372873c5e61f005b9e413d067 1773593903
+dir /usr/share/locale/cy
+dir /usr/share/locale/cy/LC_MESSAGES
+obj /usr/share/locale/cy/LC_MESSAGES/shared-mime-info.mo 65629bc0e9fecd6fdae016c23f8f29b1 1773593903
+dir /usr/share/locale/et
+dir /usr/share/locale/et/LC_MESSAGES
+obj /usr/share/locale/et/LC_MESSAGES/shared-mime-info.mo 2c0e879fed50833b3e9ec774179bd0d7 1773593903
+dir /usr/share/locale/rw
+dir /usr/share/locale/rw/LC_MESSAGES
+obj /usr/share/locale/rw/LC_MESSAGES/shared-mime-info.mo 8548cc93194809fe5cf8569e275fe5b3 1773593903
+dir /usr/share/locale/nl
+dir /usr/share/locale/nl/LC_MESSAGES
+obj /usr/share/locale/nl/LC_MESSAGES/shared-mime-info.mo fd2f3196f8f4e1e02850528aa5cbf668 1773593903
+dir /usr/share/locale/hr
+dir /usr/share/locale/hr/LC_MESSAGES
+obj /usr/share/locale/hr/LC_MESSAGES/shared-mime-info.mo c0b58f71a1d1512dbc6b189c8b9c4a63 1773593903
+dir /usr/share/locale/zh_TW
+dir /usr/share/locale/zh_TW/LC_MESSAGES
+obj /usr/share/locale/zh_TW/LC_MESSAGES/shared-mime-info.mo c9d826a4178b9386823ecb95b0be2d83 1773593903
+dir /usr/share/locale/ro
+dir /usr/share/locale/ro/LC_MESSAGES
+obj /usr/share/locale/ro/LC_MESSAGES/shared-mime-info.mo 3fc6f1217b33ff25d6227f038da0472d 1773593903
+dir /usr/share/locale/is
+dir /usr/share/locale/is/LC_MESSAGES
+obj /usr/share/locale/is/LC_MESSAGES/shared-mime-info.mo 6240aa6daa77a1ec1ef5caf3b0999c3f 1773593903
+dir /usr/share/locale/ko
+dir /usr/share/locale/ko/LC_MESSAGES
+obj /usr/share/locale/ko/LC_MESSAGES/shared-mime-info.mo e476f1fbcd05224da44b532d0b2adb0d 1773593903
+dir /usr/share/locale/te
+dir /usr/share/locale/te/LC_MESSAGES
+obj /usr/share/locale/te/LC_MESSAGES/shared-mime-info.mo 4c72ff5156c97f4eb23e2c7c26c40101 1773593903
+dir /usr/share/locale/ca
+dir /usr/share/locale/ca/LC_MESSAGES
+obj /usr/share/locale/ca/LC_MESSAGES/shared-mime-info.mo d10d853058f3c6cf7a580a2e7f28d64d 1773593903
+dir /usr/share/locale/hi
+dir /usr/share/locale/hi/LC_MESSAGES
+obj /usr/share/locale/hi/LC_MESSAGES/shared-mime-info.mo 8388c4e1e733b187d6630c4a265929a2 1773593903
+dir /usr/share/locale/bg
+dir /usr/share/locale/bg/LC_MESSAGES
+obj /usr/share/locale/bg/LC_MESSAGES/shared-mime-info.mo 2762666d469d8f1e1e8de6d74b3c182f 1773593903
+dir /usr/share/locale/ca@valencia
+dir /usr/share/locale/ca@valencia/LC_MESSAGES
+obj /usr/share/locale/ca@valencia/LC_MESSAGES/shared-mime-info.mo 123d8512a2d26cd9f6862b1279bba70b 1773593903
+dir /usr/share/locale/bn_IN
+dir /usr/share/locale/bn_IN/LC_MESSAGES
+obj /usr/share/locale/bn_IN/LC_MESSAGES/shared-mime-info.mo cddedfe7234611f1fc556f8cc95da68a 1773593903
+dir /usr/share/locale/be
+dir /usr/share/locale/be/LC_MESSAGES
+obj /usr/share/locale/be/LC_MESSAGES/shared-mime-info.mo 34531efd1aec88d86cedc663d1f6d5b1 1773593903
+dir /usr/share/locale/gl
+dir /usr/share/locale/gl/LC_MESSAGES
+obj /usr/share/locale/gl/LC_MESSAGES/shared-mime-info.mo b4df544f93c9557788797b8ba781cb7c 1773593903
+dir /usr/share/locale/ka
+dir /usr/share/locale/ka/LC_MESSAGES
+obj /usr/share/locale/ka/LC_MESSAGES/shared-mime-info.mo f4526bd6b2cffb755a762addf2bdc94a 1773593903
+dir /usr/share/locale/sq
+dir /usr/share/locale/sq/LC_MESSAGES
+obj /usr/share/locale/sq/LC_MESSAGES/shared-mime-info.mo 27eda339bf944aaeebe43e1c1430defe 1773593903
+dir /usr/share/locale/lv
+dir /usr/share/locale/lv/LC_MESSAGES
+obj /usr/share/locale/lv/LC_MESSAGES/shared-mime-info.mo 3004f89af411c592603e5844f9c388c7 1773593903
+dir /usr/share/locale/vi
+dir /usr/share/locale/vi/LC_MESSAGES
+obj /usr/share/locale/vi/LC_MESSAGES/shared-mime-info.mo 030c1d36b8801c99add1f5d0963385b7 1773593903
+dir /usr/share/locale/th
+dir /usr/share/locale/th/LC_MESSAGES
+obj /usr/share/locale/th/LC_MESSAGES/shared-mime-info.mo 4adc95d9803f66d8a84c4fb09152f045 1773593903
+dir /usr/share/locale/ru
+dir /usr/share/locale/ru/LC_MESSAGES
+obj /usr/share/locale/ru/LC_MESSAGES/shared-mime-info.mo 0f266a58fd5e0ac375131436578a25fc 1773593903
+dir /usr/share/locale/el
+dir /usr/share/locale/el/LC_MESSAGES
+obj /usr/share/locale/el/LC_MESSAGES/shared-mime-info.mo 4148de5d33119ff294ecb65a725774f9 1773593903
+dir /usr/share/locale/as
+dir /usr/share/locale/as/LC_MESSAGES
+obj /usr/share/locale/as/LC_MESSAGES/shared-mime-info.mo ada869298a6bb031bbbca3528a783d54 1773593903
+dir /usr/share/locale/ast
+dir /usr/share/locale/ast/LC_MESSAGES
+obj /usr/share/locale/ast/LC_MESSAGES/shared-mime-info.mo b211f983abb5fb74262bead63bfec778 1773593903
+dir /usr/share/locale/kn
+dir /usr/share/locale/kn/LC_MESSAGES
+obj /usr/share/locale/kn/LC_MESSAGES/shared-mime-info.mo 14ddcae0cdf2ce9ff7be0513bbc408ba 1773593903
+dir /usr/share/locale/da
+dir /usr/share/locale/da/LC_MESSAGES
+obj /usr/share/locale/da/LC_MESSAGES/shared-mime-info.mo 653f0a24f59913dd846d5bc593910937 1773593903
+dir /usr/share/locale/uk
+dir /usr/share/locale/uk/LC_MESSAGES
+obj /usr/share/locale/uk/LC_MESSAGES/shared-mime-info.mo a8f819f5db5b53dcc0149614e25ba137 1773593903
+dir /usr/share/locale/en_GB
+dir /usr/share/locale/en_GB/LC_MESSAGES
+obj /usr/share/locale/en_GB/LC_MESSAGES/shared-mime-info.mo 8e081e247d59fb7deb831514582bf4f3 1773593903
+dir /usr/share/locale/fur
+dir /usr/share/locale/fur/LC_MESSAGES
+obj /usr/share/locale/fur/LC_MESSAGES/shared-mime-info.mo 63b493558782e5990084e1431f234bb8 1773593903
+dir /usr/share/locale/pa
+dir /usr/share/locale/pa/LC_MESSAGES
+obj /usr/share/locale/pa/LC_MESSAGES/shared-mime-info.mo 6c493650bb40190a0e5580e37f2d028b 1773593903
+dir /usr/share/locale/ia
+dir /usr/share/locale/ia/LC_MESSAGES
+obj /usr/share/locale/ia/LC_MESSAGES/shared-mime-info.mo 82f5d8e8264c9d3020d6be5a96836fcb 1773593903
+dir /usr/share/locale/id
+dir /usr/share/locale/id/LC_MESSAGES
+obj /usr/share/locale/id/LC_MESSAGES/shared-mime-info.mo 1543f56caff577f4f4cc61bccefd9532 1773593903
+dir /usr/share/locale/oc
+dir /usr/share/locale/oc/LC_MESSAGES
+obj /usr/share/locale/oc/LC_MESSAGES/shared-mime-info.mo ae145586fbd381f7364fc431aac06647 1773593903
+dir /usr/share/locale/pt_BR
+dir /usr/share/locale/pt_BR/LC_MESSAGES
+obj /usr/share/locale/pt_BR/LC_MESSAGES/shared-mime-info.mo dd7e9863390024ba6ea0e25388d3af31 1773593903
+dir /usr/share/locale/fr
+dir /usr/share/locale/fr/LC_MESSAGES
+obj /usr/share/locale/fr/LC_MESSAGES/shared-mime-info.mo 4e3b651d8bd4a0c248a434c932644c1b 1773593903
+dir /usr/share/locale/az
+dir /usr/share/locale/az/LC_MESSAGES
+obj /usr/share/locale/az/LC_MESSAGES/shared-mime-info.mo bacb2ab0e6ebfa4a3dc5cd5ba801e2fb 1773593903
+dir /usr/share/locale/ga
+dir /usr/share/locale/ga/LC_MESSAGES
+obj /usr/share/locale/ga/LC_MESSAGES/shared-mime-info.mo d9eb9996844101433471aa55fa0c16c2 1773593903
+dir /usr/share/locale/fa
+dir /usr/share/locale/fa/LC_MESSAGES
+obj /usr/share/locale/fa/LC_MESSAGES/shared-mime-info.mo 1fec80d706c071c128cf89c03ce314d4 1773593903
+dir /usr/share/locale/gu
+dir /usr/share/locale/gu/LC_MESSAGES
+obj /usr/share/locale/gu/LC_MESSAGES/shared-mime-info.mo 76e6cad39df273075a6f11b10050d7ec 1773593903
+dir /usr/share/locale/nb
+dir /usr/share/locale/nb/LC_MESSAGES
+obj /usr/share/locale/nb/LC_MESSAGES/shared-mime-info.mo ffb13542914ea0be8cf5342522a23c89 1773593903
+dir /usr/share/locale/ja
+dir /usr/share/locale/ja/LC_MESSAGES
+obj /usr/share/locale/ja/LC_MESSAGES/shared-mime-info.mo 6908b3465598998b016309f7aebab2b8 1773593903
+dir /usr/share/locale/hu
+dir /usr/share/locale/hu/LC_MESSAGES
+obj /usr/share/locale/hu/LC_MESSAGES/shared-mime-info.mo 8865c5e3c40a4c4339cbfa1c0e3dd0fc 1773593903
+dir /usr/share/locale/fo
+dir /usr/share/locale/fo/LC_MESSAGES
+obj /usr/share/locale/fo/LC_MESSAGES/shared-mime-info.mo a40be02dd11e0703bebb046d147eca4a 1773593903
+dir /usr/share/locale/nn
+dir /usr/share/locale/nn/LC_MESSAGES
+obj /usr/share/locale/nn/LC_MESSAGES/shared-mime-info.mo ef0b8ce2e043a9af15fd0520bdeccb88 1773593903
+dir /usr/share/locale/lt
+dir /usr/share/locale/lt/LC_MESSAGES
+obj /usr/share/locale/lt/LC_MESSAGES/shared-mime-info.mo e4110a78085ae58ddf770367573eec56 1773593903
+dir /usr/share/locale/ar
+dir /usr/share/locale/ar/LC_MESSAGES
+obj /usr/share/locale/ar/LC_MESSAGES/shared-mime-info.mo 0050b737eb37ec0f153e80384c79f8f1 1773593903
+dir /usr/share/locale/eu
+dir /usr/share/locale/eu/LC_MESSAGES
+obj /usr/share/locale/eu/LC_MESSAGES/shared-mime-info.mo fb0e73f8613bd32c5b58ca1e7d3c4bcc 1773593903
+dir /usr/share/locale/cs
+dir /usr/share/locale/cs/LC_MESSAGES
+obj /usr/share/locale/cs/LC_MESSAGES/shared-mime-info.mo ca452984b9fe0e47bf952a03debe9add 1773593903
+dir /usr/share/locale/ky
+dir /usr/share/locale/ky/LC_MESSAGES
+obj /usr/share/locale/ky/LC_MESSAGES/shared-mime-info.mo 305897b97ddf84df894de1bed1ff58d5 1773593903
+dir /usr/share/locale/mr
+dir /usr/share/locale/mr/LC_MESSAGES
+obj /usr/share/locale/mr/LC_MESSAGES/shared-mime-info.mo d628bbdd5743d03cf5658dfa4f055be8 1773593903
+dir /usr/share/locale/sk
+dir /usr/share/locale/sk/LC_MESSAGES
+obj /usr/share/locale/sk/LC_MESSAGES/shared-mime-info.mo 8fc5af2d010f7042ca7adbbf441e4370 1773593903
+dir /usr/share/locale/si
+dir /usr/share/locale/si/LC_MESSAGES
+obj /usr/share/locale/si/LC_MESSAGES/shared-mime-info.mo 9529520564b1b8ab0b4b565642013520 1773593903
+dir /usr/share/locale/or
+dir /usr/share/locale/or/LC_MESSAGES
+obj /usr/share/locale/or/LC_MESSAGES/shared-mime-info.mo 37d0e7caa8600b6980b5848b3a8409f9 1773593903
+dir /usr/share/locale/ta
+dir /usr/share/locale/ta/LC_MESSAGES
+obj /usr/share/locale/ta/LC_MESSAGES/shared-mime-info.mo 8939dad51e412b346d810b5775827e02 1773593903
+dir /usr/share/locale/it
+dir /usr/share/locale/it/LC_MESSAGES
+obj /usr/share/locale/it/LC_MESSAGES/shared-mime-info.mo 718aff37ef950269524d0b3cdf9a57ff 1773593903
+dir /usr/share/locale/de
+dir /usr/share/locale/de/LC_MESSAGES
+obj /usr/share/locale/de/LC_MESSAGES/shared-mime-info.mo a0eda9540a038173e3c682d841f96f85 1773593903
+dir /usr/share/locale/ms
+dir /usr/share/locale/ms/LC_MESSAGES
+obj /usr/share/locale/ms/LC_MESSAGES/shared-mime-info.mo 6c62fbd432d5b1a922d2b3d48cfe3d17 1773593903
+dir /usr/share/locale/sl
+dir /usr/share/locale/sl/LC_MESSAGES
+obj /usr/share/locale/sl/LC_MESSAGES/shared-mime-info.mo 5f6cd64f2329f1dc729e8b7ea2a98260 1773593903
+dir /usr/share/locale/sr
+dir /usr/share/locale/sr/LC_MESSAGES
+obj /usr/share/locale/sr/LC_MESSAGES/shared-mime-info.mo 82ee76882c54d1b9594a99910924d4e3 1773593903
+dir /usr/share/locale/pl
+dir /usr/share/locale/pl/LC_MESSAGES
+obj /usr/share/locale/pl/LC_MESSAGES/shared-mime-info.mo 7a9b6feffacbc45a8ef9cfb0deb73155 1773593903
+dir /usr/share/locale/zh_CN
+dir /usr/share/locale/zh_CN/LC_MESSAGES
+obj /usr/share/locale/zh_CN/LC_MESSAGES/shared-mime-info.mo eeed2b317d73b191e79da4c5f1dab3ec 1773593903
+dir /usr/share/locale/zh_HK
+dir /usr/share/locale/zh_HK/LC_MESSAGES
+obj /usr/share/locale/zh_HK/LC_MESSAGES/shared-mime-info.mo 59fb72005c7037c194b32357d3796de1 1773593903
+dir /usr/share/mime
+dir /usr/share/mime/packages
+obj /usr/share/mime/packages/freedesktop.org.xml 375ed87aa91ab2f6177282137604499a 1773593904
+dir /usr/share/pkgconfig
+obj /usr/share/pkgconfig/shared-mime-info.pc 355c1313e4aafc0aaf32c23c5594577f 1773593903
+dir /usr/share/gettext
+dir /usr/share/gettext/its
+obj /usr/share/gettext/its/shared-mime-info.loc c84c91d3bcf98808ac54075445d318c9 1699779153
+obj /usr/share/gettext/its/shared-mime-info.its 046e8866a428aa02e925c044515fb207 1699779153
+dir /usr/share/doc
+dir /usr/share/doc/shared-mime-info-2.4-r3
+obj /usr/share/doc/shared-mime-info-2.4-r3/NEWS.bz2 346116d0e114343b546b1004699b6869 1773593905
+obj /usr/share/doc/shared-mime-info-2.4-r3/HACKING.md.bz2 044cc1d8a9ecb5b4f22505c4ad3d9e6a 1773593905
+obj /usr/share/doc/shared-mime-info-2.4-r3/README.md.bz2 6ea0315567799e3ddd944e811f4db178 1773593905
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/update-mime-database.1.bz2 5c461bf42d948f8c40df1242d98bd907 1699779153
+dir /usr/bin
+obj /usr/bin/update-mime-database 5d38d5a910853e8180adccf38deb4a1a 1773593906
+dir /usr/lib

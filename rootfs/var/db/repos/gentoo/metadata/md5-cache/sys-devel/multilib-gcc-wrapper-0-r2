@@ -1,0 +1,11 @@
+DEFINED_PHASES=install postinst postrm
+DESCRIPTION=Wrappers for gcc tools to be used on non-native CHOSTs
+EAPI=7
+HOMEPAGE=https://wiki.gentoo.org/wiki/No_homepage
+INHERIT=multilib
+KEYWORDS=amd64
+LICENSE=public-domain
+RDEPEND=sys-devel/gcc:=
+SLOT=0
+_eclasses_=multilib	fc812e8eb2170022c28272d80a1f9e77	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=68a42c5a6a39ee2c61921e01481f0f8d

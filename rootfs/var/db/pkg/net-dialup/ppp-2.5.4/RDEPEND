@@ -1,0 +1,1 @@
+dev-libs/openssl:0/3= virtual/libcrypt:0/2= sys-libs/pam sys-apps/systemd virtual/tmpfiles >=sys-libs/glibc-2.43-r2

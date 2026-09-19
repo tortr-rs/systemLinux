@@ -1,0 +1,1 @@
+>=dev-libs/expat-2.1.0 sys-apps/systemd:0/2= acct-user/messagebus virtual/tmpfiles >=sys-libs/glibc-2.42-r7

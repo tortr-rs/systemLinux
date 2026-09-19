@@ -1,0 +1,13 @@
+BDEPEND=app-alternatives/lex
+DEFINED_PHASES=configure install
+DESCRIPTION=A limited problem scanner for C source files
+EAPI=7
+HOMEPAGE=http://www.striker.ottawa.on.ca/~aland/pscan/
+INHERIT=toolchain-funcs
+KEYWORDS=amd64 ppc x86
+LICENSE=GPL-2
+RESTRICT=test
+SLOT=0
+SRC_URI=mirror://gentoo/pscan-20000721.tar.gz
+_eclasses_=toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=078fd3a67a02f62136014239a481779e

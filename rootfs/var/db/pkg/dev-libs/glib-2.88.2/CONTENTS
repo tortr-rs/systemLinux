@@ -1,0 +1,746 @@
+dir /usr
+dir /usr/src
+dir /usr/libexec
+obj /usr/libexec/gio-launch-desktop 23767237a9935567846aa2ce8c4cc94e 1783333639
+dir /usr/share
+dir /usr/share/locale
+dir /usr/share/locale/kab
+dir /usr/share/locale/kab/LC_MESSAGES
+obj /usr/share/locale/kab/LC_MESSAGES/glib20.mo 5bea8f0fa7fd9a93b502877468fc7095 1783333631
+dir /usr/share/locale/mn
+dir /usr/share/locale/mn/LC_MESSAGES
+obj /usr/share/locale/mn/LC_MESSAGES/glib20.mo ea0d61bf9c087a661793a885484b27d2 1783333631
+dir /usr/share/locale/he
+dir /usr/share/locale/he/LC_MESSAGES
+obj /usr/share/locale/he/LC_MESSAGES/glib20.mo 50676a8516e04acba181cc4b06cf4269 1783333631
+dir /usr/share/locale/es
+dir /usr/share/locale/es/LC_MESSAGES
+obj /usr/share/locale/es/LC_MESSAGES/glib20.mo 1ad21530e09b9c182291b075f007918f 1783333631
+dir /usr/share/locale/wa
+dir /usr/share/locale/wa/LC_MESSAGES
+obj /usr/share/locale/wa/LC_MESSAGES/glib20.mo c74595ea709c49b041d49f70ae6c95fb 1783333631
+dir /usr/share/locale/sv
+dir /usr/share/locale/sv/LC_MESSAGES
+obj /usr/share/locale/sv/LC_MESSAGES/glib20.mo da1016c21deadf0695dcd35ce64b3044 1783333631
+dir /usr/share/locale/af
+dir /usr/share/locale/af/LC_MESSAGES
+obj /usr/share/locale/af/LC_MESSAGES/glib20.mo 348b8026502d339a3c932e48037164ce 1783333626
+dir /usr/share/locale/eo
+dir /usr/share/locale/eo/LC_MESSAGES
+obj /usr/share/locale/eo/LC_MESSAGES/glib20.mo a09343e0d41e0fb530199064bc5e065a 1783333631
+dir /usr/share/locale/fi
+dir /usr/share/locale/fi/LC_MESSAGES
+obj /usr/share/locale/fi/LC_MESSAGES/glib20.mo d1c9c03e4141d9df1166797b5fb3c4b7 1783333631
+dir /usr/share/locale/ml
+dir /usr/share/locale/ml/LC_MESSAGES
+obj /usr/share/locale/ml/LC_MESSAGES/glib20.mo d8baf30aca5c754e12d8b203c3bcc9e2 1783333631
+dir /usr/share/locale/ab
+dir /usr/share/locale/ab/LC_MESSAGES
+obj /usr/share/locale/ab/LC_MESSAGES/glib20.mo 45e115771144e122daf4041b9f15c830 1783333626
+dir /usr/share/locale/sr@latin
+dir /usr/share/locale/sr@latin/LC_MESSAGES
+obj /usr/share/locale/sr@latin/LC_MESSAGES/glib20.mo 0c2bed6b9fdae13139e8b67d22d05f42 1783333631
+dir /usr/share/locale/tr
+dir /usr/share/locale/tr/LC_MESSAGES
+obj /usr/share/locale/tr/LC_MESSAGES/glib20.mo cfc5ccc0e8b8579652253436deb347dc 1783333631
+dir /usr/share/locale/be@latin
+dir /usr/share/locale/be@latin/LC_MESSAGES
+obj /usr/share/locale/be@latin/LC_MESSAGES/glib20.mo d8451d40bf433e5db8c2ef9a7014a5c7 1783333626
+dir /usr/share/locale/kk
+dir /usr/share/locale/kk/LC_MESSAGES
+obj /usr/share/locale/kk/LC_MESSAGES/glib20.mo 10c2be6ac23b83361e781eafd657eb38 1783333631
+dir /usr/share/locale/pt
+dir /usr/share/locale/pt/LC_MESSAGES
+obj /usr/share/locale/pt/LC_MESSAGES/glib20.mo c0f742848951c760aaf2d2ef394857ba 1783333631
+dir /usr/share/locale/cy
+dir /usr/share/locale/cy/LC_MESSAGES
+obj /usr/share/locale/cy/LC_MESSAGES/glib20.mo 677664c12749dfccca0e48988d2f22fb 1783333631
+dir /usr/share/locale/et
+dir /usr/share/locale/et/LC_MESSAGES
+obj /usr/share/locale/et/LC_MESSAGES/glib20.mo 211eebc764ebd69376ca575ef6266ff4 1783333631
+dir /usr/share/locale/tg
+dir /usr/share/locale/tg/LC_MESSAGES
+obj /usr/share/locale/tg/LC_MESSAGES/glib20.mo 9ecaa308f12917d5e1d52310d1bdd12a 1783333631
+dir /usr/share/locale/rw
+dir /usr/share/locale/rw/LC_MESSAGES
+obj /usr/share/locale/rw/LC_MESSAGES/glib20.mo d305fa4fa9b63e4e08a9cd68619ace57 1783333631
+dir /usr/share/locale/nl
+dir /usr/share/locale/nl/LC_MESSAGES
+obj /usr/share/locale/nl/LC_MESSAGES/glib20.mo c83a5a7c8f12176b01a38b59abd3bfa9 1783333631
+dir /usr/share/locale/hr
+dir /usr/share/locale/hr/LC_MESSAGES
+obj /usr/share/locale/hr/LC_MESSAGES/glib20.mo c83337c696894cd573759e338c40045d 1783333631
+dir /usr/share/locale/zh_TW
+dir /usr/share/locale/zh_TW/LC_MESSAGES
+obj /usr/share/locale/zh_TW/LC_MESSAGES/glib20.mo 292e3f552fefa2df471520eb40d17c71 1783333631
+dir /usr/share/locale/bn
+dir /usr/share/locale/bn/LC_MESSAGES
+obj /usr/share/locale/bn/LC_MESSAGES/glib20.mo c6b611dd69b0fc101ff364f4914f2c6f 1783333626
+dir /usr/share/locale/ug
+dir /usr/share/locale/ug/LC_MESSAGES
+obj /usr/share/locale/ug/LC_MESSAGES/glib20.mo 1c04c7f7be53bfc73669d0e5153761d2 1783333631
+dir /usr/share/locale/hy
+dir /usr/share/locale/hy/LC_MESSAGES
+obj /usr/share/locale/hy/LC_MESSAGES/glib20.mo 285d895d61d91dab0094a8b1b966bb10 1783333631
+dir /usr/share/locale/ro
+dir /usr/share/locale/ro/LC_MESSAGES
+obj /usr/share/locale/ro/LC_MESSAGES/glib20.mo f691034da5cf399170db381349d367f7 1783333631
+dir /usr/share/locale/is
+dir /usr/share/locale/is/LC_MESSAGES
+obj /usr/share/locale/is/LC_MESSAGES/glib20.mo 301ef97d68f42d5cb6cfbb4cdab182b4 1783333631
+dir /usr/share/locale/ko
+dir /usr/share/locale/ko/LC_MESSAGES
+obj /usr/share/locale/ko/LC_MESSAGES/glib20.mo 29673f984fcc37b9703d63b46289feeb 1783333631
+dir /usr/share/locale/tt
+dir /usr/share/locale/tt/LC_MESSAGES
+obj /usr/share/locale/tt/LC_MESSAGES/glib20.mo b1a2a30bc3fd8321888a435365e83a03 1783333631
+dir /usr/share/locale/bs
+dir /usr/share/locale/bs/LC_MESSAGES
+obj /usr/share/locale/bs/LC_MESSAGES/glib20.mo 2d4cb9e9b6390f29dc59657c9fddedc9 1783333631
+dir /usr/share/locale/te
+dir /usr/share/locale/te/LC_MESSAGES
+obj /usr/share/locale/te/LC_MESSAGES/glib20.mo 00f1d9fd42107d987ad5868f88a93896 1783333631
+dir /usr/share/locale/ca
+dir /usr/share/locale/ca/LC_MESSAGES
+obj /usr/share/locale/ca/LC_MESSAGES/glib20.mo b001a76482bef553aea37223c59d0dae 1783333631
+dir /usr/share/locale/hi
+dir /usr/share/locale/hi/LC_MESSAGES
+obj /usr/share/locale/hi/LC_MESSAGES/glib20.mo a481b041d5a6ddbb1241ef48706d5093 1783333631
+dir /usr/share/locale/bg
+dir /usr/share/locale/bg/LC_MESSAGES
+obj /usr/share/locale/bg/LC_MESSAGES/glib20.mo d14c155df5ef69b5c48dcb51f6e15434 1783333626
+dir /usr/share/locale/ca@valencia
+dir /usr/share/locale/ca@valencia/LC_MESSAGES
+obj /usr/share/locale/ca@valencia/LC_MESSAGES/glib20.mo 77b27ae95cac7bd09be33757bc374235 1783333631
+dir /usr/share/locale/bn_IN
+dir /usr/share/locale/bn_IN/LC_MESSAGES
+obj /usr/share/locale/bn_IN/LC_MESSAGES/glib20.mo 39d6808c16d8195204c874d78c96a796 1783333631
+dir /usr/share/locale/mg
+dir /usr/share/locale/mg/LC_MESSAGES
+obj /usr/share/locale/mg/LC_MESSAGES/glib20.mo 25be7e4f54f5028cda6e379e8a23754c 1783333631
+dir /usr/share/locale/be
+dir /usr/share/locale/be/LC_MESSAGES
+obj /usr/share/locale/be/LC_MESSAGES/glib20.mo 9b3802c7fe62c4ced0b8f4c8bd6bc999 1783333626
+dir /usr/share/locale/gl
+dir /usr/share/locale/gl/LC_MESSAGES
+obj /usr/share/locale/gl/LC_MESSAGES/glib20.mo 33eeda9ee70d05931cda1ea7b6c46185 1783333631
+dir /usr/share/locale/ka
+dir /usr/share/locale/ka/LC_MESSAGES
+obj /usr/share/locale/ka/LC_MESSAGES/glib20.mo ce8bcfab007b5c1ad6c1b52d96481729 1783333631
+dir /usr/share/locale/sr@ije
+dir /usr/share/locale/sr@ije/LC_MESSAGES
+obj /usr/share/locale/sr@ije/LC_MESSAGES/glib20.mo 4e221d938a81f607f45ca480e297608c 1783333631
+dir /usr/share/locale/mai
+dir /usr/share/locale/mai/LC_MESSAGES
+obj /usr/share/locale/mai/LC_MESSAGES/glib20.mo 1e447d4367094f57b481cc7646f73a5f 1783333631
+dir /usr/share/locale/ne
+dir /usr/share/locale/ne/LC_MESSAGES
+obj /usr/share/locale/ne/LC_MESSAGES/glib20.mo f4f544424ec9ebeb9fa026ccee7c34e9 1783333631
+dir /usr/share/locale/sq
+dir /usr/share/locale/sq/LC_MESSAGES
+obj /usr/share/locale/sq/LC_MESSAGES/glib20.mo e86a01ee0354b5153374259df9ef01ce 1783333631
+dir /usr/share/locale/en_CA
+dir /usr/share/locale/en_CA/LC_MESSAGES
+obj /usr/share/locale/en_CA/LC_MESSAGES/glib20.mo a6bb7a6a36db4ef4edf91b9f0fa45166 1783333631
+dir /usr/share/locale/lv
+dir /usr/share/locale/lv/LC_MESSAGES
+obj /usr/share/locale/lv/LC_MESSAGES/glib20.mo 5abd7244d5994e3e91ca83f1b0c5db09 1783333631
+dir /usr/share/locale/vi
+dir /usr/share/locale/vi/LC_MESSAGES
+obj /usr/share/locale/vi/LC_MESSAGES/glib20.mo be5047dd4ff8731e2d2ca040830c03c7 1783333631
+dir /usr/share/locale/th
+dir /usr/share/locale/th/LC_MESSAGES
+obj /usr/share/locale/th/LC_MESSAGES/glib20.mo 38728f65b951ec54824f31c860c1c259 1783333631
+dir /usr/share/locale/ru
+dir /usr/share/locale/ru/LC_MESSAGES
+obj /usr/share/locale/ru/LC_MESSAGES/glib20.mo 54c7b1951f92672002d2208f0a92bca3 1783333631
+dir /usr/share/locale/mk
+dir /usr/share/locale/mk/LC_MESSAGES
+obj /usr/share/locale/mk/LC_MESSAGES/glib20.mo 5d3f98ed05f75a397ab505892449cd13 1783333631
+dir /usr/share/locale/el
+dir /usr/share/locale/el/LC_MESSAGES
+obj /usr/share/locale/el/LC_MESSAGES/glib20.mo 117a59667ea9f17d7039c18389b5d1a0 1783333631
+dir /usr/share/locale/as
+dir /usr/share/locale/as/LC_MESSAGES
+obj /usr/share/locale/as/LC_MESSAGES/glib20.mo 7d9b3d18467b21cd7b3503fb374fa915 1783333626
+dir /usr/share/locale/ast
+dir /usr/share/locale/ast/LC_MESSAGES
+obj /usr/share/locale/ast/LC_MESSAGES/glib20.mo 404f80088fdb66ff567371466bdba280 1783333626
+dir /usr/share/locale/kn
+dir /usr/share/locale/kn/LC_MESSAGES
+obj /usr/share/locale/kn/LC_MESSAGES/glib20.mo b7240e55a88fa7bcf6acc8406ec90d03 1783333631
+dir /usr/share/locale/gd
+dir /usr/share/locale/gd/LC_MESSAGES
+obj /usr/share/locale/gd/LC_MESSAGES/glib20.mo 56ee1ecf673679c3ba3f9236beb00e8b 1783333631
+dir /usr/share/locale/da
+dir /usr/share/locale/da/LC_MESSAGES
+obj /usr/share/locale/da/LC_MESSAGES/glib20.mo eb098f268fee03cc7566a3dfffd7f224 1783333631
+dir /usr/share/locale/uk
+dir /usr/share/locale/uk/LC_MESSAGES
+obj /usr/share/locale/uk/LC_MESSAGES/glib20.mo a0288908179cce8b7aac52470b64719b 1783333631
+dir /usr/share/locale/en_GB
+dir /usr/share/locale/en_GB/LC_MESSAGES
+obj /usr/share/locale/en_GB/LC_MESSAGES/glib20.mo d28dc510a0bf97fa11d26ed351c9f9b2 1783333631
+dir /usr/share/locale/fur
+dir /usr/share/locale/fur/LC_MESSAGES
+obj /usr/share/locale/fur/LC_MESSAGES/glib20.mo c1f4d3908251488252b478ecf159a7bb 1783333631
+dir /usr/share/locale/xh
+dir /usr/share/locale/xh/LC_MESSAGES
+obj /usr/share/locale/xh/LC_MESSAGES/glib20.mo 97a9000d3b3e60f2e27dc1e1c14c77ad 1783333631
+dir /usr/share/locale/pa
+dir /usr/share/locale/pa/LC_MESSAGES
+obj /usr/share/locale/pa/LC_MESSAGES/glib20.mo 222d4040a99b7614d836a1116319d48f 1783333631
+dir /usr/share/locale/tl
+dir /usr/share/locale/tl/LC_MESSAGES
+obj /usr/share/locale/tl/LC_MESSAGES/glib20.mo fa7469705c9d60819ef51690171929bf 1783333631
+dir /usr/share/locale/id
+dir /usr/share/locale/id/LC_MESSAGES
+obj /usr/share/locale/id/LC_MESSAGES/glib20.mo 4b2b5ddbcf87dd803ce56e7422431524 1783333631
+dir /usr/share/locale/oc
+dir /usr/share/locale/oc/LC_MESSAGES
+obj /usr/share/locale/oc/LC_MESSAGES/glib20.mo dab55e135bfe363171963865c4df6cc0 1783333631
+dir /usr/share/locale/ku
+dir /usr/share/locale/ku/LC_MESSAGES
+obj /usr/share/locale/ku/LC_MESSAGES/glib20.mo 5e08ea08513051bee3e8df0acb3fbff0 1783333631
+dir /usr/share/locale/pt_BR
+dir /usr/share/locale/pt_BR/LC_MESSAGES
+obj /usr/share/locale/pt_BR/LC_MESSAGES/glib20.mo c8d25abdbf7bb3cbfed947963d926a18 1783333631
+dir /usr/share/locale/fr
+dir /usr/share/locale/fr/LC_MESSAGES
+obj /usr/share/locale/fr/LC_MESSAGES/glib20.mo af50f8f7eaed4e67da33a2f9f1f91ba5 1783333631
+dir /usr/share/locale/az
+dir /usr/share/locale/az/LC_MESSAGES
+obj /usr/share/locale/az/LC_MESSAGES/glib20.mo 78a9e6226fe5fadf1d77a8c706f3e95c 1783333626
+dir /usr/share/locale/ga
+dir /usr/share/locale/ga/LC_MESSAGES
+obj /usr/share/locale/ga/LC_MESSAGES/glib20.mo 5734efd44fd6208c9add204921fa17db 1783333631
+dir /usr/share/locale/am
+dir /usr/share/locale/am/LC_MESSAGES
+obj /usr/share/locale/am/LC_MESSAGES/glib20.mo a1a356e24de20c80d8affeb606cab86e 1783333626
+dir /usr/share/locale/fa
+dir /usr/share/locale/fa/LC_MESSAGES
+obj /usr/share/locale/fa/LC_MESSAGES/glib20.mo 2197e3d7db358a815f23d26c1fc84578 1783333631
+dir /usr/share/locale/gu
+dir /usr/share/locale/gu/LC_MESSAGES
+obj /usr/share/locale/gu/LC_MESSAGES/glib20.mo 34b6009ee2cf85d59667acee8d7e598a 1783333631
+dir /usr/share/locale/nds
+dir /usr/share/locale/nds/LC_MESSAGES
+obj /usr/share/locale/nds/LC_MESSAGES/glib20.mo 1eb30cb0a04adc11413e16ecc18d26cd 1783333631
+dir /usr/share/locale/nb
+dir /usr/share/locale/nb/LC_MESSAGES
+obj /usr/share/locale/nb/LC_MESSAGES/glib20.mo 11be31a1dc46c0960299789066c10a60 1783333631
+dir /usr/share/locale/ja
+dir /usr/share/locale/ja/LC_MESSAGES
+obj /usr/share/locale/ja/LC_MESSAGES/glib20.mo 5b1699b3515d1649152edc0786d4a570 1783333631
+dir /usr/share/locale/hu
+dir /usr/share/locale/hu/LC_MESSAGES
+obj /usr/share/locale/hu/LC_MESSAGES/glib20.mo 20ff2567a6f1b8bf6a525fd2b4da4cfa 1783333631
+dir /usr/share/locale/yi
+dir /usr/share/locale/yi/LC_MESSAGES
+obj /usr/share/locale/yi/LC_MESSAGES/glib20.mo 9f8bbcfcc3ee7b3c9fa6e81171f43a9a 1783333631
+dir /usr/share/locale/ie
+dir /usr/share/locale/ie/LC_MESSAGES
+obj /usr/share/locale/ie/LC_MESSAGES/glib20.mo e9e4d08460ddfcd15d074ecbd70bfeff 1783333631
+dir /usr/share/locale/nn
+dir /usr/share/locale/nn/LC_MESSAGES
+obj /usr/share/locale/nn/LC_MESSAGES/glib20.mo 050d5e390ff1c42c05276e3f2faa73fd 1783333631
+dir /usr/share/locale/lt
+dir /usr/share/locale/lt/LC_MESSAGES
+obj /usr/share/locale/lt/LC_MESSAGES/glib20.mo 83ac9d45dfcd0855f8c36219e7321bd5 1783333631
+dir /usr/share/locale/ps
+dir /usr/share/locale/ps/LC_MESSAGES
+obj /usr/share/locale/ps/LC_MESSAGES/glib20.mo a7f414921745859f9c036bb0fe91df27 1783333631
+dir /usr/share/locale/ar
+dir /usr/share/locale/ar/LC_MESSAGES
+obj /usr/share/locale/ar/LC_MESSAGES/glib20.mo b01ac710928f218829688e8eea32b54d 1783333626
+dir /usr/share/locale/eu
+dir /usr/share/locale/eu/LC_MESSAGES
+obj /usr/share/locale/eu/LC_MESSAGES/glib20.mo 4e0b49d9e18004defc77d0d8f904c1d6 1783333631
+dir /usr/share/locale/dz
+dir /usr/share/locale/dz/LC_MESSAGES
+obj /usr/share/locale/dz/LC_MESSAGES/glib20.mo 750bad1c9753afc1ed7db191001a743f 1783333631
+dir /usr/share/locale/cs
+dir /usr/share/locale/cs/LC_MESSAGES
+obj /usr/share/locale/cs/LC_MESSAGES/glib20.mo c411e256f20f8b97c48682c9d0e469ab 1783333631
+dir /usr/share/locale/mr
+dir /usr/share/locale/mr/LC_MESSAGES
+obj /usr/share/locale/mr/LC_MESSAGES/glib20.mo 9c53e7f3452e5b395383a3fa064e45d1 1783333631
+dir /usr/share/locale/sk
+dir /usr/share/locale/sk/LC_MESSAGES
+obj /usr/share/locale/sk/LC_MESSAGES/glib20.mo ef0c22f26d3d3bab7e523c8db32877c7 1783333631
+dir /usr/share/locale/si
+dir /usr/share/locale/si/LC_MESSAGES
+obj /usr/share/locale/si/LC_MESSAGES/glib20.mo e033ca995d554fcaff846f93b923911a 1783333631
+dir /usr/share/locale/an
+dir /usr/share/locale/an/LC_MESSAGES
+obj /usr/share/locale/an/LC_MESSAGES/glib20.mo cecc668796347855f73d0c435e264b79 1783333626
+dir /usr/share/locale/or
+dir /usr/share/locale/or/LC_MESSAGES
+obj /usr/share/locale/or/LC_MESSAGES/glib20.mo 70ecc3e040a07114cb474adb6f07883d 1783333631
+dir /usr/share/locale/ta
+dir /usr/share/locale/ta/LC_MESSAGES
+obj /usr/share/locale/ta/LC_MESSAGES/glib20.mo 86311f8d96bf2deda787c0f251ff3d95 1783333631
+dir /usr/share/locale/it
+dir /usr/share/locale/it/LC_MESSAGES
+obj /usr/share/locale/it/LC_MESSAGES/glib20.mo 66bff4c187c06844a2d6f4cd44a0b4ec 1783333631
+dir /usr/share/locale/de
+dir /usr/share/locale/de/LC_MESSAGES
+obj /usr/share/locale/de/LC_MESSAGES/glib20.mo 494531ee972442eba0cd7e7eb71d0904 1783333631
+dir /usr/share/locale/ms
+dir /usr/share/locale/ms/LC_MESSAGES
+obj /usr/share/locale/ms/LC_MESSAGES/glib20.mo 53cc990a4942314ddf03be9779641525 1783333631
+dir /usr/share/locale/sl
+dir /usr/share/locale/sl/LC_MESSAGES
+obj /usr/share/locale/sl/LC_MESSAGES/glib20.mo 2ca74bb8eb4268816c9fa17ac5e6c835 1783333631
+dir /usr/share/locale/sr
+dir /usr/share/locale/sr/LC_MESSAGES
+obj /usr/share/locale/sr/LC_MESSAGES/glib20.mo bb669baabdb5de865929caf9019a3ae3 1783333631
+dir /usr/share/locale/pl
+dir /usr/share/locale/pl/LC_MESSAGES
+obj /usr/share/locale/pl/LC_MESSAGES/glib20.mo 2078aab0f61529b400b6fceb3b129884 1783333631
+dir /usr/share/locale/zh_CN
+dir /usr/share/locale/zh_CN/LC_MESSAGES
+obj /usr/share/locale/zh_CN/LC_MESSAGES/glib20.mo f84d02e2e5321c824d6de2d15670b053 1783333631
+dir /usr/share/locale/en@shaw
+dir /usr/share/locale/en@shaw/LC_MESSAGES
+obj /usr/share/locale/en@shaw/LC_MESSAGES/glib20.mo ae0e1001299797a5650f187312e4797f 1783333631
+dir /usr/share/locale/zh_HK
+dir /usr/share/locale/zh_HK/LC_MESSAGES
+obj /usr/share/locale/zh_HK/LC_MESSAGES/glib20.mo 37bdec6abb16c702227e1f57307c6cc6 1783333631
+dir /usr/share/bash-completion
+dir /usr/share/bash-completion/completions
+obj /usr/share/bash-completion/completions/gio ff180887458f8c6078034fe64523d2a5 1782394518
+obj /usr/share/bash-completion/completions/gsettings d35eecbe2692e2a8578b63b7c9e27e2c 1782394518
+obj /usr/share/bash-completion/completions/gdbus ac2a7505d61852e5aea0c58d0d47c258 1782394518
+obj /usr/share/bash-completion/completions/gresource 564517a91dee02ff8414655d050630f1 1782394518
+obj /usr/share/bash-completion/completions/gapplication 0306d146d39973d9635915a0fb88eeeb 1782394518
+dir /usr/share/gdb
+dir /usr/share/gdb/auto-load
+dir /usr/share/gdb/auto-load/usr
+dir /usr/share/gdb/auto-load/usr/lib64
+obj /usr/share/gdb/auto-load/usr/lib64/libglib-2.0.so.0.8800.2-gdb.py 385628b75f5126d509b3f2abbba4535c 1783333625
+obj /usr/share/gdb/auto-load/usr/lib64/libgobject-2.0.so.0.8800.2-gdb.py 9b26af3316f1502859a04b3dbd3db40d 1783333625
+dir /usr/share/gettext
+dir /usr/share/gettext/its
+obj /usr/share/gettext/its/gschema.loc 483d08f199c40dde84d357fb226d3060 1782394518
+obj /usr/share/gettext/its/gschema.its 7ea1209820c3bfee0364c661a4aacd78 1782394518
+dir /usr/share/aclocal
+obj /usr/share/aclocal/gsettings.m4 0056fd72b8e22c579eea98e283419720 1782394518
+obj /usr/share/aclocal/glib-2.0.m4 b8e1cdb4c08c576836b5e1baaa52a615 1782394518
+obj /usr/share/aclocal/glib-gettext.m4 dd802a85a3e421b957997ecf22ad8197 1782394518
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/gtester.1.bz2 f882e973df2846289e5287cfa1ef4caf 1783333631
+obj /usr/share/man/man1/glib-gettextize.1.bz2 d3f3bef7c0cb0fa1d2fc4cd183740ae4 1783333631
+obj /usr/share/man/man1/gi-compile-repository.1.bz2 e35042dc9a5e059c1ea993f8d13856ea 1783333631
+obj /usr/share/man/man1/gresource.1.bz2 61b09a563133dc1ba2a62ac298c0566c 1783333631
+obj /usr/share/man/man1/gio.1.bz2 54b44dd1e24aa38efc81c34fb08e85af 1783333631
+obj /usr/share/man/man1/gi-decompile-typelib.1.bz2 ba72d912b33856dd946dab39819db690 1783333631
+obj /usr/share/man/man1/glib-compile-schemas.1.bz2 bdb2f2769f0f0acaaef37f16da03c15e 1783333631
+obj /usr/share/man/man1/gdbus.1.bz2 f356aa32716d25172fad2897faac7963 1783333631
+obj /usr/share/man/man1/glib-compile-resources.1.bz2 2659d04a6e7e0fdfe0befc020593771a 1783333631
+obj /usr/share/man/man1/gsettings.1.bz2 28a52277ac80821a3be2dea137f817aa 1783333631
+obj /usr/share/man/man1/gio-querymodules.1.bz2 3c73860aff021c7491a8b1bdcda8e743 1783333631
+obj /usr/share/man/man1/gi-inspect-typelib.1.bz2 d7b1ac74775339c3045ce7bfd2314e6c 1783333631
+obj /usr/share/man/man1/gobject-query.1.bz2 cba06aaa8aa290d8837162739f231fc3 1783333631
+obj /usr/share/man/man1/gapplication.1.bz2 c04a210e956d88a833ee37e1ceb8d275 1783333631
+dir /usr/share/glib-2.0
+dir /usr/share/glib-2.0/valgrind
+obj /usr/share/glib-2.0/valgrind/glib.supp 8e9f0297ac6b8b136f9ad2d0ce7485bd 1782394518
+dir /usr/share/glib-2.0/dtds
+obj /usr/share/glib-2.0/dtds/gresource.dtd fe3e277504cab7462eaad2f6739b818d 1782394518
+dir /usr/share/glib-2.0/schemas
+obj /usr/share/glib-2.0/schemas/gschemas.compiled d41d8cd98f00b204e9800998ecf8427e 1789836476
+obj /usr/share/glib-2.0/schemas/gschema.dtd 8c7c0cc67d63e1de367c04e53be1ce1f 1782394518
+dir /usr/share/glib-2.0/gdb
+obj /usr/share/glib-2.0/gdb/gobject_gdb.py 81b12c2863d5b2878d97c7a705dd3779 1782394518
+obj /usr/share/glib-2.0/gdb/glib_gdb.py 32c0cf071f4cb7e1bc5d3bdaade8f671 1782394518
+dir /usr/share/glib-2.0/gettext
+dir /usr/share/glib-2.0/gettext/po
+obj /usr/share/glib-2.0/gettext/po/Makefile.in.in 72b0d15a18d7176ab88dd7fac3205f12 1782394518
+dir /usr/share/gir-1.0
+obj /usr/share/gir-1.0/Gio-2.0.gir b227ac4e2a790c1ceec255f4fbc671a7 1783333636
+obj /usr/share/gir-1.0/GioUnix-2.0.gir d91454d0a5177983a4e9706c74657a36 1783333636
+obj /usr/share/gir-1.0/GModule-2.0.gir bb19321257fdba1f37142d710db8f15a 1783333634
+obj /usr/share/gir-1.0/GLib-2.0.gir 64c557ca20184185d194ea6f35e76808 1783333633
+obj /usr/share/gir-1.0/GIRepository-3.0.gir e945e0a2425b17010dfbd6003f5e9e11 1783333636
+obj /usr/share/gir-1.0/GObject-2.0.gir da265c825828abc5b35a53382c6ccc93 1783333634
+obj /usr/share/gir-1.0/GLibUnix-2.0.gir 7a4da43359ef9584bca4e940dd7bafd5 1783333634
+dir /usr/lib64
+obj /usr/lib64/libglib-2.0.so.0.8800.2 c20b360dd96943c900712ca9a4129f47 1783333639
+obj /usr/lib64/libgthread-2.0.so.0.8800.2 60c22e874035970e567d6b723e02d82c 1783333639
+dir /usr/lib64/gio
+dir /usr/lib64/gio/modules
+obj /usr/lib64/gio/modules/.keep_dev-libs_glib-2 d41d8cd98f00b204e9800998ecf8427e 1783333638
+obj /usr/lib64/gio/modules/giomodule.cache d41d8cd98f00b204e9800998ecf8427e 1789836476
+dir /usr/lib64/girepository-1.0
+obj /usr/lib64/girepository-1.0/GModule-2.0.typelib dd10372f5d14ccb6a7ca9709dde6af9b 1783333634
+obj /usr/lib64/girepository-1.0/GLib-2.0.typelib 3ac4e8941fde992c5b96d8b2da7cb247 1783333633
+obj /usr/lib64/girepository-1.0/Gio-2.0.typelib a15f10dc16a580cf15006eceaa054842 1783333636
+obj /usr/lib64/girepository-1.0/GLibUnix-2.0.typelib ba25e12b38528eb852bbf6adeeda41e7 1783333634
+obj /usr/lib64/girepository-1.0/GObject-2.0.typelib 500c6c9d89d470c5a27bdbcfc838b453 1783333634
+obj /usr/lib64/girepository-1.0/GIRepository-3.0.typelib c0a997ca8780758e0fc146f84831cfa9 1783333637
+obj /usr/lib64/girepository-1.0/GioUnix-2.0.typelib 1f0f66e59e0112d927e3c09f3d120e92 1783333637
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/glib-2.0.pc 5a67fd523892dcaeaf6494a3636fe829 1783333625
+obj /usr/lib64/pkgconfig/girepository-2.0.pc 745f27aaa5dac8308a595c94b6d3b24b 1783333625
+obj /usr/lib64/pkgconfig/gmodule-export-2.0.pc 655dc7a8a289d9ea47f1bbe484917c45 1783333625
+obj /usr/lib64/pkgconfig/gthread-2.0.pc c11768b66da7379b2de5eee21d42d54e 1783333625
+obj /usr/lib64/pkgconfig/gmodule-no-export-2.0.pc 62317efd92eed76deb7671896d7b0b82 1783333625
+obj /usr/lib64/pkgconfig/gmodule-2.0.pc 655dc7a8a289d9ea47f1bbe484917c45 1783333625
+obj /usr/lib64/pkgconfig/gio-unix-2.0.pc da8db93a5a79c10dbc95634ea7093198 1783333625
+obj /usr/lib64/pkgconfig/gobject-2.0.pc 856938ce201129b622d205efc7911bf8 1783333625
+obj /usr/lib64/pkgconfig/gio-2.0.pc 4a92527fa65c36ccec282f2241cc0a90 1783333625
+sym /usr/lib64/libglib-2.0.so.0 -> libglib-2.0.so.0.8800.2 1789836475
+obj /usr/lib64/libgobject-2.0.so.0.8800.2 6de2c6f50974057e564b8739a213f689 1783333639
+obj /usr/lib64/libgio-2.0.so.0.8800.2 d2b9698644218a00ed2091a096e4b626 1783333639
+sym /usr/lib64/libglib-2.0.so -> libglib-2.0.so.0 1789836475
+obj /usr/lib64/libgirepository-2.0.so.0.8800.2 8d8e0b209bc145b01a0fa5dcb56efbad 1783333639
+dir /usr/lib64/glib-2.0
+dir /usr/lib64/glib-2.0/include
+obj /usr/lib64/glib-2.0/include/glibconfig.h 08d23ba76bf24161bdbcf460323a62e3 1783333625
+sym /usr/lib64/libgthread-2.0.so.0 -> libgthread-2.0.so.0.8800.2 1789836475
+obj /usr/lib64/libgmodule-2.0.so.0.8800.2 113597894d38d424e2d7398502c4e195 1783333639
+dir /usr/bin
+obj /usr/bin/glib-gettextize 6b00b610666fb255ae8601901371411d 1783333625
+obj /usr/bin/x86_64-pc-linux-gnu-gio-querymodules 6d2d4c57ba2fa0f7d9db9bdf943a8f5a 1783333639
+obj /usr/bin/gio 626cab72a6d1d3d9aeb7054544149c1c 1783333639
+obj /usr/bin/gsettings 01c4300b2760bb280cccdb04ea606c48 1783333639
+obj /usr/bin/gtester 77d50a9d57b6eedec44e8fdd3505a27d 1783333639
+obj /usr/bin/glib-compile-schemas f865379d32bfeec42f3c8fc9f14833e7 1783333639
+obj /usr/bin/gi-decompile-typelib 293787a5aa7d6a145a31989f5ddef54a 1783333639
+obj /usr/bin/gdbus c86917d84b85fa42ec70af2a42757c08 1783333639
+sym /usr/bin/gio-querymodules -> x86_64-pc-linux-gnu-gio-querymodules 1789836475
+obj /usr/bin/gobject-query e37c0b6bb5a987593a4dadf64d04e18b 1783333639
+obj /usr/bin/gresource 35ce1e775019fa59e3c81d3bd1835318 1783333639
+obj /usr/bin/gi-compile-repository 834b6eae9a108205d946a529c8e40ae6 1783333639
+obj /usr/bin/gapplication 3521dbb440ba956f67a64798ee0d22a2 1783333639
+obj /usr/bin/glib-compile-resources 773cdc9a2f71065edd30e508899e58fc 1783333639
+obj /usr/bin/gi-inspect-typelib bfb610eda7d21cd6a9d152672c7f8186 1783333639
+dir /usr/include
+dir /usr/include/gio-unix-2.0
+dir /usr/include/gio-unix-2.0/gio
+obj /usr/include/gio-unix-2.0/gio/gdesktopappinfo.h 4ae9d013dfb31bd151bb8f4db4dd039e 1783333594
+obj /usr/include/gio-unix-2.0/gio/gunixinputstream.h 7dad38add0d393201b6722b2c8769a74 1783333594
+obj /usr/include/gio-unix-2.0/gio/gunixoutputstream.h 110c188ff731047d2ceae007442b35e6 1783333594
+obj /usr/include/gio-unix-2.0/gio/gunixfdmessage.h 0cb4df6a410218c70d2ac1e5ec647bfd 1783333594
+obj /usr/include/gio-unix-2.0/gio/gfiledescriptorbased.h 1395f0eb58804d7f02b596636b229b9b 1783333594
+obj /usr/include/gio-unix-2.0/gio/gunixmounts.h 187725376b2d714b5181918f0bbe05da 1783333594
+dir /usr/include/glib-2.0
+obj /usr/include/glib-2.0/glib-unix.h 58aa1d52bd8283823263f0a0c06dfc68 1782394518
+dir /usr/include/glib-2.0/gio
+obj /usr/include/glib-2.0/gio/gconverter.h da65c9b26d36fec55c7db2456858d63c 1783333593
+obj /usr/include/glib-2.0/gio/gtlsbackend.h 7098582f7e9a98ce2d76042265672c82 1783333594
+obj /usr/include/glib-2.0/gio/gsubprocess.h eea0ad75e2369da58adf36486556c239 1783333594
+obj /usr/include/glib-2.0/gio/gpollableoutputstream.h 2f5b7522a1b3e0e22a2f95bcf049b39f 1783333594
+obj /usr/include/glib-2.0/gio/gsocketservice.h 1ab60d02f4cb0b5c21927c25bbffe018 1782394518
+obj /usr/include/glib-2.0/gio/gsocketcontrolmessage.h c07fbb81b40ea87995bdca0c34d544d7 1783333594
+obj /usr/include/glib-2.0/gio/ginetsocketaddress.h 9b195dbd6ed03a3c29b235624b6d29df 1783333594
+obj /usr/include/glib-2.0/gio/gsocketconnection.h 37f89f82fc45b51104ecabfbcabb9549 1783333594
+obj /usr/include/glib-2.0/gio/gnetworking.h 5a9bf70f292ba0ab1960f16e3d4876eb 1783333625
+obj /usr/include/glib-2.0/gio/gunixcredentialsmessage.h 482875cee507f5818205c7f5bbc6ca69 1783333594
+obj /usr/include/glib-2.0/gio/gaction.h c0b5ea448cb9b52353097152e63e342d 1783333593
+obj /usr/include/glib-2.0/gio/gioenums.h d2db1f277f59b1a2bfc14d65822c2afb 1782394518
+obj /usr/include/glib-2.0/gio/gapplication.h edeb3fc4c3c9d2704e8de42ecad07ba5 1783333593
+obj /usr/include/glib-2.0/gio/gdbusinterfaceskeleton.h 839ab7bad566a11a41c4a170ff450b6f 1783333594
+obj /usr/include/glib-2.0/gio/gactionmap.h b59666875056ccbd081cfffaaf28ea73 1783333593
+obj /usr/include/glib-2.0/gio/gbytesicon.h a2cb9d2e2d882110c9eb912a62e5b87a 1783333593
+obj /usr/include/glib-2.0/gio/gdbusobjectskeleton.h f3c5b47e9d6972b107122e942052d006 1783333594
+obj /usr/include/glib-2.0/gio/gsettingsschema.h 456f7c4ed660ca4a5d4a5cebbe0444a2 1783333594
+obj /usr/include/glib-2.0/gio/gio-visibility.h 282132641227d799c656fd0d7893a472 1783333626
+obj /usr/include/glib-2.0/gio/gseekable.h 68526fe9746991f47997dccd27df7215 1783333594
+obj /usr/include/glib-2.0/gio/gfileoutputstream.h 55ee370ef022de40e3cc7462c3a06d9f 1783333594
+obj /usr/include/glib-2.0/gio/gsettings.h f6f601c18b679815a2d848c6a095dcfe 1782394518
+obj /usr/include/glib-2.0/gio/glistmodel.h 38a9574cc5a180f6e755efef78d65737 1782394518
+obj /usr/include/glib-2.0/gio/gfilemonitor.h 4ae0d7276af31f462eb4bfff315e1ae2 1783333594
+obj /usr/include/glib-2.0/gio/gliststore.h 778dcc71d49836a69c706179030976e5 1782394518
+obj /usr/include/glib-2.0/gio/gioerror.h d0edb368627e128ab7b46845d23d799d 1782394518
+obj /usr/include/glib-2.0/gio/gcontenttype.h b0b1871cdded645d72520a70170afc1e 1782394518
+obj /usr/include/glib-2.0/gio/gdbusmethodinvocation.h d40f4fe5a33a7cbdd9c2695aeee00d37 1783333594
+obj /usr/include/glib-2.0/gio/gtlsinteraction.h e21bb8140b1cf1456a0a30409b0e1d83 1783333594
+obj /usr/include/glib-2.0/gio/gactiongroupexporter.h 8ba5ffbb2918da6390495fe3bebdea60 1782394518
+obj /usr/include/glib-2.0/gio/gsocketlistener.h 55d7e064031fdfd796c16c0922db604c 1783333594
+obj /usr/include/glib-2.0/gio/gmount.h d3425897075bae68d087a64f0999f75b 1783333594
+obj /usr/include/glib-2.0/gio/gconverterinputstream.h 46a9dbbd49c24a4dc46499880c00c1bd 1783333593
+obj /usr/include/glib-2.0/gio/gpowerprofilemonitor.h 102a140d48382d55f3d83f47fb2de2bc 1782394518
+obj /usr/include/glib-2.0/gio/gnotification.h debe416d6bf214f577199cdffc759774 1783333594
+obj /usr/include/glib-2.0/gio/gnativevolumemonitor.h eae2fcbb935a674f0670657a2ad0e8f9 1783333594
+obj /usr/include/glib-2.0/gio/gpollableutils.h 248813df7a2249bbea3fd0e464f21c3f 1782394518
+obj /usr/include/glib-2.0/gio/gdbusserver.h 11dca970abd94ca670844f10cf787f83 1783333594
+obj /usr/include/glib-2.0/gio/gdbusintrospection.h d1a11e8ef5c5a39d6514ec8ada13872c 1783333594
+obj /usr/include/glib-2.0/gio/gdtlsserverconnection.h 49c3af273fd130dfe6caa6fb91e6791e 1783333594
+obj /usr/include/glib-2.0/gio/gvolumemonitor.h d7e159f384a10b8b853a5c40dc7cec6e 1783333594
+obj /usr/include/glib-2.0/gio/goutputstream.h a36be76f22ce5dcf5f22304faa0b5c05 1783333594
+obj /usr/include/glib-2.0/gio/gproxy.h 361d0afba5f911c1c5a7946d976b02cc 1783333594
+obj /usr/include/glib-2.0/gio/gdataoutputstream.h 7c204d08bb7345f38c31cde1b4eb0ad1 1783333593
+obj /usr/include/glib-2.0/gio/gmenuexporter.h 0491d05fa175dd97ce92d10feddd1d69 1782394518
+obj /usr/include/glib-2.0/gio/gunixsocketaddress.h 57dc79bf4cb2f99d990b0580a67f14fb 1783333594
+obj /usr/include/glib-2.0/gio/gfilterinputstream.h 118b6f122670b7cdc98568f4ad7db9e3 1783333594
+obj /usr/include/glib-2.0/gio/gdbusnamewatching.h 20b38a0514fa468fe25751557b5557ea 1782394518
+obj /usr/include/glib-2.0/gio/gtlsserverconnection.h bdc5d776972e58bddf8e3bcf9b5754de 1783333594
+obj /usr/include/glib-2.0/gio/gtlsconnection.h 57d369c7c9778195685a2eec375aae5c 1783333594
+obj /usr/include/glib-2.0/gio/gdbusobject.h 211cc6bd4067bd08e96688c6bed28221 1783333594
+obj /usr/include/glib-2.0/gio/gsocket.h 761acf7ea045ac1c79d851620d5e2a10 1783333594
+obj /usr/include/glib-2.0/gio/gsimpleaction.h a8a8b21e5af4336d5b9ac59489f26f03 1783333594
+obj /usr/include/glib-2.0/gio/gconverteroutputstream.h 505242998e8c45b3f69a9d5e5ac053d0 1783333593
+obj /usr/include/glib-2.0/gio/gsocketaddressenumerator.h 1e870ec1875e527f3dd45d00475085b9 1783333594
+obj /usr/include/glib-2.0/gio/gunixconnection.h ec43ca3d449d1ae6e2fabb3828f7a2dc 1782394518
+obj /usr/include/glib-2.0/gio/gfilenamecompleter.h 93a5174810256fc3a31fd72ff3e9fbd0 1783333594
+obj /usr/include/glib-2.0/gio/gfileinputstream.h c8278a0668c113f750bc1d56a05edb02 1783333594
+obj /usr/include/glib-2.0/gio/gcancellable.h 2817b82f446ccaf2f70c38d1b05341fe 1783333593
+obj /usr/include/glib-2.0/gio/gfileenumerator.h c1912e0f7993b4968b14efd68ba734ae 1783333594
+obj /usr/include/glib-2.0/gio/gmenumodel.h ad82f56dabbcdbe6f87d2caf647f5aaf 1783333594
+obj /usr/include/glib-2.0/gio/gthreadedsocketservice.h e463ebe205f9ed500b42cc9e17bd0892 1782394518
+obj /usr/include/glib-2.0/gio/gdatagrambased.h 843cdbb513f0824877b8c0eb0fff734e 1782394518
+obj /usr/include/glib-2.0/gio/gdbusmessage.h 70bf485e49a568960708145ec256fb38 1783333594
+obj /usr/include/glib-2.0/gio/gdebugcontrollerdbus.h 5ff1274a4953bd39efce313beb4fa573 1782394518
+obj /usr/include/glib-2.0/gio/gsimpleasyncresult.h 572ec72c568f12ad95fb0aabdd103bf9 1783333594
+obj /usr/include/glib-2.0/gio/gioenumtypes.h fd8eb85b9003ba803eb34b062e85166e 1783333627
+obj /usr/include/glib-2.0/gio/gdbuserror.h 2832cae38b8bf18b483f566f9e08d14c 1782394518
+obj /usr/include/glib-2.0/gio/gappinfo.h 954aceac23842195dc63b3ca9bb7d66b 1783333593
+obj /usr/include/glib-2.0/gio/gdbusinterface.h 7f57a1a2d8d1d2d39a8b590a5d8384d4 1783333594
+obj /usr/include/glib-2.0/gio/giotypes.h abc9f0d5c2ff5e3dcd34e768cb7ea47b 1782394518
+obj /usr/include/glib-2.0/gio/gproxyresolver.h 1d4b9e22d24cff066cc590fc2ebaa6e6 1783333594
+obj /usr/include/glib-2.0/gio/gnativesocketaddress.h 49202f9a571e12b20f4c374b7e6e470c 1783333594
+obj /usr/include/glib-2.0/gio/gdbusproxy.h 417e04bfaae93490acc586894b48b31b 1783333594
+obj /usr/include/glib-2.0/gio/gsocketclient.h fbab8013919ee4fba59a55c51cd7397d 1783333594
+obj /usr/include/glib-2.0/gio/gzlibcompressor.h caa8bd833309ca00699979c637e89cac 1783333594
+obj /usr/include/glib-2.0/gio/gtlsfiledatabase.h 01b330053c81fedf7abac4eefc27228f 1783333594
+obj /usr/include/glib-2.0/gio/gmountoperation.h bf52f4a39125b59cb270c72e4786a2d7 1783333594
+obj /usr/include/glib-2.0/gio/gsrvtarget.h 334bfd19b264c99619c0fa109247c756 1783333594
+obj /usr/include/glib-2.0/gio/giptosmessage.h be02778cff2d9ccacb2aebf7b265be60 1782394518
+obj /usr/include/glib-2.0/gio/gtcpwrapperconnection.h a5da5ac200fb4d768304d1b6b4657f57 1783333594
+obj /usr/include/glib-2.0/gio/gicon.h 8945a68f0ccc403d6b608b201ac769a4 1783333594
+obj /usr/include/glib-2.0/gio/gresolver.h 5c656893677163be34a75e9135b24f59 1783333594
+obj /usr/include/glib-2.0/gio/gdtlsclientconnection.h c4f16bd0f551e0c583a1a48e0c1f36ec 1783333594
+obj /usr/include/glib-2.0/gio/gemblemedicon.h 340e839f48b203fc1e1ab779afd9f58b 1783333594
+obj /usr/include/glib-2.0/gio/gsocketaddress.h 83197a13591db68f46bf6fd4f28527c3 1783333594
+obj /usr/include/glib-2.0/gio/gasyncinitable.h ac86e0ba347712297d5aefec989daf5e 1783333593
+obj /usr/include/glib-2.0/gio/gbufferedinputstream.h 500592572f10b0d01447ba8c7d659281 1783333593
+obj /usr/include/glib-2.0/gio/gpropertyaction.h 83708ee5523c3b6beb76d2bf55a9ac2c 1783333594
+obj /usr/include/glib-2.0/gio/ginputstream.h 62ec3dba555138014e12af35fde3cdff 1783333594
+obj /usr/include/glib-2.0/gio/gthemedicon.h 0d1fb249de623c44a87e3e8d7748c886 1783333594
+obj /usr/include/glib-2.0/gio/ginitable.h b396731232123fe423b82a13950c4968 1783333594
+obj /usr/include/glib-2.0/gio/gpermission.h 892897e62c27a7992c2f2c0298d04591 1782394518
+obj /usr/include/glib-2.0/gio/gdbusobjectmanager.h c73f5467ff0b04789ae33eb0253574a8 1783333594
+obj /usr/include/glib-2.0/gio/gresource.h f9ce9b41273b283887a8bfe50f3d8ec7 1783333594
+obj /usr/include/glib-2.0/gio/gtask.h a97e14683bb0898c1f7cb5fe2a4237eb 1783333594
+obj /usr/include/glib-2.0/gio/gsimpleiostream.h e6e95486bb481723ab872cf3acccf9a8 1783333594
+obj /usr/include/glib-2.0/gio/gtlscertificate.h 78bb273d1ec373476f2d7861bfe13dc4 1783333594
+obj /usr/include/glib-2.0/gio/gdbusaddress.h 18b9c577d5afa7e83cac69d16ba47db5 1782394518
+obj /usr/include/glib-2.0/gio/gnetworkservice.h cd412fadaeecbd1a43431942dfa82706 1783333594
+obj /usr/include/glib-2.0/gio/gpollableinputstream.h b407b12db9832c25254779958bf099f8 1783333594
+obj /usr/include/glib-2.0/gio/gdbusactiongroup.h 5e7ec326d20faa093db3dc6dfa460a3b 1783333593
+obj /usr/include/glib-2.0/gio/gloadableicon.h 0c95f022fc45e566842f29df541b5ed5 1783333594
+obj /usr/include/glib-2.0/gio/gio.h bc167202af6a59220458aa0f4bd306b7 1782394518
+obj /usr/include/glib-2.0/gio/gfileicon.h 0a105f7d3680ea72465dd86ddb835066 1783333594
+obj /usr/include/glib-2.0/gio/gtestdbus.h 1a3640fe55ee7acb231e7de03efd4ceb 1783333594
+obj /usr/include/glib-2.0/gio/gtcpconnection.h df42cf621cbd84808903e39a3d602e28 1783333594
+obj /usr/include/glib-2.0/gio/gnetworkmonitor.h c30598c85b6a87aa0affcee1cd65481b 1783333594
+obj /usr/include/glib-2.0/gio/ginetaddressmask.h 0d92ed86cdf259084b66c610ed398fd8 1783333594
+obj /usr/include/glib-2.0/gio/gdtlsconnection.h 5987f4473e58b74be5ad2b91d40f357a 1783333594
+obj /usr/include/glib-2.0/gio/gdbusmenumodel.h 3bfa39582ba2b7f7940760f81387f24b 1783333594
+obj /usr/include/glib-2.0/gio/gsubprocesslauncher.h 7d4831d794e1b7e4df8710f4ebcddcd2 1783333594
+obj /usr/include/glib-2.0/gio/gapplicationcommandline.h 27a525d13eb3eb42415d2d631d6fcdec 1783333593
+obj /usr/include/glib-2.0/gio/gdbusutils.h 10ecd1a2c615495b1d0858f8a85a6255 1782394518
+obj /usr/include/glib-2.0/gio/gio-autocleanups.h b385aa8e5c9c0018c3af283def05611a 1782394518
+obj /usr/include/glib-2.0/gio/gfile.h 7235ca2a42881aae222e5a688c36ba0c 1783333594
+obj /usr/include/glib-2.0/gio/gsimpleproxyresolver.h ee0ffb516f4d40a3944e533edfd65f01 1783333594
+obj /usr/include/glib-2.0/gio/gdbusauthobserver.h 789dfe26416e174a2c44216ceb446dcc 1783333593
+obj /usr/include/glib-2.0/gio/gtlspassword.h f427d7a501b31681e87bd3ec3636b4ac 1783333594
+obj /usr/include/glib-2.0/gio/giostream.h e18788c0c1b0d75159a5a97c1e3dea78 1783333594
+obj /usr/include/glib-2.0/gio/gdbusobjectmanagerserver.h a1c43aae1cd4474622964a9f1e97a449 1783333594
+obj /usr/include/glib-2.0/gio/gcredentials.h f7c39fcdfe120e540933d7f2b8c8d8b3 1783333593
+obj /usr/include/glib-2.0/gio/gioscheduler.h 26f684206839b016eb4514d3e63f291d 1782394518
+obj /usr/include/glib-2.0/gio/giomodule.h 1f4ad03ba0cf4c15f1b71eea223e35b7 1783333594
+obj /usr/include/glib-2.0/gio/gemblem.h 0a3ad61df17ecd3fc0858567cf039929 1783333594
+obj /usr/include/glib-2.0/gio/gmemoryinputstream.h 7e9bf919d09080a6043779f8d10ddc58 1783333594
+obj /usr/include/glib-2.0/gio/gbufferedoutputstream.h c26aaa992c4f898d03acbaa9669b77d4 1783333593
+obj /usr/include/glib-2.0/gio/gasyncresult.h 7bff77c73bba6c8af3e21a2876a19f3e 1783333593
+obj /usr/include/glib-2.0/gio/gdbusconnection.h 1ca66b4f9a0711c71fe9ff1fd77805f9 1783333593
+obj /usr/include/glib-2.0/gio/gcharsetconverter.h 9b6b83fa000fae9d624c3d47d102926c 1783333593
+obj /usr/include/glib-2.0/gio/gzlibdecompressor.h ac3249c60eb293535b1dcb299a559a91 1783333594
+obj /usr/include/glib-2.0/gio/gtlsdatabase.h 3e2869d5edb1b61421dc379560ec4833 1783333594
+obj /usr/include/glib-2.0/gio/gtlsclientconnection.h b99b167aed0d96703e84c2ca9b2d7a99 1783333594
+obj /usr/include/glib-2.0/gio/ginetaddress.h 3686c31940e11de1384418a31d947ac9 1783333594
+obj /usr/include/glib-2.0/gio/gactiongroup.h f0a04bd3b1a59121498c99f3f21ccf0a 1783333593
+obj /usr/include/glib-2.0/gio/gunixfdlist.h 4dd6aef3f7932bb4a1a3406f34079678 1783333594
+obj /usr/include/glib-2.0/gio/gipv6tclassmessage.h 2f8277051252401e137fc1f669000c36 1782394518
+obj /usr/include/glib-2.0/gio/gdbusobjectmanagerclient.h 1108942ca757afe1fdc58d6742958627 1783333594
+obj /usr/include/glib-2.0/gio/gvfs.h 55c5b24cc706f1ee687d6d13191241a7 1783333594
+obj /usr/include/glib-2.0/gio/gdebugcontroller.h 05c4bfa4476fa86a137933bb2178f82d 1782394518
+obj /usr/include/glib-2.0/gio/gfilteroutputstream.h c50f25e3d4eeadcd2a96b30321f20fbf 1783333594
+obj /usr/include/glib-2.0/gio/gmenu.h c533e06ab0a886013a83f1aa1471c064 1783333594
+obj /usr/include/glib-2.0/gio/gdbusobjectproxy.h 6ce5e3850fe2c97d7353ea2b9305e466 1783333594
+obj /usr/include/glib-2.0/gio/gmemorymonitor.h 3a59c9f21f37f303306d0770215fc510 1782394518
+obj /usr/include/glib-2.0/gio/gsettingsbackend.h 1a20f1cc96d463c00aac8cabb2791225 1782394518
+obj /usr/include/glib-2.0/gio/gdrive.h a1a00b312fda14013a6ceb28f9acfe9b 1783333594
+obj /usr/include/glib-2.0/gio/gproxyaddress.h da81880ab3d4ed1cdf527d2519e0178f 1783333594
+obj /usr/include/glib-2.0/gio/gsocketconnectable.h 879e415a9c1ff4ed2db72ce1ec3eea77 1783333594
+obj /usr/include/glib-2.0/gio/gdatainputstream.h f7ebcb433e7ebfecc9f22658cadbc05b 1783333593
+obj /usr/include/glib-2.0/gio/gmemoryoutputstream.h 520dbcce051ac82162060d2b1df8186c 1783333594
+obj /usr/include/glib-2.0/gio/gremoteactiongroup.h da0460a770edba1b292aebd27244a5af 1783333594
+obj /usr/include/glib-2.0/gio/gsimpleactiongroup.h 0d71af9fd78df224d8f0dbda76bec60b 1783333594
+obj /usr/include/glib-2.0/gio/gvolume.h 865414385f4c3e83e90b7caa14dfd7ef 1783333594
+obj /usr/include/glib-2.0/gio/gfileattribute.h 88847db2349d33dc0451f43dab6a3b9a 1782394518
+obj /usr/include/glib-2.0/gio/gfileiostream.h c9804128eafd5df5542f0f5335f244fd 1783333594
+obj /usr/include/glib-2.0/gio/gdbusnameowning.h 6434b026d17f19900dc72b5e1e95fa2c 1782394518
+obj /usr/include/glib-2.0/gio/gnetworkaddress.h ced941fb89436d68f979d7413c0e9d99 1783333594
+obj /usr/include/glib-2.0/gio/gfileinfo.h de801efe4df00c6a8fffef6b3262e751 1783333594
+obj /usr/include/glib-2.0/gio/gsimplepermission.h d366f60b50ad08c4b995204faacc0459 1782394518
+obj /usr/include/glib-2.0/gio/gproxyaddressenumerator.h 7f707a624f0acb85421ed4925152274e 1783333594
+dir /usr/include/glib-2.0/gmodule
+obj /usr/include/glib-2.0/gmodule/gmodule-visibility.h 099ed4920bdbcea2d52c14d4a0eb947a 1783333626
+dir /usr/include/glib-2.0/girepository
+obj /usr/include/glib-2.0/girepository/gitypeinfo.h 4c9f1342903d4ac099ba65d381ecfa4f 1782394518
+obj /usr/include/glib-2.0/girepository/gipropertyinfo.h c8a426845e96839e4b3094c347ae1e83 1782394518
+obj /usr/include/glib-2.0/girepository/giinterfaceinfo.h 2953fc1208eb29ae6021d4f960e3c49c 1782394518
+obj /usr/include/glib-2.0/girepository/gienuminfo.h aa1c4091607914d79da59a8cccbfae68 1782394518
+obj /usr/include/glib-2.0/girepository/gibaseinfo.h b4eb1364c8454cdfffbfe554f2df0519 1783333594
+obj /usr/include/glib-2.0/girepository/gi-visibility.h c63bd18fa1bd181f825a22eea46f4baa 1783333626
+obj /usr/include/glib-2.0/girepository/giunresolvedinfo.h 1018134fb7e8ac776fc93379af574843 1782394518
+obj /usr/include/glib-2.0/girepository/givfuncinfo.h 0d2c600d7a38d528f8c5e241095b8af9 1782394518
+obj /usr/include/glib-2.0/girepository/giobjectinfo.h 4f804e975aa156f2541310a73298c4e9 1782394518
+obj /usr/include/glib-2.0/girepository/gitypes.h 408ce92dc899cb01c2240ca825de804c 1782394518
+obj /usr/include/glib-2.0/girepository/gifieldinfo.h 4c5e6981a9fb461c49fc5637bf14a268 1782394518
+obj /usr/include/glib-2.0/girepository/giregisteredtypeinfo.h 2e53bf7511913826efc4c1d6aa018369 1782394518
+obj /usr/include/glib-2.0/girepository/gitypelib.h 2f4203def83b4b9bb6d3cd4df4346a68 1783333594
+obj /usr/include/glib-2.0/girepository/giflagsinfo.h b46587d45a129e83363a11cbb1106442 1782394518
+obj /usr/include/glib-2.0/girepository/gistructinfo.h 36030ca8e7d16240953beec42d4ea588 1782394518
+obj /usr/include/glib-2.0/girepository/giarginfo.h dc4a00dfd4a6faa94510786c5d181bba 1782394518
+obj /usr/include/glib-2.0/girepository/gisignalinfo.h 949d910e63aa9789e2463f1d71d7ff71 1782394518
+obj /usr/include/glib-2.0/girepository/girepository.h 8cee10c76b88a20b632b43ce4c2a768a 1782394518
+obj /usr/include/glib-2.0/girepository/gicallableinfo.h f08a4769e3779340d732459e8e0330bc 1782394518
+obj /usr/include/glib-2.0/girepository/givalueinfo.h 06b102bad46c287cf35df1840bfaffd1 1782394518
+obj /usr/include/glib-2.0/girepository/girffi.h 2007f175b14ae2382d7ee65e184ef354 1782394518
+obj /usr/include/glib-2.0/girepository/giconstantinfo.h c6b199d83cfd0f1465f010f4517414c1 1782394518
+obj /usr/include/glib-2.0/girepository/girepository-autocleanups.h cdffe62104f696cf44611810ec677910 1782394518
+obj /usr/include/glib-2.0/girepository/giunioninfo.h 070f889243cbe8846fb8f17a1d8ef696 1782394518
+obj /usr/include/glib-2.0/girepository/gicallbackinfo.h daf4ee897e8fa096343e7b57a27fed88 1782394518
+obj /usr/include/glib-2.0/girepository/gifunctioninfo.h 8b20f4cb0f214c58c9a750c14750199e 1782394518
+obj /usr/include/glib-2.0/glib-object.h ebf6102df540924a07602fb4cf418b54 1782394518
+dir /usr/include/glib-2.0/glib
+obj /usr/include/glib-2.0/glib/genviron.h 1c8fac10df577a68182b28523a7cc061 1782394518
+obj /usr/include/glib-2.0/glib/grcbox.h 3b1853c8cc3b43f06e66cf9ef77a5866 1782394518
+obj /usr/include/glib-2.0/glib/gmem.h e831567aa4371034e51eb20886d6adc2 1782394518
+obj /usr/include/glib-2.0/glib/gbacktrace.h e556ca7ecf3df2e96cb40cb691148f5b 1782394518
+obj /usr/include/glib-2.0/glib/grefcount.h 464b29860ec8dfb6dabd6b329ebbf3db 1782394518
+obj /usr/include/glib-2.0/glib/gfileutils.h 0329d8f2b354c80aceecaecd69d9fca4 1782394518
+obj /usr/include/glib-2.0/glib/gbytes.h 7e41df5c03765a87e3e4a42a48c03a3f 1782394518
+obj /usr/include/glib-2.0/glib/gstringchunk.h 89d418cf8ca5d8d390539866f027a753 1782394518
+obj /usr/include/glib-2.0/glib/ghook.h ce6c830bfb14a1efeaa6a7207840075b 1782394518
+obj /usr/include/glib-2.0/glib/glib-autocleanups.h 229e7f4ae589e59410a74bd2c5cfde2f 1782394518
+obj /usr/include/glib-2.0/glib/ghostutils.h 48eb6d0f109107d4da2243a051ad5f25 1782394518
+obj /usr/include/glib-2.0/glib/gbookmarkfile.h 95661eb565c9331cc4aad34a38058084 1782394518
+obj /usr/include/glib-2.0/glib/glist.h 26a569c5c49525b647b5b394044e0025 1782394518
+obj /usr/include/glib-2.0/glib/gtypes.h a41f93a706edf21ba2e2be472b3dc7f5 1782394518
+obj /usr/include/glib-2.0/glib/gtree.h 7f83d480e6645206c8d8fabb8d7cc88c 1782394518
+obj /usr/include/glib-2.0/glib/gkeyfile.h 0c6b7fddfbfd4558af72386084c4eb05 1782394518
+obj /usr/include/glib-2.0/glib/gsequence.h f340d259ab0360078de40e3c667da692 1782394518
+obj /usr/include/glib-2.0/glib/gerror.h 322933ca074cbe54b41564f89d0c5b12 1782394518
+obj /usr/include/glib-2.0/glib/gpathbuf.h 3f1badda2240a0ece089ffcc2a4eb587 1782394518
+obj /usr/include/glib-2.0/glib/gi18n.h d8d30365c2a6db1872cf7ed70cea506f 1782394518
+obj /usr/include/glib-2.0/glib/gscanner.h b7242797f13b9b5e016d5acd68b97909 1782394518
+obj /usr/include/glib-2.0/glib/gversion.h 804e317953f05e0d42a912c0295230ab 1782394518
+obj /usr/include/glib-2.0/glib/goption.h 2ff863cf24e8adf3fa439aeab159e3a0 1782394518
+obj /usr/include/glib-2.0/glib/glib-visibility.h e62f4534af2c51b8d13b47c2402609b4 1783333626
+obj /usr/include/glib-2.0/glib/gshell.h 2c29cf8c36701423cffd38cff3afaa04 1782394518
+obj /usr/include/glib-2.0/glib/gquark.h 6076b7c8862817d41eeb53263331a005 1783333594
+obj /usr/include/glib-2.0/glib/gdataset.h 2bf20217c03c9dfc89d030d400bf0b0e 1782394518
+obj /usr/include/glib-2.0/glib/gunicode.h 9245e933b78cb71a9e0e70b9b731148d 1782394518
+obj /usr/include/glib-2.0/glib/gvariant.h a72f8855ff1cec2489b2ee11d0838395 1782394518
+obj /usr/include/glib-2.0/glib/gtestutils.h c9820c7f709d8d133523183d016490c9 1782394518
+obj /usr/include/glib-2.0/glib/gprintf.h ae1bbd32e1ab8aaa364cd3ef2d77b477 1782394518
+obj /usr/include/glib-2.0/glib/gmappedfile.h c3cd00e332fc5d08f0413a6e5d31c591 1782394518
+obj /usr/include/glib-2.0/glib/gthread.h cb3a2c9f96c89396e3a4a2b3ea55abc2 1782394518
+obj /usr/include/glib-2.0/glib/gmain.h f362f11974d1dd7e9e89f6e8b17b92c4 1782394518
+obj /usr/include/glib-2.0/glib/grefstring.h d764a6807949832c8fc7e6740244b7c0 1782394518
+obj /usr/include/glib-2.0/glib/guri.h 28861c1482a60995759b846102a52024 1782394518
+obj /usr/include/glib-2.0/glib/gslice.h b274e91aeef6006f387cf33ff50534c0 1782394518
+obj /usr/include/glib-2.0/glib/gmarkup.h 786f586c7c6074a2be1d60ff25e8f019 1782394518
+obj /usr/include/glib-2.0/glib/gdir.h c7b246a92c4f4373e3a6af5ac0162148 1782394518
+obj /usr/include/glib-2.0/glib/giochannel.h 3f58747d34c9c04b607de936030d2b48 1782394518
+obj /usr/include/glib-2.0/glib/gqueue.h 735842447eb6d46085c218d3d2f8485e 1782394518
+obj /usr/include/glib-2.0/glib/galloca.h bdba7b089db410a8f8daa07b54562d18 1782394518
+obj /usr/include/glib-2.0/glib/grand.h 80368a45062e255e1967d42481c88d08 1782394518
+obj /usr/include/glib-2.0/glib/gnode.h d5cb3b098b294b5abf2b2313a4a64116 1782394518
+obj /usr/include/glib-2.0/glib/ggettext.h 63176a0b7a428495ea4163bf1122a5bb 1782394518
+obj /usr/include/glib-2.0/glib/gpattern.h c3a125e02e540b248caef9618a9f3439 1782394518
+obj /usr/include/glib-2.0/glib/gmessages.h 3110f4153c674f85d8d689eccfc01b62 1782394518
+obj /usr/include/glib-2.0/glib/gstdio.h 4becffb70505495a512e524aacaf31c7 1782394518
+obj /usr/include/glib-2.0/glib/gbase64.h bab578821f3c199f600ccbf3d2db861b 1782394518
+obj /usr/include/glib-2.0/glib/gdatetime.h 0d97fa4dc9debf4e4b9705320c73497c 1782394518
+obj /usr/include/glib-2.0/glib/gvarianttype.h 9a440172d8127a55c9769e0e512f1c24 1782394518
+obj /usr/include/glib-2.0/glib/gstrfuncs.h 9d9b7d6ad7c69b95506d41a0f2984720 1782394518
+obj /usr/include/glib-2.0/glib/guuid.h a5acc55edf2541259eecfe014ff02fcf 1782394518
+obj /usr/include/glib-2.0/glib/gchecksum.h ed103f97195254565a4c719f3966d4f4 1782394518
+obj /usr/include/glib-2.0/glib/gspawn.h 75d81597f05036d42c6233d673a45e3b 1782394518
+obj /usr/include/glib-2.0/glib/gtimer.h ce7f25c9c08259b785e5346380b28f4d 1782394518
+obj /usr/include/glib-2.0/glib/garray.h c9d07259d06bf85f8f4e94b41c98acd1 1782394518
+obj /usr/include/glib-2.0/glib/gprimes.h faaa72acc87643f9a5a5c2835d288082 1782394518
+obj /usr/include/glib-2.0/glib/gbitlock.h ebc7b6c709cb7eb0bdca7a65e734a48e 1782394518
+obj /usr/include/glib-2.0/glib/gtimezone.h 0696431975dfb657d88cee31e53d811c 1782394518
+obj /usr/include/glib-2.0/glib/gdate.h 8b08f589d7501d128ef8eabf73d3a89c 1782394518
+obj /usr/include/glib-2.0/glib/gmacros.h 52fa88427cd26fdae8f1bbf200a4905c 1782394518
+obj /usr/include/glib-2.0/glib/gi18n-lib.h a7815cbf94b8956597de844060261b13 1782394518
+obj /usr/include/glib-2.0/glib/ghash.h ff178276f16d53966cd41952349b047f 1782394518
+obj /usr/include/glib-2.0/glib/gconvert.h 7fca4d950a38612cd031dc59f3003a7a 1782394518
+obj /usr/include/glib-2.0/glib/gstrvbuilder.h d73fbca44de2c512a345fff6b674cd09 1782394518
+obj /usr/include/glib-2.0/glib/gregex.h d339fc4ca858d4d74900a940feb498da 1782394518
+obj /usr/include/glib-2.0/glib/gcharset.h 52d0e3061a944a0329ee382d56702f5a 1782394518
+obj /usr/include/glib-2.0/glib/gthreadpool.h d16ca4c525f6d8a8aa200996465f8cec 1782394518
+obj /usr/include/glib-2.0/glib/gslist.h c2b16cbedbdd77e3f819637c21501624 1782394518
+obj /usr/include/glib-2.0/glib/gasyncqueue.h 1e3714897df32fbabbf122248ce21218 1782394518
+obj /usr/include/glib-2.0/glib/gqsort.h 00c2eabf4eb91344caf63d03245c3ad0 1782394518
+dir /usr/include/glib-2.0/glib/deprecated
+obj /usr/include/glib-2.0/glib/deprecated/gcompletion.h b8cc55508548d90d16362c8db858bffa 1782394518
+obj /usr/include/glib-2.0/glib/deprecated/gallocator.h 435f42295fbb2eaf57cf568674d61d06 1782394518
+obj /usr/include/glib-2.0/glib/deprecated/gthread.h b906c365fa2ffdec1b91301896f4a650 1782394518
+obj /usr/include/glib-2.0/glib/deprecated/gmain.h f8e53d14fd0046b00a6a85e8b92ee768 1782394518
+obj /usr/include/glib-2.0/glib/deprecated/grel.h ef6331a08395ab9d1797d89fd1649413 1782394518
+obj /usr/include/glib-2.0/glib/deprecated/gcache.h 886d451795a4912a1df620b7fcc75f57 1782394518
+obj /usr/include/glib-2.0/glib/gutils.h cd787e6e0b3f6fb8f2d9e0f39f0014df 1782394518
+obj /usr/include/glib-2.0/glib/gtrashstack.h 747885a51a405b449d7c8d52cc936f99 1782394518
+obj /usr/include/glib-2.0/glib/ghmac.h 9fd5eb126699632d8fd3243530b4dc06 1782394518
+obj /usr/include/glib-2.0/glib/gversionmacros.h 7a48b36fff4693884fc3a0d98052d4b9 1783333626
+obj /usr/include/glib-2.0/glib/gatomic.h add93687fa1e17d20e477aadcb2f605a 1782394518
+obj /usr/include/glib-2.0/glib/gstring.h ae671ad2eaae551afea1b936f1eaf37d 1782394518
+obj /usr/include/glib-2.0/glib/gpoll.h 70c3e60514520f2c57766ce117d715a6 1782394518
+obj /usr/include/glib-2.0/glib/glib-typeof.h 5f596c91bda4a309f07c55b98a78aa67 1782394518
+obj /usr/include/glib-2.0/glib.h 8a6a84a845386b69d403fcc127ca9734 1782394518
+dir /usr/include/glib-2.0/gobject
+obj /usr/include/glib-2.0/gobject/gvaluecollector.h 97562abb3cb379f27cda35cce10dae59 1782394518
+obj /usr/include/glib-2.0/gobject/gvaluearray.h 5d4995b4f55bca9faac6e90ad5fcb600 1783333594
+obj /usr/include/glib-2.0/gobject/gsignalgroup.h 4236d684b8429ac44d165e4347261c35 1783333594
+obj /usr/include/glib-2.0/gobject/gobject-autocleanups.h 6c2655f89e2edd4573495023bb66f184 1782394518
+obj /usr/include/glib-2.0/gobject/gparam.h 8774bfead5bee89ff086494d7083a495 1782394518
+obj /usr/include/glib-2.0/gobject/gtype.h a8718295cb726e5352b4e32184415152 1783333594
+obj /usr/include/glib-2.0/gobject/genums.h d301b79d1e9daa07672b00284595f85c 1782394518
+obj /usr/include/glib-2.0/gobject/gparamspecs.h 484d0de81657a1988dbc90cb3dc1ba48 1782394518
+obj /usr/include/glib-2.0/gobject/gobject.h e69e8019948469fbc64ddba60fe9d6c5 1783333594
+obj /usr/include/glib-2.0/gobject/gobjectnotifyqueue.c b235684c4c3a82eff58ca3b24533ddb2 1782394518
+obj /usr/include/glib-2.0/gobject/gboxed.h a3161d03f15e5d67dc5dcad2607184f6 1783333594
+obj /usr/include/glib-2.0/gobject/gbinding.h 7341a4fea1e60de2f5f1278511a8bd85 1783333594
+obj /usr/include/glib-2.0/gobject/gsourceclosure.h f5f7557a70e3a7539b1ccaf44aed50cf 1782394518
+obj /usr/include/glib-2.0/gobject/gobject-visibility.h 0b81686365f44b0d2dbda6bccbe66476 1783333626
+obj /usr/include/glib-2.0/gobject/gclosure.h 7d3050452d76c741d20f420bf3b864f9 1782394518
+obj /usr/include/glib-2.0/gobject/gvaluetypes.h c8c2e547a39d29ab21c015dd37309d2a 1782394518
+obj /usr/include/glib-2.0/gobject/gbindinggroup.h ed17f00a7261d12404cfc2abe4269d76 1783333594
+obj /usr/include/glib-2.0/gobject/gvalue.h 5bfc4518df09b4906f0fd5e96afd0d69 1782394518
+obj /usr/include/glib-2.0/gobject/glib-enumtypes.h e60b2576b7edbf16eb62834df88d7823 1783333627
+obj /usr/include/glib-2.0/gobject/gmarshal.h fa27bd83bb4e5ea881a9678a1a6d1f88 1782394518
+obj /usr/include/glib-2.0/gobject/glib-types.h 4c646dda6943bb522311fc26f9f95562 1783333594
+obj /usr/include/glib-2.0/gobject/gsignal.h 09a1b19f2fe51cb9dcae980ee4585cc8 1782394518
+obj /usr/include/glib-2.0/gobject/gtypeplugin.h b166dca110cb2bb7df9948ad7f0c4921 1783333594
+obj /usr/include/glib-2.0/gobject/gtypemodule.h 0b02eaef93890b3f6fe7c30d79ff0751 1783333594
+obj /usr/include/glib-2.0/gmodule.h f5beef21adcdfe029d1bface078f2f8d 1782394518
+dir /usr/lib
+sym /usr/lib64/libgthread-2.0.so -> libgthread-2.0.so.0 1789836475
+sym /usr/lib64/libgio-2.0.so.0 -> libgio-2.0.so.0.8800.2 1789836475
+sym /usr/lib64/libgobject-2.0.so.0 -> libgobject-2.0.so.0.8800.2 1789836475
+sym /usr/lib64/libgirepository-2.0.so.0 -> libgirepository-2.0.so.0.8800.2 1789836475
+sym /usr/lib64/libgmodule-2.0.so.0 -> libgmodule-2.0.so.0.8800.2 1789836475
+sym /usr/lib64/libgobject-2.0.so -> libgobject-2.0.so.0 1789836475
+sym /usr/lib64/libgmodule-2.0.so -> libgmodule-2.0.so.0 1789836475
+sym /usr/lib64/libgirepository-2.0.so -> libgirepository-2.0.so.0 1789836475
+sym /usr/lib64/libgio-2.0.so -> libgio-2.0.so.0 1789836475

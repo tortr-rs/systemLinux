@@ -1,0 +1,14 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=compile install
+DEPEND=media-libs/libsdl[sound,video,joystick] media-libs/sdl-image[png] media-libs/sdl-mixer[vorbis] media-libs/sdl-ttf
+DESCRIPTION=Robbo, a popular Atari XE/XL game ported to Linux
+EAPI=7
+HOMEPAGE=https://gnurobbo.sourceforge.net/
+INHERIT=desktop toolchain-funcs
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2+ BitstreamVera
+RDEPEND=media-libs/libsdl[sound,video,joystick] media-libs/sdl-image[png] media-libs/sdl-mixer[vorbis] media-libs/sdl-ttf
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/gnurobbo/gnurobbo-0.68-source.tar.gz https://salsa.debian.org/games-team/gnurobbo/-/raw/debian/0.68+dfsg-5/debian/patches/single-variable-declarations.patch?inline=false -> gnurobbo-0.68-single-variable-declarations.patch
+_eclasses_=desktop	e447b5f77146d69797e9f03ff177f3f1	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=2497fc7d89bac61728893e9b2a285a88

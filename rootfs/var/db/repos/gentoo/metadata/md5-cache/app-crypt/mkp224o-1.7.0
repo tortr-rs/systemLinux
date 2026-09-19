@@ -1,0 +1,15 @@
+BDEPEND=verify-sig? ( sec-keys/openpgp-keys-cathugger ) verify-sig? ( || ( app-alternatives/gpg app-crypt/gnupg[-alternatives(-)] ) >=app-portage/gemato-20 )
+DEFINED_PHASES=configure install unpack
+DEPEND=dev-libs/libsodium:= pcre? ( dev-libs/libpcre2:= )
+DESCRIPTION=Vanity address generator for v3 Tor hidden service addresses
+EAPI=8
+HOMEPAGE=https://github.com/cathugger/mkp224o
+INHERIT=verify-sig
+IUSE=cpu_flags_x86_sse2 pcre verify-sig
+KEYWORDS=amd64
+LICENSE=CC0-1.0
+RDEPEND=dev-libs/libsodium:= pcre? ( dev-libs/libpcre2:= )
+SLOT=0
+SRC_URI=https://github.com/cathugger/mkp224o/releases/download/v1.7.0/mkp224o-1.7.0-src.tar.gz verify-sig? ( https://github.com/cathugger/mkp224o/releases/download/v1.7.0/mkp224o-1.7.0-src.tar.gz.sig )
+_eclasses_=eapi9-pipestatus	d2c134036ac31c3085aebc9147f572bd	verify-sig	ece4c893b6bd62eacbc4d25958e857f8
+_md5_=fd81fbbe2e05f419db2ede184e591d51

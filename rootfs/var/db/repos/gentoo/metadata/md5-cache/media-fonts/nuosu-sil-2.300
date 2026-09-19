@@ -1,0 +1,13 @@
+BDEPEND=app-arch/unzip X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DEFINED_PHASES=install postinst postrm setup
+DESCRIPTION=Unicode font for the standardized Yi script
+EAPI=8
+HOMEPAGE=https://software.sil.org/nuosu/
+INHERIT=font
+IUSE=X
+KEYWORDS=~amd64 ~arm ~arm64 ~loong ~riscv ~x86
+LICENSE=OFL-1.1
+SLOT=0
+SRC_URI=https://software.sil.org/downloads/r/nuosu/NuosuSIL-2.300.zip
+_eclasses_=font	6d0c60c855c05ae2ba808d300440ded2
+_md5_=76c416ddc08fd60e495f8171359920c6

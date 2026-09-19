@@ -1,0 +1,1 @@
+sys-libs/glibc[cet(-)] virtual/zlib:0/1= virtual/libiconv virtual/libintl >=dev-libs/gmp-4.3.2:0/10.4= >=dev-libs/mpfr-2.4.2:0/6= >=dev-libs/mpc-0.8.1:0/3= virtual/libcrypt app-arch/zstd:0/1=

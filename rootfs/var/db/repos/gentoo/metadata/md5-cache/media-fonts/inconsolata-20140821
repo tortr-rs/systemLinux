@@ -1,0 +1,14 @@
+BDEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DEFINED_PHASES=install postinst postrm setup
+DESCRIPTION=Sans-serif monotype font for code listings
+EAPI=7
+HOMEPAGE=https://fonts.google.com/specimen/Inconsolata?preview.text_type=custom
+INHERIT=font
+IUSE=X
+KEYWORDS=amd64 ~arm64 ~loong ~ppc ~riscv x86 ~x64-macos
+LICENSE=OFL-1.1
+RESTRICT=binchecks strip test
+SLOT=0
+SRC_URI=https://dev.gentoo.org/~jstein/dist/inconsolata-20140821.tar.xz
+_eclasses_=font	6d0c60c855c05ae2ba808d300440ded2
+_md5_=64da9f27c27b1004a45974a408a31287

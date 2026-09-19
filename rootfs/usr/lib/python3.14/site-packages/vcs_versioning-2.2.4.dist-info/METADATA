@@ -1,0 +1,48 @@
+Metadata-Version: 2.4
+Name: vcs-versioning
+Version: 2.2.4
+Summary: the blessed package to manage your versions by vcs metadata
+Author-email: Ronny Pfannschmidt <opensource@ronnypfannschmidt.de>
+License: MIT
+Project-URL: Documentation, https://github.com/pypa/setuptools-scm#readme
+Project-URL: Issues, https://github.com/pypa/setuptools-scm/issues
+Project-URL: Source, https://github.com/pypa/setuptools-scm
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: packaging>=26.2
+Requires-Dist: tomli>=1; python_version < "3.11"
+Requires-Dist: typing-extensions>=4.1; python_version < "3.11"
+Dynamic: license-file
+
+# vcs-versioning
+
+[![PyPI - Version](https://img.shields.io/pypi/v/vcs-versioning.svg)](https://pypi.org/project/vcs-versioning)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/vcs-versioning.svg)](https://pypi.org/project/vcs-versioning)
+
+-----
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install vcs-versioning
+```
+
+## License
+
+`vcs-versioning` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.

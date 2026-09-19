@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person" proxied="yes">
+		<email>martin.dummer@gmx.net</email>
+		<name>Martin Dummer</name>
+	</maintainer>
+	<maintainer type="project" proxied="proxy">
+		<email>proxy-maint@gentoo.org</email>
+		<name>Proxy Maintainers</name>
+	</maintainer>
+	<maintainer type="project">
+		<email>vdr@gentoo.org</email>
+		<name>Gentoo VDR Project</name>
+	</maintainer>
+	<use>
+		<flag name="bidi">fribidi support, for languages, written from right to left</flag>
+		<flag name="demoplugins">Install demo and example plugins coming with vanilla vdr</flag>
+		<flag name="keyboard">enable keyboard support as remote device</flag>
+		<flag name="menuorg">Enables support for the <pkg>media-plugins/vdr-menuorg</pkg></flag>
+		<flag name="naludump">Removes NALU fill data from h.264-Streams of TS files</flag>
+		<flag name="permashift">permanent timeshift by recording live TV into RAM, need plugin <pkg>media-plugins/vdr-permashift</pkg></flag>
+		<flag name="pinplugin">Support for <pkg>media-plugins/vdr-pin</pkg></flag>
+		<flag name="ttxtsubs">support for <pkg>media-plugins/vdr-ttxtsubs</pkg></flag>
+		<flag name="verbose">enable full output on compile</flag>
+	</use>
+</pkgmetadata>

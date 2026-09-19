@@ -1,0 +1,15 @@
+BDEPEND=app-text/rman sys-devel/gcc >=x11-misc/imake-1.0.8-r1 xft? ( virtual/pkgconfig )
+DEFINED_PHASES=compile configure install prepare
+DEPEND=x11-libs/libX11 x11-libs/libXext x11-libs/libXt xft? ( media-libs/freetype x11-libs/libXft )
+DESCRIPTION=Digital clock for the X window system
+EAPI=7
+HOMEPAGE=https://packages.qa.debian.org/d/dclock.html
+INHERIT=flag-o-matic toolchain-funcs
+IUSE=xft
+KEYWORDS=amd64 ppc x86
+LICENSE=GPL-2
+RDEPEND=x11-libs/libX11 x11-libs/libXext x11-libs/libXt xft? ( media-libs/freetype x11-libs/libXft )
+SLOT=0
+SRC_URI=mirror://debian/pool/main/d/dclock/dclock_2.2.2.orig.tar.gz mirror://debian/pool/main/d/dclock/dclock_2.2.2-12.debian.tar.xz
+_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=0410bb6d5b43165e883a7dc4ca7f69a8

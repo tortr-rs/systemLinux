@@ -1,0 +1,16 @@
+dir /usr
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/pambase-20251104-r1
+obj /usr/share/doc/pambase-20251104-r1/README.gentoo.bz2 877ad7a354afa523be4453bb33e0e872 1780857704
+dir /etc
+dir /etc/pam.d
+obj /etc/pam.d/login 91ad33eabae9f7ae7809e81ab3df8672 1780857704
+obj /etc/pam.d/other a1ca1c975faaa52c654151243019379f 1780857704
+obj /etc/pam.d/passwd 5bd5838c81534c4a24a2a112500ba62c 1780857704
+obj /etc/pam.d/su 5dfd9fee8f37d44324386e51e78e95a6 1780857704
+obj /etc/pam.d/system-auth 647ad18371c06b7e9d76d415ca9e6db9 1780857704
+obj /etc/pam.d/system-local-login 76da90222db315e3b0834f82ed6280b8 1780857704
+obj /etc/pam.d/system-login 809604420097ba6d005d82a686bde039 1780857704
+obj /etc/pam.d/system-remote-login 76da90222db315e3b0834f82ed6280b8 1780857704
+obj /etc/pam.d/system-services ddcb922b0db94547d3f07beb1eb00ee5 1780857704

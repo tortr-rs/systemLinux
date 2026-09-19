@@ -1,0 +1,1 @@
+app-arch/bzip2[abi_x86_64(-)] >=sys-libs/libseccomp-2.5.4[abi_x86_64(-)] >=virtual/zlib-1.2.8-r1:0/1=[abi_x86_64(-)]

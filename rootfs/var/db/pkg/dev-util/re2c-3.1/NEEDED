@@ -1,0 +1,3 @@
+/usr/bin/re2c libstdc++.so.6,libgcc_s.so.1,libc.so.6
+/usr/bin/re2go libstdc++.so.6,libgcc_s.so.1,libc.so.6
+/usr/bin/re2rust libstdc++.so.6,libgcc_s.so.1,libc.so.6

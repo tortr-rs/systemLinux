@@ -1,0 +1,7 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for Java Runtime Environment (JRE)
+EAPI=8
+KEYWORDS=~amd64
+RDEPEND=virtual/jdk:27
+SLOT=27
+_md5_=35b11ed87501e479f6593f9bbb06beaf

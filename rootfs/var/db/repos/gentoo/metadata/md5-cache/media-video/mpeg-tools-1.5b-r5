@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst prepare
+DEPEND=x11-libs/libX11 virtual/jpeg:0
+DESCRIPTION=Tools for MPEG video
+EAPI=7
+HOMEPAGE=http://bmrc.berkeley.edu/research/mpeg/mpeg_encode.html
+INHERIT=flag-o-matic toolchain-funcs
+KEYWORDS=amd64 ppc ppc64 x86 ~x64-macos
+LICENSE=BSD
+RDEPEND=x11-libs/libX11 virtual/jpeg:0
+SLOT=0
+SRC_URI=ftp://mm-ftp.cs.berkeley.edu/pub/multimedia/mpeg/encode/mpeg_encode-1.5b-src.tar.gz
+_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=9b19d4c74a7e59de34051d96257f9803

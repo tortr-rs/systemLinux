@@ -1,0 +1,1 @@
+>=dev-libs/glib-2.56:2 >=dev-libs/gobject-introspection-1.82.0-r2 >=sys-libs/glibc-2.42-r7

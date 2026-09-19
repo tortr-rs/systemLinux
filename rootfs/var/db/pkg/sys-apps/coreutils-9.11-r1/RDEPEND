@@ -1,0 +1,1 @@
+sys-apps/acl dev-libs/openssl:0/3= sys-apps/attr virtual/libintl !<sys-apps/util-linux-2.13 !<sys-apps/sandbox-2.10-r4 !sys-apps/stat !net-mail/base64 !sys-apps/mktemp !<app-forensics/tct-1.18-r1 !<net-fs/netatalk-2.0.3-r4 !<sys-apps/shadow-4.19.0_rc1 >=sys-libs/glibc-2.42-r7

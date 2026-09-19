@@ -1,0 +1,12 @@
+BDEPEND=app-arch/unzip
+DEFINED_PHASES=compile install prepare
+DESCRIPTION=UCI-only chess engine
+EAPI=8
+HOMEPAGE=https://arctrix.com/nas/chess/fruit/
+INHERIT=flag-o-matic toolchain-funcs
+KEYWORDS=~amd64 ~arm64 ~x86
+LICENSE=GPL-2+
+SLOT=0
+SRC_URI=https://arctrix.com/nas/chess/fruit/fruit_21_linux.zip
+_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=6aad0acbddd0f3e130f9f3402c15541f

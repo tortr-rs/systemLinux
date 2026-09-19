@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install postinst prepare
+DESCRIPTION=CObalt LOader - Modern bootloader for Cobalt MIPS machines
+EAPI=8
+HOMEPAGE=https://www.colonel-panic.org/cobalt-mips/
+INHERIT=toolchain-funcs
+KEYWORDS=-* ~mips
+LICENSE=GPL-2
+RESTRICT=strip
+SLOT=0
+SRC_URI=https://www.colonel-panic.org/cobalt-mips/colo/colo-1.22.tar.gz
+_eclasses_=toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=bdac559de20ac25b2cbc174cfa1be878

@@ -1,0 +1,16 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/which 06ca4e61ef2a3ea4ed120c752e43d127 1742326745
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/which-2.23
+obj /usr/share/doc/which-2.23/AUTHORS.bz2 4e1f38b38a3b6b085a0153f2a02dc9ba 1742326744
+obj /usr/share/doc/which-2.23/NEWS.bz2 ac702e15e9e9704fcf9fbcf7eae6f88c 1742326744
+obj /usr/share/doc/which-2.23/README.alias.bz2 38b7b27477a3ab8cd743472a256937d2 1742326744
+obj /usr/share/doc/which-2.23/README.bz2 4393daf9e788d48fd3e76dae84b46b8d 1742326744
+obj /usr/share/doc/which-2.23/README.md.bz2 00032b4efa203bc500b6922de57e983d 1742326744
+dir /usr/share/info
+obj /usr/share/info/which.info.bz2 6114bc9bdef07f3e3981ad962c790805 1742326744
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/which.1.bz2 576961082daedec620efb5736d75dcc7 1742326744

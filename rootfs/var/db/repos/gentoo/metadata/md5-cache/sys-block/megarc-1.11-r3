@@ -1,0 +1,12 @@
+BDEPEND=app-arch/unzip doc? ( app-text/antiword )
+DEFINED_PHASES=compile install
+DESCRIPTION=LSI Logic MegaRAID Text User Interface management tool
+EAPI=8
+HOMEPAGE=http://www.avagotech.com/cs/Satellite?q=megacli&pagename=AVG2%2FsearchLayout&locale=avg_en&within=megacli&Search=megarc&srch-radio=new&Submit=Search
+IUSE=doc
+KEYWORDS=~amd64 ~x86
+LICENSE=LSI
+RESTRICT=mirror bindist
+SLOT=0
+SRC_URI=https://docs.broadcom.com/docs-and-downloads/raid-controllers/raid-controllers-common-files/ut_linux_megarc_1-11.zip https://docs.broadcom.com/docs-and-downloads/raid-controllers/raid-controllers-common-files/README_FOR_ut_linux_megarc_1-11-zip.txt
+_md5_=33a64e9d138cf1cb9af0203a03839edf

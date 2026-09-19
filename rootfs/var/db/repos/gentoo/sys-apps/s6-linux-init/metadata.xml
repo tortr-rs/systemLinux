@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>arkamar@gentoo.org</email>
+		<name>Petr Vaněk</name>
+	</maintainer>
+	<maintainer type="person">
+		<email>williamh@gentoo.org</email>
+		<name>William Hubbs</name>
+	</maintainer>
+	<use>
+		<flag name="sysv-utils">Install sysvinit compatibility symlinks for telinit, halt, poweroff, reboot, and shutdown</flag>
+	</use>
+</pkgmetadata>

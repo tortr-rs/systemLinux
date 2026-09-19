@@ -1,0 +1,15 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=compile install prepare test
+DEPEND=virtual/lapack
+DESCRIPTION=Software for interior-point for semidefinite programming
+EAPI=8
+HOMEPAGE=https://www.mcs.anl.gov/hs/software/DSDP/
+INHERIT=multilib toolchain-funcs
+IUSE=doc examples
+KEYWORDS=amd64 ~riscv ~x86 ~x64-macos
+LICENSE=BSD
+RDEPEND=virtual/lapack
+SLOT=0
+SRC_URI=https://www.mcs.anl.gov/hs/software/DSDP/DSDP5.8.tar.gz
+_eclasses_=multilib	fc812e8eb2170022c28272d80a1f9e77	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=ccd9329681150413944870ac83c800c5

@@ -1,0 +1,13 @@
+BDEPEND=|| ( app-arch/unrar app-arch/rar ) X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DEFINED_PHASES=install postinst postrm setup
+DESCRIPTION=Tibetan Unicode Ucan and Umed fonts
+EAPI=7
+HOMEPAGE=http://www.yalasoo.com/English/docs/yalasoo_en_font.html
+INHERIT=font
+IUSE=X
+KEYWORDS=~amd64 ~arm ~arm64 ~loong ~riscv ~x86
+LICENSE=free-noncomm
+SLOT=0
+SRC_URI=http://www.yalasoo.com/files/CTRCfonts.rar -> qomolangma-2012.05.rar
+_eclasses_=font	6d0c60c855c05ae2ba808d300440ded2
+_md5_=77eb1fefcafeb99c20267f75aa8e1042

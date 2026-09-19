@@ -1,0 +1,11 @@
+dir /usr
+dir /usr/share
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/gtester-report.1.bz2 a66b34ce01ea9561612dac6f2cca947b 1783329219
+obj /usr/share/man/man1/glib-mkenums.1.bz2 4700262f158ce14c730cbf1b3ffa0d6f 1783329219
+obj /usr/share/man/man1/glib-genmarshal.1.bz2 cf8c0f1685fd61b8e5c5c487ab9d8993 1783329219
+dir /usr/bin
+obj /usr/bin/gtester-report 6f5786e7254179874024527d850ee922 1783329219
+obj /usr/bin/glib-mkenums 3cdc3175e618f734bd771ee906f7926c 1783329219
+obj /usr/bin/glib-genmarshal d8aacefde322f443c5c218f3a4a5dc93 1783329219

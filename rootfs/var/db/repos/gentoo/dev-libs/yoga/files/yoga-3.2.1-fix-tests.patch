@@ -1,0 +1,44 @@
+remove -Werror and use system wide GTest
+
+Bug: https://bugs.gentoo.org/973597
+Issue: https://github.com/facebook/yoga/issues/1934
+
+diff --git a/cmake/project-defaults.cmake b/cmake/project-defaults.cmake
+index 987529c5..6051621a 100644
+--- a/cmake/project-defaults.cmake
++++ b/cmake/project-defaults.cmake
+@@ -31,9 +31,8 @@ add_compile_options(
+     -fno-omit-frame-pointer
+     # Enable exception handling
+     -fexceptions
+-    # Enable warnings and warnings as errors
++    # Enable warnings
+     -Wall
+-    -Werror
+     # Disable RTTI
+     $<$<COMPILE_LANGUAGE:CXX>:-fno-rtti>
+     # Use -O2 (prioritize speed)
+diff --git a/tests/CMakeLists.txt b/tests/CMakeLists.txt
+index c48bfb9f..fbf837f6 100644
+--- a/tests/CMakeLists.txt
++++ b/tests/CMakeLists.txt
+@@ -8,18 +8,13 @@ cmake_minimum_required(VERSION 3.13...3.26)
+ project(tests)
+ set(CMAKE_VERBOSE_MAKEFILE on)
+ 
+-include(FetchContent)
+ include(GoogleTest)
++find_package(GTest REQUIRED)
+ 
+ set(YOGA_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/..)
+ include(${YOGA_ROOT}/cmake/project-defaults.cmake)
+ 
+ # Fetch GTest
+-FetchContent_Declare(
+-  googletest
+-  URL https://github.com/google/googletest/archive/refs/tags/release-1.12.1.zip
+-)
+-FetchContent_MakeAvailable(googletest)
+ 
+ add_subdirectory(${YOGA_ROOT}/yoga ${CMAKE_CURRENT_BINARY_DIR}/yoga)
+ 

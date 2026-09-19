@@ -1,0 +1,17 @@
+dir /usr
+dir /usr/lib64
+dir /usr/lib64/perl5
+dir /usr/lib64/perl5/vendor_perl
+dir /usr/lib64/perl5/vendor_perl/5.42
+dir /usr/lib64/perl5/vendor_perl/5.42/Text
+obj /usr/lib64/perl5/vendor_perl/5.42/Text/WrapI18N.pm aed6cfde5b3a0c284eb60eb8a86a2eac 1765127934
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Text
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Text/WrapI18N
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Text/WrapI18N/.packlist 4344a1f599d52cb22be000d9f8fea433 1765127934
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/Text-WrapI18N-0.60.0-r3
+obj /usr/share/doc/Text-WrapI18N-0.60.0-r3/Changes.bz2 c7541c449e4ac1eab45e0faa07b27c07 1765127934
+obj /usr/share/doc/Text-WrapI18N-0.60.0-r3/README.bz2 da808f140a37b16037c8f968a43395f9 1765127934

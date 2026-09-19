@@ -1,0 +1,1 @@
+|| ( =dev-lang/perl-5.42* =dev-lang/perl-5.40* ~perl-core/Module-Metadata-1.0.38 ) dev-lang/perl:0/5.42= !<perl-core/Module-Metadata-1.0.38 !>perl-core/Module-Metadata-1.0.38-r999

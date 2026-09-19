@@ -1,0 +1,11 @@
+DEFINED_PHASES=install postinst
+DESCRIPTION=Common Lisp ANSI-standard Hyperspec
+EAPI=8
+HOMEPAGE=http://www.lispworks.com/reference/HyperSpec/
+INHERIT=readme.gentoo-r1
+KEYWORDS=amd64 ~mips ppc ppc64 ~riscv ~sparc x86
+LICENSE=HyperSpec
+SLOT=0
+SRC_URI=ftp://ftp.lispworks.com/pub/software_tools/reference/HyperSpec-7-0.tar.gz
+_eclasses_=eapi9-pipestatus	d2c134036ac31c3085aebc9147f572bd	readme.gentoo-r1	9ca94b2d607e7454ca6cfb44ab8ce327
+_md5_=ddedf5ed0cc6b32ad2d546f97d3ac5a1

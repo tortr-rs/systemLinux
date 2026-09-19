@@ -1,0 +1,210 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/re2c 7ad6b4489682577cda7b73d82e709505 1723396313
+obj /usr/bin/re2go 77fa66c9a0912f21b2fccd262f4aab63 1723396313
+obj /usr/bin/re2rust 49f16f7547ee08fce473eb6a8483eb64 1723396313
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/re2c-3.1
+obj /usr/share/doc/re2c-3.1/CHANGELOG.bz2 fa6d31f6b70e8c07efb208862b677e73 1723396312
+obj /usr/share/doc/re2c-3.1/README.md.bz2 e40c87185a890f33c67e3562c4a59978 1723396312
+dir /usr/share/doc/re2c-3.1/examples
+dir /usr/share/doc/re2c-3.1/examples/c
+obj /usr/share/doc/re2c-3.1/examples/c/01_basic.c dc5f03c3e209e65cc4911cf506a519fb 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/01_basic.re 2825e055f1c99046a8aa1bf8e8970ad7 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/__run_all.sh 89592a374434c3e3a3760623f04bf3aa 1723396312
+dir /usr/share/doc/re2c-3.1/examples/c/conditions
+obj /usr/share/doc/re2c-3.1/examples/c/conditions/parse_u32_blocks.c 05eb071d6ed91863c06b479a26b62d3b 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/conditions/parse_u32_blocks.re b7e8aec30220604ce80cab3e911fd3cd 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/conditions/parse_u32_conditions.c 4b42ea1edf2118c9fc21942d77a3277c 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/conditions/parse_u32_conditions.re d3148fa70adc111444a174d79355ea78 1723396312
+dir /usr/share/doc/re2c-3.1/examples/c/encodings
+obj /usr/share/doc/re2c-3.1/examples/c/encodings/unicode_identifier.c d3761feb8325e45639ca37f60df49025 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/encodings/unicode_identifier.re c49f57fefa29332f178492a9daf116a5 1723396312
+dir /usr/share/doc/re2c-3.1/examples/c/eof
+obj /usr/share/doc/re2c-3.1/examples/c/eof/01_sentinel.c f763edffbef7e547d78481e804ac9d0f 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/eof/01_sentinel.re 1c4a3f110f1b7f6f0a91d98602fe6078 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/eof/02_bounds_checking.c 7d8f1545d8c4a26a855406164b034406 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/eof/02_bounds_checking.re 8813a9e487c1b762289830cd24eb16be 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/eof/03_eof_rule.c c6eff334600d8a7b9aae62fd6415c7a7 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/eof/03_eof_rule.re 0eccf69b913e134290a516fc56286bc7 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/eof/04_generic_api_sentinel.c e0d75ce965b62c54bde7c38b20ea1827 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/eof/04_generic_api_sentinel.re 1c672988875c6adce3cc6de94556bb1a 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/eof/05_generic_api_eof_rule.c 0a4a0a11f7a4480dc92c054aaabcb64d 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/eof/05_generic_api_eof_rule.re 262c45d16b9d57214bfa7c130414d010 1723396312
+dir /usr/share/doc/re2c-3.1/examples/c/fill
+obj /usr/share/doc/re2c-3.1/examples/c/fill/01_fill.c f40d0b388db31aa1231bf9c9255019fc 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/fill/01_fill.re ec8d7ca7d73bf5dbca4af19b868f7d47 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/fill/02_fill.c 2a6e8d05840c58b600fbda21c1ca6bac 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/fill/02_fill.re 1b80a8c7e4543cb98c1e498ac99f2991 1723396312
+dir /usr/share/doc/re2c-3.1/examples/c/generic_api
+obj /usr/share/doc/re2c-3.1/examples/c/generic_api/ifstream.c 7065613aefd70a4af40a3a35f53b4d0e 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/generic_api/ifstream.re 1d6b1b6c232ac690bb676050c2a80afc 1723396312
+dir /usr/share/doc/re2c-3.1/examples/c/headers
+obj /usr/share/doc/re2c-3.1/examples/c/headers/header.c ae4ddbb8cdf9687db2fe27d3d21f5ce3 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/headers/header.re 00a2a6519e6c9ef06aa6015ef7c0845b 1723396312
+dir /usr/share/doc/re2c-3.1/examples/c/headers/lexer
+obj /usr/share/doc/re2c-3.1/examples/c/headers/lexer/state.h 2b6df55c2ff356c627bee8356f91b043 1723396312
+dir /usr/share/doc/re2c-3.1/examples/c/includes
+obj /usr/share/doc/re2c-3.1/examples/c/includes/definitions.h a0a752ec1859407359a885ca7c32f71f 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/includes/extra_rules.re.inc 88ad3e34f01836f9fa4ecd84625c8247 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/includes/include.c 283eb6cc6d572cebe0466f35316e6532 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/includes/include.re e84834753cdb41fac0760a5f00158dde 1723396312
+dir /usr/share/doc/re2c-3.1/examples/c/real_world
+obj /usr/share/doc/re2c-3.1/examples/c/real_world/cxx98.c 104fb3159d2470081bc6ffc9a619f631 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/real_world/cxx98.re becade12b1e39452d6ed53f168d27344 1723396312
+dir /usr/share/doc/re2c-3.1/examples/c/reuse
+obj /usr/share/doc/re2c-3.1/examples/c/reuse/braille.c a741b2b0f71202a6fc65f236ab9fd8b5 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/reuse/braille.re 79b456d5aa9b10c416347303378d642f 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/reuse/braille.ucs2.txt 27cf110785ee1affab38be38abb41b00 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/reuse/braille.utf16.txt 27cf110785ee1affab38be38abb41b00 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/reuse/braille.utf32.txt 3ba3ce21ca1ff56167c901fd9dc23e18 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/reuse/braille.utf8.txt 6b465ad473b0ec73483581924f036cc1 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/reuse/reuse.c 37b6f760d53f4b7606890455bd8a64e2 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/reuse/reuse.re 8ab8267e41843d75e6aebe6702912d1f 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/reuse/usedir.c 32b03a4fbd3e295870f32870080a362b 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/reuse/usedir.re 5945dbfabbed348a5e1017cdc4c29e4c 1723396312
+dir /usr/share/doc/re2c-3.1/examples/c/state
+obj /usr/share/doc/re2c-3.1/examples/c/state/push.c b22ffba7648840a3afaada930950881b 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/state/push.re 559c73dd4aa03b46d1c43962afc0c19d 1723396312
+dir /usr/share/doc/re2c-3.1/examples/c/submatch
+obj /usr/share/doc/re2c-3.1/examples/c/submatch/01_stags.c 00f74aff097d81ee3751f7a7c50b046b 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/submatch/01_stags.re c679a445c56002604788a3bc8d55f11a 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/submatch/01_stags_fill.c f5961873027a2a8f6558fececd4921d1 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/submatch/01_stags_fill.re 58748e5dbd532bc33b333b92c56eb397 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/submatch/02_mtags.c 3d4eef87d14e31260381d7b10227ed2d 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/submatch/02_mtags.re d69f24da2ce370a46514684fa14106c2 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/submatch/03_posix.c a5735cfb898fbb171ca86071cb059376 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/submatch/03_posix.re 7b93e914f4744e5c8830cc059bd87951 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/submatch/http_rfc7230.c d376b568d39b05c609d7455aff7d8cf6 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/submatch/http_rfc7230.re 594968af7df7ee3c1def6b18bda0b8c5 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/submatch/parse_etc_passwd.c 1879aa5151845d9ff9e24ef159083ce2 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/submatch/parse_etc_passwd.re 3d6e8c24391adf2ffa04254e2c5a0b23 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/submatch/parse_options.c 3dc64bfec90afb9cb3f6ff0e6fbd91d0 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/submatch/parse_options.re afaed353a1f770bbb66e18af5b3529fc 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/submatch/parse_records.c e0b2d4677b5b6eadf524943f97471016 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/submatch/parse_records.re addbfbc0de7d22f64f74a707f3ba54fd 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/submatch/uri_rfc3986.c 4a745b424094fc4262f75286e03c3b86 1723396312
+obj /usr/share/doc/re2c-3.1/examples/c/submatch/uri_rfc3986.re 072d31c0d75d0df2b9660306da2f79e6 1723396312
+dir /usr/share/doc/re2c-3.1/examples/go
+obj /usr/share/doc/re2c-3.1/examples/go/01_basic.go a7aaeb7d45b84519e27cfe39fdad14d4 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/01_basic.re acf2108ac1b591a93bce1b1047b428d9 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/__run_all.sh d151cc296c9d3efd81a95aeea7adedf0 1723396312
+dir /usr/share/doc/re2c-3.1/examples/go/conditions
+obj /usr/share/doc/re2c-3.1/examples/go/conditions/parse_u32_blocks.go f0d593eaf58b1c8df3717bf3ca0f6008 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/conditions/parse_u32_blocks.re ae142b42f2ad43d19a289d86d86502f6 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/conditions/parse_u32_conditions.go a8f11cf7d25f5e17856107f54a11c407 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/conditions/parse_u32_conditions.re 920b682140d19776cb6c03ce48813740 1723396312
+dir /usr/share/doc/re2c-3.1/examples/go/encodings
+obj /usr/share/doc/re2c-3.1/examples/go/encodings/unicode_identifier.go e9ee314547cd6ade14628287343df0aa 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/encodings/unicode_identifier.re 4ccfd1b9b629faa95ffddb4846549d28 1723396312
+dir /usr/share/doc/re2c-3.1/examples/go/eof
+obj /usr/share/doc/re2c-3.1/examples/go/eof/01_sentinel.go 34f565a1bbab5f8ede62fb134235a2a1 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/eof/01_sentinel.re e5c332a89f9e00a2ab0d1e3b035a44f1 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/eof/02_bounds_checking.go fb7b64c3e3d8699992d56a6e2e02a305 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/eof/02_bounds_checking.re d492f28df7932ed7efa13c4dcf522fa5 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/eof/03_eof_rule.go e4c5f2e01fed2b3b445877b39d0e882e 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/eof/03_eof_rule.re a65f558b3430df063c5db60673cc1b48 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/eof/04_generic_api_sentinel.go 6d4a61d115f87cf7b29f096c02ad278e 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/eof/04_generic_api_sentinel.re 3ec19b1ba3eb5e2cd08c9e5a6801935b 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/eof/05_generic_api_eof_rule.go 0261c8c4baa8926a62adb9152a710f3f 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/eof/05_generic_api_eof_rule.re e3475b03227fff7f3700ffb52f0fc38f 1723396312
+dir /usr/share/doc/re2c-3.1/examples/go/fill
+obj /usr/share/doc/re2c-3.1/examples/go/fill/01_fill.go 44ce449b9f811111a068d9159ac08948 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/fill/01_fill.re a560d1a9aedcc903f4d8dbdf4b81280e 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/fill/02_fill.go 5721315432fe9adb500fb43376585ccf 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/fill/02_fill.re ca9d5569fcca2678a2749c39379fc745 1723396312
+dir /usr/share/doc/re2c-3.1/examples/go/headers
+obj /usr/share/doc/re2c-3.1/examples/go/headers/header.go 58bd1e1597eead6bb249ed1b9c74b133 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/headers/header.re 119ecce3779a1d8db3c7ac9764b3ed45 1723396312
+dir /usr/share/doc/re2c-3.1/examples/go/headers/lexer
+obj /usr/share/doc/re2c-3.1/examples/go/headers/lexer/state.go 550518737d1675662849e361523f254a 1723396312
+dir /usr/share/doc/re2c-3.1/examples/go/includes
+obj /usr/share/doc/re2c-3.1/examples/go/includes/definitions.go 5ee72564bfd94cdd7830e7818d71be05 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/includes/extra_rules.re.inc f9f2edafe0d7f05782cbd35267ed32ae 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/includes/include.go 2da232ea36090a41adab14554d8028fb 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/includes/include.re 5236e7408e8167ed06fc781630d46636 1723396312
+dir /usr/share/doc/re2c-3.1/examples/go/reuse
+obj /usr/share/doc/re2c-3.1/examples/go/reuse/reuse.go 5a206853306eea5a9b42eeb187bbce62 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/reuse/reuse.re 20365ff07b6ab4509508ab7b82462c0f 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/reuse/usedir.go 3b73b5077ed7847a254bcc5a68c77149 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/reuse/usedir.re fd3cabd9072341d315f793d7b146aa4c 1723396312
+dir /usr/share/doc/re2c-3.1/examples/go/state
+obj /usr/share/doc/re2c-3.1/examples/go/state/push.go 08bc561f53e5942174af62ea5cb4a1e6 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/state/push.re 9b60b6bb4e5ce371367c9610b9bd8117 1723396312
+dir /usr/share/doc/re2c-3.1/examples/go/submatch
+obj /usr/share/doc/re2c-3.1/examples/go/submatch/01_stags.go 9e67571e67208c22cac2ae44c09c6e1f 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/submatch/01_stags.re 5e14abb38016df878cc07d9f44e33af5 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/submatch/01_stags_fill.go 8b766c8688c4fbd169577d74ae86154c 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/submatch/01_stags_fill.re e04d508f2898fdd1c313524fd7b27793 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/submatch/02_mtags.go 0ad424705addc0d3ec713e2730dc0a6e 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/submatch/02_mtags.re 58be715c5b8b3920b1182ea9deee1ff2 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/submatch/03_posix.go 8c78d7c4003190ada099510e9b565e6d 1723396312
+obj /usr/share/doc/re2c-3.1/examples/go/submatch/03_posix.re 27a73759670cb46ddbf4269bc8343442 1723396312
+dir /usr/share/doc/re2c-3.1/examples/rust
+obj /usr/share/doc/re2c-3.1/examples/rust/01_basic.re d9f8afd80b29d7dad6cdb8057e465f8b 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/01_basic.rs bf1a676dce788093719697720feb7741 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/__run_all.sh e8243664c44bbee9709732a3d1192ae6 1723396312
+dir /usr/share/doc/re2c-3.1/examples/rust/conditions
+obj /usr/share/doc/re2c-3.1/examples/rust/conditions/parse_u32_blocks.re e0448cfc1763cd07ee5e16b89a6f5426 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/conditions/parse_u32_blocks.rs 7415aaef63545d3c8aa5751ae5e11617 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/conditions/parse_u32_conditions.re 065d52cb146d7be4008f4d58a1b912fb 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/conditions/parse_u32_conditions.rs c0b17a8f8e5760cbe8223abccd4f4055 1723396312
+dir /usr/share/doc/re2c-3.1/examples/rust/encodings
+obj /usr/share/doc/re2c-3.1/examples/rust/encodings/unicode_identifier.re b9cfc2d4afe46b42e3c99afa35fc88e8 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/encodings/unicode_identifier.rs da7abb27e77eb2786aa77cd7adfbec44 1723396312
+dir /usr/share/doc/re2c-3.1/examples/rust/eof
+obj /usr/share/doc/re2c-3.1/examples/rust/eof/01_sentinel.re 884f89da27ab0c19d40451cf0a643d64 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/eof/01_sentinel.rs 481968ad2b23ba8c991d20f148127e14 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/eof/02_bounds_checking.re 3b87894fb695845de746188f9dcfe904 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/eof/02_bounds_checking.rs 261bab5e3d386d93fd51e0367d135e65 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/eof/03_eof_rule.re eb63b2b4db42a1e6223f93826008be0d 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/eof/03_eof_rule.rs 2ade1a9eb34e17126102c324c4648e6b 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/eof/04_generic_api_sentinel.re e882d0c21efd48440a52f24f6e2e9e3f 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/eof/04_generic_api_sentinel.rs 9f32e13c385cfa86f7a6cf56bcecdb50 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/eof/05_generic_api_eof_rule.re 135a7accc6bebe90cbaa37531ac05f34 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/eof/05_generic_api_eof_rule.rs 542abec2b1686f8add5efdaf3d23604f 1723396312
+dir /usr/share/doc/re2c-3.1/examples/rust/fill
+obj /usr/share/doc/re2c-3.1/examples/rust/fill/01_fill.re 546b0106f5710eecb15b8633e207084c 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/fill/01_fill.rs fcfd43608c50d684c77a32192a8e59f3 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/fill/02_fill.re 287dee09208457473f070f72efb8e192 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/fill/02_fill.rs 4fb1867e8cc7bfb308286a6ed35a6cef 1723396312
+dir /usr/share/doc/re2c-3.1/examples/rust/headers
+obj /usr/share/doc/re2c-3.1/examples/rust/headers/header.re f15df6aa5e5a7225a872bf5e1551d876 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/headers/header.rs 520b23bbcc544ac59b93728248f5bba2 1723396312
+dir /usr/share/doc/re2c-3.1/examples/rust/headers/lexer
+obj /usr/share/doc/re2c-3.1/examples/rust/headers/lexer/mod.rs 0d8666b3bbaf1e2a9ff8feebf98129ca 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/headers/lexer/state.rs 05e161f46dbd71e4720d648c85197a12 1723396312
+dir /usr/share/doc/re2c-3.1/examples/rust/includes
+obj /usr/share/doc/re2c-3.1/examples/rust/includes/definitions.rs b6079282c42348143c7a7eb1012a6d79 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/includes/extra_rules.re.inc 20eaa7180fb3f0dd0f1d6be5aa9ee276 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/includes/include.re bfe5ea52e842aa2c0e6a5d98bf61c164 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/includes/include.rs 558051e883a61ffd9e95f6ab503e6285 1723396312
+dir /usr/share/doc/re2c-3.1/examples/rust/real_world
+obj /usr/share/doc/re2c-3.1/examples/rust/real_world/c.re 2d344a6627683c8420e9c4fb7ccfe847 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/real_world/c.rs f92543c7e9e50513f84911eeacbb1640 1723396312
+dir /usr/share/doc/re2c-3.1/examples/rust/reuse
+obj /usr/share/doc/re2c-3.1/examples/rust/reuse/reuse.re 430b1d4c6d12ebbb4603417c222cf66f 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/reuse/reuse.rs 28e2b9cb9eb525b28e138269bdd805ed 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/reuse/usedir.re 8eb412e22b0886acabf57e329a91d818 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/reuse/usedir.rs 18f75f31bf15432ba94865d7362fb192 1723396312
+dir /usr/share/doc/re2c-3.1/examples/rust/state
+obj /usr/share/doc/re2c-3.1/examples/rust/state/push.re 507da20b739707521351ad46610c9e34 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/state/push.rs d5a877d4fc50fba2061179e8d993134b 1723396312
+dir /usr/share/doc/re2c-3.1/examples/rust/submatch
+obj /usr/share/doc/re2c-3.1/examples/rust/submatch/01_stags.re eef3d815c857ebd85c38881f1c97473c 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/submatch/01_stags.rs 106f0e9fb0265f943b5734b917f15a8d 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/submatch/01_stags_fill.re 2222e3a8bc22849f67e82e6eed9c7c72 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/submatch/01_stags_fill.rs e8d30ec1a90b31655d797b31babeb6c3 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/submatch/02_mtags.re fed97803cf9829773a831e884ba082f0 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/submatch/02_mtags.rs 0626ea5bff124d88082dff42b716bbd1 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/submatch/03_posix.re 8759f32d93e039f2df6d1529b7c30097 1723396312
+obj /usr/share/doc/re2c-3.1/examples/rust/submatch/03_posix.rs 9f1cb7b6e802f735c9146ee5445b4207 1723396312
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/re2c.1.bz2 8c3c6421c37c9620ee571c7f64711535 1723396312
+obj /usr/share/man/man1/re2go.1.bz2 4bcefa82a45476759a10aba7083a9810 1723396312
+obj /usr/share/man/man1/re2rust.1.bz2 4ff78358af8032ee3f60eb3801a3e01e 1723396312
+dir /usr/share/re2c
+dir /usr/share/re2c/stdlib
+obj /usr/share/re2c/stdlib/unicode_categories.re a2664754407b90eb6089a95b4f01013b 1723396312

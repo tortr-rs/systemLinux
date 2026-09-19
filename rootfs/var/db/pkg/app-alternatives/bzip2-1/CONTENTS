@@ -1,0 +1,11 @@
+dir /usr
+dir /usr/share
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/bunzip2.1 13a6c055414d235923adb1c963a0c355 1710327933
+obj /usr/share/man/man1/bzcat.1 13a6c055414d235923adb1c963a0c355 1710327933
+obj /usr/share/man/man1/bzip2.1 0565c96acb9df27dc15f696b27926e86 1710327933
+dir /bin
+sym /bin/bunzip2 -> bzip2 1789353855
+sym /bin/bzcat -> bzip2 1789353855
+sym /bin/bzip2 -> bzip2-reference 1789353855

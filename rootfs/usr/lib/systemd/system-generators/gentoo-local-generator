@@ -1,0 +1,59 @@
+#!/bin/sh
+
+locald_dir=/etc/local.d
+cd "${locald_dir}" || exit 0
+
+svc_dir=/run/systemd/generator
+wan_dir=${svc_dir}/multi-user.target.wants
+mkdir -p "${svc_dir}" "${wan_dir}" || exit 1
+
+previous=
+
+for f in *.start *.stop; do
+	# omit non-existing files ('*.start' when glob doesn't match)
+	[ -f "${f}" ] || continue
+
+	case "${f}" in
+		*.start)
+			is_start=1
+			fn=${f%.start}
+
+			# 'env' guarantees shell-like behavior when starting files.
+			# Especially that text files without shebangs will be
+			# executed via shell.
+
+			start_cmd="/usr/bin/env ${locald_dir}/${f}"
+			stop_cmd=/bin/true
+			if [ -f "${fn}".stop ]; then
+				stop_cmd="/usr/bin/env ${locald_dir}/${fn}.stop"
+			fi
+			;;
+		*.stop)
+			is_start=
+			fn=${f%.stop}
+			start_cmd=/bin/true
+			stop_cmd="/usr/bin/env ${locald_dir}/${f}"
+			;;
+	esac
+
+	# omit .stop files which have matching .start files
+	[ -z "${is_start}" -a -e "${fn}.start" ] && continue
+
+	svc_file=gentoo-local-${fn}.service
+
+	echo "[Unit]
+Description=Service for local.d/${fn}.*
+After=multi-user.target graphical.target ${previous}
+ConditionFileIsExecutable=${locald_dir}/${f}
+
+[Service]
+Type=forking
+RemainAfterExit=on
+TimeoutSec=0
+ExecStart=${start_cmd}
+ExecStop=${stop_cmd}" > "${svc_dir}/${svc_file}"
+
+	ln -s "../${svc_file}" "${wan_dir}/${svc_file}"
+
+	previous=${svc_file}
+done

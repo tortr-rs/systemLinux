@@ -1,0 +1,22 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/psl 97917f351fcb45d30fa50cefb1e7623c 1780764860
+obj /usr/bin/psl-make-dafsa 423a6d1dd8b299ac33ba2cc5fe1dff60 1705165219
+dir /usr/include
+obj /usr/include/libpsl.h 303fb6f0ea25aaf7597eb30de05144ac 1780764857
+dir /usr/lib64
+obj /usr/lib64/libpsl.so.5.3.5 c38419c6266c0167747b891cbf91a9f6 1780764860
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/libpsl.pc 5243082385375ec7f0c780da937fc326 1780764857
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/libpsl-0.21.5
+obj /usr/share/doc/libpsl-0.21.5/AUTHORS.bz2 1ed678539d32a8a9eb65f2da79c5ef2f 1780764859
+obj /usr/share/doc/libpsl-0.21.5/ChangeLog.bz2 757c48b1be7cb94d8485f89bdcbe76dc 1780764859
+obj /usr/share/doc/libpsl-0.21.5/NEWS.bz2 27b7adff198eafa864681d2e29e7d264 1780764860
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/psl-make-dafsa.1.bz2 74445355986bd9b0e0cff81aa5a0d4ba 1705165219
+obj /usr/share/man/man1/psl.1.bz2 8c29409c14c1b48e95dd9d3048a765ff 1705165219
+sym /usr/lib64/libpsl.so.5 -> libpsl.so.5.3.5 1789354051
+sym /usr/lib64/libpsl.so -> libpsl.so.5 1789354051

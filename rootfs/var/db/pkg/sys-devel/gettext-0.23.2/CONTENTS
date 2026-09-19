@@ -1,0 +1,446 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/autopoint c45bcc81e34f15b85e82b8c4f44f1124 1760291684
+obj /usr/bin/envsubst f8fe1242cb2be3b06b91bd917f0bfb35 1760291711
+obj /usr/bin/gettext e371975cae82b08672e7c5236b08dbe7 1760291711
+obj /usr/bin/gettext.sh f9a157cf8fa3513ae4a21a475eeeb8ef 1760291680
+obj /usr/bin/gettextize 3a8d8f58baf4452fa028e8fe1ee5da82 1760291708
+sym /usr/bin/gmsgfmt -> msgfmt 1789354124
+obj /usr/bin/msgattrib eac836c1e7ef98b9effedfb7fc0a8c81 1760291711
+obj /usr/bin/msgcat 746f0007f8967df0f88af94e5fd9f22c 1760291711
+obj /usr/bin/msgcmp 48d69c388675d7d1d9ba8ca7352e21b4 1760291711
+obj /usr/bin/msgcomm 82c82e873eac138aca611d31e8baba5b 1760291711
+obj /usr/bin/msgconv 7f7163c192efebad3f92fc11c2c9436a 1760291711
+obj /usr/bin/msgen 53125b4a939919317ce4e238ef7cf236 1760291711
+obj /usr/bin/msgexec ec89e3ae46a5f32a4d400f4fce5ca184 1760291711
+obj /usr/bin/msgfilter becaf1f861d31299caeaca471e6b0169 1760291711
+obj /usr/bin/msgfmt 0ad57f51e3a4614d6f9f9e1aa5d5b779 1760291711
+obj /usr/bin/msggrep e3e6d2c7ba7d9033500c8d50102dd30d 1760291711
+obj /usr/bin/msginit e0fb676e4b95273fe2b8598094096c4c 1760291711
+obj /usr/bin/msgmerge 9af0858228063549db085d439b0514b4 1760291711
+obj /usr/bin/msgunfmt f04a3e8d26769a9459f464573d10f4f7 1760291711
+obj /usr/bin/msguniq 4a11b826dd315f813881d5786ddb88d1 1760291711
+obj /usr/bin/ngettext f63bef70b8d977912f6fdefae865f451 1760291711
+obj /usr/bin/recode-sr-latin 87eff98f260551038ced826dce454573 1760291711
+obj /usr/bin/xgettext 6b958dbb7a1c3384c0004c3f564f5eae 1760291711
+dir /usr/include
+obj /usr/include/autosprintf.h b3d618e0b0e5b10a50578a536199731b 1760291708
+obj /usr/include/gettext-po.h 9f40994b09f61658ea27743e260575f8 1760291708
+dir /usr/include/textstyle
+obj /usr/include/textstyle/stdbool.h a90408148cf07d5081d1d060e58df802 1760291708
+obj /usr/include/textstyle/version.h d2b77b5413bda954341fb77affe33dbc 1760291708
+obj /usr/include/textstyle/woe32dll.h 9eb4fe5a2132dd0863b7ac6701fb815e 1760291708
+obj /usr/include/textstyle.h 0ba3c0c3e8db68baac7afd261f572b26 1760291708
+dir /usr/include/x86_64-pc-linux-gnu
+obj /usr/include/x86_64-pc-linux-gnu/autosprintf.h 6a22735f34fba0867c37ceeeb67e3b09 1760291680
+obj /usr/include/x86_64-pc-linux-gnu/gettext-po.h f679c8933dc19bdfe9a7e403c1fe8716 1760291683
+dir /usr/include/x86_64-pc-linux-gnu/textstyle
+obj /usr/include/x86_64-pc-linux-gnu/textstyle/stdbool.h 7aab2c8331c41559cb7b2d108e8c0aab 1760291681
+obj /usr/include/x86_64-pc-linux-gnu/textstyle/version.h 1d64eeaab6d53456e59bb2dc795300c9 1760291681
+obj /usr/include/x86_64-pc-linux-gnu/textstyle/woe32dll.h bf6e1826e5fa516dac508011ebadb114 1760291681
+obj /usr/include/x86_64-pc-linux-gnu/textstyle.h 8485098f66fd0c8bc6dff79e5e5af48c 1760291681
+dir /usr/lib64
+obj /usr/lib64/libasprintf.so.0.0.0 a5400bb4f627d565795d9747ad48abbf 1760291711
+obj /usr/lib64/libgettextlib-0.23.2.so 9f491eb6cfc5fed1e972730a16b83aaf 1760291711
+sym /usr/lib64/libgettextlib.so -> libgettextlib-0.23.2.so 1789354124
+sym /usr/lib64/libgettextpo.so -> libgettextpo.so.0.5.12 1789354124
+sym /usr/lib64/libgettextpo.so.0 -> libgettextpo.so.0.5.12 1789354124
+obj /usr/lib64/libgettextpo.so.0.5.12 4f98065b884048f997b759257991ce44 1760291711
+obj /usr/lib64/libgettextsrc-0.23.2.so 81572b2febf388f9d01bb40e9e1f7c25 1760291711
+sym /usr/lib64/libgettextsrc.so -> libgettextsrc-0.23.2.so 1789354124
+sym /usr/lib64/libtextstyle.so -> libtextstyle.so.0.2.3 1789354124
+sym /usr/lib64/libtextstyle.so.0 -> libtextstyle.so.0.2.3 1789354124
+obj /usr/lib64/libtextstyle.so.0.2.3 bf331c68b4f2486b8de4d2bb2b00a948 1760291711
+obj /usr/lib64/preloadable_libintl.so 1e97c7d6586005cd1fd9e2c81bc568c8 1760291711
+dir /usr/libexec
+dir /usr/libexec/gettext
+obj /usr/libexec/gettext/cldr-plurals e7e42c3574759cc932f6059bac9f7cf1 1760291711
+obj /usr/libexec/gettext/hostname 130bb178a8d9919e8ffa9b3043ad4cb0 1760291711
+obj /usr/libexec/gettext/project-id 4d5c40d49a1798a27e06ecf31b3db58c 1760291683
+obj /usr/libexec/gettext/urlget 984a88d455a3a5651d4e378685e56b5e 1760291711
+obj /usr/libexec/gettext/user-email 4ee8d596fe1293b2976ec7f5325c1e22 1760291683
+dir /usr/share
+dir /usr/share/aclocal
+obj /usr/share/aclocal/build-to-host.m4 8d5c9bdbb3603a16be6ed1d186ad7b1b 1760291684
+obj /usr/share/aclocal/gettext.m4 527f0c52a52fc501405bac86291fd074 1760291684
+obj /usr/share/aclocal/host-cpu-c-abi.m4 9a9b5a48ef56e9f36933d1b40829b3dd 1760291684
+obj /usr/share/aclocal/iconv.m4 41a994ac60ed5946fc14b1b76bdf3f99 1760291684
+obj /usr/share/aclocal/intlmacosx.m4 51fe7601186666b1ffa4897a028c04b8 1760291684
+obj /usr/share/aclocal/lib-ld.m4 ae8002820efb9b12f1eb1f87fb4a907f 1760291684
+obj /usr/share/aclocal/lib-link.m4 5bec3a69bf3feabda44ac04bd0b8db91 1760291684
+obj /usr/share/aclocal/lib-prefix.m4 8db29ee2cc99699f8090b67db18de947 1760291684
+obj /usr/share/aclocal/nls.m4 9157cbc2dfe0f7875f0ceb2e45bd6aa3 1760291684
+obj /usr/share/aclocal/po.m4 d18e77f2f77ac1c1bfc44e1c08a61489 1760291684
+obj /usr/share/aclocal/progtest.m4 e5d96e72a0386a7a2e0aaab236767d49 1760291684
+dir /usr/share/doc
+dir /usr/share/doc/gettext-0.23.2
+obj /usr/share/doc/gettext-0.23.2/AUTHORS.bz2 2246089de03abc0208c4acf75224429f 1760291708
+obj /usr/share/doc/gettext-0.23.2/ChangeLog.bz2 af76f0f6e87cb874a201c777bccabf6e 1760291708
+obj /usr/share/doc/gettext-0.23.2/NEWS.bz2 cafae615673ac757f5eaf697242687a1 1760291708
+obj /usr/share/doc/gettext-0.23.2/README.bz2 74d035af32d933cf9ebc3039a9873f06 1760291708
+obj /usr/share/doc/gettext-0.23.2/THANKS.bz2 9b78e74d255c0867e257bd12b7bc193c 1760291708
+dir /usr/share/doc/gettext-0.23.2/html
+obj /usr/share/doc/gettext-0.23.2/html/autopoint.1.html fae5291a1505209607f86e263d4207ef 1760291684
+obj /usr/share/doc/gettext-0.23.2/html/autosprintf_all.html ba34ed6fe595f3a6fef37469218c98a7 1760291680
+obj /usr/share/doc/gettext-0.23.2/html/bind_textdomain_codeset.3.html 2c39e7029de997f42ebdcdb64430b07e 1760291681
+obj /usr/share/doc/gettext-0.23.2/html/bindtextdomain.3.html 7598d5e6c58f2989407f3c791d2e4b3c 1760291681
+dir /usr/share/doc/gettext-0.23.2/html/csharpdoc
+obj /usr/share/doc/gettext-0.23.2/html/csharpdoc/GNU_Gettext.html 4ecc32e74f8772927d27d6cf6e79bc1e 1760291680
+obj /usr/share/doc/gettext-0.23.2/html/csharpdoc/GNU_Gettext_GettextResourceManager.html dcc8661fd458e9953e6e35ebc990f607 1760291680
+obj /usr/share/doc/gettext-0.23.2/html/csharpdoc/GNU_Gettext_GettextResourceSet.html 9c58f61626cf39c0f42df85fe674ee2b 1760291680
+obj /usr/share/doc/gettext-0.23.2/html/csharpdoc/begin.html 83bbd838b83372aa30c969f13dee9d44 1760291680
+obj /usr/share/doc/gettext-0.23.2/html/csharpdoc/index.html bd4bd6847f9fde9904f29e4bb4696a6e 1760291680
+obj /usr/share/doc/gettext-0.23.2/html/csharpdoc/namespaces.html a1fb2bc1e7ab1ae558586fb1439e5ecc 1760291680
+obj /usr/share/doc/gettext-0.23.2/html/envsubst.1.html 7bb3d8c72a1967cb11612ba04c2057a2 1760291681
+obj /usr/share/doc/gettext-0.23.2/html/gettext.1.html f2213f240686825f07ab7e4349e77017 1760291681
+obj /usr/share/doc/gettext-0.23.2/html/gettext.3.html 2fa7d7ed66b47a62997c770e2a85d718 1760291681
+obj /usr/share/doc/gettext-0.23.2/html/gettext_1.html 74bc31503b8df8433a18f396fbb58ccb 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettext_10.html 84c9210f8c4b586bf565fc9bb2154fc4 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettext_11.html a97bfbb83f206d0a3ef38c22f10b5993 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettext_12.html c9997bab6f20f985ac54bbda144a61a8 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettext_13.html a606b16dc46e6bc9685077ea7640f746 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettext_14.html 7a00d22b6ffc49238d9c9a0952e7ede4 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettext_15.html 02da208b1d11f27a62892d59a4e553ae 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettext_16.html f3ce80c83e4eedc75f58a443d55d29c6 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettext_17.html a658fc8d815bca21daa01e7e875d65ff 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettext_18.html 797cb656a10c7c42708cbb267cc78e93 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettext_19.html 294bc54839d181d1111f6d47e43cde44 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettext_2.html 0a2987ac0df0a55ae2564ac7d4e79954 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettext_20.html 6c0fe1a39b336aa75ba0245e4e57eac6 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettext_21.html a15e5cdc071a6ad5e703aa83d1d09182 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettext_22.html 0d80e0b8375c4d1f0ee7bc0896e0d20b 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettext_23.html a0822a827a6e5c01e319bff375b7eceb 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettext_24.html a3b9c8dcde9fdc1b10ee024d79f23a47 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettext_25.html 2c131bf7d43fca8c910b583bf63ceb3e 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettext_26.html 8ab5cd694cf100e110f2b03d531137ac 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettext_27.html afc183d5842e2b7d071d74c8566d8762 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettext_28.html 4fb0b3e9ac97f0db0b815661142c3792 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettext_29.html 0536b5286a8b3e566407b87aaeadf8fd 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettext_3.html 74ca24bcd13178e4089789edfbc2d253 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettext_30.html 91a88569bb796fdc9401fdcdabc9f74a 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettext_4.html 8f33e6507e6651092c0e49c7179a22c0 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettext_5.html 79da0fa348785e1e1d4da08b61bbb6e3 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettext_6.html b7a0fe44e2bde34493d76bcdfdedd51d 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettext_7.html e78f32ba9d007f96dfa7ac64669da5e1 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettext_8.html 822f2902b679f68776f74f369c2fe515 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettext_9.html dfdfd7cbe27acc038994d0e880e72289 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettext_abt.html 5d37d3e5fff2c8ab2c45b617d7af519c 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettext_fot.html ac12469e43eacbedf524560f759676bf 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettext_toc.html f8999c253e64aec4728dfc10cc156189 1760291708
+obj /usr/share/doc/gettext-0.23.2/html/gettextize.1.html 11329fb3838de83ca15e1907432dd715 1760291684
+dir /usr/share/doc/gettext-0.23.2/html/javadoc2
+obj /usr/share/doc/gettext-0.23.2/html/javadoc2/allclasses-frame.html 0c9f2beb0b98851f44bf9117b0f36114 1760291680
+obj /usr/share/doc/gettext-0.23.2/html/javadoc2/deprecated-list.html 678c3f0f150801c7f8651047403fb250 1760291680
+dir /usr/share/doc/gettext-0.23.2/html/javadoc2/gnu
+dir /usr/share/doc/gettext-0.23.2/html/javadoc2/gnu/gettext
+obj /usr/share/doc/gettext-0.23.2/html/javadoc2/gnu/gettext/GettextResource.html 559764c5f067c4d200854aedc47dafb9 1760291680
+obj /usr/share/doc/gettext-0.23.2/html/javadoc2/gnu/gettext/package-frame.html e5cc9851106b6ea922334277c448433f 1760291680
+obj /usr/share/doc/gettext-0.23.2/html/javadoc2/gnu/gettext/package-summary.html ba0b825e8427650c735817a7c60d7280 1760291680
+obj /usr/share/doc/gettext-0.23.2/html/javadoc2/gnu/gettext/package-tree.html 9dfc58fceafd3c5ee7ff5fe387681982 1760291680
+obj /usr/share/doc/gettext-0.23.2/html/javadoc2/help-doc.html e8686194da987ff1eff5248cd4546ec6 1760291680
+obj /usr/share/doc/gettext-0.23.2/html/javadoc2/index-all.html 7d6febe5a3798f7c4f12e9ce15810d3f 1760291680
+obj /usr/share/doc/gettext-0.23.2/html/javadoc2/index.html 65c6b4a7b7bc3d2e06b437bb992d34d0 1760291680
+obj /usr/share/doc/gettext-0.23.2/html/javadoc2/overview-tree.html d4d7b66af970014fc2603adb14bec176 1760291680
+obj /usr/share/doc/gettext-0.23.2/html/javadoc2/package-list cc24a551176eed32712769a8ecac7c77 1760291680
+obj /usr/share/doc/gettext-0.23.2/html/javadoc2/packages.html 10bc80180c3a48ada1c86e01f8aa4deb 1760291680
+obj /usr/share/doc/gettext-0.23.2/html/javadoc2/serialized-form.html 46e88998fd27289fe4f3695d7337cbcf 1760291680
+obj /usr/share/doc/gettext-0.23.2/html/javadoc2/stylesheet.css d782e23c2957890f111646b6a33c9a27 1760291680
+obj /usr/share/doc/gettext-0.23.2/html/libtextstyle_1.html 33588b0156cc6e1e787ff8e745488004 1760291681
+obj /usr/share/doc/gettext-0.23.2/html/libtextstyle_2.html f1d7159bca2ec21c013de0de2b5d0350 1760291681
+obj /usr/share/doc/gettext-0.23.2/html/libtextstyle_3.html 2038abd100eb3831d93b40831a9f5739 1760291681
+obj /usr/share/doc/gettext-0.23.2/html/libtextstyle_4.html 2fee8de8ce8771f0d306a50e7c92b991 1760291681
+obj /usr/share/doc/gettext-0.23.2/html/libtextstyle_5.html 19adc129c1bb65f85b0f9127e9d2b6f2 1760291681
+obj /usr/share/doc/gettext-0.23.2/html/libtextstyle_6.html 9e41c27d90b75355138224b8205ec52e 1760291681
+obj /usr/share/doc/gettext-0.23.2/html/libtextstyle_7.html 146fc7af74b07cd0756a59fda6faf5ce 1760291681
+obj /usr/share/doc/gettext-0.23.2/html/libtextstyle_abt.html cf41edec4c80f0a2fbc33c5c2b7f311b 1760291681
+obj /usr/share/doc/gettext-0.23.2/html/libtextstyle_toc.html 581da31c60ead3ada49d53701554bc28 1760291681
+obj /usr/share/doc/gettext-0.23.2/html/msgattrib.1.html 5ad0f3dc57daf6d0a7547da05899f946 1760291684
+obj /usr/share/doc/gettext-0.23.2/html/msgcat.1.html 8cbf24846deb54ec2f90cbaba734ed92 1760291684
+obj /usr/share/doc/gettext-0.23.2/html/msgcmp.1.html f89b89cdf1140622e65a0688742453ef 1760291684
+obj /usr/share/doc/gettext-0.23.2/html/msgcomm.1.html 668da612059999fedddec974708faa65 1760291684
+obj /usr/share/doc/gettext-0.23.2/html/msgconv.1.html 3fcdf9ebbeaf23d36533bab70563f12d 1760291684
+obj /usr/share/doc/gettext-0.23.2/html/msgen.1.html 7c779ab39f55ce723d75ea42e44eb5b5 1760291684
+obj /usr/share/doc/gettext-0.23.2/html/msgexec.1.html d624c2c3ecf0c86cefb25a05070f376d 1760291684
+obj /usr/share/doc/gettext-0.23.2/html/msgfilter.1.html 47a756e88f944523de76bcf0a4943d9d 1760291684
+obj /usr/share/doc/gettext-0.23.2/html/msgfmt.1.html 0b3f397f2f1e4cd927f34aa7117562fe 1760291684
+obj /usr/share/doc/gettext-0.23.2/html/msggrep.1.html ede0b0ebaafa38f31f34b5396a1ac8fb 1760291684
+obj /usr/share/doc/gettext-0.23.2/html/msginit.1.html 78419767e81a37e1b80568ea152a4e9e 1760291684
+obj /usr/share/doc/gettext-0.23.2/html/msgmerge.1.html 222f706c48131c56d57bf3594643dd92 1760291684
+obj /usr/share/doc/gettext-0.23.2/html/msgunfmt.1.html c1a2263991d7138d23177bc360dc58a8 1760291684
+obj /usr/share/doc/gettext-0.23.2/html/msguniq.1.html 21a7c2b8b05aa2b0ab0fbd7b570cfaa7 1760291684
+obj /usr/share/doc/gettext-0.23.2/html/ngettext.1.html 8241fa7e63de373c64fd2206a799fda9 1760291681
+obj /usr/share/doc/gettext-0.23.2/html/ngettext.3.html df954aff318f314860aef81819782554 1760291681
+obj /usr/share/doc/gettext-0.23.2/html/recode-sr-latin.1.html 79d47f80285198ee4aacdec9b45e3d8a 1760291684
+obj /usr/share/doc/gettext-0.23.2/html/textdomain.3.html 3f19d5ced37c82f1373e1999a61dc218 1760291681
+obj /usr/share/doc/gettext-0.23.2/html/xgettext.1.html 5e3993d58d92a288c7d606ee38a07873 1760291684
+dir /usr/share/gettext
+obj /usr/share/gettext/ABOUT-NLS b8379015c0e4d1221c386a8fff0fcb9b 1760291681
+obj /usr/share/gettext/archive.dir.tar.xz afd35eefb3751766140036c375250800 1760291684
+obj /usr/share/gettext/config.rpath 4c8cc7d47985c8aa6836af0e227ce72b 1760291708
+obj /usr/share/gettext/disclaim-translations.txt 9dc0d62e7c77cfa034bc84749a7bdb1c 1760291708
+obj /usr/share/gettext/gettext.h 872654e1d8e253d0794b4d39d6fa8a68 1760291680
+obj /usr/share/gettext/javaversion.class 70db60a5939769e23e8396c1d5851091 1760291682
+obj /usr/share/gettext/msgunfmt.tcl 3627e712504b4ac8238ddc8aface013d 1760291683
+dir /usr/share/gettext/po
+obj /usr/share/gettext/po/Makefile.in.in 059e89904825bbecce6c508eb743b4b5 1760291684
+obj /usr/share/gettext/po/Makevars.template cd2486a72b17b14141afa464f257b348 1760291684
+obj /usr/share/gettext/po/Rules-quot 9e5d6b1d495332adf3a7d82343a1f4c1 1760291684
+obj /usr/share/gettext/po/boldquot.sed ccb3ec0dc8143e53de77fe257ed6b09c 1760291684
+obj /usr/share/gettext/po/en@boldquot.header 2d3db479d5c6a72a168ab413c0f0da3b 1760291684
+obj /usr/share/gettext/po/en@quot.header 35ff322d512ec3af3a1e86c25acf536a 1760291684
+obj /usr/share/gettext/po/insert-header.sed 20adab6b35fa3c6175f8fab12e0b8ff2 1760291684
+obj /usr/share/gettext/po/quot.sed c0424deb5726751f44c931d47490648b 1760291684
+obj /usr/share/gettext/po/remove-potcdate.sed 9d9b955511f69c8a408a28b87d76cb71 1760291684
+dir /usr/share/gettext/projects
+dir /usr/share/gettext/projects/GNOME
+obj /usr/share/gettext/projects/GNOME/team-address 7718b730f03b23c4a9346dd30099dcd9 1760291684
+obj /usr/share/gettext/projects/GNOME/teams.html 670acd4e766f915bf7ecde61b3a58bf0 1760291684
+obj /usr/share/gettext/projects/GNOME/teams.url 0ed5042a02b9b39bcffb4c643ef4a735 1760291684
+obj /usr/share/gettext/projects/GNOME/trigger 170b5547dad582e643122f66e7d3a4b7 1760291684
+dir /usr/share/gettext/projects/KDE
+obj /usr/share/gettext/projects/KDE/team-address 6a20f4423304c4ca4d9d19133f050940 1760291684
+obj /usr/share/gettext/projects/KDE/teams.html e1e7f5987d260943db910dfbd0256ebf 1760291684
+obj /usr/share/gettext/projects/KDE/teams.url 450104976f223d569b353963c8cbbdc5 1760291684
+obj /usr/share/gettext/projects/KDE/trigger f76f40608bc44d0b4f62d1e57092fb2c 1760291684
+dir /usr/share/gettext/projects/TP
+obj /usr/share/gettext/projects/TP/team-address c12455becbbdcb53e217505481e8db83 1760291684
+obj /usr/share/gettext/projects/TP/teams.html 1966ff4367ac3b1068ae817b85139f9a 1760291684
+obj /usr/share/gettext/projects/TP/teams.url 2b29d2f49a4d5dbd4c258f5c43594433 1760291684
+obj /usr/share/gettext/projects/TP/trigger 0bb713aa9daedab60388e883c926591b 1760291684
+obj /usr/share/gettext/projects/index 01b2f2426d7e272f1e6b62567315a969 1760291684
+obj /usr/share/gettext/projects/team-address 980a4a0f9921072a3ad30a2aac0f84d2 1760291684
+dir /usr/share/gettext/schema
+obj /usr/share/gettext/schema/its-extensions.xsd bee19bb53f14a37efcf77f5b1c447801 1760291683
+obj /usr/share/gettext/schema/its.xsd10 ef3176d2bbec73d52d21d24d2d66efa6 1760291683
+obj /usr/share/gettext/schema/its.xsd11 eb7ad0999fc68bd69381af26d036db7d 1760291683
+obj /usr/share/gettext/schema/locating-rules.xsd10 81ee6718fd85324e6ce410c345088c99 1760291683
+obj /usr/share/gettext/schema/locating-rules.xsd11 717091f5762fcfa72b634a41d01c9f79 1760291683
+dir /usr/share/gettext/styles
+obj /usr/share/gettext/styles/po-default.css ca21553ca91bf2b216f17045772cd8e8 1760291684
+obj /usr/share/gettext/styles/po-emacs-x.css 14b37174586e82b2c20a3cf7087016ed 1760291684
+obj /usr/share/gettext/styles/po-emacs-xterm.css 90de35996e8c51672c7a64e5db1c2474 1760291684
+obj /usr/share/gettext/styles/po-emacs-xterm16.css 511daf1a2a8aee292272bb2bb23b6a83 1760291684
+obj /usr/share/gettext/styles/po-emacs-xterm256.css 06ff7e87cc0b258ff0e398ad27d35e75 1760291684
+obj /usr/share/gettext/styles/po-vim.css 19627cc9c6f47bfcc8f58d566f1337de 1760291684
+dir /usr/share/gettext-0.23.2
+dir /usr/share/gettext-0.23.2/its
+obj /usr/share/gettext-0.23.2/its/docbook.loc 7191a630d66f408b571d17c3781db1cc 1760291684
+obj /usr/share/gettext-0.23.2/its/docbook4.its 2f00db35a0322b2f008c076003772777 1760291684
+obj /usr/share/gettext-0.23.2/its/docbook5.its 9940ebd7a05bf1e80cb59a362b9299ab 1760291684
+obj /usr/share/gettext-0.23.2/its/glade.loc f21b150c30008e4eeeda0d4187bd72a8 1760291684
+obj /usr/share/gettext-0.23.2/its/glade1.its 160e246a8a2c97315330b0d8ee70b5c5 1760291684
+obj /usr/share/gettext-0.23.2/its/glade2.its 7f4185eafe5ef56781e60b85e9aa832d 1760291684
+obj /usr/share/gettext-0.23.2/its/gsettings.its 08b1cf1e4186ad499fb37b928de84ccc 1760291684
+obj /usr/share/gettext-0.23.2/its/gsettings.loc 14cbbc71b6f04c0fdacbd6f8fccd5c34 1760291684
+obj /usr/share/gettext-0.23.2/its/gtkbuilder.its 599f35d8eff183bd2e876c785030a55a 1760291684
+obj /usr/share/gettext-0.23.2/its/metainfo.its 41aa0e878c971f73afc7264a86439cab 1760291684
+obj /usr/share/gettext-0.23.2/its/metainfo.loc 2c6322227cb8b480f55e1119fd9b3998 1760291684
+dir /usr/share/info
+obj /usr/share/info/autosprintf.info.bz2 ce7f2aedf2799abd4e9e812621acaed8 1760291680
+obj /usr/share/info/gettext.info.bz2 c9b5ae730c8f0407ccdb3d909337c082 1760291708
+obj /usr/share/info/libtextstyle.info.bz2 615d2ea86ef5fa23701fb38eb91865d0 1760291681
+dir /usr/share/locale
+dir /usr/share/locale/ast
+dir /usr/share/locale/ast/LC_MESSAGES
+obj /usr/share/locale/ast/LC_MESSAGES/gettext-runtime.mo 96ffebb91391abda9afae41e15e4f6a6 1760291680
+dir /usr/share/locale/be
+dir /usr/share/locale/be/LC_MESSAGES
+obj /usr/share/locale/be/LC_MESSAGES/gettext-runtime.mo 6d855fd10021ea94455757221335292c 1760291680
+obj /usr/share/locale/be/LC_MESSAGES/gettext-tools.mo 5b3ffdbd7251a56ffe0d55b5123dbe85 1760291684
+dir /usr/share/locale/bg
+dir /usr/share/locale/bg/LC_MESSAGES
+obj /usr/share/locale/bg/LC_MESSAGES/gettext-runtime.mo e4d23c2fa55d808d6c896131f7933a1b 1760291681
+obj /usr/share/locale/bg/LC_MESSAGES/gettext-tools.mo e0418302f673941c28f08a66e7d269fb 1760291684
+dir /usr/share/locale/ca
+dir /usr/share/locale/ca/LC_MESSAGES
+obj /usr/share/locale/ca/LC_MESSAGES/gettext-runtime.mo 9002e52cc09459a79bc03995901fb43f 1760291681
+obj /usr/share/locale/ca/LC_MESSAGES/gettext-tools.mo e98d73ac74ebd45cd2e0ae7763adbe0b 1760291684
+dir /usr/share/locale/cs
+dir /usr/share/locale/cs/LC_MESSAGES
+obj /usr/share/locale/cs/LC_MESSAGES/gettext-runtime.mo d14ae3dd9e71749afbf05262d2f3a0cc 1760291681
+obj /usr/share/locale/cs/LC_MESSAGES/gettext-tools.mo 5c18c4e3141685a26feb4edfed1255b1 1760291684
+dir /usr/share/locale/da
+dir /usr/share/locale/da/LC_MESSAGES
+obj /usr/share/locale/da/LC_MESSAGES/gettext-runtime.mo cabe31391c08ccfc331593f0f521a275 1760291681
+obj /usr/share/locale/da/LC_MESSAGES/gettext-tools.mo fc58c490bbc715d99fbd2cdf45e40bac 1760291684
+dir /usr/share/locale/de
+dir /usr/share/locale/de/LC_MESSAGES
+obj /usr/share/locale/de/LC_MESSAGES/gettext-runtime.mo 28bad66c34b0bbae847674cd42bc0a5e 1760291681
+obj /usr/share/locale/de/LC_MESSAGES/gettext-tools.mo 76a831b9994934d4a7483fc0e5cc33b8 1760291684
+dir /usr/share/locale/el
+dir /usr/share/locale/el/LC_MESSAGES
+obj /usr/share/locale/el/LC_MESSAGES/gettext-runtime.mo 8fe5fab0238a12d9c39c4c94002d4193 1760291681
+obj /usr/share/locale/el/LC_MESSAGES/gettext-tools.mo c605d102bd00e94261b51d95836046b8 1760291684
+dir /usr/share/locale/en@boldquot
+dir /usr/share/locale/en@boldquot/LC_MESSAGES
+obj /usr/share/locale/en@boldquot/LC_MESSAGES/gettext-runtime.mo c27c10ee6692afc405e4dbd18a79a561 1760291681
+obj /usr/share/locale/en@boldquot/LC_MESSAGES/gettext-tools.mo 0d5905e71e35e349b5e92ea2c6b02471 1760291684
+dir /usr/share/locale/en@quot
+dir /usr/share/locale/en@quot/LC_MESSAGES
+obj /usr/share/locale/en@quot/LC_MESSAGES/gettext-runtime.mo e64b89ee1ac40358721b23b9a6c4a266 1760291681
+obj /usr/share/locale/en@quot/LC_MESSAGES/gettext-tools.mo 092653269d943650a59c23d7f89132cc 1760291684
+dir /usr/share/locale/eo
+dir /usr/share/locale/eo/LC_MESSAGES
+obj /usr/share/locale/eo/LC_MESSAGES/gettext-runtime.mo 1f2395d652661e3b041dee9cb01c68b6 1760291681
+dir /usr/share/locale/es
+dir /usr/share/locale/es/LC_MESSAGES
+obj /usr/share/locale/es/LC_MESSAGES/gettext-runtime.mo 799989d146af78c7ec40ae2191e353e8 1760291681
+obj /usr/share/locale/es/LC_MESSAGES/gettext-tools.mo bee6e49f14b76740050fbb3c78e0f739 1760291684
+dir /usr/share/locale/et
+dir /usr/share/locale/et/LC_MESSAGES
+obj /usr/share/locale/et/LC_MESSAGES/gettext-runtime.mo 6c5a94e2c6ff83ea9477d85997be1d63 1760291681
+obj /usr/share/locale/et/LC_MESSAGES/gettext-tools.mo 0649c5f75a3ff017f13bc699eb1335e8 1760291684
+dir /usr/share/locale/eu
+dir /usr/share/locale/eu/LC_MESSAGES
+obj /usr/share/locale/eu/LC_MESSAGES/gettext-tools.mo 30d345fc798759a84c1d880680cb148f 1760291684
+dir /usr/share/locale/fi
+dir /usr/share/locale/fi/LC_MESSAGES
+obj /usr/share/locale/fi/LC_MESSAGES/gettext-runtime.mo 4be5119eaa3d5eb2a2915fd75a81ca35 1760291681
+obj /usr/share/locale/fi/LC_MESSAGES/gettext-tools.mo 30e21b2f65687be12ab75893799c3196 1760291684
+dir /usr/share/locale/fr
+dir /usr/share/locale/fr/LC_MESSAGES
+obj /usr/share/locale/fr/LC_MESSAGES/gettext-runtime.mo b6918ca00eccd18b5c21077ce4242147 1760291681
+obj /usr/share/locale/fr/LC_MESSAGES/gettext-tools.mo 2cd9833cd706fb94a4429d958901b8aa 1760291684
+dir /usr/share/locale/ga
+dir /usr/share/locale/ga/LC_MESSAGES
+obj /usr/share/locale/ga/LC_MESSAGES/gettext-runtime.mo 5981bba0d98f04cc9439ec2c4af8bec8 1760291681
+dir /usr/share/locale/gl
+dir /usr/share/locale/gl/LC_MESSAGES
+obj /usr/share/locale/gl/LC_MESSAGES/gettext-runtime.mo 6107daeb59c576ddb68d1c0e71808dec 1760291681
+obj /usr/share/locale/gl/LC_MESSAGES/gettext-tools.mo 37b9ccf871906c5797f1df6b13d20c3e 1760291684
+dir /usr/share/locale/hr
+dir /usr/share/locale/hr/LC_MESSAGES
+obj /usr/share/locale/hr/LC_MESSAGES/gettext-runtime.mo e614ec337e129ca21b2efdf529a1485d 1760291681
+obj /usr/share/locale/hr/LC_MESSAGES/gettext-tools.mo 7ee4aa821d2ee12c4b11f53567c26098 1760291684
+dir /usr/share/locale/hu
+dir /usr/share/locale/hu/LC_MESSAGES
+obj /usr/share/locale/hu/LC_MESSAGES/gettext-runtime.mo 3f5c5ad7eabc4b505856dde044192cea 1760291681
+dir /usr/share/locale/id
+dir /usr/share/locale/id/LC_MESSAGES
+obj /usr/share/locale/id/LC_MESSAGES/gettext-runtime.mo 5ae07b1659a7c1eca624c99b82895822 1760291681
+obj /usr/share/locale/id/LC_MESSAGES/gettext-tools.mo dce165f234a01dae5231a262e414a486 1760291684
+dir /usr/share/locale/it
+dir /usr/share/locale/it/LC_MESSAGES
+obj /usr/share/locale/it/LC_MESSAGES/gettext-runtime.mo a3affde99de23f81165f49931c2f7a74 1760291681
+obj /usr/share/locale/it/LC_MESSAGES/gettext-tools.mo c7a0fb290d1f570b4777c02b902c8554 1760291684
+dir /usr/share/locale/ja
+dir /usr/share/locale/ja/LC_MESSAGES
+obj /usr/share/locale/ja/LC_MESSAGES/gettext-runtime.mo 7783d09e36f7c001f28d52335698a490 1760291681
+obj /usr/share/locale/ja/LC_MESSAGES/gettext-tools.mo add1555144b810079a42b93bc2a06b91 1760291684
+dir /usr/share/locale/ka
+dir /usr/share/locale/ka/LC_MESSAGES
+obj /usr/share/locale/ka/LC_MESSAGES/gettext-runtime.mo 5bb8ee7fed9ad061a33efde099daa8d4 1760291681
+obj /usr/share/locale/ka/LC_MESSAGES/gettext-tools.mo 9e6a10d89a14136e85c5d6c73a6d3246 1760291684
+dir /usr/share/locale/ko
+dir /usr/share/locale/ko/LC_MESSAGES
+obj /usr/share/locale/ko/LC_MESSAGES/gettext-runtime.mo 1723307047ed9e89aa77226dae15fb39 1760291681
+obj /usr/share/locale/ko/LC_MESSAGES/gettext-tools.mo 054d671284f2dd377b2d922fb4fa689d 1760291684
+dir /usr/share/locale/nb
+dir /usr/share/locale/nb/LC_MESSAGES
+obj /usr/share/locale/nb/LC_MESSAGES/gettext-runtime.mo 602bddbb8946abecd70a68f11f4bf3f4 1760291681
+obj /usr/share/locale/nb/LC_MESSAGES/gettext-tools.mo 5221f39a7601ee591b4e3dfacccd2c89 1760291684
+dir /usr/share/locale/nl
+dir /usr/share/locale/nl/LC_MESSAGES
+obj /usr/share/locale/nl/LC_MESSAGES/gettext-runtime.mo 3eb8b7546f4308af7ac45bbce379484e 1760291681
+obj /usr/share/locale/nl/LC_MESSAGES/gettext-tools.mo 8acedd479dd371135c9775e253215ed4 1760291684
+dir /usr/share/locale/nn
+dir /usr/share/locale/nn/LC_MESSAGES
+obj /usr/share/locale/nn/LC_MESSAGES/gettext-runtime.mo a97f2a6cc0363584319b54ccb5b4021e 1760291681
+obj /usr/share/locale/nn/LC_MESSAGES/gettext-tools.mo de3e97ab5a886a7b87b298d4dd8e88a4 1760291684
+dir /usr/share/locale/pa
+dir /usr/share/locale/pa/LC_MESSAGES
+obj /usr/share/locale/pa/LC_MESSAGES/gettext-tools.mo 763b15831008225b77b2fbfbee60d372 1760291684
+dir /usr/share/locale/pl
+dir /usr/share/locale/pl/LC_MESSAGES
+obj /usr/share/locale/pl/LC_MESSAGES/gettext-runtime.mo 8f9e60cadf0fa9c489d15f08a58e629a 1760291681
+obj /usr/share/locale/pl/LC_MESSAGES/gettext-tools.mo 5da6edfffe7129cf33e761033fd6e664 1760291684
+dir /usr/share/locale/pt
+dir /usr/share/locale/pt/LC_MESSAGES
+obj /usr/share/locale/pt/LC_MESSAGES/gettext-runtime.mo cb59c809f3e68b2584e0743cd9479ac8 1760291681
+obj /usr/share/locale/pt/LC_MESSAGES/gettext-tools.mo 011cc2019020775818b21d187e05ae9b 1760291684
+dir /usr/share/locale/pt_BR
+dir /usr/share/locale/pt_BR/LC_MESSAGES
+obj /usr/share/locale/pt_BR/LC_MESSAGES/gettext-runtime.mo 717db8e50fb02951dbd1dde1ca5b0464 1760291681
+obj /usr/share/locale/pt_BR/LC_MESSAGES/gettext-tools.mo f6ad9b5bc0bbbd8fb94a89c98f6f226e 1760291684
+dir /usr/share/locale/ro
+dir /usr/share/locale/ro/LC_MESSAGES
+obj /usr/share/locale/ro/LC_MESSAGES/gettext-runtime.mo cf7c63df049834765ab536a4a3eeb7f1 1760291681
+obj /usr/share/locale/ro/LC_MESSAGES/gettext-tools.mo 9ed751bebcc42a1c3229a8209509e7bd 1760291684
+dir /usr/share/locale/ru
+dir /usr/share/locale/ru/LC_MESSAGES
+obj /usr/share/locale/ru/LC_MESSAGES/gettext-runtime.mo a88308ffb03898847db200b6aabbc29f 1760291681
+obj /usr/share/locale/ru/LC_MESSAGES/gettext-tools.mo fbdac8cd4aec7e580895b0628413d1aa 1760291684
+dir /usr/share/locale/sk
+dir /usr/share/locale/sk/LC_MESSAGES
+obj /usr/share/locale/sk/LC_MESSAGES/gettext-runtime.mo a300e66d9c9c65fc2458d14df2c8a0e6 1760291681
+obj /usr/share/locale/sk/LC_MESSAGES/gettext-tools.mo e99c3730a37fc584926ed15dc2396247 1760291684
+dir /usr/share/locale/sl
+dir /usr/share/locale/sl/LC_MESSAGES
+obj /usr/share/locale/sl/LC_MESSAGES/gettext-runtime.mo a43192b6a5db25e8c5413e3554369be2 1760291681
+obj /usr/share/locale/sl/LC_MESSAGES/gettext-tools.mo 21cb8e84de487c21739ae68c0658c5f8 1760291684
+dir /usr/share/locale/sr
+dir /usr/share/locale/sr/LC_MESSAGES
+obj /usr/share/locale/sr/LC_MESSAGES/gettext-runtime.mo 5b299c294819cd8742dc1497b6589a91 1760291681
+obj /usr/share/locale/sr/LC_MESSAGES/gettext-tools.mo d3da3daffc8b4a2332b5475b0b08c704 1760291684
+dir /usr/share/locale/sv
+dir /usr/share/locale/sv/LC_MESSAGES
+obj /usr/share/locale/sv/LC_MESSAGES/gettext-runtime.mo 2485f52fa3cc1322c12da18f1738512c 1760291681
+obj /usr/share/locale/sv/LC_MESSAGES/gettext-tools.mo 92ba679964f517fe1b9f8958105c824a 1760291684
+dir /usr/share/locale/tr
+dir /usr/share/locale/tr/LC_MESSAGES
+obj /usr/share/locale/tr/LC_MESSAGES/gettext-runtime.mo ed0a306a5cfba9abc5f957693cab7bea 1760291681
+obj /usr/share/locale/tr/LC_MESSAGES/gettext-tools.mo a8e2cc0d561f3347981bad03372210d7 1760291684
+dir /usr/share/locale/uk
+dir /usr/share/locale/uk/LC_MESSAGES
+obj /usr/share/locale/uk/LC_MESSAGES/gettext-runtime.mo 2851cc22d21360af50f85ad3be145800 1760291681
+obj /usr/share/locale/uk/LC_MESSAGES/gettext-tools.mo b8405a5d6f5424be1c611384a6e9d039 1760291684
+dir /usr/share/locale/vi
+dir /usr/share/locale/vi/LC_MESSAGES
+obj /usr/share/locale/vi/LC_MESSAGES/gettext-runtime.mo 9e12ed8222042a03acea9c22a98df6ea 1760291681
+obj /usr/share/locale/vi/LC_MESSAGES/gettext-tools.mo ecc8ad959547b7399e1bc3b11624ffa3 1760291684
+dir /usr/share/locale/zh_CN
+dir /usr/share/locale/zh_CN/LC_MESSAGES
+obj /usr/share/locale/zh_CN/LC_MESSAGES/gettext-runtime.mo f3ef3bb44a932eb8a8c2828c506474c3 1760291681
+obj /usr/share/locale/zh_CN/LC_MESSAGES/gettext-tools.mo 95e70c1ce394dd9338887d4cbc436986 1760291684
+dir /usr/share/locale/zh_HK
+dir /usr/share/locale/zh_HK/LC_MESSAGES
+obj /usr/share/locale/zh_HK/LC_MESSAGES/gettext-runtime.mo e5de247c9f02d399bbf8a0d6b9c90d60 1760291681
+dir /usr/share/locale/zh_TW
+dir /usr/share/locale/zh_TW/LC_MESSAGES
+obj /usr/share/locale/zh_TW/LC_MESSAGES/gettext-runtime.mo bd38af3cf5d53473ca86b61b2571761e 1760291681
+obj /usr/share/locale/zh_TW/LC_MESSAGES/gettext-tools.mo 5ab58e07d67de8c0193ca63925181f5d 1760291684
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/autopoint.1.bz2 2c01d7cd0dde164b13e81662f5956d1b 1760291684
+obj /usr/share/man/man1/envsubst.1.bz2 0b55c09318114f8b032bdd5c767dda97 1760291681
+obj /usr/share/man/man1/gettext.1.bz2 e3ce52784e187340d2abc346b542d2c0 1760291681
+obj /usr/share/man/man1/gettextize.1.bz2 5c2ec927103fe6fcd1429e062ce963d5 1760291684
+obj /usr/share/man/man1/msgattrib.1.bz2 1710c4d85e5c756eed33ce7e7d8f3bd4 1760291684
+obj /usr/share/man/man1/msgcat.1.bz2 91df3a4e954b6b970976ed9f25b8dece 1760291684
+obj /usr/share/man/man1/msgcmp.1.bz2 68850fe1a0c8b2954e30203b48463752 1760291684
+obj /usr/share/man/man1/msgcomm.1.bz2 ac4ce7299cbaf80b85950c79423a0378 1760291684
+obj /usr/share/man/man1/msgconv.1.bz2 d7edf605ce7843bc19804000d39a9450 1760291684
+obj /usr/share/man/man1/msgen.1.bz2 1464b85ba08952bbfd15835eb608ae7a 1760291684
+obj /usr/share/man/man1/msgexec.1.bz2 0918533bc7021915222a44ff62f5c2fb 1760291684
+obj /usr/share/man/man1/msgfilter.1.bz2 b62eab63163d6f35659e629980cf899d 1760291684
+obj /usr/share/man/man1/msgfmt.1.bz2 16d73bda173182dcf5ee442814c365c4 1760291684
+obj /usr/share/man/man1/msggrep.1.bz2 bfeeb7f184e2c670fd889c9192d288be 1760291684
+obj /usr/share/man/man1/msginit.1.bz2 571bcaec2d0ed5db44fb5219548105a0 1760291684
+obj /usr/share/man/man1/msgmerge.1.bz2 96129b29694bb4b9e65d280514ec6977 1760291684
+obj /usr/share/man/man1/msgunfmt.1.bz2 3ef123eb1d72e45d0b2e17c863edbfe6 1760291684
+obj /usr/share/man/man1/msguniq.1.bz2 04962208be477f8a6be19e9612e46c77 1760291684
+obj /usr/share/man/man1/ngettext.1.bz2 c854a47b7dc55ceda027fe9c65334d90 1760291681
+obj /usr/share/man/man1/recode-sr-latin.1.bz2 b5e451f45aad6f5ca0549db383610d0c 1760291684
+obj /usr/share/man/man1/xgettext.1.bz2 2320d903fdf13398c747f68be55907af 1760291684
+dir /usr/share/man/man3
+obj /usr/share/man/man3/bind_textdomain_codeset.3.bz2 b66cfe21ffc49921b9d8ae2affc48d74 1760291681
+obj /usr/share/man/man3/bindtextdomain.3.bz2 bdf07e0eb2e423c3d6307a2ceeaaca79 1760291681
+obj /usr/share/man/man3/dcgettext.3 20522f0b51fe61b1d40564dbfd679b1e 1760291681
+obj /usr/share/man/man3/dcngettext.3 94ad3622edac940d01fb28694f4dc1b5 1760291681
+obj /usr/share/man/man3/dgettext.3 20522f0b51fe61b1d40564dbfd679b1e 1760291681
+obj /usr/share/man/man3/dngettext.3 94ad3622edac940d01fb28694f4dc1b5 1760291681
+obj /usr/share/man/man3/gettext.3.bz2 8b6cc031b30569cb4f38b39df82ffec3 1760291681
+obj /usr/share/man/man3/ngettext.3.bz2 023a9ec6c0718a08158f1756f6f6e49d 1760291681
+obj /usr/share/man/man3/textdomain.3.bz2 9e4dbaafca23177f7e54d4d5ae2e09d1 1760291681
+sym /usr/lib64/libasprintf.so.0 -> libasprintf.so.0.0.0 1789354124
+sym /usr/lib64/libasprintf.so -> libasprintf.so.0.0.0 1789354124

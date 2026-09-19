@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install pretend setup test
+DESCRIPTION=High performance base64 encoder and decoder
+EAPI=8
+HOMEPAGE=https://github.com/skeeto/race64
+INHERIT=flag-o-matic toolchain-funcs
+IUSE=openmp
+KEYWORDS=amd64
+LICENSE=Unlicense
+SLOT=0
+SRC_URI=https://github.com/skeeto/race64/releases/download/v1.0.0/race64-1.0.0.tar.xz
+_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=aa37edf61cb1af72511f36681536dbdb

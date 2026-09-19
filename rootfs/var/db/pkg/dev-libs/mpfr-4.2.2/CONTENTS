@@ -1,0 +1,28 @@
+dir /usr
+dir /usr/include
+obj /usr/include/mpf2mpfr.h 51baab30083ce3426bcf6a7a49fbe98e 1745775020
+obj /usr/include/mpfr.h b436ebcf3fbaed718c894aa06680ff9f 1745775020
+dir /usr/lib64
+sym /usr/lib64/libmpfr.so -> libmpfr.so.6.2.2 1789353956
+sym /usr/lib64/libmpfr.so.6 -> libmpfr.so.6.2.2 1789353956
+obj /usr/lib64/libmpfr.so.6.2.2 0e63091d840b6c3a7d7c7faee24b6b0d 1745775020
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/mpfr.pc 3066b9f1f6323f861ec7d67f65ad5ce6 1745775020
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/mpfr-4.2.2
+obj /usr/share/doc/mpfr-4.2.2/AUTHORS.bz2 6cbda09926bac8b9587ce9682eddbba1 1745775020
+obj /usr/share/doc/mpfr-4.2.2/BUGS.bz2 e5750898fd6a4a93d163d515b32b7068 1745775020
+obj /usr/share/doc/mpfr-4.2.2/FAQ.html ce85757fd90cee96d9286dd261db5c93 1745775020
+obj /usr/share/doc/mpfr-4.2.2/NEWS.bz2 06a943f2a106113a4716a17435c95802 1745775020
+obj /usr/share/doc/mpfr-4.2.2/TODO.bz2 ac4a46cb77f4f3ac39ac7f3cf47a4bfc 1745775020
+dir /usr/share/doc/mpfr-4.2.2/examples
+obj /usr/share/doc/mpfr-4.2.2/examples/ReadMe 4f7aa769e50be426a4dc0005e8451939 1745775020
+obj /usr/share/doc/mpfr-4.2.2/examples/can_round.c.bz2 82d91da5a8ffa529b5a94a116b786bc2 1745775020
+obj /usr/share/doc/mpfr-4.2.2/examples/divworst.c.bz2 1d8377d41ca94c108aa5f837f34df3f1 1745775020
+obj /usr/share/doc/mpfr-4.2.2/examples/rndo-add.c.bz2 1682762dd3bc3c5dd83238773b045bed 1745775020
+obj /usr/share/doc/mpfr-4.2.2/examples/sample.c.bz2 4db19d341e00c37a47a88e586e529450 1745775020
+obj /usr/share/doc/mpfr-4.2.2/examples/threads.c.bz2 dbd7ba666589a49e37360ea42d01a15e 1745775020
+obj /usr/share/doc/mpfr-4.2.2/examples/version.c.bz2 3e87899d015b09129697418c7f210202 1745775020
+dir /usr/share/info
+obj /usr/share/info/mpfr.info.bz2 6f737aa06a5198f0ffe3ee637981d119 1745775020

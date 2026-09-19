@@ -1,0 +1,12 @@
+dir /usr
+dir /usr/bin
+obj /usr/bin/scdoc e1e10e7a6e60e9520efc825ac51e9e33 1786901563
+dir /usr/lib64
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/scdoc.pc ab7931991f5145e2377ba6ef346acc43 1786901561
+dir /usr/share
+dir /usr/share/man
+dir /usr/share/man/man1
+obj /usr/share/man/man1/scdoc.1.bz2 bddb2057b23bb6b1bdf7886350e93c13 1786901561
+dir /usr/share/man/man5
+obj /usr/share/man/man5/scdoc.5.bz2 f016b5ed2b6f1d82f2a92ff46cb97359 1786901561

@@ -1,0 +1,59 @@
+dir /usr
+dir /usr/include
+obj /usr/include/libkmod.h aa641f0e63e878860c2ed6255f026dde 1743134507
+dir /usr/lib64
+obj /usr/lib64/libkmod.so.2.5.1 0e46f9febf2289e496fe1055cf056f38 1762709474
+dir /usr/lib64/pkgconfig
+obj /usr/lib64/pkgconfig/libkmod.pc 5a7c4644456aa98f30b7c6cf5985534d 1762709471
+dir /usr/share
+dir /usr/share/bash-completion
+dir /usr/share/bash-completion/completions
+obj /usr/share/bash-completion/completions/insmod 4436f8dc1167323d3a81ce892d501c81 1743134507
+obj /usr/share/bash-completion/completions/kmod 22440b8f33a0814174bbd31a60d26c93 1743134507
+obj /usr/share/bash-completion/completions/lsmod 6b2282c82d5cd5e34cc6a2afe1b2a47d 1743134507
+obj /usr/share/bash-completion/completions/rmmod 943939a62b1e5ad997a341c3a46600be 1743134507
+dir /usr/share/doc
+dir /usr/share/doc/kmod-34.2
+obj /usr/share/doc/kmod-34.2/NEWS.bz2 c52e51bd362d1663499fe375667d7b81 1762709473
+obj /usr/share/doc/kmod-34.2/README.md.bz2 8ac6bdcab36eaca521ca265a7d1d65eb 1762709473
+dir /usr/share/fish
+dir /usr/share/fish/vendor_completions.d
+obj /usr/share/fish/vendor_completions.d/insmod.fish ef352c41d8aa50e97cdc73cdede5759f 1743134507
+obj /usr/share/fish/vendor_completions.d/lsmod.fish 3bf508c1990fb2cf6046763db64a2359 1743134507
+obj /usr/share/fish/vendor_completions.d/rmmod.fish 563b2ccec0d9730a11453c4ce17b70f3 1743134507
+dir /usr/share/man
+dir /usr/share/man/man5
+obj /usr/share/man/man5/depmod.d.5.bz2 697033ad3f964fb153499b4a6d60d31b 1762709472
+obj /usr/share/man/man5/modprobe.conf.5 1b1302dfcb9d457cf907598bad9cf2d1 1762709472
+obj /usr/share/man/man5/modprobe.d.5.bz2 0e9ba81745fa91ab59cea4453e1e5bb4 1762709472
+obj /usr/share/man/man5/modules.dep.5.bz2 b61c209d2e4c3ffb9a8cac66f8b9ea50 1762709472
+obj /usr/share/man/man5/modules.dep.bin.5 3f538fe2f595f2886732d38ff592e1c2 1762709472
+dir /usr/share/man/man8
+obj /usr/share/man/man8/depmod.8.bz2 4e2836e6fbbeaa9203073dab30f439d6 1762709472
+obj /usr/share/man/man8/insmod.8.bz2 797ae114dac7b66cbce0cc5f93b8a84d 1762709472
+obj /usr/share/man/man8/kmod.8.bz2 9390743c9732faa837924eca10f76cc2 1762709472
+obj /usr/share/man/man8/lsmod.8.bz2 ba8b9362c6e1026983a2044b8cfb1caa 1762709472
+obj /usr/share/man/man8/modinfo.8.bz2 f128e863bc29e76ed99995cfb25071d7 1762709472
+obj /usr/share/man/man8/modprobe.8.bz2 424072288fa019ff13800b98808de829 1762709472
+obj /usr/share/man/man8/rmmod.8.bz2 9b2b1c134d84c121de38751ec964e39f 1762709472
+dir /usr/share/pkgconfig
+obj /usr/share/pkgconfig/kmod.pc cb02d4e2747018fb30c38ef774461f46 1762709471
+dir /usr/share/zsh
+dir /usr/share/zsh/site-functions
+obj /usr/share/zsh/site-functions/_insmod 57c20adf904c2f923a1cff5bd7d89d03 1743134507
+obj /usr/share/zsh/site-functions/_lsmod b9333a1f39ac00334f2764aac0b48965 1743134507
+obj /usr/share/zsh/site-functions/_rmmod 93c6660c352534552c559ed3b3403d1c 1743134507
+dir /sbin
+dir /etc
+dir /etc/init.d
+obj /etc/init.d/kmod-static-nodes e38c4acdc2b5b09cb81684e87bb7a769 1762709473
+dir /bin
+obj /bin/kmod 1b8fb33d8b68e71f08dc3ae8bce82c2c 1762709474
+sym /sbin/rmmod -> ../bin/kmod 1789354095
+sym /sbin/modprobe -> ../bin/kmod 1789354095
+sym /sbin/modinfo -> ../bin/kmod 1789354095
+sym /sbin/lsmod -> ../bin/kmod 1789354095
+sym /sbin/insmod -> ../bin/kmod 1789354095
+sym /sbin/depmod -> ../bin/kmod 1789354095
+sym /usr/lib64/libkmod.so.2 -> libkmod.so.2.5.1 1789354095
+sym /usr/lib64/libkmod.so -> libkmod.so.2 1789354095

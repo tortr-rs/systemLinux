@@ -1,0 +1,11 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install test unpack
+DESCRIPTION=Fork of bash enabling integration into pkgcraft
+EAPI=8
+HOMEPAGE=https://github.com/pkgcraft/bash
+INHERIT=git-r3
+LICENSE=GPL-3+
+PROPERTIES=live
+SLOT=0
+_eclasses_=git-r3	e6c2f983e006e805160436c75a0c1562
+_md5_=475b4d3d46e6f668b38b7c6f32e7a657

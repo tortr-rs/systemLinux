@@ -1,0 +1,10 @@
+/usr/bin/x86_64-pc-linux-gnu-fc-cache libfontconfig.so.1,libc.so.6
+/usr/bin/fc-validate libfontconfig.so.1,libfreetype.so.6,libc.so.6
+/usr/bin/fc-scan libfontconfig.so.1,libc.so.6
+/usr/bin/fc-query libfontconfig.so.1,libc.so.6
+/usr/bin/fc-pattern libfontconfig.so.1,libc.so.6
+/usr/bin/fc-match libfontconfig.so.1,libc.so.6
+/usr/bin/fc-list libfontconfig.so.1,libc.so.6
+/usr/bin/fc-conflist libfontconfig.so.1,libc.so.6
+/usr/bin/fc-cat libfontconfig.so.1,libc.so.6
+/usr/lib64/libfontconfig.so.1.16.0 libfreetype.so.6,libexpat.so.1,libc.so.6

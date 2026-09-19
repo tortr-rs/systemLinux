@@ -1,0 +1,25 @@
+dir /usr
+dir /usr/lib64
+dir /usr/lib64/perl5
+dir /usr/lib64/perl5/vendor_perl
+dir /usr/lib64/perl5/vendor_perl/5.42
+dir /usr/lib64/perl5/vendor_perl/5.42/Exporter
+obj /usr/lib64/perl5/vendor_perl/5.42/Exporter/Shiny.pm cf86f8f58b6fca80736917512eda7a18 1782062932
+dir /usr/lib64/perl5/vendor_perl/5.42/Exporter/Tiny
+dir /usr/lib64/perl5/vendor_perl/5.42/Exporter/Tiny/Manual
+obj /usr/lib64/perl5/vendor_perl/5.42/Exporter/Tiny/Manual/Etc.pod ca68b591c311939cfdd5617c675869d1 1782062932
+obj /usr/lib64/perl5/vendor_perl/5.42/Exporter/Tiny/Manual/Exporting.pod 3a175c18f84643f96d2503a2cbce240c 1782062932
+obj /usr/lib64/perl5/vendor_perl/5.42/Exporter/Tiny/Manual/Importing.pod 3a8c2f6ab591e5ef98da9865088a490e 1782062932
+obj /usr/lib64/perl5/vendor_perl/5.42/Exporter/Tiny/Manual/QuickStart.pod c344bab087d92d6fdb54ed244bd64002 1782062932
+obj /usr/lib64/perl5/vendor_perl/5.42/Exporter/Tiny.pm 150e02fd9da988cdeace8fa5ae76d8ec 1782062932
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Exporter
+dir /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Exporter/Tiny
+obj /usr/lib64/perl5/vendor_perl/5.42/x86_64-linux/auto/Exporter/Tiny/.packlist c0134aaac105674a73d095dff9c1aa3f 1782062932
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/Exporter-Tiny-1.6.3
+obj /usr/share/doc/Exporter-Tiny-1.6.3/Changes.bz2 ee33f297093c2468176d358746dc1814 1782062932
+obj /usr/share/doc/Exporter-Tiny-1.6.3/README.bz2 96b32a5f4cf68108628aabaced95b609 1782062932
+obj /usr/share/doc/Exporter-Tiny-1.6.3/TODO.bz2 daa4c9f479602648ba17f49fa3a32636 1782062932

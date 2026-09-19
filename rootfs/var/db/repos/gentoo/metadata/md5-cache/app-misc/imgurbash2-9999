@@ -1,0 +1,13 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install unpack
+DESCRIPTION=Bash script that uploads/deletes images to/from imgur
+EAPI=8
+HOMEPAGE=https://github.com/ram-on/imgurbash2
+INHERIT=git-r3
+IUSE=X wayland
+LICENSE=MIT
+PROPERTIES=live
+RDEPEND=net-misc/curl wayland? ( gui-apps/wl-clipboard ) X? ( || ( x11-misc/xclip x11-misc/xsel ) )
+SLOT=0
+_eclasses_=git-r3	e6c2f983e006e805160436c75a0c1562
+_md5_=f7fb676bc8166714f219cb8009158557

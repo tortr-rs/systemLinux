@@ -1,0 +1,13 @@
+BDEPEND=virtual/pkgconfig virtual/pkgconfig >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install postinst postrm unpack
+DEPEND=virtual/libusb:=
+DESCRIPTION=A program for controlling the MiniPRO TL866xx series of chip programmers
+EAPI=8
+HOMEPAGE=https://gitlab.com/DavidGriffith/minipro/
+INHERIT=bash-completion-r1 toolchain-funcs udev git-r3
+LICENSE=GPL-3+
+PROPERTIES=live
+RDEPEND=virtual/libusb:=
+SLOT=0
+_eclasses_=bash-completion-r1	4386cfb12ede6cd8f0c1987d2e88da5f	git-r3	e6c2f983e006e805160436c75a0c1562	shell-completion	63a62de3ca49c798ee6e89f190e45d0e	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5	udev	1a23882bb73bc31c64a6f00a5e515f34
+_md5_=633a84ca3fb263381a2c3dd76ba13618

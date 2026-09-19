@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person" proxied="yes">
+		<email>bacs@librecast.net</email>
+		<name>Brett A C Sheffield</name>
+	</maintainer>
+	<maintainer type="project" proxied="proxy">
+		<email>proxy-maint@gentoo.org</email>
+		<name>Proxy Maintainers</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">NLnetLabs/nsd</remote-id>
+	</upstream>
+	<use>
+		<flag name="bind8-stats">Enables BIND8 like NSTATS and XSTATS and statistics in nsd-control</flag>
+		<flag name="dnstap">Enable the structured binary log format</flag>
+		<flag name="ipv6">Enable IPv6 support</flag>
+		<flag name="libevent">Use libevent or libev, useful when zone count is high</flag>
+		<flag name="memclean">Cleanup memory (at exit) for eg. valgrind, memcheck</flag>
+		<flag name="minimal-responses">If minimal responses are disabled, responses are more likely to get truncated, resulting in TCP fallback</flag>
+		<flag name="mmap">Use mmap(2) instead of malloc(3); currently experimental</flag>
+		<flag name="munin">Install a plugin for <pkg>net-analyzer/munin</pkg> to graph statistical data from nsd</flag>
+		<flag name="nsec3">Enable NSEC3 support</flag>
+		<flag name="radix-tree">Use a radix tree for main lookups instead of a red-black tree</flag>
+		<flag name="ratelimit">Enables ratelimiting, based on query name, type and source</flag>
+		<flag name="recvmmsg">Enable recvmmsg and sendmmsg compilation, faster but some kernel versions may have implementation problems for IPv6</flag>
+		<flag name="simdzone">Leverage SIMD instructions in modern CPUs to improve throughput</flag>
+		<flag name="tfo">Enable TCP Fast Open</flag>
+		<flag name="xdp">Enable support for XDP through <pkg>net-libs/xdp-tools</pkg></flag>
+	</use>
+</pkgmetadata>

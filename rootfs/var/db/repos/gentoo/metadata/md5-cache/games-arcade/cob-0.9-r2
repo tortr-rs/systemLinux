@@ -1,0 +1,13 @@
+DEFINED_PHASES=install
+DEPEND=media-libs/libsdl[joystick,sound,video]
+DESCRIPTION=Cruising on Broadway: a painting-type game
+EAPI=8
+HOMEPAGE=https://wiki.gentoo.org/wiki/No_homepage
+INHERIT=desktop
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2+
+RDEPEND=media-libs/libsdl[joystick,sound,video]
+SLOT=0
+SRC_URI=mirror://gentoo/cob-0.9.tar.gz https://distfiles.gentoo.org/pub/dev/ionen@gentoo.org/cob.png
+_eclasses_=desktop	e447b5f77146d69797e9f03ff177f3f1
+_md5_=4d9f788f3477bc702fd375aa197cb377

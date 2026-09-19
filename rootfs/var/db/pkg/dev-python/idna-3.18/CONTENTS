@@ -1,0 +1,60 @@
+dir /usr
+dir /usr/bin
+sym /usr/bin/idna -> ../lib/python-exec/python-exec2 1789353993
+dir /usr/lib
+dir /usr/lib/python-exec
+dir /usr/lib/python-exec/python3.14
+obj /usr/lib/python-exec/python3.14/idna 6a3be6eeedf62a0201ce5ed4c6aa5e2f 1788715553
+dir /usr/lib/python3.14
+dir /usr/lib/python3.14/site-packages
+dir /usr/lib/python3.14/site-packages/idna
+obj /usr/lib/python3.14/site-packages/idna/__init__.py 813a3685e48b6dc4359acf6ede226d5f 1788715553
+obj /usr/lib/python3.14/site-packages/idna/__main__.py 38d7639c60689326706c4c3416a47e5f 1788715553
+dir /usr/lib/python3.14/site-packages/idna/__pycache__
+obj /usr/lib/python3.14/site-packages/idna/__pycache__/__init__.cpython-314.opt-1.pyc f539fbf4c69ef9ea59453bbe144a6774 1788715553
+obj /usr/lib/python3.14/site-packages/idna/__pycache__/__init__.cpython-314.opt-2.pyc f539fbf4c69ef9ea59453bbe144a6774 1788715553
+obj /usr/lib/python3.14/site-packages/idna/__pycache__/__init__.cpython-314.pyc f539fbf4c69ef9ea59453bbe144a6774 1788715553
+obj /usr/lib/python3.14/site-packages/idna/__pycache__/__main__.cpython-314.opt-1.pyc 7f8840d1c701068f9ea052a8f1cce14a 1788715553
+obj /usr/lib/python3.14/site-packages/idna/__pycache__/__main__.cpython-314.opt-2.pyc 7f8840d1c701068f9ea052a8f1cce14a 1788715553
+obj /usr/lib/python3.14/site-packages/idna/__pycache__/__main__.cpython-314.pyc 7f8840d1c701068f9ea052a8f1cce14a 1788715553
+obj /usr/lib/python3.14/site-packages/idna/__pycache__/cli.cpython-314.opt-1.pyc bea0a039197214eca0b38a3ee2511fc2 1788715553
+obj /usr/lib/python3.14/site-packages/idna/__pycache__/cli.cpython-314.opt-2.pyc 9afd61860029c601775e74d7ceb7aa35 1788715553
+obj /usr/lib/python3.14/site-packages/idna/__pycache__/cli.cpython-314.pyc bea0a039197214eca0b38a3ee2511fc2 1788715553
+obj /usr/lib/python3.14/site-packages/idna/__pycache__/codec.cpython-314.opt-1.pyc c860319ba5ab7780d073612be9916813 1788715553
+obj /usr/lib/python3.14/site-packages/idna/__pycache__/codec.cpython-314.opt-2.pyc 0477fb051b3e55264fedcad0797c53cf 1788715553
+obj /usr/lib/python3.14/site-packages/idna/__pycache__/codec.cpython-314.pyc c860319ba5ab7780d073612be9916813 1788715553
+obj /usr/lib/python3.14/site-packages/idna/__pycache__/compat.cpython-314.opt-1.pyc 22552c47b4b49f6ed3f473ea58fb21c6 1788715553
+obj /usr/lib/python3.14/site-packages/idna/__pycache__/compat.cpython-314.opt-2.pyc 90df83b16c1577bb46fda3fd0a845a9f 1788715553
+obj /usr/lib/python3.14/site-packages/idna/__pycache__/compat.cpython-314.pyc 22552c47b4b49f6ed3f473ea58fb21c6 1788715553
+obj /usr/lib/python3.14/site-packages/idna/__pycache__/core.cpython-314.opt-1.pyc b061504b35567b72d01bc07f1b64500c 1788715553
+obj /usr/lib/python3.14/site-packages/idna/__pycache__/core.cpython-314.opt-2.pyc b8430c3998b91c0769059f8d8e7c004d 1788715553
+obj /usr/lib/python3.14/site-packages/idna/__pycache__/core.cpython-314.pyc 6e22048b049a4d7cd4fbfdc60bb2f127 1788715553
+obj /usr/lib/python3.14/site-packages/idna/__pycache__/idnadata.cpython-314.opt-1.pyc 8d34dba095b99de1aca3efc085c830cb 1788715553
+obj /usr/lib/python3.14/site-packages/idna/__pycache__/idnadata.cpython-314.opt-2.pyc 8d34dba095b99de1aca3efc085c830cb 1788715553
+obj /usr/lib/python3.14/site-packages/idna/__pycache__/idnadata.cpython-314.pyc 8d34dba095b99de1aca3efc085c830cb 1788715553
+obj /usr/lib/python3.14/site-packages/idna/__pycache__/intranges.cpython-314.opt-1.pyc b28095798dd92811ed5d02ab80aa1ac6 1788715553
+obj /usr/lib/python3.14/site-packages/idna/__pycache__/intranges.cpython-314.opt-2.pyc be958a8b626cdb123962ea4fbf913461 1788715553
+obj /usr/lib/python3.14/site-packages/idna/__pycache__/intranges.cpython-314.pyc b28095798dd92811ed5d02ab80aa1ac6 1788715553
+obj /usr/lib/python3.14/site-packages/idna/__pycache__/package_data.cpython-314.opt-1.pyc d69b943fa992e6cb96fbdce970a5f59b 1788715553
+obj /usr/lib/python3.14/site-packages/idna/__pycache__/package_data.cpython-314.opt-2.pyc d69b943fa992e6cb96fbdce970a5f59b 1788715553
+obj /usr/lib/python3.14/site-packages/idna/__pycache__/package_data.cpython-314.pyc d69b943fa992e6cb96fbdce970a5f59b 1788715553
+obj /usr/lib/python3.14/site-packages/idna/__pycache__/uts46data.cpython-314.opt-1.pyc 05308933b5a7fb8c15b4bbc807c599e1 1788715553
+obj /usr/lib/python3.14/site-packages/idna/__pycache__/uts46data.cpython-314.opt-2.pyc 05308933b5a7fb8c15b4bbc807c599e1 1788715553
+obj /usr/lib/python3.14/site-packages/idna/__pycache__/uts46data.cpython-314.pyc 05308933b5a7fb8c15b4bbc807c599e1 1788715553
+obj /usr/lib/python3.14/site-packages/idna/cli.py 6ae7c37de0eb2fecf582d4d0f75f0ffd 1788715553
+obj /usr/lib/python3.14/site-packages/idna/codec.py db9791af7a9fb9035afed0a40e294184 1788715553
+obj /usr/lib/python3.14/site-packages/idna/compat.py d08c57ed2ed1bf054b06f7496c1b41de 1788715553
+obj /usr/lib/python3.14/site-packages/idna/core.py a9687627a900bcdd50424ff13278b0b8 1788715553
+obj /usr/lib/python3.14/site-packages/idna/idnadata.py 97cf2283d7d7e9963b1d9c5511e37349 1788715553
+obj /usr/lib/python3.14/site-packages/idna/intranges.py 5ca3f7387fc15897424651e4248c8c92 1788715553
+obj /usr/lib/python3.14/site-packages/idna/package_data.py a815bef35bf9bcbb231efc137a69e466 1788715553
+obj /usr/lib/python3.14/site-packages/idna/py.typed d41d8cd98f00b204e9800998ecf8427e 1788715553
+obj /usr/lib/python3.14/site-packages/idna/uts46data.py 8ce4d52458597383b3f325bc4c0f665c 1788715553
+dir /usr/lib/python3.14/site-packages/idna-3.18.dist-info
+obj /usr/lib/python3.14/site-packages/idna-3.18.dist-info/METADATA 16e2f49644ef1035cc48f253b14a2ba1 1788715553
+obj /usr/lib/python3.14/site-packages/idna-3.18.dist-info/WHEEL 5b30b1d0507423be616800616cb80db3 1788715553
+obj /usr/lib/python3.14/site-packages/idna-3.18.dist-info/entry_points.txt 536914c56109abadf865a325ea4e64d6 1788715553
+dir /usr/share
+dir /usr/share/doc
+dir /usr/share/doc/idna-3.18
+obj /usr/share/doc/idna-3.18/README.md.bz2 1aa4732814e0b5a86344be104f0e90aa 1788715554

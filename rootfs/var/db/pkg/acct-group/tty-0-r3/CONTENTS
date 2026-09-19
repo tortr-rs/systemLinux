@@ -1,0 +1,4 @@
+dir /usr
+dir /usr/lib
+dir /usr/lib/sysusers.d
+obj /usr/lib/sysusers.d/acct-group-tty.conf 07902b05e418fec8ab5fdc0cdef9829d 1711301163

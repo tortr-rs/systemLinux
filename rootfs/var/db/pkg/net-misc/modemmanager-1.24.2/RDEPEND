@@ -1,0 +1,1 @@
+>=dev-libs/glib-2.56.0:2 sys-apps/dbus >=dev-libs/libgudev-232:0/0= >=dev-libs/gobject-introspection-1.82.0-r2:0/0= >=net-libs/libmbim-1.32.0 >=net-libs/libqmi-1.36.0:0/5.11=[qrtr] >=net-libs/libqrtr-glib-1.0.0:0/0= >=sys-apps/systemd-209 >=sys-libs/glibc-2.43-r2
