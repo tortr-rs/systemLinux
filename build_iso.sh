@@ -49,7 +49,14 @@ sudo chown root:messagebus "$ROOTFS/usr/libexec/dbus-daemon-launch-helper"
 sudo chmod 4750 "$ROOTFS/usr/libexec/dbus-daemon-launch-helper"
 # systemd's shell-integration script prints escape-code garbage without systemd
 sudo rm -f "$ROOTFS/etc/profile.d/80-systemd-osc-context.sh"
-# issue, os-release, release files and the login banner
+# GNU bash is the system shell (/bin/bash and /bin/sh); the bbash fork stays installed as its own command.
+# Built static, so it does not depend on the base's libtinfo. The libarchive tools (BSD tar and friends)
+# are removed: GNU tar is the tar.
+[ -x tools/gnu-bash/bash ] || tools/gnu-bash/build.sh
+sudo install -Dm755 tools/gnu-bash/bash "$ROOTFS/usr/bin/bash"
+sudo ln -sf bash "$ROOTFS/usr/bin/sh"
+sudo rm -f "$ROOTFS"/usr/bin/bsdtar "$ROOTFS"/usr/bin/bsdcat "$ROOTFS"/usr/bin/bsdcpio "$ROOTFS"/usr/bin/bsdunzip
+# issue, os-release, release files and the login banner (GNU/Linux branding)
 sudo ./goget/goget provision "$ROOTFS"
 # fastfetch (Debian build; its only extra library is libyyjson) so the cat logo below has a program to show it
 if [ ! -e "$ROOTFS/usr/bin/fastfetch" ]; then

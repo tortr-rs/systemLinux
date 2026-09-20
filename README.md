@@ -4,8 +4,10 @@
 
 # systemLinux v0.4
 
-A minimal x86_64 Linux distribution built on a custom monolithic kernel, a
-from-scratch Go init (`systemL`), and a Gentoo userland. It boots like any live
+A minimal x86_64 GNU/Linux distribution built on a custom monolithic kernel, a
+from-scratch Go init (`systemL`), and a GNU userland on a Gentoo base (GNU bash 5.3 is
+`/bin/bash` and `/bin/sh`, GNU coreutils, tar, sed, gawk, findutils; the `bbash` fork stays
+installed as its own command). It boots like any live
 ISO (a compressed `rootfs.squashfs` on the ISO with a RAM layer on top), in a
 **minimal** console edition or an **XFCE** live desktop edition, and can be
 installed to disk with the graphical installer (XFCE edition) or the handbook below.
@@ -32,6 +34,8 @@ so the stick can be removed), and *debug shell* (stops just before the real syst
 * **Live boot:** a small busybox initramfs (`tools/live-image/`) finds the medium
   (also inside an ISO file on a Ventoy stick), mounts `/live/rootfs.squashfs`, adds a
   tmpfs overlay and switches to systemL.
+* **Shell:** GNU bash 5.3, built static by `tools/gnu-bash/build.sh` and installed as
+  `/bin/bash` and `/bin/sh`. BSD tar (`bsdtar`) and friends are not installed: GNU tar is the tar.
 * **Init:** `systemL`, a static Go binary running as PID 1 (`systemL/`). systemd
   is not used.
 * **Base:** Gentoo stage3 (glibc, systemd profile), with Portage and the Gentoo

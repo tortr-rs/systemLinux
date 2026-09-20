@@ -39,7 +39,7 @@ if [ -t 1 ] && [ -z "${SYSTEMLINUX_BANNER:-}" ]; then
     (__(___)__)
 
 SYSTEMLINUX_CAT
-	printf '  systemLinux v0.4\n\n\033[0m'
+	printf '  systemLinux v0.4 GNU/Linux\n\n\033[0m'
 fi
 `
 
@@ -65,13 +65,13 @@ func provisionWrite(root, rel, content string, mode os.FileMode) error {
 
 // provisionIdentity writes the branded /etc/issue, release files and os-release.
 func provisionIdentity(root string) error {
-	release := fmt.Sprintf("%s release %s\n", brandName, brandVersion)
+	release := fmt.Sprintf("%s GNU/Linux release %s\n", brandName, brandVersion)
 	files := []struct{ rel, content string }{
-		{"etc/issue", fmt.Sprintf("%s v%s (\\l)\n", brandName, brandVersion)},
+		{"etc/issue", fmt.Sprintf("%s v%s GNU/Linux (\\l)\n", brandName, brandVersion)},
 		{"etc/gentoo-release", release},
 		{"etc/release", release},
 		{"etc/os-release", fmt.Sprintf(
-			"NAME=\"%s\"\nVERSION=\"%s\"\nID=systemlinux\nPRETTY_NAME=\"%s v%s (systemL Core)\"\nVERSION_ID=\"%s\"\n",
+			"NAME=\"%s\"\nVERSION=\"%s\"\nID=systemlinux\nPRETTY_NAME=\"%s v%s GNU/Linux (systemL Core)\"\nVERSION_ID=\"%s\"\n",
 			brandName, brandVersion, brandName, brandVersion, brandVersion)},
 	}
 	for _, f := range files {
