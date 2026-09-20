@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo.png" alt="systemLinux logo: a white cat face on a purple circle" width="160">
+</p>
+
 # systemLinux v0.4
 
 A minimal x86_64 Linux distribution built on a custom monolithic kernel, a

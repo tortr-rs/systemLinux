@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>systemLinux 0.4 &mdash; a Linux distribution built from scratch</title>
 <meta name="description" content="systemLinux v0.4 &mdash; a monolithic-kernel, RAM-disk Linux distribution with its own init (systemL), a Gentoo userland and an optional live XFCE desktop.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2040%2040'%3E%3Ccircle%20cx='20'%20cy='20'%20r='20'%20fill='%2354487a'/%3E%3Cpath%20fill='%23fff'%20d='M9.5%2017%20L10.5%208%20L17.5%2012.2%20Q20%2011.6%2022.5%2012.2%20L29.5%208%20L30.5%2017%20Q31.5%2027.5%2020%2030.5%20Q8.5%2027.5%209.5%2017%20Z'/%3E%3Cg%20fill='%2354487a'%3E%3Cellipse%20cx='15.5'%20cy='19.5'%20rx='1.5'%20ry='2.2'/%3E%3Cellipse%20cx='24.5'%20cy='19.5'%20rx='1.5'%20ry='2.2'/%3E%3Cpath%20d='M18.6%2023.3%20L21.4%2023.3%20L20%2024.8%20Z'/%3E%3C/g%3E%3Cg%20fill='none'%20stroke-linecap='round'%3E%3Cpath%20stroke='%2354487a'%20stroke-width='1.1'%20d='M20%2024.8%20V26%20M20%2026%20Q18.6%2027.4%2017.4%2026.6%20M20%2026%20Q21.4%2027.4%2022.6%2026.6'/%3E%3Cpath%20stroke='%23fff'%20stroke-width='1'%20d='M13.5%2024%20L6.5%2022.8%20M13.5%2025.6%20L6.5%2027.2%20M26.5%2024%20L33.5%2022.8%20M26.5%2025.6%20L33.5%2027.2'/%3E%3C/g%3E%3C/svg%3E">
 <style>
 :root{
   --primary:#54487a;
@@ -70,6 +71,7 @@ pre code{background:none;padding:0;font-size:inherit}
 .brand{display:flex;align-items:center;gap:.65rem;color:#fff;font-weight:700;font-size:1.25rem;letter-spacing:.2px}
 .brand:hover{text-decoration:none}
 .brand svg{width:34px;height:34px;flex:none}
+.brand svg .cat{fill:#fff}.brand svg .ink{fill:var(--primary)}.brand svg .line,.brand svg .whisk{fill:none;stroke-linecap:round}.brand svg .line{stroke:var(--primary);stroke-width:1.1}.brand svg .whisk{stroke:#fff;stroke-width:1}
 .brand small{font-weight:400;opacity:.75;font-size:.8rem;margin-left:.15rem}
 nav ul{display:flex;gap:.25rem;list-style:none;margin:0;padding:0;flex-wrap:wrap}
 nav a{color:#efeaff;padding:.4rem .75rem;border-radius:4px;font-size:.95rem;display:block}
@@ -140,7 +142,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="systemLinux home">
-      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#ffffff" fill-opacity=".14" stroke="#ffffff" stroke-width="2"/><path d="M26 13.5c-1.4-1.6-3.4-2.5-5.8-2.5-3.3 0-5.6 1.7-5.6 4.3 0 2.5 1.8 3.6 5.2 4.4 2.7.6 3.6 1.1 3.6 2.1 0 1.1-1.1 1.8-2.9 1.8-1.8 0-3.3-.7-4.4-2l-2.4 2.3c1.5 1.9 3.9 3.1 6.8 3.1 3.6 0 6.2-1.8 6.2-4.6 0-2.6-1.8-3.7-5.4-4.5-2.5-.6-3.4-1-3.4-2 0-.9.9-1.5 2.4-1.5 1.4 0 2.6.5 3.6 1.5z" fill="#fff"/></svg>
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#ffffff" fill-opacity=".14" stroke="#ffffff" stroke-width="2"/><path class="cat" d="M9.5 17 L10.5 8 L17.5 12.2 Q20 11.6 22.5 12.2 L29.5 8 L30.5 17 Q31.5 27.5 20 30.5 Q8.5 27.5 9.5 17 Z"/><ellipse class="ink" cx="15.5" cy="19.5" rx="1.5" ry="2.2"/><ellipse class="ink" cx="24.5" cy="19.5" rx="1.5" ry="2.2"/><path class="ink" d="M18.6 23.3 L21.4 23.3 L20 24.8 Z"/><path class="line" d="M20 24.8 V26 M20 26 Q18.6 27.4 17.4 26.6 M20 26 Q21.4 27.4 22.6 26.6"/><path class="whisk" d="M13.5 24 L6.5 22.8 M13.5 25.6 L6.5 27.2 M26.5 24 L33.5 22.8 M26.5 25.6 L33.5 27.2"/></svg>
       systemLinux <small>v0.4</small>
     </a>
     <nav aria-label="Main">
