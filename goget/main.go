@@ -20,7 +20,10 @@ func printUsage(prog string) {
 			"                  <repo> in the current directory (both if neither flag\n"+
 			"                  is given) -- templates, not submission-ready recipes\n"+
 			"  config          print current configuration\n"+
-			"  makeuser        create a new user account (requires root)\n",
+			"  makeuser        create a new user account (requires root)\n"+
+			"  provision [--user NAME] <root>\n"+
+			"                  brand an install target (issue, os-release, login banner)\n"+
+			"                  and optionally create its first user (requires root)\n",
 		prog)
 }
 
@@ -351,6 +354,9 @@ func main() {
 
 	case "makeuser":
 		os.Exit(makeuserRun())
+
+	case "provision":
+		os.Exit(provisionRun(os.Args[2:]))
 
 	case "parse":
 		if len(os.Args) < 3 {

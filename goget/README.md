@@ -111,6 +111,7 @@ goget fetch <repo>    # install a compatible prebuilt release binary
 goget show <repo>     # page the README + build script
 goget config          # print current configuration
 goget makeuser        # create a new user account, requires root
+goget provision [--user NAME] <root>   # brand an install target (issue, os-release, login banner) and optionally create its first user, requires root
 ```
 
 `<repo>` accepts any of the forms listed above, e.g.:

@@ -1,7 +1,6 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
 	"os"
 	"os/exec"
@@ -28,8 +27,9 @@ func readMaskedLine(promptMsg string) (string, bool) {
 		defer exec.Command("stty", "-F", "/dev/tty", "echo").Run()
 	}
 
-	reader := bufio.NewReader(os.Stdin)
-	line, err := reader.ReadString('\n')
+	// stdinReader (not a fresh bufio.Reader) so typed-ahead or piped input
+	// meant for the next prompt isn't swallowed by this one's buffer.
+	line, err := stdinReader.ReadString('\n')
 	fmt.Println() // the Enter keypress's newline was never echoed either
 	if err != nil && line == "" {
 		return "", false

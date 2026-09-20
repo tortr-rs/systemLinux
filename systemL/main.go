@@ -284,12 +284,14 @@ func silenceKernelLog() {
 }
 
 func setHostname() {
+	name := "systemlinux" // default when /etc/hostname is missing or empty
 	if b, err := os.ReadFile("/etc/hostname"); err == nil {
 		if h := strings.TrimSpace(string(b)); h != "" {
-			if err := syscall.Sethostname([]byte(h)); err != nil {
-				logf("sethostname: %v", err)
-			}
+			name = h
 		}
+	}
+	if err := syscall.Sethostname([]byte(name)); err != nil {
+		logf("sethostname: %v", err)
 	}
 }
 
