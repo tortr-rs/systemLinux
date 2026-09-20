@@ -51,6 +51,22 @@ sudo chmod 4750 "$ROOTFS/usr/libexec/dbus-daemon-launch-helper"
 sudo rm -f "$ROOTFS/etc/profile.d/80-systemd-osc-context.sh"
 # issue, os-release, release files and the login banner
 sudo ./goget/goget provision "$ROOTFS"
+# fastfetch (Debian build; its only extra library is libyyjson) so the cat logo below has a program to show it
+if [ ! -e "$ROOTFS/usr/bin/fastfetch" ]; then
+    FFTMP=$(mktemp -d)
+    (cd "$FFTMP" && apt-get download fastfetch libyyjson0 >/dev/null)
+    for deb in "$FFTMP"/*.deb; do dpkg-deb -x "$deb" "$FFTMP/root"; done
+    sudo install -Dm755 "$FFTMP/root/usr/bin/fastfetch" "$ROOTFS/usr/bin/fastfetch"
+    sudo cp -a "$FFTMP/root/usr/share/fastfetch" "$ROOTFS/usr/share/"
+    sudo mkdir -p "$ROOTFS/usr/lib64"
+    sudo cp -a "$FFTMP"/root/usr/lib/x86_64-linux-gnu/libyyjson.so.0* "$ROOTFS/usr/lib64/"
+    rm -rf "$FFTMP"
+fi
+# fastfetch: the cat logo as ASCII art (assets/fastfetch/make-logo.py regenerates it from assets/logo.png),
+# for root and, through /etc/skel, for every new user
+sudo install -Dm644 assets/fastfetch/logo.txt "$ROOTFS/usr/share/systemlinux/fastfetch-logo.txt"
+sudo install -Dm644 assets/fastfetch/config.jsonc "$ROOTFS/root/.config/fastfetch/config.jsonc"
+sudo install -Dm644 assets/fastfetch/config.jsonc "$ROOTFS/etc/skel/.config/fastfetch/config.jsonc"
 
 echo "=== [4/8] INJECTING GRUB, efibootmgr, dosfstools FROM DEBIAN ==="
 # Raw Debian binaries/modules go straight into the rootfs. Debian's libs
