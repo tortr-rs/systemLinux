@@ -84,7 +84,12 @@ echo "=== [5/7] PACKING ROOTFS INTO INITRD ==="
 if mount | grep -q " $ROOTFS/"; then
     echo "ERROR: something is still mounted under $ROOTFS; refusing to pack it"; exit 1
 fi
-(cd "$ROOTFS" && sudo find . -print0 | sudo cpio --null -o --format=newc --quiet | gzip -9 > "$WORKSPACE/live/initrd.img")
+# COMPRESS=zstd packs on all cores (much faster; the kernel has CONFIG_RD_ZSTD). gzip is the default.
+if [ "${COMPRESS:-gzip}" = zstd ]; then
+    (cd "$ROOTFS" && sudo find . -print0 | sudo cpio --null -o --format=newc --quiet | zstd -T0 -10 > "$WORKSPACE/live/initrd.img")
+else
+    (cd "$ROOTFS" && sudo find . -print0 | sudo cpio --null -o --format=newc --quiet | gzip -9 > "$WORKSPACE/live/initrd.img")
+fi
 
 echo "=== [6/7] COPYING KERNEL AND WRITING grub.cfg ==="
 cp "$KERNEL" "$WORKSPACE/live/vmlinuz"
