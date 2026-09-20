@@ -15,7 +15,5 @@ chown "$U" "$AUTH"
 # wait (up to 10s) for udev to expose the GPU
 i=0
 while [ ! -e /dev/dri/card0 ] && [ "$i" -lt 50 ]; do sleep 0.2; i=$((i+1)); done
-exec xinit /usr/bin/runuser -u "$U" -- env HOME="$HOME_" USER="$U" LOGNAME="$U" SHELL=/bin/bash LANG=C.UTF-8 \
-    XDG_RUNTIME_DIR="$RUNDIR" XDG_SESSION_TYPE=x11 XDG_CURRENT_DESKTOP=XFCE \
-    XDG_DATA_DIRS=/usr/local/share:/usr/share XDG_CONFIG_DIRS=/etc/xdg XAUTHORITY="$AUTH" \
-    dbus-run-session -- startxfce4 -- /usr/lib/xorg/Xorg :0 vt7 -nolisten tcp -noreset -auth "$AUTH"
+# xinit splits its arguments at the first "--", so the client is a wrapper script (no "--" inside)
+exec xinit /usr/local/bin/xfce-user-session "$U" "$HOME_" "$RUNDIR" "$AUTH" -- /usr/lib/xorg/Xorg :0 vt7 -nolisten tcp -noreset -auth "$AUTH"
