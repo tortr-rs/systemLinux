@@ -1,0 +1,12 @@
+#!/bin/sh
+# Live-session launcher supervised by systemL: X on vt7 running an XFCE session as root.
+export HOME=/root USER=root LOGNAME=root SHELL=/bin/sh LANG=C.UTF-8
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+export XDG_RUNTIME_DIR=/run/user/0 XDG_SESSION_TYPE=x11 XDG_CURRENT_DESKTOP=XFCE
+export XDG_DATA_DIRS=/usr/local/share:/usr/share XDG_CONFIG_DIRS=/etc/xdg
+mkdir -p "$XDG_RUNTIME_DIR" && chmod 0700 "$XDG_RUNTIME_DIR"
+mkdir -p /tmp/.X11-unix && chmod 1777 /tmp/.X11-unix
+# wait (up to 10s) for udev to expose the GPU
+i=0
+while [ ! -e /dev/dri/card0 ] && [ "$i" -lt 50 ]; do sleep 0.2; i=$((i+1)); done
+exec dbus-run-session -- xinit /usr/bin/startxfce4 -- /usr/lib/xorg/Xorg :0 vt7 -nolisten tcp -noreset

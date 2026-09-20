@@ -1,646 +1,389 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>systemLinux v0.3 :: root@bare-metal</title>
-<meta name="description" content="systemLinux v0.3 -- a monolithic, unmanaged, RAM-disk Linux distribution with the systemL init.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>systemLinux 0.4 &mdash; a Linux distribution built from scratch</title>
+<meta name="description" content="systemLinux v0.4 &mdash; a monolithic-kernel, RAM-disk Linux distribution with its own init (systemL), a Gentoo userland and an optional live XFCE desktop.">
 <style>
-/* ============================================================
-   systemLinux v0.1 -- single-file brutalist terminal stylesheet
-   No frameworks. No gradients. No rounded corners. No mercy.
-   ============================================================ */
-
 :root{
-  --bg:       #000000;
-  --card:     #111111;
-  --card-alt: #0a0a0a;
-  --fg:       #ffffff;
-  --dim:      #888888;
-  --cyan:     #00ffff;
-  --magenta:  #ff00ff;
-  --border:   1px solid #333333;
+  --primary:#54487a;
+  --primary-2:#61538d;
+  --primary-ink:#ffffff;
+  --accent:#8b7cc3;
+  --bg:#ffffff;
+  --panel:#f4f2fa;
+  --border:#ddd9ec;
+  --text:#1f1b2e;
+  --muted:#5f5a75;
+  --code-bg:#f0eef8;
+  --code-text:#2b2540;
+  --warn-bg:#fff6e0;
+  --warn-border:#e8c766;
+  --warn-text:#5a4300;
+  color-scheme:light;
 }
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  border-radius: 0 !important;
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --primary:#3d3459;
+    --primary-2:#a99bd8;
+    --accent:#a99bd8;
+    --bg:#16131f;
+    --panel:#211d30;
+    --border:#372f52;
+    --text:#e8e5f3;
+    --muted:#a29cbb;
+    --code-bg:#1d1a2b;
+    --code-text:#e0dcf3;
+    --warn-bg:#2f2810;
+    --warn-border:#7a641d;
+    --warn-text:#f0d98a;
+    color-scheme:dark;
+  }
 }
-
-html{
-  scroll-behavior: auto; /* no smooth scrolling, ever */
-}
-
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
 body{
-  background: var(--bg);
-  color: var(--fg);
-  font-family: "Fira Code", "JetBrains Mono", "SF Mono", "Consolas", monospace;
-  font-size: 15px;
-  line-height: 1.5;
-  border-top: 4px solid var(--cyan);
+  margin:0;background:var(--bg);color:var(--text);
+  font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
+a{color:var(--primary-2);text-decoration:none}
+a:hover{text-decoration:underline}
+code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
+code{background:var(--code-bg);color:var(--code-text);padding:.1em .35em;border-radius:4px;font-size:.92em}
+pre{
+  background:var(--code-bg);color:var(--code-text);
+  border:1px solid var(--border);border-radius:6px;
+  padding:1rem 1.1rem;overflow-x:auto;font-size:.88rem;line-height:1.55;margin:.8rem 0 0;
+}
+pre code{background:none;padding:0;font-size:inherit}
+.c{color:var(--muted)}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:20px}
 
-a{
-  color: var(--cyan);
-  text-decoration: none;
+/* header */
+.site-header{
+  position:sticky;top:0;z-index:20;
+  background:var(--primary);color:var(--primary-ink);
+  border-bottom:3px solid var(--accent);
 }
-a:hover{
-  color: var(--magenta);
-  text-decoration: underline;
-}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-block:.65rem}
+.brand{display:flex;align-items:center;gap:.65rem;color:#fff;font-weight:700;font-size:1.25rem;letter-spacing:.2px}
+.brand:hover{text-decoration:none}
+.brand svg{width:34px;height:34px;flex:none}
+.brand small{font-weight:400;opacity:.75;font-size:.8rem;margin-left:.15rem}
+nav ul{display:flex;gap:.25rem;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav a{color:#efeaff;padding:.4rem .75rem;border-radius:4px;font-size:.95rem;display:block}
+nav a:hover{background:rgba(255,255,255,.14);text-decoration:none}
 
-::selection{
-  background: var(--magenta);
-  color: #000;
-}
-
-.wrap{
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* ---------- top bar ---------- */
-.topbar{
-  border-bottom: var(--border);
-  background: var(--card-alt);
-  padding: 10px 0;
-  font-size: 12px;
-  color: var(--dim);
-  letter-spacing: 0.5px;
-}
-.topbar .wrap{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-.topbar .blink{
-  color: var(--cyan);
-}
-
-/* ---------- nav tabs ---------- */
-nav.tabs{
-  border-bottom: 2px solid var(--cyan);
-  background: #000;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-nav.tabs ul{
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-nav.tabs a{
-  display: block;
-  padding: 14px 18px;
-  color: var(--fg);
-  border-right: var(--border);
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 13px;
-  letter-spacing: 1px;
-}
-nav.tabs a:hover{
-  background: var(--magenta);
-  color: #000;
-  text-decoration: none;
-}
-
-/* ---------- hero ---------- */
-.hero{
-  padding: 70px 0 50px;
-  border-bottom: var(--border);
-}
-
-.ascii-title{
-  color: var(--cyan);
-  font-size: clamp(8px, 1.6vw, 15px);
-  line-height: 1.1;
-  white-space: pre;
-  overflow-x: auto;
-  margin-bottom: 24px;
-  text-shadow: 2px 0 var(--magenta);
-}
-
-.hero h1{
-  font-size: clamp(28px, 6vw, 56px);
-  font-weight: 800;
-  letter-spacing: -1px;
-  text-transform: uppercase;
-  border-left: 6px solid var(--magenta);
-  padding-left: 16px;
-  margin-bottom: 10px;
-}
-.hero h1 span{
-  color: var(--cyan);
-}
-
-.hero .tagline{
-  color: var(--dim);
-  margin: 10px 0 30px 22px;
-  font-size: 14px;
-}
-
-.callout{
-  background: var(--card);
-  border: 2px solid var(--magenta);
-  border-left: 10px solid var(--magenta);
-  padding: 22px 24px;
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--fg);
-  margin-bottom: 14px;
-}
-.callout .quotemark{
-  color: var(--magenta);
-}
-
-.satire-note{
-  font-size: 11px;
-  color: var(--dim);
-  margin-bottom: 34px;
-  font-style: italic;
-}
-
-.cta-row{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-
+/* hero */
+.hero{background:linear-gradient(180deg,var(--panel),var(--bg));border-bottom:1px solid var(--border)}
+.hero .wrap{padding-block:4rem 3.2rem}
+.eyebrow{color:var(--primary-2);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.15;margin:.5rem 0 1rem;color:var(--text);max-width:18ch}
+.hero .lead{font-size:1.15rem;color:var(--muted);max-width:60ch;margin:0 0 1.8rem}
 .btn{
-  display: inline-block;
-  padding: 14px 26px;
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border: 2px solid var(--cyan);
-  background: transparent;
-  color: var(--cyan);
-  cursor: pointer;
+  display:inline-block;padding:.7rem 1.25rem;border-radius:6px;font-weight:600;
+  border:2px solid var(--primary-2);color:var(--primary-2);background:transparent;margin:0 .6rem .6rem 0;
 }
-.btn:hover{
-  background: var(--cyan);
-  color: #000;
-  text-decoration: none;
-}
-.btn.solid{
-  background: var(--magenta);
-  border-color: var(--magenta);
-  color: #000;
-}
-.btn.solid:hover{
-  background: transparent;
-  color: var(--magenta);
+.btn:hover{text-decoration:none;background:var(--panel)}
+.btn.primary{background:var(--primary);border-color:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-2);border-color:var(--primary-2)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-top:2.2rem}
+.fact{border-left:3px solid var(--accent);padding-left:.8rem}
+.fact b{display:block;font-size:1.05rem}
+.fact span{color:var(--muted);font-size:.88rem}
+
+/* sections */
+section{padding-block:3.2rem}
+section + section{border-top:1px solid var(--border)}
+h2{font-size:1.7rem;margin:0 0 .4rem;color:var(--primary-2)}
+.sub{color:var(--muted);margin:0 0 1.8rem;max-width:64ch}
+h3{margin:0 0 .3rem;font-size:1.1rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.1rem}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:1.2rem}
+.card p{margin:.3rem 0 0;color:var(--muted);font-size:.95rem}
+
+table{border-collapse:collapse;width:100%;font-size:.95rem}
+th,td{text-align:left;padding:.65rem .8rem;border-bottom:1px solid var(--border);vertical-align:top}
+th{width:11rem;color:var(--muted);font-weight:600;white-space:nowrap}
+.table-scroll{overflow-x:auto;border:1px solid var(--border);border-radius:8px}
+.table-scroll table{margin:0}
+.table-scroll tr:last-child th,.table-scroll tr:last-child td{border-bottom:0}
+
+.panel{background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:1.4rem}
+.panel h3{font-size:1.25rem}
+.hash{word-break:break-all;font-size:.82rem}
+
+.note{background:var(--warn-bg);border:1px solid var(--warn-border);color:var(--warn-text);border-radius:6px;padding:.75rem 1rem;margin:0 0 1.4rem}
+
+/* handbook */
+.handbook{display:grid;grid-template-columns:230px minmax(0,1fr);gap:2.5rem;align-items:start}
+.toc{position:sticky;top:5rem;background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:1rem 1.1rem}
+.toc h4{margin:0 0 .5rem;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+.toc ol{margin:0;padding-left:1.2rem;font-size:.93rem}
+.toc li{margin:.25rem 0}
+.chapter{margin-bottom:2.2rem}
+.chapter h3{font-size:1.25rem;padding-bottom:.35rem;border-bottom:2px solid var(--border);margin-bottom:.7rem}
+.chapter p{margin:.4rem 0}
+@media (max-width:820px){
+  .handbook{grid-template-columns:1fr}
+  .toc{position:static}
 }
 
-/* ---------- section headers ---------- */
-section{
-  padding: 60px 0;
-  border-bottom: var(--border);
-}
-.section-title{
-  font-size: 12px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--magenta);
-  margin-bottom: 6px;
-}
-.section-title::before{
-  content: "// ";
-  color: var(--cyan);
-}
-.section-heading{
-  font-size: clamp(22px, 4vw, 34px);
-  font-weight: 800;
-  text-transform: uppercase;
-  margin-bottom: 34px;
-  border-bottom: var(--border);
-  padding-bottom: 16px;
-}
-.handbook-intro{
-  margin: -18px 0 34px;
-  color: var(--dim);
-  font-size: 13.5px;
-  max-width: 720px;
-}
-.handbook-intro code{
-  color: var(--cyan);
-  background: var(--card);
-  border: 1px solid #333;
-  padding: 1px 5px;
-}
-
-/* ---------- terminal specs panel ---------- */
-.term-window{
-  background: var(--card);
-  border: 2px solid var(--fg);
-  box-shadow: 8px 8px 0 var(--cyan);
-}
-.term-titlebar{
-  background: #1a1a1a;
-  border-bottom: 2px solid var(--fg);
-  padding: 8px 12px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.term-dot{
-  width: 12px;
-  height: 12px;
-  background: var(--dim);
-  border: 1px solid #444;
-}
-.term-titlebar span.filename{
-  margin-left: 10px;
-  font-size: 12px;
-  color: var(--dim);
-}
-.term-body{
-  padding: 24px;
-  display: flex;
-  gap: 32px;
-  flex-wrap: wrap;
-}
-.ascii-cat{
-  color: var(--cyan);
-  white-space: pre;
-  font-size: 11px;
-  line-height: 1.15;
-  flex-shrink: 0;
-}
-.specs{
-  font-size: 13px;
-  flex: 1;
-  min-width: 240px;
-}
-.specs .prompt{
-  color: var(--magenta);
-  margin-bottom: 10px;
-}
-.specs dl{
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  gap: 4px 14px;
-}
-.specs dt{
-  color: var(--cyan);
-  font-weight: 700;
-}
-.specs dt::after{
-  content: ":";
-}
-.specs dd{
-  color: var(--fg);
-}
-.specs .barline{
-  margin-top: 14px;
-  display: flex;
-  gap: 3px;
-}
-.specs .barline span{
-  width: 14px;
-  height: 14px;
-}
-
-/* ---------- philosophy cards ---------- */
-.card-grid{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-}
-.card{
-  background: var(--card);
-  border: var(--border);
-  border-top: 4px solid var(--cyan);
-  padding: 26px;
-}
-.card:nth-child(2){
-  border-top-color: var(--magenta);
-}
-.card:nth-child(3){
-  border-top-color: var(--fg);
-}
-.card .num{
-  color: var(--dim);
-  font-size: 12px;
-  margin-bottom: 10px;
-}
-.card h3{
-  font-size: 18px;
-  text-transform: uppercase;
-  margin-bottom: 14px;
-  letter-spacing: 0.5px;
-}
-.card p{
-  color: #cfcfcf;
-  font-size: 13.5px;
-}
-
-/* ---------- deployment guide ---------- */
-.steps{
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-.step{
-  display: grid;
-  grid-template-columns: 60px 1fr;
-  border: var(--border);
-  border-top: none;
-}
-.step:first-child{
-  border-top: var(--border);
-}
-.step-num{
-  background: var(--card);
-  color: var(--cyan);
-  font-weight: 800;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-right: var(--border);
-}
-.step-body{
-  padding: 20px 24px;
-  background: var(--card-alt);
-}
-.step-body p{
-  margin-bottom: 10px;
-  color: #cfcfcf;
-  font-size: 13.5px;
-}
-pre.code{
-  background: #000;
-  border: 1px solid #333;
-  border-left: 4px solid var(--magenta);
-  padding: 12px 16px;
-  overflow-x: auto;
-  font-size: 13px;
-  color: var(--cyan);
-}
-pre.code .comment{
-  color: var(--dim);
-}
-
-/* ---------- footer ---------- */
-footer{
-  padding: 40px 0 60px;
-  font-size: 12px;
-  color: var(--dim);
-}
-footer .foot-grid{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
-  border-top: var(--border);
-  padding-top: 20px;
-  margin-bottom: 20px;
-}
-footer .satire{
-  color: #555;
-  font-style: italic;
-}
-
-@media (max-width: 640px){
-  .term-body{ flex-direction: column; }
-  nav.tabs a{ padding: 12px; font-size: 11px; }
-}
+footer{background:var(--primary);color:#dcd5f3;padding-block:2rem;font-size:.9rem}
+footer a{color:#fff}
+footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 </style>
 </head>
 <body>
 
-<div class="topbar">
+<header class="site-header">
   <div class="wrap">
-    <span>root@systemlinux <span class="blink">~$</span> uname -a</span>
-    <span>UPTIME: DOES NOT MATTER. IT'S A LIVE ISO.</span>
-  </div>
-</div>
-
-<nav class="tabs">
-  <ul>
-    <li><a href="#hero">./hero</a></li>
-    <li><a href="#specs">./specs</a></li>
-    <li><a href="#philosophy">./philosophy</a></li>
-    <li><a href="#deploy">./deploy</a></li>
-  </ul>
-</nav>
-
-<!-- ============ HERO ============ -->
-<header class="hero" id="hero">
-  <div class="wrap">
-<pre class="ascii-title">
- ███████ ██    ██ ███████ ████████ ███████ ███    ███ ██      ██ ███    ██ ██    ██ ██   ██
- ██       ██  ██  ██         ██    ██      ████  ████ ██      ██ ████   ██ ██    ██  ██ ██
- ███████   ████   ███████    ██    █████   ██ ████ ██ ██      ██ ██ ██  ██ ██    ██   ███
-      ██    ██         ██    ██    ██      ██  ██  ██ ██      ██ ██  ██ ██ ██    ██  ██ ██
- ███████    ██    ███████    ██    ███████ ██      ██ ███████ ██ ██   ████  ██████  ██   ██
-</pre>
-
-    <h1>system<span>Linux</span> v0.3</h1>
-    <p class="tagline">// x86_64 :: monolithic kernel :: zero corporate telemetry :: built by one root user</p>
-
-    <div class="callout">
-      <span class="quotemark">&gt;</span> "It's systemd. If you don't like it, go install Exherbo."
-    </div>
-    <p class="satire-note">[Sponsored by Microsoft Telemetry Server v4.2 / Satire]</p>
-
-    <div class="cta-row">
-      <a class="btn solid" href="https://github.com/tortr-rs/systemLinux/releases/tag/v0.3" target="_blank" rel="noopener noreferrer">&gt; Download Live ISO (Ventoy Ready)</a>
-      <a class="btn" href="https://github.com/tortr-rs/systemLinux" target="_blank" rel="noopener noreferrer">&gt; View Source on GitHub</a>
-    </div>
+    <a class="brand" href="#top" aria-label="systemLinux home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#ffffff" fill-opacity=".14" stroke="#ffffff" stroke-width="2"/><path d="M26 13.5c-1.4-1.6-3.4-2.5-5.8-2.5-3.3 0-5.6 1.7-5.6 4.3 0 2.5 1.8 3.6 5.2 4.4 2.7.6 3.6 1.1 3.6 2.1 0 1.1-1.1 1.8-2.9 1.8-1.8 0-3.3-.7-4.4-2l-2.4 2.3c1.5 1.9 3.9 3.1 6.8 3.1 3.6 0 6.2-1.8 6.2-4.6 0-2.6-1.8-3.7-5.4-4.5-2.5-.6-3.4-1-3.4-2 0-.9.9-1.5 2.4-1.5 1.4 0 2.6.5 3.6 1.5z" fill="#fff"/></svg>
+      systemLinux <small>v0.4</small>
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#specs">Specs</a></li>
+        <li><a href="#download">Download</a></li>
+        <li><a href="#handbook">Handbook</a></li>
+        <li><a href="#systeml">systemL</a></li>
+        <li><a href="https://github.com/tortr-rs/systemLinux">Source</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
 
-<!-- ============ TERMINAL SPECS ============ -->
+<main id="top">
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Release 0.4</div>
+    <h1>A Linux distribution built from scratch.</h1>
+    <p class="lead">systemLinux pairs a custom monolithic kernel and its own init, <strong>systemL</strong>, with a Gentoo userland. It boots straight into RAM, in a minimal console edition or with a live XFCE desktop, and you can install it to disk when you want it to stay.</p>
+    <a class="btn primary" href="#download">Download the ISO</a>
+    <a class="btn" href="#handbook">Read the Handbook</a>
+    <div class="facts">
+      <div class="fact"><b>Linux 7.2.6</b><span>monolithic, drivers built in</span></div>
+      <div class="fact"><b>systemL</b><span>custom Go init, no systemd</span></div>
+      <div class="fact"><b>Gentoo userland</b><span>glibc, Portage included</span></div>
+      <div class="fact"><b>Live XFCE 4.20</b><span>optional desktop edition</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <h2>About systemLinux</h2>
+    <p class="sub">A small system you can read end to end: one kernel config, one init written in Go, and a package tool that builds from upstream source.</p>
+    <div class="cards">
+      <div class="card"><h3>Its own init</h3><p>systemL runs as PID 1: it mounts the core filesystems, starts udev, D-Bus and NetworkManager, supervises them, and gives you a shell on tty1.</p></div>
+      <div class="card"><h3>Runs from RAM</h3><p>The whole system unpacks into memory at boot, so it is fast and leaves your disks untouched until you decide to install.</p></div>
+      <div class="card"><h3>Two editions</h3><p><strong>Minimal</strong> boots to a root shell. <strong>XFCE</strong> boots straight into a live XFCE desktop.</p></div>
+      <div class="card"><h3>Source-first packages</h3><p><code>goget</code> builds programs from GitHub, GitLab and Codeberg. For large software such as desktop environments, use <code>emerge</code>.</p></div>
+      <div class="card"><h3>Tested on real hardware</h3><p>Built with drivers for Lenovo IdeaPad and MSI machines, and run on bare metal rather than only in a virtual machine.</p></div>
+    </div>
+  </div>
+</section>
+
 <section id="specs">
   <div class="wrap">
-    <div class="section-title">system information</div>
-    <h2 class="section-heading">Terminal Specs Panel</h2>
-
-    <div class="term-window">
-      <div class="term-titlebar">
-        <span class="term-dot"></span>
-        <span class="term-dot"></span>
-        <span class="term-dot"></span>
-        <span class="filename">root@systemlinux:~ — fastfetch</span>
-      </div>
-      <div class="term-body">
-<pre class="ascii-cat">
-      /\_/\
-     ( o.o )
-      > ^ <
-    /|     |\
-   (_|     |_)
-      |   |
-     _|   |_
-    (__(___)__)
-</pre>
-        <div class="specs">
-          <div class="prompt">root@systemlinux &gt; fastfetch</div>
-          <dl>
-            <dt>OS</dt><dd>systemLinux v0.3 x86_64</dd>
-            <dt>Host</dt><dd>Lenovo IdeaPad (Bare-Metal Verified)</dd>
-            <dt>Kernel</dt><dd>7.2.6 (Monolithic Custom)</dd>
-            <dt>Init System</dt><dd>systemL (custom Go PID 1)</dd>
-            <dt>Core Userland</dt><dd>glibc + Git + Static goget Engine</dd>
-          </dl>
-          <div class="barline">
-            <span style="background:#ffffff"></span>
-            <span style="background:#00ffff"></span>
-            <span style="background:#ff00ff"></span>
-            <span style="background:#333333"></span>
-          </div>
-        </div>
-      </div>
+    <h2>System specifications</h2>
+    <p class="sub">What is in systemLinux 0.4.</p>
+    <div class="table-scroll">
+      <table>
+        <tr><th>Version</th><td>0.4</td></tr>
+        <tr><th>Kernel</th><td>Linux 7.2.6, monolithic, with hardware drivers built in (no initramfs modules)</td></tr>
+        <tr><th>Init</th><td>systemL, a static Go binary running as PID 1</td></tr>
+        <tr><th>Base system</th><td>Gentoo stage3 (glibc), Portage and the Gentoo tree included</td></tr>
+        <tr><th>Networking</th><td>NetworkManager, with udev and D-Bus</td></tr>
+        <tr><th>Package tools</th><td><code>goget</code> for everyday programs, <code>emerge</code> for large packages</td></tr>
+        <tr><th>Desktop</th><td>XFCE 4.20 on X.org (XFCE edition only), runs as root in the live session</td></tr>
+        <tr><th>Memory</th><td>Minimal: about 4&nbsp;GB of RAM or more. XFCE: 8&nbsp;GB or more recommended (the whole system lives in RAM)</td></tr>
+        <tr><th>Bootloader</th><td>GRUB 2.12 for BIOS and UEFI (x86_64), <code>efibootmgr</code></td></tr>
+        <tr><th>Disk tools</th><td>util-linux, e2fsprogs, dosfstools</td></tr>
+        <tr><th>Architecture</th><td>x86_64</td></tr>
+      </table>
     </div>
   </div>
 </section>
 
-<!-- ============ PHILOSOPHY ============ -->
-<section id="philosophy">
+<section id="download">
   <div class="wrap">
-    <div class="section-title">design doctrine</div>
-    <h2 class="section-heading">Philosophy</h2>
-
-    <div class="card-grid">
-      <div class="card">
-        <div class="num">01</div>
-        <h3>100% Unmanaged</h3>
-        <p>No background corporate paternalism, silent updates, or hidden tracking scripts. Absolute root developer autonomy.</p>
+    <h2>Download</h2>
+    <p class="sub">Live ISOs you can write to a USB stick or drop onto a Ventoy drive. Boot in <strong>UEFI mode</strong>.</p>
+    <div class="cards">
+      <div class="panel">
+        <h3>XFCE edition</h3>
+        <p>Boots into a live XFCE desktop. 1.4&nbsp;GB, needs about 8&nbsp;GB of RAM.</p>
+        <p><a class="btn primary" href="https://github.com/tortr-rs/systemLinux/releases/download/v0.4/systemlinux-v0.4-xfce.iso">systemlinux-v0.4-xfce.iso</a></p>
+        <p><strong>SHA-256</strong><br><code class="hash">0abc0b6fc869a1f7818bc32b679c51391c2e91081909ec457bd550aab90a17cc</code></p>
       </div>
-      <div class="card">
-        <div class="num">02</div>
-        <h3>Pure Volatile RAM-Disk</h3>
-        <p>The entire userland extracts directly into a /dev/ram0 sandbox in milliseconds. Zero disk or storage controller lag.</p>
-      </div>
-      <div class="card">
-        <div class="num">03</div>
-        <h3>Primal Toolchain Bootstrap</h3>
-        <p>Stripped to the mathematical minimum needed for real systems architecture: Kernel, glibc, Git, and our custom Go package manager <code>goget</code>.</p>
+      <div class="panel">
+        <h3>Minimal edition</h3>
+        <p>Boots to a root shell on the console. 1.2&nbsp;GB, needs about 4&nbsp;GB of RAM.</p>
+        <p><a class="btn primary" href="https://github.com/tortr-rs/systemLinux/releases/download/v0.4/systemlinux-v0.4-minimal.iso">systemlinux-v0.4-minimal.iso</a></p>
+        <p><strong>SHA-256</strong><br><code class="hash">0b0b73f62282983661cad4221651ad3f03070f31c8db06144b82843d96683cea</code></p>
       </div>
     </div>
+    <p>Check your download with <code>sha256sum systemlinux-v0.4-*.iso</code>. Release notes and older versions are on the <a href="https://github.com/tortr-rs/systemLinux/releases/tag/v0.4">v0.4 release page</a> and on <a href="https://github.com/tortr-rs/systemLinux">GitHub</a>.</p>
+    <p><strong>Ventoy:</strong> copy the ISO over any older copy and check its checksum. If it reports an error at boot, write the ISO straight to a stick instead. Legacy BIOS boot is not supported yet (it freezes with the large initrd), so choose UEFI.</p>
   </div>
 </section>
 
-<!-- ============ DEPLOYMENT GUIDE ============ -->
-<section id="deploy">
+<section id="handbook">
   <div class="wrap">
-    <div class="section-title">handbook</div>
-    <h2 class="section-heading">systemLinux v0.3 &mdash; Hard Drive Installation Handbook</h2>
-    <p class="handbook-intro">This handbook covers migrating systemLinux from its volatile live memory environment (<code>/dev/ram0</code>) down to a permanent internal disk (e.g., an internal NVMe or SATA SSD). Run every command as root from the live system. <strong>The disk you pick is erased.</strong></p>
+    <h2>The systemLinux Handbook</h2>
+    <p class="sub">Installing systemLinux from the live environment to an internal disk. From the XFCE edition, open a terminal in the desktop first; both editions install the same way.</p>
+    <div class="note"><strong>Warning:</strong> this erases the target disk. Run every command as root from the live system. The examples use an NVMe drive (<code>/dev/nvme0n1</code>); for a SATA disk use <code>/dev/sda</code> with partitions <code>/dev/sda1</code> and <code>/dev/sda2</code>.</div>
 
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">01</div>
-        <div class="step-body">
-          <p>Boot the live systemLinux RAM-disk, identify the target internal disk, and create a GPT layout with a 512MB EFI System Partition and a root partition. The commands below assume an NVMe drive (<code>/dev/nvme0n1</code>); adjust the names for SATA (<code>/dev/sda1</code>, <code>/dev/sda2</code>).</p>
-          <pre class="code"><span class="comment"># list block devices, confirm the target disk</span>
+    <div class="handbook">
+      <aside class="toc" aria-label="Handbook chapters">
+        <h4>Chapters</h4>
+        <ol>
+          <li><a href="#hb-1">Prepare the disk</a></li>
+          <li><a href="#hb-2">Format the partitions</a></li>
+          <li><a href="#hb-3">Mount the target</a></li>
+          <li><a href="#hb-4">Copy the system</a></li>
+          <li><a href="#hb-5">Write fstab</a></li>
+          <li><a href="#hb-6">Configure GRUB</a></li>
+          <li><a href="#hb-7">Kernel and bootloader</a></li>
+          <li><a href="#hb-8">First user (optional)</a></li>
+          <li><a href="#hb-9">Finish and reboot</a></li>
+        </ol>
+      </aside>
+
+      <article>
+        <div class="chapter" id="hb-1">
+          <h3>1. Prepare the disk</h3>
+          <p>Identify the target disk, then create a GPT layout with a 512MB EFI System Partition and a root partition.</p>
+          <pre><code><span class="c"># list block devices and confirm the target disk</span>
 lsblk -o NAME,SIZE,TYPE,MOUNTPOINT
 
-<span class="comment"># destructive: wipes /dev/nvme0n1 and creates p1 (ESP) + p2 (root)</span>
+<span class="c"># destructive: wipes /dev/nvme0n1, creates p1 (ESP) and p2 (root)</span>
 sfdisk /dev/nvme0n1 &lt;&lt;'EOF'
 label: gpt
 ,512M,U
 ,,L
-EOF</pre>
+EOF</code></pre>
         </div>
-      </div>
-      <div class="step">
-        <div class="step-num">02</div>
-        <div class="step-body">
-          <p>Format the storage partitions.</p>
-          <pre class="code">mkfs.vfat -F32 /dev/nvme0n1p1
-mkfs.ext4 /dev/nvme0n1p2</pre>
+
+        <div class="chapter" id="hb-2">
+          <h3>2. Format the partitions</h3>
+          <pre><code>mkfs.vfat -F32 /dev/nvme0n1p1
+mkfs.ext4 /dev/nvme0n1p2</code></pre>
         </div>
-      </div>
-      <div class="step">
-        <div class="step-num">03</div>
-        <div class="step-body">
-          <p>Mount the root partition on a scratch path, then mount the EFI partition inside the target layout.</p>
-          <pre class="code">mkdir -p /mnt/target
+
+        <div class="chapter" id="hb-3">
+          <h3>3. Mount the target</h3>
+          <p>Mount the root partition on a scratch path, then mount the EFI partition inside it.</p>
+          <pre><code>mkdir -p /mnt/target
 mount /dev/nvme0n1p2 /mnt/target
 
 mkdir -p /mnt/target/boot/efi
-mount /dev/nvme0n1p1 /mnt/target/boot/efi</pre>
+mount /dev/nvme0n1p1 /mnt/target/boot/efi</code></pre>
         </div>
-      </div>
-      <div class="step">
-        <div class="step-num">04</div>
-        <div class="step-body">
-          <p>Deep-copy the live running userland onto the disk. <code>-x</code> keeps the copy on one filesystem so the virtual filesystems stay out; then recreate their mount points empty.</p>
-          <pre class="code">cp -ax / /mnt/target/
+
+        <div class="chapter" id="hb-4">
+          <h3>4. Copy the system</h3>
+          <p>Deep-copy the running system to the disk. <code>-x</code> keeps the copy on one filesystem, so the virtual filesystems stay out. Then recreate their mount points empty.</p>
+          <pre><code>cp -ax / /mnt/target/
 
 mkdir -p /mnt/target/proc /mnt/target/sys /mnt/target/dev /mnt/target/run /mnt/target/tmp
-chmod 1777 /mnt/target/tmp</pre>
+chmod 1777 /mnt/target/tmp</code></pre>
         </div>
-      </div>
-      <div class="step">
-        <div class="step-num">05</div>
-        <div class="step-body">
-          <p>Write the filesystem table.</p>
-          <pre class="code">cat &lt;&lt; 'EOF' &gt; /mnt/target/etc/fstab
+
+        <div class="chapter" id="hb-5">
+          <h3>5. Write fstab</h3>
+          <pre><code>cat &lt;&lt; 'EOF' &gt; /mnt/target/etc/fstab
 /dev/nvme0n1p2  /         ext4  errors=remount-ro  0  1
 /dev/nvme0n1p1  /boot/efi vfat  defaults           0  2
-EOF</pre>
+EOF</code></pre>
         </div>
-      </div>
-      <div class="step">
-        <div class="step-num">06</div>
-        <div class="step-body">
-          <p>Write the bare-metal GRUB configuration. The kernel has no initramfs, so the root partition path must be given directly for it to mount.</p>
-          <pre class="code">mkdir -p /mnt/target/boot/grub
+
+        <div class="chapter" id="hb-6">
+          <h3>6. Configure GRUB</h3>
+          <p>The kernel has no initramfs, so give the root partition directly for it to mount. <code>rootwait</code> makes it wait for the NVMe drive to appear.</p>
+          <pre><code>mkdir -p /mnt/target/boot/grub
 cat &lt;&lt; 'EOF' &gt; /mnt/target/boot/grub/grub.cfg
 set default=0
 set timeout=3
 
-menuentry "systemLinux v0.3 (Bare Metal)" {
-    linux /boot/vmlinuz root=/dev/nvme0n1p2 rw console=tty0 init=/sbin/systemL quiet loglevel=3
-    <span class="comment"># if nvme0n1p2 fails to mount, switch to root=PARTUUID=&lt;your-root-partuuid&gt;</span>
+menuentry "systemLinux v0.4 (Bare Metal)" {
+    linux /boot/vmlinuz root=/dev/nvme0n1p2 rootwait rw console=tty0 init=/sbin/systemL quiet loglevel=3
+    <span class="c"># if the device path does not mount, use root=PARTUUID=&lt;your-root-partuuid&gt;</span>
 }
-EOF</pre>
+EOF</code></pre>
         </div>
-      </div>
-      <div class="step">
-        <div class="step-num">07</div>
-        <div class="step-body">
-          <p>Place the monolithic kernel on the permanent boot track and deploy GRUB to the drive.</p>
-          <pre class="code">cp /boot/vmlinuz /mnt/target/boot/vmlinuz
+
+        <div class="chapter" id="hb-7">
+          <h3>7. Kernel and bootloader</h3>
+          <p>Place the kernel on the permanent boot track and install GRUB to the drive.</p>
+          <pre><code>cp /boot/vmlinuz /mnt/target/boot/vmlinuz
 
 grub-install --target=x86_64-efi --efi-directory=/mnt/target/boot/efi \
-  --boot-directory=/mnt/target/boot --removable</pre>
+  --boot-directory=/mnt/target/boot --removable</code></pre>
         </div>
-      </div>
-      <div class="step">
-        <div class="step-num">08</div>
-        <div class="step-body">
-          <p>Unmount and reboot into the permanent installation.</p>
-          <pre class="code">umount -R /mnt/target
-reboot <span class="comment"># remove the installation media on restart</span></pre>
+
+        <div class="chapter" id="hb-8">
+          <h3>8. First user (optional)</h3>
+          <p>Brand the install (<code>/etc/issue</code>, <code>os-release</code>, the login banner) and create a first user in <code>wheel</code>, <code>portage</code> and <code>networkmanager</code> with a sudo rule. It prompts for the password. With a user set up, create <code>/etc/systemL/login</code> so tty1 asks for a login instead of opening a root shell.</p>
+          <pre><code>goget provision --user yourname /mnt/target
+mkdir -p /mnt/target/etc/systemL
+touch /mnt/target/etc/systemL/login</code></pre>
         </div>
-      </div>
+
+        <div class="chapter" id="hb-9">
+          <h3>9. Finish and reboot</h3>
+          <pre><code>umount -R /mnt/target
+reboot <span class="c"># remove the installation media on restart</span></code></pre>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
+<section id="systeml">
+  <div class="wrap">
+    <h2>Using systemL</h2>
+    <p class="sub">systemL has no configuration to write for a normal boot. These commands control it at runtime (as root).</p>
+    <div class="table-scroll">
+      <table>
+        <tr><th><code>systemL status</code></th><td>List supervised services with state, PID, restarts and uptime</td></tr>
+        <tr><th><code>systemL start|stop|restart &lt;service&gt;</code></th><td>Control a service (udevd, dbus, NetworkManager, or anything in <code>services.conf</code>)</td></tr>
+        <tr><th><code>reboot</code> / <code>poweroff</code> / <code>halt</code></th><td>Power commands, also available as <code>systemL reboot|poweroff|halt</code></td></tr>
+        <tr><th><code>/etc/systemL/login</code></th><td>If this file exists, tty1 asks for a login instead of opening a root shell</td></tr>
+        <tr><th><code>/etc/systemL/services.conf</code></th><td>Extra daemons to supervise, one <code>&lt;name&gt; &lt;command&gt; [args]</code> per line</td></tr>
+        <tr><th>Hostname</th><td>Read from <code>/etc/hostname</code>, defaulting to <code>systemlinux</code></td></tr>
+        <tr><th>Logs</th><td><code>/run/log/systemL/&lt;name&gt;.log</code></td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="limits">
+  <div class="wrap">
+    <h2>Known limitations</h2>
+    <ul>
+      <li>The live system runs from RAM: changes are lost on reboot until you install it to disk.</li>
+      <li>Boot in UEFI mode. Legacy BIOS boot freezes with the large initrd.</li>
+      <li>The live XFCE session runs as root and has no login manager. Shutdown and reboot from the XFCE menus do not work (there is no logind); run <code>reboot</code> or <code>poweroff</code> in a terminal.</li>
+      <li>The desktop comes from Debian packages layered onto the Gentoo userland. Software that needs more than that (for example a login manager or power management) is not included.</li>
+      <li>The kernel has Intel and legacy NVIDIA graphics built in, but no AMD driver, and the NVIDIA GeForce drivers are not included: X uses the generic display driver.</li>
+      <li>The old zram swap unit and Plymouth splash from v0.2 are not started by systemL. <code>systemctl</code> is still in the image but does nothing without systemd.</li>
+      <li><code>goget</code> does not track installed packages or resolve dependencies. Use <code>emerge</code> for large packages.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
 <footer>
   <div class="wrap">
-    <div class="foot-grid">
-      <span>systemLinux v0.3 :: bare-metal-verified :: 2026</span>
-      <span>root:~$ <span style="color:var(--cyan)">_</span></span>
-    </div>
-    <p class="satire">[Sponsored by Microsoft Telemetry Server v4.2 / Satire]</p>
+    <span>systemLinux 0.4 &middot; <a href="https://github.com/tortr-rs/systemLinux">source on GitHub</a></span>
+    <span>Kernel 7.2.6 &middot; systemL &middot; Gentoo userland</span>
   </div>
 </footer>
 
