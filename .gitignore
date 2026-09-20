@@ -9,3 +9,8 @@ rootfs/var/cache/
 rootfs/root/
 rootfs/etc/portage/gnupg/
 rootfs/etc/ssl/private/
+
+# built artifacts
+tools/kernel-full/vmlinuz-*
+*.squashfs
+old-ramdisk/

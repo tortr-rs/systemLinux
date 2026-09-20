@@ -1,0 +1,24 @@
+#!/bin/sh
+# Calamares job: copy the live system onto the target root ($1).
+set -e
+ROOT=$1
+[ -d "$ROOT" ] || { echo "target root $ROOT not found" >&2; exit 1; }
+
+# Copy every top-level entry except the virtual/runtime directories (cp -ax stays on one
+# filesystem, so the target mount and other mounts are never copied into themselves).
+for e in /* /.[!.]*; do
+    [ -e "$e" ] || [ -L "$e" ] || continue
+    case "$e" in
+        /proc|/sys|/dev|/run|/tmp|/mnt|/media|/lost+found) continue ;;
+    esac
+    cp -ax "$e" "$ROOT"/
+done
+for d in proc sys dev run tmp mnt media; do
+    mkdir -p "$ROOT/$d"
+done
+chmod 1777 "$ROOT/tmp"
+
+# leave the live session behind: no root autostart, no live desktop launchers
+rm -f "$ROOT/etc/systemL/services.conf"
+rm -rf "$ROOT/root/Desktop"
+sync

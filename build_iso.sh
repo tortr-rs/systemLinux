@@ -1,11 +1,13 @@
 #!/bin/bash
-# systemLinux v0.4 ISO build: systemL init, goget, boot/disk tools, kernel, optional XFCE.
+# systemLinux v0.4 ISO build: a normal live ISO (small initramfs + /live/rootfs.squashfs, mounted
+# with an overlayfs; nothing is loaded into a RAM disk), with systemL as init, goget, boot/disk
+# tools, the full-driver kernel, firmware and (for xfce) the desktop, installer and Firefox.
 #
 #   VARIANT=minimal ./build_iso.sh    -> systemlinux-v0.4-minimal.iso  (root shell, console only)
 #   VARIANT=xfce    ./build_iso.sh    -> systemlinux-v0.4-xfce.iso     (live XFCE desktop)
 #
 # Run from a normal terminal (sudo needs a password prompt). Needs a Debian host with
-# grub-mkrescue, xorriso, mtools, zstd, cpio and (for xfce) apt.
+# grub-mkrescue, xorriso, mtools, squashfs-tools, cpio and apt.
 set -euo pipefail
 
 VARIANT=${VARIANT:-minimal}
@@ -14,14 +16,16 @@ case "$VARIANT" in minimal|xfce) ;; *) echo "VARIANT must be minimal or xfce"; e
 BUILD_DIR=$(cd "$(dirname "$0")" && pwd)
 ROOTFS=$BUILD_DIR/rootfs
 WORKSPACE=$BUILD_DIR/iso_workspace
-KERNEL=${KERNEL:-$BUILD_DIR/systemlinux-distro/linux-7.2.6/arch/x86/boot/bzImage}
+# the "full" kernel is the same Linux 7.2.6 with drivers for almost everything built in
+KERNEL=${KERNEL:-$BUILD_DIR/tools/kernel-full/vmlinuz-7.2.6-full}
 ISO=${ISO:-$BUILD_DIR/systemlinux-v0.4-$VARIANT.iso}
 XFCE_WORK=${XFCE_WORK:-$HOME/.cache/systemlinux-xfce}
+FW_WORK=${FW_WORK:-$HOME/.cache/systemlinux-firmware}
 cd "$BUILD_DIR"
 
+echo "=== [1/8] COMPILING systemL, goget AND THE FULL KERNEL ==="
+if [ ! -f "$KERNEL" ]; then "$BUILD_DIR/tools/kernel-full/build-kernel.sh"; fi
 [ -f "$KERNEL" ] || { echo "ERROR: kernel not found at $KERNEL"; exit 1; }
-
-echo "=== [1/8] COMPILING systemL AND goget ==="
 make -C ./systemL
 make -C ./goget
 
@@ -99,23 +103,32 @@ fi
 sudo rm -rf "$WORKSPACE"
 mkdir -p "$WORKSPACE/live" "$WORKSPACE/boot/grub"
 
-OVERLAY=""
+echo "=== [5b/8] BUILDING THE FIRMWARE OVERLAY FROM DEBIAN ==="
+# Built-in drivers load firmware while the kernel initialises, so it goes into the initramfs;
+# it also stays in the squashfs for devices plugged in later.
+WORK=$FW_WORK "$BUILD_DIR/tools/firmware-overlay/build-overlay.sh"
+ROOTFS=$ROOTFS python3 "$BUILD_DIR/tools/xfce-overlay/mkcpio.py" "$FW_WORK/ov5.cpio" "$FW_WORK/ov5"
+
 if [ "$VARIANT" = xfce ]; then
-    echo "=== [5b/8] BUILDING THE XFCE OVERLAY FROM DEBIAN ==="
+    echo "=== [5c/8] BUILDING THE XFCE OVERLAY FROM DEBIAN ==="
     WORK=$XFCE_WORK ROOTFS=$ROOTFS "$BUILD_DIR/tools/xfce-overlay/build-overlay.sh"
-    OVERLAY=1
 fi
 
-echo "=== [6/8] PACKING THE INITRD (zstd) ==="
-# The kernel accepts concatenated compressed cpio archives, so the XFCE overlay is appended.
-# zstd keeps the initrd small enough for GRUB to load it into one contiguous block of memory.
-(cd "$ROOTFS" && sudo find . -print0 | sudo cpio --null -o --format=newc --quiet | zstd -19 -T0 -q > "$WORKSPACE/live/initrd.img")
-if [ -n "$OVERLAY" ]; then
-    WORK=$XFCE_WORK ROOTFS=$ROOTFS python3 "$BUILD_DIR/tools/xfce-overlay/mkcpio.py" "$WORKSPACE/overlay.cpio.gz" \
-        "$XFCE_WORK/ov3" "$XFCE_WORK/ov4"
-    cat "$WORKSPACE/overlay.cpio.gz" >> "$WORKSPACE/live/initrd.img"
-    rm -f "$WORKSPACE/overlay.cpio.gz"
+echo "=== [6/8] BUILDING THE SQUASHFS AND THE INITRAMFS ==="
+STAGE=$WORKSPACE/stage
+sudo mkdir -p "$STAGE"
+sudo cp -a "$ROOTFS/." "$STAGE/"
+sudo cp -a "$FW_WORK/ov5/." "$STAGE/"
+if [ "$VARIANT" = xfce ]; then
+    sudo cp -a "$XFCE_WORK/ov3/." "$STAGE/"
+    sudo cp -a "$XFCE_WORK/ov4/." "$STAGE/"
 fi
+sudo install -Dm644 "$KERNEL" "$STAGE/boot/vmlinuz"
+sudo mksquashfs "$STAGE" "$WORKSPACE/live/rootfs.squashfs" -comp zstd -Xcompression-level 19 -b 1M -noappend -no-xattrs
+sudo rm -rf "$STAGE"
+sudo chown "$USER" "$WORKSPACE/live/rootfs.squashfs"
+ls -lh "$WORKSPACE/live/rootfs.squashfs"
+WORK=$HOME/.cache/systemlinux-initrd FW_CPIO="$FW_WORK/ov5.cpio" "$BUILD_DIR/tools/live-image/build-initrd.sh" "$WORKSPACE/live/initrd.img"
 
 echo "=== [7/8] COPYING KERNEL AND WRITING grub.cfg ==="
 cp "$KERNEL" "$WORKSPACE/live/vmlinuz"
@@ -129,7 +142,23 @@ menuentry "systemLinux v0.4 ($VARIANT)" {
     if [ ! -f /live/vmlinuz ]; then
         search --no-floppy --set=root --file /live/vmlinuz
     fi
-    linux /live/vmlinuz root=/dev/ram0 rw console=tty0 init=/sbin/systemL
+    linux /live/vmlinuz systeml.live=1 console=tty0
+    initrd /live/initrd.img
+}
+
+menuentry "systemLinux v0.4 ($VARIANT, copy to RAM)" {
+    if [ ! -f /live/vmlinuz ]; then
+        search --no-floppy --set=root --file /live/vmlinuz
+    fi
+    linux /live/vmlinuz systeml.live=1 systeml.toram=1 console=tty0
+    initrd /live/initrd.img
+}
+
+menuentry "systemLinux v0.4 ($VARIANT, debug shell)" {
+    if [ ! -f /live/vmlinuz ]; then
+        search --no-floppy --set=root --file /live/vmlinuz
+    fi
+    linux /live/vmlinuz systeml.live=1 systeml.debug=1 console=tty0
     initrd /live/initrd.img
 }
 GRUBEOF

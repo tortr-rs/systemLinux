@@ -9,6 +9,16 @@ export WORK=${WORK:-$HOME/.cache/systemlinux-xfce}
 export ROOTFS=${ROOTFS:-$HERE/../../rootfs}
 mkdir -p "$WORK/debs"; cd "$WORK"
 
+session_files() {
+    echo "== live session files, installer, Firefox policy, loadkeys wrapper"
+    rm -rf ov4 && mkdir -p ov4/usr/local/bin ov4/etc/systemL
+    install -m755 "$HERE/start-xfce" ov4/usr/local/bin/start-xfce
+    printf '# started and supervised by systemL: <name> <command> [args...]\nxfce /usr/local/bin/start-xfce\n' > ov4/etc/systemL/services.conf
+    cp -a "$HERE/extras/." ov4/
+    chmod -R go-w ov4
+}
+if [ "${1:-}" = "--session-only" ]; then session_files; exit 0; fi
+
 echo "== resolving package closure"
 apt-cache depends --recurse --no-recommends --no-suggests --no-conflicts --no-breaks --no-replaces --no-enhances \
     $(cat "$HERE/packages.txt") 2>/dev/null | grep -E '^[a-z0-9]' | grep -v ':' | sort -u \
@@ -29,9 +39,6 @@ python3 "$HERE/merge.py"
 "$HERE/post.sh"
 python3 "$HERE/checklibs.py" | tail -3
 
-echo "== live session files"
-rm -rf ov4 && mkdir -p ov4/usr/local/bin ov4/etc/systemL
-install -m755 "$HERE/start-xfce" ov4/usr/local/bin/start-xfce
-printf '# started and supervised by systemL: <name> <command> [args...]\nxfce /usr/local/bin/start-xfce\n' > ov4/etc/systemL/services.conf
-chmod -R go-w ov3 ov4
+session_files
+chmod -R go-w ov3
 echo "overlay ready: $WORK/ov3 $WORK/ov4"

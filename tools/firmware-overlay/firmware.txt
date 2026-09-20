@@ -1,0 +1,17 @@
+firmware-linux-free
+firmware-iwlwifi
+firmware-realtek
+firmware-amd-graphics
+firmware-atheros
+firmware-brcm80211
+firmware-misc-nonfree
+firmware-intel-graphics
+firmware-intel-misc
+firmware-mediatek
+firmware-sof-signed
+firmware-nvidia-graphics
+firmware-bnx2
+firmware-bnx2x
+firmware-libertas
+firmware-qlogic
+firmware-ti-connectivity

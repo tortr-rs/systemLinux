@@ -5,31 +5,46 @@
 # systemLinux v0.4
 
 A minimal x86_64 Linux distribution built on a custom monolithic kernel, a
-from-scratch Go init (`systemL`), and a Gentoo userland. It boots entirely
-into RAM (`/dev/ram0`), in a **minimal** console edition or an **XFCE** live
-desktop edition, and can be installed to disk by following the handbook below.
+from-scratch Go init (`systemL`), and a Gentoo userland. It boots like any live
+ISO (a compressed `rootfs.squashfs` on the ISO with a RAM layer on top), in a
+**minimal** console edition or an **XFCE** live desktop edition, and can be
+installed to disk with the graphical installer (XFCE edition) or the handbook below.
 
 Website: `website/index.html` · Downloads: GitHub release `v0.4`
 
 | Edition | File | Size | RAM needed |
 |---|---|---|---|
-| XFCE | `systemlinux-v0.4-xfce.iso` | 1.4 GB | about 8 GB recommended |
-| Minimal | `systemlinux-v0.4-minimal.iso` | 1.2 GB | about 4 GB |
+| XFCE | `systemlinux-v0.4-xfce.iso` | 2.0 GB | about 4 GB recommended |
+| Minimal | `systemlinux-v0.4-minimal.iso` | 1.7 GB | about 2 GB |
 
-Boot in **UEFI mode**. Legacy BIOS boot freezes with the large initrd.
+Boot in **UEFI mode** (legacy BIOS boot has not been tested with the current live layout).
+Each ISO has three GRUB entries: normal, *copy to RAM* (loads the whole system into memory
+so the stick can be removed), and *debug shell* (stops just before the real system starts).
 
 ## System specifications
 
-* **Kernel:** monolithic Linux 7.2.6 with drivers built in for Lenovo IdeaPad and
-  MSI targets (`kernel_7.2.6.config`). No initramfs modules: the kernel must be
-  able to mount its root device directly.
+* **Kernel:** monolithic Linux 7.2.6 with drivers for almost everything built in
+  (`kernel_7.2.6-full.config`, over 3,200 options: Wi-Fi, Bluetooth, Intel/AMD/NVIDIA-open
+  graphics, storage, sound, laptop hardware, exFAT/NTFS/btrfs/XFS). Built by
+  `tools/kernel-full/`; `kernel_7.2.6.config` is the original, smaller config.
+  Firmware comes from Debian's firmware packages (`tools/firmware-overlay/`) and is
+  loaded by the drivers from the initramfs while the kernel starts.
+* **Live boot:** a small busybox initramfs (`tools/live-image/`) finds the medium
+  (also inside an ISO file on a Ventoy stick), mounts `/live/rootfs.squashfs`, adds a
+  tmpfs overlay and switches to systemL.
 * **Init:** `systemL`, a static Go binary running as PID 1 (`systemL/`). systemd
   is not used.
 * **Base:** Gentoo stage3 (glibc, systemd profile), with Portage and the Gentoo
   tree available for `emerge`.
 * **Networking:** NetworkManager, started by systemL together with udev and D-Bus.
-* **Desktop (XFCE edition):** XFCE 4.20 on X.org, built from Debian packages
-  layered onto the Gentoo userland (`tools/xfce-overlay/`). The live session runs as root.
+* **Desktop (XFCE edition):** XFCE 4.20 on X.org and Firefox ESR (home page:
+  `https://syslinux.chamesle.org/#about`), built from Debian packages layered onto the
+  Gentoo userland (`tools/xfce-overlay/`). The live session runs as root. A `loadkeys`
+  wrapper sets the console keymap and the X layout together.
+* **Installer (XFCE edition):** the "Install systemLinux" desktop icon runs a small
+  graphical wizard (yad dialogs; `systemlinux-install` and `systemlinux-install-run`)
+  that erases one disk, copies the system, and installs GRUB, with the same steps as the
+  handbook. The installed system asks for a login on tty1 and starts XFCE for your user.
 * **Packages:** `goget` for normal, self-contained programs (built from GitHub /
   GitLab / Codeberg source or a prebuilt release); `emerge` for large packages.
 * **Boot/disk tools:** GRUB 2.12 (BIOS + UEFI x86_64), `efibootmgr`, `dosfstools`,
@@ -71,13 +86,13 @@ VARIANT=minimal ./build_iso.sh    # systemlinux-v0.4-minimal.iso
 VARIANT=xfce    ./build_iso.sh    # systemlinux-v0.4-xfce.iso
 ```
 
-The script builds `systemL` and `goget`, installs them into `rootfs/`, links
-`init` to systemL, fixes the D-Bus launch helper permissions, brands the image
-with `goget provision`, injects GRUB, `efibootmgr` and `dosfstools` from Debian
-(checking that all their shared libraries resolve), packs the rootfs into a
-zstd initrd, and masters the ISO with `grub-mkrescue`. For the XFCE edition it
-first builds the desktop overlay with `tools/xfce-overlay/build-overlay.sh`
-and appends it to the initrd.
+The script builds `systemL`, `goget` and (once) the full kernel, installs them into
+`rootfs/`, links `init` to systemL, fixes the D-Bus launch helper permissions, brands
+the image with `goget provision`, injects GRUB, `efibootmgr` and `dosfstools` from Debian
+(checking that all their shared libraries resolve), builds the firmware overlay, and for
+the XFCE edition the desktop overlay (`tools/xfce-overlay/build-overlay.sh`). It then
+compresses everything into `rootfs.squashfs` (zstd), builds the small initramfs, and
+masters the ISO with `grub-mkrescue`.
 
 ## Installing to disk (handbook)
 
@@ -143,15 +158,16 @@ reboot
 
 ## Known limitations
 
-* The live system runs from RAM: changes are lost on reboot until installed to disk.
-* Boot in UEFI mode; legacy BIOS boot freezes with the large initrd.
+* The live system keeps your changes only in RAM: they are lost on reboot until installed to disk.
+* Boot in UEFI mode; legacy BIOS boot has not been tested with the current live layout.
+* The graphical installer erases a whole disk; no resizing or dual boot yet.
 * The live XFCE session runs as root and has no login manager. Shutdown and
   reboot from the XFCE menus do not work (no logind); use `reboot` / `poweroff`
   in a terminal.
 * The desktop is Debian's XFCE stack on a Gentoo base, without a login manager
   or power management.
-* The kernel has Intel and legacy NVIDIA graphics built in, but no AMD driver;
-  X uses the generic display driver.
+* The kernel includes Intel, AMD and the open NVIDIA (nouveau) graphics drivers, but not
+  NVIDIA's proprietary driver; a driver whose firmware is not in the bundled set will not start.
 * The v0.2 `zram` swap unit and Plymouth splash are systemd-based and are not
   started by systemL. `systemctl` remains in the rootfs but does nothing.
 * `goget` does not track installed packages or resolve dependencies; use `emerge`
@@ -162,10 +178,14 @@ reboot
 ```text
 ├── systemL/              # PID 1 init (main.go, control.go)
 ├── goget/                # package manager (Go), README inside; includes `goget provision`
-├── tools/xfce-overlay/   # builds the live XFCE overlay from Debian packages
+├── tools/xfce-overlay/   # builds the live XFCE overlay from Debian packages (+ installer scripts, Firefox policy)
+├── tools/kernel-full/    # builds the full-driver kernel (extra-config.txt applied to the base config)
+├── tools/firmware-overlay/ # Debian firmware packages, xz-compressed
+├── tools/live-image/     # live initramfs (busybox + init script)
 ├── website/index.html    # project site + handbook
 ├── build_iso.sh          # ISO build pipeline (VARIANT=minimal|xfce)
 ├── mega_build_v0.2.sh    # older v0.2 build pipeline
-├── kernel_7.2.6.config   # monolithic kernel configuration
+├── kernel_7.2.6.config   # original kernel configuration
+├── kernel_7.2.6-full.config # full-driver kernel configuration
 └── rootfs/               # distribution staging filesystem
 ```

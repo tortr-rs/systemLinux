@@ -38,3 +38,5 @@ debconf
 ucf
 apt
 sysvinit-utils
+os-prober
+linux-boot-prober

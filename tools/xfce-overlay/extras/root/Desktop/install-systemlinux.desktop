@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Install systemLinux
+Comment=Install systemLinux to a disk
+Exec=/usr/local/bin/systemlinux-install
+Icon=system-software-install
+Terminal=false
+Categories=System;

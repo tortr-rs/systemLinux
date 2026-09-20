@@ -1,7 +1,13 @@
 import os, subprocess, sys
 R = os.environ['ROOTFS']
 out = sys.argv[1]; roots = sys.argv[2:]
-gz = subprocess.Popen(['gzip', '-6'], stdin=subprocess.PIPE, stdout=open(out, 'wb'))
+# *.gz -> gzip-compressed archive; anything else (e.g. *.cpio) -> raw newc archive
+if out.endswith('.gz'):
+    sink = subprocess.Popen(['gzip', '-6'], stdin=subprocess.PIPE, stdout=open(out, 'wb'))
+    write, close = sink.stdin.write, lambda: (sink.stdin.close(), sink.wait())
+else:
+    fh = open(out, 'wb')
+    write, close = fh.write, fh.close
 for base in roots:
     ents = []
     for dp, dns, fns in os.walk(base):
@@ -16,6 +22,6 @@ for base in roots:
     ents.sort()
     cp = subprocess.run(['cpio', '-o', '-H', 'newc', '-R', '0:0', '--quiet'], input=('\n'.join(ents) + '\n').encode(),
                         cwd=base, capture_output=True, check=True)
-    gz.stdin.write(cp.stdout)
-gz.stdin.close(); gz.wait()
+    write(cp.stdout)
+close()
 print(out, os.path.getsize(out) // 1048576, 'MB')

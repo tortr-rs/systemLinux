@@ -1,0 +1,101 @@
+#!/bin/busybox sh
+# systemLinux live init (runs from the small initramfs, as every live ISO does):
+#   find the live medium -> mount /live/rootfs.squashfs -> overlay a tmpfs on it -> switch_root to systemL.
+# Kernel command line options:
+#   systeml.iso=PATH   prefer this ISO file on the medium's partition (e.g. an ISO on a Ventoy stick)
+#   systeml.toram=1    copy the squashfs into RAM first (the stick can then be removed)
+#   systeml.wait=N     seconds to wait for the medium to appear (default 60)
+#   systeml.debug=1    open a shell just before switching to the real root
+#   systeml.shell=1    open a shell before looking for the medium
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin
+
+/bin/busybox mkdir -p /proc /sys /dev /mnt /newroot /overlay
+/bin/busybox mount -t proc proc /proc
+/bin/busybox mount -t sysfs sysfs /sys
+/bin/busybox mount -t devtmpfs devtmpfs /dev
+/bin/busybox --install -s /bin
+exec </dev/console >/dev/console 2>&1
+
+log() { echo "[live] $*"; }
+emergency() {
+    echo "[live] $*"
+    echo "[live] starting a shell; leave it with 'exit' to try again"
+    setsid cttyhack sh
+}
+
+ISO_HINT= DEBUG=0 SHELL_FIRST=0 TORAM=0 WAIT=60
+for a in $(cat /proc/cmdline); do
+    case "$a" in
+        systeml.iso=*)   ISO_HINT=${a#systeml.iso=} ;;
+        systeml.debug=1) DEBUG=1 ;;
+        systeml.shell=1) SHELL_FIRST=1 ;;
+        systeml.toram=1) TORAM=1 ;;
+        systeml.wait=*)  WAIT=${a#systeml.wait=} ;;
+    esac
+done
+
+[ "$SHELL_FIRST" = 1 ] && emergency "systeml.shell=1"
+
+has_root() { [ -f "$1/live/rootfs.squashfs" ]; }
+
+# Look for the squashfs on every block device: directly (an ISO written to a stick or a CD) and
+# inside ISO files on the device (Ventoy and similar). Sets MEDIUM to the mount point that holds it.
+scan_once() {
+    n=0
+    for dev in /dev/sr[0-9]* /dev/sd[a-z] /dev/sd[a-z][0-9]* /dev/vd[a-z] /dev/vd[a-z][0-9]* \
+               /dev/nvme[0-9]n[0-9] /dev/nvme[0-9]n[0-9]p[0-9]* /dev/mmcblk[0-9] /dev/mmcblk[0-9]p[0-9]* \
+               /dev/mapper/*; do
+        [ -b "$dev" ] || continue
+        n=$((n + 1)); mp=/mnt/d$n
+        mkdir -p "$mp"
+        mount -o ro "$dev" "$mp" 2>/dev/null || continue
+        if has_root "$mp"; then MEDIUM=$mp; return 0; fi
+        k=0
+        for iso in ${ISO_HINT:+"$mp$ISO_HINT"} "$mp"/systemlinux*.iso "$mp"/*/systemlinux*.iso "$mp"/*.iso "$mp"/*/*.iso; do
+            [ -f "$iso" ] || continue
+            k=$((k + 1)); imp=/mnt/i$n-$k
+            mkdir -p "$imp"
+            if mount -o loop,ro "$iso" "$imp" 2>/dev/null; then
+                if has_root "$imp"; then MEDIUM=$imp; return 0; fi
+                umount "$imp" 2>/dev/null
+            fi
+        done
+        umount "$mp" 2>/dev/null
+    done
+    return 1
+}
+
+while :; do
+    i=0
+    until scan_once; do
+        i=$((i + 1))
+        if [ "$i" -ge "$WAIT" ]; then break; fi
+        [ "$i" = 1 ] && log "waiting for the live medium..."
+        sleep 1
+    done
+    [ -n "${MEDIUM:-}" ] && break
+    emergency "could not find the live medium (a device with /live/rootfs.squashfs)"
+done
+log "live medium: $MEDIUM"
+
+SQ=$MEDIUM/live/rootfs.squashfs
+if [ "$TORAM" = 1 ]; then
+    log "copying the system into RAM (this takes a moment)..."
+    cp "$SQ" /rootfs.squashfs && SQ=/rootfs.squashfs
+fi
+
+mkdir -p /mnt/squash
+until mount -t squashfs -o loop,ro "$SQ" /mnt/squash; do
+    emergency "could not mount $SQ"
+done
+mount -t tmpfs -o size=75% tmpfs /overlay
+mkdir -p /overlay/upper /overlay/work
+until mount -t overlay overlay -o lowerdir=/mnt/squash,upperdir=/overlay/upper,workdir=/overlay/work /newroot; do
+    emergency "could not create the overlay root"
+done
+
+mount --move /proc /newroot/proc
+mount --move /sys /newroot/sys
+mount --move /dev /newroot/dev
+[ "$DEBUG" = 1 ] && emergency "systeml.debug=1: about to switch root"
+exec switch_root /newroot /sbin/systemL

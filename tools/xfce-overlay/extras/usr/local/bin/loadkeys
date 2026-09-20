@@ -1,0 +1,38 @@
+#!/bin/sh
+# loadkeys for the XFCE edition: `loadkeys <keymap>` loads the console keymap on the virtual
+# console (works from a terminal window inside X, where plain loadkeys cannot find a console)
+# and also sets the matching X keyboard layout when an X session is running.
+# Any option (-p, -d, --parse, ...) is passed straight to the real loadkeys.
+REAL=/usr/bin/loadkeys
+[ $# -eq 1 ] || exec "$REAL" "$@"
+case "$1" in -*) exec "$REAL" "$@" ;; esac
+MAP=$1
+
+rc=1
+for tty in /dev/tty1 /dev/tty0 /dev/console; do
+    if [ -c "$tty" ] && "$REAL" -C "$tty" "$MAP" 2>/dev/null; then rc=0; break; fi
+done
+if [ "$rc" -ne 0 ]; then "$REAL" "$MAP"; rc=$?; fi
+
+# matching X layout
+LAYOUT=$MAP VARIANT=
+case "$MAP" in
+    uk) LAYOUT=gb ;;
+    dvorak|dvorak-*) LAYOUT=us VARIANT=dvorak ;;
+    colemak|colemak-*) LAYOUT=us VARIANT=colemak ;;
+    pt-latin1|pt-*) LAYOUT=pt ;;
+    br-abnt2|br-*) LAYOUT=br ;;
+    de-latin1*|de-*) LAYOUT=de ;;
+    fr-latin1*|fr-latin9|fr-*) LAYOUT=fr ;;
+    es-*|es) LAYOUT=es ;;
+    it-*|it2) LAYOUT=it ;;
+    ru*) LAYOUT=ru ;;
+    us-*) LAYOUT=us ;;
+    *-latin1|*-latin9|*-latin2) LAYOUT=${MAP%%-*} ;;
+esac
+if [ -z "$DISPLAY" ] && [ -S /tmp/.X11-unix/X0 ]; then DISPLAY=:0; export DISPLAY; fi
+if [ -n "$DISPLAY" ] && command -v setxkbmap >/dev/null 2>&1; then
+    if [ -n "$VARIANT" ]; then setxkbmap -layout "$LAYOUT" -variant "$VARIANT" 2>/dev/null
+    else setxkbmap -layout "$LAYOUT" 2>/dev/null; fi
+fi
+exit "$rc"

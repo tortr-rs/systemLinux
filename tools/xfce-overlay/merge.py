@@ -62,10 +62,12 @@ print('lib64 symlinks', n)
 
 # prune bulk that a live XFCE session never uses (spell-check dictionaries, TeX, perl/python libs)
 for junk in ('usr/share/hunspell', 'usr/share/hunspell-bdic', 'usr/share/ispell', 'usr/lib/ispell',
-             'usr/share/aspell', 'usr/lib/aspell', 'usr/share/texmf', 'usr/share/perl', 'usr/lib/python3',
-             'usr/lib/python3.13', 'usr/share/python3', 'usr/share/dict', 'usr/share/enchant-2/hunspell'):
+             'usr/share/aspell', 'usr/lib/aspell', 'usr/share/texmf', 'usr/share/perl',
+             'usr/share/dict', 'usr/share/enchant-2/hunspell', 'usr/lib/python3', 'usr/lib/python3.13', 'usr/share/python3',
+             # os-prober makes Calamares' partitioner wait (up to 5 minutes) while it mounts and scans disks
+             'usr/lib/os-probes', 'usr/lib/linux-boot-probes', 'usr/share/os-prober'):
     shutil.rmtree(OV + '/' + junk, ignore_errors=True)
-for f in ('usr/bin/aspell', 'usr/bin/aspell-import', 'usr/bin/word-list-compress', 'usr/bin/preunzip', 'usr/bin/prezip', 'usr/bin/prezip-bin'):
+for f in ('usr/bin/os-prober', 'usr/bin/linux-boot-prober', 'usr/bin/aspell', 'usr/bin/aspell-import', 'usr/bin/word-list-compress', 'usr/bin/preunzip', 'usr/bin/prezip', 'usr/bin/prezip-bin'):
     try: os.remove(OV + '/' + f)
     except FileNotFoundError: pass
 # drop dangling symlinks left by the pruning
