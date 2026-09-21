@@ -1,5 +1,5 @@
 #!/bin/bash
-# systemLinux v0.5 ISO build: a normal live ISO (small initramfs + /live/rootfs.squashfs, mounted
+# systemLinux v1!!!! ISO build: a normal live ISO (small initramfs + /live/rootfs.squashfs, mounted
 # with an overlayfs; nothing is loaded into a RAM disk), with systemL as init, goget, boot/disk
 # tools, the full-driver kernel, firmware and (for gnome) the desktop, installer and Firefox.
 #
