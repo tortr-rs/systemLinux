@@ -1,0 +1,12 @@
+# installed without pulling in their dependency closure (their virtual dependencies would drag in whole desktops)
+gdm3
+dconf-cli
+x11-common
+libaudit1
+libaudit-common
+libgudev-1.0-0
+libkeyutils1
+ucf
+libxmu6
+libxaw7
+libxmuu1

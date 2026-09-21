@@ -13,5 +13,3 @@ chrony
 power-profiles-daemon
 bluez
 gnome-bluetooth-3-common
-gdm3
-dconf-cli

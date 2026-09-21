@@ -30,7 +30,10 @@ for p in $(cat wanted.txt); do
     c=$(apt-cache policy "$p" 2>/dev/null | sed -n 's/^  Candidate: //p')
     [ -n "$c" ] && [ "$c" != "(none)" ] && echo "$p" >> pkgs.txt
 done
+grep -v "^#" "$HERE/packages-nodeps.txt" | while read -r p; do [ -n "$p" ] && grep -qx "$p" pkgs.txt || echo "$p" >> pkgs.txt; done
 echo "$(wc -l < pkgs.txt) packages"
+# only the packages of the current list may be merged (older downloads stay in debs/ otherwise)
+for f in debs/*.deb; do n=${f##*/}; n=${n%%_*}; grep -qx "$n" pkgs.txt || rm -f "$f"; done
 
 echo "== downloading"
 (cd debs && xargs -n 60 apt-get download < ../pkgs.txt >/dev/null)

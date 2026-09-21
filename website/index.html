@@ -3,21 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>systemLinux 1.0 &mdash; a Linux you can live in, and undo</title>
-<meta name="description" content="systemLinux is an independent GNU/Linux distribution with its own init, a GNOME desktop, an installer, and a Nix-style package manager where every change can be rolled back.">
+<title>systemLinux 1.0 &mdash; software that belongs to everyone</title>
+<meta name="description" content="systemLinux is a communist GNU/Linux distribution: common ownership, no profit motive, no owners. A complete desktop system that no company can sell you, change under you or take away.">
 <link rel="icon" type="image/svg+xml" href="logo.svg">
 <style>
 :root{
-  --bg:#ffffff; --bg2:#f6f4fb; --panel:#ffffff; --border:#e3dff0; --text:#1c1830; --muted:#5d5878;
-  --brand:#54487a; --brand2:#6a5a9e; --accent:#8b7cc3;
-  --code-bg:#f1eef9; --code-text:#2b2540; --term-bg:#17141f; --term-text:#e9e6f5; --term-dim:#8d86a8; --term-ok:#8ee3a7;
-  --warn-bg:#fff6e0; --warn-border:#e8c766; --warn-text:#5a4300; --shadow:0 10px 30px rgba(60,44,110,.12);
+  --bg:#ffffff; --bg2:#f7f5f4; --panel:#ffffff; --border:#e6dfdc; --text:#201a1a; --muted:#5f5656;
+  --brand:#8f1d21; --brand2:#a4232a; --accent:#a4232a;
+  --code-bg:#f3eeed; --code-text:#3a2426; --term-bg:#1b1414; --term-text:#e9e6f5; --term-dim:#8d86a8; --term-ok:#8ee3a7;
+  --warn-bg:#fff6e0; --warn-border:#e8c766; --warn-text:#5a4300; --shadow:0 10px 30px rgba(40,20,20,.12);
   color-scheme:light;
 }
 @media (prefers-color-scheme:dark){
   :root{
-    --bg:#131019; --bg2:#1a1624; --panel:#1e1a2b; --border:#332c4a; --text:#ece9f7; --muted:#a49ebc;
-    --brand:#3d3459; --brand2:#a99bd8; --accent:#a99bd8; --code-bg:#221d33; --code-text:#e2ddf5;
+    --bg:#151212; --bg2:#1c1818; --panel:#221d1d; --border:#3a3232; --text:#ece9f7; --muted:#a49ebc;
+    --brand:#6f1a1e; --brand2:#e07a7f; --accent:#e07a7f; --code-bg:#2a2323; --code-text:#efe3e3;
     --warn-bg:#2f2810; --warn-border:#7a641d; --warn-text:#f0d98a; --shadow:0 10px 30px rgba(0,0,0,.4);
     color-scheme:dark;
   }
@@ -50,6 +50,7 @@ nav a:hover{background:var(--bg2);color:var(--text);text-decoration:none}
 .eyebrow{display:inline-block;color:var(--brand2);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.78rem;margin-bottom:.8rem}
 .hero h1{font-size:clamp(2.2rem,5.2vw,3.6rem);line-height:1.06;margin:0 0 1.1rem;letter-spacing:-.02em}
 .hero h1 span{color:var(--brand2)}
+
 .lead{font-size:1.18rem;color:var(--muted);max-width:52ch;margin:0 0 1.8rem}
 .btn{display:inline-block;padding:.8rem 1.4rem;border-radius:10px;font-weight:650;border:2px solid var(--brand2);color:var(--brand2);margin:0 .6rem .6rem 0}
 .btn:hover{text-decoration:none;background:var(--bg2)}
@@ -99,6 +100,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
   <div class="wrap">
     <a class="brand" href="#top"><img src="logo.svg" alt=""> systemLinux</a>
     <nav aria-label="Main"><ul>
+      <li><a href="#principles">Principles</a></li>
       <li><a href="#features">Features</a></li>
       <li><a href="#goget">goget</a></li>
       <li><a href="#handbook">Handbook</a></li>
@@ -113,13 +115,26 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 <div class="hero"><div class="wrap grid">
   <div>
     <span class="eyebrow">Release 1.0</span>
-    <h1>A Linux you can live in &mdash; <span>and undo.</span></h1>
-    <p class="lead">systemLinux is an independent GNU/Linux distribution: its own init, a polished GNOME desktop, a graphical installer, and a package manager where every change &mdash; a system update or one installed app &mdash; can be rolled back.</p>
+    <h1>Software that belongs <span>to everyone.</span></h1>
+    <p class="lead">Its own init, a GNOME desktop, a graphical installer and a package manager where every change can be undone: a whole system that is yours to use, study, change and share.</p>
     <a class="btn primary" href="#download">Download 1.0</a><a class="btn" href="#handbook">Read the handbook</a>
     <div class="facts"><span><b>GNOME 48</b> on Wayland</span><span><b>Linux 7.2.6</b>, drivers for almost everything</span><span><b>100,000+</b> prebuilt packages</span></div>
   </div>
   <figure class="shot"><img src="img/desktop.png" alt="The systemLinux GNOME desktop with the dock and the cat wallpaper" width="1280" height="800"></figure>
 </div></div>
+
+<section id="principles"><div class="wrap">
+  <h2>What &ldquo;communist&rdquo; means here</h2>
+  <p class="sub">Not a slogan: a set of commitments about who owns the system and who it serves.</p>
+  <div class="cards">
+    <div class="card"><h3>Common ownership</h3><p>The system is a commons. No company owns systemLinux, and nobody can sell it to you, put it behind a paywall or lock you out of it. Anyone may use, study, change and share it.</p></div>
+    <div class="card"><h3>No profit motive</h3><p>No advertising, no telemetry, no accounts, no paid tiers and no data collected about you. Your attention and your data are not the product, because there is no product to sell.</p></div>
+    <div class="card"><h3>From each according to ability, to each according to need</h3><p>Everyone gets the same complete system, whether they can contribute or not. People give what they can: code, testing, translations, documentation, bug reports, money or time. Donations are voluntary and never buy influence.</p></div>
+    <div class="card"><h3>Democratic control</h3><p>Decisions are made in the open, where everyone affected can see and challenge them: in the public source repository, in issues and in pull requests, not behind closed doors. Whoever does the work has a say in it.</p></div>
+    <div class="card"><h3>You control your machine</h3><p>Updates are signed and roll back if they fail, nothing is installed without you, and you can inspect and change every part. The owner of a computer is the person who uses it.</p></div>
+    <div class="card"><h3>Open to everyone</h3><p>A barrier of language, hardware or money is a barrier to ownership. systemLinux runs on old and new machines, is free of charge, and needs translators: only English is included today, and that is a gap we want closed.</p></div>
+  </div>
+</div></section>
 
 <section id="features" class="alt"><div class="wrap">
   <h2>Everything a daily system needs</h2>
@@ -184,9 +199,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
   <div class="cards">
     <div class="panel">
       <h3>GNOME edition</h3>
-      <p>The full desktop, the graphical installer and Firefox. 2.6&nbsp;GB, 4&nbsp;GB of RAM recommended.</p>
+      <p>The full desktop, the graphical installer and Firefox. 1.3&nbsp;GB, 4&nbsp;GB of RAM recommended.</p>
       <p><a class="btn primary" href="https://github.com/tortr-rs/systemLinux/releases/download/v1.0/systemlinux-v1.0-gnome.iso">systemlinux-v1.0-gnome.iso</a></p>
-      <p><strong>SHA-256</strong><br><code class="hash">38a2c6e5e086b4f41c5785e38aa84087db332f1b7a672719e3016a065765a3d2</code></p>
+      <p><strong>SHA-256</strong><br><code class="hash">81de7c3573489899a1b630ecce4ebb97d9df685209836dab6a9939ea6598cee4</code></p>
     </div>
     <div class="panel">
       <h3>Minimal edition</h3>
