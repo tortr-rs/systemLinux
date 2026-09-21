@@ -22,7 +22,7 @@ Website: `website/index.html` · Downloads: GitHub release `v1.0`
 
 | Edition | File | Size | RAM needed |
 |---|---|---|---|
-| GNOME | `systemlinux-v1.0-gnome.iso` | 1.3 GB | about 4 GB recommended |
+| GNOME | `systemlinux-v1.0-gnome.iso` | 1.4 GB | about 4 GB recommended |
 | Minimal | `systemlinux-v1.0-minimal.iso` | 1.1 GB | about 2 GB |
 
 Boot in **UEFI mode** (legacy BIOS boot has not been tested with the current live layout).
