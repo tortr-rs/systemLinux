@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>systemLinux 1.0 &mdash; software that belongs to everyone</title>
+<title>systemLinux 1.0 &ldquo;Malachite&rdquo; &mdash; an atomic Linux that belongs to everyone</title>
 <meta name="description" content="systemLinux is a communist GNU/Linux distribution: common ownership, no profit motive, no owners. A complete desktop system that no company can sell you, change under you or take away.">
 <link rel="icon" type="image/svg+xml" href="logo.svg">
 <style>
@@ -115,11 +115,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 
 <div class="hero"><div class="wrap grid">
   <div>
-    <span class="eyebrow">Release 1.0</span>
+    <span class="eyebrow">Release 1.0 &middot; codename Malachite</span>
     <h1>Software that belongs <span>to everyone.</span></h1>
     <p class="lead">Its own init, a GNOME desktop, a graphical installer and a package manager where every change can be undone: a whole system that is yours to use, study, change and share.</p>
     <a class="btn primary" href="#download">Download 1.0</a><a class="btn" href="#handbook">Read the handbook</a>
-    <div class="facts"><span><b>GNOME 48</b> on Wayland</span><span><b>Linux 7.2.6</b>, drivers for almost everything</span><span><b>100,000+</b> prebuilt packages</span></div>
+    <div class="facts"><span><b>Atomic</b> image updates</span><span><b>GNOME 48</b> on Wayland</span><span><b>Linux 7.2.6</b>, drivers for almost everything</span><span><b>100,000+</b> prebuilt packages</span></div>
   </div>
   <figure class="shot"><img src="img/desktop.png" alt="The systemLinux GNOME desktop with the dock and the cat wallpaper" width="1280" height="800"></figure>
 </div></div>
@@ -143,7 +143,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
   <div class="cards">
     <div class="card"><h3>A real desktop</h3><p>GNOME 48 on Wayland with Firefox, Files, Terminal and Settings, audio through PipeWire, Bluetooth, Wi-Fi and power profiles.</p></div>
     <div class="card"><h3>Installs like any distro</h3><p>A native graphical installer: pick a disk, set up your account, go. Boots in UEFI mode from a USB stick or Ventoy.</p></div>
-    <div class="card"><h3>Updates that can&rsquo;t brick it</h3><p><code>goget upgrade</code> downloads a signed system image, boots it as a trial and falls back to the old one by itself if it fails. Your files stay.</p></div>
+    <div class="card"><h3>Atomic, like Silverblue</h3><p>The system is a read-only image that is replaced as a whole, never patched file by file. <code>goget upgrade</code> downloads a signed image, boots it as a trial and falls back to the old one by itself if it fails. Your files and programs stay.</p></div>
     <div class="card"><h3>Packages with an undo button</h3><p><code>goget install</code> gives you prebuilt, signed nixpkgs software in your own profile. Roll back any change, run a program without installing it, keep a plain list of what you use.</p></div>
     <div class="card"><h3>Its own init</h3><p><strong>systemL</strong> is a small Go init that supervises services, keeps its logs out of your way and shuts down cleanly.</p></div>
     <div class="card"><h3>Wide hardware support</h3><p>One monolithic kernel with Intel, AMD and open NVIDIA graphics, Wi-Fi, Bluetooth, storage and laptop drivers built in, plus firmware.</p></div>
@@ -187,7 +187,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
     <tr><th>Desktop</th><td>GNOME 48 on Wayland with elogind and polkit, PipeWire audio, BlueZ, NetworkManager, Firefox ESR</td></tr>
     <tr><th>Userland</th><td>GNU bash 5.3 as <code>/bin/sh</code>, GNU coreutils, tar, sed and gawk on glibc</td></tr>
     <tr><th>Packages</th><td><code>goget</code> with nixpkgs (25.05 stable or unstable): store paths, profiles, generations, rollback</td></tr>
-    <tr><th>Updates</th><td>Signed system images (<code>goget upgrade</code>) with trial boot and automatic rollback</td></tr>
+    <tr><th>Updates</th><td>Atomic, image-based, like Fedora Silverblue: signed system images (<code>goget upgrade</code>), trial boot and automatic rollback</td></tr>
     <tr><th>Installer</th><td>Native GTK4/libadwaita, whole-disk, EFI + ext4, persistent overlay on the installed image</td></tr>
     <tr><th>Boot</th><td>GRUB 2.12, UEFI x86_64. Live entries: normal, copy to RAM, debug shell</td></tr>
     <tr><th>Memory</th><td>Minimal: about 2&nbsp;GB. GNOME: 4&nbsp;GB recommended; the &ldquo;copy to RAM&rdquo; entry needs the whole image in memory on top</td></tr>
@@ -295,6 +295,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
     <li>Only English is included. Suspend and lid handling depend on your hardware.</li>
     <li>Programs from nixpkgs that need hardware-accelerated OpenGL or Vulkan can fall back to software rendering, because they carry their own graphics libraries.</li>
     <li>The kernel has Intel, AMD and the open NVIDIA (nouveau) graphics drivers, not NVIDIA&rsquo;s proprietary driver.</li>
+    <li>Atomic, but not sealed: the system image is read-only and swapped as a whole, but changes you make to <code>/etc</code> or <code>/usr</code> yourself are kept in a separate writable layer on top of it (unlike Silverblue&rsquo;s strictly immutable root).</li>
     <li>systemL replaces systemd, so software that expects systemd services will not find them.</li>
   </ul>
 </div></section>
@@ -302,7 +303,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 </main>
 
 <footer><div class="wrap">
-  <span>systemLinux 1.0 &middot; <a href="https://github.com/tortr-rs/systemLinux">source on GitHub</a></span>
+  <span>systemLinux 1.0 &ldquo;Malachite&rdquo; &middot; <a href="https://github.com/tortr-rs/systemLinux">source on GitHub</a></span>
   <span>Kernel 7.2.6 &middot; systemL &middot; goget</span>
 </div></footer>
 

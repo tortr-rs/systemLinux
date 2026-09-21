@@ -6,7 +6,7 @@
   <img src="assets/logo.png" alt="systemLinux logo: a golden wheat ear on a dark green circle" width="160">
 </p>
 
-# systemLinux v1.0
+# systemLinux 1.0 "Malachite"
 
 A minimal x86_64 GNU/Linux distribution built on a custom monolithic kernel, a
 from-scratch Go init (`systemL`), and a GNU userland (GNU bash 5.3 is
@@ -17,6 +17,8 @@ ISO (a compressed `rootfs.squashfs` on the ISO with a RAM layer on top), in a
 installed to disk with the graphical installer or the handbook below. Installed systems update with
 `goget upgrade`: a signed system image is downloaded, swapped in at the next reboot with your files kept,
 and a failed trial boot rolls back on its own.
+
+systemLinux is **atomic**, like Fedora Silverblue: the system is a read-only image that `goget upgrade` replaces as a whole, with a trial boot and automatic rollback; programs live in separate, rollback-able goget profiles.
 
 Website: `website/index.html` · Downloads: GitHub release `v1.0`
 
