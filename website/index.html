@@ -241,109 +241,82 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 <section id="handbook">
   <div class="wrap">
     <h2>The systemLinux Handbook</h2>
-    <p class="sub">Installing systemLinux from the live environment to an internal disk. The GNOME edition also has a graphical installer: open <strong>Install systemLinux</strong> from the desktop, choose a disk, set your account and it does every step below for you (it erases the whole disk). The manual steps work from either edition.</p>
-    <div class="note"><strong>Warning:</strong> this erases the target disk. Run every command as root from the live system. The examples use an NVMe drive (<code>/dev/nvme0n1</code>); for a SATA disk use <code>/dev/sda</code> with partitions <code>/dev/sda1</code> and <code>/dev/sda2</code>.</div>
+    <p class="sub">From a downloaded ISO to an installed, self-updating system. The GNOME edition includes a graphical installer, so there is nothing to type.</p>
+    <div class="note"><strong>Warning:</strong> the installer erases the whole disk you choose. Back up first. Boot in <strong>UEFI mode</strong>.</div>
 
     <div class="handbook">
       <aside class="toc" aria-label="Handbook chapters">
         <h4>Chapters</h4>
         <ol>
-          <li><a href="#hb-1">Prepare the disk</a></li>
-          <li><a href="#hb-2">Format the partitions</a></li>
-          <li><a href="#hb-3">Mount the target</a></li>
-          <li><a href="#hb-4">Copy the system</a></li>
-          <li><a href="#hb-5">Write fstab</a></li>
-          <li><a href="#hb-6">Configure GRUB</a></li>
-          <li><a href="#hb-7">Kernel and bootloader</a></li>
-          <li><a href="#hb-8">First user (optional)</a></li>
-          <li><a href="#hb-9">Finish and reboot</a></li>
+          <li><a href="#hb-1">Make a bootable USB stick</a></li>
+          <li><a href="#hb-2">Boot the live system</a></li>
+          <li><a href="#hb-3">Install to disk</a></li>
+          <li><a href="#hb-4">First boot</a></li>
+          <li><a href="#hb-5">Updating</a></li>
+          <li><a href="#hb-6">Rolling back</a></li>
+          <li><a href="#hb-7">If something goes wrong</a></li>
         </ol>
       </aside>
 
       <article>
         <div class="chapter" id="hb-1">
-          <h3>1. Prepare the disk</h3>
-          <p>Identify the target disk, then create a GPT layout with a 512MB EFI System Partition and a root partition.</p>
-          <pre><code><span class="c"># list block devices and confirm the target disk</span>
-lsblk -o NAME,SIZE,TYPE,MOUNTPOINT
-
-<span class="c"># destructive: wipes /dev/nvme0n1, creates p1 (ESP) and p2 (root)</span>
-sfdisk /dev/nvme0n1 &lt;&lt;'EOF'
-label: gpt
-,512M,U
-,,L
-EOF</code></pre>
+          <h3>1. Make a bootable USB stick</h3>
+          <p>Download the GNOME ISO and check it against the SHA-256 shown above. Then either copy the ISO onto a <strong>Ventoy</strong> stick, or write it straight to a stick (this erases the stick):</p>
+          <pre><code>sudo dd if=systemlinux-v0.5-gnome.iso of=/dev/sdX bs=4M status=progress conv=fsync</code></pre>
+          <p>Replace <code>/dev/sdX</code> with the stick (check with <code>lsblk</code>). On Windows, use Rufus in <em>DD image</em> mode or balenaEtcher.</p>
         </div>
 
         <div class="chapter" id="hb-2">
-          <h3>2. Format the partitions</h3>
-          <pre><code>mkfs.vfat -F32 /dev/nvme0n1p1
-mkfs.ext4 /dev/nvme0n1p2</code></pre>
+          <h3>2. Boot the live system</h3>
+          <p>Restart, open your firmware&rsquo;s boot menu (usually F12, F10, Esc or F8) and pick the stick in its <strong>UEFI</strong> entry. The boot menu offers three choices:</p>
+          <ul>
+            <li><strong>systemLinux</strong>: the normal live session.</li>
+            <li><strong>copy to RAM</strong>: loads the whole system into memory so you can remove the stick. Needs about 2&nbsp;GB more RAM.</li>
+            <li><strong>debug shell</strong>: shows every message and stops just before the real system starts. Use it if the normal entry does not work.</li>
+          </ul>
+          <p>The live session signs in as <code>live</code> and opens the GNOME desktop with Firefox, Files and Terminal. Connect to Wi-Fi from the network icon in the top bar. Nothing is written to your disks until you run the installer.</p>
         </div>
 
         <div class="chapter" id="hb-3">
-          <h3>3. Mount the target</h3>
-          <p>Mount the root partition on a scratch path, then mount the EFI partition inside it.</p>
-          <pre><code>mkdir -p /mnt/target
-mount /dev/nvme0n1p2 /mnt/target
-
-mkdir -p /mnt/target/boot/efi
-mount /dev/nvme0n1p1 /mnt/target/boot/efi</code></pre>
+          <h3>3. Install to disk</h3>
+          <p>Open <strong>Install systemLinux</strong> from the dock (the cat icon). The installer walks through six pages:</p>
+          <ol>
+            <li><strong>Welcome</strong>: what is about to happen.</li>
+            <li><strong>Disk</strong>: pick the disk to erase. Disks that are in use by the live system are not offered.</li>
+            <li><strong>Account</strong>: computer name, your name, user name and password, and whether to sign in automatically. The same password is used for <code>root</code>.</li>
+            <li><strong>Region</strong>: time zone and keyboard layout.</li>
+            <li><strong>Summary</strong>: review everything. Nothing has been changed yet; <em>Install</em> starts the work.</li>
+            <li><strong>Progress</strong>: partitions the disk, copies the system, creates your account and installs the boot loader, with each step listed.</li>
+          </ol>
+          <p>The disk gets a 512&nbsp;MB EFI partition and one ext4 partition that holds the system image, the boot menu and your files. When it says <em>Done</em>, restart and remove the USB stick.</p>
         </div>
 
         <div class="chapter" id="hb-4">
-          <h3>4. Copy the system</h3>
-          <p>Deep-copy the running system to the disk. <code>-x</code> keeps the copy on one filesystem, so the virtual filesystems stay out. Then recreate their mount points empty.</p>
-          <pre><code>cp -ax / /mnt/target/
-
-mkdir -p /mnt/target/proc /mnt/target/sys /mnt/target/dev /mnt/target/run /mnt/target/tmp
-chmod 1777 /mnt/target/tmp</code></pre>
+          <h3>4. First boot</h3>
+          <p>GRUB shows for three seconds, then systemLinux starts. With automatic sign-in on, you land directly on the GNOME desktop; otherwise you sign in on the text console and GNOME starts for your user. Your user can use <code>sudo</code>. Software comes from <code>goget</code> (programs from GitHub, GitLab or Codeberg, built or prebuilt) and <code>emerge</code> for large packages; everything you install is kept across updates.</p>
         </div>
 
         <div class="chapter" id="hb-5">
-          <h3>5. Write fstab</h3>
-          <pre><code>cat &lt;&lt; 'EOF' &gt; /mnt/target/etc/fstab
-/dev/nvme0n1p2  /         ext4  errors=remount-ro  0  1
-/dev/nvme0n1p1  /boot/efi vfat  defaults           0  2
-EOF</code></pre>
+          <h3>5. Updating</h3>
+          <p>systemLinux updates as a whole system image, so an update cannot leave the system half-upgraded:</p>
+          <pre><code>goget upgrade --check     <span class="c"># is a newer image available?</span>
+sudo goget upgrade        <span class="c"># download, verify and install it</span></code></pre>
+          <p>The image is downloaded (a broken download resumes), verified against a signed release index and its SHA-256 hashes, and added to the boot menu. Restart to use it. Your files, accounts, settings and installed programs are not touched.</p>
         </div>
 
         <div class="chapter" id="hb-6">
-          <h3>6. Configure GRUB</h3>
-          <p>The kernel has no initramfs, so give the root partition directly for it to mount. <code>rootwait</code> makes it wait for the NVMe drive to appear.</p>
-          <pre><code>mkdir -p /mnt/target/boot/grub
-cat &lt;&lt; 'EOF' &gt; /mnt/target/boot/grub/grub.cfg
-set default=0
-set timeout=3
-
-menuentry "systemLinux v0.5 (Bare Metal)" {
-    linux /boot/vmlinuz root=/dev/nvme0n1p2 rootwait rw console=tty0 init=/sbin/systemL quiet loglevel=3
-    <span class="c"># if the device path does not mount, use root=PARTUUID=&lt;your-root-partuuid&gt;</span>
-}
-EOF</code></pre>
+          <h3>6. Rolling back</h3>
+          <p>The first boot into a new image is a trial. If it does not come up, the next boot returns to the previous image automatically. Once the new system has run for a minute it becomes the default. The previous image stays installed, and you can pick it by hand from the GRUB menu in the menu that GRUB shows for a few seconds at startup. Only the running image and the newest one are kept, to save space.</p>
         </div>
 
         <div class="chapter" id="hb-7">
-          <h3>7. Kernel and bootloader</h3>
-          <p>Place the kernel on the permanent boot track and install GRUB to the drive.</p>
-          <pre><code>cp /boot/vmlinuz /mnt/target/boot/vmlinuz
-
-grub-install --target=x86_64-efi --efi-directory=/mnt/target/boot/efi \
-  --boot-directory=/mnt/target/boot --removable</code></pre>
-        </div>
-
-        <div class="chapter" id="hb-8">
-          <h3>8. First user (optional)</h3>
-          <p>Brand the install (<code>/etc/issue</code>, <code>os-release</code>, the login banner) and create a first user in <code>wheel</code>, <code>portage</code> and <code>networkmanager</code> with a sudo rule. It prompts for the password. With a user set up, create <code>/etc/systemL/login</code> so tty1 asks for a login instead of opening a root shell.</p>
-          <pre><code>goget provision --user yourname /mnt/target
-mkdir -p /mnt/target/etc/systemL
-touch /mnt/target/etc/systemL/login</code></pre>
-        </div>
-
-        <div class="chapter" id="hb-9">
-          <h3>9. Finish and reboot</h3>
-          <pre><code>umount -R /mnt/target
-reboot <span class="c"># remove the installation media on restart</span></code></pre>
+          <h3>7. If something goes wrong</h3>
+          <ul>
+            <li><strong>The stick does not boot:</strong> choose the UEFI entry, not the plain one; write the ISO with <code>dd</code> instead of Ventoy; check the checksum.</li>
+            <li><strong>Black screen or no desktop:</strong> use the <em>debug shell</em> entry and note the last messages. Read systemL&rsquo;s log with <code>systemL log</code> (or <code>systemL log polkitd</code> for one service) from a text console (<code>Ctrl+Alt+F2</code>).</li>
+            <li><strong>No Wi-Fi:</strong> the kernel carries most drivers, but a device whose firmware is not in the bundled set will not start. A USB tether or Ethernet works everywhere.</li>
+            <li><strong>Boot in an installed system fails:</strong> pick the previous image from the GRUB menu, or the <em>debug</em> entry to see messages.</li>
+          </ul>
         </div>
       </article>
     </div>

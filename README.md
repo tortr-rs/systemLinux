@@ -112,67 +112,18 @@ the GNOME edition the desktop overlay (`tools/gnome-overlay/build-overlay.sh`). 
 compresses everything into `rootfs.squashfs` (zstd), builds the small initramfs, and
 masters the ISO with `grub-mkrescue`.
 
-## Installing to disk (handbook)
+## Installing to disk
 
-Run as root from the live system. **The target disk is erased.** The commands
-assume an NVMe drive; adjust device names for SATA.
+1. Write the GNOME ISO to a USB stick (`dd if=systemlinux-v0.5-gnome.iso of=/dev/sdX bs=4M status=progress conv=fsync`,
+   or copy it onto a Ventoy stick) and boot it in UEFI mode.
+2. In the live desktop open **Install systemLinux**: choose the disk (it is erased), set your account, time
+   zone and keyboard, review the summary and install. Restart and remove the stick.
+3. The disk gets a 512 MB EFI partition and one ext4 partition holding the system images, GRUB and your
+   files (`/persist`). Update later with `goget upgrade` (add `--check` to only look); a new image boots as
+   a trial and the previous one is picked again automatically if it fails. Older images can be chosen from
+   the GRUB menu.
 
-```sh
-# 0. Partition: GPT with a 512MB ESP and a root partition
-sfdisk /dev/nvme0n1 <<'EOF'
-label: gpt
-,512M,U
-,,L
-EOF
-
-# 1. Format
-mkfs.vfat -F32 /dev/nvme0n1p1
-mkfs.ext4 /dev/nvme0n1p2
-
-# 2. Mount root, then the ESP inside it
-mkdir -p /mnt/target
-mount /dev/nvme0n1p2 /mnt/target
-mkdir -p /mnt/target/boot/efi
-mount /dev/nvme0n1p1 /mnt/target/boot/efi
-
-# 3. Copy the live system (-x stays on one filesystem), recreate mount points
-cp -ax / /mnt/target/
-mkdir -p /mnt/target/proc /mnt/target/sys /mnt/target/dev /mnt/target/run /mnt/target/tmp
-chmod 1777 /mnt/target/tmp
-
-# 4. fstab
-cat << 'EOF' > /mnt/target/etc/fstab
-/dev/nvme0n1p2  /         ext4  errors=remount-ro  0  1
-/dev/nvme0n1p1  /boot/efi vfat  defaults           0  2
-EOF
-
-# 5. GRUB config (no initramfs: give the root device directly; rootwait waits for
-#    the drive to appear; use root=PARTUUID=<uuid> if the device path does not mount)
-mkdir -p /mnt/target/boot/grub
-cat << 'EOF' > /mnt/target/boot/grub/grub.cfg
-set default=0
-set timeout=3
-
-menuentry "systemLinux v0.5 (Bare Metal)" {
-    linux /boot/vmlinuz root=/dev/nvme0n1p2 rootwait rw console=tty0 init=/sbin/systemL quiet loglevel=3
-}
-EOF
-
-# 6. Kernel and bootloader
-cp /boot/vmlinuz /mnt/target/boot/vmlinuz
-grub-install --target=x86_64-efi --efi-directory=/mnt/target/boot/efi \
-  --boot-directory=/mnt/target/boot --removable
-
-# 7. Optional: brand the install and create a first user (wheel, portage,
-#    networkmanager, sudo rule; prompts for a password). With a user set up,
-#    have tty1 ask for a login instead of opening a root shell.
-goget provision --user yourname /mnt/target
-mkdir -p /mnt/target/etc/systemL && touch /mnt/target/etc/systemL/login
-
-# 8. Finish
-umount -R /mnt/target
-reboot
-```
+The full guide, including troubleshooting, is the Handbook on the website.
 
 ## Known limitations
 
