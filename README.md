@@ -1,3 +1,7 @@
+
+## HAIIIII :3 if you wanna suppoirt me please donate here [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/L6N725GI1V)
+
+
 <p align="center">
   <img src="assets/logo.png" alt="systemLinux logo: a white cat face on a purple circle" width="160">
 </p>
