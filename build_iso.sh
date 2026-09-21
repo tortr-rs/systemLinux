@@ -169,7 +169,9 @@ sudo mksquashfs "$STAGE" "$WORKSPACE/live/rootfs.squashfs" -comp zstd -Xcompress
 sudo rm -rf "$STAGE"
 sudo chown "$USER" "$WORKSPACE/live/rootfs.squashfs"
 ls -lh "$WORKSPACE/live/rootfs.squashfs"
-WORK=$HOME/.cache/systemlinux-initrd FW_CPIO="$FW_WORK/ov5.cpio" "$BUILD_DIR/tools/live-image/build-initrd.sh" "$WORKSPACE/live/initrd.img"
+BUILD_ID="$VARIANT-$IMAGE_VERSION-$(date +%s)"
+echo "$BUILD_ID" > "$WORKSPACE/live/build-id"
+BUILD_ID=$BUILD_ID WORK=$HOME/.cache/systemlinux-initrd FW_CPIO="$FW_WORK/ov5.cpio" "$BUILD_DIR/tools/live-image/build-initrd.sh" "$WORKSPACE/live/initrd.img"
 
 echo "=== [7/8] COPYING KERNEL AND WRITING grub.cfg ==="
 cp "$KERNEL" "$WORKSPACE/live/vmlinuz"

@@ -223,18 +223,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
         <h3>GNOME edition</h3>
         <p>A live GNOME desktop (Wayland) with Firefox, the graphical installer and image-based updates. 2.1&nbsp;GB, 6&nbsp;GB of RAM recommended.</p>
         <p><a class="btn primary" href="https://github.com/tortr-rs/systemLinux/releases/download/v0.5/systemlinux-v0.5-gnome.iso">systemlinux-v0.5-gnome.iso</a></p>
-        <p><strong>SHA-256</strong><br><code class="hash">c582ea5a38dbec5bea11a7f14299db097de080eb589dc8fb557b4ba9194a9649</code></p>
+        <p><strong>SHA-256</strong><br><code class="hash">3a77d679dfbf1f0a2c7c67be4b694027439d9da6ba52b20ab8c318f819e9af75</code></p>
       </div>
       <div class="panel">
         <h3>Minimal edition</h3>
         <p>Boots to a root shell on the console. 1.8&nbsp;GB, about 2&nbsp;GB of RAM.</p>
         <p><a class="btn primary" href="https://github.com/tortr-rs/systemLinux/releases/download/v0.5/systemlinux-v0.5-minimal.iso">systemlinux-v0.5-minimal.iso</a></p>
-        <p><strong>SHA-256</strong><br><code class="hash">756755a5d3c2a9abbe105ceb411a711cbb6d64ce1dd07ca83eb22dfd8104e3e9</code></p>
+        <p><strong>SHA-256</strong><br><code class="hash">d26516a823ce0895a232691fb3a6ddc74f8303fc0645e7681d6b82c1e3975ff8</code></p>
       </div>
     </div>
     <p>Check your download with <code>sha256sum systemlinux-v0.5-*.iso</code>. Release notes and older versions are on the <a href="https://github.com/tortr-rs/systemLinux/releases/tag/v0.5">v0.5 release page</a> and on <a href="https://github.com/tortr-rs/systemLinux">GitHub</a>.</p>
     <p><strong>Boot menu:</strong> each ISO offers a normal boot, <em>copy to RAM</em> (loads the whole system into memory so you can remove the stick), and a <em>debug shell</em> that stops just before the system starts.</p>
-    <p><strong>Ventoy:</strong> copy the ISO over any older copy and check its checksum. The boot code also looks for the ISO on a Ventoy stick. If it reports an error at boot, write the ISO straight to a stick instead. Use UEFI mode; legacy BIOS boot has not been tested with this version.</p>
+    <p><strong>Ventoy:</strong> copy the ISO over any older copy and check its checksum. The boot code also looks for the ISO on a Ventoy stick. If it reports an error at boot, write the ISO straight to a stick instead. Older systemLinux ISOs on the same stick are fine: each ISO only boots its own system. Use UEFI mode; legacy BIOS boot has not been tested with this version.</p>
   </div>
 </section>
 

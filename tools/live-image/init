@@ -40,7 +40,15 @@ done
 
 [ "$SHELL_FIRST" = 1 ] && emergency "systeml.shell=1"
 
-has_root() { [ -f "$1/live/rootfs.squashfs" ]; }
+# The initramfs carries a build id and so does the ISO's /live directory: with several systemLinux ISOs on one
+# Ventoy stick, only the one this kernel came from is accepted (STRICT is dropped after a while, so a renamed
+# or hand-assembled medium without a build-id file still boots).
+STRICT=1
+[ -s /build-id ] || STRICT=0
+has_root() {
+    [ -f "$1/live/rootfs.squashfs" ] || return 1
+    [ "$STRICT" = 0 ] || [ "$(cat "$1/live/build-id" 2>/dev/null)" = "$(cat /build-id)" ]
+}
 
 # Look for the squashfs on every block device: directly (an ISO written to a stick or a CD) and
 # inside ISO files on the device (Ventoy and similar). Sets MEDIUM to the mount point that holds it.
@@ -103,6 +111,7 @@ else
         i=0
         until scan_once; do
             i=$((i + 1))
+            [ "$i" -ge 15 ] && STRICT=0
             if [ "$i" -ge "$WAIT" ]; then break; fi
             [ "$i" = 1 ] && log "waiting for the live medium..."
             sleep 1
