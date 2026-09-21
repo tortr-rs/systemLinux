@@ -59,6 +59,8 @@ sudo ln -sf bash "$ROOTFS/usr/bin/sh"
 sudo rm -f "$ROOTFS"/usr/bin/bsdtar "$ROOTFS"/usr/bin/bsdcat "$ROOTFS"/usr/bin/bsdcpio "$ROOTFS"/usr/bin/bsdunzip
 # issue, os-release, release files and the login banner (GNU/Linux branding)
 sudo ./goget/goget provision "$ROOTFS"
+# 0.6: packages come from goget (Debian/Ubuntu/Arch/Gentoo binaries/Git), not Portage; the image keeps a Debian default
+sudo ./goget/goget repo use debian --root "$ROOTFS"
 # fastfetch (Debian build; its only extra library is libyyjson) so the cat logo below has a program to show it
 if [ ! -e "$ROOTFS/usr/bin/fastfetch" ]; then
     FFTMP=$(mktemp -d)
@@ -142,6 +144,7 @@ echo "=== [6/8] BUILDING THE SQUASHFS AND THE INITRAMFS ==="
 STAGE=$WORKSPACE/stage
 sudo mkdir -p "$STAGE"
 sudo cp -a "$ROOTFS/." "$STAGE/"
+sudo "$BUILD_DIR/tools/overlay-common/strip-gentoo.sh" "$STAGE"
 sudo cp -a "$FW_WORK/ov5/." "$STAGE/"
 if [ "$VARIANT" = gnome ]; then
     sudo cp -a "$GNOME_WORK/ov3/." "$STAGE/"

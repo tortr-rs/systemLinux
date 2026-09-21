@@ -16,11 +16,11 @@ import (
 
 const (
 	brandName    = "systemLinux"
-	brandVersion = "0.5"
+	brandVersion = "0.6"
 )
 
 // provisionGroups are the explicit groups every provisioned user joins.
-var provisionGroups = []string{"wheel", "portage", "networkmanager"}
+var provisionGroups = []string{"wheel", "networkmanager"}
 
 const bannerScript = `# systemLinux login banner (installed by goget)
 if [ -t 1 ] && [ -z "${SYSTEMLINUX_BANNER:-}" ]; then
@@ -39,7 +39,7 @@ if [ -t 1 ] && [ -z "${SYSTEMLINUX_BANNER:-}" ]; then
     (__(___)__)
 
 SYSTEMLINUX_CAT
-	printf '  systemLinux v0.5 GNU/Linux\n\n\033[0m'
+	printf '  systemLinux v0.6 GNU/Linux\n\n\033[0m'
 fi
 `
 
@@ -68,7 +68,6 @@ func provisionIdentity(root string) error {
 	release := fmt.Sprintf("%s GNU/Linux release %s\n", brandName, brandVersion)
 	files := []struct{ rel, content string }{
 		{"etc/issue", fmt.Sprintf("%s v%s GNU/Linux (\\l)\n", brandName, brandVersion)},
-		{"etc/gentoo-release", release},
 		{"etc/release", release},
 		{"etc/os-release", fmt.Sprintf(
 			"NAME=\"%s\"\nVERSION=\"%s\"\nID=systemlinux\nPRETTY_NAME=\"%s v%s GNU/Linux (systemL Core)\"\nVERSION_ID=\"%s\"\n",
@@ -145,7 +144,7 @@ func provisionEnsureGroups(root string) error {
 	return nil
 }
 
-// provisionUser creates cfg.user (home + skeleton) in wheel, portage and
+// provisionUser creates cfg.user (home + skeleton) in wheel and
 // networkmanager and sets the password. An existing user just gets the groups.
 func provisionUser(root string, cfg provisionConfig) error {
 	if cfg.user == "" || strings.ContainsAny(cfg.user, ":\n\r \t/") {

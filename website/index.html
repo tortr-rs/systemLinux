@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>systemLinux 0.5 &mdash; a Linux distribution built from scratch</title>
-<meta name="description" content="systemLinux v0.5 &mdash; a GNU/Linux distribution with a driver-rich monolithic kernel, its own init (systemL), a live GNOME desktop, a graphical installer and image-based updates.">
+<title>systemLinux 0.6 &mdash; a Linux distribution built from scratch</title>
+<meta name="description" content="systemLinux v0.6 &mdash; a GNU/Linux distribution with a driver-rich monolithic kernel, its own init (systemL), a live GNOME desktop, a graphical installer and image-based updates.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2040%2040'%3E%3Ccircle%20cx='20'%20cy='20'%20r='20'%20fill='%2354487a'/%3E%3Cpath%20fill='%23fff'%20d='M9.5%2017%20L10.5%208%20L17.5%2012.2%20Q20%2011.6%2022.5%2012.2%20L29.5%208%20L30.5%2017%20Q31.5%2027.5%2020%2030.5%20Q8.5%2027.5%209.5%2017%20Z'/%3E%3Cg%20fill='%2354487a'%3E%3Cellipse%20cx='15.5'%20cy='19.5'%20rx='1.5'%20ry='2.2'/%3E%3Cellipse%20cx='24.5'%20cy='19.5'%20rx='1.5'%20ry='2.2'/%3E%3Cpath%20d='M18.6%2023.3%20L21.4%2023.3%20L20%2024.8%20Z'/%3E%3C/g%3E%3Cg%20fill='none'%20stroke-linecap='round'%3E%3Cpath%20stroke='%2354487a'%20stroke-width='1.1'%20d='M20%2024.8%20V26%20M20%2026%20Q18.6%2027.4%2017.4%2026.6%20M20%2026%20Q21.4%2027.4%2022.6%2026.6'/%3E%3Cpath%20stroke='%23fff'%20stroke-width='1'%20d='M13.5%2024%20L6.5%2022.8%20M13.5%2025.6%20L6.5%2027.2%20M26.5%2024%20L33.5%2022.8%20M26.5%2025.6%20L33.5%2027.2'/%3E%3C/g%3E%3C/svg%3E">
 <style>
 :root{
@@ -143,7 +143,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
   <div class="wrap">
     <a class="brand" href="#top" aria-label="systemLinux home">
       <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#ffffff" fill-opacity=".14" stroke="#ffffff" stroke-width="2"/><path class="cat" d="M9.5 17 L10.5 8 L17.5 12.2 Q20 11.6 22.5 12.2 L29.5 8 L30.5 17 Q31.5 27.5 20 30.5 Q8.5 27.5 9.5 17 Z"/><ellipse class="ink" cx="15.5" cy="19.5" rx="1.5" ry="2.2"/><ellipse class="ink" cx="24.5" cy="19.5" rx="1.5" ry="2.2"/><path class="ink" d="M18.6 23.3 L21.4 23.3 L20 24.8 Z"/><path class="line" d="M20 24.8 V26 M20 26 Q18.6 27.4 17.4 26.6 M20 26 Q21.4 27.4 22.6 26.6"/><path class="whisk" d="M13.5 24 L6.5 22.8 M13.5 25.6 L6.5 27.2 M26.5 24 L33.5 22.8 M26.5 25.6 L33.5 27.2"/></svg>
-      systemLinux <small>v0.5</small>
+      systemLinux <small>v0.6</small>
     </a>
     <nav aria-label="Main">
       <ul>
@@ -163,15 +163,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 
 <div class="hero">
   <div class="wrap">
-    <div class="eyebrow">Release 0.5</div>
+    <div class="eyebrow">Release 0.6</div>
     <h1>A Linux distribution built from scratch.</h1>
-    <p class="lead">systemLinux is a GNU/Linux distribution: a custom monolithic kernel and its own init, <strong>systemL</strong>, with a GNU userland (GNU bash, coreutils, tar and more) on a Gentoo base. It boots like any live ISO, in a minimal console edition or with a live GNOME desktop, and you can install it to disk when you want it to stay. Installed systems update themselves with <code>goget upgrade</code>: a new signed system image replaces the old one at the next reboot, your files and settings stay, and a bad update rolls back by itself.</p>
+    <p class="lead">systemLinux is a GNU/Linux distribution: a custom monolithic kernel and its own init, <strong>systemL</strong>, with a GNU userland (GNU bash, coreutils, tar and more). It boots like any live ISO, in a minimal console edition or with a live GNOME desktop, and you can install it to disk when you want it to stay. Installed systems update themselves with <code>goget upgrade</code>: a new signed system image replaces the old one at the next reboot, your files and settings stay, and a bad update rolls back by itself.</p>
     <a class="btn primary" href="#download">Download the ISO</a>
     <a class="btn" href="#handbook">Read the Handbook</a>
     <div class="facts">
       <div class="fact"><b>Linux 7.2.6</b><span>drivers for almost everything built in</span></div>
       <div class="fact"><b>systemL</b><span>custom Go init, no systemd</span></div>
-      <div class="fact"><b>Gentoo userland</b><span>glibc, Portage included</span></div>
+      <div class="fact"><b>goget packages</b><span>Debian, Ubuntu, Arch, Gentoo or Git</span></div>
       <div class="fact"><b>GNOME 48</b><span>live desktop edition</span></div>
     </div>
   </div>
@@ -186,7 +186,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
       <div class="card"><h3>A real live ISO</h3><p>The system is a compressed image on the ISO with a writable RAM layer on top. Only your changes use memory, and your disks are untouched until you choose to install.</p></div>
       <div class="card"><h3>Two editions</h3><p><strong>GNOME</strong> boots straight into a live desktop with Firefox and a graphical installer. <strong>Minimal</strong> boots to a root shell.</p></div>
       <div class="card"><h3>Drivers for almost everything</h3><p>One kernel with Wi-Fi, Bluetooth, graphics (Intel, AMD, NVIDIA open driver), storage, sound and laptop drivers built in, and the firmware to go with them.</p></div>
-      <div class="card"><h3>Source-first packages</h3><p><code>goget</code> builds programs from GitHub, GitLab and Codeberg. For large software such as desktop environments, use <code>emerge</code>.</p></div>
+      <div class="card"><h3>You pick the package source</h3><p><code>goget</code> installs software with its dependencies from Debian, Ubuntu, Arch or the Gentoo binary host, whichever you choose during installation, and builds programs from GitHub, GitLab and Codeberg.</p></div>
       <div class="card"><h3>Tested on real hardware</h3><p>Built with drivers for Lenovo IdeaPad and MSI machines, and run on bare metal rather than only in a virtual machine.</p></div>
     </div>
   </div>
@@ -195,17 +195,17 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 <section id="specs">
   <div class="wrap">
     <h2>System specifications</h2>
-    <p class="sub">What is in systemLinux 0.5.</p>
+    <p class="sub">What is in systemLinux 0.6.</p>
     <div class="table-scroll">
       <table>
-        <tr><th>Version</th><td>0.5</td></tr>
+        <tr><th>Version</th><td>0.6</td></tr>
         <tr><th>Kernel</th><td>Linux 7.2.6, monolithic, with drivers for almost everything built in (over 3,200 options), plus a bundle of firmware</td></tr>
         <tr><th>Init</th><td>systemL, a static Go binary running as PID 1</td></tr>
-        <tr><th>Base system</th><td>Gentoo stage3 (glibc), Portage and the Gentoo tree included</td></tr>
+        <tr><th>Base system</th><td>glibc userland with GNU bash, coreutils, tar, sed and gawk. No package manager other than <code>goget</code></td></tr>
         <tr><th>Networking</th><td>NetworkManager, with udev and D-Bus</td></tr>
-        <tr><th>Package tools</th><td><code>goget</code> for everyday programs, <code>emerge</code> for large packages</td></tr>
+        <tr><th>Package tools</th><td><code>goget</code>: installs and removes packages with dependency resolution from Debian, Ubuntu, Arch or Gentoo binary repositories (chosen at install), and builds from Git</td></tr>
         <tr><th>Desktop</th><td>GNOME 48 on Wayland (GNOME edition) with elogind and polkit instead of systemd, Firefox and a graphical installer. The live session runs as a normal user (<code>live</code>)</td></tr>
-        <tr><th>Memory</th><td>Minimal: about 2&nbsp;GB of RAM. GNOME: 6&nbsp;GB recommended. The &ldquo;copy to RAM&rdquo; boot entry also holds the whole 1.7&ndash;2&nbsp;GB image in memory, so add that on top</td></tr>
+        <tr><th>Memory</th><td>Minimal: about 2&nbsp;GB of RAM. GNOME: 6&nbsp;GB recommended. The &ldquo;copy to RAM&rdquo; boot entry also holds the whole 1&ndash;1.3&nbsp;GB image in memory, so add that on top</td></tr>
         <tr><th>Bootloader</th><td>GRUB 2.12 for BIOS and UEFI (x86_64), <code>efibootmgr</code></td></tr>
         <tr><th>Disk tools</th><td>util-linux, e2fsprogs, dosfstools</td></tr>
         <tr><th>Architecture</th><td>x86_64</td></tr>
@@ -221,18 +221,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
     <div class="cards">
       <div class="panel">
         <h3>GNOME edition</h3>
-        <p>A live GNOME desktop (Wayland) with Firefox, the graphical installer and image-based updates. 2.1&nbsp;GB, 6&nbsp;GB of RAM recommended.</p>
-        <p><a class="btn primary" href="https://github.com/tortr-rs/systemLinux/releases/download/v0.5/systemlinux-v0.5-gnome.iso">systemlinux-v0.5-gnome.iso</a></p>
-        <p><strong>SHA-256</strong><br><code class="hash">3a77d679dfbf1f0a2c7c67be4b694027439d9da6ba52b20ab8c318f819e9af75</code></p>
+        <p>A live GNOME desktop (Wayland) with Firefox, the graphical installer and image-based updates. 1.3&nbsp;GB, 6&nbsp;GB of RAM recommended.</p>
+        <p><a class="btn primary" href="https://github.com/tortr-rs/systemLinux/releases/download/v0.6/systemlinux-v0.6-gnome.iso">systemlinux-v0.6-gnome.iso</a></p>
+        <p><strong>SHA-256</strong><br><code class="hash">fe145f8f0b8e06c4cb116c54876ebfcaa56e4155ec13df5d4297d689fbc7bd90</code></p>
       </div>
       <div class="panel">
         <h3>Minimal edition</h3>
-        <p>Boots to a root shell on the console. 1.8&nbsp;GB, about 2&nbsp;GB of RAM.</p>
-        <p><a class="btn primary" href="https://github.com/tortr-rs/systemLinux/releases/download/v0.5/systemlinux-v0.5-minimal.iso">systemlinux-v0.5-minimal.iso</a></p>
-        <p><strong>SHA-256</strong><br><code class="hash">d26516a823ce0895a232691fb3a6ddc74f8303fc0645e7681d6b82c1e3975ff8</code></p>
+        <p>Boots to a root shell on the console. 1.1&nbsp;GB, about 2&nbsp;GB of RAM.</p>
+        <p><a class="btn primary" href="https://github.com/tortr-rs/systemLinux/releases/download/v0.6/systemlinux-v0.6-minimal.iso">systemlinux-v0.6-minimal.iso</a></p>
+        <p><strong>SHA-256</strong><br><code class="hash">90d90367f7b1aaa311934983495e558ba560ec4b098dd7f2682e30c10bd521f9</code></p>
       </div>
     </div>
-    <p>Check your download with <code>sha256sum systemlinux-v0.5-*.iso</code>. Release notes and older versions are on the <a href="https://github.com/tortr-rs/systemLinux/releases/tag/v0.5">v0.5 release page</a> and on <a href="https://github.com/tortr-rs/systemLinux">GitHub</a>.</p>
+    <p>Check your download with <code>sha256sum systemlinux-v0.6-*.iso</code>. Release notes and older versions are on the <a href="https://github.com/tortr-rs/systemLinux/releases/tag/v0.6">v0.6 release page</a> and on <a href="https://github.com/tortr-rs/systemLinux">GitHub</a>.</p>
     <p><strong>Boot menu:</strong> each ISO offers a normal boot, <em>copy to RAM</em> (loads the whole system into memory so you can remove the stick), and a <em>debug shell</em> that stops just before the system starts.</p>
     <p><strong>Ventoy:</strong> copy the ISO over any older copy and check its checksum. The boot code also looks for the ISO on a Ventoy stick. If it reports an error at boot, write the ISO straight to a stick instead. Older systemLinux ISOs on the same stick are fine: each ISO only boots its own system. Use UEFI mode; legacy BIOS boot has not been tested with this version.</p>
   </div>
@@ -252,9 +252,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
           <li><a href="#hb-2">Boot the live system</a></li>
           <li><a href="#hb-3">Install to disk</a></li>
           <li><a href="#hb-4">First boot</a></li>
-          <li><a href="#hb-5">Updating</a></li>
-          <li><a href="#hb-6">Rolling back</a></li>
-          <li><a href="#hb-7">If something goes wrong</a></li>
+          <li><a href="#hb-5">Installing software</a></li>
+          <li><a href="#hb-6">Updating</a></li>
+          <li><a href="#hb-7">Rolling back</a></li>
+          <li><a href="#hb-8">If something goes wrong</a></li>
         </ol>
       </aside>
 
@@ -262,7 +263,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
         <div class="chapter" id="hb-1">
           <h3>1. Make a bootable USB stick</h3>
           <p>Download the GNOME ISO and check it against the SHA-256 shown above. Then either copy the ISO onto a <strong>Ventoy</strong> stick, or write it straight to a stick (this erases the stick):</p>
-          <pre><code>sudo dd if=systemlinux-v0.5-gnome.iso of=/dev/sdX bs=4M status=progress conv=fsync</code></pre>
+          <pre><code>sudo dd if=systemlinux-v0.6-gnome.iso of=/dev/sdX bs=4M status=progress conv=fsync</code></pre>
           <p>Replace <code>/dev/sdX</code> with the stick (check with <code>lsblk</code>). On Windows, use Rufus in <em>DD image</em> mode or balenaEtcher.</p>
         </div>
 
@@ -279,12 +280,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 
         <div class="chapter" id="hb-3">
           <h3>3. Install to disk</h3>
-          <p>Open <strong>Install systemLinux</strong> from the dock (the cat icon). The installer walks through six pages:</p>
+          <p>Open <strong>Install systemLinux</strong> from the dock (the cat icon). The installer walks through seven pages:</p>
           <ol>
             <li><strong>Welcome</strong>: what is about to happen.</li>
             <li><strong>Disk</strong>: pick the disk to erase. Disks that are in use by the live system are not offered.</li>
             <li><strong>Account</strong>: computer name, your name, user name and password, and whether to sign in automatically. The same password is used for <code>root</code>.</li>
             <li><strong>Region</strong>: time zone and keyboard layout.</li>
+            <li><strong>Software</strong>: which package sources <code>goget</code> should use (Debian, Ubuntu, Arch, Gentoo binaries; you can change it later).</li>
             <li><strong>Summary</strong>: review everything. Nothing has been changed yet; <em>Install</em> starts the work.</li>
             <li><strong>Progress</strong>: partitions the disk, copies the system, creates your account and installs the boot loader, with each step listed.</li>
           </ol>
@@ -293,24 +295,36 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 
         <div class="chapter" id="hb-4">
           <h3>4. First boot</h3>
-          <p>GRUB shows for three seconds, then systemLinux starts. With automatic sign-in on, you land directly on the GNOME desktop; otherwise you sign in on the text console and GNOME starts for your user. Your user can use <code>sudo</code>. Software comes from <code>goget</code> (programs from GitHub, GitLab or Codeberg, built or prebuilt) and <code>emerge</code> for large packages; everything you install is kept across updates.</p>
+          <p>GRUB shows for three seconds, then systemLinux starts. With automatic sign-in on, you land directly on the GNOME desktop; otherwise you sign in on the text console and GNOME starts for your user. Your user can use <code>sudo</code>. Software comes from <code>goget</code>, from the sources you chose in the installer (chapter 5); everything you install is kept across updates.</p>
         </div>
 
-        <div class="chapter" id="hb-5">
-          <h3>5. Updating</h3>
+                <div class="chapter" id="hb-5">
+          <h3>5. Installing software</h3>
+          <p>The installer asks where software should come from: <strong>Debian</strong> (the default and best tested), <strong>Ubuntu</strong>, <strong>Arch Linux</strong> or the <strong>Gentoo binary host</strong>. <code>goget</code> installs from them with all dependencies:</p>
+          <pre><code>sudo goget install htop          <span class="c"># from your chosen source, with dependencies</span>
+goget find editor                <span class="c"># search</span>
+goget info htop
+sudo goget remove htop
+sudo goget update                <span class="c"># newer versions of what you installed</span>
+sudo goget install owner/repo    <span class="c"># build from GitHub, GitLab or Codeberg</span></code></pre>
+          <p>Change the sources any time: <code>sudo goget repo use arch</code>, or several at once (<code>debian arch</code>; the first that has a package wins), then <code>sudo goget refresh</code>. There is no other package manager on the system. Package install scripts are not run, so a few packages that depend on them may need setup by hand.</p>
+        </div>
+
+        <div class="chapter" id="hb-6">
+          <h3>6. Updating</h3>
           <p>systemLinux updates as a whole system image, so an update cannot leave the system half-upgraded:</p>
           <pre><code>goget upgrade --check     <span class="c"># is a newer image available?</span>
 sudo goget upgrade        <span class="c"># download, verify and install it</span></code></pre>
           <p>The image is downloaded (a broken download resumes), verified against a signed release index and its SHA-256 hashes, and added to the boot menu. Restart to use it. Your files, accounts, settings and installed programs are not touched.</p>
         </div>
 
-        <div class="chapter" id="hb-6">
-          <h3>6. Rolling back</h3>
+        <div class="chapter" id="hb-7">
+          <h3>7. Rolling back</h3>
           <p>The first boot into a new image is a trial. If it does not come up, the next boot returns to the previous image automatically. Once the new system has run for a minute it becomes the default. The previous image stays installed, and you can pick it by hand from the GRUB menu in the menu that GRUB shows for a few seconds at startup. Only the running image and the newest one are kept, to save space.</p>
         </div>
 
-        <div class="chapter" id="hb-7">
-          <h3>7. If something goes wrong</h3>
+        <div class="chapter" id="hb-8">
+          <h3>8. If something goes wrong</h3>
           <ul>
             <li><strong>The stick does not boot:</strong> choose the UEFI entry, not the plain one; write the ISO with <code>dd</code> instead of Ventoy; check the checksum.</li>
             <li><strong>Black screen or no desktop:</strong> use the <em>debug shell</em> entry and note the last messages. Read systemL&rsquo;s log with <code>systemL log</code> (or <code>systemL log polkitd</code> for one service) from a text console (<code>Ctrl+Alt+F2</code>).</li>
@@ -361,10 +375,10 @@ sudo goget upgrade       <span class="c"># download, verify, install; then reboo
       <li>Boot in UEFI mode. Legacy BIOS boot has not been tested with the current live layout.</li>
       <li>The graphical installer erases a whole disk. It cannot resize partitions or set up dual boot yet.</li>
       <li>GNOME runs under elogind and polkit rather than systemd, so anything that expects systemd may not work; it starts from the login on the first text console (tty1).</li>
-      <li>The desktop comes from Debian packages layered onto the Gentoo userland. Software that needs more than that (for example a login manager or power management) is not included.</li>
+      <li>The desktop comes from Debian packages. A login manager and power management are not included.</li>
       <li>The kernel includes Intel, AMD and the open NVIDIA (nouveau) graphics drivers, but not NVIDIA&rsquo;s proprietary driver. Drivers whose firmware is missing from the bundled set will not start.</li>
       <li>The old zram swap unit and Plymouth splash from v0.2 are not started by systemL. <code>systemctl</code> is still in the image but does nothing without systemd.</li>
-      <li><code>goget</code> does not track installed packages or resolve dependencies. Use <code>emerge</code> for large packages.</li>
+      <li>Packages from the Debian, Ubuntu, Arch and Gentoo repositories are unpacked and tracked by <code>goget</code>, but their install scripts are not run, and packages built for a newer C library than the base image ships may not start. Mixing several sources can cause version conflicts; Debian is the default and the best tested.</li>
     </ul>
   </div>
 </section>
@@ -373,8 +387,8 @@ sudo goget upgrade       <span class="c"># download, verify, install; then reboo
 
 <footer>
   <div class="wrap">
-    <span>systemLinux 0.5 &middot; <a href="https://github.com/tortr-rs/systemLinux">source on GitHub</a></span>
-    <span>Kernel 7.2.6 &middot; systemL &middot; Gentoo userland</span>
+    <span>systemLinux 0.6 &middot; <a href="https://github.com/tortr-rs/systemLinux">source on GitHub</a></span>
+    <span>Kernel 7.2.6 &middot; systemL &middot; goget</span>
   </div>
 </footer>
 

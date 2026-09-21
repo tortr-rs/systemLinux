@@ -81,6 +81,32 @@ All core features from the original spec are implemented:
   `passwd`, since `passwd` has no non-interactive stdin mode on this and
   many distros). Requires root; fails immediately and clearly otherwise.
 
+## Packages from distribution repositories (0.6)
+
+On systemLinux, goget is also the package manager. Repositories are listed in `/etc/goget/repos.conf`
+(`<kind> <name> <url> [key=value ...]`; kinds `debian`, `ubuntu`, `arch`, `gentoo`) and chosen with
+`goget repo use debian|ubuntu|arch|gentoo` (several allowed, the first one that has a package wins).
+
+```sh
+goget refresh                 # fetch the package indexes
+goget install [-y] htop       # install with dependencies (owner/repo names still build from Git)
+goget find editor | goget info htop | goget list
+goget remove htop
+goget update                  # upgrade installed packages
+```
+
+* Indexes are checked against the suite's release file (Debian/Ubuntu); packages against their SHA-256
+  (Debian, Ubuntu, Arch). Everything is fetched over HTTPS.
+* Packages are unpacked into a staging directory and merged into `/`: `/bin`, `/sbin`, `/lib` map to `/usr`;
+  files that already exist (the base image, `/etc` configuration, other packages) are kept. What each
+  package owns is recorded in `/var/lib/goget/db/<name>.json`.
+* Dependencies are resolved inside the repository the package came from. What the base image already
+  provides (glibc, GNU userland, ...) is listed in `/usr/share/goget/base-provides`.
+* Install scripts are not run (`ldconfig` and `glib-compile-schemas` are). `--root DIR` operates on another
+  root, `--nodeps` skips dependency resolution.
+* Code: `pm_core.go` (repos, database, resolver), `pm_install.go` (unpack/merge/remove), `pm_deb.go`,
+  `pm_arch.go`, `pm_gentoo.go` (backends), `pm_cmd.go` (commands).
+
 ## Building goget itself
 
 ```sh

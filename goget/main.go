@@ -9,6 +9,15 @@ func printUsage(prog string) {
 	fmt.Fprintf(os.Stderr,
 		"usage: %s <command> [args]\n"+
 			"commands:\n"+
+			"  install [-y] <pkg|owner/repo>...\n"+
+			"                  install packages with their dependencies from the configured\n"+
+			"                  repositories (Debian, Ubuntu, Arch, Gentoo binaries); owner/repo\n"+
+			"                  names are built from Git as with `build`\n"+
+			"  remove <pkg>... uninstall packages   list: installed packages   info <pkg>\n"+
+			"  find <term>     search the repositories\n"+
+			"  refresh         fetch the newest package indexes   update: upgrade installed packages\n"+
+			"  repo [list | use debian|ubuntu|arch|gentoo... | add | remove]\n"+
+			"                  choose which repositories packages come from\n"+
 			"  build [--latest] <repo>\n"+
 			"                  build and install from source (prefers the latest\n"+
 			"                  tagged release's source archive over a full git\n"+
@@ -25,7 +34,8 @@ func printUsage(prog string) {
 			"                  update an installed systemLinux to the newest signed image\n"+
 			"  provision [--user NAME] <root>\n"+
 			"                  brand an install target (issue, os-release, login banner)\n"+
-			"                  and optionally create its first user (requires root)\n",
+			"                  and optionally create its first user (requires root)\n"+
+			"  help            show this help message\n",
 		prog)
 }
 
@@ -359,6 +369,23 @@ func main() {
 
 	case "upgrade":
 		os.Exit(upgradeRun(os.Args[2:]))
+
+	case "install":
+		os.Exit(cmdInstall(os.Args[2:]))
+	case "remove":
+		os.Exit(cmdRemove(os.Args[2:]))
+	case "list":
+		os.Exit(cmdList(os.Args[2:]))
+	case "info":
+		os.Exit(cmdInfo(os.Args[2:]))
+	case "find":
+		os.Exit(cmdFind(os.Args[2:]))
+	case "refresh":
+		os.Exit(cmdRefresh(os.Args[2:]))
+	case "update":
+		os.Exit(cmdUpdate(os.Args[2:]))
+	case "repo":
+		os.Exit(cmdRepo(os.Args[2:]))
 
 	case "provision":
 		os.Exit(provisionRun(os.Args[2:]))

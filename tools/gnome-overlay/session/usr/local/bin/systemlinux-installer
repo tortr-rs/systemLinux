@@ -28,7 +28,16 @@ const KEYBOARDS = [
 
 const state = {
     disk: '', host: 'systemlinux', full: '', user: '', pass: '', tz: 'UTC', keymap: 'us', autologin: false,
+    repos: ['debian'],
 };
+
+// package sources goget installs from (chosen here, changeable later with `goget repo use`)
+const REPOS = [
+    ['debian', 'Debian', 'The largest selection, tested against this system. Recommended.'],
+    ['ubuntu', 'Ubuntu', 'Debian-style packages with newer versions.'],
+    ['arch', 'Arch Linux', 'Very current packages.'],
+    ['gentoo', 'Gentoo binaries', 'Prebuilt Gentoo packages.'],
+];
 
 // ---------------------------------------------------------------- helpers
 function readFile(path) {
@@ -245,14 +254,39 @@ class Installer {
             state.tz = zones[tzRow.selected];
             state.keymap = KEYBOARDS[kbRow.selected][1];
             state.kbName = KEYBOARDS[kbRow.selected][0];
-            this.nav.push(this.summaryPage());
+            this.nav.push(this.softwarePage());
         });
         const p = makePage('Region', widget, 'region');
         this.pages.region = p;
         return p;
     }
 
-    // ---- 5. summary
+    // ---- 5. software sources
+    softwarePage() {
+        const {box, widget} = column('Where should software come from?',
+            'goget installs programs and their dependencies from the sources you switch on. Programs on GitHub, GitLab and Codeberg (owner/repo) always work. Change this any time with "goget repo use".');
+        const group = new Adw.PreferencesGroup();
+        const rows = REPOS.map(([id, title, sub]) => {
+            const r = new Adw.SwitchRow({title, subtitle: sub, active: state.repos.includes(id)});
+            group.add(r);
+            return [id, r];
+        });
+        const note = new Gtk.Label({label: 'Sources are tried in the order listed. Mixing several can cause version conflicts.',
+            wrap: true, xalign: 0, css_classes: ['dim-label']});
+        const next = primaryButton('Next');
+        box.append(group);
+        box.append(note);
+        box.append(next);
+        next.connect('clicked', () => {
+            state.repos = rows.filter(([id, r]) => r.active).map(([id]) => id);
+            this.nav.push(this.summaryPage());
+        });
+        const p = makePage('Software', widget, 'software');
+        this.pages.software = p;
+        return p;
+    }
+
+    // ---- 6. summary
     summaryPage() {
         const {box, widget} = column('Ready to install', 'Check the details below.');
         const banner = new Adw.Banner({title: `Everything on ${state.disk} will be erased.`, revealed: true});
@@ -264,6 +298,7 @@ class Installer {
             ['User', state.full ? `${state.full} (${state.user})` : state.user],
             ['Time zone', state.tz],
             ['Keyboard', state.kbName || state.keymap],
+            ['Software sources', state.repos.length ? state.repos.map(r => REPOS.find(x => x[0] === r)[1]).join(', ') + ' (and Git)' : 'Git only'],
             ['Login', state.autologin ? 'Automatic' : 'Ask for a password'],
         ];
         for (const [t, v] of rows) {
@@ -380,7 +415,7 @@ class Installer {
         if (DEMO) return this.fakeInstall();
 
         const argv = ['sudo', '-n', BACKEND, state.disk, state.host, state.user, state.tz, state.keymap,
-            state.autologin ? '1' : '0'];
+            state.autologin ? '1' : '0', state.repos.length ? state.repos.join(',') : 'git'];
         let proc;
         try {
             proc = Gio.Subprocess.new(argv, Gio.SubprocessFlags.STDIN_PIPE | Gio.SubprocessFlags.STDOUT_PIPE |
@@ -458,6 +493,7 @@ function runShots(inst) {
         ['3-account', () => { state.disk = '/dev/nvme0n1'; state.diskSize = 512e9; inst.nav.push(inst.accountPage());
             const r = inst.accountRows; r.full.set_text('Ada Lovelace'); r.user.set_text('ada'); r.pass.set_text('secret'); r.pass2.set_text('secret'); }],
         ['4-region', () => { state.full = 'Ada Lovelace'; state.user = 'ada'; state.pass = 'secret'; inst.nav.push(inst.regionPage()); }],
+        ['4b-software', () => inst.nav.push(inst.softwarePage())],
         ['5-summary', () => { state.kbName = 'English (US)'; inst.nav.push(inst.summaryPage()); }],
         ['6-progress', () => inst.startInstall()],
         ['7-progress-later', () => {}],
