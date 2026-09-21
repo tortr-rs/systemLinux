@@ -1,0 +1,5 @@
+#!/bin/sh
+# the live session has no password: never lock it
+grep -q 'systeml.live=1' /proc/cmdline 2>/dev/null || exit 0
+gsettings set org.gnome.desktop.screensaver lock-enabled false
+gsettings set org.gnome.desktop.session idle-delay 0

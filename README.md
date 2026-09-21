@@ -6,7 +6,7 @@
   <img src="assets/logo.png" alt="systemLinux logo: a white cat face on a purple circle" width="160">
 </p>
 
-# systemLinux v0.6
+# systemLinux v1.0
 
 A minimal x86_64 GNU/Linux distribution built on a custom monolithic kernel, a
 from-scratch Go init (`systemL`), and a GNU userland (GNU bash 5.3 is
@@ -18,12 +18,12 @@ installed to disk with the graphical installer or the handbook below. Installed 
 `goget upgrade`: a signed system image is downloaded, swapped in at the next reboot with your files kept,
 and a failed trial boot rolls back on its own.
 
-Website: `website/index.html` · Downloads: GitHub release `v0.6`
+Website: `website/index.html` · Downloads: GitHub release `v1.0`
 
 | Edition | File | Size | RAM needed |
 |---|---|---|---|
-| GNOME | `systemlinux-v0.6-gnome.iso` | 1.3 GB | about 6 GB recommended |
-| Minimal | `systemlinux-v0.6-minimal.iso` | 1.1 GB | about 2 GB |
+| GNOME | `systemlinux-v1.0-gnome.iso` | 2.6 GB | about 4 GB recommended |
+| Minimal | `systemlinux-v1.0-minimal.iso` | 1.1 GB | about 2 GB |
 
 Boot in **UEFI mode** (legacy BIOS boot has not been tested with the current live layout).
 Each ISO has three GRUB entries: normal, *copy to RAM* (loads the whole system into memory
@@ -45,7 +45,7 @@ so the stick can be removed), and *debug shell* (stops just before the real syst
 * **Init:** `systemL`, a static Go binary running as PID 1 (`systemL/`). systemd
   is not used.
 * **Base:** a glibc userland with GNU bash, coreutils, tar, sed and gawk. Portage and the Gentoo tree are
-  gone (since 0.6): `goget` is the only package manager.
+  gone (since 1.0): `goget` is the only package manager.
 * **Networking:** NetworkManager, started by systemL together with udev and D-Bus.
 * **Desktop (GNOME edition):** GNOME 48 (Wayland) with Nautilus, Console, Settings and Firefox ESR,
   from Debian packages layered onto the base (`tools/gnome-overlay/`). Without systemd it runs on
@@ -60,11 +60,9 @@ so the stick can be removed), and *debug shell* (stops just before the real syst
 * **Updates:** `goget upgrade` fetches the newest Ed25519-signed image (`latest.json`, SHA-256 per file),
   adds it to GRUB as a one-shot trial and returns to the old image if it fails to boot. The persistent
   layer (`/persist`) keeps your files and settings across updates.
-* **Packages:** `goget install <name>` installs a package and its dependencies from the repositories chosen
-  at install time (or later with `goget repo use debian|ubuntu|arch|gentoo`): Debian and Ubuntu (`.deb`),
-  Arch (`.pkg.tar.zst`) or the Gentoo binary host (gpkg). Installed packages are tracked in
-  `/var/lib/goget/db` (`goget list|info|remove|update|find`). `owner/repo` names still build from
-  GitHub / GitLab / Codeberg source or a prebuilt release. Install scripts of distro packages are not run.
+* **Packages:** `goget` installs prebuilt, signed nixpkgs packages (cache.nixos.org) with their dependencies into `/nix/store`,
+  exposed through per-user and system profiles with generations: `goget install|remove|list|find|update|run|shell|apply|generations|rollback|gc|channel`.
+  `owner/repo` names build from GitHub / GitLab / Codeberg source. `goget graphics` adds GPU drivers for Nix programs.
 * **Boot/disk tools:** GRUB 2.12 (BIOS + UEFI x86_64), `efibootmgr`, `dosfstools`,
   util-linux, e2fsprogs. GRUB, efibootmgr and dosfstools are Debian builds
   injected into the rootfs by the build script.
@@ -103,8 +101,8 @@ overrides the console TTY (default `/dev/tty1`).
 Run on a Debian host, from a normal terminal (it uses `sudo`):
 
 ```sh
-VARIANT=minimal ./build_iso.sh    # systemlinux-v0.6-minimal.iso
-VARIANT=gnome   ./build_iso.sh    # systemlinux-v0.6-gnome.iso
+VARIANT=minimal ./build_iso.sh    # systemlinux-v1.0-minimal.iso
+VARIANT=gnome   ./build_iso.sh    # systemlinux-v1.0-gnome.iso
 ```
 
 The script builds `systemL`, `goget` and (once) the full kernel, installs them into
@@ -117,7 +115,7 @@ masters the ISO with `grub-mkrescue`.
 
 ## Installing to disk
 
-1. Write the GNOME ISO to a USB stick (`dd if=systemlinux-v0.6-gnome.iso of=/dev/sdX bs=4M status=progress conv=fsync`,
+1. Write the GNOME ISO to a USB stick (`dd if=systemlinux-v1.0-gnome.iso of=/dev/sdX bs=4M status=progress conv=fsync`,
    or copy it onto a Ventoy stick) and boot it in UEFI mode.
 2. In the live desktop open **Install systemLinux**: choose the disk (it is erased), set your account, time
    zone and keyboard, review the summary and install. Restart and remove the stick.
@@ -137,8 +135,7 @@ The full guide, including troubleshooting, is the Handbook on the website.
   NVIDIA's proprietary driver; a driver whose firmware is not in the bundled set will not start.
 * The v0.2 `zram` swap unit and Plymouth splash are systemd-based and are not
   started by systemL. `systemctl` remains in the rootfs but does nothing.
-* Distro packages are unpacked without running their install scripts and are built for their own distro's
-  C library; mixing sources can conflict. Debian is the default and the best tested.
+* Programs from nixpkgs that need OpenGL/Vulkan need `sudo goget graphics` once; the sign-in screen is GDM (Wayland; no Xorg).
 
 ## Repository layout
 

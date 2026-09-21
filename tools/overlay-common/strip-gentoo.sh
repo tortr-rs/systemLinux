@@ -1,20 +1,10 @@
 #!/bin/bash
 # Remove Portage and the Gentoo-specific tooling from a staged image (systemLinux 0.6: packages come from
-# `goget`, not from emerge). Before the package database goes, the names of the base packages are written to
-# usr/share/goget/base-provides so goget never tries to install a second glibc or ncurses.
+# `goget`, not from emerge).
 # usage: strip-gentoo.sh STAGE     (works on any directory; run under fakeroot when the image needs root ownership)
 set -euo pipefail
 S=${1:?usage: strip-gentoo.sh STAGE}
 cd "$S"
-mkdir -p usr/share/goget
-if [ -d var/db/pkg ]; then
-    for d in var/db/pkg/*/*/; do
-        [ -d "$d" ] || continue
-        cpv=$(basename "$d"); cat=$(basename "$(dirname "$d")")
-        n=$(echo "$cpv" | sed -E 's/-[0-9][^-]*(-r[0-9]+)?$//')
-        echo "$n"; echo "$cat/$n"
-    done | sort -u > usr/share/goget/base-provides
-fi
 rm -rf var/db/repos var/db/pkg var/cache/distfiles var/cache/binpkgs var/lib/portage var/lib/gentoo \
        etc/portage etc/eselect usr/share/portage usr/share/eselect usr/lib/portage usr/share/gentoolkit \
        etc/gentoo-release var/tmp/portage var/log/portage

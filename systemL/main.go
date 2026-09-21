@@ -1,4 +1,4 @@
-// systemL - minimal PID 1 init for systemLinux v0.3.
+// systemL - minimal PID 1 init for systemLinux.
 //
 // Boot sequence: core pseudo-filesystems -> udev -> loopback -> D-Bus ->
 // NetworkManager -> respawning root shell on the console TTY.
@@ -42,7 +42,7 @@ const (
 	banner      = "\x1b[3J\x1b[2J\x1b[H\n" +
 		"  +------------------------------------------+\n" +
 		"  |                                          |\n" +
-		"  |   systemLinux v0.3                       |\n" +
+		"  |   systemLinux                            |\n" +
 		"  |   (systemL Init Engine)                  |\n" +
 		"  |                                          |\n" +
 		"  +------------------------------------------+\n\n"
@@ -303,6 +303,10 @@ func mountCore() {
 			logf("mkdir %s: %v", d, err)
 		}
 	}
+	// Nix-built graphics programs look for the GPU drivers in /run/opengl-driver (see `goget graphics`)
+	if _, err := os.Stat("/nix/var/goget/profiles/system/current/lib/dri"); err == nil {
+		os.Symlink("/nix/var/goget/profiles/system/current", "/run/opengl-driver")
+	}
 	if err := os.Chmod("/tmp", 0o777|os.ModeSticky); err != nil {
 		logf("chmod /tmp: %v", err)
 	}
@@ -494,6 +498,9 @@ func consoleShell() {
 	tty := os.Getenv("SYSTEML_TTY")
 	if tty == "" {
 		tty = "/dev/tty1"
+		if _, err := os.Stat(confDir + "/display-manager"); err == nil {
+			tty = "/dev/tty2" // the sign-in screen owns tty1; a text console stays on Ctrl+Alt+F2
+		}
 	}
 	first := true
 	for !shuttingDown.Load() {

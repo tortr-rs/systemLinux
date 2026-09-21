@@ -138,8 +138,3 @@ for dp, dns, fns in os.walk(OV):
         if os.path.islink(p) and not os.path.exists(p) and os.readlink(p).startswith('..'):
             os.remove(p)
 
-# names of the Debian packages this overlay was built from: goget treats them as already installed
-import re as _re
-_names = sorted({_re.sub(r'_.*$', '', os.path.basename(d)) for d in glob.glob(HOME + '/debs/*.deb')})
-os.makedirs(OV + '/usr/share/goget', exist_ok=True)
-open(OV + '/usr/share/goget/base-provides-debian', 'w').write('\n'.join(_names) + '\n')

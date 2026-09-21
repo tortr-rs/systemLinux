@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Live session settings
+Exec=/usr/local/bin/systemlinux-live-tweaks
+NoDisplay=true

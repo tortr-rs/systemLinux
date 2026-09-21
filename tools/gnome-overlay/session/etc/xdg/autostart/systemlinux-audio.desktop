@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Audio
+Comment=PipeWire audio stack
+Exec=/usr/local/bin/start-audio
+NoDisplay=true
+X-GNOME-Autostart-Delay=0

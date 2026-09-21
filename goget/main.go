@@ -10,14 +10,17 @@ func printUsage(prog string) {
 		"usage: %s <command> [args]\n"+
 			"commands:\n"+
 			"  install [-y] <pkg|owner/repo>...\n"+
-			"                  install packages with their dependencies from the configured\n"+
-			"                  repositories (Debian, Ubuntu, Arch, Gentoo binaries); owner/repo\n"+
+			"                  install prebuilt, signed nixpkgs packages with all their\n"+
+			"                  dependencies into /nix/store and your profile; owner/repo\n"+
 			"                  names are built from Git as with `build`\n"+
+			"  run <pkg> [args]   run a program without installing it   shell <pkg>...: a shell with them\n"+
+			"  apply [file]    make the profile match a list of package names (one per line)\n"+
+			"  generations | rollback [N] | gc [--delete-old]   undo changes, free space\n"+
 			"  remove <pkg>... uninstall packages   list: installed packages   info <pkg>\n"+
 			"  find <term>     search the repositories\n"+
 			"  refresh         fetch the newest package indexes   update: upgrade installed packages\n"+
-			"  repo [list | use debian|ubuntu|arch|gentoo... | add | remove]\n"+
-			"                  choose which repositories packages come from\n"+
+			"  graphics        install the GPU drivers programs from goget need (OpenGL, Vulkan)\n"+
+			"  channel [stable|unstable]   which nixpkgs channel packages come from\n"+
 			"  build [--latest] <repo>\n"+
 			"                  build and install from source (prefers the latest\n"+
 			"                  tagged release's source archive over a full git\n"+
@@ -370,6 +373,37 @@ func main() {
 	case "upgrade":
 		os.Exit(upgradeRun(os.Args[2:]))
 
+	case "run":
+		os.Exit(nixRun(pmParse(os.Args[2:]), os.Args[2:], false))
+	case "shell":
+		os.Exit(nixRun(pmParse(os.Args[2:]), os.Args[2:], true))
+	case "apply":
+		o := pmParse(os.Args[2:])
+		f := ""
+		if len(o.args) > 0 {
+			f = o.args[0]
+		}
+		os.Exit(nixApply(o, f))
+	case "generations":
+		pmParse(os.Args[2:])
+		os.Exit(nixGenerations())
+	case "rollback":
+		o := pmParse(os.Args[2:])
+		os.Exit(nixRollback(o.args))
+	case "gc":
+		o := pmParse(os.Args[2:])
+		old := false
+		for _, a := range o.args {
+			if a == "--delete-old" || a == "-d" {
+				old = true
+			}
+		}
+		os.Exit(nixGC(old))
+	case "init":
+		pmParse(os.Args[2:])
+		os.Exit(nixInit())
+	case "graphics":
+		os.Exit(nixGraphics(pmParse(os.Args[2:])))
 	case "install":
 		os.Exit(cmdInstall(os.Args[2:]))
 	case "remove":
@@ -384,8 +418,8 @@ func main() {
 		os.Exit(cmdRefresh(os.Args[2:]))
 	case "update":
 		os.Exit(cmdUpdate(os.Args[2:]))
-	case "repo":
-		os.Exit(cmdRepo(os.Args[2:]))
+	case "channel":
+		os.Exit(cmdChannel(os.Args[2:]))
 
 	case "provision":
 		os.Exit(provisionRun(os.Args[2:]))

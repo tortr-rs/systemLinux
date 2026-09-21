@@ -9,3 +9,9 @@ gjs gir1.2-adw-1 gir1.2-gtk-4.0 gir1.2-glib-2.0 gir1.2-gnomedesktop-4.0
 libgl1-mesa-dri libglx-mesa0 libegl-mesa0 libgbm1 mesa-vulkan-drivers librsvg2-common shared-mime-info desktop-file-utils xdg-utils
 xkb-data x11-xkb-utils fonts-cantarell fonts-dejavu-core fonts-noto-color-emoji
 kbd firefox-esr fastfetch
+chrony
+power-profiles-daemon
+bluez
+gnome-bluetooth-3-common
+gdm3
+dconf-cli

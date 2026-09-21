@@ -1,0 +1,15 @@
+#!/bin/sh
+# systemLinux: start the audio stack for the desktop session (there are no systemd user units here).
+# Launched by /etc/xdg/autostart/systemlinux-audio.desktop; PipeWire, its session manager and the PulseAudio
+# compatibility server run for as long as the desktop session does.
+export XDG_RUNTIME_DIR=${XDG_RUNTIME_DIR:-/run/user/$(id -u)}
+mkdir -p "$HOME/.local/share"
+exec >>"$HOME/.local/share/systemlinux-audio.log" 2>&1
+me=$(id -u)
+running() { pgrep -u "$me" -x "$1" >/dev/null 2>&1; }
+running pipewire || pipewire &
+i=0
+while [ ! -S "$XDG_RUNTIME_DIR/pipewire-0" ] && [ "$i" -lt 50 ]; do sleep 0.1; i=$((i + 1)); done
+running wireplumber || wireplumber &
+running pipewire-pulse || pipewire-pulse &
+wait

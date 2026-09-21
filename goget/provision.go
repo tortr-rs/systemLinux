@@ -16,7 +16,7 @@ import (
 
 const (
 	brandName    = "systemLinux"
-	brandVersion = "0.6"
+	brandVersion = "1.0"
 )
 
 // provisionGroups are the explicit groups every provisioned user joins.
@@ -39,7 +39,7 @@ if [ -t 1 ] && [ -z "${SYSTEMLINUX_BANNER:-}" ]; then
     (__(___)__)
 
 SYSTEMLINUX_CAT
-	printf '  systemLinux v0.6 GNU/Linux\n\n\033[0m'
+	printf '  systemLinux v1.0 GNU/Linux\n\n\033[0m'
 fi
 `
 

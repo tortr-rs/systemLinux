@@ -59,8 +59,6 @@ sudo ln -sf bash "$ROOTFS/usr/bin/sh"
 sudo rm -f "$ROOTFS"/usr/bin/bsdtar "$ROOTFS"/usr/bin/bsdcat "$ROOTFS"/usr/bin/bsdcpio "$ROOTFS"/usr/bin/bsdunzip
 # issue, os-release, release files and the login banner (GNU/Linux branding)
 sudo ./goget/goget provision "$ROOTFS"
-# 0.6: packages come from goget (Debian/Ubuntu/Arch/Gentoo binaries/Git), not Portage; the image keeps a Debian default
-sudo ./goget/goget repo use debian --root "$ROOTFS"
 # fastfetch (Debian build; its only extra library is libyyjson) so the cat logo below has a program to show it
 if [ ! -e "$ROOTFS/usr/bin/fastfetch" ]; then
     FFTMP=$(mktemp -d)
@@ -145,6 +143,11 @@ STAGE=$WORKSPACE/stage
 sudo mkdir -p "$STAGE"
 sudo cp -a "$ROOTFS/." "$STAGE/"
 sudo "$BUILD_DIR/tools/overlay-common/strip-gentoo.sh" "$STAGE"
+# goget installs nixpkgs packages into /nix/store (group-writable for wheel) and finds them through a profile script
+sudo mkdir -p "$STAGE/nix/store" "$STAGE/nix/var/goget"
+sudo chmod 1775 "$STAGE/nix/store"; sudo chmod 2775 "$STAGE/nix/var/goget"
+WG=$(sed -n 's/^wheel:[^:]*:\([0-9]*\):.*/\1/p' "$STAGE/etc/group"); [ -z "$WG" ] || sudo chown -R "0:$WG" "$STAGE/nix"
+sudo install -Dm644 "$BUILD_DIR/tools/overlay-common/goget-profile.sh" "$STAGE/etc/profile.d/goget.sh"
 sudo cp -a "$FW_WORK/ov5/." "$STAGE/"
 if [ "$VARIANT" = gnome ]; then
     sudo cp -a "$GNOME_WORK/ov3/." "$STAGE/"
@@ -154,7 +157,7 @@ if [ "$VARIANT" = gnome ]; then
     sudo usermod -R "$STAGE" -p '' live
     # system users the D-Bus policies name: they must exist when the system bus starts (its policy is keyed by
     # user name), otherwise polkit and others cannot own their bus names
-    for u in "polkitd 995" "colord 996" "pulse 994"; do
+    for u in "polkitd 995" "colord 996" "pulse 994" "Debian-gdm 993"; do
         set -- $u
         sudo useradd -R "$STAGE" -r -u "$2" -U -M -d / -s /bin/false "$1"
     done

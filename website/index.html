@@ -3,341 +3,255 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>systemLinux 0.6 &mdash; a Linux distribution built from scratch</title>
-<meta name="description" content="systemLinux v0.6 &mdash; a GNU/Linux distribution with a driver-rich monolithic kernel, its own init (systemL), a live GNOME desktop, a graphical installer and image-based updates.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2040%2040'%3E%3Ccircle%20cx='20'%20cy='20'%20r='20'%20fill='%2354487a'/%3E%3Cpath%20fill='%23fff'%20d='M9.5%2017%20L10.5%208%20L17.5%2012.2%20Q20%2011.6%2022.5%2012.2%20L29.5%208%20L30.5%2017%20Q31.5%2027.5%2020%2030.5%20Q8.5%2027.5%209.5%2017%20Z'/%3E%3Cg%20fill='%2354487a'%3E%3Cellipse%20cx='15.5'%20cy='19.5'%20rx='1.5'%20ry='2.2'/%3E%3Cellipse%20cx='24.5'%20cy='19.5'%20rx='1.5'%20ry='2.2'/%3E%3Cpath%20d='M18.6%2023.3%20L21.4%2023.3%20L20%2024.8%20Z'/%3E%3C/g%3E%3Cg%20fill='none'%20stroke-linecap='round'%3E%3Cpath%20stroke='%2354487a'%20stroke-width='1.1'%20d='M20%2024.8%20V26%20M20%2026%20Q18.6%2027.4%2017.4%2026.6%20M20%2026%20Q21.4%2027.4%2022.6%2026.6'/%3E%3Cpath%20stroke='%23fff'%20stroke-width='1'%20d='M13.5%2024%20L6.5%2022.8%20M13.5%2025.6%20L6.5%2027.2%20M26.5%2024%20L33.5%2022.8%20M26.5%2025.6%20L33.5%2027.2'/%3E%3C/g%3E%3C/svg%3E">
+<title>systemLinux 1.0 &mdash; a Linux you can live in, and undo</title>
+<meta name="description" content="systemLinux is an independent GNU/Linux distribution with its own init, a GNOME desktop, an installer, and a Nix-style package manager where every change can be rolled back.">
+<link rel="icon" type="image/svg+xml" href="logo.svg">
 <style>
 :root{
-  --primary:#54487a;
-  --primary-2:#61538d;
-  --primary-ink:#ffffff;
-  --accent:#8b7cc3;
-  --bg:#ffffff;
-  --panel:#f4f2fa;
-  --border:#ddd9ec;
-  --text:#1f1b2e;
-  --muted:#5f5a75;
-  --code-bg:#f0eef8;
-  --code-text:#2b2540;
-  --warn-bg:#fff6e0;
-  --warn-border:#e8c766;
-  --warn-text:#5a4300;
+  --bg:#ffffff; --bg2:#f6f4fb; --panel:#ffffff; --border:#e3dff0; --text:#1c1830; --muted:#5d5878;
+  --brand:#54487a; --brand2:#6a5a9e; --accent:#8b7cc3;
+  --code-bg:#f1eef9; --code-text:#2b2540; --term-bg:#17141f; --term-text:#e9e6f5; --term-dim:#8d86a8; --term-ok:#8ee3a7;
+  --warn-bg:#fff6e0; --warn-border:#e8c766; --warn-text:#5a4300; --shadow:0 10px 30px rgba(60,44,110,.12);
   color-scheme:light;
 }
 @media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --primary:#3d3459;
-    --primary-2:#a99bd8;
-    --accent:#a99bd8;
-    --bg:#16131f;
-    --panel:#211d30;
-    --border:#372f52;
-    --text:#e8e5f3;
-    --muted:#a29cbb;
-    --code-bg:#1d1a2b;
-    --code-text:#e0dcf3;
-    --warn-bg:#2f2810;
-    --warn-border:#7a641d;
-    --warn-text:#f0d98a;
+  :root{
+    --bg:#131019; --bg2:#1a1624; --panel:#1e1a2b; --border:#332c4a; --text:#ece9f7; --muted:#a49ebc;
+    --brand:#3d3459; --brand2:#a99bd8; --accent:#a99bd8; --code-bg:#221d33; --code-text:#e2ddf5;
+    --warn-bg:#2f2810; --warn-border:#7a641d; --warn-text:#f0d98a; --shadow:0 10px 30px rgba(0,0,0,.4);
     color-scheme:dark;
   }
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:5rem}
-body{
-  margin:0;background:var(--bg);color:var(--text);
-  font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-}
-a{color:var(--primary-2);text-decoration:none}
-a:hover{text-decoration:underline}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+a{color:var(--brand2);text-decoration:none} a:hover{text-decoration:underline}
 code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
-code{background:var(--code-bg);color:var(--code-text);padding:.1em .35em;border-radius:4px;font-size:.92em}
-pre{
-  background:var(--code-bg);color:var(--code-text);
-  border:1px solid var(--border);border-radius:6px;
-  padding:1rem 1.1rem;overflow-x:auto;font-size:.88rem;line-height:1.55;margin:.8rem 0 0;
-}
-pre code{background:none;padding:0;font-size:inherit}
-.c{color:var(--muted)}
+code{background:var(--code-bg);color:var(--code-text);padding:.1em .38em;border-radius:5px;font-size:.9em}
 .wrap{max-width:1080px;margin:0 auto;padding-inline:20px}
-
-/* header */
-.site-header{
-  position:sticky;top:0;z-index:20;
-  background:var(--primary);color:var(--primary-ink);
-  border-bottom:3px solid var(--accent);
-}
-.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-block:.65rem}
-.brand{display:flex;align-items:center;gap:.65rem;color:#fff;font-weight:700;font-size:1.25rem;letter-spacing:.2px}
-.brand:hover{text-decoration:none}
-.brand svg{width:34px;height:34px;flex:none}
-.brand svg .cat{fill:#fff}.brand svg .ink{fill:var(--primary)}.brand svg .line,.brand svg .whisk{fill:none;stroke-linecap:round}.brand svg .line{stroke:var(--primary);stroke-width:1.1}.brand svg .whisk{stroke:#fff;stroke-width:1}
-.brand small{font-weight:400;opacity:.75;font-size:.8rem;margin-left:.15rem}
-nav ul{display:flex;gap:.25rem;list-style:none;margin:0;padding:0;flex-wrap:wrap}
-nav a{color:#efeaff;padding:.4rem .75rem;border-radius:4px;font-size:.95rem;display:block}
-nav a:hover{background:rgba(255,255,255,.14);text-decoration:none}
-
-/* hero */
-.hero{background:linear-gradient(180deg,var(--panel),var(--bg));border-bottom:1px solid var(--border)}
-.hero .wrap{padding-block:4rem 3.2rem}
-.eyebrow{color:var(--primary-2);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem}
-.hero h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.15;margin:.5rem 0 1rem;color:var(--text);max-width:18ch}
-.hero .lead{font-size:1.15rem;color:var(--muted);max-width:60ch;margin:0 0 1.8rem}
-.btn{
-  display:inline-block;padding:.7rem 1.25rem;border-radius:6px;font-weight:600;
-  border:2px solid var(--primary-2);color:var(--primary-2);background:transparent;margin:0 .6rem .6rem 0;
-}
-.btn:hover{text-decoration:none;background:var(--panel)}
-.btn.primary{background:var(--primary);border-color:var(--primary);color:#fff}
-.btn.primary:hover{background:var(--primary-2);border-color:var(--primary-2)}
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-top:2.2rem}
-.fact{border-left:3px solid var(--accent);padding-left:.8rem}
-.fact b{display:block;font-size:1.05rem}
-.fact span{color:var(--muted);font-size:.88rem}
-
-/* sections */
-section{padding-block:3.2rem}
-section + section{border-top:1px solid var(--border)}
-h2{font-size:1.7rem;margin:0 0 .4rem;color:var(--primary-2)}
-.sub{color:var(--muted);margin:0 0 1.8rem;max-width:64ch}
+h2{font-size:clamp(1.6rem,3vw,2.1rem);line-height:1.2;margin:0 0 .5rem;letter-spacing:-.01em}
 h3{margin:0 0 .3rem;font-size:1.1rem}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.1rem}
-.card{background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:1.2rem}
-.card p{margin:.3rem 0 0;color:var(--muted);font-size:.95rem}
+.sub{color:var(--muted);max-width:66ch;margin:0 0 2rem;font-size:1.05rem}
+section{padding-block:4rem}
+section.alt{background:var(--bg2)}
+
+header.top{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:60px}
+.brand{display:flex;align-items:center;gap:.6rem;color:var(--text);font-weight:700;font-size:1.15rem}
+.brand img{width:32px;height:32px}
+.brand:hover{text-decoration:none}
+nav ul{display:flex;gap:.2rem;list-style:none;margin:0;padding:0}
+nav a{color:var(--muted);padding:.4rem .7rem;border-radius:8px;font-size:.95rem;display:block}
+nav a:hover{background:var(--bg2);color:var(--text);text-decoration:none}
+@media (max-width:760px){nav ul li:not(:last-child){display:none}}
+
+.hero{padding-block:4.5rem 3rem;background:radial-gradient(1200px 500px at 70% -10%,color-mix(in srgb,var(--accent) 26%,transparent),transparent 70%)}
+.hero .grid{display:grid;grid-template-columns:1.05fr 1fr;gap:3rem;align-items:center}
+.eyebrow{display:inline-block;color:var(--brand2);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.78rem;margin-bottom:.8rem}
+.hero h1{font-size:clamp(2.2rem,5.2vw,3.6rem);line-height:1.06;margin:0 0 1.1rem;letter-spacing:-.02em}
+.hero h1 span{color:var(--brand2)}
+.lead{font-size:1.18rem;color:var(--muted);max-width:52ch;margin:0 0 1.8rem}
+.btn{display:inline-block;padding:.8rem 1.4rem;border-radius:10px;font-weight:650;border:2px solid var(--brand2);color:var(--brand2);margin:0 .6rem .6rem 0}
+.btn:hover{text-decoration:none;background:var(--bg2)}
+.btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+.btn.primary:hover{background:var(--brand2);border-color:var(--brand2)}
+.facts{display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;margin-top:1.2rem;color:var(--muted);font-size:.92rem}
+.facts b{color:var(--text)}
+.shot{border-radius:14px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--border);background:var(--panel);margin:0}
+.shot img{display:block;width:100%;height:auto}
+@media (max-width:900px){.hero .grid{grid-template-columns:1fr}}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.1rem}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:1.4rem}
+.card p{margin:.4rem 0 0;color:var(--muted);font-size:.96rem}
+
+.term{background:var(--term-bg);color:var(--term-text);border-radius:12px;padding:1rem 1.15rem;overflow-x:auto;font-size:.88rem;line-height:1.6;box-shadow:var(--shadow);margin:.7rem 0}
+.term .p{color:var(--term-ok)} .term .c{color:var(--term-dim)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}
+@media (max-width:900px){.two{grid-template-columns:1fr}}
 
 table{border-collapse:collapse;width:100%;font-size:.95rem}
-th,td{text-align:left;padding:.65rem .8rem;border-bottom:1px solid var(--border);vertical-align:top}
+th,td{text-align:left;padding:.7rem .9rem;border-bottom:1px solid var(--border);vertical-align:top}
 th{width:11rem;color:var(--muted);font-weight:600;white-space:nowrap}
-.table-scroll{overflow-x:auto;border:1px solid var(--border);border-radius:8px}
-.table-scroll table{margin:0}
+.table-scroll{overflow-x:auto;border:1px solid var(--border);border-radius:12px;background:var(--panel)}
 .table-scroll tr:last-child th,.table-scroll tr:last-child td{border-bottom:0}
+.panel{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:1.5rem}
+.hash{word-break:break-all;font-size:.8rem}
+.note{background:var(--warn-bg);border:1px solid var(--warn-border);color:var(--warn-text);border-radius:10px;padding:.8rem 1rem;margin:0 0 1.4rem}
+ul.tight{padding-left:1.2rem} ul.tight li{margin:.35rem 0}
 
-.panel{background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:1.4rem}
-.panel h3{font-size:1.25rem}
-.hash{word-break:break-all;font-size:.82rem}
-
-.note{background:var(--warn-bg);border:1px solid var(--warn-border);color:var(--warn-text);border-radius:6px;padding:.75rem 1rem;margin:0 0 1.4rem}
-
-/* handbook */
 .handbook{display:grid;grid-template-columns:230px minmax(0,1fr);gap:2.5rem;align-items:start}
-.toc{position:sticky;top:5rem;background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:1rem 1.1rem}
-.toc h4{margin:0 0 .5rem;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
-.toc ol{margin:0;padding-left:1.2rem;font-size:.93rem}
-.toc li{margin:.25rem 0}
+.toc{position:sticky;top:5rem;background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:1rem 1.1rem}
+.toc h4{margin:0 0 .5rem;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+.toc ol{margin:0;padding-left:1.2rem;font-size:.93rem} .toc li{margin:.25rem 0}
 .chapter{margin-bottom:2.2rem}
 .chapter h3{font-size:1.25rem;padding-bottom:.35rem;border-bottom:2px solid var(--border);margin-bottom:.7rem}
-.chapter p{margin:.4rem 0}
-@media (max-width:820px){
-  .handbook{grid-template-columns:1fr}
-  .toc{position:static}
-}
+@media (max-width:820px){.handbook{grid-template-columns:1fr}.toc{position:static}}
 
-footer{background:var(--primary);color:#dcd5f3;padding-block:2rem;font-size:.9rem}
+footer{background:var(--brand);color:#e4def8;padding-block:2rem;font-size:.92rem}
 footer a{color:#fff}
 footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 </style>
 </head>
 <body>
 
-<header class="site-header">
+<header class="top">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="systemLinux home">
-      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#ffffff" fill-opacity=".14" stroke="#ffffff" stroke-width="2"/><path class="cat" d="M9.5 17 L10.5 8 L17.5 12.2 Q20 11.6 22.5 12.2 L29.5 8 L30.5 17 Q31.5 27.5 20 30.5 Q8.5 27.5 9.5 17 Z"/><ellipse class="ink" cx="15.5" cy="19.5" rx="1.5" ry="2.2"/><ellipse class="ink" cx="24.5" cy="19.5" rx="1.5" ry="2.2"/><path class="ink" d="M18.6 23.3 L21.4 23.3 L20 24.8 Z"/><path class="line" d="M20 24.8 V26 M20 26 Q18.6 27.4 17.4 26.6 M20 26 Q21.4 27.4 22.6 26.6"/><path class="whisk" d="M13.5 24 L6.5 22.8 M13.5 25.6 L6.5 27.2 M26.5 24 L33.5 22.8 M26.5 25.6 L33.5 27.2"/></svg>
-      systemLinux <small>v0.6</small>
-    </a>
-    <nav aria-label="Main">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#specs">Specs</a></li>
-        <li><a href="#download">Download</a></li>
-        <li><a href="#handbook">Handbook</a></li>
-        <li><a href="#updates">Updates</a></li>
-        <li><a href="#systeml">systemL</a></li>
-        <li><a href="https://github.com/tortr-rs/systemLinux">Source</a></li>
-      </ul>
-    </nav>
+    <a class="brand" href="#top"><img src="logo.svg" alt=""> systemLinux</a>
+    <nav aria-label="Main"><ul>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#goget">goget</a></li>
+      <li><a href="#handbook">Handbook</a></li>
+      <li><a href="#systeml">systemL</a></li>
+      <li><a href="#download">Download</a></li>
+    </ul></nav>
   </div>
 </header>
 
 <main id="top">
 
-<div class="hero">
-  <div class="wrap">
-    <div class="eyebrow">Release 0.6</div>
-    <h1>A Linux distribution built from scratch.</h1>
-    <p class="lead">systemLinux is a GNU/Linux distribution: a custom monolithic kernel and its own init, <strong>systemL</strong>, with a GNU userland (GNU bash, coreutils, tar and more). It boots like any live ISO, in a minimal console edition or with a live GNOME desktop, and you can install it to disk when you want it to stay. Installed systems update themselves with <code>goget upgrade</code>: a new signed system image replaces the old one at the next reboot, your files and settings stay, and a bad update rolls back by itself.</p>
-    <a class="btn primary" href="#download">Download the ISO</a>
-    <a class="btn" href="#handbook">Read the Handbook</a>
-    <div class="facts">
-      <div class="fact"><b>Linux 7.2.6</b><span>drivers for almost everything built in</span></div>
-      <div class="fact"><b>systemL</b><span>custom Go init, no systemd</span></div>
-      <div class="fact"><b>goget packages</b><span>Debian, Ubuntu, Arch, Gentoo or Git</span></div>
-      <div class="fact"><b>GNOME 48</b><span>live desktop edition</span></div>
+<div class="hero"><div class="wrap grid">
+  <div>
+    <span class="eyebrow">Release 1.0</span>
+    <h1>A Linux you can live in &mdash; <span>and undo.</span></h1>
+    <p class="lead">systemLinux is an independent GNU/Linux distribution: its own init, a polished GNOME desktop, a graphical installer, and a package manager where every change &mdash; a system update or one installed app &mdash; can be rolled back.</p>
+    <a class="btn primary" href="#download">Download 1.0</a><a class="btn" href="#handbook">Read the handbook</a>
+    <div class="facts"><span><b>GNOME 48</b> on Wayland</span><span><b>Linux 7.2.6</b>, drivers for almost everything</span><span><b>100,000+</b> prebuilt packages</span></div>
+  </div>
+  <figure class="shot"><img src="img/desktop.png" alt="The systemLinux GNOME desktop with the dock and the cat wallpaper" width="1280" height="800"></figure>
+</div></div>
+
+<section id="features" class="alt"><div class="wrap">
+  <h2>Everything a daily system needs</h2>
+  <p class="sub">Boot it live, try it, install it, and keep it up to date without fear.</p>
+  <div class="cards">
+    <div class="card"><h3>A real desktop</h3><p>GNOME 48 on Wayland with Firefox, Files, Terminal and Settings, audio through PipeWire, Bluetooth, Wi-Fi and power profiles.</p></div>
+    <div class="card"><h3>Installs like any distro</h3><p>A native graphical installer: pick a disk, set up your account, go. Boots in UEFI mode from a USB stick or Ventoy.</p></div>
+    <div class="card"><h3>Updates that can&rsquo;t brick it</h3><p><code>goget upgrade</code> downloads a signed system image, boots it as a trial and falls back to the old one by itself if it fails. Your files stay.</p></div>
+    <div class="card"><h3>Packages with an undo button</h3><p><code>goget install</code> gives you prebuilt, signed nixpkgs software in your own profile. Roll back any change, run a program without installing it, keep a plain list of what you use.</p></div>
+    <div class="card"><h3>Its own init</h3><p><strong>systemL</strong> is a small Go init that supervises services, keeps its logs out of your way and shuts down cleanly.</p></div>
+    <div class="card"><h3>Wide hardware support</h3><p>One monolithic kernel with Intel, AMD and open NVIDIA graphics, Wi-Fi, Bluetooth, storage and laptop drivers built in, plus firmware.</p></div>
+  </div>
+</div></section>
+
+<section id="goget"><div class="wrap">
+  <h2>goget: packages the Nix way, in plain words</h2>
+  <p class="sub">goget installs the prebuilt, cryptographically signed packages of the NixOS binary cache into <code>/nix/store</code> and shows them to you through profiles. It is not the Nix tool: there is no language to learn and nothing to compile, just short commands.</p>
+  <div class="two">
+    <div>
+<pre class="term"><span class="p">$</span> goget find editor
+<span class="p">$</span> goget install htop git firefox
+<span class="c"># downloaded, verified against the cache's signature, linked</span>
+<span class="p">$</span> goget run cowsay hello        <span class="c"># try it, install nothing</span>
+<span class="p">$</span> goget shell python3 nodejs     <span class="c"># a shell with those tools</span>
+<span class="p">$</span> goget generations
+   1  htop
+ * 2  htop git firefox
+<span class="p">$</span> goget rollback                <span class="c"># undo the last change</span>
+<span class="p">$</span> goget gc                      <span class="c"># free what nothing uses</span></pre>
+    </div>
+    <div>
+      <ul class="tight">
+        <li><strong>Everything can be undone.</strong> Each install, removal or update makes a new generation; <code>goget rollback</code> switches back instantly.</li>
+        <li><strong>Declarative, without the syntax.</strong> Put package names in <code>~/.config/goget/packages</code>, one per line, and run <code>goget apply</code>.</li>
+        <li><strong>Safe by construction.</strong> Every store path is checked against the cache&rsquo;s ed25519 signature and its SHA-256, and packages never overwrite each other.</li>
+        <li><strong>Each user has a profile.</strong> Install without <code>sudo</code>; <code>sudo goget install</code> adds to the whole system.</li>
+        <li><strong>Stable or bleeding edge.</strong> <code>goget channel stable</code> or <code>unstable</code>.</li>
+        <li><strong>Also from source.</strong> <code>goget install owner/repo</code> builds from GitHub, GitLab or Codeberg.</li>
+      </ul>
     </div>
   </div>
-</div>
+</div></section>
 
-<section id="about">
-  <div class="wrap">
-    <h2>About systemLinux</h2>
-    <p class="sub">A small system you can read end to end: one kernel config, one init written in Go, and a package tool that builds from upstream source.</p>
-    <div class="cards">
-      <div class="card"><h3>Its own init</h3><p>systemL runs as PID 1: it mounts the core filesystems, starts udev, D-Bus and NetworkManager, supervises them, and gives you a shell on tty1.</p></div>
-      <div class="card"><h3>A real live ISO</h3><p>The system is a compressed image on the ISO with a writable RAM layer on top. Only your changes use memory, and your disks are untouched until you choose to install.</p></div>
-      <div class="card"><h3>Two editions</h3><p><strong>GNOME</strong> boots straight into a live desktop with Firefox and a graphical installer. <strong>Minimal</strong> boots to a root shell.</p></div>
-      <div class="card"><h3>Drivers for almost everything</h3><p>One kernel with Wi-Fi, Bluetooth, graphics (Intel, AMD, NVIDIA open driver), storage, sound and laptop drivers built in, and the firmware to go with them.</p></div>
-      <div class="card"><h3>You pick the package source</h3><p><code>goget</code> installs software with its dependencies from Debian, Ubuntu, Arch or the Gentoo binary host, whichever you choose during installation, and builds programs from GitHub, GitLab and Codeberg.</p></div>
-      <div class="card"><h3>Tested on real hardware</h3><p>Built with drivers for Lenovo IdeaPad and MSI machines, and run on bare metal rather than only in a virtual machine.</p></div>
+<section id="specs" class="alt"><div class="wrap">
+  <h2>What is in 1.0</h2>
+  <div class="table-scroll"><table>
+    <tr><th>Kernel</th><td>Linux 7.2.6, monolithic, with drivers for almost everything built in (Wi-Fi, Bluetooth, Intel/AMD/open NVIDIA graphics, storage, sound, laptop hardware, exFAT/NTFS/btrfs/XFS) and bundled firmware</td></tr>
+    <tr><th>Init</th><td><strong>systemL</strong>, a static Go binary running as PID 1. No systemd</td></tr>
+    <tr><th>Desktop</th><td>GNOME 48 on Wayland with elogind and polkit, PipeWire audio, BlueZ, NetworkManager, Firefox ESR</td></tr>
+    <tr><th>Userland</th><td>GNU bash 5.3 as <code>/bin/sh</code>, GNU coreutils, tar, sed and gawk on glibc</td></tr>
+    <tr><th>Packages</th><td><code>goget</code> with nixpkgs (25.05 stable or unstable): store paths, profiles, generations, rollback</td></tr>
+    <tr><th>Updates</th><td>Signed system images (<code>goget upgrade</code>) with trial boot and automatic rollback</td></tr>
+    <tr><th>Installer</th><td>Native GTK4/libadwaita, whole-disk, EFI + ext4, persistent overlay on the installed image</td></tr>
+    <tr><th>Boot</th><td>GRUB 2.12, UEFI x86_64. Live entries: normal, copy to RAM, debug shell</td></tr>
+    <tr><th>Memory</th><td>Minimal: about 2&nbsp;GB. GNOME: 4&nbsp;GB recommended; the &ldquo;copy to RAM&rdquo; entry needs the whole image in memory on top</td></tr>
+  </table></div>
+</div></section>
+
+<section id="download"><div class="wrap">
+  <h2>Download</h2>
+  <p class="sub">Live ISOs you can write to a USB stick or drop onto a Ventoy drive. Boot in <strong>UEFI mode</strong>.</p>
+  <div class="cards">
+    <div class="panel">
+      <h3>GNOME edition</h3>
+      <p>The full desktop, the graphical installer and Firefox. 2.6&nbsp;GB, 4&nbsp;GB of RAM recommended.</p>
+      <p><a class="btn primary" href="https://github.com/tortr-rs/systemLinux/releases/download/v1.0/systemlinux-v1.0-gnome.iso">systemlinux-v1.0-gnome.iso</a></p>
+      <p><strong>SHA-256</strong><br><code class="hash">38a2c6e5e086b4f41c5785e38aa84087db332f1b7a672719e3016a065765a3d2</code></p>
+    </div>
+    <div class="panel">
+      <h3>Minimal edition</h3>
+      <p>Boots to a root shell on the console: a base to build on. 1.1&nbsp;GB, about 2&nbsp;GB of RAM.</p>
+      <p><a class="btn primary" href="https://github.com/tortr-rs/systemLinux/releases/download/v1.0/systemlinux-v1.0-minimal.iso">systemlinux-v1.0-minimal.iso</a></p>
+      <p><strong>SHA-256</strong><br><code class="hash">d66dbc96b0dc32421f1467d099adc0de078e957573108e351806bd40f2125eec</code></p>
     </div>
   </div>
-</section>
+  <p style="margin-top:1.2rem">Check your download with <code>sha256sum systemlinux-v1.0-*.iso</code>. Older versions are on the <a href="https://github.com/tortr-rs/systemLinux/releases">releases page</a>; the source is on <a href="https://github.com/tortr-rs/systemLinux">GitHub</a>.</p>
+  <p><strong>Ventoy:</strong> copy the ISO onto the stick. Older systemLinux ISOs on the same stick are fine: each ISO only boots its own system. If it reports an error at boot, write the ISO straight to a stick instead.</p>
+</div></section>
 
-<section id="specs">
-  <div class="wrap">
-    <h2>System specifications</h2>
-    <p class="sub">What is in systemLinux 0.6.</p>
-    <div class="table-scroll">
-      <table>
-        <tr><th>Version</th><td>0.6</td></tr>
-        <tr><th>Kernel</th><td>Linux 7.2.6, monolithic, with drivers for almost everything built in (over 3,200 options), plus a bundle of firmware</td></tr>
-        <tr><th>Init</th><td>systemL, a static Go binary running as PID 1</td></tr>
-        <tr><th>Base system</th><td>glibc userland with GNU bash, coreutils, tar, sed and gawk. No package manager other than <code>goget</code></td></tr>
-        <tr><th>Networking</th><td>NetworkManager, with udev and D-Bus</td></tr>
-        <tr><th>Package tools</th><td><code>goget</code>: installs and removes packages with dependency resolution from Debian, Ubuntu, Arch or Gentoo binary repositories (chosen at install), and builds from Git</td></tr>
-        <tr><th>Desktop</th><td>GNOME 48 on Wayland (GNOME edition) with elogind and polkit instead of systemd, Firefox and a graphical installer. The live session runs as a normal user (<code>live</code>)</td></tr>
-        <tr><th>Memory</th><td>Minimal: about 2&nbsp;GB of RAM. GNOME: 6&nbsp;GB recommended. The &ldquo;copy to RAM&rdquo; boot entry also holds the whole 1&ndash;1.3&nbsp;GB image in memory, so add that on top</td></tr>
-        <tr><th>Bootloader</th><td>GRUB 2.12 for BIOS and UEFI (x86_64), <code>efibootmgr</code></td></tr>
-        <tr><th>Disk tools</th><td>util-linux, e2fsprogs, dosfstools</td></tr>
-        <tr><th>Architecture</th><td>x86_64</td></tr>
-      </table>
-    </div>
+<section id="handbook" class="alt"><div class="wrap">
+  <h2>The systemLinux Handbook</h2>
+  <p class="sub">From a downloaded ISO to an installed, self-updating system.</p>
+  <div class="note"><strong>Warning:</strong> the installer erases the whole disk you choose. Back up first. Boot in <strong>UEFI mode</strong>.</div>
+  <div class="handbook">
+    <aside class="toc" aria-label="Handbook chapters"><h4>Chapters</h4><ol>
+      <li><a href="#hb-1">Make a bootable USB stick</a></li>
+      <li><a href="#hb-2">Boot the live system</a></li>
+      <li><a href="#hb-3">Install to disk</a></li>
+      <li><a href="#hb-4">First boot</a></li>
+      <li><a href="#hb-5">Installing software</a></li>
+      <li><a href="#hb-6">Updating the system</a></li>
+      <li><a href="#hb-7">Rolling back</a></li>
+      <li><a href="#hb-8">If something goes wrong</a></li>
+    </ol></aside>
+    <article>
+      <div class="chapter" id="hb-1"><h3>1. Make a bootable USB stick</h3>
+        <p>Download the GNOME ISO and check it against the SHA-256 above. Then copy it onto a <strong>Ventoy</strong> stick, or write it straight to a stick (this erases the stick):</p>
+        <pre class="term">sudo dd if=systemlinux-v1.0-gnome.iso of=/dev/sdX bs=4M status=progress conv=fsync</pre>
+        <p>Replace <code>/dev/sdX</code> with the stick (check with <code>lsblk</code>). On Windows use Rufus in <em>DD image</em> mode or balenaEtcher.</p></div>
+      <div class="chapter" id="hb-2"><h3>2. Boot the live system</h3>
+        <p>Restart, open your firmware&rsquo;s boot menu (usually F12, F10, Esc or F8) and pick the stick&rsquo;s <strong>UEFI</strong> entry. The boot menu offers:</p>
+        <ul><li><strong>systemLinux</strong>: the normal live session.</li><li><strong>copy to RAM</strong>: loads the whole system into memory so you can remove the stick.</li><li><strong>debug shell</strong>: shows every message and stops just before the real system starts. Use it if the normal entry does not work.</li></ul>
+        <p>The live session signs in as <code>live</code> and opens GNOME with Firefox, Files and Terminal. Connect to Wi-Fi from the top bar. Nothing is written to your disks until you run the installer.</p></div>
+      <div class="chapter" id="hb-3"><h3>3. Install to disk</h3>
+        <p>Open <strong>Install systemLinux</strong> from the dock (the cat icon). It walks through six pages:</p>
+        <ol><li><strong>Welcome</strong>: what is about to happen.</li><li><strong>Disk</strong>: pick the disk to erase.</li><li><strong>Account</strong>: computer name, your name, user name and password, and whether to sign in automatically. The same password is used for <code>root</code>.</li><li><strong>Region</strong>: time zone and keyboard layout.</li><li><strong>Summary</strong>: review everything. Nothing has changed yet; <em>Install</em> starts the work.</li><li><strong>Progress</strong>: partitions the disk, copies the system, creates your account and installs the boot loader.</li></ol>
+        <p>The disk gets a 512&nbsp;MB EFI partition and one ext4 partition holding the system image, the boot menu and your files. When it says <em>Done</em>, restart and remove the stick.</p></div>
+      <div class="chapter" id="hb-4"><h3>4. First boot</h3>
+        <p>GRUB shows for three seconds, then systemLinux starts. With automatic sign-in you land on the GNOME desktop; otherwise you sign in on the text console and GNOME starts for your user. Your user can use <code>sudo</code>.</p></div>
+      <div class="chapter" id="hb-5"><h3>5. Installing software</h3>
+        <p>Use <code>goget</code>. Programs go into your own profile, so no <code>sudo</code> is needed:</p>
+<pre class="term"><span class="p">$</span> goget find video
+<span class="p">$</span> goget install vlc gimp
+<span class="p">$</span> goget list
+<span class="p">$</span> goget remove gimp
+<span class="p">$</span> goget update                   <span class="c"># newer versions of what you installed</span>
+<span class="p">$</span> goget run neofetch            <span class="c"># run without installing</span></pre>
+        <p>Prefer a list? Write package names, one per line, to <code>~/.config/goget/packages</code> and run <code>goget apply</code>: the profile then matches the file exactly. Every change is a generation, so <code>goget rollback</code> undoes it, and <code>goget gc</code> deletes what nothing uses. Apps you install show up in the GNOME overview.</p></div>
+      <div class="chapter" id="hb-6"><h3>6. Updating the system</h3>
+        <p>The system itself updates as a whole image, so an update cannot leave it half-upgraded:</p>
+<pre class="term"><span class="p">$</span> goget upgrade --check    <span class="c"># is a newer image available?</span>
+<span class="p">$</span> sudo goget upgrade       <span class="c"># download, verify and install it</span></pre>
+        <p>The image is downloaded (a broken download resumes), verified against a signed release index and its SHA-256 hashes, and added to the boot menu. Restart to use it. Your files, accounts, settings and installed programs are not touched.</p></div>
+      <div class="chapter" id="hb-7"><h3>7. Rolling back</h3>
+        <p>The first boot into a new system image is a trial. If it does not come up, the next boot returns to the previous image automatically. Once the new system has run for a minute it becomes the default. The previous image stays installed and you can pick it by hand in the GRUB menu at startup. Programs installed with goget roll back separately with <code>goget rollback</code>.</p></div>
+      <div class="chapter" id="hb-8"><h3>8. If something goes wrong</h3>
+        <ul><li><strong>The stick does not boot:</strong> choose the UEFI entry, write the ISO with <code>dd</code> instead of Ventoy, and check the checksum.</li><li><strong>Black screen or no desktop:</strong> use the <em>debug shell</em> entry. From a text console (<code>Ctrl+Alt+F2</code>) read systemL&rsquo;s log with <code>systemL log</code>.</li><li><strong>No Wi-Fi:</strong> a device whose firmware is not in the bundled set will not start. A USB tether or Ethernet always works.</li><li><strong>An installed system fails to boot:</strong> pick the previous image from the GRUB menu, or the <em>debug</em> entry to see messages.</li></ul></div>
+    </article>
   </div>
-</section>
+</div></section>
 
-<section id="download">
-  <div class="wrap">
-    <h2>Download</h2>
-    <p class="sub">Live ISOs you can write to a USB stick or drop onto a Ventoy drive. Boot in <strong>UEFI mode</strong>.</p>
-    <div class="cards">
-      <div class="panel">
-        <h3>GNOME edition</h3>
-        <p>A live GNOME desktop (Wayland) with Firefox, the graphical installer and image-based updates. 1.3&nbsp;GB, 6&nbsp;GB of RAM recommended.</p>
-        <p><a class="btn primary" href="https://github.com/tortr-rs/systemLinux/releases/download/v0.6/systemlinux-v0.6-gnome.iso">systemlinux-v0.6-gnome.iso</a></p>
-        <p><strong>SHA-256</strong><br><code class="hash">fe145f8f0b8e06c4cb116c54876ebfcaa56e4155ec13df5d4297d689fbc7bd90</code></p>
-      </div>
-      <div class="panel">
-        <h3>Minimal edition</h3>
-        <p>Boots to a root shell on the console. 1.1&nbsp;GB, about 2&nbsp;GB of RAM.</p>
-        <p><a class="btn primary" href="https://github.com/tortr-rs/systemLinux/releases/download/v0.6/systemlinux-v0.6-minimal.iso">systemlinux-v0.6-minimal.iso</a></p>
-        <p><strong>SHA-256</strong><br><code class="hash">90d90367f7b1aaa311934983495e558ba560ec4b098dd7f2682e30c10bd521f9</code></p>
-      </div>
-    </div>
-    <p>Check your download with <code>sha256sum systemlinux-v0.6-*.iso</code>. Release notes and older versions are on the <a href="https://github.com/tortr-rs/systemLinux/releases/tag/v0.6">v0.6 release page</a> and on <a href="https://github.com/tortr-rs/systemLinux">GitHub</a>.</p>
-    <p><strong>Boot menu:</strong> each ISO offers a normal boot, <em>copy to RAM</em> (loads the whole system into memory so you can remove the stick), and a <em>debug shell</em> that stops just before the system starts.</p>
-    <p><strong>Ventoy:</strong> copy the ISO over any older copy and check its checksum. The boot code also looks for the ISO on a Ventoy stick. If it reports an error at boot, write the ISO straight to a stick instead. Older systemLinux ISOs on the same stick are fine: each ISO only boots its own system. Use UEFI mode; legacy BIOS boot has not been tested with this version.</p>
-  </div>
-</section>
-
-<section id="handbook">
-  <div class="wrap">
-    <h2>The systemLinux Handbook</h2>
-    <p class="sub">From a downloaded ISO to an installed, self-updating system. The GNOME edition includes a graphical installer, so there is nothing to type.</p>
-    <div class="note"><strong>Warning:</strong> the installer erases the whole disk you choose. Back up first. Boot in <strong>UEFI mode</strong>.</div>
-
-    <div class="handbook">
-      <aside class="toc" aria-label="Handbook chapters">
-        <h4>Chapters</h4>
-        <ol>
-          <li><a href="#hb-1">Make a bootable USB stick</a></li>
-          <li><a href="#hb-2">Boot the live system</a></li>
-          <li><a href="#hb-3">Install to disk</a></li>
-          <li><a href="#hb-4">First boot</a></li>
-          <li><a href="#hb-5">Installing software</a></li>
-          <li><a href="#hb-6">Updating</a></li>
-          <li><a href="#hb-7">Rolling back</a></li>
-          <li><a href="#hb-8">If something goes wrong</a></li>
-        </ol>
-      </aside>
-
-      <article>
-        <div class="chapter" id="hb-1">
-          <h3>1. Make a bootable USB stick</h3>
-          <p>Download the GNOME ISO and check it against the SHA-256 shown above. Then either copy the ISO onto a <strong>Ventoy</strong> stick, or write it straight to a stick (this erases the stick):</p>
-          <pre><code>sudo dd if=systemlinux-v0.6-gnome.iso of=/dev/sdX bs=4M status=progress conv=fsync</code></pre>
-          <p>Replace <code>/dev/sdX</code> with the stick (check with <code>lsblk</code>). On Windows, use Rufus in <em>DD image</em> mode or balenaEtcher.</p>
-        </div>
-
-        <div class="chapter" id="hb-2">
-          <h3>2. Boot the live system</h3>
-          <p>Restart, open your firmware&rsquo;s boot menu (usually F12, F10, Esc or F8) and pick the stick in its <strong>UEFI</strong> entry. The boot menu offers three choices:</p>
-          <ul>
-            <li><strong>systemLinux</strong>: the normal live session.</li>
-            <li><strong>copy to RAM</strong>: loads the whole system into memory so you can remove the stick. Needs about 2&nbsp;GB more RAM.</li>
-            <li><strong>debug shell</strong>: shows every message and stops just before the real system starts. Use it if the normal entry does not work.</li>
-          </ul>
-          <p>The live session signs in as <code>live</code> and opens the GNOME desktop with Firefox, Files and Terminal. Connect to Wi-Fi from the network icon in the top bar. Nothing is written to your disks until you run the installer.</p>
-        </div>
-
-        <div class="chapter" id="hb-3">
-          <h3>3. Install to disk</h3>
-          <p>Open <strong>Install systemLinux</strong> from the dock (the cat icon). The installer walks through seven pages:</p>
-          <ol>
-            <li><strong>Welcome</strong>: what is about to happen.</li>
-            <li><strong>Disk</strong>: pick the disk to erase. Disks that are in use by the live system are not offered.</li>
-            <li><strong>Account</strong>: computer name, your name, user name and password, and whether to sign in automatically. The same password is used for <code>root</code>.</li>
-            <li><strong>Region</strong>: time zone and keyboard layout.</li>
-            <li><strong>Software</strong>: which package sources <code>goget</code> should use (Debian, Ubuntu, Arch, Gentoo binaries; you can change it later).</li>
-            <li><strong>Summary</strong>: review everything. Nothing has been changed yet; <em>Install</em> starts the work.</li>
-            <li><strong>Progress</strong>: partitions the disk, copies the system, creates your account and installs the boot loader, with each step listed.</li>
-          </ol>
-          <p>The disk gets a 512&nbsp;MB EFI partition and one ext4 partition that holds the system image, the boot menu and your files. When it says <em>Done</em>, restart and remove the USB stick.</p>
-        </div>
-
-        <div class="chapter" id="hb-4">
-          <h3>4. First boot</h3>
-          <p>GRUB shows for three seconds, then systemLinux starts. With automatic sign-in on, you land directly on the GNOME desktop; otherwise you sign in on the text console and GNOME starts for your user. Your user can use <code>sudo</code>. Software comes from <code>goget</code>, from the sources you chose in the installer (chapter 5); everything you install is kept across updates.</p>
-        </div>
-
-                <div class="chapter" id="hb-5">
-          <h3>5. Installing software</h3>
-          <p>The installer asks where software should come from: <strong>Debian</strong> (the default and best tested), <strong>Ubuntu</strong>, <strong>Arch Linux</strong> or the <strong>Gentoo binary host</strong>. <code>goget</code> installs from them with all dependencies:</p>
-          <pre><code>sudo goget install htop          <span class="c"># from your chosen source, with dependencies</span>
-goget find editor                <span class="c"># search</span>
-goget info htop
-sudo goget remove htop
-sudo goget update                <span class="c"># newer versions of what you installed</span>
-sudo goget install owner/repo    <span class="c"># build from GitHub, GitLab or Codeberg</span></code></pre>
-          <p>Change the sources any time: <code>sudo goget repo use arch</code>, or several at once (<code>debian arch</code>; the first that has a package wins), then <code>sudo goget refresh</code>. There is no other package manager on the system. Package install scripts are not run, so a few packages that depend on them may need setup by hand.</p>
-        </div>
-
-        <div class="chapter" id="hb-6">
-          <h3>6. Updating</h3>
-          <p>systemLinux updates as a whole system image, so an update cannot leave the system half-upgraded:</p>
-          <pre><code>goget upgrade --check     <span class="c"># is a newer image available?</span>
-sudo goget upgrade        <span class="c"># download, verify and install it</span></code></pre>
-          <p>The image is downloaded (a broken download resumes), verified against a signed release index and its SHA-256 hashes, and added to the boot menu. Restart to use it. Your files, accounts, settings and installed programs are not touched.</p>
-        </div>
-
-        <div class="chapter" id="hb-7">
-          <h3>7. Rolling back</h3>
-          <p>The first boot into a new image is a trial. If it does not come up, the next boot returns to the previous image automatically. Once the new system has run for a minute it becomes the default. The previous image stays installed, and you can pick it by hand from the GRUB menu in the menu that GRUB shows for a few seconds at startup. Only the running image and the newest one are kept, to save space.</p>
-        </div>
-
-        <div class="chapter" id="hb-8">
-          <h3>8. If something goes wrong</h3>
-          <ul>
-            <li><strong>The stick does not boot:</strong> choose the UEFI entry, not the plain one; write the ISO with <code>dd</code> instead of Ventoy; check the checksum.</li>
-            <li><strong>Black screen or no desktop:</strong> use the <em>debug shell</em> entry and note the last messages. Read systemL&rsquo;s log with <code>systemL log</code> (or <code>systemL log polkitd</code> for one service) from a text console (<code>Ctrl+Alt+F2</code>).</li>
-            <li><strong>No Wi-Fi:</strong> the kernel carries most drivers, but a device whose firmware is not in the bundled set will not start. A USB tether or Ethernet works everywhere.</li>
-            <li><strong>Boot in an installed system fails:</strong> pick the previous image from the GRUB menu, or the <em>debug</em> entry to see messages.</li>
-          </ul>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="systeml">
+<section id="systeml" class="alt">
   <div class="wrap">
     <h2>Using systemL</h2>
     <p class="sub">systemL has no configuration to write for a normal boot. These commands control it at runtime (as root).</p>
@@ -356,41 +270,25 @@ sudo goget upgrade        <span class="c"># download, verify and install it</spa
   </div>
 </section>
 
-<section id="updates">
-  <div class="wrap">
-    <h2>Updates</h2>
-    <p class="sub">An installed systemLinux boots a read-only system image with your changes stored in a separate persistent layer, so updating means swapping the image.</p>
-    <pre><code>goget upgrade --check    <span class="c"># is a newer image available?</span>
-sudo goget upgrade       <span class="c"># download, verify, install; then reboot</span></code></pre>
-    <p>The new image is downloaded (resumable), checked against a signed index and its SHA-256 hashes, and added to the boot menu. The first boot into it is a trial: if it does not come up, the next boot returns to the previous image on its own. After the new system has run for a minute it becomes the default. Your files, accounts and settings are untouched, and only the running and the new image are kept on disk.</p>
-  </div>
-</section>
-
-<section id="limits">
-  <div class="wrap">
-    <h2>Known limitations</h2>
-    <ul>
-      <li>The live system keeps your changes only in RAM, so they are lost on reboot until you install it to disk. An installed system keeps them.</li>
-      <li>Shutdown, suspend and audio from the GNOME menus are not finished yet; <code>poweroff</code> and <code>reboot</code> in a terminal always work. Bluetooth is not included.</li>
-      <li>Boot in UEFI mode. Legacy BIOS boot has not been tested with the current live layout.</li>
-      <li>The graphical installer erases a whole disk. It cannot resize partitions or set up dual boot yet.</li>
-      <li>GNOME runs under elogind and polkit rather than systemd, so anything that expects systemd may not work; it starts from the login on the first text console (tty1).</li>
-      <li>The desktop comes from Debian packages. A login manager and power management are not included.</li>
-      <li>The kernel includes Intel, AMD and the open NVIDIA (nouveau) graphics drivers, but not NVIDIA&rsquo;s proprietary driver. Drivers whose firmware is missing from the bundled set will not start.</li>
-      <li>The old zram swap unit and Plymouth splash from v0.2 are not started by systemL. <code>systemctl</code> is still in the image but does nothing without systemd.</li>
-      <li>Packages from the Debian, Ubuntu, Arch and Gentoo repositories are unpacked and tracked by <code>goget</code>, but their install scripts are not run, and packages built for a newer C library than the base image ships may not start. Mixing several sources can cause version conflicts; Debian is the default and the best tested.</li>
-    </ul>
-  </div>
-</section>
+<section id="limits"><div class="wrap">
+  <h2>Honest limits</h2>
+  <p class="sub">What 1.0 does not do yet, so nothing surprises you.</p>
+  <ul class="tight">
+    <li>UEFI only, and the installer erases a whole disk: no dual boot or resizing yet, and no disk encryption or Secure Boot.</li>
+    <li>There is no login screen or lock screen: GNOME starts from the text console login (with optional auto-login).</li>
+    <li>Only English is included. Suspend and lid handling depend on your hardware.</li>
+    <li>Programs from nixpkgs that need hardware-accelerated OpenGL or Vulkan can fall back to software rendering, because they carry their own graphics libraries.</li>
+    <li>The kernel has Intel, AMD and the open NVIDIA (nouveau) graphics drivers, not NVIDIA&rsquo;s proprietary driver.</li>
+    <li>systemL replaces systemd, so software that expects systemd services will not find them.</li>
+  </ul>
+</div></section>
 
 </main>
 
-<footer>
-  <div class="wrap">
-    <span>systemLinux 0.6 &middot; <a href="https://github.com/tortr-rs/systemLinux">source on GitHub</a></span>
-    <span>Kernel 7.2.6 &middot; systemL &middot; goget</span>
-  </div>
-</footer>
+<footer><div class="wrap">
+  <span>systemLinux 1.0 &middot; <a href="https://github.com/tortr-rs/systemLinux">source on GitHub</a></span>
+  <span>Kernel 7.2.6 &middot; systemL &middot; goget</span>
+</div></footer>
 
 </body>
 </html>

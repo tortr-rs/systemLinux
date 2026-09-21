@@ -1,0 +1,8 @@
+#!/bin/sh
+# systemLinux: the GNOME sign-in screen (started and supervised by systemL)
+# GDM only starts a Wayland greeter when udev has seen a hardware GPU; virtual GPUs (QEMU, VirtualBox,
+# VMware) run Wayland fine, so say so up front instead of falling back to Xorg, which is not installed.
+mkdir -p /run/udev /run/gdm3 /var/lib/gdm3 /var/log/gdm3
+touch /run/udev/gdm-machine-has-hardware-gpu
+chown Debian-gdm:Debian-gdm /run/gdm3 /var/lib/gdm3 /var/log/gdm3 2>/dev/null
+exec /usr/bin/gdm3
