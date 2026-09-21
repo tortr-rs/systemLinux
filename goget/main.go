@@ -21,6 +21,8 @@ func printUsage(prog string) {
 			"                  is given) -- templates, not submission-ready recipes\n"+
 			"  config          print current configuration\n"+
 			"  makeuser        create a new user account (requires root)\n"+
+			"  upgrade [--check] [--yes]\n"+
+			"                  update an installed systemLinux to the newest signed image\n"+
 			"  provision [--user NAME] <root>\n"+
 			"                  brand an install target (issue, os-release, login banner)\n"+
 			"                  and optionally create its first user (requires root)\n",
@@ -354,6 +356,9 @@ func main() {
 
 	case "makeuser":
 		os.Exit(makeuserRun())
+
+	case "upgrade":
+		os.Exit(upgradeRun(os.Args[2:]))
 
 	case "provision":
 		os.Exit(provisionRun(os.Args[2:]))

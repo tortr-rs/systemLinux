@@ -100,7 +100,9 @@ if os.environ.get('LIB_OVERRIDE') == '1' and os.path.isdir(ma):
         for lib in needed(p):
             seen.add(lib)
             q = find_lib(lib)
-            if q: todo.append(q)
+            if q:
+                seen.add(os.path.basename(q))   # the versioned file behind the soname must stay the base's too
+                todo.append(q)
     keep = forced = 0
     os.makedirs(OV + '/usr/lib64', exist_ok=True)
     for f in sorted(os.listdir(ma)):

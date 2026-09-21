@@ -14,3 +14,4 @@ rootfs/etc/ssl/private/
 tools/kernel-full/vmlinuz-*
 *.squashfs
 old-ramdisk/
+update.key

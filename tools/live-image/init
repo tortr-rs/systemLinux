@@ -2,6 +2,8 @@
 # systemLinux live init (runs from the small initramfs, as every live ISO does):
 #   find the live medium -> mount /live/rootfs.squashfs -> overlay a tmpfs on it -> switch_root to systemL.
 # Kernel command line options:
+#   systeml.image=PATH systeml.data=UUID=...   INSTALLED mode: mount the squashfs image PATH (relative to the
+#                      data partition) with a persistent overlay stored on the data partition
 #   systeml.iso=PATH   prefer this ISO file on the medium's partition (e.g. an ISO on a Ventoy stick)
 #   systeml.toram=1    copy the squashfs into RAM first (the stick can then be removed)
 #   systeml.wait=N     seconds to wait for the medium to appear (default 60)
@@ -23,10 +25,12 @@ emergency() {
     setsid cttyhack sh
 }
 
-ISO_HINT= DEBUG=0 SHELL_FIRST=0 TORAM=0 WAIT=60
+ISO_HINT= DEBUG=0 SHELL_FIRST=0 TORAM=0 WAIT=60 IMAGE= DATA=
 for a in $(cat /proc/cmdline); do
     case "$a" in
         systeml.iso=*)   ISO_HINT=${a#systeml.iso=} ;;
+        systeml.image=*) IMAGE=${a#systeml.image=} ;;
+        systeml.data=*)  DATA=${a#systeml.data=} ;;
         systeml.debug=1) DEBUG=1 ;;
         systeml.shell=1) SHELL_FIRST=1 ;;
         systeml.toram=1) TORAM=1 ;;
@@ -65,34 +69,68 @@ scan_once() {
     return 1
 }
 
-while :; do
+if [ -n "$IMAGE" ]; then
+    # ---- installed system: image + persistent overlay on the data partition
     i=0
-    until scan_once; do
+    DEV=
+    while :; do
+        DEV=$(findfs "$DATA" 2>/dev/null) && [ -n "$DEV" ] && break
         i=$((i + 1))
-        if [ "$i" -ge "$WAIT" ]; then break; fi
-        [ "$i" = 1 ] && log "waiting for the live medium..."
+        if [ "$i" -ge "$WAIT" ]; then
+            emergency "could not find the system disk ($DATA)"
+            i=0
+        fi
+        [ "$i" = 1 ] && log "waiting for the system disk..."
         sleep 1
     done
-    [ -n "${MEDIUM:-}" ] && break
-    emergency "could not find the live medium (a device with /live/rootfs.squashfs)"
-done
-# (quiet on purpose: only waiting/failure messages are printed)
+    mkdir -p /mnt/data
+    until mount -t ext4 -o rw "$DEV" /mnt/data; do
+        emergency "could not mount $DEV"
+    done
+    SQ=/mnt/data$IMAGE
+    [ -f "$SQ" ] || emergency "image $SQ not found on $DEV"
+    mkdir -p /mnt/squash /mnt/data/persist/upper /mnt/data/persist/work
+    until mount -t squashfs -o loop,ro "$SQ" /mnt/squash; do
+        emergency "could not mount $SQ"
+    done
+    until mount -t overlay overlay -o lowerdir=/mnt/squash,upperdir=/mnt/data/persist/upper,workdir=/mnt/data/persist/work /newroot; do
+        emergency "could not create the overlay root"
+    done
+    mkdir -p /newroot/data
+    mount --move /mnt/data /newroot/data
+else
+    while :; do
+        i=0
+        until scan_once; do
+            i=$((i + 1))
+            if [ "$i" -ge "$WAIT" ]; then break; fi
+            [ "$i" = 1 ] && log "waiting for the live medium..."
+            sleep 1
+        done
+        [ -n "${MEDIUM:-}" ] && break
+        emergency "could not find the live medium (a device with /live/rootfs.squashfs)"
+    done
+    # (quiet on purpose: only waiting/failure messages are printed)
 
-SQ=$MEDIUM/live/rootfs.squashfs
-if [ "$TORAM" = 1 ]; then
-    log "copying the system into RAM (this takes a moment)..."
-    cp "$SQ" /rootfs.squashfs && SQ=/rootfs.squashfs
+    SQ=$MEDIUM/live/rootfs.squashfs
+    if [ "$TORAM" = 1 ]; then
+        log "copying the system into RAM (this takes a moment)..."
+        cp "$SQ" /rootfs.squashfs && SQ=/rootfs.squashfs
+    fi
+
+    mkdir -p /mnt/squash
+    until mount -t squashfs -o loop,ro "$SQ" /mnt/squash; do
+        emergency "could not mount $SQ"
+    done
+    mount -t tmpfs -o size=75% tmpfs /overlay
+    mkdir -p /overlay/upper /overlay/work
+    until mount -t overlay overlay -o lowerdir=/mnt/squash,upperdir=/overlay/upper,workdir=/overlay/work /newroot; do
+        emergency "could not create the overlay root"
+    done
+    # keep the live medium reachable for the installer (it copies the image from here)
+    mkdir -p /newroot/live-medium
+    mount --move "$MEDIUM" /newroot/live-medium
 fi
-
-mkdir -p /mnt/squash
-until mount -t squashfs -o loop,ro "$SQ" /mnt/squash; do
-    emergency "could not mount $SQ"
-done
-mount -t tmpfs -o size=75% tmpfs /overlay
-mkdir -p /overlay/upper /overlay/work
-until mount -t overlay overlay -o lowerdir=/mnt/squash,upperdir=/overlay/upper,workdir=/overlay/work /newroot; do
-    emergency "could not create the overlay root"
-done
 
 mount --move /proc /newroot/proc
 mount --move /sys /newroot/sys

@@ -303,8 +303,16 @@ func mountCore() {
 			logf("mkdir %s: %v", d, err)
 		}
 	}
-	if err := os.Chmod("/tmp", 0o1777); err != nil {
+	if err := os.Chmod("/tmp", 0o777|os.ModeSticky); err != nil {
 		logf("chmod /tmp: %v", err)
+	}
+	// the sticky socket directories X11, Wayland's Xwayland and ICE need (systemd creates them with tmpfiles)
+	for _, d := range []string{"/tmp/.X11-unix", "/tmp/.ICE-unix", "/tmp/.font-unix", "/tmp/.XIM-unix"} {
+		if err := os.MkdirAll(d, 0o755); err != nil {
+			logf("mkdir %s: %v", d, err)
+			continue
+		}
+		os.Chmod(d, 0o777|os.ModeSticky) // Go needs ModeSticky: the numeric 01000 bit is not part of Perm()
 	}
 }
 
@@ -615,9 +623,118 @@ func main() {
 	go handleSignals()
 	serveControl()
 
+	go markBootGood() // installed images: a trial boot becomes the default once the system has stayed up
+	go serialShell()  // systeml.serial=1: a root shell on the first serial port (debugging, VMs, headless boards)
 	udev := startUdev()
 	go mountFstab(udev)
 	startNetworking()
 	startConfiguredServices()
 	consoleShell()
+}
+
+// serialShell runs a respawning root shell on /dev/ttyS0 when the kernel command line has
+// systeml.serial=1 (add console=ttyS0 to see kernel messages there too).
+func serialShell() {
+	b, err := os.ReadFile("/proc/cmdline")
+	if err != nil || !strings.Contains(string(b), "systeml.serial=1") {
+		return
+	}
+	for !shuttingDown.Load() {
+		f, err := os.OpenFile("/dev/ttyS0", os.O_RDWR, 0)
+		if err != nil {
+			time.Sleep(2 * time.Second)
+			continue
+		}
+		cmd := exec.Command("/bin/sh")
+		cmd.Args = []string{"-sh"}
+		cmd.Stdin, cmd.Stdout, cmd.Stderr = f, f, f
+		cmd.Env = []string{"PATH=" + defaultPath, "HOME=/root", "USER=root", "LOGNAME=root", "SHELL=/bin/sh", "TERM=vt100"}
+		cmd.Dir = "/"
+		cmd.SysProcAttr = &syscall.SysProcAttr{Setsid: true, Setctty: true, Ctty: 0}
+		began := time.Now()
+		_, ch, err := start(cmd)
+		f.Close()
+		if err != nil {
+			time.Sleep(2 * time.Second)
+			continue
+		}
+		<-ch
+		if time.Since(began) < 500*time.Millisecond {
+			time.Sleep(time.Second)
+		}
+	}
+}
+
+// cmdlineValue returns the value of key (e.g. "systeml.version=") on the kernel command line.
+func cmdlineValue(cmdline, key string) string {
+	for _, f := range strings.Fields(cmdline) {
+		if strings.HasPrefix(f, key) {
+			return strings.TrimPrefix(f, key)
+		}
+	}
+	return ""
+}
+
+// capture runs a command and returns its standard output.
+func capture(name string, args ...string) (string, error) {
+	r, w, err := os.Pipe()
+	if err != nil {
+		return "", err
+	}
+	cmd := exec.Command(name, args...)
+	cmd.Stdout = w
+	_, ch, err := start(cmd)
+	w.Close()
+	if err != nil {
+		r.Close()
+		return "", err
+	}
+	var sb strings.Builder
+	buf := make([]byte, 4096)
+	for {
+		n, err := r.Read(buf)
+		sb.Write(buf[:n])
+		if err != nil {
+			break
+		}
+	}
+	r.Close()
+	if code := <-ch; code != 0 {
+		return sb.String(), fmt.Errorf("%s exited with status %d", name, code)
+	}
+	return sb.String(), nil
+}
+
+// markBootGood makes a trial boot permanent. `goget upgrade` boots a new image once (grub-reboot);
+// if the system stays up for a minute, that image works, so it becomes GRUB's default. If it never
+// gets here (crash, hang, power cycle) the next boot falls back to the previous default.
+func markBootGood() {
+	b, err := os.ReadFile("/proc/cmdline")
+	if err != nil {
+		return
+	}
+	ver := cmdlineValue(string(b), "systeml.version=")
+	if ver == "" || cmdlineValue(string(b), "systeml.image=") == "" {
+		return // the live medium, or a system without versioned images
+	}
+	time.Sleep(60 * time.Second)
+	out, err := capture("grub-editenv", "/data/boot/grub/grubenv", "list")
+	if err != nil {
+		logf("boot check: cannot read grubenv: %v", err)
+		return
+	}
+	saved := ""
+	for _, line := range strings.Split(out, "\n") {
+		if strings.HasPrefix(line, "saved_entry=") {
+			saved = strings.TrimPrefix(line, "saved_entry=")
+		}
+	}
+	if saved == ver {
+		return
+	}
+	if err := run("grub-set-default", "--boot-directory=/data/boot", ver); err != nil {
+		logf("boot check: could not make %s the default: %v", ver, err)
+		return
+	}
+	logf("image %s booted fine and is now the default (was %q)", ver, saved)
 }

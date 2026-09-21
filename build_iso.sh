@@ -1,26 +1,25 @@
 #!/bin/bash
-# systemLinux v0.4 ISO build: a normal live ISO (small initramfs + /live/rootfs.squashfs, mounted
+# systemLinux v0.5 ISO build: a normal live ISO (small initramfs + /live/rootfs.squashfs, mounted
 # with an overlayfs; nothing is loaded into a RAM disk), with systemL as init, goget, boot/disk
-# tools, the full-driver kernel, firmware and (for xfce) the desktop, installer and Firefox.
+# tools, the full-driver kernel, firmware and (for gnome) the desktop, installer and Firefox.
 #
-#   VARIANT=minimal ./build_iso.sh    -> systemlinux-v0.4-minimal.iso  (root shell, console only)
-#   VARIANT=xfce    ./build_iso.sh    -> systemlinux-v0.4-xfce.iso     (live XFCE desktop)
-#   VARIANT=gnome   ./build_iso.sh    -> systemlinux-v0.4-gnome.iso    (live GNOME desktop on elogind)
+#   VARIANT=minimal ./build_iso.sh    -> systemlinux-v0.5-minimal.iso  (root shell, console only)
+#   VARIANT=gnome   ./build_iso.sh    -> systemlinux-<version>-gnome.iso  (live GNOME desktop on elogind, installable, updatable)
 #
 # Run from a normal terminal (sudo needs a password prompt). Needs a Debian host with
 # grub-mkrescue, xorriso, mtools, squashfs-tools, cpio and apt.
 set -euo pipefail
 
 VARIANT=${VARIANT:-minimal}
-case "$VARIANT" in minimal|xfce|gnome) ;; *) echo "VARIANT must be minimal, xfce or gnome"; exit 1 ;; esac
+case "$VARIANT" in minimal|gnome) ;; *) echo "VARIANT must be minimal or gnome"; exit 1 ;; esac
 
 BUILD_DIR=$(cd "$(dirname "$0")" && pwd)
 ROOTFS=$BUILD_DIR/rootfs
 WORKSPACE=$BUILD_DIR/iso_workspace
 # the "full" kernel is the same Linux 7.2.6 with drivers for almost everything built in
 KERNEL=${KERNEL:-$BUILD_DIR/tools/kernel-full/vmlinuz-7.2.6-full}
-ISO=${ISO:-$BUILD_DIR/systemlinux-v0.4-$VARIANT.iso}
-XFCE_WORK=${XFCE_WORK:-$HOME/.cache/systemlinux-xfce}
+IMAGE_VERSION=$(cat "$BUILD_DIR/VERSION")
+ISO=${ISO:-$BUILD_DIR/systemlinux-v$IMAGE_VERSION-$VARIANT.iso}
 FW_WORK=${FW_WORK:-$HOME/.cache/systemlinux-firmware}
 GNOME_WORK=${GNOME_WORK:-$HOME/.cache/systemlinux-gnome}
 cd "$BUILD_DIR"
@@ -132,12 +131,8 @@ echo "=== [5b/8] BUILDING THE FIRMWARE OVERLAY FROM DEBIAN ==="
 # Built-in drivers load firmware while the kernel initialises, so it goes into the initramfs;
 # it also stays in the squashfs for devices plugged in later.
 WORK=$FW_WORK "$BUILD_DIR/tools/firmware-overlay/build-overlay.sh"
-ROOTFS=$ROOTFS python3 "$BUILD_DIR/tools/xfce-overlay/mkcpio.py" "$FW_WORK/ov5.cpio" "$FW_WORK/ov5"
+ROOTFS=$ROOTFS python3 "$BUILD_DIR/tools/overlay-common/mkcpio.py" "$FW_WORK/ov5.cpio" "$FW_WORK/ov5"
 
-if [ "$VARIANT" = xfce ]; then
-    echo "=== [5c/8] BUILDING THE XFCE OVERLAY FROM DEBIAN ==="
-    WORK=$XFCE_WORK ROOTFS=$ROOTFS "$BUILD_DIR/tools/xfce-overlay/build-overlay.sh"
-fi
 if [ "$VARIANT" = gnome ]; then
     echo "=== [5c/8] BUILDING THE GNOME OVERLAY FROM DEBIAN ==="
     WORK=$GNOME_WORK ROOTFS=$ROOTFS "$BUILD_DIR/tools/gnome-overlay/build-overlay.sh"
@@ -148,16 +143,18 @@ STAGE=$WORKSPACE/stage
 sudo mkdir -p "$STAGE"
 sudo cp -a "$ROOTFS/." "$STAGE/"
 sudo cp -a "$FW_WORK/ov5/." "$STAGE/"
-if [ "$VARIANT" = xfce ]; then
-    sudo cp -a "$XFCE_WORK/ov3/." "$STAGE/"
-    sudo cp -a "$XFCE_WORK/ov4/." "$STAGE/"
-fi
 if [ "$VARIANT" = gnome ]; then
     sudo cp -a "$GNOME_WORK/ov3/." "$STAGE/"
     sudo cp -a "$GNOME_WORK/ov4/." "$STAGE/"
     # the live user GNOME logs in as (systemL autologin on tty1); the installer removes it again
     sudo useradd -R "$STAGE" -m -u 1000 -U -s /bin/bash -c "Live user" -G wheel,audio,video,input,users,plugdev live
     sudo usermod -R "$STAGE" -p '' live
+    # system users the D-Bus policies name: they must exist when the system bus starts (its policy is keyed by
+    # user name), otherwise polkit and others cannot own their bus names
+    for u in "polkitd 995" "colord 996" "pulse 994"; do
+        set -- $u
+        sudo useradd -R "$STAGE" -r -u "$2" -U -M -d / -s /bin/false "$1"
+    done
     # slim the GNOME image: GitHub release files must stay under 2 GiB. Nothing a user needs is removed
     # (the Go compiler stays); the Go bootstrap toolchain, docs, base translations and extra wallpapers go.
     sudo rm -rf "$STAGE/usr/lib/go-bootstrap" "$STAGE/usr/share/locale" "$STAGE/usr/share/man" "$STAGE/usr/share/doc" \
@@ -166,6 +163,7 @@ if [ "$VARIANT" = gnome ]; then
     sudo find "$STAGE/usr/share/backgrounds" -mindepth 1 -maxdepth 1 ! -name systemlinux -exec rm -rf {} +
     sudo rm -f "$STAGE"/usr/lib/x86_64-linux-gnu/libvulkan_*.so* "$STAGE"/usr/lib64/libvulkan_*.so*
 fi
+echo "$IMAGE_VERSION" | sudo tee "$STAGE/usr/share/systemlinux/image-version" >/dev/null
 sudo install -Dm644 "$KERNEL" "$STAGE/boot/vmlinuz"
 sudo mksquashfs "$STAGE" "$WORKSPACE/live/rootfs.squashfs" -comp zstd -Xcompression-level 19 -b 1M -noappend -no-xattrs
 sudo rm -rf "$STAGE"
@@ -179,7 +177,7 @@ cat > "$WORKSPACE/boot/grub/grub.cfg" << GRUBEOF
 set default=0
 set timeout=3
 
-menuentry "systemLinux v0.4 ($VARIANT)" {
+menuentry "systemLinux $IMAGE_VERSION ($VARIANT)" {
     # Use the device GRUB booted from (works under Ventoy's loopback); only search if the
     # kernel isn't there, so another disk's /live/vmlinuz is never picked up.
     if [ ! -f /live/vmlinuz ]; then
@@ -189,7 +187,7 @@ menuentry "systemLinux v0.4 ($VARIANT)" {
     initrd /live/initrd.img
 }
 
-menuentry "systemLinux v0.4 ($VARIANT, copy to RAM)" {
+menuentry "systemLinux $IMAGE_VERSION ($VARIANT, copy to RAM)" {
     if [ ! -f /live/vmlinuz ]; then
         search --no-floppy --set=root --file /live/vmlinuz
     fi
@@ -197,7 +195,7 @@ menuentry "systemLinux v0.4 ($VARIANT, copy to RAM)" {
     initrd /live/initrd.img
 }
 
-menuentry "systemLinux v0.4 ($VARIANT, debug shell)" {
+menuentry "systemLinux $IMAGE_VERSION ($VARIANT, debug shell)" {
     if [ ! -f /live/vmlinuz ]; then
         search --no-floppy --set=root --file /live/vmlinuz
     fi

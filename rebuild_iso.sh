@@ -1,41 +1,21 @@
 #!/bin/bash
-# systemLinux v0.2 Automated Monolithic Construction Pipeline
+# Rebuild the systemLinux ISO from the existing rootfs (build steps 4-7 of
+# mega_build_v0.2.sh: no bbash/evim clones, rootfs is kept as-is).
+# Usage: ./rebuild_iso.sh   (override output name with ISO=name.iso)
 set -e
 
-# Establish core system path anchors
 export BUILD_DIR=~/systemlinux
 export ROOTFS=$BUILD_DIR/rootfs
 export WORKSPACE=$BUILD_DIR/iso_workspace
+ISO=${ISO:-systemlinux-v0.3.iso}
 
-echo "=== [1/7] WIPING PREVIOUS STAGING BLOCKS ==="
-sudo rm -rf "$WORKSPACE" "$BUILD_DIR/systemlinux-v0.2.iso" "$BUILD_DIR/bbash_source" "$BUILD_DIR/evim_source"
+echo "=== [0/7] INSTALLING FRESH goget INTO ROOTFS ==="
+(cd "$BUILD_DIR/goget" && make)
+sudo install -m755 "$BUILD_DIR/goget/goget" "$ROOTFS/usr/bin/goget"
+sudo install -m755 "$BUILD_DIR/goget/goget" "$ROOTFS/usr/local/bin/goget"
+
+sudo rm -rf "$WORKSPACE" "$BUILD_DIR/$ISO"
 mkdir -p "$WORKSPACE/live" "$WORKSPACE/boot/grub"
-
-echo "=== [2/7] FETCHING AND NATIVELY COMPILING BBASH SOURCE ==="
-sudo apt-get update && sudo apt-get install -y libarchive-dev
-
-# COMPLETELY FLAT URL WITH NO BLANK VARIABLES
-git clone https://github.com /home/torter/systemlinux/bbash_source
-
-cd /home/torter/systemlinux/bbash_source
-./configure --prefix=/
-make -j$(nproc)
-sudo cp ./bash /home/torter/systemlinux/rootfs/bin/bbash
-sudo chmod +x /home/torter/systemlinux/rootfs/bin/bbash
-cd /home/torter/systemlinux
-
-# Force establish internal system identity shell links to bbash
-cd /home/torter/systemlinux/rootfs/bin
-sudo ln -sf bbash bash
-sudo ln -sf bbash sh
-cd /home/torter/systemlinux
-
-echo "=== [3/7] INJECTING EVIM MODAL TEXT EDITOR RUNTIME ==="
-# COMPLETELY FLAT URL WITH NO BLANK VARIABLES
-git clone https://github.com /home/torter/systemlinux/evim_source
-
-sudo cp /home/torter/systemlinux/evim_source/evim.py /home/torter/systemlinux/rootfs/usr/bin/evim
-sudo chmod +x /home/torter/systemlinux/rootfs/usr/bin/evim
 
 echo "=== [4/7] MOUNTING CORE INTERFACES AND DEPLOYING COMPILERS ==="
 # 1. Bind host virtual subsystems to unlock chroot network and device tracking loops
@@ -215,10 +195,10 @@ menuentry "systemLinux v0.2 (Source-First bbash Workspace)" {
 EOF
 
 # Build final bootable media image
-grub-mkrescue -o ./systemlinux-v0.2.iso /home/torter/systemlinux/iso_workspace
+grub-mkrescue -o "$BUILD_DIR/$ISO" /home/torter/systemlinux/iso_workspace
 sudo rm -rf /home/torter/systemlinux/iso_workspace
 
 echo "================================================================"
 echo "  SUCCESS: systemLinux v0.2 Monolithic Media Asset Completed! "
-echo " Move systemlinux-v0.2.iso to Ventoy and kick off your IdeaPad! "
+echo " Move $ISO to Ventoy and kick off your IdeaPad! "
 echo "================================================================"

@@ -1,12 +1,12 @@
 #!/bin/bash
 # Build the GNOME live overlay from Debian packages (needs a Debian host with apt; no root).
-# Reuses the merge/post/check scripts of tools/xfce-overlay. Debian's GTK/GNOME libraries take
+# Reuses the merge/post/check scripts of tools/overlay-common. Debian's GTK/GNOME libraries take
 # precedence over the base's (see LIB_OVERRIDE in merge.py); the base system's own daemons keep theirs.
 # Output: $WORK/ov3 (Debian files not already in the rootfs) and $WORK/ov4 (session files).
 # usage: WORK=~/.cache/systemlinux-gnome ROOTFS=/path/to/rootfs ./build-overlay.sh
 set -euo pipefail
 HERE=$(cd "$(dirname "$0")" && pwd)
-X=$HERE/../xfce-overlay
+X=$HERE/../overlay-common
 export WORK=${WORK:-$HOME/.cache/systemlinux-gnome}
 export ROOTFS=${ROOTFS:-$HERE/../../rootfs}
 export LIB_OVERRIDE=1

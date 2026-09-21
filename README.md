@@ -6,23 +6,24 @@
   <img src="assets/logo.png" alt="systemLinux logo: a white cat face on a purple circle" width="160">
 </p>
 
-# systemLinux v0.4
+# systemLinux v0.5
 
 A minimal x86_64 GNU/Linux distribution built on a custom monolithic kernel, a
 from-scratch Go init (`systemL`), and a GNU userland on a Gentoo base (GNU bash 5.3 is
 `/bin/bash` and `/bin/sh`, GNU coreutils, tar, sed, gawk, findutils; the `bbash` fork stays
 installed as its own command). It boots like any live
 ISO (a compressed `rootfs.squashfs` on the ISO with a RAM layer on top), in a
-**minimal** console edition or a live **GNOME** or **XFCE** desktop edition, and can be
-installed to disk with the graphical installer (desktop editions) or the handbook below.
+**minimal** console edition or a live **GNOME** desktop edition, and can be
+installed to disk with the graphical installer or the handbook below. Installed systems update with
+`goget upgrade`: a signed system image is downloaded, swapped in at the next reboot with your files kept,
+and a failed trial boot rolls back on its own.
 
-Website: `website/index.html` · Downloads: GitHub release `v0.4`
+Website: `website/index.html` · Downloads: GitHub release `v0.5`
 
 | Edition | File | Size | RAM needed |
 |---|---|---|---|
-| GNOME | `systemlinux-v0.4-gnome.iso` | 2.1 GB | about 6 GB recommended |
-| XFCE | `systemlinux-v0.4-xfce.iso` | 2.1 GB | about 4 GB recommended |
-| Minimal | `systemlinux-v0.4-minimal.iso` | 1.8 GB | about 2 GB |
+| GNOME | `systemlinux-v0.5-gnome.iso` | 2.1 GB | about 6 GB recommended |
+| Minimal | `systemlinux-v0.5-minimal.iso` | 1.8 GB | about 2 GB |
 
 Boot in **UEFI mode** (legacy BIOS boot has not been tested with the current live layout).
 Each ISO has three GRUB entries: normal, *copy to RAM* (loads the whole system into memory
@@ -49,18 +50,16 @@ so the stick can be removed), and *debug shell* (stops just before the real syst
 * **Desktop (GNOME edition):** GNOME 48 (Wayland) with Nautilus, Console, Settings and Firefox ESR,
   from Debian packages layered onto the base (`tools/gnome-overlay/`). Without systemd it runs on
   **elogind** (sessions/seats) and **polkit**, both started by systemL; the GNOME libraries take
-  precedence over the base's same-named ones (`LIB_OVERRIDE` in `tools/xfce-overlay/merge.py`).
+  precedence over the base's same-named ones (`LIB_OVERRIDE` in `tools/overlay-common/merge.py`).
   The live session is an autologin user `live` on tty1 whose login shell starts GNOME
   (`/etc/profile.d/systemlinux-gnome.sh`, with a crash-loop guard); installed systems start GNOME
   from the tty1 login the same way.
-* **Desktop (XFCE edition):** XFCE 4.20 on X.org and Firefox ESR (home page:
-  `https://syslinux.chamesle.org/#about`), built from Debian packages layered onto the
-  Gentoo userland (`tools/xfce-overlay/`). The live session runs as root. A `loadkeys`
-  wrapper sets the console keymap and the X layout together.
-* **Installer:** the GNOME edition has a native GNOME (GTK4/libadwaita) installer,
-  `systemlinux-installer` (welcome, disk, account, region, summary, and a progress page with a
-  step list). The XFCE edition has a smaller yad-based wizard. Both erase one disk, copy the
-  system and install GRUB with the same steps as the handbook. The installed system asks for a login on tty1 and starts XFCE for your user.
+* **Installer:** a native GNOME (GTK4/libadwaita) installer, `systemlinux-installer` (welcome, disk, account,
+  region, summary, progress). It erases one disk, creates an EFI partition and a data partition, and installs
+  the system image plus GRUB; the installed system autologins to GNOME or asks for a login on tty1.
+* **Updates:** `goget upgrade` fetches the newest Ed25519-signed image (`latest.json`, SHA-256 per file),
+  adds it to GRUB as a one-shot trial and returns to the old image if it fails to boot. The persistent
+  layer (`/persist`) keeps your files and settings across updates.
 * **Packages:** `goget` for normal, self-contained programs (built from GitHub /
   GitLab / Codeberg source or a prebuilt release); `emerge` for large packages.
 * **Boot/disk tools:** GRUB 2.12 (BIOS + UEFI x86_64), `efibootmgr`, `dosfstools`,
@@ -89,7 +88,7 @@ Optional configuration under `/etc/systemL/`:
 
 * `login` (empty file): tty1 runs `agetty`/`login` instead of a root shell.
 * `services.conf`: extra daemons to supervise, one `<name> <command> [args...]` per line.
-  The XFCE edition uses it to start the desktop (`xfce /usr/local/bin/start-xfce`).
+  The GNOME edition uses it to start elogind and polkit.
 
 systemL's own messages go to `/run/log/systemL/systemL.log` and each service's output to
 `/run/log/systemL/<name>.log`; nothing is printed to the terminal (add `systeml.verbose=1` to the
@@ -101,16 +100,15 @@ overrides the console TTY (default `/dev/tty1`).
 Run on a Debian host, from a normal terminal (it uses `sudo`):
 
 ```sh
-VARIANT=minimal ./build_iso.sh    # systemlinux-v0.4-minimal.iso
-VARIANT=xfce    ./build_iso.sh    # systemlinux-v0.4-xfce.iso
-VARIANT=gnome   ./build_iso.sh    # systemlinux-v0.4-gnome.iso
+VARIANT=minimal ./build_iso.sh    # systemlinux-v0.5-minimal.iso
+VARIANT=gnome   ./build_iso.sh    # systemlinux-v0.5-gnome.iso
 ```
 
 The script builds `systemL`, `goget` and (once) the full kernel, installs them into
 `rootfs/`, links `init` to systemL, fixes the D-Bus launch helper permissions, brands
 the image with `goget provision`, injects GRUB, `efibootmgr` and `dosfstools` from Debian
 (checking that all their shared libraries resolve), builds the firmware overlay, and for
-the XFCE edition the desktop overlay (`tools/xfce-overlay/build-overlay.sh`). It then
+the GNOME edition the desktop overlay (`tools/gnome-overlay/build-overlay.sh`). It then
 compresses everything into `rootfs.squashfs` (zstd), builds the small initramfs, and
 masters the ISO with `grub-mkrescue`.
 
@@ -155,7 +153,7 @@ cat << 'EOF' > /mnt/target/boot/grub/grub.cfg
 set default=0
 set timeout=3
 
-menuentry "systemLinux v0.4 (Bare Metal)" {
+menuentry "systemLinux v0.5 (Bare Metal)" {
     linux /boot/vmlinuz root=/dev/nvme0n1p2 rootwait rw console=tty0 init=/sbin/systemL quiet loglevel=3
 }
 EOF
@@ -181,11 +179,6 @@ reboot
 * The live system keeps your changes only in RAM: they are lost on reboot until installed to disk.
 * Boot in UEFI mode; legacy BIOS boot has not been tested with the current live layout.
 * The graphical installer erases a whole disk; no resizing or dual boot yet.
-* The live XFCE session runs as root and has no login manager. Shutdown and
-  reboot from the XFCE menus do not work (no logind); use `reboot` / `poweroff`
-  in a terminal.
-* The desktop is Debian's XFCE stack on a Gentoo base, without a login manager
-  or power management.
 * The kernel includes Intel, AMD and the open NVIDIA (nouveau) graphics drivers, but not
   NVIDIA's proprietary driver; a driver whose firmware is not in the bundled set will not start.
 * The v0.2 `zram` swap unit and Plymouth splash are systemd-based and are not
@@ -199,12 +192,13 @@ reboot
 ├── systemL/              # PID 1 init (main.go, control.go)
 ├── goget/                # package manager (Go), README inside; includes `goget provision`
 ├── tools/gnome-overlay/  # builds the live GNOME overlay (elogind, polkit, installer app, session files)
-├── tools/xfce-overlay/   # builds the live XFCE overlay from Debian packages (+ installer scripts, Firefox policy)
+├── tools/overlay-common/ # shared overlay merge/post scripts
+├── tools/imagesign/      # signs update indexes (latest.json)
 ├── tools/kernel-full/    # builds the full-driver kernel (extra-config.txt applied to the base config)
 ├── tools/firmware-overlay/ # Debian firmware packages, xz-compressed
 ├── tools/live-image/     # live initramfs (busybox + init script)
 ├── website/index.html    # project site + handbook
-├── build_iso.sh          # ISO build pipeline (VARIANT=minimal|xfce)
+├── build_iso.sh          # ISO build pipeline (VARIANT=minimal|gnome)
 ├── mega_build_v0.2.sh    # older v0.2 build pipeline
 ├── kernel_7.2.6.config   # original kernel configuration
 ├── kernel_7.2.6-full.config # full-driver kernel configuration

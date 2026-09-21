@@ -1,19 +1,30 @@
 #!/bin/bash
-# systemLinux install backend (GNOME edition), run as root by the installer app.
+# systemLinux install backend, run as root by the installer app.
 # usage: systemlinux-install-run DISK HOSTNAME USERNAME TIMEZONE KEYMAP AUTOLOGIN(0|1)
 # stdin: root password line, user password line, full name line.
 # stdout: "@ PERCENT message" progress lines; everything else (and stderr) is log text.
+#
+# Layout it creates: [EFI system partition 512M] + one ext4 "data" partition holding
+#   /boot/images/<version>/{vmlinuz,initrd.img,rootfs.squashfs}   the system images (updated by `goget upgrade`)
+#   /boot/grub                                                      GRUB's menu and environment
+#   /persist/{upper,work}                                           the writable layer over the read-only image
+# The system boots the squashfs with that persistent overlay, exactly like the live ISO but persistent.
 set -euo pipefail
 DISK=$1 HOST=$2 USERN=$3 TZ=$4 KEYMAP=$5 AUTO=${6:-0}
 IFS= read -r ROOTPW
 IFS= read -r USERPW
 IFS= read -r FULLNAME || FULLNAME=
-ROOT=/mnt/target
-DUFILE=$(mktemp)
+DATA=/mnt/target-data
+SQ=/mnt/target-sq
+ROOT=/mnt/target-root
+MEDIUM=/live-medium
 
 step() { echo "@ $1 $2"; }
 fail() { echo "ERROR: $*"; exit 1; }
-cleanup() { sync; umount -R "$ROOT" 2>/dev/null || true; rm -f "$DUFILE"; }
+cleanup() {
+    sync
+    for m in "$ROOT" "$SQ" "$DATA/boot/efi" "$DATA"; do umount "$m" 2>/dev/null || true; done
+}
 trap cleanup EXIT
 part() { case "$DISK" in *[0-9]) echo "${DISK}p$1" ;; *) echo "${DISK}$1" ;; esac; }
 wait_for() { for _ in $(seq 1 50); do [ -b "$1" ] && return 0; sleep 0.2; done; fail "partition $1 did not appear"; }
@@ -25,10 +36,12 @@ grep -q "^$DISK" /proc/self/mounts && fail "$DISK has mounted partitions"
 [[ "$HOST" =~ ^[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?$ ]] || fail "invalid computer name"
 [ -n "$USERPW" ] || fail "empty password"
 [ -f "/usr/share/zoneinfo/$TZ" ] || TZ=UTC
+for f in vmlinuz initrd.img rootfs.squashfs; do
+    [ -f "$MEDIUM/live/$f" ] || fail "the live medium is not available ($MEDIUM/live/$f missing); boot the installer from the ISO"
+done
+VER=$(cat /usr/share/systemlinux/image-version 2>/dev/null || true)
+[ -n "$VER" ] || fail "this image has no version (/usr/share/systemlinux/image-version)"
 EFI=0; [ -d /sys/firmware/efi ] && EFI=1
-
-# size of the live system, measured in the background, for the copy progress bar
-( du -sxb / 2>/dev/null | cut -f1 > "$DUFILE" ) &
 
 step 3 "Erasing the disk"
 wipefs -a -f "$DISK" >/dev/null 2>&1 || true
@@ -39,46 +52,49 @@ SZ=$(blockdev --getsz "$DISK")
 step 8 "Creating partitions"
 if [ "$EFI" = 1 ]; then
     printf 'label: gpt\n,512M,U\n,,L\n' | sfdisk --wipe always --wipe-partitions always "$DISK"
-    ESPDEV=$(part 1); ROOTDEV=$(part 2)
+    ESPDEV=$(part 1); DATADEV=$(part 2)
 else
     printf 'label: dos\n,,L,*\n' | sfdisk --wipe always --wipe-partitions always "$DISK"
-    ESPDEV=; ROOTDEV=$(part 1)
+    ESPDEV=; DATADEV=$(part 1)
 fi
 blockdev --rereadpt "$DISK" || true
 udevadm settle --timeout=10 || true
 [ -z "$ESPDEV" ] || wait_for "$ESPDEV"
-wait_for "$ROOTDEV"
+wait_for "$DATADEV"
 
 step 14 "Formatting the disk"
 [ -z "$ESPDEV" ] || mkfs.vfat -F32 -n EFI "$ESPDEV"
-mkfs.ext4 -F -q -L systemLinux "$ROOTDEV"
+mkfs.ext4 -F -q -L systemLinux "$DATADEV"
+DUUID=$(blkid -s UUID -o value "$DATADEV")
 
-step 20 "Preparing the new system"
-mkdir -p "$ROOT"
-mount "$ROOTDEV" "$ROOT"
-if [ -n "$ESPDEV" ]; then mkdir -p "$ROOT/boot/efi"; mount "$ESPDEV" "$ROOT/boot/efi"; fi
+step 18 "Preparing the new system"
+mkdir -p "$DATA" "$SQ" "$ROOT"
+mount "$DATADEV" "$DATA"
+mkdir -p "$DATA/boot/images/$VER.part" "$DATA/persist/upper" "$DATA/persist/work" "$DATA/boot/efi"
+if [ -n "$ESPDEV" ]; then mount "$ESPDEV" "$DATA/boot/efi"; fi
 
-step 22 "Copying system files"
-/usr/local/bin/systemlinux-copy "$ROOT" &
-COPYPID=$!
-TOTAL=0
-while kill -0 "$COPYPID" 2>/dev/null; do
-    [ "$TOTAL" -gt 0 ] || TOTAL=$(cat "$DUFILE" 2>/dev/null || echo 0)
-    if [ "$TOTAL" -gt 0 ]; then
-        USED=$(df -B1 --output=used "$ROOT" | tail -n1 | tr -d ' ')
-        PCT=$(( 22 + USED * 60 / TOTAL ))
-        [ "$PCT" -gt 82 ] && PCT=82
-        step "$PCT" "Copying system files"
-    fi
-    sleep 3
+step 20 "Copying the system image"
+TOTAL=0; for f in vmlinuz initrd.img rootfs.squashfs; do TOTAL=$((TOTAL + $(stat -c %s "$MEDIUM/live/$f"))); done
+for f in vmlinuz initrd.img rootfs.squashfs; do
+    cp "$MEDIUM/live/$f" "$DATA/boot/images/$VER.part/$f" &
+    CPID=$!
+    while kill -0 "$CPID" 2>/dev/null; do
+        DONE=$(du -sb "$DATA/boot/images/$VER.part" | cut -f1)
+        step $(( 20 + DONE * 60 / TOTAL )) "Copying the system image"
+        sleep 2
+    done
+    wait "$CPID" || fail "copying $f failed"
 done
-wait "$COPYPID" || fail "copying the system files failed"
+sync
+mv "$DATA/boot/images/$VER.part" "$DATA/boot/images/$VER"
 
-step 84 "Saving your settings"
-RUUID=$(blkid -s UUID -o value "$ROOTDEV")
+step 82 "Saving your settings"
+mount -t squashfs -o loop,ro "$DATA/boot/images/$VER/rootfs.squashfs" "$SQ"
+mount -t overlay overlay -o "lowerdir=$SQ,upperdir=$DATA/persist/upper,workdir=$DATA/persist/work" "$ROOT"
 {
     echo "# /etc/fstab - generated by the systemLinux installer"
-    echo "UUID=$RUUID  /  ext4  defaults,errors=remount-ro  0  1"
+    echo "# the boot files live on the data partition (mounted at /data by the initramfs)"
+    echo "/data/boot  /boot  none  bind  0 0"
     if [ -n "$ESPDEV" ]; then echo "UUID=$(blkid -s UUID -o value "$ESPDEV")  /boot/efi  vfat  umask=0077  0  2"; fi
 } > "$ROOT/etc/fstab"
 echo "$HOST" > "$ROOT/etc/hostname"
@@ -113,10 +129,22 @@ groups=
 for g in users audio video input plugdev; do grep -q "^$g:" "$ROOT/etc/group" && groups="$groups,$g"; done
 [ -z "$groups" ] || usermod -R "$ROOT" -aG "${groups#,}" "$USERN"
 
-step 93 "Finishing the installed system"
+step 92 "Finishing the installed system"
 /usr/local/bin/systemlinux-post "$ROOT" "$USERN" "$AUTO"
+umount "$ROOT"; umount "$SQ"
 
-step 96 "Installing the bootloader"
-/usr/local/bin/systemlinux-bootloader "$ROOT"
+step 95 "Installing the bootloader"
+if [ "$EFI" = 1 ]; then
+    grub-install --target=x86_64-efi --efi-directory="$DATA/boot/efi" --boot-directory="$DATA/boot" --removable
+    if [ -d /sys/firmware/efi/efivars ]; then
+        PARTNUM=$(cat "/sys/class/block/$(basename "$ESPDEV")/partition")
+        efibootmgr -c -d "$DISK" -p "$PARTNUM" -L systemLinux -l '\EFI\BOOT\BOOTX64.EFI' || true
+    fi
+else
+    grub-install --target=i386-pc --boot-directory="$DATA/boot" "$DISK"
+fi
+/usr/local/bin/systemlinux-grubcfg "$DATA/boot" "$DUUID"
+grub-editenv "$DATA/boot/grub/grubenv" create
+grub-set-default --boot-directory="$DATA/boot" "$VER"
 
 step 100 "Done"
