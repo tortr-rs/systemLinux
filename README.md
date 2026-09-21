@@ -13,15 +13,16 @@ from-scratch Go init (`systemL`), and a GNU userland on a Gentoo base (GNU bash 
 `/bin/bash` and `/bin/sh`, GNU coreutils, tar, sed, gawk, findutils; the `bbash` fork stays
 installed as its own command). It boots like any live
 ISO (a compressed `rootfs.squashfs` on the ISO with a RAM layer on top), in a
-**minimal** console edition or an **XFCE** live desktop edition, and can be
-installed to disk with the graphical installer (XFCE edition) or the handbook below.
+**minimal** console edition or a live **GNOME** or **XFCE** desktop edition, and can be
+installed to disk with the graphical installer (desktop editions) or the handbook below.
 
 Website: `website/index.html` · Downloads: GitHub release `v0.4`
 
 | Edition | File | Size | RAM needed |
 |---|---|---|---|
-| XFCE | `systemlinux-v0.4-xfce.iso` | 2.0 GB | about 4 GB recommended |
-| Minimal | `systemlinux-v0.4-minimal.iso` | 1.7 GB | about 2 GB |
+| GNOME | `systemlinux-v0.4-gnome.iso` | 2.3 GB | about 6 GB recommended |
+| XFCE | `systemlinux-v0.4-xfce.iso` | 2.1 GB | about 4 GB recommended |
+| Minimal | `systemlinux-v0.4-minimal.iso` | 1.8 GB | about 2 GB |
 
 Boot in **UEFI mode** (legacy BIOS boot has not been tested with the current live layout).
 Each ISO has three GRUB entries: normal, *copy to RAM* (loads the whole system into memory
@@ -45,14 +46,21 @@ so the stick can be removed), and *debug shell* (stops just before the real syst
 * **Base:** Gentoo stage3 (glibc, systemd profile), with Portage and the Gentoo
   tree available for `emerge`.
 * **Networking:** NetworkManager, started by systemL together with udev and D-Bus.
+* **Desktop (GNOME edition):** GNOME 48 (Wayland) with Nautilus, Console, Settings and Firefox ESR,
+  from Debian packages layered onto the base (`tools/gnome-overlay/`). Without systemd it runs on
+  **elogind** (sessions/seats) and **polkit**, both started by systemL; the GNOME libraries take
+  precedence over the base's same-named ones (`LIB_OVERRIDE` in `tools/xfce-overlay/merge.py`).
+  The live session is an autologin user `live` on tty1 whose login shell starts GNOME
+  (`/etc/profile.d/systemlinux-gnome.sh`, with a crash-loop guard); installed systems start GNOME
+  from the tty1 login the same way.
 * **Desktop (XFCE edition):** XFCE 4.20 on X.org and Firefox ESR (home page:
   `https://syslinux.chamesle.org/#about`), built from Debian packages layered onto the
   Gentoo userland (`tools/xfce-overlay/`). The live session runs as root. A `loadkeys`
   wrapper sets the console keymap and the X layout together.
-* **Installer (XFCE edition):** the "Install systemLinux" desktop icon runs a small
-  graphical wizard (yad dialogs; `systemlinux-install` and `systemlinux-install-run`)
-  that erases one disk, copies the system, and installs GRUB, with the same steps as the
-  handbook. The installed system asks for a login on tty1 and starts XFCE for your user.
+* **Installer:** the GNOME edition has a native GNOME (GTK4/libadwaita) installer,
+  `systemlinux-installer` (welcome, disk, account, region, summary, and a progress page with a
+  step list). The XFCE edition has a smaller yad-based wizard. Both erase one disk, copy the
+  system and install GRUB with the same steps as the handbook. The installed system asks for a login on tty1 and starts XFCE for your user.
 * **Packages:** `goget` for normal, self-contained programs (built from GitHub /
   GitLab / Codeberg source or a prebuilt release); `emerge` for large packages.
 * **Boot/disk tools:** GRUB 2.12 (BIOS + UEFI x86_64), `efibootmgr`, `dosfstools`,
@@ -72,6 +80,7 @@ Control commands (root):
 
 ```sh
 systemL status                       # list supervised services
+systemL log [service]                # systemL prints nothing to the terminal; read its log (or a service's)
 systemL start|stop|restart <service>
 systemL reboot | poweroff | halt     # also available as reboot, poweroff, halt, shutdown [-r]
 ```
@@ -82,7 +91,9 @@ Optional configuration under `/etc/systemL/`:
 * `services.conf`: extra daemons to supervise, one `<name> <command> [args...]` per line.
   The XFCE edition uses it to start the desktop (`xfce /usr/local/bin/start-xfce`).
 
-Service logs are written to `/run/log/systemL/<name>.log`. `$SYSTEML_TTY`
+systemL's own messages go to `/run/log/systemL/systemL.log` and each service's output to
+`/run/log/systemL/<name>.log`; nothing is printed to the terminal (add `systeml.verbose=1` to the
+kernel command line to see it on screen, or use the "debug shell" GRUB entry). `$SYSTEML_TTY`
 overrides the console TTY (default `/dev/tty1`).
 
 ## Building the ISOs
@@ -92,6 +103,7 @@ Run on a Debian host, from a normal terminal (it uses `sudo`):
 ```sh
 VARIANT=minimal ./build_iso.sh    # systemlinux-v0.4-minimal.iso
 VARIANT=xfce    ./build_iso.sh    # systemlinux-v0.4-xfce.iso
+VARIANT=gnome   ./build_iso.sh    # systemlinux-v0.4-gnome.iso
 ```
 
 The script builds `systemL`, `goget` and (once) the full kernel, installs them into
@@ -186,6 +198,7 @@ reboot
 ```text
 ├── systemL/              # PID 1 init (main.go, control.go)
 ├── goget/                # package manager (Go), README inside; includes `goget provision`
+├── tools/gnome-overlay/  # builds the live GNOME overlay (elogind, polkit, installer app, session files)
 ├── tools/xfce-overlay/   # builds the live XFCE overlay from Debian packages (+ installer scripts, Firefox policy)
 ├── tools/kernel-full/    # builds the full-driver kernel (extra-config.txt applied to the base config)
 ├── tools/firmware-overlay/ # Debian firmware packages, xz-compressed

@@ -1,0 +1,19 @@
+#!/bin/sh
+# Installer job: turn the copied live system at $1 into the installed system for user $2 (autologin $3).
+set -e
+ROOT=$1 USERN=$2 AUTO=${3:-0}
+[ -d "$ROOT/etc" ] || { echo "target root $ROOT not found" >&2; exit 1; }
+
+# leave the live session behind: the live user, its home, its passwordless sudo and polkit rules
+userdel -R "$ROOT" -r live 2>/dev/null || true
+rm -rf "$ROOT/home/live"
+rm -f "$ROOT/etc/sudoers.d/20-live" "$ROOT/etc/polkit-1/rules.d/49-live.rules"
+
+# tty1: log in automatically, or ask for a login (GNOME starts from the login on tty1)
+mkdir -p "$ROOT/etc/systemL"
+rm -f "$ROOT/etc/systemL/autologin" "$ROOT/etc/systemL/login"
+if [ "$AUTO" = 1 ]; then echo "$USERN" > "$ROOT/etc/systemL/autologin"; else : > "$ROOT/etc/systemL/login"; fi
+
+# every install gets its own machine identity
+rm -f "$ROOT/etc/machine-id" "$ROOT/var/lib/dbus/machine-id"
+rm -f "$ROOT"/etc/ssh/ssh_host_*

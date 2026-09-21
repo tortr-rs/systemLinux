@@ -9,7 +9,8 @@
 // reboot | poweroff | halt. Invoked as reboot/poweroff/halt/shutdown it acts
 // as that command.
 //
-// Config (all optional): /etc/systemL/login makes tty1 run agetty/login
+// Config (all optional): /etc/systemL/autologin (a user name) logs that user in on tty1 automatically;
+// /etc/systemL/login makes tty1 run agetty/login
 // instead of an unauthenticated root shell; /etc/systemL/services.conf lists
 // extra daemons to supervise, one "<name> <command> [args...]" per line
 // (this is how `goget install` enables a display manager).
@@ -53,8 +54,62 @@ var (
 	shuttingDown atomic.Bool
 )
 
+// systemL's own messages go to /run/log/systemL/systemL.log, not to the terminal
+// (read them with `systemL log`). Add systeml.verbose=1 to the kernel command line to
+// see them on the console as well.
+var (
+	logMu      sync.Mutex
+	logFile    *os.File
+	logPending []string
+	logVerbose bool
+)
+
 func logf(format string, a ...any) {
-	fmt.Fprintf(os.Stderr, "[systemL] "+format+"\n", a...)
+	line := fmt.Sprintf("[systemL] "+format, a...)
+	logMu.Lock()
+	defer logMu.Unlock()
+	if logVerbose {
+		fmt.Fprintln(os.Stderr, line)
+	}
+	if logFile == nil {
+		logPending = append(logPending, line) // /run is not mounted yet: keep it until it is
+		return
+	}
+	fmt.Fprintln(logFile, line)
+}
+
+// openLog starts writing to the log file once /run exists and flushes what was kept so far.
+func openLog() {
+	if b, err := os.ReadFile("/proc/cmdline"); err == nil && strings.Contains(string(b), "systeml.verbose=1") {
+		logVerbose = true
+	}
+	if err := os.MkdirAll(logDir, 0o755); err != nil {
+		return
+	}
+	f, err := os.OpenFile(logDir+"/systemL.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0o644)
+	if err != nil {
+		return
+	}
+	logMu.Lock()
+	defer logMu.Unlock()
+	logFile = f
+	for _, l := range logPending {
+		fmt.Fprintln(f, l)
+	}
+	logPending = nil
+}
+
+// helperOutput is where the output of helper commands (mount -a, udevadm, ...) goes.
+func helperOutput() *os.File {
+	logMu.Lock()
+	defer logMu.Unlock()
+	if logFile != nil {
+		return logFile
+	}
+	if f, err := os.OpenFile("/dev/null", os.O_WRONLY, 0); err == nil {
+		return f
+	}
+	return os.Stderr
 }
 
 // ---- process management ------------------------------------------------
@@ -119,7 +174,8 @@ func start(cmd *exec.Cmd) (int, <-chan int, error) {
 // run executes a command to completion.
 func run(name string, args ...string) error {
 	cmd := exec.Command(name, args...)
-	cmd.Stdout, cmd.Stderr = os.Stderr, os.Stderr
+	out := helperOutput()
+	cmd.Stdout, cmd.Stderr = out, out
 	_, ch, err := start(cmd)
 	if err != nil {
 		return err
@@ -235,6 +291,7 @@ func mountCore() {
 	const secure = syscall.MS_NOSUID | syscall.MS_NODEV | syscall.MS_NOEXEC
 	mount("proc", "/proc", secure, "")
 	mount("sysfs", "/sys", secure, "")
+	mount("cgroup2", "/sys/fs/cgroup", secure, "") // elogind (GNOME sessions) tracks processes with it
 	mount("devtmpfs", "/dev", syscall.MS_NOSUID, "mode=0755")
 	mount("devpts", "/dev/pts", syscall.MS_NOSUID|syscall.MS_NOEXEC, "gid=5,mode=0620,ptmxmode=0666")
 	mount("tmpfs", "/dev/shm", syscall.MS_NOSUID|syscall.MS_NODEV, "mode=1777")
@@ -278,7 +335,7 @@ func setupDevLinks() {
 // printk = [console_loglevel, default_message_loglevel,
 // minimum_console_loglevel, default_console_loglevel].
 func silenceKernelLog() {
-	if err := os.WriteFile("/proc/sys/kernel/printk", []byte("3 4 1 3\n"), 0o644); err != nil {
+	if err := os.WriteFile("/proc/sys/kernel/printk", []byte("1 4 1 3\n"), 0o644); err != nil {
 		logf("failed to set printk silence level: %v", err)
 	}
 }
@@ -453,7 +510,19 @@ func consoleShell() {
 			"SHELL=/bin/sh", "TERM=linux",
 		}
 		var cmd *exec.Cmd
-		if agetty, err := exec.LookPath("agetty"); err == nil && pathExists(confDir+"/login") {
+		agetty, agettyErr := exec.LookPath("agetty")
+		autoUser := ""
+		if b, err := os.ReadFile(confDir + "/autologin"); err == nil {
+			autoUser = strings.TrimSpace(string(b))
+		}
+		if agettyErr == nil && autoUser != "" {
+			// Autologin (live session, or an installed system set to log in by itself): wait for the
+			// login-session daemon so the session is registered with it.
+			waitForPath("/run/systemd/seats/seat0", 15*time.Second)
+			cmd = exec.Command(agetty, "--autologin", autoUser, "--noclear", strings.TrimPrefix(tty, "/dev/"), "linux")
+			cmd.Env = env
+			cmd.SysProcAttr = &syscall.SysProcAttr{Setsid: true}
+		} else if agettyErr == nil && pathExists(confDir+"/login") {
 			// Installed system: agetty opens the tty itself and runs login.
 			cmd = exec.Command(agetty, "--noclear", strings.TrimPrefix(tty, "/dev/"), "linux")
 			cmd.Env = env
@@ -538,6 +607,7 @@ func main() {
 	initReaper()
 
 	mountCore()
+	openLog()
 	silenceKernelLog()
 	setupDevLinks()
 	setHostname()

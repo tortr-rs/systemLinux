@@ -76,7 +76,7 @@ while :; do
     [ -n "${MEDIUM:-}" ] && break
     emergency "could not find the live medium (a device with /live/rootfs.squashfs)"
 done
-log "live medium: $MEDIUM"
+# (quiet on purpose: only waiting/failure messages are printed)
 
 SQ=$MEDIUM/live/rootfs.squashfs
 if [ "$TORAM" = 1 ]; then

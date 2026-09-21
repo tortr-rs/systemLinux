@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>systemLinux 0.4 &mdash; a Linux distribution built from scratch</title>
-<meta name="description" content="systemLinux v0.4 &mdash; a live Linux distribution with a driver-rich monolithic kernel, its own init (systemL), a Gentoo userland and an optional live XFCE desktop with a graphical installer.">
+<meta name="description" content="systemLinux v0.4 &mdash; a live GNU/Linux distribution with a driver-rich monolithic kernel, its own init (systemL), and a minimal, XFCE or GNOME edition with a graphical installer.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2040%2040'%3E%3Ccircle%20cx='20'%20cy='20'%20r='20'%20fill='%2354487a'/%3E%3Cpath%20fill='%23fff'%20d='M9.5%2017%20L10.5%208%20L17.5%2012.2%20Q20%2011.6%2022.5%2012.2%20L29.5%208%20L30.5%2017%20Q31.5%2027.5%2020%2030.5%20Q8.5%2027.5%209.5%2017%20Z'/%3E%3Cg%20fill='%2354487a'%3E%3Cellipse%20cx='15.5'%20cy='19.5'%20rx='1.5'%20ry='2.2'/%3E%3Cellipse%20cx='24.5'%20cy='19.5'%20rx='1.5'%20ry='2.2'/%3E%3Cpath%20d='M18.6%2023.3%20L21.4%2023.3%20L20%2024.8%20Z'/%3E%3C/g%3E%3Cg%20fill='none'%20stroke-linecap='round'%3E%3Cpath%20stroke='%2354487a'%20stroke-width='1.1'%20d='M20%2024.8%20V26%20M20%2026%20Q18.6%2027.4%2017.4%2026.6%20M20%2026%20Q21.4%2027.4%2022.6%2026.6'/%3E%3Cpath%20stroke='%23fff'%20stroke-width='1'%20d='M13.5%2024%20L6.5%2022.8%20M13.5%2025.6%20L6.5%2027.2%20M26.5%2024%20L33.5%2022.8%20M26.5%2025.6%20L33.5%2027.2'/%3E%3C/g%3E%3C/svg%3E">
 <style>
 :root{
@@ -164,14 +164,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
   <div class="wrap">
     <div class="eyebrow">Release 0.4</div>
     <h1>A Linux distribution built from scratch.</h1>
-    <p class="lead">systemLinux is a GNU/Linux distribution: a custom monolithic kernel and its own init, <strong>systemL</strong>, with a GNU userland (GNU bash, coreutils, tar and more) on a Gentoo base. It boots like any live ISO, in a minimal console edition or with a live XFCE desktop, and you can install it to disk when you want it to stay.</p>
+    <p class="lead">systemLinux is a GNU/Linux distribution: a custom monolithic kernel and its own init, <strong>systemL</strong>, with a GNU userland (GNU bash, coreutils, tar and more) on a Gentoo base. It boots like any live ISO, in a minimal console edition or with a live GNOME or XFCE desktop, and you can install it to disk when you want it to stay.</p>
     <a class="btn primary" href="#download">Download the ISO</a>
     <a class="btn" href="#handbook">Read the Handbook</a>
     <div class="facts">
       <div class="fact"><b>Linux 7.2.6</b><span>drivers for almost everything built in</span></div>
       <div class="fact"><b>systemL</b><span>custom Go init, no systemd</span></div>
       <div class="fact"><b>Gentoo userland</b><span>glibc, Portage included</span></div>
-      <div class="fact"><b>Live XFCE 4.20</b><span>optional desktop edition</span></div>
+      <div class="fact"><b>GNOME 48 or XFCE 4.20</b><span>live desktop editions</span></div>
     </div>
   </div>
 </div>
@@ -183,7 +183,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
     <div class="cards">
       <div class="card"><h3>Its own init</h3><p>systemL runs as PID 1: it mounts the core filesystems, starts udev, D-Bus and NetworkManager, supervises them, and gives you a shell on tty1.</p></div>
       <div class="card"><h3>A real live ISO</h3><p>The system is a compressed image on the ISO with a writable RAM layer on top. Only your changes use memory, and your disks are untouched until you choose to install.</p></div>
-      <div class="card"><h3>Two editions</h3><p><strong>Minimal</strong> boots to a root shell. <strong>XFCE</strong> boots straight into a live desktop with Firefox and a graphical installer.</p></div>
+      <div class="card"><h3>Three editions</h3><p><strong>GNOME</strong> and <strong>XFCE</strong> boot straight into a live desktop with Firefox and a graphical installer. <strong>Minimal</strong> boots to a root shell.</p></div>
       <div class="card"><h3>Drivers for almost everything</h3><p>One kernel with Wi-Fi, Bluetooth, graphics (Intel, AMD, NVIDIA open driver), storage, sound and laptop drivers built in, and the firmware to go with them.</p></div>
       <div class="card"><h3>Source-first packages</h3><p><code>goget</code> builds programs from GitHub, GitLab and Codeberg. For large software such as desktop environments, use <code>emerge</code>.</p></div>
       <div class="card"><h3>Tested on real hardware</h3><p>Built with drivers for Lenovo IdeaPad and MSI machines, and run on bare metal rather than only in a virtual machine.</p></div>
@@ -203,8 +203,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
         <tr><th>Base system</th><td>Gentoo stage3 (glibc), Portage and the Gentoo tree included</td></tr>
         <tr><th>Networking</th><td>NetworkManager, with udev and D-Bus</td></tr>
         <tr><th>Package tools</th><td><code>goget</code> for everyday programs, <code>emerge</code> for large packages</td></tr>
-        <tr><th>Desktop</th><td>XFCE 4.20 on X.org with Firefox and the graphical installer (XFCE edition only); the live session runs as root</td></tr>
-        <tr><th>Memory</th><td>Minimal: about 2&nbsp;GB of RAM. XFCE: 4&nbsp;GB recommended. The &ldquo;copy to RAM&rdquo; boot entry also holds the whole 1.7&ndash;2&nbsp;GB image in memory, so add that on top</td></tr>
+        <tr><th>Desktop</th><td>GNOME 48 on Wayland (GNOME edition) with elogind and polkit instead of systemd, or XFCE 4.20 on X.org (XFCE edition). Both have Firefox and a graphical installer. The GNOME live session runs as a normal user (<code>live</code>), the XFCE one as root</td></tr>
+        <tr><th>Memory</th><td>Minimal: about 2&nbsp;GB of RAM. XFCE: 4&nbsp;GB recommended. GNOME: 6&nbsp;GB recommended. The &ldquo;copy to RAM&rdquo; boot entry also holds the whole 1.7&ndash;2&nbsp;GB image in memory, so add that on top</td></tr>
         <tr><th>Bootloader</th><td>GRUB 2.12 for BIOS and UEFI (x86_64), <code>efibootmgr</code></td></tr>
         <tr><th>Disk tools</th><td>util-linux, e2fsprogs, dosfstools</td></tr>
         <tr><th>Architecture</th><td>x86_64</td></tr>
@@ -219,16 +219,22 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
     <p class="sub">Live ISOs you can write to a USB stick or drop onto a Ventoy drive. Boot in <strong>UEFI mode</strong>.</p>
     <div class="cards">
       <div class="panel">
+        <h3>GNOME edition</h3>
+        <p>A live GNOME desktop (Wayland) with Firefox and the new graphical installer. 2.3&nbsp;GB, 6&nbsp;GB of RAM recommended. <em>New: less tested than the others.</em></p>
+        <p><a class="btn primary" href="https://github.com/tortr-rs/systemLinux/releases/download/v0.4/systemlinux-v0.4-gnome.iso">systemlinux-v0.4-gnome.iso</a></p>
+        <p><strong>SHA-256</strong><br><code class="hash">b3bdb97b342c84d7f3db1871803c97be7072efbe986a86d79afdd181ea1209c3</code></p>
+      </div>
+      <div class="panel">
         <h3>XFCE edition</h3>
-        <p>Boots into a live XFCE desktop with Firefox and the graphical installer. 2.0&nbsp;GB, 4&nbsp;GB of RAM recommended.</p>
+        <p>A live XFCE desktop with Firefox and the graphical installer. 2.1&nbsp;GB, 4&nbsp;GB of RAM recommended.</p>
         <p><a class="btn primary" href="https://github.com/tortr-rs/systemLinux/releases/download/v0.4/systemlinux-v0.4-xfce.iso">systemlinux-v0.4-xfce.iso</a></p>
-        <p><strong>SHA-256</strong><br><code class="hash">3462fdd6cb95c6e9fefb445d152b17c6495071692fbb247e26edfd2c0fc55416</code></p>
+        <p><strong>SHA-256</strong><br><code class="hash">edfc857ab70110114f651c7721d3606da2fe2b1f44bff33bb6a16047a7431bfd</code></p>
       </div>
       <div class="panel">
         <h3>Minimal edition</h3>
-        <p>Boots to a root shell on the console. 1.7&nbsp;GB, about 2&nbsp;GB of RAM.</p>
+        <p>Boots to a root shell on the console. 1.8&nbsp;GB, about 2&nbsp;GB of RAM.</p>
         <p><a class="btn primary" href="https://github.com/tortr-rs/systemLinux/releases/download/v0.4/systemlinux-v0.4-minimal.iso">systemlinux-v0.4-minimal.iso</a></p>
-        <p><strong>SHA-256</strong><br><code class="hash">42a96a18c32fa310a8e7c1cb4db404f14c4af97767e1872bfb454a359e9f5faf</code></p>
+        <p><strong>SHA-256</strong><br><code class="hash">57a8061f4ea3ea48c6c7d379d30c5d2350c3905a69c1f4a07881c65aa62a2f48</code></p>
       </div>
     </div>
     <p>Check your download with <code>sha256sum systemlinux-v0.4-*.iso</code>. Release notes and older versions are on the <a href="https://github.com/tortr-rs/systemLinux/releases/tag/v0.4">v0.4 release page</a> and on <a href="https://github.com/tortr-rs/systemLinux">GitHub</a>.</p>
@@ -240,7 +246,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 <section id="handbook">
   <div class="wrap">
     <h2>The systemLinux Handbook</h2>
-    <p class="sub">Installing systemLinux from the live environment to an internal disk. The XFCE edition also has a graphical installer: double-click <strong>Install systemLinux</strong> on the desktop, choose a disk, set your account and it does every step below for you (it erases the whole disk). The manual steps work from either edition.</p>
+    <p class="sub">Installing systemLinux from the live environment to an internal disk. The GNOME and XFCE editions also have a graphical installer: open <strong>Install systemLinux</strong> from the desktop, choose a disk, set your account and it does every step below for you (it erases the whole disk). The manual steps work from either edition.</p>
     <div class="note"><strong>Warning:</strong> this erases the target disk. Run every command as root from the live system. The examples use an NVMe drive (<code>/dev/nvme0n1</code>); for a SATA disk use <code>/dev/sda</code> with partitions <code>/dev/sda1</code> and <code>/dev/sda2</code>.</div>
 
     <div class="handbook">
@@ -356,6 +362,7 @@ reboot <span class="c"># remove the installation media on restart</span></code><
     <div class="table-scroll">
       <table>
         <tr><th><code>systemL status</code></th><td>List supervised services with state, PID, restarts and uptime</td></tr>
+        <tr><th><code>systemL log [service]</code></th><td>Show systemL&rsquo;s own log, or a service&rsquo;s. systemL prints nothing to the terminal; add <code>systeml.verbose=1</code> to the kernel command line to see its messages on screen</td></tr>
         <tr><th><code>systemL start|stop|restart &lt;service&gt;</code></th><td>Control a service (udevd, dbus, NetworkManager, or anything in <code>services.conf</code>)</td></tr>
         <tr><th><code>reboot</code> / <code>poweroff</code> / <code>halt</code></th><td>Power commands, also available as <code>systemL reboot|poweroff|halt</code></td></tr>
         <tr><th><code>/etc/systemL/login</code></th><td>If this file exists, tty1 asks for a login instead of opening a root shell</td></tr>
@@ -373,7 +380,8 @@ reboot <span class="c"># remove the installation media on restart</span></code><
     <ul>
       <li>The live system keeps your changes only in RAM, so they are lost on reboot until you install it to disk.</li>
       <li>Boot in UEFI mode. Legacy BIOS boot has not been tested with the current live layout.</li>
-      <li>The graphical installer erases a whole disk. It cannot resize partitions or set up dual boot yet.</li>
+      <li>The graphical installers erase a whole disk. It cannot resize partitions or set up dual boot yet.</li>
+      <li>The GNOME edition is new and less tested than the others. It runs GNOME under elogind and polkit rather than systemd, so anything that expects systemd may not work; it starts from the login on the first text console (tty1).</li>
       <li>The live XFCE session runs as root and has no login manager. Shutdown and reboot from the XFCE menus do not work (there is no logind); run <code>reboot</code> or <code>poweroff</code> in a terminal.</li>
       <li>The desktop comes from Debian packages layered onto the Gentoo userland. Software that needs more than that (for example a login manager or power management) is not included.</li>
       <li>The kernel includes Intel, AMD and the open NVIDIA (nouveau) graphics drivers, but not NVIDIA&rsquo;s proprietary driver. Drivers whose firmware is missing from the bundled set will not start.</li>

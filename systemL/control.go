@@ -204,6 +204,7 @@ func runControl(args []string) string {
 
 const usage = `usage: systemL <command>
   status                 list supervised services
+  log [service]          show systemL's own log, or a service's (nothing is printed to the terminal)
   start|stop|restart <service>
   reboot | poweroff | halt
 
@@ -229,6 +230,23 @@ func clientMain() int {
 	if len(args) == 0 || args[0] == "-h" || args[0] == "--help" {
 		fmt.Fprint(os.Stderr, usage)
 		return 2
+	}
+	if args[0] == "log" { // read a log file directly: `systemL log` (init's own) or `systemL log <service>`
+		name := "systemL"
+		if len(args) > 1 {
+			name = args[1]
+		}
+		if name == "" || strings.ContainsAny(name, "/\\") || strings.HasPrefix(name, ".") {
+			fmt.Fprintln(os.Stderr, "systemL: invalid log name")
+			return 1
+		}
+		b, err := os.ReadFile(logDir + "/" + name + ".log")
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "systemL: no log for %q (%v)\n", name, err)
+			return 1
+		}
+		os.Stdout.Write(b)
+		return 0
 	}
 	if os.Geteuid() != 0 {
 		fmt.Fprintln(os.Stderr, "systemL: must be root")

@@ -5,13 +5,14 @@
 #
 #   VARIANT=minimal ./build_iso.sh    -> systemlinux-v0.4-minimal.iso  (root shell, console only)
 #   VARIANT=xfce    ./build_iso.sh    -> systemlinux-v0.4-xfce.iso     (live XFCE desktop)
+#   VARIANT=gnome   ./build_iso.sh    -> systemlinux-v0.4-gnome.iso    (live GNOME desktop on elogind)
 #
 # Run from a normal terminal (sudo needs a password prompt). Needs a Debian host with
 # grub-mkrescue, xorriso, mtools, squashfs-tools, cpio and apt.
 set -euo pipefail
 
 VARIANT=${VARIANT:-minimal}
-case "$VARIANT" in minimal|xfce) ;; *) echo "VARIANT must be minimal or xfce"; exit 1 ;; esac
+case "$VARIANT" in minimal|xfce|gnome) ;; *) echo "VARIANT must be minimal, xfce or gnome"; exit 1 ;; esac
 
 BUILD_DIR=$(cd "$(dirname "$0")" && pwd)
 ROOTFS=$BUILD_DIR/rootfs
@@ -21,6 +22,7 @@ KERNEL=${KERNEL:-$BUILD_DIR/tools/kernel-full/vmlinuz-7.2.6-full}
 ISO=${ISO:-$BUILD_DIR/systemlinux-v0.4-$VARIANT.iso}
 XFCE_WORK=${XFCE_WORK:-$HOME/.cache/systemlinux-xfce}
 FW_WORK=${FW_WORK:-$HOME/.cache/systemlinux-firmware}
+GNOME_WORK=${GNOME_WORK:-$HOME/.cache/systemlinux-gnome}
 cd "$BUILD_DIR"
 
 echo "=== [1/8] COMPILING systemL, goget AND THE FULL KERNEL ==="
@@ -136,6 +138,10 @@ if [ "$VARIANT" = xfce ]; then
     echo "=== [5c/8] BUILDING THE XFCE OVERLAY FROM DEBIAN ==="
     WORK=$XFCE_WORK ROOTFS=$ROOTFS "$BUILD_DIR/tools/xfce-overlay/build-overlay.sh"
 fi
+if [ "$VARIANT" = gnome ]; then
+    echo "=== [5c/8] BUILDING THE GNOME OVERLAY FROM DEBIAN ==="
+    WORK=$GNOME_WORK ROOTFS=$ROOTFS "$BUILD_DIR/tools/gnome-overlay/build-overlay.sh"
+fi
 
 echo "=== [6/8] BUILDING THE SQUASHFS AND THE INITRAMFS ==="
 STAGE=$WORKSPACE/stage
@@ -145,6 +151,13 @@ sudo cp -a "$FW_WORK/ov5/." "$STAGE/"
 if [ "$VARIANT" = xfce ]; then
     sudo cp -a "$XFCE_WORK/ov3/." "$STAGE/"
     sudo cp -a "$XFCE_WORK/ov4/." "$STAGE/"
+fi
+if [ "$VARIANT" = gnome ]; then
+    sudo cp -a "$GNOME_WORK/ov3/." "$STAGE/"
+    sudo cp -a "$GNOME_WORK/ov4/." "$STAGE/"
+    # the live user GNOME logs in as (systemL autologin on tty1); the installer removes it again
+    sudo useradd -R "$STAGE" -m -u 1000 -U -s /bin/bash -c "Live user" -G wheel,audio,video,input,users,plugdev live
+    sudo usermod -R "$STAGE" -p '' live
 fi
 sudo install -Dm644 "$KERNEL" "$STAGE/boot/vmlinuz"
 sudo mksquashfs "$STAGE" "$WORKSPACE/live/rootfs.squashfs" -comp zstd -Xcompression-level 19 -b 1M -noappend -no-xattrs
@@ -165,7 +178,7 @@ menuentry "systemLinux v0.4 ($VARIANT)" {
     if [ ! -f /live/vmlinuz ]; then
         search --no-floppy --set=root --file /live/vmlinuz
     fi
-    linux /live/vmlinuz systeml.live=1 console=tty0
+    linux /live/vmlinuz systeml.live=1 quiet loglevel=3 console=tty0
     initrd /live/initrd.img
 }
 
@@ -173,7 +186,7 @@ menuentry "systemLinux v0.4 ($VARIANT, copy to RAM)" {
     if [ ! -f /live/vmlinuz ]; then
         search --no-floppy --set=root --file /live/vmlinuz
     fi
-    linux /live/vmlinuz systeml.live=1 systeml.toram=1 console=tty0
+    linux /live/vmlinuz systeml.live=1 systeml.toram=1 quiet loglevel=3 console=tty0
     initrd /live/initrd.img
 }
 

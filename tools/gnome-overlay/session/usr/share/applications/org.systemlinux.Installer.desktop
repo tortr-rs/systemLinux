@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Install systemLinux
+Comment=Install systemLinux on this computer
+Exec=/usr/local/bin/systemlinux-installer
+Icon=/usr/share/systemlinux/logo.png
+Terminal=false
+Categories=System;
+StartupWMClass=org.systemlinux.Installer

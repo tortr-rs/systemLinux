@@ -58,6 +58,65 @@ for lib in ('libcairo.so.2', 'libcairo-gobject.so.2', 'libcairo-script-interpret
         if os.path.lexists(dst): os.remove(dst)
         os.makedirs(OV + '/usr/lib64', exist_ok=True)
         os.symlink('../lib/x86_64-linux-gnu/' + lib, dst); n += 1
+# LIB_OVERRIDE=1 (GNOME): the Debian GTK/GNOME stack must load its own libraries, not same-named ones
+# from the base that were built without X11/Wayland/GL features. Every top-level Debian library that
+# none of the base system's own programs needs is pointed at Debian's copy; libraries the base's boot,
+# network, login and installer tools use keep the base's (newer) version.
+if os.environ.get('LIB_OVERRIDE') == '1' and os.path.isdir(ma):
+    import subprocess as sp
+    libdirs = [ROOTFS + '/usr/lib64', ROOTFS + '/lib64', ROOTFS + '/usr/lib/gcc/x86_64-pc-linux-gnu/15',
+               ROOTFS + '/usr/lib/systemd', ROOTFS + '/lib/systemd']
+    def find_lib(name):
+        for d in libdirs:
+            p = os.path.join(d, name)
+            if os.path.exists(p): return os.path.realpath(p)
+        return None
+    def needed(path):
+        out = sp.run(['readelf', '-d', path], capture_output=True, text=True).stdout
+        return [l.split('[')[1].rstrip(']') for l in out.splitlines() if 'NEEDED' in l]
+    essential_bins = ('systemL bash sh login agetty runuser useradd usermod userdel groupadd chpasswd mount umount blkid lsblk '
+                      'sfdisk wipefs mkfs.ext4 mke2fs mkfs.fat grub-install grub-probe efibootmgr NetworkManager nmcli dbus-daemon '
+                      'dbus-launch dbus-run-session dbus-send udevadm ls cp mv rm cat find xargs sed awk gawk grep tar gzip xz less nano '
+                      'ps top free sudo wpa_supplicant ip ping sync sleep tr sort date env id dd chown chmod ln mkdir tail head cut '
+                      'goget kmod loadkeys setxkbmap').split()
+    seen, todo = set(), []
+    for b in essential_bins:
+        for d in ('usr/bin', 'usr/sbin', 'bin', 'sbin'):
+            p = os.path.join(ROOTFS, d, b)
+            if os.path.isfile(p):
+                todo.append(os.path.realpath(p)); break
+    for extra in ('lib/systemd/systemd-udevd', 'usr/lib/systemd/systemd-udevd'):
+        p = os.path.join(ROOTFS, extra)
+        if os.path.isfile(p): todo.append(p)
+    done = set()
+    while todo:
+        p = todo.pop()
+        if p in done: continue
+        done.add(p)
+        try:
+            if open(p, 'rb').read(4) != b'\x7fELF': continue
+        except OSError:
+            continue
+        for lib in needed(p):
+            seen.add(lib)
+            q = find_lib(lib)
+            if q: todo.append(q)
+    keep = forced = 0
+    os.makedirs(OV + '/usr/lib64', exist_ok=True)
+    for f in sorted(os.listdir(ma)):
+        if '.so' not in f:
+            continue
+        if f in seen:
+            keep += 1
+            continue
+        if not os.path.exists(os.path.join(ma, f)):
+            continue
+        if not os.path.lexists(ROOTFS + '/usr/lib64/' + f) and not os.path.lexists(ROOTFS + '/lib64/' + f):
+            continue   # the base has none: the plain symlink above already covers it
+        dst = OV + '/usr/lib64/' + f
+        if os.path.lexists(dst): os.remove(dst)
+        os.symlink('../lib/x86_64-linux-gnu/' + f, dst); forced += 1
+    print('LIB_OVERRIDE: base keeps', keep, 'shared libs its own programs need; Debian forced for', forced)
 print('lib64 symlinks', n)
 
 # prune bulk that a live XFCE session never uses (spell-check dictionaries, TeX, perl/python libs)

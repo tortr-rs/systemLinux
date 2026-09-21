@@ -1,0 +1,6 @@
+#!/bin/sh
+# systemL service: polkit (GNOME asks it before privileged actions).
+getent passwd polkitd >/dev/null || useradd -r -M -d / -s /bin/false polkitd
+mkdir -p /run/polkit-1 /var/lib/polkit-1 /etc/polkit-1/rules.d
+chown polkitd:polkitd /var/lib/polkit-1 2>/dev/null
+exec /usr/lib/polkit-1/polkitd --no-debug
