@@ -15,6 +15,13 @@ All core features from the original spec are implemented:
   specs (`git@github.com:owner/repo.git`, `ssh://git@host/owner/repo`), bare
   `host/owner/repo`, bare `owner/repo` (assumes github.com), and bare short
   names like `fastfetch` (resolved via the cross-host search below).
+- **No Makefile needed** — if a project has no CMake/autotools/Make/PKGBUILD,
+  `goget build` recognises the language and compiles directly: `go.mod` → `go build`
+  (root or `cmd/<name>` main package), `Cargo.toml` → `cargo build --release`, and
+  plain C/C++ sources → `gcc`/`g++` (all sources, header directories added with `-I`,
+  linked with `-lm -lpthread`; a project with several `main()` files gets one binary each).
+  The result is installed to `/usr/local/bin`. A project with no `main()` is reported as
+  a library instead of being built.
 - **`goget build <repo>`** — clones into `~/.cache/goget/src/<host>/<owner>/<repo>`
   (or pulls if already cached), detects CMake / Make / Autotools via marker
   files, and builds + installs (`sudo cmake --install` / `sudo make install`).

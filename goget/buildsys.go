@@ -10,6 +10,9 @@ const (
 	buildMake
 	buildAutotools
 	buildPKGBUILD
+	buildGo
+	buildCargo
+	buildCSources
 )
 
 // buildsysDetect detects the build system in dir by checking for marker
@@ -33,6 +36,16 @@ func buildsysDetect(dir string) buildsysKind {
 	if pathExists(filepath.Join(dir, "Makefile")) || pathExists(filepath.Join(dir, "makefile")) {
 		return buildMake
 	}
+	// No build file at all: recognise the language and compile directly.
+	if pathExists(filepath.Join(dir, "go.mod")) {
+		return buildGo
+	}
+	if pathExists(filepath.Join(dir, "Cargo.toml")) {
+		return buildCargo
+	}
+	if s := scanCSources(dir); len(s.c)+len(s.cxx) > 0 && len(s.mains) > 0 {
+		return buildCSources
+	}
 	return buildNone
 }
 
@@ -46,6 +59,12 @@ func buildsysName(kind buildsysKind) string {
 		return "Autotools"
 	case buildPKGBUILD:
 		return "PKGBUILD (AUR)"
+	case buildGo:
+		return "Go modules (go build)"
+	case buildCargo:
+		return "Cargo (Rust)"
+	case buildCSources:
+		return "plain C/C++ sources (gcc/g++)"
 	default:
 		return "none"
 	}
@@ -144,6 +163,12 @@ func buildsysBuildAndInstall(kind buildsysKind, dir string, extraCmakeFlags []st
 		return buildAutotoolsImpl(dir)
 	case buildPKGBUILD:
 		return buildPKGBUILDImpl(dir)
+	case buildGo:
+		return buildGoImpl(dir)
+	case buildCargo:
+		return buildCargoImpl(dir)
+	case buildCSources:
+		return buildCSourcesImpl(dir)
 	default:
 		printErr("internal error: no build system to run")
 		return -1
