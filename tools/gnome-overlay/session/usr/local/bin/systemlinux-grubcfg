@@ -12,6 +12,10 @@ CFG=$BOOT/grub/grub.cfg
 {
 cat <<'HEAD'
 set timeout=3
+set color_normal=light-gray/black
+set color_highlight=black/yellow
+set menu_color_normal=light-gray/black
+set menu_color_highlight=black/yellow
 load_env
 if [ "${next_entry}" ]; then
     set default="${next_entry}"

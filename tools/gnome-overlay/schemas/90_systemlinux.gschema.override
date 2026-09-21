@@ -17,3 +17,4 @@ primary-color='#54487a'
 
 [org.gnome.desktop.interface]
 color-scheme='prefer-dark'
+accent-color='green'

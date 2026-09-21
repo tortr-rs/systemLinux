@@ -8,17 +8,17 @@
 <link rel="icon" type="image/svg+xml" href="logo.svg">
 <style>
 :root{
-  --bg:#ffffff; --bg2:#f7f5f4; --panel:#ffffff; --border:#e6dfdc; --text:#201a1a; --muted:#5f5656;
-  --brand:#8f1d21; --brand2:#a4232a; --accent:#a4232a;
-  --code-bg:#f3eeed; --code-text:#3a2426; --term-bg:#1b1414; --term-text:#e9e6f5; --term-dim:#8d86a8; --term-ok:#8ee3a7;
-  --warn-bg:#fff6e0; --warn-border:#e8c766; --warn-text:#5a4300; --shadow:0 10px 30px rgba(40,20,20,.12);
+  --bg:#faf8f2; --bg2:#f1eddf; --panel:#ffffff; --border:#ddd6bf; --text:#1d2a21; --muted:#56635a;
+  --brand:#2f4a37; --brand2:#3d6b4b; --accent:#c9971c;
+  --code-bg:#eee9d8; --code-text:#2b3a2f; --term-bg:#0e1510; --term-text:#e6efe3; --term-dim:#7f9284; --term-ok:#e6b93f;
+  --warn-bg:#fbf1d3; --warn-border:#d9b44a; --warn-text:#5a4300; --shadow:0 10px 30px rgba(30,50,35,.14);
   color-scheme:light;
 }
 @media (prefers-color-scheme:dark){
   :root{
-    --bg:#151212; --bg2:#1c1818; --panel:#221d1d; --border:#3a3232; --text:#ece9f7; --muted:#a49ebc;
-    --brand:#6f1a1e; --brand2:#e07a7f; --accent:#e07a7f; --code-bg:#2a2323; --code-text:#efe3e3;
-    --warn-bg:#2f2810; --warn-border:#7a641d; --warn-text:#f0d98a; --shadow:0 10px 30px rgba(0,0,0,.4);
+    --bg:#0f1611; --bg2:#141d17; --panel:#19241c; --border:#2c3d31; --text:#e9efe6; --muted:#9bad9f;
+    --brand:#2f4a37; --brand2:#8cc79a; --accent:#e6b93f; --code-bg:#1f2d23; --code-text:#e2ece0;
+    --warn-bg:#2b2410; --warn-border:#7a641d; --warn-text:#f0d98a; --shadow:0 10px 30px rgba(0,0,0,.45);
     color-scheme:dark;
   }
 }
@@ -45,7 +45,7 @@ nav a{color:var(--muted);padding:.4rem .7rem;border-radius:8px;font-size:.95rem;
 nav a:hover{background:var(--bg2);color:var(--text);text-decoration:none}
 @media (max-width:760px){nav ul li:not(:last-child){display:none}}
 
-.hero{padding-block:4.5rem 3rem;background:radial-gradient(1200px 500px at 70% -10%,color-mix(in srgb,var(--accent) 26%,transparent),transparent 70%)}
+.hero{padding-block:4.5rem 3rem;background:radial-gradient(1100px 480px at 75% -10%,color-mix(in srgb,var(--accent) 24%,transparent),transparent 70%),linear-gradient(180deg,color-mix(in srgb,var(--brand) 6%,transparent),transparent)}
 .hero .grid{display:grid;grid-template-columns:1.05fr 1fr;gap:3rem;align-items:center}
 .eyebrow{display:inline-block;color:var(--brand2);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.78rem;margin-bottom:.8rem}
 .hero h1{font-size:clamp(2.2rem,5.2vw,3.6rem);line-height:1.06;margin:0 0 1.1rem;letter-spacing:-.02em}
@@ -55,6 +55,7 @@ nav a:hover{background:var(--bg2);color:var(--text);text-decoration:none}
 .btn{display:inline-block;padding:.8rem 1.4rem;border-radius:10px;font-weight:650;border:2px solid var(--brand2);color:var(--brand2);margin:0 .6rem .6rem 0}
 .btn:hover{text-decoration:none;background:var(--bg2)}
 .btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+.eyebrow{color:var(--accent)}
 .btn.primary:hover{background:var(--brand2);border-color:var(--brand2)}
 .facts{display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;margin-top:1.2rem;color:var(--muted);font-size:.92rem}
 .facts b{color:var(--text)}
@@ -201,13 +202,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
       <h3>GNOME edition</h3>
       <p>The full desktop, the graphical installer and Firefox. 1.4&nbsp;GB, 4&nbsp;GB of RAM recommended.</p>
       <p><a class="btn primary" href="https://github.com/tortr-rs/systemLinux/releases/download/v1.0/systemlinux-v1.0-gnome.iso">systemlinux-v1.0-gnome.iso</a></p>
-      <p><strong>SHA-256</strong><br><code class="hash">394ea44da732b7997d577b5599e1d34c3c0049d4d2f19dd8a5f689c5410899a5</code></p>
+      <p><strong>SHA-256</strong><br><code class="hash">f9dc7a530b8d7b2ce4114482af104a7d74e189a20d1b6d55f6c0b99bdd2060dd</code></p>
     </div>
     <div class="panel">
       <h3>Minimal edition</h3>
       <p>Boots to a root shell on the console: a base to build on. 1.1&nbsp;GB, about 2&nbsp;GB of RAM.</p>
       <p><a class="btn primary" href="https://github.com/tortr-rs/systemLinux/releases/download/v1.0/systemlinux-v1.0-minimal.iso">systemlinux-v1.0-minimal.iso</a></p>
-      <p><strong>SHA-256</strong><br><code class="hash">6c0926f2b7f6696afde4e7ed85c47e0fa03fd1e4dceb4a204203ae45762a3954</code></p>
+      <p><strong>SHA-256</strong><br><code class="hash">02434be23a9b6ae3e550f0e826c02a4d232cbd7dafe55db5271eda4e5797c4d1</code></p>
     </div>
   </div>
   <p style="margin-top:1.2rem">Check your download with <code>sha256sum systemlinux-v1.0-*.iso</code>. Older versions are on the <a href="https://github.com/tortr-rs/systemLinux/releases">releases page</a>; the source is on <a href="https://github.com/tortr-rs/systemLinux">GitHub</a>.</p>
@@ -239,7 +240,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
         <ul><li><strong>systemLinux</strong>: the normal live session.</li><li><strong>copy to RAM</strong>: loads the whole system into memory so you can remove the stick.</li><li><strong>debug shell</strong>: shows every message and stops just before the real system starts. Use it if the normal entry does not work.</li></ul>
         <p>The live session signs in as <code>live</code> and opens GNOME with Firefox, Files and Terminal. Connect to Wi-Fi from the top bar. Nothing is written to your disks until you run the installer.</p></div>
       <div class="chapter" id="hb-3"><h3>3. Install to disk</h3>
-        <p>Open <strong>Install systemLinux</strong> from the dock (the cat icon). It walks through six pages:</p>
+        <p>Open <strong>Install systemLinux</strong> from the dock (the wheat icon). It walks through six pages:</p>
         <ol><li><strong>Welcome</strong>: what is about to happen.</li><li><strong>Disk</strong>: pick the disk to erase.</li><li><strong>Account</strong>: computer name, your name, user name and password, and whether to sign in automatically. The same password is used for <code>root</code>.</li><li><strong>Region</strong>: time zone and keyboard layout.</li><li><strong>Summary</strong>: review everything. Nothing has changed yet; <em>Install</em> starts the work.</li><li><strong>Progress</strong>: partitions the disk, copies the system, creates your account and installs the boot loader.</li></ol>
         <p>The disk gets a 512&nbsp;MB EFI partition and one ext4 partition holding the system image, the boot menu and your files. When it says <em>Done</em>, restart and remove the stick.</p></div>
       <div class="chapter" id="hb-4"><h3>4. First boot</h3>
