@@ -158,6 +158,13 @@ if [ "$VARIANT" = gnome ]; then
     # the live user GNOME logs in as (systemL autologin on tty1); the installer removes it again
     sudo useradd -R "$STAGE" -m -u 1000 -U -s /bin/bash -c "Live user" -G wheel,audio,video,input,users,plugdev live
     sudo usermod -R "$STAGE" -p '' live
+    # slim the GNOME image: GitHub release files must stay under 2 GiB. Nothing a user needs is removed
+    # (the Go compiler stays); the Go bootstrap toolchain, docs, base translations and extra wallpapers go.
+    sudo rm -rf "$STAGE/usr/lib/go-bootstrap" "$STAGE/usr/share/locale" "$STAGE/usr/share/man" "$STAGE/usr/share/doc" \
+        "$STAGE/usr/share/gtk-doc" "$STAGE/usr/share/i18n" "$STAGE/usr/share/desktop-base" \
+        "$STAGE/usr/lib/x86_64-linux-gnu/perl" "$STAGE/usr/share/vulkan"
+    sudo find "$STAGE/usr/share/backgrounds" -mindepth 1 -maxdepth 1 ! -name systemlinux -exec rm -rf {} +
+    sudo rm -f "$STAGE"/usr/lib/x86_64-linux-gnu/libvulkan_*.so* "$STAGE"/usr/lib64/libvulkan_*.so*
 fi
 sudo install -Dm644 "$KERNEL" "$STAGE/boot/vmlinuz"
 sudo mksquashfs "$STAGE" "$WORKSPACE/live/rootfs.squashfs" -comp zstd -Xcompression-level 19 -b 1M -noappend -no-xattrs

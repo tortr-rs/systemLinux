@@ -20,7 +20,7 @@ Website: `website/index.html` · Downloads: GitHub release `v0.4`
 
 | Edition | File | Size | RAM needed |
 |---|---|---|---|
-| GNOME | `systemlinux-v0.4-gnome.iso` | 2.3 GB | about 6 GB recommended |
+| GNOME | `systemlinux-v0.4-gnome.iso` | 2.1 GB | about 6 GB recommended |
 | XFCE | `systemlinux-v0.4-xfce.iso` | 2.1 GB | about 4 GB recommended |
 | Minimal | `systemlinux-v0.4-minimal.iso` | 1.8 GB | about 2 GB |
 
