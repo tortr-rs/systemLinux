@@ -4,8 +4,8 @@
         "type": "file",
         "source": "/usr/share/systemlinux/fastfetch-logo.txt",
         "color": {
-            "1": "38;5;97",
-            "2": "white"
+            "1": "38;5;179",
+            "2": "38;5;71"
         },
         "padding": {
             "top": 1,

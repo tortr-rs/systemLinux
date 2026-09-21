@@ -3,7 +3,7 @@
 
 
 <p align="center">
-  <img src="assets/logo.png" alt="systemLinux logo: a white cat face on a purple circle" width="160">
+  <img src="assets/logo.png" alt="systemLinux logo: a golden wheat ear on a dark green circle" width="160">
 </p>
 
 # systemLinux v1.0
