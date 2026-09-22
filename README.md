@@ -20,18 +20,22 @@ failed trial boot rolls back on its own.
 
 systemLinux is **atomic**, like Fedora Silverblue: the system is a read-only image that `goget upgrade` replaces as a whole, with a trial boot and automatic rollback; programs live in separate, rollback-able goget profiles.
 
-Website: `website/index.html` (also the Handbook) · Download: see the releases page
+Website: `website/index.html` (also the Handbook) · Download: [GitHub release `v1.1`](https://github.com/tortr-rs/systemLinux/releases/tag/v1.1)
 
 | File | Size | RAM needed |
 |---|---|---|
 | `systemlinux-v1.1.iso` | about 2.4 GB | about 3 GB (4 GB+ to use *copy to RAM*) |
 
-**The ISO is not attached directly to the GitHub release** — at 2.4 GB it's over GitHub's
-2 GB release-asset limit, mostly from bundling the full upstream firmware set (nixpkgs'
-`linux-firmware`, unlike the old Debian build's curated ~17-package subset). The release
-notes link to wherever it's actually hosted; verify the SHA-256 there before trusting a
-download from anywhere else. (Trimming the bundled firmware down to only what this kernel's
-built-in drivers actually reference would fix this properly — see `ROADMAP.md`.)
+**Split into two parts** on the release — GitHub's release-asset limit is 2 GB, the ISO is
+2.4 GB, mostly from bundling the full upstream firmware set (nixpkgs' `linux-firmware`,
+unlike the old Debian build's curated ~17-package subset; trimming that down to only what
+this kernel's built-in drivers actually reference would fix this properly — see
+`ROADMAP.md`). Download `systemlinux-v1.1.iso.part-00` and `-part-01` and join them:
+
+```sh
+cat systemlinux-v1.1.iso.part-00 systemlinux-v1.1.iso.part-01 > systemlinux-v1.1.iso
+sha256sum systemlinux-v1.1.iso   # 9483d6efb35aa1224bd5ba55f9f7745fb318894c663b1e8e931b3bd351232ab7
+```
 
 Boot in **UEFI mode**: legacy BIOS is not supported (the GRUB build this project ships has
 no BIOS/i386-pc modules). Each ISO has three GRUB entries: normal, *copy to RAM* (loads the

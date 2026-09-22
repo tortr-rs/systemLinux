@@ -201,12 +201,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
     <div class="panel">
       <h3>systemLinux</h3>
       <p>Boots to a root shell on the console: install it by hand from the handbook, or run <code>systemlinux-install</code>. About 2.4&nbsp;GB, 3&nbsp;GB of RAM (4&nbsp;GB+ to use <em>copy to RAM</em>).</p>
-      <p><a class="btn primary" href="https://github.com/tortr-rs/systemLinux/releases">Get it from the releases page</a></p>
-      <p><strong>Not a direct GitHub release asset:</strong> at 2.4&nbsp;GB the ISO is over GitHub's 2&nbsp;GB release-asset limit (it bundles the full upstream firmware set, not yet trimmed to just this kernel's drivers &mdash; see the roadmap). The release notes link to wherever it's actually hosted.</p>
-      <p><strong>SHA-256</strong><br>Published with each release on the <a href="https://github.com/tortr-rs/systemLinux/releases">releases page</a>, alongside the signed update index &mdash; verify it there before trusting a download from anywhere else.</p>
+      <p><strong>Split into two parts</strong> &mdash; GitHub's release-asset limit is 2&nbsp;GB, the ISO is 2.4&nbsp;GB (it bundles the full upstream firmware set, not yet trimmed to just this kernel's drivers &mdash; see the roadmap). Download both and join them:</p>
+      <p>
+        <a class="btn primary" href="https://github.com/tortr-rs/systemLinux/releases/download/v1.1/systemlinux-v1.1.iso.part-00">systemlinux-v1.1.iso.part-00</a>
+        <a class="btn primary" href="https://github.com/tortr-rs/systemLinux/releases/download/v1.1/systemlinux-v1.1.iso.part-01">systemlinux-v1.1.iso.part-01</a>
+      </p>
+      <pre class="term"><span class="p">$</span> cat systemlinux-v1.1.iso.part-00 systemlinux-v1.1.iso.part-01 &gt; systemlinux-v1.1.iso</pre>
+      <p><strong>SHA-256</strong> (of the joined ISO): <code>9483d6efb35aa1224bd5ba55f9f7745fb318894c663b1e8e931b3bd351232ab7</code> &mdash; also published as <a href="https://github.com/tortr-rs/systemLinux/releases/download/v1.1/systemlinux-v1.1.iso.parts.sha256">systemlinux-v1.1.iso.parts.sha256</a> on the <a href="https://github.com/tortr-rs/systemLinux/releases/tag/v1.1">release page</a>.</p>
     </div>
   </div>
-  <p style="margin-top:1.2rem">Check your download with <code>sha256sum systemlinux-v1.1.iso</code> against the checksum on the releases page. Older versions are on the <a href="https://github.com/tortr-rs/systemLinux/releases">releases page</a>; the source is on <a href="https://github.com/tortr-rs/systemLinux">GitHub</a>.</p>
+  <p style="margin-top:1.2rem">Check your download with <code>sha256sum systemlinux-v1.1.iso</code> after joining the parts. Older versions are on the <a href="https://github.com/tortr-rs/systemLinux/releases">releases page</a>; the source is on <a href="https://github.com/tortr-rs/systemLinux">GitHub</a>.</p>
   <p><strong>Ventoy:</strong> copy the ISO onto the stick. Older systemLinux ISOs on the same stick are fine: each ISO only boots its own system. If it reports an error at boot, write the ISO straight to a stick instead.</p>
 </div></section>
 
@@ -230,9 +234,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
     </ol></aside>
     <article>
       <div class="chapter" id="hb-1"><h3>1. Make a bootable USB stick</h3>
-        <p>Download the ISO and check it against the SHA-256 on the releases page. Then copy it onto a <strong>Ventoy</strong> stick, or write it straight to a stick (this erases the stick):</p>
+        <p>Download both <code>systemlinux-v1.1.iso.part-00</code> and <code>-part-01</code> from the <a href="https://github.com/tortr-rs/systemLinux/releases/tag/v1.1">release page</a> (the ISO is split in two &mdash; it's over GitHub's 2&nbsp;GB single-asset limit) and join them:</p>
+        <pre class="term">cat systemlinux-v1.1.iso.part-00 systemlinux-v1.1.iso.part-01 &gt; systemlinux-v1.1.iso</pre>
+        <p>Check it against the SHA-256 on the release page. Then copy it onto a <strong>Ventoy</strong> stick, or write it straight to a stick (this erases the stick):</p>
         <pre class="term">sudo dd if=systemlinux-v1.1.iso of=/dev/sdX bs=4M status=progress conv=fsync</pre>
-        <p>Replace <code>/dev/sdX</code> with the stick (check with <code>lsblk</code>). On Windows use Rufus in <em>DD image</em> mode or balenaEtcher.</p></div>
+        <p>Replace <code>/dev/sdX</code> with the stick (check with <code>lsblk</code>). On Windows use Rufus in <em>DD image</em> mode or balenaEtcher (join the parts with <code>copy /b part-00+part-01 systemlinux-v1.1.iso</code> in Command Prompt first).</p></div>
 
       <div class="chapter" id="hb-2"><h3>2. Boot the live system</h3>
         <p>Restart, open your firmware&rsquo;s boot menu (usually F12, F10, Esc or F8) and pick the stick&rsquo;s <strong>UEFI</strong> entry. The boot menu offers:</p>

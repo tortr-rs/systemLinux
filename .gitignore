@@ -1,5 +1,7 @@
 iso_workspace/
 *.iso
+*.iso.part-*
+*.iso.parts.sha256
 bbash_source/
 evim_source/
 rootfs/etc/.pwd.lock
