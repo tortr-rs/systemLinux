@@ -1,0 +1,4 @@
+#!/bin/sh
+# systemLinux: BlueZ (started and supervised by lenine)
+mkdir -p /var/lib/bluetooth
+exec /nix/var/goget/profiles/system/current/libexec/bluetooth/bluetoothd -n

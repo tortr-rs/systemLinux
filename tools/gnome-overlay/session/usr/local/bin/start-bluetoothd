@@ -1,4 +1,0 @@
-#!/bin/sh
-# systemLinux: BlueZ (started and supervised by systemL)
-mkdir -p /var/lib/bluetooth
-exec /usr/libexec/bluetooth/bluetoothd -n

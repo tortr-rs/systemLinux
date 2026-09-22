@@ -1,0 +1,245 @@
+#!/bin/bash
+# systemLinux installer: a plain interactive terminal tool (no GUI). Run it from the live
+# console as root: `sudo systemlinux-install`.
+#
+# Two modes:
+#   --disk DISK        erase the whole disk: new GPT, a 512M EFI System Partition + one ext4
+#                       "data" partition holding /boot/images/<version>/{vmlinuz,initrd.img,
+#                       rootfs.squashfs}, /boot/grub and /persist/{upper,work}.
+#   --partition PART [--esp ESPPART]
+#                       install onto an existing partition you already freed up (e.g. by
+#                       shrinking Windows or another Linux with its own tools first) instead of
+#                       erasing a disk -- the safe way to dual-boot. That partition is formatted
+#                       ext4 and used exactly like the "data" partition above; an existing EFI
+#                       System Partition is reused (auto-detected if there is exactly one, or
+#                       pass --esp to name it) rather than creating a new one.
+#
+# UEFI only (this system's GRUB has no legacy BIOS support). All other options can be given on
+# the command line for scripting, or left out to be asked for interactively.
+#
+# usage: systemlinux-install (--disk DISK | --partition PART [--esp ESPPART])
+#                             [--host HOST] [--user USER] [--tz TZ] [--keymap KEYMAP]
+#                             [--luks] [--yes]
+set -euo pipefail
+
+DISK= PART= ESP= HOST= USERN= TZ= KEYMAP= LUKS=0 ASSUMEYES=0
+while [ $# -gt 0 ]; do
+    case "$1" in
+        --disk) DISK=$2; shift 2 ;;
+        --partition) PART=$2; shift 2 ;;
+        --esp) ESP=$2; shift 2 ;;
+        --host) HOST=$2; shift 2 ;;
+        --user) USERN=$2; shift 2 ;;
+        --tz) TZ=$2; shift 2 ;;
+        --keymap) KEYMAP=$2; shift 2 ;;
+        --luks) LUKS=1; shift ;;
+        --yes) ASSUMEYES=1; shift ;;
+        -h|--help) sed -n '2,20p' "$0"; exit 0 ;;
+        *) echo "systemlinux-install: unknown option $1" >&2; exit 2 ;;
+    esac
+done
+
+[ "$(id -u)" = 0 ] || { echo "systemlinux-install: must run as root" >&2; exit 1; }
+[ -d /sys/firmware/efi ] || { echo "systemlinux-install: this machine is not booted in UEFI mode; systemLinux only installs on UEFI" >&2; exit 1; }
+MEDIUM=/live-medium
+for f in vmlinuz initrd.img rootfs.squashfs; do
+    [ -f "$MEDIUM/live/$f" ] || { echo "systemlinux-install: $MEDIUM/live/$f missing; boot the installer from the systemLinux live ISO" >&2; exit 1; }
+done
+VER=$(cat /usr/share/systemlinux/image-version 2>/dev/null || true)
+[ -n "$VER" ] || { echo "systemlinux-install: this image has no version (/usr/share/systemlinux/image-version)" >&2; exit 1; }
+
+ask() { # ask PROMPT VARNAME [DEFAULT]
+    local reply
+    if [ -n "${3:-}" ]; then read -r -p "$1 [$3] " reply; reply=${reply:-$3}; else read -r -p "$1 " reply; fi
+    printf -v "$2" '%s' "$reply"
+}
+ask_secret() { local reply; read -r -s -p "$1 " reply; echo; printf -v "$2" '%s' "$reply"; }
+
+# ---- gather the disk/partition target ----------------------------------------------------
+
+if [ -z "$DISK" ] && [ -z "$PART" ]; then
+    echo "Disks:"; lsblk -d -o NAME,SIZE,MODEL -n | sed 's/^/  \/dev\//'
+    echo
+    echo "Install onto a whole disk (erases it), or an existing partition you already freed up"
+    echo "for dual-boot (e.g. shrunk with GParted/Disk Management beforehand)?"
+    ask "  [d]isk or [p]artition?" MODE d
+    case "$MODE" in
+        p|P) ask "Partition to install onto (e.g. /dev/sda3):" PART ;;
+        *)   ask "Disk to erase (e.g. /dev/sda):" DISK ;;
+    esac
+fi
+[ -n "$DISK" ] && [ -n "$PART" ] && { echo "systemlinux-install: --disk and --partition are mutually exclusive" >&2; exit 1; }
+[ -n "$DISK" ] || [ -n "$PART" ] || { echo "systemlinux-install: nothing to install onto" >&2; exit 1; }
+
+if [ -n "$DISK" ]; then
+    [ -b "$DISK" ] || { echo "systemlinux-install: $DISK is not a block device" >&2; exit 1; }
+    grep -q "^$DISK" /proc/self/mounts && { echo "systemlinux-install: $DISK has mounted partitions" >&2; exit 1; }
+else
+    [ -b "$PART" ] || { echo "systemlinux-install: $PART is not a block device" >&2; exit 1; }
+    grep -q "^$PART " /proc/self/mounts && { echo "systemlinux-install: $PART is mounted" >&2; exit 1; }
+    if [ -z "$ESP" ]; then
+        mapfile -t esps < <(lsblk -rno NAME,PARTTYPE | awk '$2=="c12a7328-f81f-11d2-ba4b-00a0c93ec93b"{print "/dev/"$1}')
+        case "${#esps[@]}" in
+            1) ESP=${esps[0]}; echo "Using existing EFI System Partition: $ESP" ;;
+            0) echo "systemlinux-install: no EFI System Partition found; pass --esp to name one" >&2; exit 1 ;;
+            *) echo "Found more than one EFI System Partition:"; printf '  %s\n' "${esps[@]}"
+               ask "Which one should systemLinux use?" ESP ;;
+        esac
+    fi
+    [ -b "$ESP" ] || { echo "systemlinux-install: $ESP is not a block device" >&2; exit 1; }
+fi
+
+# ---- gather account/locale details -------------------------------------------------------
+
+[ -n "$HOST" ] || ask "Computer name:" HOST systemlinux
+[[ "$HOST" =~ ^[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?$ ]] || { echo "systemlinux-install: invalid computer name" >&2; exit 1; }
+[ -n "$USERN" ] || ask "Your username:" USERN
+[[ "$USERN" =~ ^[a-z_][a-z0-9_-]{0,31}$ ]] || { echo "systemlinux-install: invalid username" >&2; exit 1; }
+FULLNAME=; ask "Full name (optional):" FULLNAME ""
+[ -n "$TZ" ] || ask "Timezone (e.g. Europe/Berlin, America/New_York):" TZ UTC
+[ -f "/usr/share/zoneinfo/$TZ" ] || { echo "systemlinux-install: unknown timezone $TZ, using UTC" >&2; TZ=UTC; }
+[ -n "$KEYMAP" ] || ask "Console keymap (e.g. us, uk, de, fr):" KEYMAP us
+
+while :; do
+    ask_secret "Account password:" USERPW
+    ask_secret "Confirm password:" USERPW2
+    [ "$USERPW" = "$USERPW2" ] && [ -n "$USERPW" ] && break
+    echo "Passwords did not match (or were empty), try again." >&2
+done
+ROOTPW=$USERPW
+ask "Use the same password for root? [Y/n]" SAMEPW Y
+if [[ ! "$SAMEPW" =~ ^[Yy]?$ ]]; then
+    while :; do
+        ask_secret "Root password:" ROOTPW
+        ask_secret "Confirm root password:" ROOTPW2
+        [ "$ROOTPW" = "$ROOTPW2" ] && [ -n "$ROOTPW" ] && break
+        echo "Passwords did not match (or were empty), try again." >&2
+    done
+fi
+
+if [ "$LUKS" = 0 ] && [ "$ASSUMEYES" = 0 ]; then
+    ask "Encrypt the disk with LUKS? [y/N]" ENC N
+    [[ "$ENC" =~ ^[Yy]$ ]] && LUKS=1
+fi
+LUKSPW=
+if [ "$LUKS" = 1 ]; then
+    while :; do
+        ask_secret "Disk encryption passphrase:" LUKSPW
+        ask_secret "Confirm encryption passphrase:" LUKSPW2
+        [ "$LUKSPW" = "$LUKSPW2" ] && [ -n "$LUKSPW" ] && break
+        echo "Passphrases did not match (or were empty), try again." >&2
+    done
+fi
+
+if [ "$ASSUMEYES" = 0 ]; then
+    echo
+    if [ -n "$DISK" ]; then echo "This will ERASE ALL DATA on $DISK."; else echo "This will format $PART (leaving the rest of the disk, including $ESP, untouched)."; fi
+    ask "Type 'yes' to continue:" CONFIRM
+    [ "$CONFIRM" = yes ] || { echo "Aborted."; exit 1; }
+fi
+
+# ---- do the work --------------------------------------------------------------------------
+
+DATA=/mnt/target-data SQ=/mnt/target-sq ROOT=/mnt/target-root
+cleanup() { sync; for m in "$ROOT" "$SQ" "$DATA/boot/efi" "$DATA"; do umount "$m" 2>/dev/null || true; done
+    [ -n "${LUKSDEV:-}" ] && cryptsetup close "$(basename "$LUKSDEV")" 2>/dev/null || true; }
+trap cleanup EXIT
+part() { case "$1" in *[0-9]) echo "${1}p$2" ;; *) echo "${1}$2" ;; esac; }
+wait_for() { for _ in $(seq 1 50); do [ -b "$1" ] && return 0; sleep 0.2; done; echo "systemlinux-install: partition $1 did not appear" >&2; exit 1; }
+
+if [ -n "$DISK" ]; then
+    echo "== erasing $DISK and creating partitions"
+    wipefs -a -f "$DISK" >/dev/null 2>&1 || true
+    dd if=/dev/zero of="$DISK" bs=1M count=4 status=none
+    SZ=$(blockdev --getsz "$DISK")
+    [ "$SZ" -gt 16384 ] && dd if=/dev/zero of="$DISK" bs=512 seek=$((SZ - 8192)) count=8192 status=none 2>/dev/null || true
+    printf 'label: gpt\n,512M,U\n,,L\n' | sfdisk --wipe always --wipe-partitions always "$DISK"
+    blockdev --rereadpt "$DISK" || true
+    udevadm settle --timeout=10 || true
+    ESPDEV=$(part "$DISK" 1); DATADEV=$(part "$DISK" 2)
+    wait_for "$ESPDEV"; wait_for "$DATADEV"
+    echo "== formatting"
+    mkfs.vfat -F32 -n EFI "$ESPDEV"
+else
+    ESPDEV=$ESP
+    DATADEV=$PART
+    echo "== formatting $DATADEV (leaving $ESPDEV as it is)"
+fi
+
+if [ "$LUKS" = 1 ]; then
+    echo "== encrypting $DATADEV"
+    printf '%s' "$LUKSPW" | cryptsetup luksFormat --batch-mode "$DATADEV" -
+    printf '%s' "$LUKSPW" | cryptsetup open "$DATADEV" systemlinux-data -
+    LUKSDEV=/dev/mapper/systemlinux-data
+    LUKSUUID=$(blkid -s UUID -o value "$DATADEV")
+    FMTDEV=$LUKSDEV
+else
+    FMTDEV=$DATADEV
+fi
+mkfs.ext4 -F -q -L systemLinux "$FMTDEV"
+DUUID=$(blkid -s UUID -o value "$FMTDEV")
+
+echo "== preparing the new system"
+mkdir -p "$DATA" "$SQ" "$ROOT"
+mount "$FMTDEV" "$DATA"
+mkdir -p "$DATA/boot/images/$VER.part" "$DATA/persist/upper" "$DATA/persist/work" "$DATA/boot/efi"
+mount "$ESPDEV" "$DATA/boot/efi"
+
+echo "== copying the system image (this takes a while)"
+for f in vmlinuz initrd.img rootfs.squashfs; do
+    cp "$MEDIUM/live/$f" "$DATA/boot/images/$VER.part/$f"
+done
+sync
+mv "$DATA/boot/images/$VER.part" "$DATA/boot/images/$VER"
+
+echo "== writing configuration"
+mount -t squashfs -o loop,ro "$DATA/boot/images/$VER/rootfs.squashfs" "$SQ"
+mount -t overlay overlay -o "lowerdir=$SQ,upperdir=$DATA/persist/upper,workdir=$DATA/persist/work" "$ROOT"
+{
+    echo "# /etc/fstab - generated by systemlinux-install"
+    echo "# the boot files live on the data partition (mounted at /data by the initramfs)"
+    echo "/data/boot  /boot  none  bind  0 0"
+    echo "UUID=$(blkid -s UUID -o value "$ESPDEV")  /boot/efi  vfat  umask=0077  0  2"
+} > "$ROOT/etc/fstab"
+if [ "$LUKS" = 1 ]; then
+    echo "# unlocked by the initramfs from lenine.data=UUID=$LUKSUUID (LUKS)" >> "$ROOT/etc/fstab"
+fi
+echo "$HOST" > "$ROOT/etc/hostname"
+printf '127.0.0.1\tlocalhost\n::1\t\tlocalhost\n127.0.1.1\t%s\n' "$HOST" > "$ROOT/etc/hosts"
+rm -f "$ROOT/etc/localtime"; ln -s "../usr/share/zoneinfo/$TZ" "$ROOT/etc/localtime"
+echo "LANG=C.UTF-8" > "$ROOT/etc/locale.conf"
+echo "KEYMAP=$KEYMAP" > "$ROOT/etc/vconsole.conf"
+
+echo "== creating your account"
+printf '%s\n%s\n' "$USERPW" "$USERPW" | goget provision --user "$USERN" "$ROOT"
+echo "root:$ROOTPW" | chpasswd -R "$ROOT"
+[ -z "$FULLNAME" ] || usermod -R "$ROOT" -c "$FULLNAME" "$USERN"
+groups=
+for g in users audio video input plugdev wheel networkmanager; do grep -q "^$g:" "$ROOT/etc/group" && groups="$groups,$g"; done
+[ -z "$groups" ] || usermod -R "$ROOT" -aG "${groups#,}" "$USERN"
+# a Flathub remote for goget-independent app installs, added once per install (idempotent)
+if [ -x "$ROOT/nix/var/goget/profiles/system/current/bin/flatpak" ]; then
+    flatpak --installation=system --system remote-add --if-not-exists flathub \
+        https://flathub.org/repo/flathub.flatpakrepo --root="$ROOT" 2>/dev/null || true
+fi
+/usr/local/bin/systemlinux-post "$ROOT"
+umount "$ROOT"; umount "$SQ"
+
+echo "== installing the bootloader"
+grub-install --target=x86_64-efi --efi-directory="$DATA/boot/efi" --boot-directory="$DATA/boot" --removable
+if [ -d /sys/firmware/efi/efivars ]; then
+    PARTNUM=$(cat "/sys/class/block/$(basename "$ESPDEV")/partition" 2>/dev/null || true)
+    DISKDEV=${DISK:-$(lsblk -no PKNAME "$ESPDEV" | head -1 | sed 's#^#/dev/#')}
+    [ -n "$PARTNUM" ] && efibootmgr -c -d "$DISKDEV" -p "$PARTNUM" -L systemLinux -l '\EFI\BOOT\BOOTX64.EFI' || true
+fi
+if [ "$LUKS" = 1 ]; then
+    echo "$LUKSUUID" > "$DATA/boot/luks-uuid"
+    /usr/local/bin/systemlinux-grubcfg "$DATA/boot" "$DUUID" "$LUKSUUID"
+else
+    /usr/local/bin/systemlinux-grubcfg "$DATA/boot" "$DUUID"
+fi
+grub-editenv "$DATA/boot/grub/grubenv" create
+grub-set-default --boot-directory="$DATA/boot" "$VER"
+
+echo
+echo "Done. Remove the installation media and reboot."

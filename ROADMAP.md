@@ -1,34 +1,65 @@
-# systemLinux roadmap to 1.0 (a distribution you can daily-drive)
+# systemLinux roadmap (a distribution you can daily-drive)
 
-1.0 means: install it on a laptop, use it every day for browsing, mail, media, calls and development, and
-update it without fear. Status is honest: done means tested in a VM, not just written.
+1.0/1.1 together mean: install it on a laptop, use it every day for browsing, mail, media, calls and
+development, and update it without fear. Status is honest: done means tested (in a VM, or here,
+a real rebuilt kernel and a real `goget install` against live nixpkgs), not just written. Items
+that fundamentally need real hardware or real UEFI firmware to verify are marked as such and left
+open, not checked off on faith.
 
 ## Done (0.4 - 0.6)
-- Live GNOME desktop, native installer, persistent installs, signed image updates with rollback (`goget upgrade`)
+- Live console system, native CLI installer (`systemlinux-install`), persistent installs, signed
+  image updates with rollback (`goget upgrade`)
 - Full-driver kernel, firmware, Wi-Fi via NetworkManager
-- goget as the package manager: Debian, Ubuntu, Arch, Gentoo binaries or Git, chosen at install
+- goget as the package manager: nixpkgs binaries with full dependency-closure resolution, no host
+  distro package manager involved anywhere, including at build time
 
-## 0.7: everyday hardware and services (in progress)
-- [x] power off / reboot from GNOME through elogind
-- [ ] audio: PipeWire + WirePlumber + PulseAudio compatibility started with the session
-- [ ] Bluetooth (bluez) and the GNOME Bluetooth panel
-- [ ] time sync (chrony), power profiles, Flatpak + Flathub, GNOME Software
-- [ ] suspend/resume and lid/power keys, battery and brightness on real laptops
-- [ ] clean shutdown path (unmount, sync) verified on real hardware
+## 1.1: minimal-only, no GUI installer, everyday hardware
+The GNOME live edition and its GTK4 graphical installer are gone entirely — one console-only ISO,
+installed with `systemlinux-install` (a terminal tool) or by hand from the Handbook. Everything
+below that used to be GNOME-desktop-only now runs as plain `lenine`-supervised services instead.
 
-## 0.8: sign-in and security
-- [ ] login screen, lock screen, user switching (GDM on elogind)
-- [ ] LUKS full-disk encryption in the installer
-- [ ] Secure Boot (signed shim + GRUB) so it installs on locked-down laptops
-- [ ] firewall on by default; automatic security updates prompt
+- [x] power off / reboot (lenine's own, not GNOME/elogind-mediated)
+- [x] audio: PipeWire + WirePlumber + PulseAudio compatibility, system-wide (reworked off the old
+      GNOME-session-only autostart)
+- [x] Bluetooth (bluez) — no GNOME panel, `bluetoothctl` is the console-edition's interface
+- [x] time sync (chrony), power profiles (`powerprofilesctl`), Flatpak + Flathub (remote added
+      automatically at install) — no GNOME Software, that was GNOME-specific and is dropped
+- [x] firewall on by default (nftables, default-deny-inbound) — this needed a real kernel config
+      fix (`NF_TABLES_INET/IPV4/IPV6/ARP/BRIDGE` were compiled out) and a real kernel rebuild, both
+      done; not just a config file edit
+- [x] LUKS full-disk encryption, in `systemlinux-install` and the manual Handbook steps, with the
+      live initramfs able to unlock an encrypted installed system at boot
+- [x] dual-boot / resize-free install: `systemlinux-install --partition` installs onto an existing
+      partition you've already freed up yourself (GParted/Disk Management beforehand) instead of
+      erasing a whole disk — deliberately *not* automatic resizing, which would be a genuinely
+      risky thing to do unattended to someone's existing Windows/Linux partitions
+- [x] printing (CUPS), firmware updates (fwupd)
+- [x] locales (glibc-locales, `en_US.UTF-8` pre-baked, others addable), CJK fonts, ibus/fcitx5
+      installed (not auto-started — no desktop session to launch them from yet)
+- [x] a CLI update notifier: `lenine` gained a real timers.conf capability (periodic, non-daemon
+      commands) for this — `goget upgrade --check` runs every 12h, visible in `lenine status`
+- [x] documented recovery: a real Recovery chapter in the Handbook (GRUB older-image rollback,
+      live-ISO chroot repair, `/persist` backup guidance)
+- [ ] suspend/resume and lid/power keys, battery and brightness **verified on real laptops** —
+      elogind (session/seat tracking, `loginctl suspend`) and kernel-level suspend support
+      (`CONFIG_SUSPEND`, `CONFIG_ACPI_SLEEP`) are both in place, but nothing wires a lid-switch or
+      power-button *event* to `loginctl suspend` automatically yet, and none of it has been tried
+      on real hardware
+- [ ] clean shutdown path **verified on real hardware** — the code path itself (unmount, remount
+      read-only, sync) has existed since before 1.0; "verified on real hardware" specifically is
+      still open
+- [ ] NVIDIA proprietary driver, hybrid graphics — no packaging path exists (no proprietary blobs
+      bundled); open nouveau is what's in the kernel today
+- [ ] Secure Boot (signed shim + GRUB) — the kernel is structurally ready (module signing, EFI
+      stub, lockdown LSM), but there is no shim/MOK signing pipeline in this repo. Not started,
+      not half-done — genuinely nothing here yet. Needs real UEFI firmware to verify enrollment
+      even once it exists.
+- [ ] scanners (SANE) — not addressed at all yet
+- [ ] translations of the installer/website UI itself — only the locale *mechanism* is in place;
+      the actual English-only strings haven't been translated
 
-## 0.9: polish
-- [ ] languages: locales and translations, input methods, CJK fonts
-- [ ] printing (CUPS) and scanners, fwupd firmware updates
-- [ ] graphical update notifier for `goget upgrade` and packages
-- [ ] dual-boot / resize-free install next to Windows or another Linux
-- [ ] NVIDIA proprietary driver option, hybrid graphics
-
-## 1.0
+## 1.2 and beyond
 - [ ] a week of daily use on real hardware (ThinkPad, IdeaPad, a desktop) with no reinstall
-- [ ] documented recovery: boot menu rollback, live-ISO repair, backups
+- [ ] Secure Boot: build the actual signing pipeline once someone can test real enrollment
+- [ ] suspend/resume wired to lid/power-key events, then validated on real hardware
+- [ ] scanners, UI translations

@@ -1,0 +1,8 @@
+#!/bin/sh
+# Installer job: give the installed system at $1 (account $2 already created by `goget provision`)
+# its own fresh machine identity, so no two installs from the same image share one.
+set -e
+ROOT=$1
+[ -d "$ROOT/etc" ] || { echo "target root $ROOT not found" >&2; exit 1; }
+rm -f "$ROOT/etc/machine-id" "$ROOT/var/lib/dbus/machine-id"
+rm -f "$ROOT"/etc/ssh/ssh_host_*

@@ -1,7 +1,0 @@
-# systemLinux: automatic sign-in
-auth     required pam_permit.so
-account  include  system-auth
-password include  system-auth
-session  include  system-auth
-session  required pam_env.so conffile=/etc/security/pam_env.conf
--session optional /usr/lib/x86_64-linux-gnu/security/pam_elogind.so

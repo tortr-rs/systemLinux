@@ -1,0 +1,14 @@
+#!/bin/sh
+# lenine service: polkit (authenticates privileged actions for NetworkManager, UDisks2,
+# power-profiles-daemon, cupsd). nixpkgs' polkit runs as user "polkituser" (not "polkitd" as
+# some distros name it) and does not self-drop privilege, so this wrapper creates the account
+# if needed and drops to it with setpriv before exec.
+#
+# polkitd itself is not merged into the goget profile's flat bin/libexec tree (it lives under
+# lib/polkit-1/ inside its own store path), so it is located dynamically from the current
+# generation's store closure rather than a fixed path that would break on the next `goget update`.
+getent passwd polkituser >/dev/null || useradd -r -M -d / -s /bin/false polkituser
+mkdir -p /run/polkit-1 /var/lib/polkit-1 /etc/polkit-1/rules.d
+chown polkituser:polkituser /var/lib/polkit-1 2>/dev/null
+POLKITD=$(find /nix/store -maxdepth 1 -iname '*-polkit-*' ! -iname '*-bin' -exec test -x {}/lib/polkit-1/polkitd \; -print -quit)/lib/polkit-1/polkitd
+exec setpriv --reuid=polkituser --regid=polkituser --init-groups "$POLKITD" --no-debug --log-level=notice

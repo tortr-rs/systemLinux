@@ -1,0 +1,71 @@
+#!/bin/sh
+# Write GRUB's menu for an installed systemLinux (UEFI only): one entry per image in
+# BOOTDIR/images/<version>/.
+# usage: systemlinux-grubcfg BOOTDIR DATA_UUID [LUKS_UUID]
+# Entry ids are the version numbers, so `grub-set-default <version>` picks the default and
+# `grub-reboot <version>` boots an image once (the trial boot `goget upgrade` uses; lenine makes
+# a trial permanent after the system stays up).
+# LUKS_UUID (the *outer* encrypted partition's UUID; DATA_UUID stays the inner ext4 filesystem's)
+# makes GRUB unlock the disk itself before it can even read vmlinuz/initrd.img off it -- GRUB
+# reads them directly, before Linux or the initramfs exist yet, so the initramfs's own passphrase
+# prompt (for the persistent /persist overlay) cannot help GRUB find the kernel in the first
+# place. This means an encrypted install prompts for the passphrase twice (once in GRUB, once in
+# the initramfs) -- standard for GRUB-on-LUKS setups, not a bug.
+set -e
+BOOT=$1 UUID=$2 LUKSUUID=${3:-}
+[ -d "$BOOT/images" ] && [ -n "$UUID" ] || { echo "usage: systemlinux-grubcfg BOOTDIR DATA_UUID [LUKS_UUID]" >&2; exit 1; }
+mkdir -p "$BOOT/grub"
+CFG=$BOOT/grub/grub.cfg
+{
+cat <<'HEAD'
+set timeout=3
+set color_normal=light-gray/black
+set color_highlight=black/yellow
+set menu_color_normal=light-gray/black
+set menu_color_highlight=black/yellow
+HEAD
+if [ -n "$LUKSUUID" ]; then
+    cat <<CRYPT
+insmod cryptodisk
+insmod luks
+insmod luks2
+cryptomount -u $LUKSUUID
+CRYPT
+fi
+cat <<'HEAD'
+load_env
+if [ "${next_entry}" ]; then
+    set default="${next_entry}"
+    set next_entry=
+    save_env next_entry
+else
+    set default="${saved_entry}"
+fi
+HEAD
+first=1
+for v in $(ls -1 "$BOOT/images" | grep -v '\.part$' | sort -rV); do
+    [ -f "$BOOT/images/$v/rootfs.squashfs" ] || continue
+    label="systemLinux $v"
+    [ "$first" = 1 ] && label="$label (newest)"
+    cat <<ENTRY
+
+menuentry "$label" --id "$v" {
+    search --no-floppy --fs-uuid --set=root $UUID
+    linux /boot/images/$v/vmlinuz lenine.image=/boot/images/$v/rootfs.squashfs lenine.data=UUID=$UUID lenine.version=$v quiet loglevel=3 console=tty0
+    initrd /boot/images/$v/initrd.img
+}
+ENTRY
+    if [ "$first" = 1 ]; then
+        cat <<ENTRY
+
+menuentry "systemLinux $v (debug: show all messages)" --id "$v-debug" {
+    search --no-floppy --fs-uuid --set=root $UUID
+    linux /boot/images/$v/vmlinuz lenine.image=/boot/images/$v/rootfs.squashfs lenine.data=UUID=$UUID lenine.version=$v lenine.verbose=1 console=tty0
+    initrd /boot/images/$v/initrd.img
+}
+ENTRY
+    fi
+    first=0
+done
+} > "$CFG.new"
+mv "$CFG.new" "$CFG"

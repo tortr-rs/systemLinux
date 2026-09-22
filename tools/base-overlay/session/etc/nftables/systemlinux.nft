@@ -1,0 +1,22 @@
+#!/usr/sbin/nft -f
+# systemLinux default firewall: deny unsolicited inbound, allow everything outbound.
+# Applied at boot by /usr/local/bin/start-nftables (a lenine service). Edit this file and run
+# `nft -f /etc/nftables/systemlinux.nft` (or `lenine restart nftables-load`) to apply changes.
+flush ruleset
+
+table inet filter {
+	chain input {
+		type filter hook input priority 0; policy drop;
+		iif "lo" accept
+		ct state established,related accept
+		ct state invalid drop
+		icmp type { echo-request, destination-unreachable, time-exceeded } accept
+		icmpv6 type { echo-request, destination-unreachable, time-exceeded, nd-neighbor-solicit, nd-neighbor-advert, nd-router-advert } accept
+	}
+	chain forward {
+		type filter hook forward priority 0; policy drop;
+	}
+	chain output {
+		type filter hook output priority 0; policy accept;
+	}
+}

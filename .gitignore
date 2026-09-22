@@ -15,3 +15,4 @@ tools/kernel-full/vmlinuz-*
 *.squashfs
 old-ramdisk/
 update.key
+systemlinux-distro/*.tar.xz

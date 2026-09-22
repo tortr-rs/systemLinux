@@ -1,0 +1,4 @@
+#!/bin/sh
+# systemLinux: keep the clock right with chrony (started and supervised by lenine)
+mkdir -p /run/chrony /var/lib/chrony /var/log/chrony
+exec /nix/var/goget/profiles/system/current/bin/chronyd -d -u root -s

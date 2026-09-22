@@ -224,8 +224,8 @@ func upgradeRun(args []string) int {
 		return 2
 	}
 
-	current := cmdlineValue("systeml.version=")
-	if current == "" || cmdlineValue("systeml.image=") == "" {
+	current := cmdlineValue("lenine.version=")
+	if current == "" || cmdlineValue("lenine.image=") == "" {
 		printErr("upgrade works on an installed systemLinux (booted from its disk); this system is running from the live medium or an unversioned image")
 		return 1
 	}
@@ -323,12 +323,20 @@ func upgradeRun(args []string) int {
 		return 1
 	}
 
-	uuid := strings.TrimPrefix(cmdlineValue("systeml.data="), "UUID=")
+	uuid := strings.TrimPrefix(cmdlineValue("lenine.data="), "UUID=")
 	if uuid == "" {
-		printErr("cannot tell which disk holds the images (no systeml.data= on the kernel command line)")
+		printErr("cannot tell which disk holds the images (no lenine.data= on the kernel command line)")
 		return 1
 	}
-	if rc := runCommand("", []string{"systemlinux-grubcfg", dataBoot, uuid}); rc != 0 {
+	// A LUKS install leaves its outer partition's UUID here so grub.cfg keeps unlocking the disk
+	// itself (GRUB reads vmlinuz/initrd.img directly, before the initramfs's own LUKS prompt can help).
+	grubcfgArgs := []string{"systemlinux-grubcfg", dataBoot, uuid}
+	if b, err := os.ReadFile(filepath.Join(dataBoot, "luks-uuid")); err == nil {
+		if luksUUID := strings.TrimSpace(string(b)); luksUUID != "" {
+			grubcfgArgs = append(grubcfgArgs, luksUUID)
+		}
+	}
+	if rc := runCommand("", grubcfgArgs); rc != 0 {
 		printErr("could not update GRUB's menu")
 		return 1
 	}
@@ -344,7 +352,7 @@ func upgradeRun(args []string) int {
 			os.RemoveAll(filepath.Join(dataBoot, "images", v))
 		}
 	}
-	runCommand("", []string{"systemlinux-grubcfg", dataBoot, uuid})
+	runCommand("", grubcfgArgs)
 
 	printOK("image %s is installed. Reboot to start it.", idx.Version)
 	printInfo("it boots once as a trial: if it does not come up, the next boot returns to %s automatically.", current)

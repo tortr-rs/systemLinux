@@ -1,4 +1,0 @@
-// Administrators are the members of the wheel group.
-polkit.addAdminRule(function(action, subject) {
-    return ["unix-group:wheel"];
-});

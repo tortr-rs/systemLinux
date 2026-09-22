@@ -1,14 +1,14 @@
 #!/bin/busybox sh
 # systemLinux live init (runs from the small initramfs, as every live ISO does):
-#   find the live medium -> mount /live/rootfs.squashfs -> overlay a tmpfs on it -> switch_root to systemL.
+#   find the live medium -> mount /live/rootfs.squashfs -> overlay a tmpfs on it -> switch_root to lenine.
 # Kernel command line options:
-#   systeml.image=PATH systeml.data=UUID=...   INSTALLED mode: mount the squashfs image PATH (relative to the
+#   lenine.image=PATH lenine.data=UUID=...   INSTALLED mode: mount the squashfs image PATH (relative to the
 #                      data partition) with a persistent overlay stored on the data partition
-#   systeml.iso=PATH   prefer this ISO file on the medium's partition (e.g. an ISO on a Ventoy stick)
-#   systeml.toram=1    copy the squashfs into RAM first (the stick can then be removed)
-#   systeml.wait=N     seconds to wait for the medium to appear (default 60)
-#   systeml.debug=1    open a shell just before switching to the real root
-#   systeml.shell=1    open a shell before looking for the medium
+#   lenine.iso=PATH   prefer this ISO file on the medium's partition (e.g. an ISO on a Ventoy stick)
+#   lenine.toram=1    copy the squashfs into RAM first (the stick can then be removed)
+#   lenine.wait=N     seconds to wait for the medium to appear (default 60)
+#   lenine.debug=1    open a shell just before switching to the real root
+#   lenine.shell=1    open a shell before looking for the medium
 export PATH=/bin:/sbin:/usr/bin:/usr/sbin
 
 /bin/busybox mkdir -p /proc /sys /dev /mnt /newroot /overlay
@@ -24,21 +24,26 @@ emergency() {
     echo "[live] starting a shell; leave it with 'exit' to try again"
     setsid cttyhack sh
 }
+# A LUKS header always starts with the 6-byte magic "LUKS" 0xba 0xbe (true for both LUKS1 and
+# LUKS2), so this needs no more than dd/od -- no blkid dependency for a check this simple.
+is_luks() {
+    [ "$(dd if="$1" bs=6 count=1 2>/dev/null | od -An -tx1 | tr -d ' \n')" = "4c554b53babe" ]
+}
 
 ISO_HINT= DEBUG=0 SHELL_FIRST=0 TORAM=0 WAIT=60 IMAGE= DATA=
 for a in $(cat /proc/cmdline); do
     case "$a" in
-        systeml.iso=*)   ISO_HINT=${a#systeml.iso=} ;;
-        systeml.image=*) IMAGE=${a#systeml.image=} ;;
-        systeml.data=*)  DATA=${a#systeml.data=} ;;
-        systeml.debug=1) DEBUG=1 ;;
-        systeml.shell=1) SHELL_FIRST=1 ;;
-        systeml.toram=1) TORAM=1 ;;
-        systeml.wait=*)  WAIT=${a#systeml.wait=} ;;
+        lenine.iso=*)   ISO_HINT=${a#lenine.iso=} ;;
+        lenine.image=*) IMAGE=${a#lenine.image=} ;;
+        lenine.data=*)  DATA=${a#lenine.data=} ;;
+        lenine.debug=1) DEBUG=1 ;;
+        lenine.shell=1) SHELL_FIRST=1 ;;
+        lenine.toram=1) TORAM=1 ;;
+        lenine.wait=*)  WAIT=${a#lenine.wait=} ;;
     esac
 done
 
-[ "$SHELL_FIRST" = 1 ] && emergency "systeml.shell=1"
+[ "$SHELL_FIRST" = 1 ] && emergency "lenine.shell=1"
 
 # The initramfs carries a build id and so does the ISO's /live directory: with several systemLinux ISOs on one
 # Ventoy stick, only the one this kernel came from is accepted (STRICT is dropped after a while, so a renamed
@@ -91,6 +96,13 @@ if [ -n "$IMAGE" ]; then
         [ "$i" = 1 ] && log "waiting for the system disk..."
         sleep 1
     done
+    if is_luks "$DEV"; then
+        log "encrypted system disk: enter the passphrase to unlock it"
+        until [ -e /dev/mapper/systemlinux-data ]; do
+            cryptsetup open "$DEV" systemlinux-data || log "wrong passphrase, try again"
+        done
+        DEV=/dev/mapper/systemlinux-data
+    fi
     mkdir -p /mnt/data
     until mount -t ext4 -o rw "$DEV" /mnt/data; do
         emergency "could not mount $DEV"
@@ -144,5 +156,5 @@ fi
 mount --move /proc /newroot/proc
 mount --move /sys /newroot/sys
 mount --move /dev /newroot/dev
-[ "$DEBUG" = 1 ] && emergency "systeml.debug=1: about to switch root"
-exec switch_root /newroot /sbin/systemL
+[ "$DEBUG" = 1 ] && emergency "lenine.debug=1: about to switch root"
+exec switch_root /newroot /sbin/lenine

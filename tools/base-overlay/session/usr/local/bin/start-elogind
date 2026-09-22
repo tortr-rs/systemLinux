@@ -1,0 +1,5 @@
+#!/bin/sh
+# lenine service: elogind, the login/seat/session daemon (there is no systemd-logind). Provides
+# session/seat tracking and inhibitor locks (loginctl suspend, etc.) even without a desktop.
+mkdir -p /run/systemd /run/user /var/lib/elogind
+exec /nix/var/goget/profiles/system/current/libexec/elogind

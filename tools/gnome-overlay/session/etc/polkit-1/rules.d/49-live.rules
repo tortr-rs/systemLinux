@@ -1,4 +1,0 @@
-// Live session only (removed by the installer): the live user can do everything without a password.
-polkit.addRule(function(action, subject) {
-    if (subject.user == "live") { return polkit.Result.YES; }
-});

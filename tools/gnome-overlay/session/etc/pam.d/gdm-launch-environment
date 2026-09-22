@@ -1,6 +1,0 @@
-# systemLinux: the sign-in screen's own session (user Debian-gdm), no password
-auth     required pam_permit.so
-account  required pam_permit.so
-password required pam_permit.so
-session  required pam_limits.so
--session optional /usr/lib/x86_64-linux-gnu/security/pam_elogind.so
