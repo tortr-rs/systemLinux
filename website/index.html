@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>systemLinux 1.0 &ldquo;Malachite&rdquo; &mdash; an atomic Linux that belongs to everyone</title>
+<title>systemLinux 1.1 &ldquo;Malachite&rdquo; &mdash; an atomic Linux that belongs to everyone</title>
 <meta name="description" content="systemLinux is a communist GNU/Linux distribution: common ownership, no profit motive, no owners. A minimal, console-first system that no company can sell you, change under you or take away.">
 <link rel="icon" type="image/svg+xml" href="logo.svg">
 <style>
@@ -201,11 +201,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
     <div class="panel">
       <h3>systemLinux</h3>
       <p>Boots to a root shell on the console: install it by hand from the handbook, or run <code>systemlinux-install</code>. About 1.1&nbsp;GB, 2&nbsp;GB of RAM.</p>
-      <p><a class="btn primary" href="https://github.com/tortr-rs/systemLinux/releases/download/v1.0/systemlinux-v1.0.iso">systemlinux-v1.0.iso</a></p>
+      <p><a class="btn primary" href="https://github.com/tortr-rs/systemLinux/releases/download/v1.1/systemlinux-v1.1.iso">systemlinux-v1.1.iso</a></p>
       <p><strong>SHA-256</strong><br>Published with each release on the <a href="https://github.com/tortr-rs/systemLinux/releases">releases page</a>, alongside the signed update index &mdash; check it there rather than trusting a number frozen on this page.</p>
     </div>
   </div>
-  <p style="margin-top:1.2rem">Check your download with <code>sha256sum systemlinux-v1.0.iso</code> against the checksum on the releases page. Older versions are on the <a href="https://github.com/tortr-rs/systemLinux/releases">releases page</a>; the source is on <a href="https://github.com/tortr-rs/systemLinux">GitHub</a>.</p>
+  <p style="margin-top:1.2rem">Check your download with <code>sha256sum systemlinux-v1.1.iso</code> against the checksum on the releases page. Older versions are on the <a href="https://github.com/tortr-rs/systemLinux/releases">releases page</a>; the source is on <a href="https://github.com/tortr-rs/systemLinux">GitHub</a>.</p>
   <p><strong>Ventoy:</strong> copy the ISO onto the stick. Older systemLinux ISOs on the same stick are fine: each ISO only boots its own system. If it reports an error at boot, write the ISO straight to a stick instead.</p>
 </div></section>
 
@@ -230,7 +230,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
     <article>
       <div class="chapter" id="hb-1"><h3>1. Make a bootable USB stick</h3>
         <p>Download the ISO and check it against the SHA-256 on the releases page. Then copy it onto a <strong>Ventoy</strong> stick, or write it straight to a stick (this erases the stick):</p>
-        <pre class="term">sudo dd if=systemlinux-v1.0.iso of=/dev/sdX bs=4M status=progress conv=fsync</pre>
+        <pre class="term">sudo dd if=systemlinux-v1.1.iso of=/dev/sdX bs=4M status=progress conv=fsync</pre>
         <p>Replace <code>/dev/sdX</code> with the stick (check with <code>lsblk</code>). On Windows use Rufus in <em>DD image</em> mode or balenaEtcher.</p></div>
 
       <div class="chapter" id="hb-2"><h3>2. Boot the live system</h3>
@@ -388,7 +388,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 </main>
 
 <footer><div class="wrap">
-  <span>systemLinux 1.0 &ldquo;Malachite&rdquo; &middot; <a href="https://github.com/tortr-rs/systemLinux">source on GitHub</a></span>
+  <span>systemLinux 1.1 &ldquo;Malachite&rdquo; &middot; <a href="https://github.com/tortr-rs/systemLinux">source on GitHub</a></span>
   <span>Kernel 7.2.6 &middot; lenine &middot; goget</span>
 </div></footer>
 
