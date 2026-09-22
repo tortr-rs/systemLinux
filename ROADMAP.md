@@ -59,21 +59,26 @@ below that used to be GNOME-desktop-only now runs as plain `lenine`-supervised s
 - [ ] scanners (SANE) — not addressed at all yet
 - [ ] translations of the installer/website UI itself — only the locale *mechanism* is in place;
       the actual English-only strings haven't been translated
-- [ ] **ISO size**: the real, measured build is 2.4 GB — over GitHub's 2 GB release-asset
-      limit, so it isn't attached directly to the release. Confirmed cause: nixpkgs'
-      `linux-firmware` bundles firmware for every device that has ever existed, included
-      *twice* (once in the initramfs for early boot, again in the squashfs for hotplugged
-      devices), where the old Debian-based build cherry-picked ~17 relevant per-vendor
-      packages instead. Dropping `ibus` and stripping docs/man/locale strings from the base
-      services (already done this round) only clawed back about 100 MB — nowhere near
-      enough on its own. The real fix is filtering the firmware tree down to what this
-      kernel's built-in drivers actually reference (`MODULE_FIRMWARE()` in the kernel source
-      vs. the firmware file list) — not done yet, deliberately deferred rather than rushed.
+- [x] **ISO size**: fixed. Root cause was nixpkgs' `linux-firmware` bundling firmware for
+      every device that has ever existed, included *twice* (initramfs + squashfs), where the
+      old Debian-based build cherry-picked ~17 relevant per-vendor packages instead. Tried
+      the surgical fix first (filter to only what this kernel's drivers reference via
+      `MODULE_FIRMWARE()` in the kernel source) and abandoned it: `iwlwifi` — extremely
+      common Intel WiFi hardware — builds its firmware filenames entirely at runtime with
+      zero literal strings in source, so that approach would have silently broken WiFi for a
+      large share of real laptops. Used a categorical exclusion instead: dropped vendor
+      directories that cannot run on x86_64 *at all* (Qualcomm Snapdragon/Adreno SoC
+      firmware — 450 MB alone — plus other ARM/embedded-only vendors) and enterprise
+      datacenter NICs outside this project's laptop/desktop target (Netronome, Mellanox).
+      Real PC WiFi/BT/GPU vendors (MediaTek, Marvell, Atheros, AMD, Intel, NVIDIA) untouched.
+      Final measured ISO: 1.9 GB, under GitHub's 2 GB release-asset limit with real margin —
+      attached directly to the `v1.1` release, no split files, no external hosting needed.
 
 ## 1.2 and beyond
 - [ ] a week of daily use on real hardware (ThinkPad, IdeaPad, a desktop) with no reinstall
 - [ ] Secure Boot: build the actual signing pipeline once someone can test real enrollment
 - [ ] suspend/resume wired to lid/power-key events, then validated on real hardware
 - [ ] scanners, UI translations
-- [ ] trim the bundled firmware to this kernel's actual driver set, to get the ISO back under
-      GitHub's 2 GB release-asset limit
+- [ ] a real per-driver firmware trim (matching this kernel's actual driver set, not just
+      whole-vendor exclusion) — safe to attempt now that there's ISO-size headroom again, no
+      rush

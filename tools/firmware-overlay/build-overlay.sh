@@ -21,9 +21,17 @@ echo "== fetching firmware from nixpkgs"
 "$GOGET" install --root "$WORK/nix-tmp" --system -y linux-firmware sof-firmware
 
 echo "== compressing firmware"
-WORK="$WORK" python3 - <<'PY'
+# Skip whole top-level vendor directories that cannot run on any x86_64 machine at all
+# (Qualcomm Snapdragon SoC platform/Adreno GPU firmware, ARM/embedded SoC vendors) or that are
+# datacenter-only gear far outside this project's laptop/desktop daily-driver target (Netronome
+# SmartNICs) -- not a guess at which *files* a driver needs (the risky approach that would have
+# silently broken iwlwifi), just categorically inapplicable hardware. Real PC WiFi/BT/GPU vendors
+# (mediatek/, mrvl/, ath1*k/, rtw*/, amdgpu/, intel/, nvidia/, etc.) are untouched.
+SKIP_VENDORS="qcom dpaa2 amlogic arm nxp cnm netronome mellanox"
+WORK="$WORK" SKIP_VENDORS="$SKIP_VENDORS" python3 - <<'PY'
 import os, subprocess, glob
 work = os.environ['WORK']
+skip = set(os.environ['SKIP_VENDORS'].split())
 dst = work + '/ov5/usr/lib/firmware'
 n = 0
 for pkg_glob in ('linux-firmware-*', 'sof-firmware-*'):
@@ -35,6 +43,9 @@ for pkg_glob in ('linux-firmware-*', 'sof-firmware-*'):
         continue
     for dp, dns, fns in os.walk(src):
         rel = os.path.relpath(dp, src)
+        if rel.split(os.sep)[0] in skip:
+            dns[:] = []
+            continue
         os.makedirs(os.path.join(dst, rel), exist_ok=True)
         for f in fns:
             s = os.path.join(dp, f)

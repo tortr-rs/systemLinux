@@ -24,18 +24,17 @@ Website: `website/index.html` (also the Handbook) · Download: [GitHub release `
 
 | File | Size | RAM needed |
 |---|---|---|
-| `systemlinux-v1.1.iso` | about 2.4 GB | about 3 GB (4 GB+ to use *copy to RAM*) |
-
-**Split into two parts** on the release — GitHub's release-asset limit is 2 GB, the ISO is
-2.4 GB, mostly from bundling the full upstream firmware set (nixpkgs' `linux-firmware`,
-unlike the old Debian build's curated ~17-package subset; trimming that down to only what
-this kernel's built-in drivers actually reference would fix this properly — see
-`ROADMAP.md`). Download `systemlinux-v1.1.iso.part-00` and `-part-01` and join them:
+| `systemlinux-v1.1.iso` | about 1.9 GB | about 3 GB (4 GB+ to use *copy to RAM*) |
 
 ```sh
-cat systemlinux-v1.1.iso.part-00 systemlinux-v1.1.iso.part-01 > systemlinux-v1.1.iso
-sha256sum systemlinux-v1.1.iso   # 9483d6efb35aa1224bd5ba55f9f7745fb318894c663b1e8e931b3bd351232ab7
+sha256sum systemlinux-v1.1.iso   # 8bc5af5fd2e30f62620c2cefc63fbf4cc1bbc822b9355d454a06c7cd78e99a28
 ```
+
+Bundled firmware excludes vendor categories that cannot run on x86_64 at all (Qualcomm
+Snapdragon/Adreno SoC firmware, other ARM/embedded-only vendors) and enterprise datacenter
+NICs outside this project's laptop/desktop target (Netronome, Mellanox) — real WiFi/BT/GPU
+hardware (MediaTek, Marvell, Atheros, AMD, Intel, NVIDIA) is untouched. See `ROADMAP.md` for
+what's still deliberately not done (NVIDIA proprietary, Secure Boot, etc.).
 
 Boot in **UEFI mode**: legacy BIOS is not supported (the GRUB build this project ships has
 no BIOS/i386-pc modules). Each ISO has three GRUB entries: normal, *copy to RAM* (loads the
