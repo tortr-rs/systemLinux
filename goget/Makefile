@@ -7,7 +7,7 @@ BIN     := goget
 all: $(BIN)
 
 $(BIN): *.go go.mod
-	CGO_ENABLED=0 go build -o $(BIN) .
+	CGO_ENABLED=0 GOTOOLCHAIN=auto go build -o $(BIN) .
 
 install: $(BIN)
 	install -Dm755 $(BIN) $(BINDIR)/$(BIN)

@@ -120,7 +120,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
     <h1>Software that belongs <span>to everyone.</span></h1>
     <p class="lead">Its own init, a minimal console system you install by hand or with one script, and a package manager where every change can be undone: a whole system that is yours to use, study, change and share.</p>
     <a class="btn primary" href="#download">Download</a><a class="btn" href="#handbook">Read the handbook</a>
-    <div class="facts"><span><b>Atomic</b> image updates</span><span><b>Minimal</b> console image, about 2&nbsp;GB RAM</span><span><b>Linux 7.2.6</b>, drivers for almost everything</span><span><b>100,000+</b> prebuilt packages</span></div>
+    <div class="facts"><span><b>Atomic</b> image updates</span><span><b>Minimal</b> console image, about 3&nbsp;GB RAM</span><span><b>Linux 7.2.6</b>, drivers for almost everything</span><span><b>100,000+</b> prebuilt packages</span></div>
   </div>
 </div></div>
 
@@ -190,7 +190,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
     <tr><th>Updates</th><td>Atomic, image-based, like Fedora Silverblue: signed system images (<code>goget upgrade</code>), trial boot and automatic rollback</td></tr>
     <tr><th>Installer</th><td>No GUI: a real handbook with the exact commands, plus <code>systemlinux-install</code>, a plain terminal script that automates the same steps &mdash; whole-disk or into an existing partition, with optional LUKS encryption</td></tr>
     <tr><th>Boot</th><td>GRUB 2.12, UEFI x86_64 only. Live entries: normal, copy to RAM, debug shell</td></tr>
-    <tr><th>Memory</th><td>About 2&nbsp;GB; the &ldquo;copy to RAM&rdquo; entry needs the whole image in memory on top</td></tr>
+    <tr><th>Memory</th><td>About 3&nbsp;GB; the &ldquo;copy to RAM&rdquo; entry needs the whole 2.4&nbsp;GB image in memory on top</td></tr>
   </table></div>
 </div></section>
 
@@ -200,9 +200,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
   <div class="cards">
     <div class="panel">
       <h3>systemLinux</h3>
-      <p>Boots to a root shell on the console: install it by hand from the handbook, or run <code>systemlinux-install</code>. About 1.1&nbsp;GB, 2&nbsp;GB of RAM.</p>
-      <p><a class="btn primary" href="https://github.com/tortr-rs/systemLinux/releases/download/v1.1/systemlinux-v1.1.iso">systemlinux-v1.1.iso</a></p>
-      <p><strong>SHA-256</strong><br>Published with each release on the <a href="https://github.com/tortr-rs/systemLinux/releases">releases page</a>, alongside the signed update index &mdash; check it there rather than trusting a number frozen on this page.</p>
+      <p>Boots to a root shell on the console: install it by hand from the handbook, or run <code>systemlinux-install</code>. About 2.4&nbsp;GB, 3&nbsp;GB of RAM (4&nbsp;GB+ to use <em>copy to RAM</em>).</p>
+      <p><a class="btn primary" href="https://github.com/tortr-rs/systemLinux/releases">Get it from the releases page</a></p>
+      <p><strong>Not a direct GitHub release asset:</strong> at 2.4&nbsp;GB the ISO is over GitHub's 2&nbsp;GB release-asset limit (it bundles the full upstream firmware set, not yet trimmed to just this kernel's drivers &mdash; see the roadmap). The release notes link to wherever it's actually hosted.</p>
+      <p><strong>SHA-256</strong><br>Published with each release on the <a href="https://github.com/tortr-rs/systemLinux/releases">releases page</a>, alongside the signed update index &mdash; verify it there before trusting a download from anywhere else.</p>
     </div>
   </div>
   <p style="margin-top:1.2rem">Check your download with <code>sha256sum systemlinux-v1.1.iso</code> against the checksum on the releases page. Older versions are on the <a href="https://github.com/tortr-rs/systemLinux/releases">releases page</a>; the source is on <a href="https://github.com/tortr-rs/systemLinux">GitHub</a>.</p>

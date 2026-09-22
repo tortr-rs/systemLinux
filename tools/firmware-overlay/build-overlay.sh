@@ -9,6 +9,10 @@ HERE=$(cd "$(dirname "$0")" && pwd)
 REPO=$(cd "$HERE/../.." && pwd)
 GOGET=$REPO/goget/goget
 export WORK=${WORK:-$HOME/.cache/systemlinux-firmware}
+# nix store directories are read-only, so stale content from a previous run (in nix-tmp, and in
+# ov5, some of which is hardlinked straight from the nix store and so shares its read-only bits)
+# needs write permission restored before rm -rf can clear it
+chmod -R u+w "$WORK/nix-tmp" "$WORK/ov5" 2>/dev/null || true
 rm -rf "$WORK/nix-tmp" "$WORK/ov5"
 mkdir -p "$WORK/ov5/usr/lib"
 cd "$WORK"

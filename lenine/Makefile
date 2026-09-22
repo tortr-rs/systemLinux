@@ -7,7 +7,7 @@ BIN     := lenine
 all: $(BIN)
 
 $(BIN): *.go go.mod
-	CGO_ENABLED=0 go build -trimpath -ldflags "-s -w" -o $(BIN) .
+	CGO_ENABLED=0 GOTOOLCHAIN=auto go build -trimpath -ldflags "-s -w" -o $(BIN) .
 
 install: $(BIN)
 	install -Dm755 $(BIN) $(DESTDIR)$(SBINDIR)/$(BIN)

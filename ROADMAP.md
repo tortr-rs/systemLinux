@@ -34,8 +34,10 @@ below that used to be GNOME-desktop-only now runs as plain `lenine`-supervised s
       erasing a whole disk — deliberately *not* automatic resizing, which would be a genuinely
       risky thing to do unattended to someone's existing Windows/Linux partitions
 - [x] printing (CUPS), firmware updates (fwupd)
-- [x] locales (glibc-locales, `en_US.UTF-8` pre-baked, others addable), CJK fonts, ibus/fcitx5
-      installed (not auto-started — no desktop session to launch them from yet)
+- [x] locales (glibc-locales, `en_US.UTF-8` pre-baked, others addable), CJK fonts, fcitx5
+      installed (not auto-started — no desktop session to launch it from yet; ibus was dropped —
+      its prebuilt closure drags in a GTK+Python setup GUI that can't run without a desktop
+      session anyway, and fcitx5 alone covers the same need much more cheaply)
 - [x] a CLI update notifier: `lenine` gained a real timers.conf capability (periodic, non-daemon
       commands) for this — `goget upgrade --check` runs every 12h, visible in `lenine status`
 - [x] documented recovery: a real Recovery chapter in the Handbook (GRUB older-image rollback,
@@ -57,9 +59,21 @@ below that used to be GNOME-desktop-only now runs as plain `lenine`-supervised s
 - [ ] scanners (SANE) — not addressed at all yet
 - [ ] translations of the installer/website UI itself — only the locale *mechanism* is in place;
       the actual English-only strings haven't been translated
+- [ ] **ISO size**: the real, measured build is 2.4 GB — over GitHub's 2 GB release-asset
+      limit, so it isn't attached directly to the release. Confirmed cause: nixpkgs'
+      `linux-firmware` bundles firmware for every device that has ever existed, included
+      *twice* (once in the initramfs for early boot, again in the squashfs for hotplugged
+      devices), where the old Debian-based build cherry-picked ~17 relevant per-vendor
+      packages instead. Dropping `ibus` and stripping docs/man/locale strings from the base
+      services (already done this round) only clawed back about 100 MB — nowhere near
+      enough on its own. The real fix is filtering the firmware tree down to what this
+      kernel's built-in drivers actually reference (`MODULE_FIRMWARE()` in the kernel source
+      vs. the firmware file list) — not done yet, deliberately deferred rather than rushed.
 
 ## 1.2 and beyond
 - [ ] a week of daily use on real hardware (ThinkPad, IdeaPad, a desktop) with no reinstall
 - [ ] Secure Boot: build the actual signing pipeline once someone can test real enrollment
 - [ ] suspend/resume wired to lid/power-key events, then validated on real hardware
 - [ ] scanners, UI translations
+- [ ] trim the bundled firmware to this kernel's actual driver set, to get the ISO back under
+      GitHub's 2 GB release-asset limit

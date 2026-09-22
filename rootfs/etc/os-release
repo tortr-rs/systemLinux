@@ -1,1 +1,5 @@
-../usr/lib/os-release
+NAME="systemLinux"
+VERSION="1.1"
+ID=systemlinux
+PRETTY_NAME="systemLinux v1.1 GNU/Linux (lenine Core)"
+VERSION_ID="1.1"

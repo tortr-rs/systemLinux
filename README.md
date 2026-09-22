@@ -20,11 +20,18 @@ failed trial boot rolls back on its own.
 
 systemLinux is **atomic**, like Fedora Silverblue: the system is a read-only image that `goget upgrade` replaces as a whole, with a trial boot and automatic rollback; programs live in separate, rollback-able goget profiles.
 
-Website: `website/index.html` (also the Handbook) · Download: GitHub release `v1.1`
+Website: `website/index.html` (also the Handbook) · Download: see the releases page
 
 | File | Size | RAM needed |
 |---|---|---|
-| `systemlinux-v1.1.iso` | about 1.1 GB | about 2 GB |
+| `systemlinux-v1.1.iso` | about 2.4 GB | about 3 GB (4 GB+ to use *copy to RAM*) |
+
+**The ISO is not attached directly to the GitHub release** — at 2.4 GB it's over GitHub's
+2 GB release-asset limit, mostly from bundling the full upstream firmware set (nixpkgs'
+`linux-firmware`, unlike the old Debian build's curated ~17-package subset). The release
+notes link to wherever it's actually hosted; verify the SHA-256 there before trusting a
+download from anywhere else. (Trimming the bundled firmware down to only what this kernel's
+built-in drivers actually reference would fix this properly — see `ROADMAP.md`.)
 
 Boot in **UEFI mode**: legacy BIOS is not supported (the GRUB build this project ships has
 no BIOS/i386-pc modules). Each ISO has three GRUB entries: normal, *copy to RAM* (loads the
@@ -186,9 +193,9 @@ The full guide, including troubleshooting and recovery, is the Handbook on the w
 * Only `en_US.UTF-8` is pre-baked; see `/etc/profile.d/locale.sh` in `tools/base-overlay/`
   for how to add more from the `glibc-locales` archive. The installer/website UI itself is
   English-only — no translations yet.
-* ibus/fcitx5 are installed but not auto-started (there's no desktop session to launch them
-  from) — run `ibus-daemon -drx` or `fcitx5` by hand, or from a window manager's own startup
-  file, once one is installed via `goget`.
+* `fcitx5` is installed but not auto-started (there's no desktop session to launch it from) —
+  run `fcitx5` by hand, or from a window manager's own startup file, once one is installed via
+  `goget`.
 * A week of daily use on real hardware, and real hardware validation of suspend/resume,
   lid/power keys and battery/brightness, hasn't happened yet — see `ROADMAP.md`.
 

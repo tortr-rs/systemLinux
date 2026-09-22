@@ -16,7 +16,7 @@ import (
 
 const (
 	brandName    = "systemLinux"
-	brandVersion = "1.0"
+	brandVersion = "1.1"
 )
 
 // provisionGroups are the explicit groups every provisioned user joins.
