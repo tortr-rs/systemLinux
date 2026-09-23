@@ -1,5 +1,5 @@
 #!/bin/sh
-# lenine service: polkit (authenticates privileged actions for NetworkManager, UDisks2,
+# systemLinux: polkit, run by polkit.service (authenticates privileged actions for NetworkManager, UDisks2,
 # power-profiles-daemon, cupsd). nixpkgs' polkit runs as user "polkituser" (not "polkitd" as
 # some distros name it) and does not self-drop privilege, so this wrapper creates the account
 # if needed and drops to it with setpriv before exec.

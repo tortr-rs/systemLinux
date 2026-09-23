@@ -1,0 +1,21 @@
+# systemLinux: the live image boots with no machine-id, so systemd applies presets on every live
+# boot (and on an install's first boot). NetworkManager and chrony do these jobs here: keep
+# systemd's own network, DNS and time daemons from being enabled next to them.
+disable systemd-networkd.service
+disable systemd-networkd.socket
+disable systemd-networkd-*
+disable systemd-network-generator.service
+disable systemd-resolved.service
+disable systemd-timesyncd.service
+enable NetworkManager.service
+enable polkit.service
+enable bluetooth.service
+enable chronyd.service
+enable power-profiles-daemon.service
+enable audio.service
+enable cups.service
+enable fwupd.service
+enable nftables.service
+enable systemlinux-opengl.service
+enable goget-check.timer
+enable systemlinux-boot-good.timer

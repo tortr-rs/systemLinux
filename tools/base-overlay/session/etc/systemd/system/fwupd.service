@@ -1,0 +1,12 @@
+[Unit]
+Description=Firmware updates (fwupd)
+Wants=dbus.service polkit.service
+After=dbus.service polkit.service
+
+[Service]
+ExecStart=/usr/local/bin/start-fwupd
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

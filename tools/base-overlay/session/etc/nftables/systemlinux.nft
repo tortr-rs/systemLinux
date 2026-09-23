@@ -1,7 +1,7 @@
 #!/usr/sbin/nft -f
 # systemLinux default firewall: deny unsolicited inbound, allow everything outbound.
-# Applied at boot by /usr/local/bin/start-nftables (a lenine service). Edit this file and run
-# `nft -f /etc/nftables/systemlinux.nft` (or `lenine restart nftables-load`) to apply changes.
+# Applied at boot by nftables.service. Edit this file and run
+# `nft -f /etc/nftables/systemlinux.nft` (or `systemctl reload nftables`) to apply changes.
 flush ruleset
 
 table inet filter {

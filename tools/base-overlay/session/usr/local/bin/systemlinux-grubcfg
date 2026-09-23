@@ -3,7 +3,7 @@
 # BOOTDIR/images/<version>/.
 # usage: systemlinux-grubcfg BOOTDIR DATA_UUID [LUKS_UUID]
 # Entry ids are the version numbers, so `grub-set-default <version>` picks the default and
-# `grub-reboot <version>` boots an image once (the trial boot `goget upgrade` uses; lenine makes
+# `grub-reboot <version>` boots an image once (the trial boot `goget upgrade` uses; systemlinux-boot-good.timer makes
 # a trial permanent after the system stays up).
 # LUKS_UUID (the *outer* encrypted partition's UUID; DATA_UUID stays the inner ext4 filesystem's)
 # makes GRUB unlock the disk itself before it can even read vmlinuz/initrd.img off it -- GRUB
@@ -51,7 +51,7 @@ for v in $(ls -1 "$BOOT/images" | grep -v '\.part$' | sort -rV); do
 
 menuentry "$label" --id "$v" {
     search --no-floppy --fs-uuid --set=root $UUID
-    linux /boot/images/$v/vmlinuz lenine.image=/boot/images/$v/rootfs.squashfs lenine.data=UUID=$UUID lenine.version=$v quiet loglevel=3 console=tty0
+    linux /boot/images/$v/vmlinuz systemlinux.image=/boot/images/$v/rootfs.squashfs systemlinux.data=UUID=$UUID systemlinux.version=$v quiet loglevel=3 console=tty0
     initrd /boot/images/$v/initrd.img
 }
 ENTRY
@@ -60,7 +60,7 @@ ENTRY
 
 menuentry "systemLinux $v (debug: show all messages)" --id "$v-debug" {
     search --no-floppy --fs-uuid --set=root $UUID
-    linux /boot/images/$v/vmlinuz lenine.image=/boot/images/$v/rootfs.squashfs lenine.data=UUID=$UUID lenine.version=$v lenine.verbose=1 console=tty0
+    linux /boot/images/$v/vmlinuz systemlinux.image=/boot/images/$v/rootfs.squashfs systemlinux.data=UUID=$UUID systemlinux.version=$v systemd.show_status=1 console=tty0
     initrd /boot/images/$v/initrd.img
 }
 ENTRY

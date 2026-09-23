@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>systemLinux 1.1 &ldquo;Malachite&rdquo; &mdash; an atomic Linux that belongs to everyone</title>
+<title>systemLinux 1.2 &mdash; an atomic Linux that belongs to everyone</title>
 <meta name="description" content="systemLinux is a communist GNU/Linux distribution: common ownership, no profit motive, no owners. A minimal, console-first system that no company can sell you, change under you or take away.">
 <link rel="icon" type="image/svg+xml" href="logo.svg">
 <style>
@@ -106,7 +106,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
       <li><a href="#features">Features</a></li>
       <li><a href="#goget">goget</a></li>
       <li><a href="#handbook">Handbook</a></li>
-      <li><a href="#lenine">lenine</a></li>
+      <li><a href="#services">Services</a></li>
       <li><a href="#download">Download</a></li>
     </ul></nav>
   </div>
@@ -116,7 +116,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 
 <div class="hero"><div class="wrap grid">
   <div>
-    <span class="eyebrow">Release 1.0 &middot; codename Malachite</span>
+    <span class="eyebrow">Release 1.2</span>
     <h1>Software that belongs <span>to everyone.</span></h1>
     <p class="lead">Its own init, a minimal console system you install by hand or with one script, and a package manager where every change can be undone: a whole system that is yours to use, study, change and share.</p>
     <a class="btn primary" href="#download">Download</a><a class="btn" href="#handbook">Read the handbook</a>
@@ -145,7 +145,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
     <div class="card"><h3>Installs like you mean it</h3><p>A real handbook with the exact commands, or the <code>systemlinux-install</code> script for the same steps automated. Whole-disk, or into a partition you freed yourself &mdash; your call. Boots in UEFI mode from a USB stick or Ventoy.</p></div>
     <div class="card"><h3>Atomic, like Silverblue</h3><p>The system is a read-only image that is replaced as a whole, never patched file by file. <code>goget upgrade</code> downloads a signed image, boots it as a trial and falls back to the old one by itself if it fails. Your files and programs stay.</p></div>
     <div class="card"><h3>Packages with an undo button</h3><p><code>goget install</code> gives you prebuilt, signed nixpkgs software in your own profile. Roll back any change, run a program without installing it, keep a plain list of what you use.</p></div>
-    <div class="card"><h3>Its own init</h3><p><strong>lenine</strong> is a small Go init that supervises services (with dependencies and cgroup limits), runs timers, and shuts down cleanly.</p></div>
+    <div class="card"><h3>Plain systemd</h3><p><strong>systemd</strong> runs the system: every service is an ordinary unit, so <code>systemctl</code>, <code>journalctl</code> and <code>loginctl</code> work the way you expect.</p></div>
     <div class="card"><h3>Wide hardware support</h3><p>One monolithic kernel with Intel, AMD and open NVIDIA graphics, Wi-Fi, Bluetooth, storage and laptop drivers built in, plus firmware.</p></div>
   </div>
 </div></section>
@@ -183,7 +183,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
   <h2>What is in the image</h2>
   <div class="table-scroll"><table>
     <tr><th>Kernel</th><td>Linux 7.2.6, monolithic, with drivers for almost everything built in (Wi-Fi, Bluetooth, Intel/AMD/open NVIDIA graphics, storage, sound, laptop hardware, exFAT/NTFS/btrfs/XFS) and bundled firmware</td></tr>
-    <tr><th>Init</th><td><strong>lenine</strong>, a static Go binary running as PID 1: service dependencies, per-service cgroup limits, timers. No systemd</td></tr>
+    <tr><th>Init</th><td><strong>systemd</strong> 261, with journald, udevd and logind; the base services are plain units in <code>/etc/systemd/system/</code></td></tr>
     <tr><th>Services</th><td>Bluetooth (bluez), audio (PipeWire), time sync (chrony), power profiles, CUPS printing, fwupd, Flatpak, a default firewall (nftables) &mdash; no bundled desktop</td></tr>
     <tr><th>Userland</th><td>GNU bash 5.3 as <code>/bin/sh</code>, GNU coreutils, tar, sed and gawk on glibc</td></tr>
     <tr><th>Packages</th><td><code>goget</code> with nixpkgs (25.05 stable or unstable): store paths, profiles, generations, rollback</td></tr>
@@ -201,11 +201,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
     <div class="panel">
       <h3>systemLinux</h3>
       <p>Boots to a root shell on the console: install it by hand from the handbook, or run <code>systemlinux-install</code>. About 1.9&nbsp;GB, 3&nbsp;GB of RAM (4&nbsp;GB+ to use <em>copy to RAM</em>).</p>
-      <p><a class="btn primary" href="https://github.com/tortr-rs/systemLinux/releases/download/v1.1/systemlinux-v1.1.iso">systemlinux-v1.1.iso</a></p>
+      <p><a class="btn primary" href="https://github.com/tortr-rs/systemLinux/releases/download/v1.2/systemlinux-v1.2.iso">systemlinux-v1.2.iso</a></p>
       <p><strong>SHA-256</strong><br>Published with each release on the <a href="https://github.com/tortr-rs/systemLinux/releases">releases page</a>, alongside the signed update index &mdash; verify it there before trusting a download from anywhere else.</p>
     </div>
   </div>
-  <p style="margin-top:1.2rem">Check your download with <code>sha256sum systemlinux-v1.1.iso</code> against the checksum on the releases page. Older versions are on the <a href="https://github.com/tortr-rs/systemLinux/releases">releases page</a>; the source is on <a href="https://github.com/tortr-rs/systemLinux">GitHub</a>.</p>
+  <p style="margin-top:1.2rem">Check your download with <code>sha256sum systemlinux-v1.2.iso</code> against the checksum on the releases page. Older versions are on the <a href="https://github.com/tortr-rs/systemLinux/releases">releases page</a>; the source is on <a href="https://github.com/tortr-rs/systemLinux">GitHub</a>.</p>
   <p><strong>Ventoy:</strong> copy the ISO onto the stick. Older systemLinux ISOs on the same stick are fine: each ISO only boots its own system. If it reports an error at boot, write the ISO straight to a stick instead.</p>
 </div></section>
 
@@ -229,8 +229,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
     </ol></aside>
     <article>
       <div class="chapter" id="hb-1"><h3>1. Make a bootable USB stick</h3>
-        <p>Download the ISO and check it against the SHA-256 on the <a href="https://github.com/tortr-rs/systemLinux/releases/tag/v1.1">release page</a>. Then copy it onto a <strong>Ventoy</strong> stick, or write it straight to a stick (this erases the stick):</p>
-        <pre class="term">sudo dd if=systemlinux-v1.1.iso of=/dev/sdX bs=4M status=progress conv=fsync</pre>
+        <p>Download the ISO and check it against the SHA-256 on the <a href="https://github.com/tortr-rs/systemLinux/releases/tag/v1.2">release page</a>. Then copy it onto a <strong>Ventoy</strong> stick, or write it straight to a stick (this erases the stick):</p>
+        <pre class="term">sudo dd if=systemlinux-v1.2.iso of=/dev/sdX bs=4M status=progress conv=fsync</pre>
         <p>Replace <code>/dev/sdX</code> with the stick (check with <code>lsblk</code>). On Windows use Rufus in <em>DD image</em> mode or balenaEtcher.</p></div>
 
       <div class="chapter" id="hb-2"><h3>2. Boot the live system</h3>
@@ -275,6 +275,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 <span class="p">$</span> ln -sf ../usr/share/zoneinfo/Region/City "$ROOT/etc/localtime"   <span class="c"># e.g. Europe/Lisbon</span>
 <span class="p">$</span> echo LANG=C.UTF-8 > "$ROOT/etc/locale.conf"
 <span class="p">$</span> goget provision --user yourname "$ROOT"    <span class="c"># prompts for your password, creates the account, sudoers, branding</span>
+<span class="p">$</span> rm -rf "$ROOT/etc/systemd/system/getty@tty1.service.d"   <span class="c"># ask for a login on tty1 (the live image logs root in)</span>
 <span class="p">$</span> chpasswd -R "$ROOT"                         <span class="c"># set the root password, "root:yourpassword"</span></pre>
 
         <h4>Step 5: install GRUB</h4>
@@ -301,7 +302,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
         <p>It prompts for a whole disk or an existing partition, hostname, username and password, time zone, keyboard layout, and whether to encrypt with LUKS, then runs exactly the steps above. Nothing happens until you confirm the summary it shows first.</p></div>
 
       <div class="chapter" id="hb-6"><h3>6. First boot</h3>
-        <p>GRUB shows for three seconds, then systemLinux starts to a console login (or straight to a root shell if you did not set a login). Your user can use <code>sudo</code>.</p></div>
+        <p>GRUB shows for three seconds, then systemLinux starts to a console login. Your user can use <code>sudo</code>.</p></div>
 
       <div class="chapter" id="hb-7"><h3>7. Installing software</h3>
         <p>Use <code>goget</code>. Programs go into your own profile, so no <code>sudo</code> is needed:</p>
@@ -320,7 +321,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
         <p>The image is downloaded (a broken download resumes), verified against a signed release index and its SHA-256 hashes, and added to the boot menu as a one-time trial. Restart to use it. Your files, accounts, settings and installed programs are not touched.</p></div>
 
       <div class="chapter" id="hb-9"><h3>9. Rolling back</h3>
-        <p>The first boot into a new system image is a trial. If it does not come up, the next boot returns to the previous image automatically. Once the new system has run for a minute, lenine makes it the default. The previous image stays installed and you can pick it by hand in the GRUB menu at startup. Programs installed with goget roll back separately with <code>goget rollback</code>.</p></div>
+        <p>The first boot into a new system image is a trial. If it does not come up, the next boot returns to the previous image automatically. Once the new system has run for a minute, <code>systemlinux-boot-good.timer</code> makes it the default. The previous image stays installed and you can pick it by hand in the GRUB menu at startup. Programs installed with goget roll back separately with <code>goget rollback</code>.</p></div>
 
       <div class="chapter" id="hb-10"><h3>10. Recovery</h3>
         <p><strong>Boot an older image:</strong> at the GRUB menu, pick a previous version &mdash; every image `goget upgrade` has not yet garbage-collected stays listed and bootable.</p>
@@ -339,7 +340,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
       <div class="chapter" id="hb-11"><h3>11. If something goes wrong</h3>
         <ul>
           <li><strong>The stick does not boot:</strong> choose the UEFI entry, write the ISO with <code>dd</code> instead of Ventoy, and check the checksum.</li>
-          <li><strong>No console after boot:</strong> use the <em>debug shell</em> entry, or add <code>lenine.verbose=1</code> to the kernel command line to see lenine&rsquo;s own log on screen. From a running system, <code>lenine log</code>.</li>
+          <li><strong>No console after boot:</strong> use the <em>debug shell</em> entry, or remove <code>quiet</code> from the kernel command line to see systemd&rsquo;s boot messages on screen. From a running system, <code>journalctl -b</code> and <code>systemctl --failed</code>.</li>
           <li><strong>No Wi-Fi:</strong> a device whose firmware is not in the bundled set will not start. A USB tether or Ethernet always works.</li>
           <li><strong>Wrong partition wiped:</strong> double-check <code>lsblk</code> output before every <code>wipefs</code>/<code>sfdisk</code> command &mdash; there is no undo. This is exactly why the fully-manual chapter 3 exists: read each command before you run it.</li>
           <li><strong>LUKS passphrase not accepted at boot:</strong> the live/installed initramfs asks again on the next attempt; a truly lost passphrase means the data partition is unrecoverable by design.</li>
@@ -349,21 +350,20 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
   </div>
 </div></section>
 
-<section id="lenine" class="alt">
+<section id="services" class="alt">
   <div class="wrap">
-    <h2>Using lenine</h2>
-    <p class="sub">lenine has no configuration to write for a normal boot. These commands control it at runtime (as root).</p>
+    <h2>Services</h2>
+    <p class="sub">systemd starts everything; there is nothing to configure for a normal boot. The usual tools control it (as root).</p>
     <div class="table-scroll">
       <table>
-        <tr><th><code>lenine status</code></th><td>List supervised services (state, PID, restarts, uptime) and any configured timers</td></tr>
-        <tr><th><code>lenine log [service]</code></th><td>Show lenine&rsquo;s own log, or a service&rsquo;s. lenine prints nothing to the terminal; add <code>lenine.verbose=1</code> to the kernel command line to see its messages on screen</td></tr>
-        <tr><th><code>lenine start|stop|restart &lt;service&gt;</code></th><td>Control a service (udevd, dbus, NetworkManager, or anything in <code>services.conf</code>)</td></tr>
-        <tr><th><code>reboot</code> / <code>poweroff</code> / <code>halt</code></th><td>Power commands, also available as <code>lenine reboot|poweroff|halt</code></td></tr>
-        <tr><th><code>/etc/lenine/login</code></th><td>If this file exists, tty1 asks for a login instead of opening a root shell</td></tr>
-        <tr><th><code>/etc/lenine/services.conf</code></th><td>Extra daemons to supervise, one <code>[after=a,b] [mem=&lt;size&gt;] [cpu=&lt;pct&gt;%] &lt;name&gt; &lt;command&gt; [args]</code> per line. <code>after=</code> waits (up to 10s) for other services to be running first; <code>mem=</code>/<code>cpu=</code> apply a cgroup v2 limit</td></tr>
-        <tr><th><code>/etc/lenine/timers.conf</code></th><td>Commands run on a fixed interval instead of supervised as daemons: <code>&lt;name&gt; every=&lt;duration&gt; &lt;command&gt; [args]</code> (e.g. <code>every=6h</code>), shown in <code>lenine status</code></td></tr>
-        <tr><th>Hostname</th><td>Read from <code>/etc/hostname</code>, defaulting to <code>systemlinux</code></td></tr>
-        <tr><th>Logs</th><td><code>/run/log/lenine/&lt;name&gt;.log</code></td></tr>
+        <tr><th><code>systemctl status [unit]</code></th><td>What is running, and what failed (<code>systemctl --failed</code>)</td></tr>
+        <tr><th><code>journalctl -b [-u unit]</code></th><td>This boot&rsquo;s log, or one service&rsquo;s</td></tr>
+        <tr><th><code>systemctl start|stop|restart &lt;unit&gt;</code></th><td>Control a service: <code>NetworkManager</code>, <code>bluetooth</code>, <code>audio</code>, <code>cups</code>, <code>chronyd</code>, <code>nftables</code>, &hellip;</td></tr>
+        <tr><th><code>systemctl list-timers</code></th><td><code>goget-check</code> (looks for a new image every 12h, never installs by itself) and <code>systemlinux-boot-good</code> (makes a trial image the default)</td></tr>
+        <tr><th><code>reboot</code> / <code>poweroff</code> / <code>halt</code></th><td>Power commands</td></tr>
+        <tr><th><code>/etc/systemd/system/</code></th><td>The base image&rsquo;s own units; add yours here and <code>systemctl enable</code> them</td></tr>
+        <tr><th>Console</th><td>The live ISO logs root in on tty1; an installed system asks for a login. Add <code>console=ttyS0</code> to the kernel command line for a serial login</td></tr>
+        <tr><th>Hostname</th><td>Read from <code>/etc/hostname</code> (<code>systemlinux</code> on the live ISO)</td></tr>
       </table>
     </div>
   </div>
@@ -381,15 +381,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
     <li>Programs from nixpkgs that need hardware-accelerated OpenGL or Vulkan can fall back to software rendering, because they carry their own graphics libraries.</li>
     <li>The kernel has Intel, AMD and the open NVIDIA (nouveau) graphics drivers, not NVIDIA&rsquo;s proprietary driver.</li>
     <li>Atomic, but not sealed: the system image is read-only and swapped as a whole, but changes you make to <code>/etc</code> or <code>/usr</code> yourself are kept in a separate writable layer on top of it (unlike Silverblue&rsquo;s strictly immutable root).</li>
-    <li>lenine replaces systemd, so software that expects systemd services will not find them.</li>
-  </ul>
+      </ul>
 </div></section>
 
 </main>
 
 <footer><div class="wrap">
-  <span>systemLinux 1.1 &ldquo;Malachite&rdquo; &middot; <a href="https://github.com/tortr-rs/systemLinux">source on GitHub</a></span>
-  <span>Kernel 7.2.6 &middot; lenine &middot; goget</span>
+  <span>systemLinux 1.2 &middot; <a href="https://github.com/tortr-rs/systemLinux">source on GitHub</a></span>
+  <span>Kernel 7.2.6 &middot; systemd &middot; goget</span>
 </div></footer>
 
 </body>

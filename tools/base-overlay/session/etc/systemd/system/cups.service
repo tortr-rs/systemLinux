@@ -1,0 +1,12 @@
+[Unit]
+Description=Printing (CUPS)
+Wants=dbus.service polkit.service
+After=dbus.service polkit.service
+
+[Service]
+ExecStart=/usr/local/bin/start-cupsd
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

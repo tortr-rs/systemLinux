@@ -1,0 +1,8 @@
+[Unit]
+Description=Make a trial-booted systemLinux image the default once it has stayed up a minute
+
+[Timer]
+OnBootSec=1min
+
+[Install]
+WantedBy=timers.target

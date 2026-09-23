@@ -1,0 +1,8 @@
+[Unit]
+Description=Check for a newer systemLinux image (goget upgrade --check)
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/goget upgrade --check

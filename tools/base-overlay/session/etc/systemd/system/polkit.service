@@ -1,0 +1,12 @@
+[Unit]
+Description=Authorization manager (polkit)
+Wants=dbus.service
+After=dbus.service
+
+[Service]
+ExecStart=/usr/local/bin/start-polkitd
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

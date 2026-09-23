@@ -1,0 +1,10 @@
+[Unit]
+Description=Point /run/opengl-driver at the GPU drivers from goget graphics
+ConditionPathExists=/nix/var/goget/profiles/system/current/lib/dri
+
+[Service]
+Type=oneshot
+ExecStart=/bin/ln -sfn /nix/var/goget/profiles/system/current /run/opengl-driver
+
+[Install]
+WantedBy=multi-user.target

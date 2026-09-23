@@ -1141,3 +1141,7 @@ HID_SEMITEK
 HID_TOPRE
 HID_VRC2
 HID_WINWING
+
+# --- compressed swap in RAM (zram.service)
+ZRAM
+ZRAM_BACKEND_ZSTD

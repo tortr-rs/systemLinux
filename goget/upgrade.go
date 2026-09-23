@@ -76,14 +76,19 @@ func versionLess(a, b string) bool {
 	return false
 }
 
+// cmdlineValue returns the value of a systemlinux.<key>= option on the kernel command line. The
+// old lenine.<key>= spelling is accepted too: installs from the lenine days keep it in grub.cfg
+// until their first upgrade rewrites it.
 func cmdlineValue(key string) string {
 	b, err := os.ReadFile("/proc/cmdline")
 	if err != nil {
 		return ""
 	}
 	for _, f := range strings.Fields(string(b)) {
-		if strings.HasPrefix(f, key) {
-			return strings.TrimPrefix(f, key)
+		for _, prefix := range []string{"systemlinux.", "lenine."} {
+			if strings.HasPrefix(f, prefix+key) {
+				return strings.TrimPrefix(f, prefix+key)
+			}
 		}
 	}
 	return ""
@@ -224,8 +229,8 @@ func upgradeRun(args []string) int {
 		return 2
 	}
 
-	current := cmdlineValue("lenine.version=")
-	if current == "" || cmdlineValue("lenine.image=") == "" {
+	current := cmdlineValue("version=")
+	if current == "" || cmdlineValue("image=") == "" {
 		printErr("upgrade works on an installed systemLinux (booted from its disk); this system is running from the live medium or an unversioned image")
 		return 1
 	}
@@ -323,9 +328,9 @@ func upgradeRun(args []string) int {
 		return 1
 	}
 
-	uuid := strings.TrimPrefix(cmdlineValue("lenine.data="), "UUID=")
+	uuid := strings.TrimPrefix(cmdlineValue("data="), "UUID=")
 	if uuid == "" {
-		printErr("cannot tell which disk holds the images (no lenine.data= on the kernel command line)")
+		printErr("cannot tell which disk holds the images (no systemlinux.data= on the kernel command line)")
 		return 1
 	}
 	// A LUKS install leaves its outer partition's UUID here so grub.cfg keeps unlocking the disk

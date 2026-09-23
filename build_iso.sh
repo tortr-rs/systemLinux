@@ -1,9 +1,9 @@
 #!/bin/bash
 # systemLinux v1!!!! ISO build: a normal live ISO (small initramfs + /live/rootfs.squashfs, mounted
-# with an overlayfs; nothing is loaded into a RAM disk), with lenine as init, goget, boot/disk
+# with an overlayfs; nothing is loaded into a RAM disk), with systemd as init, goget, boot/disk
 # tools, the full-driver kernel and firmware. Console/minimal only — there is no desktop edition.
 #
-#   ./build_iso.sh    -> systemlinux-v1.1.iso  (root shell, console only, installable with the handbook)
+#   ./build_iso.sh    -> systemlinux-v1.2.iso  (root shell, console only, installable with the handbook)
 #
 # Run from a normal terminal (sudo needs a password prompt). Works from any Linux host with
 # grub2, xorriso, mtools, squashfs-tools and cpio on PATH (install them with your host's own
@@ -26,34 +26,51 @@ FW_WORK=${FW_WORK:-$HOME/.cache/systemlinux-firmware}
 BASE_WORK=${BASE_WORK:-$HOME/.cache/systemlinux-base}
 BOOT_WORK=${BOOT_WORK:-$HOME/.cache/systemlinux-boot}
 cd "$BUILD_DIR"
+# fail early, with the fix, instead of halfway through the kernel build
+missing=
+for t in xorriso mksquashfs mformat cpio python3 go make gcc flex bison bc perl pahole; do
+    command -v "$t" >/dev/null || missing="$missing $t"
+done
+command -v grub-mkrescue >/dev/null || command -v grub2-mkrescue >/dev/null || missing="$missing grub-mkrescue"
+if [ -n "$missing" ]; then
+    echo "ERROR: missing build tools:$missing"
+    echo "  Fedora: sudo dnf install xorriso squashfs-tools mtools cpio golang flex bison bc dwarves elfutils-libelf-devel openssl-devel openssl-devel-engine grub2-tools-extra"
+    echo "  Debian: sudo apt install xorriso squashfs-tools mtools cpio golang flex bison bc dwarves libelf-dev libssl-dev grub-common"
+    exit 1
+fi
+# Fedora and friends name the GRUB tools grub2-*
+GRUB_MKRESCUE=$(command -v grub-mkrescue || command -v grub2-mkrescue || echo grub-mkrescue)
+GRUB_SCRIPT_CHECK=$(command -v grub-script-check || command -v grub2-script-check || echo grub-script-check)
 
-echo "=== [1/8] COMPILING lenine, goget AND THE FULL KERNEL ==="
+echo "=== [1/8] COMPILING goget AND THE FULL KERNEL ==="
 if [ ! -f "$KERNEL" ]; then "$BUILD_DIR/tools/kernel-full/build-kernel.sh"; fi
 [ -f "$KERNEL" ] || { echo "ERROR: kernel not found at $KERNEL"; exit 1; }
-make -C ./lenine
 make -C ./goget
 GOGET=$BUILD_DIR/goget/goget
 
-echo "=== [2/8] INSTALLING lenine, goget AND init LINKS INTO ROOTFS ==="
+echo "=== [2/8] INSTALLING goget AND init LINKS INTO ROOTFS ==="
 # /sbin is a symlink to usr/bin in this rootfs, so this lands in usr/bin
-sudo install -Dm755 ./lenine/lenine "$ROOTFS/sbin/lenine"
 sudo install -Dm755 ./goget/goget "$ROOTFS/usr/bin/goget"
 sudo install -Dm755 ./goget/goget "$ROOTFS/usr/local/bin/goget"
-sudo rm -f "$ROOTFS/init" "$ROOTFS/sbin/init"
-sudo ln -sf sbin/lenine "$ROOTFS/init"
-sudo ln -sf lenine "$ROOTFS/sbin/init"
-# power commands were symlinks to systemctl; lenine handles them itself
+sudo rm -f "$ROOTFS/init" "$ROOTFS/sbin/init" "$ROOTFS/sbin/lenine"
+sudo ln -sf usr/lib/systemd/systemd "$ROOTFS/init"
+sudo ln -sf ../lib/systemd/systemd "$ROOTFS/sbin/init"
 for n in reboot poweroff halt shutdown; do
-    sudo ln -sf lenine "$ROOTFS/usr/bin/$n"
+    sudo ln -sf systemctl "$ROOTFS/usr/bin/$n"
 done
+# boot to the console (there is no display manager), with NetworkManager and a tmpfs /tmp
+sudo ln -sf /usr/lib/systemd/system/multi-user.target "$ROOTFS/etc/systemd/system/default.target"
+sudo mkdir -p "$ROOTFS/etc/systemd/system/multi-user.target.wants" "$ROOTFS/etc/systemd/system/local-fs.target.wants"
+sudo ln -sf /usr/lib/systemd/system/NetworkManager.service "$ROOTFS/etc/systemd/system/multi-user.target.wants/NetworkManager.service"
+sudo ln -sf /usr/lib/systemd/system/tmp.mount "$ROOTFS/etc/systemd/system/local-fs.target.wants/tmp.mount"
 sudo install -Dm644 "$KERNEL" "$ROOTFS/boot/vmlinuz"
 
 echo "=== [3/8] ROOTFS FIXES AND BRANDING ==="
 # D-Bus activation needs the launch helper setuid root (it was owned by the build user with no setuid bit)
-sudo chown root:messagebus "$ROOTFS/usr/libexec/dbus-daemon-launch-helper"
+# (the image's own messagebus gid: the host may not have that group, e.g. Fedora calls it dbus)
+MB=$(sed -n 's/^messagebus:[^:]*:\([0-9]*\):.*/\1/p' "$ROOTFS/etc/group")
+sudo chown "0:${MB:?no messagebus group in $ROOTFS/etc/group}" "$ROOTFS/usr/libexec/dbus-daemon-launch-helper"
 sudo chmod 4750 "$ROOTFS/usr/libexec/dbus-daemon-launch-helper"
-# systemd's shell-integration script prints escape-code garbage without systemd
-sudo rm -f "$ROOTFS/etc/profile.d/80-systemd-osc-context.sh"
 # GNU bash is the system shell (/bin/bash and /bin/sh); the bbash fork stays installed as its own command.
 # Built static, so it does not depend on the base's libtinfo. The libarchive tools (BSD tar and friends)
 # are removed: GNU tar is the tar.
@@ -141,7 +158,7 @@ menuentry "systemLinux $IMAGE_VERSION" {
     if [ ! -f /live/vmlinuz ]; then
         search --no-floppy --set=root --file /live/vmlinuz
     fi
-    linux /live/vmlinuz lenine.live=1 quiet loglevel=3 console=tty0
+    linux /live/vmlinuz quiet loglevel=3 console=tty0
     initrd /live/initrd.img
 }
 
@@ -149,7 +166,7 @@ menuentry "systemLinux $IMAGE_VERSION (copy to RAM)" {
     if [ ! -f /live/vmlinuz ]; then
         search --no-floppy --set=root --file /live/vmlinuz
     fi
-    linux /live/vmlinuz lenine.live=1 lenine.toram=1 quiet loglevel=3 console=tty0
+    linux /live/vmlinuz systemlinux.toram=1 quiet loglevel=3 console=tty0
     initrd /live/initrd.img
 }
 
@@ -157,14 +174,14 @@ menuentry "systemLinux $IMAGE_VERSION (debug shell)" {
     if [ ! -f /live/vmlinuz ]; then
         search --no-floppy --set=root --file /live/vmlinuz
     fi
-    linux /live/vmlinuz lenine.live=1 lenine.debug=1 console=tty0
+    linux /live/vmlinuz systemlinux.debug=1 console=tty0
     initrd /live/initrd.img
 }
 GRUBEOF
-grub-script-check "$WORKSPACE/boot/grub/grub.cfg"
+"$GRUB_SCRIPT_CHECK" "$WORKSPACE/boot/grub/grub.cfg"
 
 echo "=== [8/8] MASTERING ISO ==="
-grub-mkrescue -o "$ISO" "$WORKSPACE"
+"$GRUB_MKRESCUE" -o "$ISO" "$WORKSPACE"
 sudo rm -rf "$WORKSPACE"
 sha256sum "$ISO"
 echo "SUCCESS: $ISO"

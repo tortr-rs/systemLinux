@@ -202,7 +202,7 @@ mount -t overlay overlay -o "lowerdir=$SQ,upperdir=$DATA/persist/upper,workdir=$
     echo "UUID=$(blkid -s UUID -o value "$ESPDEV")  /boot/efi  vfat  umask=0077  0  2"
 } > "$ROOT/etc/fstab"
 if [ "$LUKS" = 1 ]; then
-    echo "# unlocked by the initramfs from lenine.data=UUID=$LUKSUUID (LUKS)" >> "$ROOT/etc/fstab"
+    echo "# unlocked by the initramfs from systemlinux.data=UUID=$LUKSUUID (LUKS)" >> "$ROOT/etc/fstab"
 fi
 echo "$HOST" > "$ROOT/etc/hostname"
 printf '127.0.0.1\tlocalhost\n::1\t\tlocalhost\n127.0.1.1\t%s\n' "$HOST" > "$ROOT/etc/hosts"
@@ -223,6 +223,8 @@ if [ -x "$ROOT/nix/var/goget/profiles/system/current/bin/flatpak" ]; then
         https://flathub.org/repo/flathub.flatpakrepo --root="$ROOT" 2>/dev/null || true
 fi
 /usr/local/bin/systemlinux-post "$ROOT"
+# the live image logs root in on tty1 by itself; an installed system asks for a login instead
+rm -rf "$ROOT/etc/systemd/system/getty@tty1.service.d"
 umount "$ROOT"; umount "$SQ"
 
 echo "== installing the bootloader"

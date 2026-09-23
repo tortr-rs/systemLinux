@@ -1,0 +1,9 @@
+[Unit]
+Description=Check for a newer systemLinux image every 12 hours
+
+[Timer]
+OnBootSec=12h
+OnUnitActiveSec=12h
+
+[Install]
+WantedBy=timers.target

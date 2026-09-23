@@ -1,0 +1,18 @@
+[Unit]
+Description=Default firewall (nftables)
+Wants=network-pre.target
+Before=network-pre.target
+DefaultDependencies=no
+After=local-fs.target
+Conflicts=shutdown.target
+Before=shutdown.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/nix/var/goget/profiles/system/current/bin/nft -f /etc/nftables/systemlinux.nft
+ExecReload=/nix/var/goget/profiles/system/current/bin/nft -f /etc/nftables/systemlinux.nft
+ExecStop=/nix/var/goget/profiles/system/current/bin/nft flush ruleset
+
+[Install]
+WantedBy=multi-user.target

@@ -1,14 +1,16 @@
 #!/bin/busybox sh
 # systemLinux live init (runs from the small initramfs, as every live ISO does):
-#   find the live medium -> mount /live/rootfs.squashfs -> overlay a tmpfs on it -> switch_root to lenine.
+#   find the live medium -> mount /live/rootfs.squashfs -> overlay a tmpfs on it -> switch_root to systemd.
 # Kernel command line options:
-#   lenine.image=PATH lenine.data=UUID=...   INSTALLED mode: mount the squashfs image PATH (relative to the
-#                      data partition) with a persistent overlay stored on the data partition
-#   lenine.iso=PATH   prefer this ISO file on the medium's partition (e.g. an ISO on a Ventoy stick)
-#   lenine.toram=1    copy the squashfs into RAM first (the stick can then be removed)
-#   lenine.wait=N     seconds to wait for the medium to appear (default 60)
-#   lenine.debug=1    open a shell just before switching to the real root
-#   lenine.shell=1    open a shell before looking for the medium
+#   systemlinux.image=PATH systemlinux.data=UUID=...   INSTALLED mode: mount the squashfs image PATH
+#                          (relative to the data partition) with a persistent overlay stored on the data partition
+#   systemlinux.iso=PATH   prefer this ISO file on the medium's partition (e.g. an ISO on a Ventoy stick)
+#   systemlinux.toram=1    copy the squashfs into RAM first (the stick can then be removed)
+#   systemlinux.wait=N     seconds to wait for the medium to appear (default 60)
+#   systemlinux.debug=1    open a shell just before switching to the real root
+#   systemlinux.shell=1    open a shell before looking for the medium
+# The same options with a lenine. prefix are still accepted: installs from the lenine days keep them in
+# grub.cfg until their first `goget upgrade` rewrites it.
 export PATH=/bin:/sbin:/usr/bin:/usr/sbin
 
 /bin/busybox mkdir -p /proc /sys /dev /mnt /newroot /overlay
@@ -32,18 +34,19 @@ is_luks() {
 
 ISO_HINT= DEBUG=0 SHELL_FIRST=0 TORAM=0 WAIT=60 IMAGE= DATA=
 for a in $(cat /proc/cmdline); do
+    case "$a" in lenine.*) a=systemlinux.${a#lenine.} ;; esac
     case "$a" in
-        lenine.iso=*)   ISO_HINT=${a#lenine.iso=} ;;
-        lenine.image=*) IMAGE=${a#lenine.image=} ;;
-        lenine.data=*)  DATA=${a#lenine.data=} ;;
-        lenine.debug=1) DEBUG=1 ;;
-        lenine.shell=1) SHELL_FIRST=1 ;;
-        lenine.toram=1) TORAM=1 ;;
-        lenine.wait=*)  WAIT=${a#lenine.wait=} ;;
+        systemlinux.iso=*)   ISO_HINT=${a#systemlinux.iso=} ;;
+        systemlinux.image=*) IMAGE=${a#systemlinux.image=} ;;
+        systemlinux.data=*)  DATA=${a#systemlinux.data=} ;;
+        systemlinux.debug=1) DEBUG=1 ;;
+        systemlinux.shell=1) SHELL_FIRST=1 ;;
+        systemlinux.toram=1) TORAM=1 ;;
+        systemlinux.wait=*)  WAIT=${a#systemlinux.wait=} ;;
     esac
 done
 
-[ "$SHELL_FIRST" = 1 ] && emergency "lenine.shell=1"
+[ "$SHELL_FIRST" = 1 ] && emergency "systemlinux.shell=1"
 
 # The initramfs carries a build id and so does the ISO's /live directory: with several systemLinux ISOs on one
 # Ventoy stick, only the one this kernel came from is accepted (STRICT is dropped after a while, so a renamed
@@ -153,8 +156,10 @@ else
     mount --move "$MEDIUM" /newroot/live-medium
 fi
 
+# the image may not carry these mount points (systemd would mount them itself, but move ours)
+mkdir -p /newroot/proc /newroot/sys /newroot/dev /newroot/run
 mount --move /proc /newroot/proc
 mount --move /sys /newroot/sys
 mount --move /dev /newroot/dev
-[ "$DEBUG" = 1 ] && emergency "lenine.debug=1: about to switch root"
-exec switch_root /newroot /sbin/lenine
+[ "$DEBUG" = 1 ] && emergency "systemlinux.debug=1: about to switch root"
+exec switch_root /newroot /usr/lib/systemd/systemd

@@ -6,11 +6,10 @@
   <img src="assets/logo.png" alt="systemLinux logo: a golden wheat ear on a dark green circle" width="160">
 </p>
 
-# systemLinux 1.1
+# systemLinux 1.2
 
-A minimal x86_64 GNU/Linux distribution built on a custom monolithic kernel, a
-from-scratch Go init (`lenine`), and a GNU userland (GNU bash 5.3 is
-`/bin/bash` and `/bin/sh`, GNU coreutils, tar, sed, gawk, findutils; the `bbash` fork stays
+A minimal x86_64 GNU/Linux distribution built on a custom monolithic kernel, systemd, and a
+GNU userland (GNU bash 5.3 is `/bin/bash` and `/bin/sh`, GNU coreutils, tar, sed, gawk, findutils; the `bbash` fork stays
 installed as its own command). One console-only live ISO; no desktop edition. It boots
 like any live ISO (a compressed `rootfs.squashfs` on the ISO with a RAM layer on top) and
 can be installed to disk with the `systemlinux-install` command-line tool or, step by step
@@ -20,14 +19,14 @@ failed trial boot rolls back on its own.
 
 systemLinux is **atomic**, like Fedora Silverblue: the system is a read-only image that `goget upgrade` replaces as a whole, with a trial boot and automatic rollback; programs live in separate, rollback-able goget profiles.
 
-Website: `website/index.html` (also the Handbook) · Download: [GitHub release `v1.1`](https://github.com/tortr-rs/systemLinux/releases/tag/v1.1)
+Website: `website/index.html` (also the Handbook) · Download: [GitHub release `v1.2`](https://github.com/tortr-rs/systemLinux/releases/tag/v1.2)
 
 | File | Size | RAM needed |
 |---|---|---|
-| `systemlinux-v1.1.iso` | about 1.9 GB | about 3 GB (4 GB+ to use *copy to RAM*) |
+| `systemlinux-v1.2.iso` | about 1.9 GB | about 3 GB (4 GB+ to use *copy to RAM*) |
 
 ```sh
-sha256sum systemlinux-v1.1.iso   # 8bc5af5fd2e30f62620c2cefc63fbf4cc1bbc822b9355d454a06c7cd78e99a28
+sha256sum -c systemlinux-v1.2.iso.sha256   # the .sha256 file is on the release page
 ```
 
 Bundled firmware excludes vendor categories that cannot run on x86_64 at all (Qualcomm
@@ -52,24 +51,22 @@ the real system starts).
   initramfs while the kernel starts.
 * **Live boot:** a small busybox initramfs (`tools/live-image/`) finds the medium
   (also inside an ISO file on a Ventoy stick), mounts `/live/rootfs.squashfs`, adds a
-  tmpfs overlay and switches to `lenine`. It can also unlock a LUKS-encrypted installed
+  tmpfs overlay and switches to systemd. It can also unlock a LUKS-encrypted installed
   system (see "Installing to disk").
 * **Shell:** GNU bash 5.3, built static by `tools/gnu-bash/build.sh` and installed as
   `/bin/bash` and `/bin/sh`. BSD tar (`bsdtar`) and friends are not installed: GNU tar is the tar.
-* **Init:** `lenine`, a static Go binary running as PID 1 (`lenine/`). systemd is not used.
-  Its `services.conf` supports service dependencies (`after=`), per-service cgroup resource
-  limits (`mem=`, `cpu=`), and a separate `timers.conf` for periodic (not always-on) commands
-  — see "Using lenine" below.
+* **Init:** systemd 261 (PID 1, with journald, udevd and logind). The base image's own
+  services are ordinary systemd units in `/etc/systemd/system/` — see "Services" below.
 * **Base:** a glibc userland with GNU bash, coreutils, tar, sed and gawk. Portage and the Gentoo tree are
   gone (since 1.0): `goget` is the only package manager, for the base system's own boot
   tooling as well as everything installed afterward — there is no host-distro package
   manager dependency anywhere in this project, including at build time (see "Building the ISO").
-* **Networking:** NetworkManager, started by `lenine` together with udev and D-Bus.
+* **Networking:** NetworkManager (`NetworkManager.service`).
 * **Everyday hardware and services:** Bluetooth (bluez), audio (PipeWire/WirePlumber,
   system-wide), time sync (chrony), power profiles (`powerprofilesctl`), printing (CUPS),
   firmware updates (`fwupdmgr`), Flatpak (Flathub added automatically at install), and a
-  default-deny-inbound nftables firewall — all `lenine`-supervised services, fetched from
-  nixpkgs by `tools/base-overlay/`. **elogind** provides session/seat tracking and
+  default-deny-inbound nftables firewall — all systemd services, fetched from
+  nixpkgs by `tools/base-overlay/`. **systemd-logind** provides session/seat tracking and
   `loginctl suspend` even without a desktop; **polkit** authorizes privileged actions for
   NetworkManager, UDisks2, power-profiles-daemon and CUPS. None of this needs a desktop
   environment — it's all present in the console-only image.
@@ -89,53 +86,28 @@ the real system starts).
   are all fetched from nixpkgs by `goget` itself at build time — not from any host distro's
   package manager.
 
-## Using lenine
+## Services
 
-`lenine` mounts `/proc`, `/sys`, `/dev`, `/dev/pts`, `/dev/shm`, `/run` and `/tmp`,
-lowers the kernel console log level to errors only, sets the hostname (from
-`/etc/hostname`, default `systemlinux`), brings up loopback, starts `udevd` (with
-a coldplug trigger), runs `mount -a`, starts D-Bus and NetworkManager under
-supervision (restart with backoff), starts whatever's configured in `services.conf` and
-`timers.conf`, then runs a respawning root shell on tty1. It also reaps orphaned processes
-and handles shutdown.
-
-Control commands (root):
+systemd starts everything; use the usual tools (as root):
 
 ```sh
-lenine status                       # list supervised services AND timers
-lenine log [service]                # lenine prints nothing to the terminal; read its log (or a service's)
-lenine start|stop|restart <service>
-lenine reboot | poweroff | halt     # also available as reboot, poweroff, halt, shutdown [-r]
+systemctl status [unit]             # what is running (and what failed)
+journalctl -b [-u unit]             # this boot's log, or one service's
+systemctl start|stop|restart <unit>
+systemctl list-timers               # goget-check and the trial-boot check
+reboot | poweroff | halt
 ```
 
-Optional configuration under `/etc/lenine/`:
+The base image's units live in `/etc/systemd/system/` (sources in
+`tools/base-overlay/session/etc/systemd/system/`): `polkit`, `bluetooth`, `chronyd`,
+`power-profiles-daemon`, `audio` (system-wide PipeWire), `cups`, `fwupd` and `nftables`, plus
+two timers: `goget-check.timer` (runs `goget upgrade --check` every 12h; it only looks, never
+installs) and `systemlinux-boot-good.timer` (a minute after boot, makes a trial image from
+`goget upgrade` GRUB's default). Add your own units there and `systemctl enable` them.
 
-* `login` (empty file): tty1 runs `agetty`/`login` instead of a root shell.
-* `autologin` (a user name): that user is logged in on tty1 automatically.
-* `services.conf`: extra daemons to supervise, one line per service:
-
-  ```
-  [after=svc1,svc2] [mem=<size>] [cpu=<percent>%] <name> <command> [args...]
-  ```
-
-  `after=` waits (up to 10s, then proceeds anyway) for the listed services to be running
-  before each start attempt — useful for anything that needs D-Bus or polkit up first.
-  `mem=`/`cpu=` apply a cgroup v2 `memory.max`/`cpu.max` limit (`mem=256M`, `cpu=50%`).
-  This is how the base image's Bluetooth/audio/chrony/power/printing/firewall services are
-  wired up (see `tools/base-overlay/session/etc/lenine/services.conf`).
-* `timers.conf`: run a command on a fixed interval instead of supervising it as a daemon:
-
-  ```
-  <name> every=<duration> <command> [args...]
-  ```
-
-  `<duration>` takes `s`/`m`/`h`/`d` suffixes (e.g. `every=6h`). Shows up in `lenine status`
-  alongside services, with last-run time, last exit code and next-run countdown.
-
-`lenine`'s own messages go to `/run/log/lenine/lenine.log` and each service's output to
-`/run/log/lenine/<name>.log`; nothing is printed to the terminal (add `lenine.verbose=1` to the
-kernel command line to see it on screen, or use the "debug shell" GRUB entry). `$LENINE_TTY`
-overrides the console TTY (default `/dev/tty1`).
+The live ISO logs root in on tty1 automatically; an installed system asks for a login. Add
+`console=ttyS0` to the kernel command line for a login prompt on the first serial port, and
+use the *debug* GRUB entry (or drop `quiet`) to see systemd's boot messages.
 
 ## Building the ISO
 
@@ -148,11 +120,11 @@ for the *target* image, the firmware overlay, and the base services overlay are 
 straight from nixpkgs by `goget` itself, not from a host package manager.
 
 ```sh
-./build_iso.sh    # systemlinux-v1.1.iso
+./build_iso.sh    # systemlinux-v1.2.iso
 ```
 
-The script builds `lenine`, `goget` and (once) the full kernel, installs them into
-`rootfs/`, links `init` to `lenine`, fixes the D-Bus launch helper permissions, brands
+The script builds `goget` and (once) the full kernel, installs them into
+`rootfs/`, links `init` to systemd, fixes the D-Bus launch helper permissions, brands
 the image with `goget provision`, fetches GRUB/efibootmgr/dosfstools/fastfetch from nixpkgs
 (checking nothing against the tracked `rootfs/` — these land in a cached, gitignored work
 directory, merged into the squashfs stage only), builds the firmware overlay and the base
@@ -163,7 +135,7 @@ the ISO with `grub-mkrescue`.
 
 ## Installing to disk
 
-1. Write the ISO to a USB stick (`dd if=systemlinux-v1.1.iso of=/dev/sdX bs=4M status=progress conv=fsync`,
+1. Write the ISO to a USB stick (`dd if=systemlinux-v1.2.iso of=/dev/sdX bs=4M status=progress conv=fsync`,
    or copy it onto a Ventoy stick) and boot it in **UEFI mode**.
 2. At the live console, run `sudo systemlinux-install` and answer its prompts (disk or
    existing partition, computer name, your account, timezone, keymap, optional LUKS
@@ -205,9 +177,8 @@ The full guide, including troubleshooting and recovery, is the Handbook on the w
 ## Repository layout
 
 ```text
-├── lenine/               # PID 1 init (main.go, control.go)
 ├── goget/                # package manager (Go), README inside; includes `goget provision`
-├── tools/base-overlay/   # builds the base services overlay (Bluetooth, audio, chrony, power,
+├── tools/base-overlay/   # builds the base services overlay (systemd units for Bluetooth, audio, chrony, power,
 │                         #   printing, fwupd, Flatpak, firewall, locales) and ships
 │                         #   systemlinux-install, systemlinux-grubcfg, systemlinux-post
 ├── tools/overlay-common/ # shared overlay helpers (mkcpio.py, goget-profile.sh, strip-gentoo.sh)

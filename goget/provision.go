@@ -16,7 +16,7 @@ import (
 
 const (
 	brandName    = "systemLinux"
-	brandVersion = "1.1"
+	brandVersion = "1.2"
 )
 
 // provisionGroups are the explicit groups every provisioned user joins.
@@ -73,7 +73,7 @@ func provisionIdentity(root string) error {
 		{"etc/issue", fmt.Sprintf("%s v%s GNU/Linux (\\l)\n", brandName, brandVersion)},
 		{"etc/release", release},
 		{"etc/os-release", fmt.Sprintf(
-			"NAME=\"%s\"\nVERSION=\"%s\"\nID=systemlinux\nPRETTY_NAME=\"%s v%s GNU/Linux (lenine Core)\"\nVERSION_ID=\"%s\"\n",
+			"NAME=\"%s\"\nVERSION=\"%s\"\nID=systemlinux\nPRETTY_NAME=\"%s v%s GNU/Linux\"\nVERSION_ID=\"%s\"\n",
 			brandName, brandVersion, brandName, brandVersion, brandVersion)},
 	}
 	for _, f := range files {

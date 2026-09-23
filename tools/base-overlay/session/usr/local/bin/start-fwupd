@@ -1,4 +1,4 @@
 #!/bin/sh
-# systemLinux: firmware update daemon (started and supervised by lenine; normally D-Bus-activated,
-# but lenine has no D-Bus activation mechanism, so it is just kept running instead).
+# systemLinux: firmware update daemon (run by fwupd.service; nixpkgs' D-Bus activation file is not on
+# the system bus's search path, so it is kept running instead of being started on demand).
 exec /nix/var/goget/profiles/system/current/libexec/fwupd/fwupd

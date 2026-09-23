@@ -1,0 +1,10 @@
+[Unit]
+Description=Time sync (chrony)
+
+[Service]
+ExecStart=/usr/local/bin/start-chronyd
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

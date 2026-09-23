@@ -1,5 +1,5 @@
 #!/bin/sh
-# systemLinux: system-wide PipeWire audio stack (started and supervised by lenine). There is no
+# systemLinux: system-wide PipeWire audio stack (run by audio.service). There is no
 # desktop session manager to launch this per-session as the GNOME edition used to, so it runs
 # once at boot instead, on the system PipeWire socket, available to whichever user runs audio
 # programs.

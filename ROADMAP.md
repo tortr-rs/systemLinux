@@ -1,6 +1,6 @@
 # systemLinux roadmap (a distribution you can daily-drive)
 
-1.0/1.1 together mean: install it on a laptop, use it every day for browsing, mail, media, calls and
+1.0 through 1.2 together mean: install it on a laptop, use it every day for browsing, mail, media, calls and
 development, and update it without fear. Status is honest: done means tested (in a VM, or here,
 a real rebuilt kernel and a real `goget install` against live nixpkgs), not just written. Items
 that fundamentally need real hardware or real UEFI firmware to verify are marked as such and left
@@ -16,9 +16,9 @@ open, not checked off on faith.
 ## 1.1: minimal-only, no GUI installer, everyday hardware
 The GNOME live edition and its GTK4 graphical installer are gone entirely — one console-only ISO,
 installed with `systemlinux-install` (a terminal tool) or by hand from the Handbook. Everything
-below that used to be GNOME-desktop-only now runs as plain `lenine`-supervised services instead.
+below that used to be GNOME-desktop-only now runs as plain systemd services instead.
 
-- [x] power off / reboot (lenine's own, not GNOME/elogind-mediated)
+- [x] power off / reboot (`systemctl`, no desktop needed)
 - [x] audio: PipeWire + WirePlumber + PulseAudio compatibility, system-wide (reworked off the old
       GNOME-session-only autostart)
 - [x] Bluetooth (bluez) — no GNOME panel, `bluetoothctl` is the console-edition's interface
@@ -38,18 +38,16 @@ below that used to be GNOME-desktop-only now runs as plain `lenine`-supervised s
       installed (not auto-started — no desktop session to launch it from yet; ibus was dropped —
       its prebuilt closure drags in a GTK+Python setup GUI that can't run without a desktop
       session anyway, and fcitx5 alone covers the same need much more cheaply)
-- [x] a CLI update notifier: `lenine` gained a real timers.conf capability (periodic, non-daemon
-      commands) for this — `goget upgrade --check` runs every 12h, visible in `lenine status`
+- [x] a CLI update notifier: `goget-check.timer` runs `goget upgrade --check` every 12h, visible in
+      `systemctl list-timers`
 - [x] documented recovery: a real Recovery chapter in the Handbook (GRUB older-image rollback,
       live-ISO chroot repair, `/persist` backup guidance)
 - [ ] suspend/resume and lid/power keys, battery and brightness **verified on real laptops** —
-      elogind (session/seat tracking, `loginctl suspend`) and kernel-level suspend support
-      (`CONFIG_SUSPEND`, `CONFIG_ACPI_SLEEP`) are both in place, but nothing wires a lid-switch or
-      power-button *event* to `loginctl suspend` automatically yet, and none of it has been tried
-      on real hardware
-- [ ] clean shutdown path **verified on real hardware** — the code path itself (unmount, remount
-      read-only, sync) has existed since before 1.0; "verified on real hardware" specifically is
-      still open
+      systemd-logind (session/seat tracking, `loginctl suspend`, lid-switch and power-key
+      handling per `logind.conf`) and kernel-level suspend support (`CONFIG_SUSPEND`,
+      `CONFIG_ACPI_SLEEP`) are both in place, but none of it has been tried on real hardware
+- [ ] clean shutdown path **verified on real hardware** — systemd's own shutdown path, with the
+      overlay root on the data partition; "verified on real hardware" specifically is still open
 - [ ] NVIDIA proprietary driver, hybrid graphics — no packaging path exists (no proprietary blobs
       bundled); open nouveau is what's in the kernel today
 - [ ] Secure Boot (signed shim + GRUB) — the kernel is structurally ready (module signing, EFI
@@ -74,10 +72,19 @@ below that used to be GNOME-desktop-only now runs as plain `lenine`-supervised s
       Final measured ISO: 1.9 GB, under GitHub's 2 GB release-asset limit with real margin —
       attached directly to the `v1.1` release, no split files, no external hosting needed.
 
-## 1.2 and beyond
+## 1.2: systemd
+- [x] systemd is the init again (lenine, the custom Go init, is gone); the base services and
+      timers are ordinary systemd units, and `systemctl`/`journalctl`/`loginctl` work as usual
+- [x] systemd-logind replaces elogind; lid-switch and power-key handling come from `logind.conf`
+- [x] installed systems ask for a login on tty1 (the live ISO still logs root in by itself)
+- [x] compressed swap in RAM: `CONFIG_ZRAM` is now built into the kernel, so `zram.service`
+      (4 GB zstd zram swap) actually works
+- [x] booted in a UEFI VM: every base service, both timers, NetworkManager and logind come up
+
+## 1.3 and beyond
 - [ ] a week of daily use on real hardware (ThinkPad, IdeaPad, a desktop) with no reinstall
 - [ ] Secure Boot: build the actual signing pipeline once someone can test real enrollment
-- [ ] suspend/resume wired to lid/power-key events, then validated on real hardware
+- [ ] suspend/resume on lid/power-key events validated on real hardware
 - [ ] scanners, UI translations
 - [ ] a real per-driver firmware trim (matching this kernel's actual driver set, not just
       whole-vendor exclusion) — safe to attempt now that there's ISO-size headroom again, no

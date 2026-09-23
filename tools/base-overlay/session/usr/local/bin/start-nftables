@@ -1,6 +1,0 @@
-#!/bin/sh
-# systemLinux: apply the default firewall ruleset (nft -f is idempotent, safe to re-run). There is
-# no one-shot service type in lenine, so this stays alive after applying the ruleset instead of
-# exiting (which would just make lenine restart it in a loop for no reason).
-/nix/var/goget/profiles/system/current/bin/nft -f /etc/nftables/systemlinux.nft
-exec sleep infinity

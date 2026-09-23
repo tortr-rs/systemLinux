@@ -1,0 +1,18 @@
+#!/bin/sh
+# systemLinux: make a trial boot permanent (run by systemlinux-boot-good.timer a minute after boot).
+# `goget upgrade` boots a new image once (grub-reboot); if the system stays up this long, that image
+# works, so it becomes GRUB's default. If it never gets here (crash, hang, power cycle) the next boot
+# falls back to the previous default. The lenine.* names are what installs from the lenine days still
+# have in grub.cfg until their first upgrade rewrites it.
+ver= image=
+for a in $(cat /proc/cmdline); do
+    case "$a" in
+        systemlinux.version=*|lenine.version=*) ver=${a#*.version=} ;;
+        systemlinux.image=*|lenine.image=*) image=${a#*.image=} ;;
+    esac
+done
+[ -n "$ver" ] && [ -n "$image" ] || exit 0 # the live medium, or a system without versioned images
+saved=$(grub-editenv /data/boot/grub/grubenv list | sed -n 's/^saved_entry=//p')
+[ "$saved" = "$ver" ] && exit 0
+grub-set-default --boot-directory=/data/boot "$ver" || exit 1
+echo "image $ver booted fine and is now the default (was \"$saved\")"

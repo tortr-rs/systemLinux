@@ -1,0 +1,6 @@
+[Unit]
+Description=Make a trial-booted systemLinux image the default
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/libexec/systemlinux-boot-good
