@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>systemLinux 1.2 &mdash; an atomic Linux that belongs to everyone</title>
-<meta name="description" content="systemLinux is a communist GNU/Linux distribution: common ownership, no profit motive, no owners. A minimal, console-first system that no company can sell you, change under you or take away.">
+<title>systemLinux 1.2: an operating system with no owners</title>
+<meta name="description" content="systemLinux is a communist GNU/Linux distribution. Nobody owns it and nobody profits from it. A small console system you can install, read, change and give away.">
 <link rel="icon" type="image/svg+xml" href="logo.svg">
 <style>
 :root{
   --bg:#faf8f2; --bg2:#f1eddf; --panel:#ffffff; --border:#ddd6bf; --text:#1d2a21; --muted:#56635a;
-  --brand:#2f4a37; --brand2:#3d6b4b; --accent:#c9971c;
+  --brand:#2f4a37; --brand2:#3d6b4b; --accent:#b8322a;
   --code-bg:#eee9d8; --code-text:#2b3a2f; --term-bg:#0e1510; --term-text:#e6efe3; --term-dim:#7f9284; --term-ok:#e6b93f;
   --warn-bg:#fbf1d3; --warn-border:#d9b44a; --warn-text:#5a4300; --shadow:0 10px 30px rgba(30,50,35,.14);
   color-scheme:light;
@@ -17,7 +17,7 @@
 @media (prefers-color-scheme:dark){
   :root{
     --bg:#0f1611; --bg2:#141d17; --panel:#19241c; --border:#2c3d31; --text:#e9efe6; --muted:#9bad9f;
-    --brand:#2f4a37; --brand2:#8cc79a; --accent:#e6b93f; --code-bg:#1f2d23; --code-text:#e2ece0;
+    --brand:#2f4a37; --brand2:#8cc79a; --accent:#e5645a; --code-bg:#1f2d23; --code-text:#e2ece0;
     --warn-bg:#2b2410; --warn-border:#7a641d; --warn-text:#f0d98a; --shadow:0 10px 30px rgba(0,0,0,.45);
     color-scheme:dark;
   }
@@ -46,12 +46,13 @@ nav a:hover{background:var(--bg2);color:var(--text);text-decoration:none}
 @media (max-width:760px){nav ul li:not(:last-child){display:none}}
 
 .hero{padding-block:4.5rem 3rem;background:radial-gradient(1100px 480px at 75% -10%,color-mix(in srgb,var(--accent) 24%,transparent),transparent 70%),linear-gradient(180deg,color-mix(in srgb,var(--brand) 6%,transparent),transparent)}
-.hero .grid{display:grid;grid-template-columns:1.05fr 1fr;gap:3rem;align-items:center}
+.hero .grid{display:grid;grid-template-columns:1fr;gap:3rem;align-items:center}
+.hero h1{max-width:18ch}
 .eyebrow{display:inline-block;color:var(--brand2);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.78rem;margin-bottom:.8rem}
 .hero h1{font-size:clamp(2.2rem,5.2vw,3.6rem);line-height:1.06;margin:0 0 1.1rem;letter-spacing:-.02em}
-.hero h1 span{color:var(--brand2)}
+.hero h1 span{color:var(--accent)}
 
-.lead{font-size:1.18rem;color:var(--muted);max-width:52ch;margin:0 0 1.8rem}
+.lead{font-size:1.18rem;color:var(--muted);max-width:62ch;margin:0 0 1.8rem}
 .btn{display:inline-block;padding:.8rem 1.4rem;border-radius:10px;font-weight:650;border:2px solid var(--brand2);color:var(--brand2);margin:0 .6rem .6rem 0}
 .btn:hover{text-decoration:none;background:var(--bg2)}
 .btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
@@ -91,7 +92,7 @@ ul.tight{padding-left:1.2rem} ul.tight li{margin:.35rem 0}
 .chapter h4{font-size:1rem;margin:1.1rem 0 .3rem}
 @media (max-width:820px){.handbook{grid-template-columns:1fr}.toc{position:static}}
 
-footer{background:var(--brand);color:#e4def8;padding-block:2rem;font-size:.92rem}
+footer{background:var(--brand);border-top:4px solid var(--accent);color:#e4def8;padding-block:2rem;font-size:.92rem}
 footer a{color:#fff}
 footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 </style>
@@ -102,7 +103,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
   <div class="wrap">
     <a class="brand" href="#top"><img src="logo.svg" alt=""> systemLinux</a>
     <nav aria-label="Main"><ul>
-      <li><a href="#principles">Principles</a></li>
+      <li><a href="#principles">Why communist</a></li>
       <li><a href="#features">Features</a></li>
       <li><a href="#goget">goget</a></li>
       <li><a href="#handbook">Handbook</a></li>
@@ -117,42 +118,42 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 <div class="hero"><div class="wrap grid">
   <div>
     <span class="eyebrow">Release 1.2</span>
-    <h1>Software that belongs <span>to everyone.</span></h1>
-    <p class="lead">Its own init, a minimal console system you install by hand or with one script, and a package manager where every change can be undone: a whole system that is yours to use, study, change and share.</p>
+    <h1>The computer belongs to <span>the people who use it.</span></h1>
+    <p class="lead">Your computer is a means of production, and tech companies rent it back to you. They decide what runs on it, they watch what you do, and they sell what they learn. systemLinux is a small GNU/Linux system that nobody owns and nobody profits from. Install it, read it, change it, give it away.</p>
     <a class="btn primary" href="#download">Download</a><a class="btn" href="#handbook">Read the handbook</a>
-    <div class="facts"><span><b>Atomic</b> image updates</span><span><b>Minimal</b> console image, about 3&nbsp;GB RAM</span><span><b>Linux 7.2.6</b>, drivers for almost everything</span><span><b>100,000+</b> prebuilt packages</span></div>
+    <div class="facts"><span><b>No</b> telemetry, accounts or ads</span><span><b>Atomic</b> updates that roll back</span><span><b>Linux 7.2.6</b>, most drivers built in</span><span><b>100,000+</b> packages from nixpkgs</span></div>
   </div>
 </div></div>
 
 <section id="principles"><div class="wrap">
-  <h2>What &ldquo;communist&rdquo; means here</h2>
-  <p class="sub">Not a slogan: a set of commitments about who owns the system and who it serves.</p>
+  <h2>Why communist</h2>
+  <p class="sub">We mean it literally. This is what it means for the code and for the people who use it.</p>
   <div class="cards">
-    <div class="card"><h3>Common ownership</h3><p>The system is a commons. No company owns systemLinux, and nobody can sell it to you, put it behind a paywall or lock you out of it. Anyone may use, study, change and share it.</p></div>
-    <div class="card"><h3>No profit motive</h3><p>No advertising, no telemetry, no accounts, no paid tiers and no data collected about you. Your attention and your data are not the product, because there is no product to sell.</p></div>
-    <div class="card"><h3>From each according to ability, to each according to need</h3><p>Everyone gets the same complete system, whether they can contribute or not. People give what they can: code, testing, translations, documentation, bug reports, money or time. Donations are voluntary and never buy influence.</p></div>
-    <div class="card"><h3>Democratic control</h3><p>Decisions are made in the open, where everyone affected can see and challenge them: in the public source repository, in issues and in pull requests, not behind closed doors. Whoever does the work has a say in it.</p></div>
-    <div class="card"><h3>You control your machine</h3><p>Updates are signed and roll back if they fail, nothing is installed without you, and you can inspect and change every part. The owner of a computer is the person who uses it.</p></div>
-    <div class="card"><h3>Open to everyone</h3><p>A barrier of language, hardware or money is a barrier to ownership. systemLinux runs on old and new machines, is free of charge, and needs translators: only English is included today, and that is a gap we want closed.</p></div>
+    <div class="card"><h3>No owners</h3><p>No company, foundation or founder owns systemLinux. There's no trademark to license and no copyright assignment to sign. The copy you download is as much yours as anyone's.</p></div>
+    <div class="card"><h3>No profit</h3><p>No ads, no telemetry, no accounts, no premium tier. Big Tech makes its money turning your attention into someone else's profit. We don't sell anything, so there's nothing to sell you.</p></div>
+    <div class="card"><h3>From each according to ability, to each according to need</h3><p>Everyone gets the whole system, whether they contribute or not. Write code, test it on your hardware, translate, fix the docs, or just tell us what broke. Donations help, and they buy nothing: no say over the roadmap, no special treatment.</p></div>
+    <div class="card"><h3>Decided in public</h3><p>Decisions happen in the open repository, in issues and pull requests anyone can read and argue with. The people doing the work make the calls, and they answer to the people using it.</p></div>
+    <div class="card"><h3>Against enclosure</h3><p>Free software is a commons, and corporations keep fencing it off: open-core licences, cloud lock-in, "community editions" with the useful parts cut out. We build on the commons and give everything back to it. Nothing here will ever go behind a paywall.</p></div>
+    <div class="card"><h3>Old hardware counts</h3><p>A system that needs a new laptop is a system for people with money. systemLinux runs in about 3&nbsp;GB of RAM, on machines companies have already written off. It only speaks English so far, and we need translators to change that.</p></div>
   </div>
 </div></section>
 
 <section id="features" class="alt"><div class="wrap">
-  <h2>Everything a daily system needs</h2>
-  <p class="sub">Boot it live, try it, install it by hand or with one script, and keep it up to date without fear.</p>
+  <h2>What you get</h2>
+  <p class="sub">A console system where the everyday things work. Try it live, install it, keep it updated.</p>
   <div class="cards">
-    <div class="card"><h3>A real console system</h3><p>One minimal image: Bluetooth (bluez), audio (PipeWire), time sync (chrony), power profiles, CUPS printing, firmware updates (fwupd) and Flatpak, with a default firewall &mdash; everyday daemons, no bundled desktop.</p></div>
-    <div class="card"><h3>Installs like you mean it</h3><p>A real handbook with the exact commands, or the <code>systemlinux-install</code> script for the same steps automated. Whole-disk, or into a partition you freed yourself &mdash; your call. Boots in UEFI mode from a USB stick or Ventoy.</p></div>
-    <div class="card"><h3>Atomic, like Silverblue</h3><p>The system is a read-only image that is replaced as a whole, never patched file by file. <code>goget upgrade</code> downloads a signed image, boots it as a trial and falls back to the old one by itself if it fails. Your files and programs stay.</p></div>
-    <div class="card"><h3>Packages with an undo button</h3><p><code>goget install</code> gives you prebuilt, signed nixpkgs software in your own profile. Roll back any change, run a program without installing it, keep a plain list of what you use.</p></div>
-    <div class="card"><h3>Plain systemd</h3><p><strong>systemd</strong> runs the system: every service is an ordinary unit, so <code>systemctl</code>, <code>journalctl</code> and <code>loginctl</code> work the way you expect.</p></div>
-    <div class="card"><h3>Wide hardware support</h3><p>One monolithic kernel with Intel, AMD and open NVIDIA graphics, Wi-Fi, Bluetooth, storage and laptop drivers built in, plus firmware.</p></div>
+    <div class="card"><h3>Console first</h3><p>No desktop comes bundled. You do get Bluetooth, PipeWire audio, chrony for the clock, power profiles, CUPS printing, fwupd firmware updates, Flatpak, and a firewall that blocks incoming connections by default.</p></div>
+    <div class="card"><h3>Install it yourself</h3><p>The handbook lists every command. If you'd rather not type them, <code>systemlinux-install</code> runs the same steps. Use a whole disk, or a partition you've already freed up. It boots from a USB stick or Ventoy, in UEFI mode.</p></div>
+    <div class="card"><h3>Atomic updates</h3><p>The system is a read-only image that gets replaced whole, like Fedora Silverblue. <code>goget upgrade</code> downloads a signed image and boots it once as a trial. If it doesn't come up, you're back on the old one. Your files and programs aren't touched.</p></div>
+    <div class="card"><h3>Packages you can undo</h3><p><code>goget install</code> pulls signed, prebuilt software from nixpkgs into your own profile. Any change can be rolled back. You can run a program without installing it, or keep your whole setup in one text file.</p></div>
+    <div class="card"><h3>Plain systemd</h3><p>Services are ordinary systemd units. <code>systemctl</code>, <code>journalctl</code> and <code>loginctl</code> do what you already know they do.</p></div>
+    <div class="card"><h3>Drivers built in</h3><p>One kernel with Intel, AMD and open-source NVIDIA graphics, Wi-Fi, Bluetooth, storage and laptop drivers compiled in, plus the firmware they need.</p></div>
   </div>
 </div></section>
 
 <section id="goget"><div class="wrap">
-  <h2>goget: packages the Nix way, in plain words</h2>
-  <p class="sub">goget installs the prebuilt, cryptographically signed packages of the NixOS binary cache into <code>/nix/store</code> and shows them to you through profiles. It is not the Nix tool: there is no language to learn and nothing to compile, just short commands.</p>
+  <h2>goget</h2>
+  <p class="sub">goget installs prebuilt, signed packages from the NixOS binary cache into <code>/nix/store</code> and gives each user a profile. You don't have to learn the Nix language or compile anything.</p>
   <div class="two">
     <div>
 <pre class="term"><span class="p">$</span> goget find editor
@@ -168,11 +169,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
     </div>
     <div>
       <ul class="tight">
-        <li><strong>Everything can be undone.</strong> Each install, removal or update makes a new generation; <code>goget rollback</code> switches back instantly.</li>
-        <li><strong>Declarative, without the syntax.</strong> Put package names in <code>~/.config/goget/packages</code>, one per line, and run <code>goget apply</code>.</li>
-        <li><strong>Safe by construction.</strong> Every store path is checked against the cache&rsquo;s ed25519 signature and its SHA-256, and packages never overwrite each other.</li>
-        <li><strong>Each user has a profile.</strong> Install without <code>sudo</code>; <code>sudo goget install</code> adds to the whole system.</li>
-        <li><strong>Stable or bleeding edge.</strong> <code>goget channel stable</code> or <code>unstable</code>.</li>
+        <li><strong>Every change can be undone.</strong> Each install, removal or update makes a new generation, and <code>goget rollback</code> switches back to the last one.</li>
+        <li><strong>Your setup in a text file.</strong> Put package names in <code>~/.config/goget/packages</code>, one per line, and run <code>goget apply</code>.</li>
+        <li><strong>Checked before use.</strong> Every store path is verified against the cache&rsquo;s ed25519 signature and its SHA-256. Packages never overwrite each other.</li>
+        <li><strong>A profile for each user.</strong> Install without <code>sudo</code>. <code>sudo goget install</code> installs for the whole system.</li>
+        <li><strong>Pick a channel.</strong> <code>goget channel stable</code> or <code>unstable</code>.</li>
         <li><strong>Also from source.</strong> <code>goget install owner/repo</code> builds from GitHub, GitLab or Codeberg.</li>
       </ul>
     </div>
@@ -180,15 +181,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 </div></section>
 
 <section id="specs" class="alt"><div class="wrap">
-  <h2>What is in the image</h2>
+  <h2>What's in the image</h2>
   <div class="table-scroll"><table>
     <tr><th>Kernel</th><td>Linux 7.2.6, monolithic, with drivers for almost everything built in (Wi-Fi, Bluetooth, Intel/AMD/open NVIDIA graphics, storage, sound, laptop hardware, exFAT/NTFS/btrfs/XFS) and bundled firmware</td></tr>
     <tr><th>Init</th><td><strong>systemd</strong> 261, with journald, udevd and logind; the base services are plain units in <code>/etc/systemd/system/</code></td></tr>
-    <tr><th>Services</th><td>Bluetooth (bluez), audio (PipeWire), time sync (chrony), power profiles, CUPS printing, fwupd, Flatpak, a default firewall (nftables) &mdash; no bundled desktop</td></tr>
+    <tr><th>Services</th><td>Bluetooth (bluez), audio (PipeWire), time sync (chrony), power profiles, CUPS printing, fwupd, Flatpak, a default firewall (nftables). No bundled desktop</td></tr>
     <tr><th>Userland</th><td>GNU bash 5.3 as <code>/bin/sh</code>, GNU coreutils, tar, sed and gawk on glibc</td></tr>
     <tr><th>Packages</th><td><code>goget</code> with nixpkgs (25.05 stable or unstable): store paths, profiles, generations, rollback</td></tr>
     <tr><th>Updates</th><td>Atomic, image-based, like Fedora Silverblue: signed system images (<code>goget upgrade</code>), trial boot and automatic rollback</td></tr>
-    <tr><th>Installer</th><td>No GUI: a real handbook with the exact commands, plus <code>systemlinux-install</code>, a plain terminal script that automates the same steps &mdash; whole-disk or into an existing partition, with optional LUKS encryption</td></tr>
+    <tr><th>Installer</th><td>No GUI. The handbook has every command, and <code>systemlinux-install</code> is a terminal script that runs the same steps: whole disk or an existing partition, with optional LUKS encryption</td></tr>
     <tr><th>Boot</th><td>GRUB 2.12, UEFI x86_64 only. Live entries: normal, copy to RAM, debug shell</td></tr>
     <tr><th>Memory</th><td>About 3&nbsp;GB; the &ldquo;copy to RAM&rdquo; entry needs the whole 1.9&nbsp;GB image in memory on top</td></tr>
   </table></div>
@@ -200,9 +201,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
   <div class="cards">
     <div class="panel">
       <h3>systemLinux</h3>
-      <p>Boots to a root shell on the console: install it by hand from the handbook, or run <code>systemlinux-install</code>. About 1.9&nbsp;GB, 3&nbsp;GB of RAM (4&nbsp;GB+ to use <em>copy to RAM</em>).</p>
+      <p>Boots to a root shell on the console. Install it by hand with the handbook, or run <code>systemlinux-install</code>. The ISO is about 1.9&nbsp;GB and needs 3&nbsp;GB of RAM (4&nbsp;GB or more for <em>copy to RAM</em>).</p>
       <p><a class="btn primary" href="https://github.com/tortr-rs/systemLinux/releases/download/v1.2/systemlinux-v1.2.iso">systemlinux-v1.2.iso</a></p>
-      <p><strong>SHA-256</strong><br>Published with each release on the <a href="https://github.com/tortr-rs/systemLinux/releases">releases page</a>, alongside the signed update index &mdash; verify it there before trusting a download from anywhere else.</p>
+      <p><strong>SHA-256</strong><br>Every release on the <a href="https://github.com/tortr-rs/systemLinux/releases">releases page</a> has its checksum. Check it before you trust a copy from anywhere else.</p>
     </div>
   </div>
   <p style="margin-top:1.2rem">Check your download with <code>sha256sum systemlinux-v1.2.iso</code> against the checksum on the releases page. Older versions are on the <a href="https://github.com/tortr-rs/systemLinux/releases">releases page</a>; the source is on <a href="https://github.com/tortr-rs/systemLinux">GitHub</a>.</p>
@@ -211,8 +212,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 
 <section id="handbook" class="alt"><div class="wrap">
   <h2>The systemLinux Handbook</h2>
-  <p class="sub">From a downloaded ISO to an installed, self-updating system &mdash; every command, not a wizard.</p>
-  <div class="note"><strong>Warning:</strong> installing erases whichever disk or partition you point it at. Back up first. <strong>UEFI only</strong> &mdash; legacy BIOS boot is not supported.</div>
+  <p class="sub">From the downloaded ISO to an installed system that updates itself. Every command is written out.</p>
+  <div class="note"><strong>Warning:</strong> installing erases whichever disk or partition you point it at. Back up first. <strong>UEFI only.</strong> Legacy BIOS boot is not supported.</div>
   <div class="handbook">
     <aside class="toc" aria-label="Handbook chapters"><h4>Chapters</h4><ol>
       <li><a href="#hb-1">Make a bootable USB stick</a></li>
@@ -248,11 +249,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 <span class="p">$</span> dd if=/dev/zero of="$DISK" bs=1M count=4</pre>
 
         <h4>Step 2: partition and format</h4>
-        <p>GPT with a 512&nbsp;MiB EFI System Partition and one ext4 partition for everything else &mdash; system images, GRUB and your files:</p>
+        <p>GPT with a 512&nbsp;MiB EFI System Partition and one ext4 partition for everything else (system images, GRUB and your files):</p>
         <pre class="term"><span class="p">$</span> printf 'label: gpt\n,512M,U\n,,L\n' | sfdisk --wipe always --wipe-partitions always "$DISK"
 <span class="p">$</span> mkfs.vfat -F32 -n EFI "${DISK}1"        <span class="c"># nvme/mmc disks: ${DISK}p1</span>
 <span class="p">$</span> mkfs.ext4 -F -q -L systemLinux "${DISK}2"</pre>
-        <p><strong>Existing partition instead of a whole disk:</strong> if you pre-shrank another OS and have a free partition already, set <code>DATADEV=/dev/sdXN</code> to that partition, run only the <code>mkfs.ext4</code> line above against it, and reuse your existing EFI System Partition (skip the <code>mkfs.vfat</code> line and the whole-disk <code>wipefs</code>/<code>dd</code> in step 1) &mdash; then substitute <code>$DATADEV</code> for <code>${DISK}2</code> and your existing ESP for <code>${DISK}1</code> in every step below.</p>
+        <p><strong>Existing partition instead of a whole disk:</strong> if you pre-shrank another OS and have a free partition already, set <code>DATADEV=/dev/sdXN</code> to that partition, run only the <code>mkfs.ext4</code> line above against it, and reuse your existing EFI System Partition (skip the <code>mkfs.vfat</code> line and the whole-disk <code>wipefs</code>/<code>dd</code> in step 1). Then substitute <code>$DATADEV</code> for <code>${DISK}2</code> and your existing ESP for <code>${DISK}1</code> in every step below.</p>
 
         <h4>Step 3: copy the system</h4>
         <pre class="term"><span class="p">$</span> VER=$(cat /usr/share/systemlinux/image-version)
@@ -287,14 +288,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 <span class="p">$</span> systemlinux-grubcfg /mnt/target-data/boot "$DUUID"
 <span class="p">$</span> grub-editenv /mnt/target-data/boot/grub/grubenv create
 <span class="p">$</span> grub-set-default --boot-directory=/mnt/target-data/boot "$VER"</pre>
-        <p>Restart and remove the stick. That is the entire install &mdash; nothing else runs behind your back.</p></div>
+        <p>Restart and remove the stick. That&rsquo;s the whole install. Nothing else runs behind your back.</p></div>
 
       <div class="chapter" id="hb-4"><h3>4. Optional: encrypt with LUKS</h3>
         <p>To encrypt the data partition, do this <strong>before</strong> step 2&rsquo;s <code>mkfs.ext4</code> in chapter 3:</p>
         <pre class="term"><span class="p">$</span> cryptsetup luksFormat "${DISK}2"
 <span class="p">$</span> cryptsetup luksOpen "${DISK}2" systemlinux-data
 <span class="p">$</span> mkfs.ext4 -F -q -L systemLinux /dev/mapper/systemlinux-data</pre>
-        <p>Then use <code>/dev/mapper/systemlinux-data</code> everywhere chapter 3 says <code>${DISK}2</code> (mounting, <code>blkid</code> for the data UUID, and so on). At boot, the live initramfs recognises a LUKS data partition from its UUID and prompts for the passphrase before mounting it &mdash; there is nothing extra to configure. Keep the passphrase somewhere safe: there is no recovery without it.</p></div>
+        <p>Then use <code>/dev/mapper/systemlinux-data</code> everywhere chapter 3 says <code>${DISK}2</code> (mounting, <code>blkid</code> for the data UUID, and so on). At boot, the live initramfs recognises a LUKS data partition from its UUID and prompts for the passphrase before mounting it. There&rsquo;s nothing extra to configure. Keep the passphrase somewhere safe: there is no recovery without it.</p></div>
 
       <div class="chapter" id="hb-5"><h3>5. The fast path: systemlinux-install</h3>
         <p>Everything in chapters 3&ndash;4, asked as plain questions instead of typed by hand:</p>
@@ -324,7 +325,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
         <p>The first boot into a new system image is a trial. If it does not come up, the next boot returns to the previous image automatically. Once the new system has run for a minute, <code>systemlinux-boot-good.timer</code> makes it the default. The previous image stays installed and you can pick it by hand in the GRUB menu at startup. Programs installed with goget roll back separately with <code>goget rollback</code>.</p></div>
 
       <div class="chapter" id="hb-10"><h3>10. Recovery</h3>
-        <p><strong>Boot an older image:</strong> at the GRUB menu, pick a previous version &mdash; every image `goget upgrade` has not yet garbage-collected stays listed and bootable.</p>
+        <p><strong>Boot an older image:</strong> at the GRUB menu, pick a previous version. Every image <code>goget upgrade</code> hasn&rsquo;t cleaned up yet stays listed and bootable.</p>
         <p><strong>Repair a broken install from the live ISO:</strong> boot the live medium, then mount and chroot into the installed system the same way the installer assembles it:</p>
         <pre class="term"><span class="p">$</span> mkdir -p /mnt/data /mnt/sq /mnt/root
 <span class="p">$</span> mount /dev/sdXN /mnt/data                          <span class="c"># the data partition</span>
@@ -335,14 +336,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 <span class="p">$</span> mount --bind /proc /mnt/root/proc && mount --bind /sys /mnt/root/sys && mount --bind /dev /mnt/root/dev
 <span class="p">$</span> chroot /mnt/root /bin/bash</pre>
         <p>Fix what needs fixing (reset a password with <code>passwd</code>, edit <code>/etc/fstab</code>, reinstall GRUB with the same command as chapter 3 step 5), then <code>exit</code> and unmount in reverse order before rebooting.</p>
-        <p><strong>Back up:</strong> everything you can lose lives under <code>/persist/upper</code> on the data partition &mdash; it is the entire writable layer (your files, accounts, and any changes made outside of goget profiles). Copy it (or just <code>/home</code> and <code>/etc</code> within it) to external storage regularly; system images themselves are always re-downloadable and never need backing up.</p></div>
+        <p><strong>Back up:</strong> everything you can lose lives under <code>/persist/upper</code> on the data partition. That&rsquo;s the entire writable layer (your files, accounts, and any changes made outside of goget profiles). Copy it (or just <code>/home</code> and <code>/etc</code> within it) to external storage regularly; system images themselves are always re-downloadable and never need backing up.</p></div>
 
       <div class="chapter" id="hb-11"><h3>11. If something goes wrong</h3>
         <ul>
           <li><strong>The stick does not boot:</strong> choose the UEFI entry, write the ISO with <code>dd</code> instead of Ventoy, and check the checksum.</li>
           <li><strong>No console after boot:</strong> use the <em>debug shell</em> entry, or remove <code>quiet</code> from the kernel command line to see systemd&rsquo;s boot messages on screen. From a running system, <code>journalctl -b</code> and <code>systemctl --failed</code>.</li>
           <li><strong>No Wi-Fi:</strong> a device whose firmware is not in the bundled set will not start. A USB tether or Ethernet always works.</li>
-          <li><strong>Wrong partition wiped:</strong> double-check <code>lsblk</code> output before every <code>wipefs</code>/<code>sfdisk</code> command &mdash; there is no undo. This is exactly why the fully-manual chapter 3 exists: read each command before you run it.</li>
+          <li><strong>Wrong partition wiped:</strong> double-check <code>lsblk</code> output before every <code>wipefs</code>/<code>sfdisk</code> command. There&rsquo;s no undo. That&rsquo;s why chapter 3 is written out by hand: read each command before you run it.</li>
           <li><strong>LUKS passphrase not accepted at boot:</strong> the live/installed initramfs asks again on the next attempt; a truly lost passphrase means the data partition is unrecoverable by design.</li>
           <li><strong>An installed system fails to boot:</strong> pick the previous image from the GRUB menu, or the <em>debug</em> entry to see messages.</li>
         </ul></div>
@@ -370,13 +371,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 </section>
 
 <section id="limits"><div class="wrap">
-  <h2>Honest limits</h2>
-  <p class="sub">What this image does not do yet, so nothing surprises you.</p>
+  <h2>What doesn't work yet</h2>
+  <p class="sub">Known gaps. If one of these gets in your way, open an issue, or better, help fix it.</p>
   <ul class="tight">
     <li>UEFI only: legacy BIOS boot is not supported.</li>
     <li>No automatic partition resizing: dual-boot means shrinking Windows or another Linux yourself first, then installing into the freed partition.</li>
     <li>No Secure Boot yet. LUKS full-disk encryption is available (chapter 4 of the handbook).</li>
-    <li>There is no login screen or lock screen: it is a console system, signed in on tty1 (with optional auto-login).</li>
+    <li>There&rsquo;s no graphical login or lock screen. It&rsquo;s a console system: you log in on tty1.</li>
     <li>Only English is included. Suspend and lid handling depend on your hardware.</li>
     <li>Programs from nixpkgs that need hardware-accelerated OpenGL or Vulkan can fall back to software rendering, because they carry their own graphics libraries.</li>
     <li>The kernel has Intel, AMD and the open NVIDIA (nouveau) graphics drivers, not NVIDIA&rsquo;s proprietary driver.</li>
@@ -387,8 +388,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 </main>
 
 <footer><div class="wrap">
-  <span>systemLinux 1.2 &middot; <a href="https://github.com/tortr-rs/systemLinux">source on GitHub</a></span>
-  <span>Kernel 7.2.6 &middot; systemd &middot; goget</span>
+  <span>systemLinux 1.2 &middot; owned by everyone who uses it &middot; <a href="https://github.com/tortr-rs/systemLinux">source on GitHub</a></span>
+  <span>Workers of the world, unite.</span>
 </div></footer>
 
 </body>
