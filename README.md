@@ -37,9 +37,13 @@ The `v0.2.2` release currently publishes this file:
 
 | File | Size |
 |---|---:|
-| [`systemLinux-0.2.2-x86_64.iso`](https://github.com/tortr-rs/systemLinux/releases/download/v0.2.2/systemLinux-0.2.2-x86_64.iso) | see the release page |
+| [`systemLinux-0.2.2-x86_64.iso`](https://github.com/tortr-rs/systemLinux/releases/download/v0.2.2/systemLinux-0.2.2-x86_64.iso) | about 198 MiB |
 
-Verify the ISO against the `.sha256` file published with the release (`sha256sum -c systemLinux-0.2.2-x86_64.iso.sha256`).
+The release includes a separate checksum file. After downloading both files, verify the ISO with:
+
+```sh
+sha256sum -c systemLinux-0.2.2-x86_64.iso.sha256
+```
 
 See `ROADMAP.md` for what's still deliberately not done (NVIDIA proprietary, Secure Boot, etc.).
 
