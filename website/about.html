@@ -18,17 +18,17 @@ table{border-collapse:collapse} td,th{border:1px solid #999;padding:.2em .5em;te
 <h2>What you get</h2>
   <p class="sub">A minimal console system. The live ISO is installer media only: kernel plus the bare minimum to install.</p>
   <div class="cards">
-    <div class="card"><h3>Minimal live ISO</h3><p>The live image is only the kernel and what the installer needs: dinit, NetworkManager, disk and boot tools. No desktop, daemons, firmware bundles, docs or locale packs.</p></div>
+    <div class="card"><h3>Minimal live ISO</h3><p>The live image is only the kernel and what the installer needs: dinit, eudev, NetworkManager, disk and boot tools. No desktop, daemons, firmware bundles, docs or locale packs.</p></div>
     <div class="card"><h3>Install it yourself</h3><p>The handbook lists every command. If you'd rather not type them, <code>systemlinux-install</code> runs the same steps. Use a whole disk, or a partition you've already freed up. It boots from a USB stick or Ventoy, in UEFI or legacy BIOS mode.</p></div>
     <div class="card"><h3>Build what you need</h3><p><code>get URL</code> downloads a source tarball, builds it and installs it where you say. It is a short POSIX shell script you can read in a minute.</p></div>
     <div class="card"><h3>Plain dinit</h3><p>Services are small dinit service files in <code>/etc/dinit.d/</code>. <code>dinitctl</code> starts, stops and lists them.</p></div>
-    <div class="card"><h3>Drivers built in</h3><p>One kernel with Intel, AMD and open-source NVIDIA graphics, Wi-Fi, Bluetooth, storage and laptop drivers compiled in, and nothing else.</p></div>
+    <div class="card"><h3>Up-to-date kernel</h3><p>Ubuntu&rsquo;s newest generic kernel with its full set of driver modules: Intel, AMD and open-source NVIDIA graphics, Wi-Fi, Bluetooth, storage, sound and laptop hardware load automatically.</p></div>
   </div>
 <hr>
 <h2>What's in the image</h2>
   <div class="table-scroll"><table>
-    <tr><th>Kernel</th><td>Linux 7.2.6, monolithic, with drivers for almost everything built in (Wi-Fi, Bluetooth, Intel/AMD/open NVIDIA graphics, storage, sound, laptop hardware, exFAT/NTFS/btrfs/XFS); no firmware bundled</td></tr>
-    <tr><th>Init</th><td><strong>dinit</strong> 0.20.0 as PID 1, with the standalone udev daemon; the base services are service files in <code>/etc/dinit.d/</code></td></tr>
+    <tr><th>Kernel</th><td>Linux 7.3.0 (Ubuntu 26.10 <code>linux-image-generic</code>, the newest Ubuntu kernel at build time) with its full module tree; drivers load automatically. No firmware bundled</td></tr>
+    <tr><th>Init</th><td><strong>dinit</strong> 0.20.0 as PID 1 and the only init system; systemd is removed completely and <strong>eudev</strong> is the device manager. The base services are service files in <code>/etc/dinit.d/</code></td></tr>
     <tr><th>Services</th><td>dinit and NetworkManager only. No bundled desktop or extra daemons</td></tr>
     <tr><th>Userland</th><td>GNU bash 5.3 as <code>/bin/sh</code>, GNU coreutils, tar, sed and gawk on glibc</td></tr>
     <tr><th>Software</th><td><code>get</code>: build a source tarball and install it</td></tr>

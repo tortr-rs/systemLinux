@@ -15,15 +15,13 @@ table{border-collapse:collapse} td,th{border:1px solid #999;padding:.2em .5em;te
 <h1><img src="logo.svg" alt="" width="32" height="32"> systemLinux 0.2.2</h1>
 <p><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="download.html">Download</a> | <b>News</b> | <a href="get.html">get</a> | <a href="handbook.html">Handbook</a> | <a href="system.html">System</a></p>
 <hr>
-<h1>What's new (unreleased)</h1>
-  <ul class="tight">
-    <li><strong>dinit replaces systemd, which is removed.</strong> Services are small files in <code>/etc/dinit.d/</code>; use <code>dinitctl</code> and the usual <code>reboot</code>, <code>poweroff</code>, <code>halt</code>.</li>
-    <li><strong>Legacy BIOS boot.</strong> The ISO is a hybrid BIOS+UEFI image, and <code>systemlinux-install</code> installs in either mode (GPT with a BIOS boot partition and an EFI partition).</li>
-    <li><strong>180 more ports</strong> (now 534): core utilities, networking, toolchains, editors, shells and libraries, each with a verified checksum. <code>tools/ports-check.sh</code> validates them in CI.</li>
-    <li><strong>Boot fixes.</strong> A kernel without storage modules now fails the build instead of producing an ISO that cannot find its medium; copy-to-RAM works; CI boots the ISO through GRUB in QEMU in both BIOS and UEFI mode.</li>
-  </ul>
 <h1>What's new in 0.2.2</h1>
   <ul class="tight">
+    <li><strong>systemd is gone.</strong> dinit is the only init system and eudev the device manager. Services are small files in <code>/etc/dinit.d/</code>; use <code>dinitctl</code> and the usual <code>reboot</code>, <code>poweroff</code>, <code>halt</code>.</li>
+    <li><strong>Latest Ubuntu kernel.</strong> Linux 7.3.0 from Ubuntu 26.10 with its full module tree, so network, graphics and sound drivers load on the running system.</li>
+    <li><strong>About 440 more ports</strong> (now 792): libraries, X11 and Wayland tools, networking, media, security, databases and games, each with a verified checksum.</li>
+    <li><strong>Legacy BIOS boot.</strong> The ISO is a hybrid BIOS+UEFI image, and <code>systemlinux-install</code> installs in either mode (GPT with a BIOS boot partition and an EFI partition).</li>
+    <li><strong>Boot fixes.</strong> The live medium is found behind ATA/IDE, SCSI, VMware and Hyper-V controllers; copy-to-RAM works; CI boots the ISO through GRUB in QEMU in both BIOS and UEFI mode.</li>
     <li><strong>Live boot fix.</strong> The ISO no longer stops with "could not find the live medium": the initramfs now carries and loads the storage and filesystem kernel modules.</li>
     <li><strong><code>goget</code> is now <code>get</code>.</strong> A small POSIX <code>sh</code> script: <code>get URL</code> downloads a source tarball, builds it and installs it. <code>goget</code> and its image updater are gone.</li>
     <li><strong>Minimal installer-only ISO.</strong> The live image is the kernel plus the bare minimum to run <code>systemlinux-install</code>. No desktop, no extra daemons, no compilers.</li>

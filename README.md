@@ -37,7 +37,7 @@ The `v0.2.2` release currently publishes this file:
 
 | File | Size |
 |---|---:|
-| [`systemLinux-0.2.2-x86_64.iso`](https://github.com/tortr-rs/systemLinux/releases/download/v0.2.2/systemLinux-0.2.2-x86_64.iso) | about 198 MiB |
+| [`systemLinux-0.2.2-x86_64.iso`](https://github.com/tortr-rs/systemLinux/releases/download/v0.2.2/systemLinux-0.2.2-x86_64.iso) | about 401 MiB |
 
 The release includes a separate checksum file. After downloading both files, verify the ISO with:
 

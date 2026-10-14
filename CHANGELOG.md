@@ -1,11 +1,11 @@
 # Changelog
 
-## Unreleased
+## 0.2.2
 
 ### Removed
-- systemd: the service manager, units, generators, journald/logind/networkd/resolved, `systemctl` & co., `/etc/systemd`,
-  `pam_systemd` and the dbus activation files for them are gone from `rootfs/` (`tools/check-no-systemd.sh`). Kept:
-  `libsystemd`/`libudev` (linked by other programs) and the udev daemon, now `/usr/lib/udev/udevd`.
+- systemd, completely: the service manager, units, generators, journald/logind/networkd/resolved, `systemctl` & co.,
+  `systemd-udevd`, systemd's `libudev`, the systemd NSS modules and accounts, `/etc/systemd` and `pam_systemd`, plus the
+  dead OpenRC scripts (`/etc/init.d`, `/etc/runlevels`, `/etc/conf.d`). `tools/check-no-systemd.sh` enforces it.
 
 ### Fixed
 - Boot: `could not find the live medium` on machines/VMs whose boot device sits on an ATA/IDE, legacy SCSI, VMware or
@@ -28,14 +28,17 @@
 - `systemlinux-install` now works in legacy BIOS mode too and `--disk` creates a BIOS boot partition + ESP + data (GPT).
 
 ### Added
+- eudev as the device manager (`tools/eudev/build.sh`) and `tools/libsystemd-stub`, a no-op `libsystemd.so.0` with no
+  systemd code for prebuilt programs still linked to it.
+- The kernel is the newest Ubuntu `linux-image-generic` (7.3.0 from 26.10), fetched and verified by
+  `tools/ubuntu-kernel/fetch.sh`; its full module tree ships in the image.
+- 258 more ports (792 in total), each with a verified `sha256`.
 - Legacy BIOS boot: hybrid BIOS+UEFI ISO (both GRUB platforms are required at build time), `docs/BIOS.md`.
 - About 180 new ports (core utilities, networking, toolchain/developer tools, editors, shells, libraries), all with
   `sha256`. `tools/ports-check.sh` and the `Ports check` workflow validate the tree.
 - `tools/dinit/check-services.sh`, `tools/tests/boot-smoke.sh`, `dinit-check` workflow.
 
-## 0.2.2
-
-### Fixed
+### Fixed (earlier 0.2.2 build)
 - The live ISO failed to boot with `could not find the live medium (a device with /live/rootfs.squashfs)`: distro
   kernels build isofs, squashfs, overlay, loop and the storage drivers as modules, and the initramfs had none.
   `build_iso.sh` now fetches the `linux-modules` (and `-extra`) packages for the embedded kernel, `build-initrd.sh`
