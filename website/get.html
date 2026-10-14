@@ -13,10 +13,10 @@ table{border-collapse:collapse} td,th{border:1px solid #999;padding:.2em .5em;te
 </head>
 <body>
 <h1><img src="logo.svg" alt="" width="32" height="32"> systemLinux 0.2.2</h1>
-<p><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="download.html">Download</a> | <a href="news.html">News</a> | <b>get</b> | <a href="handbook.html">Handbook</a> | <a href="system.html">System</a></p>
+<p><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="download.html">Download</a> | <a href="news.html">News</a> | <b>get</b> | <a href="handbook.html">Handbook</a> | <a href="recipes.html">Recipes</a> | <a href="system.html">System</a></p>
 <hr>
 <h1>get</h1>
-  <p class="sub"><code>get</code> is a small POSIX <code>sh</code> script: it downloads a source tarball, extracts it, runs <code>./configure --prefix=&hellip;</code> (if there is one), <code>make</code> and <code>make install</code>.</p>
+  <p class="sub"><code>get</code> is a Bash script: it can download a source tarball or build a package from a ports recipe. It extracts and builds the source, then installs it under the prefix you choose.</p>
   <div class="two">
     <div>
 <pre class="term"><span class="p">$</span> get https://ftp.gnu.org/gnu/hello/hello-2.12.tar.gz
@@ -26,13 +26,16 @@ table{border-collapse:collapse} td,th{border:1px solid #999;padding:.2em .5em;te
     </div>
     <div>
       <ul class="tight">
-        <li><strong>Formats.</strong> <code>.tar.gz</code>, <code>.tgz</code>, <code>.tar.bz2</code>, <code>.tar.xz</code> and <code>.tar</code>. Anything else fails with a clear message.</li>
+        <li><strong>Formats.</strong> <code>.tar.gz</code>, <code>.tgz</code>, <code>.tar.bz2</code>, <code>.tbz2</code>, <code>.tar.xz</code>, <code>.txz</code> and <code>.tar</code>.</li>
         <li><strong>Where it goes.</strong> <code>-p DIR</code> sets the prefix (default <code>/usr/local</code>); <code>-d DIR</code> stages the install under <code>DESTDIR</code>.</li>
         <li><strong>Clean.</strong> It builds in a temporary directory and removes it afterwards (<code>-k</code> keeps it).</li>
-        <li><strong>Tools.</strong> Uses <code>curl</code> or <code>wget</code>, <code>tar</code> and <code>make</code>.</li>
+        <li><strong>Tools.</strong> Uses <code>curl</code> or <code>wget</code>, <code>tar</code> and <code>make</code>; the selected recipe can also require CMake or Meson.</li>
       </ul>
     </div>
   </div>
+  <h2>Install from a recipe</h2>
+  <p>Use a port name such as <code>get dev-apps/cmake</code> to download and build its recipe. The install prefix defaults to <code>/usr/local</code>, which normally needs root: <code>sudo get dev-apps/cmake</code>. Use <code>get -p "$HOME/.local" dev-apps/cmake</code> to install under your home directory, or <code>get -d /tmp/stage dev-apps/cmake</code> to stage files under <code>/tmp/stage</code> without installing them into the live filesystem.</p>
+  <p>On a minimal installation, first add the build profiles with <code>sudo get --profile build-toolchain</code> and <code>sudo get --profile common-build-deps</code>. <a href="recipes.html">Read the recipe guide</a> for how to create recipes, add dependencies, and understand the build and install steps.</p>
 <hr>
 <p>systemLinux 0.2.2. Owned by everyone who uses it. <a href="https://github.com/tortr-rs/systemLinux">Source on GitHub</a></p>
 </body>

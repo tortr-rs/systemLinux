@@ -13,7 +13,7 @@ table{border-collapse:collapse} td,th{border:1px solid #999;padding:.2em .5em;te
 </head>
 <body>
 <h1><img src="logo.svg" alt="" width="32" height="32"> systemLinux 0.2.2</h1>
-<p><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="download.html">Download</a> | <a href="news.html">News</a> | <a href="get.html">get</a> | <b>Handbook</b> | <a href="system.html">System</a></p>
+<p><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="download.html">Download</a> | <a href="news.html">News</a> | <a href="get.html">get</a> | <b>Handbook</b> | <a href="recipes.html">Recipes</a> | <a href="system.html">System</a></p>
 <hr>
 <h1>The systemLinux Handbook</h1>
   <p class="sub">From the downloaded ISO to an installed system that updates itself. Every command is written out.</p>
@@ -110,7 +110,7 @@ table{border-collapse:collapse} td,th{border:1px solid #999;padding:.2em .5em;te
         <p>GRUB shows for three seconds, then systemLinux starts to a console login. Your user can use <code>sudo</code>.</p></div>
 
       <div class="chapter" id="hb-7"><h2>7. Installing software</h2>
-        <p>Use <code>get</code> to build software from a source tarball:</p>
+        <p>Use <code>get</code> to build software from a source tarball or a named ports recipe. A normal install writes to <code>/usr/local</code>, so use <code>sudo</code>; to install just for your account, choose <code>$HOME/.local</code> as the prefix:</p>
 <pre class="term"><span class="p">$</span> sudo get https://ftp.gnu.org/gnu/hello/hello-2.12.tar.gz         <span class="c"># into /usr/local</span>
 <span class="p">$</span> get -p "$HOME/.local" https://ftp.gnu.org/gnu/hello/hello-2.12.tar.gz   <span class="c"># into your home, no sudo</span></pre>
         <p>The live ISO has no compiler. Add the build stack from profiles first (downloaded from this image&rsquo;s release):</p>
@@ -118,7 +118,7 @@ table{border-collapse:collapse} td,th{border:1px solid #999;padding:.2em .5em;te
 <span class="p">$</span> sudo get --profile common-build-deps     <span class="c"># cmake, ninja, meson, autotools, pkgconf</span>
 <span class="p">$</span> sudo get --profile lang-runtimes         <span class="c"># Perl, Python, Go</span>
 <span class="p">$</span> validate-build-ready                 <span class="c"># compiles autotools, CMake and Meson test projects</span></pre>
-        <p>Then build anything from a source tarball, for example <code>get https://ftp.gnu.org/gnu/coreutils/coreutils-9.5.tar.xz</code> or <code>get -p "$HOME/.local" https://sqlite.org/2024/sqlite-autoconf-3460000.tar.gz</code>. CMake and Meson projects use the installed <code>cmake</code> and <code>meson</code> directly. See <code>get --help</code> for the prefix, staging and configure options.</p></div>
+        <p>Then build software with <code>sudo get category/name</code> when it installs to <code>/usr/local</code>, or <code>get -p "$HOME/.local" category/name</code> for a user-local install. Full source URLs work too, for example <code>sudo get https://ftp.gnu.org/gnu/coreutils/coreutils-9.5.tar.xz</code>. Use <code>-d /tmp/stage</code> to stage rather than install into the live filesystem. A recipe must explicitly select CMake or Meson; a raw source URL is not automatically detected as either build system. See the <a href="recipes.html">recipe guide</a> for exact build and install behavior, or run <code>get --help</code> for all options.</p></div>
 
       <div class="chapter" id="hb-8"><h2>8. Updating the system</h2>
         <p>There is no in-place updater: to move to a newer systemLinux, write the new ISO to a stick and run <code>systemlinux-install</code> again (onto a new partition, or the same one).</p></div>

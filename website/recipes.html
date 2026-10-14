@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>systemLinux 0.2.2: get recipes</title>
+<link rel="icon" type="image/svg+xml" href="logo.svg">
+<style>
+body{font-family:monospace;max-width:50em;margin:1em auto;padding:0 1em;line-height:1.4}
+pre{background:#eee;padding:.5em;overflow:auto}
+table{border-collapse:collapse} td,th{border:1px solid #999;padding:.2em .5em;text-align:left;vertical-align:top}
+</style>
+</head>
+<body>
+<h1><img src="logo.svg" alt="" width="32" height="32"> systemLinux 0.2.2</h1>
+<p><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="download.html">Download</a> | <a href="news.html">News</a> | <a href="get.html">get</a> | <a href="handbook.html">Handbook</a> | <b>Recipes</b> | <a href="system.html">System</a></p>
+<hr>
+<h1>Writing recipes for <code>get</code></h1>
+<p>A ports recipe tells <code>get</code> where to download one source archive, how to build it, and which other ports to install first. It is metadata, not a shell script or Makefile: <code>get</code> reads the listed values and runs the selected build and install steps for you.</p>
+
+<h2>1. Create the recipe file</h2>
+<p>From the repository root, make a directory named for the category and package. The recipe file must be named exactly <code>recipe</code>:</p>
+<pre>mkdir -p ports/dev-apps/hello
+${EDITOR:-vi} ports/dev-apps/hello/recipe</pre>
+<p>Use one <code>key=value</code> entry per line, with each key appearing at most once. Values are plain text; do not use shell commands, variable expansion, or <code>source</code>. Supported archive suffixes are <code>.tar.gz</code>, <code>.tgz</code>, <code>.tar.bz2</code>, <code>.tbz2</code>, <code>.tar.xz</code>, <code>.txz</code>, and <code>.tar</code>.</p>
+
+<h2>2. Choose the fields</h2>
+<table>
+<tr><th>Field</th><th>Required?</th><th>Meaning</th></tr>
+<tr><td><code>url</code></td><td>For a buildable package</td><td>Direct URL to one supported source archive. Omit only for a meta-package.</td></tr>
+<tr><td><code>sha256</code></td><td>Recommended</td><td>Expected lowercase SHA-256 of the downloaded archive. When present, a mismatch stops the build. Recipes without it are not checksum-verified.</td></tr>
+<tr><td><code>requires</code></td><td>When dependencies are needed</td><td>Space-separated port names, preferably written as <code>category/name</code>. They are installed before this package.</td></tr>
+<tr><td><code>build</code></td><td>No</td><td>Build method: <code>configure</code> (the default), <code>cmake</code>, or <code>meson</code>.</td></tr>
+<tr><td><code>configure_args</code></td><td>No</td><td>Extra whitespace-separated arguments passed to the selected configure/setup command. Do not put shell syntax here.</td></tr>
+</table>
+
+<h2>3. Example: configure script and make</h2>
+<p>This is the normal recipe for an Autotools-style package. The checksum below is a placeholder: replace it with the verified SHA-256 for the exact archive before publishing.</p>
+<pre>url=https://example.org/hello-1.0.tar.gz
+sha256=REPLACE_WITH_VERIFIED_64_CHARACTER_SHA256
+build=configure
+configure_args=--disable-nls</pre>
+<p>You can omit <code>build=configure</code> because it is the default. <code>configure_args</code> is optional too.</p>
+
+<h2>4. Other build methods</h2>
+<p>For CMake, set <code>build=cmake</code>. <code>get</code> runs CMake configure, build, and install commands and sets the install prefix:</p>
+<pre>url=https://example.org/widget-1.0.tar.xz
+sha256=REPLACE_WITH_VERIFIED_64_CHARACTER_SHA256
+build=cmake
+configure_args=-DBUILD_TESTING=OFF</pre>
+<p>For Meson, use <code>build=meson</code>. <code>get</code> runs Meson setup, compile, and install. For either method, put additional setup options in <code>configure_args</code>.</p>
+<p>If the source has no executable <code>./configure</code>, leave the build method at its default: the source must then contain a <code>Makefile</code>, <code>makefile</code>, or <code>GNUmakefile</code> at its top level. In this case <code>get</code> passes <code>PREFIX</code> to <code>make</code>. If the build needs patches, custom shell steps, or a different build system, it cannot be represented by a plain recipe yet.</p>
+
+<h2>5. Dependencies and meta-packages</h2>
+<p>List dependencies as space-separated names. <code>get</code> recursively installs them first, using the same prefix and staging directory as the requested package. It skips atoms recorded as already installed and stops if it detects a dependency cycle.</p>
+<pre>url=https://example.org/widget-1.0.tar.gz
+requires=dev-libs/libfoo dev-apps/cmake
+build=cmake</pre>
+<p>A meta-package has dependencies but no source URL. It is useful for grouping related packages:</p>
+<pre>requires=dev-apps/cmake dev-apps/ninja</pre>
+<p>A recipe needs at least a <code>url</code> or <code>requires</code>. Use valid existing ports for every dependency. Names must use letters, digits, dots, underscores, plus signs, hyphens, and slashes; do not use <code>..</code>.</p>
+
+<h2>6. What <code>get</code> does when installing</h2>
+<ol>
+<li>Downloads the archive into a temporary work directory and checks <code>sha256</code> if the recipe provides one.</li>
+<li>Extracts it and selects the only top-level directory, if there is one. Otherwise it builds from the extracted archive root.</li>
+<li>Runs the selected configure/setup step, then compiles the package.</li>
+<li>Runs that build system's install step using the selected prefix and optional staging directory.</li>
+<li>Removes the temporary directory and records the port as installed, including after a staged install. Use <code>-k</code> on the command line to keep the work directory for debugging.</li>
+</ol>
+<p>The default prefix is <code>/usr/local</code>. Installing there normally needs root, so run <code>sudo get category/name</code>. To install for your own account, run <code>get -p "$HOME/.local" category/name</code> instead; the package's build system must honor the chosen prefix.</p>
+<p><code>-d DIR</code> does not change the prefix. It stages the files below <code>DIR</code> while retaining their prefix paths. For example, <code>get -d /tmp/stage category/name</code> with the default prefix places files under <code>/tmp/stage/usr/local</code>; it does not install them into the live <code>/usr/local</code>. A staged port is still recorded as installed in <code>GET_DB</code>, so use a separate database when testing a staged install: <code>GET_DB=/tmp/get-stage-db get -d /tmp/stage category/name</code>.</p>
+<p>On a newly installed system, the live ISO's minimal toolset is not enough to compile packages. Install the profiles first, then install the port:</p>
+<pre>sudo get --profile build-toolchain
+sudo get --profile common-build-deps
+sudo get dev-apps/cmake
+sudo get category/name</pre>
+<p>Only install <code>lang-runtimes</code> if a package needs Perl, Python, or Go. Some recipes require a compiler or build dependency not covered by these profiles; add that dependency to the recipe's <code>requires</code>.</p>
+<p>Profiles are different from ports: <code>get --profile NAME</code> downloads a prebuilt profile archive, while <code>get category/name</code> builds a source archive using its recipe. See the <a href="get.html">get overview</a> and <a href="handbook.html">Handbook</a> for more installation details.</p>
+
+<h2>7. Test and share a recipe</h2>
+<ol>
+<li>Download the exact archive yourself and verify its checksum with <code>sha256sum archive.tar.gz</code>.</li>
+<li>Check the URL, build method, required tools, dependencies, and install prefix against the package's upstream instructions.</li>
+<li>Test the recipe with <code>get category/name</code> in a system with the needed build profiles installed. Check the installed files, or use <code>GET_DB=/tmp/get-stage-db get -d /tmp/stage category/name</code> to inspect a staged install without marking it in your normal installed-ports database.</li>
+<li>Put the recipe at <code>ports/category/name/recipe</code> and submit that file with your ports change.</li>
+</ol>
+<p>Recipes are parsed as data and never executed, but a recipe can still make <code>get</code> download and build untrusted source code. Review the upstream source and verify its checksum, especially when installing as root. The installed-atom database does not track files or support uninstalling packages.</p>
+<hr>
+<p>systemLinux 0.2.2. Owned by everyone who uses it. <a href="https://github.com/tortr-rs/systemLinux">Source on GitHub</a></p>
+</body>
+</html>
