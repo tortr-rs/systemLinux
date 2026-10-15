@@ -129,8 +129,10 @@ STAGE=$WORKSPACE/stage
 sudo mkdir -p "$STAGE"
 sudo cp -a "$ROOTFS/." "$STAGE/"
 sudo "$BUILD_DIR/tools/overlay-common/strip-gentoo.sh" "$STAGE"
-# the installer's boot/disk tools (the build host's own binaries and libraries)
-sudo "$BUILD_DIR/tools/overlay-common/copy-bin.sh" "$STAGE" grub-install "$GRUB_MKIMAGE" grub-probe grub-editenv \
+# the installer's boot/disk tools come from the build host; they run on the host's libraries, kept apart in
+# /usr/lib/systemlinux-host so they never replace the image's own glibc and libraries (they used to land in
+# /usr/lib: the host's 64-bit glibc over the 32-bit one, which broke every program with a ../lib RUNPATH, e.g. cargo)
+sudo "$BUILD_DIR/tools/overlay-common/copy-host-tools.sh" "$STAGE" grub-install "$GRUB_MKIMAGE" grub-probe grub-editenv \
     grub-set-default grub-reboot efibootmgr mkfs.fat "$GRUB_BIOS_SETUP"
 GRUBDATA=0
 for d in /usr/lib/grub /usr/lib64/grub /usr/share/grub /usr/lib/grub2 /usr/share/grub2; do

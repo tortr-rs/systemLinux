@@ -1,6 +1,6 @@
 #!/bin/sh
 # Copy host programs and the shared libraries they need into a directory tree (same paths as on the
-# host). Used to put the installer's few boot/disk tools into the live image and initramfs.
+# host). Used for the initramfs, which is its own small world; the live image uses copy-host-tools.sh.
 # usage: copy-bin.sh DEST PROGRAM...
 set -eu
 DEST=${1:?usage: copy-bin.sh DEST PROGRAM...}; shift
