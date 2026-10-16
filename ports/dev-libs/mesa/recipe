@@ -1,8 +1,8 @@
 version=24.3.4
-description=OpenGL, EGL and GBM drivers (Intel, AMD, Nouveau, software)
+description=OpenGL, EGL and GBM drivers (Intel, Nouveau, older AMD, software), built without LLVM
 url=https://archive.mesa3d.org/mesa-24.3.4.tar.xz
 sha256=e641ae27191d387599219694560d221b7feaa91c900bcec46bf444218ed66025
 build=meson
-configure_args=-Dplatforms=x11,wayland -Dgallium-drivers=iris,crocus,i915,radeonsi,r600,r300,nouveau,llvmpipe,softpipe,virgl -Dvulkan-drivers= -Dglx=dri -Degl=enabled -Dgbm=enabled -Dllvm=enabled -Dglvnd=disabled -Dvalgrind=disabled -Dlibunwind=disabled -Dvideo-codecs= -Dshared-glapi=enabled
-requires=dev-apps/meson dev-apps/ninja dev-libs/libdrm dev-libs/wayland dev-libs/wayland-protocols x11/libx11 x11/libxext x11/libxfixes x11/libxdamage x11/libxxf86vm x11/libxshmfence x11/libxrandr x11/libxcb dev-libs/expat dev-libs/zlib dev-apps/zstd dev-apps/llvm dev-python/python-mako dev-python/pyyaml dev-libs/elfutils
+configure_args=-Dplatforms=x11,wayland -Dgallium-drivers=iris,crocus,i915,r600,r300,nouveau,softpipe,virgl -Dvulkan-drivers= -Dglx=dri -Degl=enabled -Dgbm=enabled -Dllvm=disabled -Dglvnd=disabled -Dvalgrind=disabled -Dlibunwind=disabled -Dvideo-codecs= -Dshared-glapi=enabled
+requires=dev-apps/meson dev-apps/ninja dev-libs/libdrm dev-libs/wayland dev-libs/wayland-protocols x11/libx11 x11/libxext x11/libxfixes x11/libxdamage x11/libxxf86vm x11/libxshmfence x11/libxrandr x11/libxcb dev-libs/expat dev-libs/zlib dev-apps/zstd dev-python/python-mako dev-python/pyyaml dev-libs/elfutils
 check=pkgconfig:gbm
