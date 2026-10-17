@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.2.5
 
 ### Added
 - **Stage tarball**: `build_iso.sh` also writes `systemLinux-stage-VER-x86_64.tar.xz` (+ `.sha256`), the same system
@@ -21,26 +21,6 @@
   (`cupsd`) ports.
 - `cryptsetup` is in the live system (`systemlinux-install --luks` and the Handbook need it; it was only in the initramfs).
 
-### Changed
-- Only the live system logs root in on tty1: its init adds `--autologin root` in the tmpfs layer, so installs from the
-  stage ask for a login.
-- `mount-fstab` also turns on the swap listed in `/etc/fstab`.
-- The stage no longer carries a D-Bus machine id; every install makes its own on first boot.
-
-- A quiet console: with `quiet` on the kernel command line (the default boot entries) dinit only prints errors, the
-  login prompt comes up on a cleared screen, and long-running services (dbus and what it starts, such as ModemManager,
-  NetworkManager, udevd, sshd, and the services of the cups, bluez, seatd, iwd and chrony ports) write to
-  `/var/log/NAME.log` instead of the console. Entries without `quiet` (and the ISO's serial entry) still show every
-  service.
-
-### Fixed
-- Installed systems booted to a `grub>` shell on UEFI when the ISO was built on Ubuntu: its `grub-install` put Ubuntu's
-  prebuilt Secure Boot image on the ESP, which does not find `grub.cfg` without shim. The copied `grub-install` now
-  passes `--no-uefi-secure-boot` when the build host's supports it.
-
-## 0.2.5
-
-### Added
 - **Desktop sessions without elogind**: `pam_exec` creates `/run/user/UID` at login
   (`/usr/libexec/systemlinux-rundir`), `/etc/profile.d/xdg-runtime.sh` exports `XDG_RUNTIME_DIR` and
   `DBUS_SESSION_BUS_ADDRESS`, and a user-mode dinit (`exec dinit` from sway/i3) starts the services in
@@ -49,8 +29,22 @@
 - **`sys-app/linux-firmware`** 20260916: kernel.org's firmware release, installed zstd-compressed (951 MB).
 
 ### Changed
+- Only the live system logs root in on tty1: its init adds `--autologin root` in the tmpfs layer, so installs from the
+  stage ask for a login.
+- `mount-fstab` also turns on the swap listed in `/etc/fstab`.
+- The stage no longer carries a D-Bus machine id; every install makes its own on first boot.
+- A quiet console: with `quiet` on the kernel command line (the default boot entries) dinit only prints errors, the
+  login prompt comes up on a cleared screen, and long-running services (dbus and what it starts, such as ModemManager,
+  NetworkManager, udevd, sshd, and the services of the cups, bluez, seatd, iwd and chrony ports) write to
+  `/var/log/NAME.log` instead of the console. Entries without `quiet` (and the ISO's serial entry) still show every
+  service.
 - New users are added to the `video`, `audio` and `input` groups (seatd, ALSA, libinput).
 - PipeWire no longer starts pipewire-pulse itself (its own user service does).
+
+### Fixed
+- Installed systems booted to a `grub>` shell on UEFI when the ISO was built on Ubuntu: its `grub-install` put Ubuntu's
+  prebuilt Secure Boot image on the ESP, which does not find `grub.cfg` without shim. The copied `grub-install` now
+  passes `--no-uefi-secure-boot` when the build host's supports it.
 
 ## 0.2.4
 
