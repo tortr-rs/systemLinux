@@ -1,0 +1,44 @@
+<!-- content -->
+<h2>The root password</h2>
+<pre class="term"><span class="p">#</span> passwd</pre>
+
+<h2>Your user</h2>
+<pre class="term"><span class="p">#</span> useradd -m -G wheel,video,audio,input -s /bin/bash YOURNAME
+<span class="p">#</span> passwd YOURNAME</pre>
+<table>
+<tr><th>Group</th><th>Gives</th></tr>
+<tr><td><code>wheel</code></td><td><code>sudo</code> and <code>su</code> (see below)</td></tr>
+<tr><td><code>video</code></td><td>the GPU, and seatd (Wayland compositors)</td></tr>
+<tr><td><code>audio</code></td><td>sound cards</td></tr>
+<tr><td><code>input</code></td><td>keyboards, mice and touchpads (libinput)</td></tr>
+<tr><td><code>networkmanager</code></td><td>changing network connections without sudo (create it first: <code>groupadd -r networkmanager</code>)</td></tr>
+</table>
+<p>Allow the <code>wheel</code> group to use sudo:</p>
+<pre class="term"><span class="p">#</span> echo '%wheel ALL=(ALL:ALL) ALL' &gt; /etc/sudoers.d/10_wheel
+<span class="p">#</span> chmod 440 /etc/sudoers.d/10_wheel
+<span class="p">#</span> visudo -c</pre>
+<p>Or do all of this in one go: <code>systemlinux-provision --user YOURNAME /</code> creates the account in those
+groups, asks for its password twice and sets up sudo.</p>
+
+<h2>Leaving and rebooting</h2>
+<pre class="term"><span class="p">#</span> exit                     <span class="c"># leave the chroot</span>
+<span class="p">#</span> umount -R /mnt
+<span class="p">#</span> cryptsetup close root      <span class="c"># only if you encrypted the root partition</span>
+<span class="p">#</span> reboot</pre>
+<p>Take the stick out when the screen goes black.</p>
+
+<h2>The first boot</h2>
+<p>GRUB shows its menu for three seconds. With an encrypted root, the initramfs asks for the passphrase. Then dinit
+starts the system and the console asks you to log in. Log in as yourself and check:</p>
+<pre class="term"><span class="p">$</span> sudo whoami
+root
+<span class="p">$</span> dinitctl list                 <span class="c"># the running services</span>
+<span class="p">$</span> nmcli device status           <span class="c"># the network</span></pre>
+<p>Your system is installed. Next:</p>
+<ul>
+<li><a href="handbook-hardware.html">Firmware, graphics and sound</a>: <code>sudo get install linux-firmware</code> first if your Wi-Fi or GPU needs it.</li>
+<li><a href="handbook-get.html">Installing software with get</a>.</li>
+<li><a href="handbook-desktop.html">A desktop: sway or i3</a>.</li>
+</ul>
+<p>If it does not boot, see <a href="handbook-troubleshooting.html">Troubleshooting and recovery</a>.</p>
+<!-- /content -->

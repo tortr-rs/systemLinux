@@ -1,0 +1,41 @@
+<!-- content -->
+<p>The stage comes with a kernel ready to boot: there is nothing to compile. This chapter explains what is there, so
+you can change it.</p>
+
+<h2>What the stage installed</h2>
+<table>
+<tr><th>File</th><th>What it is</th></tr>
+<tr><td><code>/boot/systemlinux/vmlinuz</code></td><td>The kernel: Ubuntu's newest generic kernel, which supports almost all x86_64 hardware.</td></tr>
+<tr><td><code>/usr/lib/modules/VERSION/</code></td><td>Its drivers, as modules. eudev loads the ones your hardware needs at boot.</td></tr>
+<tr><td><code>/boot/systemlinux/initrd.img</code></td><td>The initramfs: a small system the kernel runs first to find and mount your root filesystem.</td></tr>
+</table>
+<pre class="term"><span class="p">#</span> ls /usr/lib/modules/          <span class="c"># the kernel version</span></pre>
+
+<h2>The initramfs</h2>
+<p>The kernel cannot mount your root filesystem by itself: the disk controller and filesystem drivers are modules on
+that very filesystem. The initramfs contains busybox, cryptsetup, the storage and filesystem modules, and one script,
+<code>/init</code>, which:</p>
+<ol>
+<li>loads the drivers for the disk controllers it finds;</li>
+<li>waits for the root filesystem named by <code>root=</code> on the kernel command line;</li>
+<li>if <code>systemlinux.luks=</code> is given, asks for the passphrase and opens the partition as <code>/dev/mapper/root</code>;</li>
+<li>mounts the root filesystem and starts <code>/usr/bin/dinit</code> on it.</li>
+</ol>
+<p>The same initramfs boots the live ISO. Every option it understands is in <a href="handbook-cmdline.html">Boot options</a>.
+You do not need to rebuild it after installing: it is not tied to your machine.</p>
+
+<h2>Firmware</h2>
+<p>Many devices (Wi-Fi cards, AMD and Intel graphics, Bluetooth) need firmware files the kernel loads from
+<code>/lib/firmware</code>. The stage has none, to keep it small. Install them after the first boot, when you have a
+network:</p>
+<pre class="term"><span class="p">#</span> get install linux-firmware</pre>
+<p>That is kernel.org's firmware collection, about 1&nbsp;GB, compressed. Reboot afterwards. If your Wi-Fi card needs
+firmware, connect with a cable or USB tethering for this step.</p>
+
+<h2>Your own kernel</h2>
+<p>A <code>linux</code> port that builds the kernel.org kernel (with a configuration that, like Arch's, supports any
+x86_64 machine) is planned. A kernel you build yourself works as long as you install it as
+<code>/boot/systemlinux/vmlinuz-VERSION</code>, put its modules in <code>/usr/lib/modules/VERSION</code>, give it an
+initramfs as <code>/boot/systemlinux/initrd.img-VERSION</code> and run <code>systemlinux-grubcfg</code>: every
+<code>vmlinuz*</code> in <code>/boot/systemlinux</code> gets its own menu entry.</p>
+<!-- /content -->

@@ -1,0 +1,31 @@
+<!-- content -->
+<p>You need the network to download the stage. The live system runs <strong>NetworkManager</strong>.</p>
+
+<h2>Wired</h2>
+<p>An Ethernet cable works by itself: NetworkManager configures it with DHCP as soon as it is plugged in. Check:</p>
+<pre class="term"><span class="p">#</span> nmcli device status
+<span class="p">#</span> ping -c 3 github.com</pre>
+
+<h2>Wi-Fi</h2>
+<pre class="term"><span class="p">#</span> nmcli device wifi list
+<span class="p">#</span> nmcli device wifi connect "NETWORK NAME" password "PASSWORD"</pre>
+<p><code>nmtui</code> does the same with menus. A hidden network needs <code>hidden yes</code> at the end of the
+connect command.</p>
+<div class="note">The live ISO carries no firmware. Most wired cards and some Wi-Fi cards work without it; many Wi-Fi
+cards (Intel, Realtek, Broadcom) need firmware and do not appear in <code>nmcli device</code>. Use Ethernet, or share
+your phone's connection over USB (USB tethering): it shows up as a wired card.</div>
+
+<h2>A static address</h2>
+<pre class="term"><span class="p">#</span> nmcli connection add type ethernet ifname enp1s0 con-name wired \
+      ipv4.method manual ipv4.addresses 192.168.1.50/24 ipv4.gateway 192.168.1.1 ipv4.dns 1.1.1.1
+<span class="p">#</span> nmcli connection up wired</pre>
+
+<h2>A proxy</h2>
+<pre class="term"><span class="p">#</span> export https_proxy=http://proxy.example:3128 http_proxy=http://proxy.example:3128</pre>
+<p><code>curl</code> and <code>get</code> use these variables.</p>
+
+<h2>The clock</h2>
+<p>Downloads over HTTPS fail with certificate errors when the clock is far off. Check it, and set it if needed (UTC):</p>
+<pre class="term"><span class="p">#</span> date
+<span class="p">#</span> date -u -s "2026-10-17 12:00"</pre>
+<!-- /content -->

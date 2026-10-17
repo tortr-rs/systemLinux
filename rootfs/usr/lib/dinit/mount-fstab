@@ -3,3 +3,5 @@ export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 # The live image has no /etc/fstab; an installed system has its /boot bind mount and /boot/efi there.
 [ -s /etc/fstab ] || exit 0
 mount -a
+# swap partitions and swap files listed in fstab
+swapon -a 2>/dev/null || true

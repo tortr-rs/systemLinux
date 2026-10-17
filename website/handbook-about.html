@@ -1,0 +1,53 @@
+<!-- content -->
+<p>This part of the Handbook installs systemLinux by hand, one command at a time, the way Gentoo and Arch are
+installed. Nothing is hidden: at the end you know where every file on your new system came from, and you can repair
+or change any of it later.</p>
+
+<h2>What you will do</h2>
+<ol>
+<li><a href="handbook-media.html">Download the live ISO</a>, check it and write it to a USB stick.</li>
+<li><a href="handbook-boot.html">Boot it</a>. You get a root shell on a running systemLinux.</li>
+<li><a href="handbook-network.html">Get online</a>, to download the stage.</li>
+<li><a href="handbook-disks.html">Partition and format</a> the disk you install to.</li>
+<li><a href="handbook-stage.html">Extract the stage tarball</a>: the complete system, compilers included.</li>
+<li><a href="handbook-config.html">Configure it</a>: fstab, hostname, time zone, keyboard. Then enter it with <code>chroot</code>.</li>
+<li><a href="handbook-kernel.html">Put the kernel and initramfs in place</a>.</li>
+<li><a href="handbook-bootloader.html">Install GRUB</a>.</li>
+<li><a href="handbook-finish.html">Create your user</a>, unmount and reboot into the new system.</li>
+</ol>
+<p>The <a href="handbook-installer.html">automatic installer</a>, <code>systemlinux-install</code>, runs exactly these
+steps after asking a few questions. Use it if you only want a working system; read on if you want to know how it
+works or need something it does not do.</p>
+
+<h2>What systemLinux is</h2>
+<ul>
+<li><strong>x86_64 only</strong>, UEFI or legacy BIOS.</li>
+<li><strong>dinit</strong> is the init system and service manager. There is no systemd anywhere; <strong>eudev</strong>
+manages devices.</li>
+<li><strong>glibc</strong> and a GNU userland: bash, coreutils, tar, sed, gawk, findutils.</li>
+<li>The kernel is Ubuntu's newest generic kernel, with its full module tree.</li>
+<li>Software is built from source with <a href="handbook-get.html"><code>get</code></a> and the ports tree, a
+CRUX-style collection of simple recipes. Some ports install a project's own official binaries instead
+(<code>-bin</code> ports).</li>
+</ul>
+
+<h2>Requirements</h2>
+<table>
+<tr><th>Processor</th><td>Any x86_64 (64-bit Intel or AMD).</td></tr>
+<tr><th>Memory</th><td>2&nbsp;GB to install; 4&nbsp;GB or more to build large packages.</td></tr>
+<tr><th>Disk</th><td>20&nbsp;GB at least; 40&nbsp;GB or more if you will build big software (Firefox, LLVM, Qt) from source.</td></tr>
+<tr><th>Network</th><td>Needed to download the stage (about 1&nbsp;GB) and software. You can also bring the stage on a USB stick.</td></tr>
+<tr><th>Firmware</th><td>UEFI or legacy BIOS. Turn <strong>Secure Boot off</strong>: systemLinux's bootloader is not signed.</td></tr>
+</table>
+
+<h2>Conventions in this Handbook</h2>
+<pre class="term"><span class="p">#</span> a command run as root
+<span class="p">$</span> a command run as your normal user
+<span class="c"># a comment: do not type it</span></pre>
+<p>Text in <code>UPPERCASE</code> inside a command, like <code>/dev/sdX</code> or <code>YOURNAME</code>, is a
+placeholder: replace it with your own value. The examples use <code>/dev/sda</code> as the disk; yours may be
+<code>/dev/nvme0n1</code>, <code>/dev/vda</code> (in a virtual machine) or something else, and its partitions are then
+called <code>/dev/nvme0n1p1</code>, <code>/dev/nvme0n1p2</code>, ...</p>
+<div class="warn"><strong>Partitioning and formatting erase data.</strong> Back up everything you care about before
+<a href="handbook-disks.html">chapter 5</a>, and read every command that names a disk twice before you press Enter.</div>
+<!-- /content -->

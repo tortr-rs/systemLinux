@@ -1,0 +1,43 @@
+<!-- content -->
+<h2>Starting from the stick</h2>
+<p>Plug the stick in and turn the computer on while pressing its boot menu key: usually <kbd>F12</kbd>, also
+<kbd>F11</kbd>, <kbd>F10</kbd>, <kbd>F8</kbd> or <kbd>Esc</kbd>. Pick the stick. If it is listed twice, the
+<em>UEFI</em> entry installs a UEFI system and the other one a legacy BIOS system; choose UEFI on any computer from the
+last ten years.</p>
+<div class="tip">If the stick is not listed: turn Secure Boot off and, on older computers, enable USB boot in the
+firmware settings (usually <kbd>F2</kbd> or <kbd>Del</kbd> at power on).</div>
+
+<h2>The boot menu</h2>
+<table>
+<tr><th>Entry</th><th>What it does</th></tr>
+<tr><td>systemLinux 0.2.5</td><td>The normal live system.</td></tr>
+<tr><td>copy to RAM</td><td>Loads the whole live system into memory first (needs about 2&nbsp;GB free). You can then pull the stick out, for example to install onto the stick itself.</td></tr>
+<tr><td>serial console</td><td>Also uses the first serial port: for servers and headless virtual machines.</td></tr>
+<tr><td>debug shell</td><td>Shows every boot message and stops in a shell just before the system starts. Type <code>exit</code> to continue booting. See <a href="handbook-troubleshooting.html">Troubleshooting</a>.</td></tr>
+</table>
+<p>Press <kbd>e</kbd> on an entry to change its kernel command line for this boot only;
+<a href="handbook-cmdline.html">Boot options</a> lists what systemLinux understands.</p>
+
+<h2>The live system</h2>
+<p>After a few seconds you are logged in as <strong>root</strong> on the first console. The live system is a full
+systemLinux running from the ISO; whatever you change is kept in memory and gone at the next boot. There is one
+console; to read this Handbook while you work, open it on a phone or another computer, or install over SSH (below).</p>
+
+<h3>Keyboard layout</h3>
+<p>The console starts with a US layout. Load yours:</p>
+<pre class="term"><span class="p">#</span> loadkeys fr          <span class="c"># or de, uk, es, it, dvorak, ...</span>
+<span class="p">#</span> ls /usr/share/keymaps/i386/*/   <span class="c"># every available layout</span></pre>
+<h3>A bigger font</h3>
+<p>On a high-resolution screen the console font is tiny. <code>setfont -d</code> doubles it.</p>
+
+<h3>Check how you booted</h3>
+<pre class="term"><span class="p">#</span> ls /sys/firmware/efi    <span class="c"># exists: booted in UEFI mode; "No such file": legacy BIOS</span></pre>
+<p>This matters in <a href="handbook-disks.html">chapter 5</a> and <a href="handbook-bootloader.html">chapter 9</a>.</p>
+
+<h3>Remote installation</h3>
+<p>To install from another computer over SSH, set a root password and start the SSH server:</p>
+<pre class="term"><span class="p">#</span> passwd
+<span class="p">#</span> /usr/bin/sshd
+<span class="p">#</span> ip -brief address      <span class="c"># the address to connect to</span></pre>
+<p>Then <code>ssh root@ADDRESS</code> from the other computer.</p>
+<!-- /content -->

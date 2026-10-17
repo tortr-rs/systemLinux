@@ -21,12 +21,13 @@ for p in "$@"; do
     fi
     if ldd "$path" 2>/dev/null | grep -q 'not found'; then echo "copy-host-tools: missing libraries for $path" >&2; exit 1; fi
     cp -L "$path" "$DEST$H/bin/$name"
-    # its libraries, and the loader (ld-linux, printed as "/path (addr)" or "name => /path (addr)")
+    # its libraries, and the loader (glibc's ld-linux or musl's ld-musl, which is also musl's libc; printed as
+    # "/path (addr)" or "name => /path (addr)"). musl's loader takes the same --library-path/--argv0 options.
     ldd "$path" | while IFS= read -r line; do
         lib=$(echo "$line" | sed -n 's/.*=> \(\/[^ ]*\) (.*/\1/p; t; s/^[[:space:]]*\(\/[^ ]*\) (.*/\1/p')
         [ -n "$lib" ] || continue
         case "${lib##*/}" in
-            ld-linux*) cp -L "$lib" "$DEST$H/lib/ld.so" ;;
+            ld-linux*|ld-musl*) cp -L "$lib" "$DEST$H/lib/ld.so" ;;
             *)         cp -L "$lib" "$DEST$H/lib/${lib##*/}" ;;
         esac
     done

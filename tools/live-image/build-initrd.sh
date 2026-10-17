@@ -2,8 +2,9 @@
 # Build the small live initramfs: busybox + cryptsetup (for LUKS-encrypted installs) + the init
 # script. No firmware: the live image is kernel + installer only.
 #
-# busybox and cryptsetup come from the build host (install them with its package manager; a static
-# busybox is best); copy-bin.sh copies each program with the shared libraries it needs.
+# busybox: BUSYBOX=PATH (build_iso.sh builds a static one inside the image, tools/busybox/build.sh), else the
+# build host's. cryptsetup comes from the build host; copy-bin.sh copies it with the shared libraries and the
+# loader it needs, at their host paths (glibc or musl alike).
 #
 # The distro kernels build most storage and filesystem drivers (isofs, squashfs, overlay, loop, usb, ahci, nvme...)
 # as modules, so those modules (plus their dependencies) are copied from the kernel's module tree into the
@@ -21,13 +22,20 @@ OUT=${1:?usage: build-initrd.sh OUTPUT}
 WORK=${WORK:-$HOME/.cache/systemlinux-initrd}
 rm -rf "$WORK/root" && mkdir -p "$WORK/root/bin" "$WORK/root/sbin" "$WORK/root/etc"
 
-echo "== copying busybox and cryptsetup from the build host"
-"$REPO/tools/overlay-common/copy-bin.sh" "$WORK/root" busybox cryptsetup
-BB=$(readlink -f "$(command -v busybox)"); CS=$(readlink -f "$(command -v cryptsetup)")
-# copy-bin.sh keeps the host paths (e.g. /usr/bin/busybox); the init script expects /bin/busybox and /sbin/cryptsetup
-[ -x "$WORK/root$BB" ] || { echo "ERROR: busybox not copied to initramfs" >&2; exit 1; }
+if [ -n "${BUSYBOX:-}" ]; then
+    echo "== busybox: $BUSYBOX; cryptsetup from the build host"
+    install -m755 "$BUSYBOX" "$WORK/root/bin/busybox"
+    "$REPO/tools/overlay-common/copy-bin.sh" "$WORK/root" cryptsetup
+else
+    echo "== copying busybox and cryptsetup from the build host"
+    "$REPO/tools/overlay-common/copy-bin.sh" "$WORK/root" busybox cryptsetup
+    BB=$(readlink -f "$(command -v busybox)")
+    [ -x "$WORK/root$BB" ] || { echo "ERROR: busybox not copied to initramfs" >&2; exit 1; }
+    [ "$BB" = /bin/busybox ] || ln -sf "$BB" "$WORK/root/bin/busybox"
+fi
+CS=$(readlink -f "$(command -v cryptsetup)")
+# copy-bin.sh keeps the host paths (e.g. /usr/sbin/cryptsetup); the init script expects /sbin/cryptsetup
 [ -x "$WORK/root$CS" ] || { echo "ERROR: cryptsetup not copied to initramfs" >&2; exit 1; }
-[ "$BB" = /bin/busybox ] || ln -sf "$BB" "$WORK/root/bin/busybox"
 [ "$CS" = /sbin/cryptsetup ] || ln -sf "$CS" "$WORK/root/sbin/cryptsetup"
 
 install -m755 "$HERE/init" "$WORK/root/init"
@@ -46,7 +54,7 @@ MODDIR=$MODULES_ROOT/lib/modules/$KVER
 INITRD_MODULES=${INITRD_MODULES:-"isofs udf squashfs overlay loop sr_mod cdrom sd_mod usb_storage uas
     xhci_pci xhci_hcd ehci_pci ehci_hcd ohci_pci ohci_hcd uhci_hcd ahci libahci nvme nvme_core mmc_block
     virtio_blk virtio_scsi virtio_pci virtio virtio_ring scsi_mod scsi_common libata ata_piix ata_generic pata_acpi
-    vmw_pvscsi mptspi mptsas BusLogic hv_storvsc hv_vmbus vfat fat exfat ext4 nls_cp437 nls_ascii nls_utf8 dm_mod dm_crypt"}
+    vmw_pvscsi mptspi mptsas BusLogic hv_storvsc hv_vmbus vfat fat exfat ext4 xfs btrfs f2fs nls_cp437 nls_ascii nls_utf8 dm_mod dm_crypt"}
 # Whole driver directories (every ATA/SATA/PATA, SCSI, USB storage/host, NVMe, MMC and virtio-block driver): the medium may
 # sit behind any controller (QEMU's default IDE CD-ROM needs ata_piix, VMware pvscsi, Hyper-V storvsc, ...).
 # The init loads the ones matching the hardware by modalias. Test/dummy devices are excluded.
@@ -91,7 +99,7 @@ else
     nomods "no module tree (modules.dep/depmod) for kernel $KVER under ${MODULES_ROOT:-/}"
 fi
 
-"$WORK/root/bin/busybox" --list 2>/dev/null | grep -qx modprobe || echo "WARNING: busybox has no modprobe applet; kernel modules cannot be loaded" >&2
+"$WORK/root/bin/busybox" --list 2>/dev/null | grep -x modprobe >/dev/null || echo "WARNING: busybox has no modprobe applet; kernel modules cannot be loaded" >&2
 mkdir -p "$WORK/root"/{proc,sys,dev,mnt,newroot,overlay}
 # zstd-compressed (the kernel unpacks it): uncompressed it is ~60 MB, which GRUB reads very slowly through BIOS disk calls
 ( cd "$WORK/root" && find . | sort | cpio -o -H newc -R 0:0 --quiet ) | zstd -q -19 -T0 > "$OUT"

@@ -31,11 +31,12 @@ ISO=${ISO:-$BUILD_DIR/systemLinux-$IMAGE_VERSION-x86_64.iso}
 cd "$BUILD_DIR"
 # fail early, with the fix, instead of halfway through the kernel build
 missing=
-for t in xorriso mksquashfs mformat cpio make gcc g++ curl busybox cryptsetup efibootmgr mkfs.fat grub-install grub-mkimage \
-         gperf pkg-config depmod xz zstd ar nm readelf; do
+# Nothing is compiled on the host: dinit, eudev, sudo, busybox, ... are built inside the image with its own compiler
+# (tools/overlay-common/chroot-run.sh), so any distro works as the build host, glibc or musl.
+for t in xorriso mksquashfs mformat cpio curl tar xz zstd bzip2 cryptsetup efibootmgr mkfs.fat grub-install grub-mkimage \
+         depmod readelf chroot; do
     command -v "$t" >/dev/null || missing="$missing $t"
 done
-pkg-config --exists libkmod blkid 2>/dev/null || missing="$missing libkmod-dev/libblkid-dev(for eudev)"
 command -v grub-mkrescue >/dev/null || command -v grub2-mkrescue >/dev/null || missing="$missing grub-mkrescue"
 command -v grub-script-check >/dev/null || command -v grub2-script-check >/dev/null || missing="$missing grub-script-check"
 # both GRUB platforms are needed: i386-pc for legacy BIOS, x86_64-efi for UEFI (the installer ships both too)
@@ -87,6 +88,11 @@ sudo install -Dm755 ./tools/validate-build-ready.sh "$ROOTFS/usr/local/bin/valid
 sudo rm -rf "$ROOTFS/usr/ports"
 sudo cp -r ./ports "$ROOTFS/usr/ports"
 sudo chown -R 0:0 "$ROOTFS/usr/ports"
+# GNU bash is the system shell (/bin/bash and /bin/sh); the bbash fork stays installed as its own command.
+# A static binary, so it runs on any base; it goes in first because the builds below run inside the image.
+[ -x tools/gnu-bash/bash ] || tools/gnu-bash/build.sh
+sudo install -Dm755 tools/gnu-bash/bash "$ROOTFS/usr/bin/bash"
+sudo ln -sf bash "$ROOTFS/usr/bin/sh"
 # dinit is PID 1 and the only init system; systemd is removed completely
 sudo rm -f "$ROOTFS/init" "$ROOTFS/sbin/init" "$ROOTFS/sbin/lenine"
 sudo "$BUILD_DIR/tools/dinit/build.sh" "$ROOTFS"
@@ -98,16 +104,11 @@ sudo "$BUILD_DIR/tools/eudev/build.sh" "$ROOTFS"
 sudo "$BUILD_DIR/tools/libsystemd-stub/build.sh" "$ROOTFS"
 # the boot target, services and helper scripts (rootfs/etc/dinit.d, rootfs/usr/lib/dinit) are part of rootfs/ itself
 "$BUILD_DIR/tools/check-no-systemd.sh" "$ROOTFS"
-DINIT_CHECK="$ROOTFS/usr/bin/dinit-check" "$BUILD_DIR/tools/dinit/check-services.sh"
+sudo CHROOT="$ROOTFS" "$BUILD_DIR/tools/dinit/check-services.sh"
 sudo install -Dm644 "$KERNEL" "$ROOTFS/boot/vmlinuz"
 
 echo "=== [3/7] ROOTFS FIXES AND BRANDING ==="
-# GNU bash is the system shell (/bin/bash and /bin/sh); the bbash fork stays installed as its own command.
-# Built static, so it does not depend on the base's libtinfo. The libarchive tools (BSD tar and friends)
-# are removed: GNU tar is the tar.
-[ -x tools/gnu-bash/bash ] || tools/gnu-bash/build.sh
-sudo install -Dm755 tools/gnu-bash/bash "$ROOTFS/usr/bin/bash"
-sudo ln -sf bash "$ROOTFS/usr/bin/sh"
+# The libarchive tools (BSD tar and friends) are removed: GNU tar is the tar.
 sudo rm -f "$ROOTFS"/usr/bin/bsdtar "$ROOTFS"/usr/bin/bsdcat "$ROOTFS"/usr/bin/bsdcpio "$ROOTFS"/usr/bin/bsdunzip
 # issue, os-release, release files and the login banner (GNU/Linux branding)
 sudo SYSTEMLINUX_VERSION="$IMAGE_VERSION" ./tools/installer/usr/local/bin/systemlinux-provision "$ROOTFS"
@@ -119,18 +120,18 @@ fi
 sudo rm -rf "$WORKSPACE"
 mkdir -p "$WORKSPACE/live" "$WORKSPACE/boot/grub"
 
-echo "=== [5/7] BUILDING THE SQUASHFS AND THE INITRAMFS ==="
+echo "=== [5/7] BUILDING THE STAGE TARBALL, THE SQUASHFS AND THE INITRAMFS ==="
+C=$BUILD_DIR/tools/overlay-common
 STAGE=$WORKSPACE/stage
 sudo mkdir -p "$STAGE"
 sudo cp -a "$ROOTFS/." "$STAGE/"
-sudo "$BUILD_DIR/tools/overlay-common/strip-gentoo.sh" "$STAGE"
+sudo "$C/strip-gentoo.sh" "$STAGE"
 # the real sudo (rootfs/ only has a stub), built in the image with its own compiler, PAM and glibc
 sudo "$BUILD_DIR/tools/sudo/build.sh" "$STAGE"
-# the installer's boot/disk tools come from the build host; they run on the host's libraries, kept apart in
-# /usr/lib/systemlinux-host so they never replace the image's own glibc and libraries (they used to land in
-# /usr/lib: the host's 64-bit glibc over the 32-bit one, which broke every program with a ../lib RUNPATH, e.g. cargo)
-sudo "$BUILD_DIR/tools/overlay-common/copy-host-tools.sh" "$STAGE" grub-install "$GRUB_MKIMAGE" grub-probe grub-editenv \
-    grub-set-default grub-reboot efibootmgr mkfs.fat "$GRUB_BIOS_SETUP"
+# the boot/disk tools come from the build host; they run on the host's libraries (and loader, glibc or musl), kept
+# apart in /usr/lib/systemlinux-host so they never replace the image's own glibc and libraries
+sudo "$C/copy-host-tools.sh" "$STAGE" grub-install "$GRUB_MKIMAGE" grub-probe grub-editenv \
+    grub-set-default grub-reboot efibootmgr mkfs.fat cryptsetup "$GRUB_BIOS_SETUP"
 GRUBDATA=0
 for d in /usr/lib/grub /usr/lib64/grub /usr/share/grub /usr/lib/grub2 /usr/share/grub2; do
     if [ -d "$d" ]; then sudo mkdir -p "$STAGE$d"; sudo cp -a "$d/." "$STAGE$d/"; GRUBDATA=1; fi
@@ -138,20 +139,9 @@ done
 [ "$GRUBDATA" = 1 ] || { echo "ERROR: no GRUB platform files (x86_64-efi) found on the build host"; exit 1; }
 MKFS=$(readlink -f "$(command -v mkfs.fat)")
 sudo ln -sf "$(basename "$MKFS")" "$STAGE$(dirname "$MKFS")/mkfs.vfat"
-# the installer itself, and the hostname
+# the installer and the system tools (systemlinux-*)
 sudo cp -a "$BUILD_DIR/tools/installer/." "$STAGE/"
 sudo chmod 755 "$STAGE"/usr/local/bin/systemlinux-*
-sudo "$BUILD_DIR/tools/live-image/strip-live.sh" "$STAGE"
-# the build toolchain, build dependencies and language runtimes are post-install profiles, not live media
-sudo "$BUILD_DIR/tools/profiles/profiles.sh" strip "$STAGE"
-# The build-toolchain profile takes all of usr/lib/gcc, but the GCC runtime libraries in it are not build tools:
-# dinit (PID 1) and every other C++ program need libstdc++/libgcc_s. Without them the kernel panics at boot.
-for d in "$ROOTFS"/usr/lib/gcc/*/*/; do
-    for l in libstdc++.so.6 libgcc_s.so.1 libatomic.so.1 libgomp.so.1 libitm.so.1 libquadmath.so.0; do
-        [ -e "$d$l" ] && sudo cp -aL "$d$l" "$STAGE/usr/lib64/$l"
-    done
-done
-sudo ldconfig -r "$STAGE"
 # pkg-config files still naming libsystemd (dbus-1.pc: "Requires.private: libsystemd >= 209") would make
 # pkg-config fail for every build that uses them, since systemd is gone
 for pc in "$STAGE"/usr/lib64/pkgconfig/*.pc "$STAGE"/usr/share/pkgconfig/*.pc; do
@@ -164,33 +154,68 @@ done
 if [ -f "$STAGE/usr/bin/help2man" ]; then
     sudo sed -i 's|^use Locale::gettext qw(gettext);$|BEGIN { eval { require Locale::gettext; Locale::gettext->import(qw(gettext)); 1 } or eval q{ package Locale::gettext; sub domain { bless {}, shift } sub get { $_[1] } package main; sub gettext { $_[0] } 1 }; }|' "$STAGE/usr/bin/help2man"
 fi
-# what the image provides, recorded in get's database as base/NAME with its files: get does not rebuild what the
-# base system already has, never overwrites base files by accident, and a port replaces its base package in place
-sudo rm -rf "$STAGE/var/db/get/pkgs"/base__*
-sudo "$BUILD_DIR/tools/live-image/base-packages.sh" "$ROOTFS" "$STAGE" "$STAGE/usr/share/systemlinux/base-packages" "$STAGE/var/db/get"
-# every library that PID 1 and the core programs need must resolve inside the image
-sudo "$BUILD_DIR/tools/live-image/check-libs.sh" "$STAGE" usr/bin/dinit usr/bin/dinitctl usr/bin/udevd usr/bin/udevadm \
-    usr/bin/bash usr/bin/NetworkManager usr/bin/dbus-daemon usr/bin/agetty usr/bin/login usr/bin/mount usr/bin/ls \
-    usr/bin/curl usr/bin/tar usr/bin/xz \
-    usr/bin/make usr/bin/gcc usr/bin/g++ 'usr/libexec/gcc/*/*/cc1' 'usr/libexec/gcc/*/*/cc1plus' usr/bin/ld usr/bin/as \
-    usr/bin/ar usr/bin/cmake usr/bin/ninja usr/bin/pkgconf usr/bin/perl usr/bin/python3 usr/bin/patch
 echo "$IMAGE_VERSION" | sudo tee "$STAGE/usr/share/systemlinux/image-version" >/dev/null
+# the kernel and its whole module tree, so the system (live and installed) can load NIC, GPU, sound... drivers
 sudo install -Dm644 "$KERNEL" "$STAGE/boot/vmlinuz"
-# the kernel's whole module tree, so the running system (live and installed) can load NIC, GPU, sound... drivers
 if [ -d "$MODULES_ROOT/lib/modules/$KVER" ]; then
     sudo mkdir -p "$STAGE/usr/lib/modules"
     sudo cp -a "$MODULES_ROOT/lib/modules/$KVER" "$STAGE/usr/lib/modules/"
     sudo depmod -b "$STAGE" "$KVER"   # $STAGE/lib -> usr/lib
 fi
-# owners, setuid bits and private files (git keeps none of them): su, passwd and sudo need this
-sudo "$BUILD_DIR/tools/overlay-common/fix-perms.sh" "$STAGE"
+# the initramfs (live medium, or an installed root partition): a static busybox built in the image, cryptsetup
+# from the host (with its libraries and loader), the init script and the storage/filesystem modules
+sudo "$BUILD_DIR/tools/busybox/build.sh" "$STAGE" "$WORKSPACE/busybox"
+BUILD_ID="$IMAGE_VERSION-$(date +%s)"
+echo "$BUILD_ID" > "$WORKSPACE/live/build-id"
+BUSYBOX=$WORKSPACE/busybox KVER=$KVER MODULES_ROOT=$MODULES_ROOT BUILD_ID=$BUILD_ID WORK=$HOME/.cache/systemlinux-initrd \
+    "$BUILD_DIR/tools/live-image/build-initrd.sh" "$WORKSPACE/live/initrd.img"
+sudo install -m644 "$WORKSPACE/live/initrd.img" "$STAGE/boot/initrd.img"
+sudo "$C/chroot-run.sh" "$STAGE" ldconfig
+
+# ---- the stage tarball: the whole system, with the compilers, docs and firmware, for installs (like Gentoo's stage3)
+sudo rm -rf "$STAGE/var/db/get/pkgs"/base__*
+sudo "$BUILD_DIR/tools/live-image/base-packages.sh" "$ROOTFS" "$STAGE" "$STAGE/usr/share/systemlinux/base-packages" "$STAGE/var/db/get"
+sudo "$BUILD_DIR/tools/live-image/check-libs.sh" "$STAGE" usr/bin/dinit usr/bin/dinitctl usr/bin/udevd usr/bin/udevadm \
+    usr/bin/bash usr/bin/NetworkManager usr/bin/dbus-daemon usr/bin/agetty usr/bin/login usr/bin/mount usr/bin/ls \
+    usr/bin/curl usr/bin/tar usr/bin/xz usr/bin/sudo \
+    usr/bin/make usr/bin/gcc usr/bin/g++ 'usr/libexec/gcc/*/*/cc1' 'usr/libexec/gcc/*/*/cc1plus' usr/bin/ld usr/bin/as \
+    usr/bin/ar usr/bin/cmake usr/bin/ninja usr/bin/pkgconf usr/bin/perl usr/bin/python3 usr/bin/patch
+sudo "$C/fix-perms.sh" "$STAGE"
+STAGE_TAR=$BUILD_DIR/systemLinux-stage-$IMAGE_VERSION-x86_64.tar.xz
+# an installed system asks for a login on tty1 (the live system logs root in by itself, added back below)
+sudo sed -i 's/ --autologin root//' "$STAGE/etc/dinit.d/getty-tty1"
+sudo tar --numeric-owner --xattrs --xattrs-include='*' --acls -C "$STAGE" \
+    --exclude=./live-medium --exclude=./init -cf - . | xz -T0 -6 > "$STAGE_TAR"
+(cd "$BUILD_DIR" && sha256sum "$(basename "$STAGE_TAR")" > "$(basename "$STAGE_TAR").sha256")
+ls -lh "$STAGE_TAR"
+sudo cp "$ROOTFS/etc/dinit.d/getty-tty1" "$STAGE/etc/dinit.d/getty-tty1"
+
+# ---- the live image: the stage without compilers (post-install profiles), docs, translations and firmware
+sudo "$BUILD_DIR/tools/live-image/strip-live.sh" "$STAGE"
+# the build toolchain, build dependencies and language runtimes are post-install profiles, not live media
+sudo "$BUILD_DIR/tools/profiles/profiles.sh" strip "$STAGE"
+# The build-toolchain profile takes all of usr/lib/gcc, but the GCC runtime libraries in it are not build tools:
+# dinit (PID 1) and every other C++ program need libstdc++/libgcc_s. Without them the kernel panics at boot.
+for d in "$ROOTFS"/usr/lib/gcc/*/*/; do
+    for l in libstdc++.so.6 libgcc_s.so.1 libatomic.so.1 libgomp.so.1 libitm.so.1 libquadmath.so.0; do
+        [ -e "$d$l" ] && sudo cp -aL "$d$l" "$STAGE/usr/lib64/$l"
+    done
+done
+sudo "$C/chroot-run.sh" "$STAGE" ldconfig
+# what the live image provides, recorded in get's database as base/NAME with its files
+sudo rm -rf "$STAGE/var/db/get/pkgs"/base__*
+sudo "$BUILD_DIR/tools/live-image/base-packages.sh" "$ROOTFS" "$STAGE" "$STAGE/usr/share/systemlinux/base-packages" "$STAGE/var/db/get"
+# every library that PID 1 and the core programs need must resolve inside the image
+sudo "$BUILD_DIR/tools/live-image/check-libs.sh" "$STAGE" usr/bin/dinit usr/bin/dinitctl usr/bin/udevd usr/bin/udevadm \
+    usr/bin/bash usr/bin/NetworkManager usr/bin/dbus-daemon usr/bin/agetty usr/bin/login usr/bin/mount usr/bin/ls \
+    usr/bin/curl usr/bin/tar usr/bin/xz usr/bin/sudo \
+    usr/bin/make usr/bin/gcc usr/bin/g++ 'usr/libexec/gcc/*/*/cc1' 'usr/libexec/gcc/*/*/cc1plus' usr/bin/ld usr/bin/as \
+    usr/bin/ar usr/bin/cmake usr/bin/ninja usr/bin/pkgconf usr/bin/perl usr/bin/python3 usr/bin/patch
+sudo "$C/fix-perms.sh" "$STAGE"
 sudo mksquashfs "$STAGE" "$WORKSPACE/live/rootfs.squashfs" -comp zstd -Xcompression-level 6 -b 1M -noappend -no-xattrs
 sudo rm -rf "$STAGE"
 sudo chown "$USER" "$WORKSPACE/live/rootfs.squashfs"
 ls -lh "$WORKSPACE/live/rootfs.squashfs"
-BUILD_ID="$IMAGE_VERSION-$(date +%s)"
-echo "$BUILD_ID" > "$WORKSPACE/live/build-id"
-KVER=$KVER MODULES_ROOT=$MODULES_ROOT BUILD_ID=$BUILD_ID WORK=$HOME/.cache/systemlinux-initrd "$BUILD_DIR/tools/live-image/build-initrd.sh" "$WORKSPACE/live/initrd.img"
 
 echo "=== [6/7] COPYING KERNEL AND WRITING grub.cfg ==="
 install -m644 "$KERNEL" "$WORKSPACE/live/vmlinuz"

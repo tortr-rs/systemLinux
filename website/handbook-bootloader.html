@@ -1,0 +1,46 @@
+<!-- content -->
+<p>systemLinux boots with <strong>GRUB</strong>. Its files go to <code>/boot/systemlinux/grub</code>, next to the
+kernels, so they never collide with another system's bootloader on a shared EFI System Partition. All commands run
+inside the chroot.</p>
+
+<h2>UEFI</h2>
+<pre class="term"><span class="p">#</span> grub-install --target=x86_64-efi --efi-directory=/boot --boot-directory=/boot/systemlinux --bootloader-id=systemLinux</pre>
+<p>This copies GRUB to <code>/boot/EFI/systemLinux/grubx64.efi</code> and adds a <em>systemLinux</em> entry to the
+firmware's boot menu. Some firmware forgets entries it did not make itself; also install GRUB at the fallback path,
+which every UEFI firmware tries:</p>
+<pre class="term"><span class="p">#</span> grub-install --target=x86_64-efi --efi-directory=/boot --boot-directory=/boot/systemlinux --removable</pre>
+<p>Dual-boot: use <code>--efi-directory=/boot/efi</code> (where you mounted the existing EFI System Partition) and
+<strong>skip</strong> <code>--removable</code>: the fallback path may belong to the other system.</p>
+<p>If <code>grub-install</code> says it cannot set the boot entry (<code>efibootmgr</code> errors), you booted the live
+system in BIOS mode or the firmware refuses: the <code>--removable</code> copy still boots.</p>
+
+<h2>Legacy BIOS</h2>
+<pre class="term"><span class="p">#</span> grub-install --target=i386-pc --boot-directory=/boot/systemlinux /dev/sda</pre>
+<p>Note: the <em>disk</em> (<code>/dev/sda</code>), not a partition. GRUB writes its code to the disk's first sector and
+to the 1&nbsp;MiB BIOS boot partition. Running both this and the UEFI commands makes the disk boot on either kind of
+computer.</p>
+
+<h2>The menu</h2>
+<pre class="term"><span class="p">#</span> systemlinux-grubcfg
+systemlinux-grubcfg: /boot/systemlinux/grub/grub.cfg (root=UUID=9f2c... on /dev/sda3, kernels on /dev/sda2)</pre>
+<p><code>systemlinux-grubcfg</code> looks at what is mounted (where <code>/boot</code> is, which filesystem is root,
+whether root is encrypted) and writes a menu with one entry per kernel in <code>/boot/systemlinux</code>, and a
+<em>debug</em> entry for the newest. Run it again whenever you add or remove a kernel or change the root filesystem.
+Have a look at the result:</p>
+<pre class="term"><span class="p">#</span> cat /boot/systemlinux/grub/grub.cfg</pre>
+<p>A typical entry:</p>
+<pre>menuentry "systemLinux" {
+    linux /systemlinux/vmlinuz root=UUID=9f2c... rootfstype=ext4 quiet loglevel=3
+    initrd /systemlinux/initrd.img
+}</pre>
+<p>Kernel options of your own (for example <code>mitigations=off</code> or <code>i915.enable_psr=0</code>) go after
+<code>loglevel=3</code>; edit the file, and redo it if you run <code>systemlinux-grubcfg</code> again.</p>
+
+<h2>Other systems in the menu</h2>
+<p>GRUB's menu only lists systemLinux. To start another system, use the firmware's boot menu (<kbd>F12</kbd>), or add
+an entry to <code>grub.cfg</code>. For Windows on UEFI:</p>
+<pre>menuentry "Windows" {
+    search --no-floppy --file --set=root /EFI/Microsoft/Boot/bootmgfw.efi
+    chainloader /EFI/Microsoft/Boot/bootmgfw.efi
+}</pre>
+<!-- /content -->

@@ -1,0 +1,44 @@
+<!-- content -->
+<h2>Download</h2>
+<p>Every release is on the <a href="https://github.com/tortr-rs/systemLinux/releases/latest">GitHub release page</a>.
+For an installation you need:</p>
+<table>
+<tr><th>File</th><th>What it is</th></tr>
+<tr><td><code>systemLinux-0.2.5-x86_64.iso</code></td><td>The live system you boot to install from (about 650&nbsp;MB).</td></tr>
+<tr><td><code>systemLinux-0.2.5-x86_64.iso.sha256</code></td><td>Its checksum.</td></tr>
+<tr><td><code>systemLinux-stage-0.2.5-x86_64.tar.xz</code></td><td>The stage: the system you install. The live system downloads it for you in <a href="handbook-stage.html">chapter 6</a>; download it now only if the computer will have no network.</td></tr>
+<tr><td><code>SHA256SUMS</code></td><td>Checksums of every file in the release.</td></tr>
+</table>
+<pre class="term"><span class="p">$</span> curl -LO https://github.com/tortr-rs/systemLinux/releases/download/v0.2.5/systemLinux-0.2.5-x86_64.iso
+<span class="p">$</span> curl -LO https://github.com/tortr-rs/systemLinux/releases/download/v0.2.5/systemLinux-0.2.5-x86_64.iso.sha256</pre>
+
+<h2>Check the download</h2>
+<p>A damaged download is the most common reason an ISO does not boot. Check it before you write it anywhere:</p>
+<pre class="term"><span class="p">$</span> sha256sum -c systemLinux-0.2.5-x86_64.iso.sha256
+systemLinux-0.2.5-x86_64.iso: OK</pre>
+<p>Anything other than <code>OK</code> means the file is damaged: download it again. On Windows, compare the output of
+<code>certutil -hashfile systemLinux-0.2.5-x86_64.iso SHA256</code> with the <code>.sha256</code> file by eye.</p>
+
+<h2>Write a USB stick</h2>
+<p>The ISO is a hybrid image: written byte for byte to a USB stick, it boots on UEFI and BIOS computers.</p>
+<h3>From Linux</h3>
+<pre class="term"><span class="p">$</span> lsblk                   <span class="c"># find the stick by its size, e.g. /dev/sdb; it must NOT be your system disk</span>
+<span class="p">$</span> sudo dd if=systemLinux-0.2.5-x86_64.iso of=/dev/sdX bs=4M status=progress conv=fsync</pre>
+<p>Use the whole stick (<code>/dev/sdb</code>), not a partition (<code>/dev/sdb1</code>). Everything on the stick is lost.</p>
+<h3>From Windows or macOS</h3>
+<p>Use <a href="https://rufus.ie">Rufus</a> (choose <em>DD image</em> mode when it asks) or
+<a href="https://etcher.balena.io">balenaEtcher</a>.</p>
+<h3>Ventoy</h3>
+<p>On a <a href="https://www.ventoy.net">Ventoy</a> stick, copy the ISO file onto it like any other file. The live
+system finds itself inside Ventoy, and several systemLinux ISOs on one stick do not mix up.</p>
+
+<h2>In a virtual machine</h2>
+<p>Attach the ISO as a CD and give the machine an empty disk of 20&nbsp;GB or more. With QEMU:</p>
+<pre class="term"><span class="p">$</span> qemu-img create -f qcow2 systemlinux.qcow2 40G
+<span class="p">$</span> qemu-system-x86_64 -enable-kvm -cpu host -m 4G -smp 4 \
+      -drive file=systemlinux.qcow2,if=virtio -cdrom systemLinux-0.2.5-x86_64.iso -nic user,model=virtio-net-pci</pre>
+<p>That boots in legacy BIOS mode. For UEFI add
+<code>-drive if=pflash,format=raw,readonly=on,file=/usr/share/edk2/x64/OVMF_CODE.4m.fd</code> (the path depends on
+your distribution's OVMF package). VirtualBox, VMware and GNOME Boxes work too; in VirtualBox, enable EFI in the
+machine's settings if you want a UEFI install.</p>
+<!-- /content -->

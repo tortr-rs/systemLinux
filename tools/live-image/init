@@ -2,6 +2,10 @@
 # systemLinux live init (runs from the small initramfs, as every live ISO does):
 #   find the live medium -> mount /live/rootfs.squashfs -> overlay a tmpfs on it -> switch_root to dinit.
 # Kernel command line options:
+#   root=UUID=...|LABEL=...|/dev/...  INSTALLED system: mount this root filesystem (read-write) and start it
+#   rootfstype=TYPE rootflags=OPTS    its filesystem type and mount options (usually not needed)
+#   systemlinux.luks=UUID=...  the root is inside this LUKS partition: ask for the passphrase, open it as
+#                          /dev/mapper/root (use root=/dev/mapper/root)
 #   systemlinux.image=PATH systemlinux.data=UUID=...   INSTALLED mode: mount the squashfs image PATH
 #                          (relative to the data partition) with a persistent overlay stored on the data partition
 #   systemlinux.iso=PATH   prefer this ISO file on the medium's partition (e.g. an ISO on a Ventoy stick)
@@ -36,6 +40,7 @@ is_luks() {
 }
 
 LABEL=SYSTEMLINUX ISO_HINT= DEBUG=0 SHELL_FIRST=0 TORAM=0 WAIT=60 IMAGE= DATA= INIT=/usr/bin/dinit
+ROOT= ROOTFSTYPE= ROOTFLAGS= LUKS=
 for a in $(cat /proc/cmdline); do
     case "$a" in lenine.*) a=systemlinux.${a#lenine.} ;; esac
     case "$a" in
@@ -48,6 +53,10 @@ for a in $(cat /proc/cmdline); do
         systemlinux.label=*) LABEL=${a#systemlinux.label=} ;;
         systemlinux.wait=*)  WAIT=${a#systemlinux.wait=} ;;
         init=/*)             INIT=${a#init=} ;;
+        root=*)              ROOT=${a#root=} ;;
+        rootfstype=*)        ROOTFSTYPE=${a#rootfstype=} ;;
+        rootflags=*)         ROOTFLAGS=${a#rootflags=} ;;
+        systemlinux.luks=*)  LUKS=${a#systemlinux.luks=} ;;
     esac
 done
 
@@ -55,7 +64,7 @@ done
 # load them before scanning for the medium. Missing ones (built in, or not shipped) are skipped silently.
 if [ -d "/lib/modules/$(uname -r)" ]; then
     for m in usb_storage uas xhci_pci ehci_pci ohci_pci uhci_hcd ahci nvme virtio_pci virtio_blk virtio_scsi \
-             libata ata_piix ata_generic pata_acpi scsi_mod mmc_block sd_mod sr_mod isofs udf vfat exfat ext4 squashfs loop overlay dm_mod dm_crypt; do
+             libata ata_piix ata_generic pata_acpi scsi_mod mmc_block sd_mod sr_mod isofs udf vfat exfat ext4 xfs btrfs f2fs squashfs loop overlay dm_mod dm_crypt; do
         modprobe "$m" 2>/dev/null || FAILED_MODS="${FAILED_MODS:-} $m"
     done
     [ -n "${FAILED_MODS:-}" ] && log "modules not loaded (built in or not shipped):$FAILED_MODS"
@@ -135,8 +144,37 @@ scan_once() {
     return 1
 }
 
-if [ -n "$IMAGE" ]; then
-    # ---- installed system: image + persistent overlay on the data partition
+# find_dev SPEC: the block device for UUID=/LABEL=/PARTUUID= or a /dev path, waiting up to WAIT seconds for it
+find_dev() {
+    i=0
+    while :; do
+        case "$1" in
+            /dev/*) [ -b "$1" ] && { echo "$1"; return 0; } ;;
+            *) d=$(findfs "$1" 2>/dev/null) && [ -b "$d" ] && { echo "$d"; return 0; } ;;
+        esac
+        i=$((i + 1))
+        [ "$i" -ge "$WAIT" ] && return 1
+        [ "$i" = 1 ] && log "waiting for $1..." >&2
+        sleep 1
+        load_hw_modules
+    done
+}
+
+if [ -n "$ROOT" ]; then
+    # ---- installed system: an ordinary root filesystem (stage install)
+    if [ -n "$LUKS" ]; then
+        until CDEV=$(find_dev "$LUKS"); do emergency "could not find the encrypted partition $LUKS"; done
+        log "encrypted root: enter the passphrase to unlock it"
+        until [ -e /dev/mapper/root ]; do
+            cryptsetup open "$CDEV" root || log "wrong passphrase, try again"
+        done
+    fi
+    until RDEV=$(find_dev "$ROOT"); do emergency "could not find the root filesystem $ROOT"; done
+    until mount ${ROOTFSTYPE:+-t "$ROOTFSTYPE"} -o "rw${ROOTFLAGS:+,$ROOTFLAGS}" "$RDEV" /newroot; do
+        emergency "could not mount the root filesystem $RDEV (rootfstype=/rootflags= may help)"
+    done
+elif [ -n "$IMAGE" ]; then
+    # ---- installed system (0.2.4 and older): image + persistent overlay on the data partition
     i=0
     DEV=
     while :; do

@@ -1,0 +1,49 @@
+<!-- content -->
+<p><code>systemlinux-install</code> performs chapters 5 to 10 for you. It is a plain terminal program: it asks its
+questions, shows what it will erase, and does nothing until you type <code>yes</code>.</p>
+<pre class="term"><span class="p">#</span> systemlinux-install</pre>
+<p>Connect to the network first (<a href="handbook-network.html">chapter 4</a>): it downloads the stage. Without a
+network, bring the stage on a stick and give it with <code>--stage FILE</code>.</p>
+
+<h2>The questions</h2>
+<ol>
+<li><strong>[d]isk or [p]artition</strong>: <code>d</code> erases a whole disk and creates the
+<a href="handbook-disks.html">recommended layout</a>; <code>p</code> formats one partition you freed up and leaves the
+rest of the disk alone (dual-boot).</li>
+<li><strong>The disk or partition</strong>, from the list it shows.</li>
+<li><strong>Computer name</strong>, <strong>username</strong>, <strong>time zone</strong> (e.g. <code>Europe/Paris</code>)
+and <strong>console keymap</strong> (e.g. <code>fr</code>).</li>
+<li><strong>Your password</strong>, and whether root gets the same one.</li>
+<li><strong>Encrypt with LUKS?</strong> (whole-disk installs) and the passphrase.</li>
+</ol>
+
+<h2>What it does</h2>
+<ol>
+<li>Checks the stage can be downloaded, before touching any disk.</li>
+<li>Partitions (GPT: BIOS boot, 1&nbsp;GiB EFI System Partition as <code>/boot</code>, root) and formats; encrypts the
+root partition if asked.</li>
+<li>Downloads the stage onto the new root filesystem, checks its SHA-256 and extracts it.</li>
+<li>Moves the kernel and initramfs to <code>/boot/systemlinux</code>.</li>
+<li>Writes <code>/etc/fstab</code>, the hostname, <code>/etc/hosts</code>, the time zone, <code>LANG=C.UTF-8</code> and
+the keymap.</li>
+<li>Creates your user in the groups <code>wheel</code>, <code>video</code>, <code>audio</code>, <code>input</code> and
+<code>networkmanager</code>, with sudo, and sets root's password.</li>
+<li>Installs GRUB: for both UEFI and BIOS on a whole disk; on a partition, only for the firmware you booted with, and
+on UEFI as its own entry in the existing EFI System Partition. Then runs <code>systemlinux-grubcfg</code>.</li>
+</ol>
+
+<h2>Options</h2>
+<p>Every question can be answered on the command line, for scripted installations:</p>
+<pre class="term"><span class="p">#</span> systemlinux-install --disk /dev/sda --host laptop --user alex --tz Europe/Paris --keymap fr --luks</pre>
+<table>
+<tr><th>Option</th><th></th></tr>
+<tr><td><code>--disk DISK</code></td><td>erase and use this whole disk</td></tr>
+<tr><td><code>--partition PART</code></td><td>format and use this one partition (dual-boot)</td></tr>
+<tr><td><code>--esp PART</code></td><td>the existing EFI System Partition to use with <code>--partition</code> (found automatically when there is one)</td></tr>
+<tr><td><code>--stage FILE</code></td><td>a stage tarball you already have, instead of downloading it</td></tr>
+<tr><td><code>--host</code>, <code>--user</code>, <code>--tz</code>, <code>--keymap</code></td><td>the settings it would ask for</td></tr>
+<tr><td><code>--luks</code></td><td>encrypt the root partition (whole disk only)</td></tr>
+<tr><td><code>--yes</code></td><td>do not ask for confirmation</td></tr>
+</table>
+<p>Passwords are always asked: they never appear on a command line.</p>
+<!-- /content -->

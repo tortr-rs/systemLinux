@@ -29,6 +29,73 @@ PAGES = [
     ('system.html', 'System', 'System', True),
 ]
 
+# The Handbook: one page per chapter (website/handbook-SLUG.html, content only), in reading order, by part.
+# handbook.html is its table of contents.
+HANDBOOK = [
+    ('Installing systemLinux', [
+        ('about', 'About the installation'),
+        ('media', 'Getting and writing the ISO'),
+        ('boot', 'Booting the live system'),
+        ('network', 'Getting online'),
+        ('disks', 'Preparing the disks'),
+        ('stage', 'Installing the stage'),
+        ('config', 'Configuring the system'),
+        ('kernel', 'The kernel and the initramfs'),
+        ('bootloader', 'The bootloader'),
+        ('finish', 'Users and the first boot'),
+        ('installer', 'The automatic installer'),
+    ]),
+    ('Working with systemLinux', [
+        ('services', 'Services with dinit'),
+        ('get', 'Installing software with get'),
+        ('users', 'Users, groups and sudo'),
+        ('networking', 'Networking'),
+        ('hardware', 'Firmware, graphics and sound'),
+        ('desktop', 'A desktop: sway or i3'),
+        ('maintenance', 'Keeping the system up to date'),
+        ('troubleshooting', 'Troubleshooting and recovery'),
+    ]),
+    ('Reference', [
+        ('cmdline', 'Boot options'),
+        ('files', 'Where things are'),
+    ]),
+]
+HB_ORDER = [(slug, title) for _, chapters in HANDBOOK for slug, title in chapters]
+
+def hb_number(slug):
+    return [s for s, _ in HB_ORDER].index(slug) + 1
+
+def hb_nav(current):
+    out = ['<nav class="hb-nav">']
+    for part, chapters in HANDBOOK:
+        out.append(f'<h3>{part}</h3><ol start="{hb_number(chapters[0][0])}">')
+        for slug, title in chapters:
+            on = ' class="on"' if slug == current else ''
+            out.append(f'<li><a href="handbook-{slug}.html"{on}>{title}</a></li>')
+        out.append('</ol>')
+    out.append('</nav>')
+    return '\n'.join(out)
+
+def hb_toc():
+    out = ['<h1>The systemLinux Handbook</h1>',
+           '<p class="sub">How to install systemLinux by hand, step by step, and how to use it afterwards. Read the '
+           'installation part in order; the second part is a reference you come back to.</p>',
+           '<div class="note">Short on time? The <a href="handbook-installer.html">automatic installer</a> does every '
+           'installation step for you. The chapters still explain what it did.</div>']
+    for part, chapters in HANDBOOK:
+        out.append(f'<h2>{part}</h2><ol class="hb-toc" start="{hb_number(chapters[0][0])}">')
+        for slug, title in chapters:
+            out.append(f'<li><a href="handbook-{slug}.html">{title}</a></li>')
+        out.append('</ol>')
+    return '\n'.join(out)
+
+def hb_page(slug, content):
+    i = [s for s, _ in HB_ORDER].index(slug)
+    prev = f'<a href="handbook-{HB_ORDER[i-1][0]}.html">&larr; {HB_ORDER[i-1][1]}</a>' if i > 0 else '<a href="handbook.html">&larr; Contents</a>'
+    nxt = f'<a href="handbook-{HB_ORDER[i+1][0]}.html">{HB_ORDER[i+1][1]} &rarr;</a>' if i + 1 < len(HB_ORDER) else '<a href="handbook.html">Contents &rarr;</a>'
+    pager = f'<div class="hb-pager">{prev}{nxt}</div>'
+    return f'<div class="handbook">\n{hb_nav(slug)}\n<article>\n{content}\n{pager}\n</article>\n</div>'
+
 def header(current):
     on = ' class="on"'
     tabs = ''.join(f'<a href="{f}"{on if f == current else ""}>{label}</a>' for f, label, _, _ in PAGES)
@@ -77,7 +144,7 @@ def content_of(text):
     body = text.split('<hr>', 1)[1]
     return body.rsplit('<hr>', 1)[0].strip()
 
-def render(fname, label, title, side, content):
+def render(fname, label, title, side, content, tab=None):
     full_title = 'systemLinux' if fname == 'index.html' else f'{title} - systemLinux'
     if fname == 'index.html': full_title = f'systemLinux: {title.lower()}'
     hero = ''
@@ -100,7 +167,7 @@ from it.</p>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-{header(fname)}
+{header(tab or fname)}
 {hero}
 <div class="wrap page">
 <main class="main">
@@ -173,10 +240,22 @@ def main():
         path = os.path.join(WEB, fname)
         if fname == 'packages.html':
             content = packages_content()
+        elif fname == 'handbook.html':
+            content = hb_toc()
         else:
             content = content_of(open(path).read())
         open(path, 'w').write(render(fname, label, title, side, content))
         print('wrote', fname)
+    for slug, title in HB_ORDER:
+        path = os.path.join(WEB, f'handbook-{slug}.html')
+        body = content_of(open(path).read())
+        # the page keeps only its own chapter text; the navigation is generated around it
+        m = re.search(r'<article>\n(.*)\n<div class="hb-pager">', body, re.S)
+        if m: body = m.group(1)
+        n = hb_number(slug)
+        text = f'<h1><span class="hb-n">{n}.</span> {html.escape(title)}</h1>\n' + re.sub(r'^<h1>.*?</h1>\n?', '', body.strip(), flags=re.S)
+        open(path, 'w').write(render(f'handbook-{slug}.html', 'Handbook', f'Handbook: {title}', False, hb_page(slug, text), tab='handbook.html'))
+    print('wrote', len(HB_ORDER), 'handbook chapters')
 
 if __name__ == '__main__':
     main()

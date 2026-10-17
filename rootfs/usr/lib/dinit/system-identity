@@ -2,6 +2,13 @@
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 [ -s /etc/hostname ] && hostname "$(cat /etc/hostname)"
 ip link set lo up 2>/dev/null
+# console keymap and font from /etc/vconsole.conf (KEYMAP=fr, FONT=ter-v22n)
+if [ -s /etc/vconsole.conf ]; then
+    KEYMAP= FONT=
+    . /etc/vconsole.conf
+    [ -n "$KEYMAP" ] && loadkeys -q "$KEYMAP" 2>/dev/null
+    [ -n "$FONT" ] && for t in /dev/tty[1-6]; do setfont -C "$t" "$FONT" 2>/dev/null; done
+fi
 # a first boot (no machine id yet, e.g. a fresh install or the live image) gets a new one
 [ -s /etc/machine-id ] || dbus-uuidgen --ensure=/etc/machine-id 2>/dev/null || true
 exit 0

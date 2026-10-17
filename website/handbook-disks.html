@@ -1,0 +1,79 @@
+<!-- content -->
+<h2>Block devices</h2>
+<pre class="term"><span class="p">#</span> lsblk -o NAME,SIZE,TYPE,FSTYPE,MOUNTPOINTS,MODEL</pre>
+<p>Disks are named after their connection: <code>/dev/sda</code>, <code>/dev/sdb</code> (SATA, USB),
+<code>/dev/nvme0n1</code> (NVMe), <code>/dev/vda</code> (virtual machines), <code>/dev/mmcblk0</code> (eMMC, SD cards).
+Partitions add a number: <code>/dev/sda1</code>, or <code>p</code> and a number on names ending in a digit:
+<code>/dev/nvme0n1p1</code>. Find the disk to install to by its size and model, and make sure it is not the stick you
+booted from.</p>
+
+<h2>Partition layouts</h2>
+<p>systemLinux uses a GPT partition table, which works with UEFI and legacy BIOS alike. The recommended layout:</p>
+<table>
+<tr><th>Partition</th><th>Size</th><th>Type</th><th>Mounted at</th><th>Why</th></tr>
+<tr><td>1</td><td>1&nbsp;MiB</td><td>BIOS boot</td><td>(none)</td><td>GRUB's code on legacy BIOS. Harmless on UEFI: keep it, and the disk boots on both.</td></tr>
+<tr><td>2</td><td>1&nbsp;GiB</td><td>EFI System</td><td><code>/boot</code></td><td>FAT32. Holds GRUB, the kernel and the initramfs. UEFI firmware reads it; GRUB reads it on BIOS too.</td></tr>
+<tr><td>3</td><td>the rest</td><td>Linux filesystem</td><td><code>/</code></td><td>The system and your files. Can be encrypted (LUKS), since nothing needed to start lives here.</td></tr>
+</table>
+<p>Variants:</p>
+<ul>
+<li><strong>Separate <code>/home</code></strong>: split partition 3 into a root partition of 40&nbsp;GB or more and a
+<code>/home</code> partition, so you can reinstall without touching your files.</li>
+<li><strong>Swap partition</strong>: add one of 1&ndash;2 times your RAM if you want to hibernate; otherwise a swap file
+(below) or nothing. The system already uses compressed RAM swap (zram) by default.</li>
+<li><strong>Dual-boot</strong>: see <a href="#dual">below</a>.</li>
+</ul>
+
+<h2>Partitioning</h2>
+<div class="warn">This erases the disk. Check the disk name once more with <code>lsblk</code>.</div>
+<h3>With cfdisk (menus)</h3>
+<pre class="term"><span class="p">#</span> cfdisk /dev/sda</pre>
+<p>Choose <em>gpt</em> if it asks for a label type, then create the three partitions with <em>New</em>, setting each
+one's <em>Type</em> (<em>BIOS boot</em>, <em>EFI System</em>, <em>Linux filesystem</em>), and <em>Write</em>.</p>
+<h3>With sfdisk (one command)</h3>
+<pre class="term"><span class="p">#</span> wipefs -a /dev/sda
+<span class="p">#</span> printf 'label: gpt\n,1M,21686148-6449-6E6F-744E-656564454649\n,1G,U\n,,L\n' | sfdisk /dev/sda</pre>
+<p>Each line after <code>label: gpt</code> is one partition: start (empty: next free), size, type. <code>U</code> is
+an EFI System Partition, <code>L</code> a Linux filesystem, and the long number is the BIOS boot type.</p>
+<pre class="term"><span class="p">#</span> lsblk /dev/sda          <span class="c"># three partitions: sda1, sda2, sda3</span></pre>
+
+<h2>Encryption (optional)</h2>
+<p>To encrypt the root partition with LUKS, do this before formatting it. You type the passphrase at every boot,
+before the system starts; without it the data cannot be recovered, by design.</p>
+<pre class="term"><span class="p">#</span> cryptsetup luksFormat --type luks2 /dev/sda3
+<span class="p">#</span> cryptsetup open /dev/sda3 root</pre>
+<p>The opened partition is <code>/dev/mapper/root</code>: format and mount that one instead of
+<code>/dev/sda3</code> in the rest of the installation. The name <code>root</code> matters: the initramfs opens it
+under the same name at boot.</p>
+
+<h2>Filesystems</h2>
+<pre class="term"><span class="p">#</span> mkfs.vfat -F32 -n BOOT /dev/sda2
+<span class="p">#</span> mkfs.ext4 -L systemLinux /dev/sda3       <span class="c"># or /dev/mapper/root when encrypted</span></pre>
+<p>The live system formats <strong>ext4</strong>, the safe default. XFS and Btrfs work as the root filesystem too
+(the initramfs has their drivers), but their tools are not on the live ISO: install <code>xfsprogs</code> or
+<code>btrfs-progs</code> with <code>get</code> in the live system first if you want them.</p>
+
+<h2>Swap</h2>
+<p>A swap partition:</p>
+<pre class="term"><span class="p">#</span> mkswap /dev/sda4 &amp;&amp; swapon /dev/sda4</pre>
+<p>A swap file is easier to resize later; make it after the stage is extracted
+(<a href="handbook-config.html#swap">chapter 7</a>).</p>
+
+<h2>Mounting the root filesystem</h2>
+<pre class="term"><span class="p">#</span> mount /dev/sda3 /mnt       <span class="c"># or /dev/mapper/root</span></pre>
+<p>Only the root filesystem for now: the stage is extracted onto it in the next chapter, and the boot partition is
+mounted after that. A separate <code>/home</code> goes to <code>/mnt/home</code> after the stage is extracted.</p>
+
+<h2 id="dual">Dual-boot next to another system</h2>
+<p>Make room in the other system first: shrink a partition with Windows <em>Disk Management</em>, GParted or
+<code>resize2fs</code>, and create a new empty partition of 20&nbsp;GB or more. (XFS cannot shrink: back up, recreate it
+smaller, restore.) Then, in the live system:</p>
+<ul>
+<li>Format only the new partition as the root filesystem and mount it on <code>/mnt</code>.</li>
+<li>On UEFI, do <strong>not</strong> format the existing EFI System Partition: it holds the other system's
+bootloader. You will mount it at <code>/boot/efi</code> in the next chapter, and the kernel stays in
+<code>/boot</code> on the root filesystem.</li>
+<li>Encrypting the root partition needs a separate unencrypted <code>/boot</code> partition (1&nbsp;GiB, ext4 or FAT32)
+in this setup.</li>
+</ul>
+<!-- /content -->

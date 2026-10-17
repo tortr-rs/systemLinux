@@ -1,0 +1,44 @@
+<!-- content -->
+<p>The <strong>stage</strong> is the whole systemLinux system in one archive: the base system, compilers and build
+tools, the ports tree, the kernel and its modules, the initramfs and the documentation. Installing systemLinux is
+extracting it onto your root filesystem. (Gentoo calls its archive a stage3; systemLinux has only one stage.)</p>
+
+<h2>Download it</h2>
+<p>Download onto the new root filesystem itself, so a small amount of RAM is no problem:</p>
+<pre class="term"><span class="p">#</span> cd /mnt
+<span class="p">#</span> curl -LO https://github.com/tortr-rs/systemLinux/releases/download/v0.2.5/systemLinux-stage-0.2.5-x86_64.tar.xz
+<span class="p">#</span> curl -LO https://github.com/tortr-rs/systemLinux/releases/download/v0.2.5/systemLinux-stage-0.2.5-x86_64.tar.xz.sha256</pre>
+<p>Use the stage of the same version as the live ISO (<code>cat /usr/share/systemlinux/image-version</code>). If you
+brought it on a USB stick, mount the stick (<code>mount /dev/sdb1 /media</code>) and copy it to <code>/mnt</code>.</p>
+
+<h2>Check it</h2>
+<pre class="term"><span class="p">#</span> sha256sum -c systemLinux-stage-0.2.5-x86_64.tar.xz.sha256
+systemLinux-stage-0.2.5-x86_64.tar.xz: OK</pre>
+
+<h2>Extract it</h2>
+<pre class="term"><span class="p">#</span> tar --numeric-owner --xattrs --xattrs-include='*' --acls -xpf systemLinux-stage-0.2.5-x86_64.tar.xz -C /mnt
+<span class="p">#</span> rm systemLinux-stage-0.2.5-x86_64.tar.xz*</pre>
+<table>
+<tr><th>Option</th><th>Why</th></tr>
+<tr><td><code>-p</code></td><td>Keep every file's permissions, including the setuid bits of <code>su</code>, <code>sudo</code> and <code>passwd</code>.</td></tr>
+<tr><td><code>--numeric-owner</code></td><td>Keep owners as numbers. The live system's user names may map to different numbers.</td></tr>
+<tr><td><code>--xattrs --xattrs-include='*'</code></td><td>Keep extended attributes, such as the capabilities that let <code>ping</code> work without root.</td></tr>
+<tr><td><code>--acls</code></td><td>Keep access control lists.</td></tr>
+</table>
+<p>This takes a few minutes. Afterwards <code>/mnt</code> looks like any Linux system: <code>ls /mnt</code>.</p>
+
+<h2>Mount the boot partition</h2>
+<p>The stage put the kernel and the initramfs in <code>/mnt/boot</code>. Move them aside, mount the boot partition
+over <code>/mnt/boot</code>, and put them in <code>/boot/systemlinux</code> on it:</p>
+<pre class="term"><span class="p">#</span> mv /mnt/boot/vmlinuz /mnt/boot/initrd.img /mnt/root/
+<span class="p">#</span> mount /dev/sda2 /mnt/boot
+<span class="p">#</span> mkdir -p /mnt/boot/systemlinux
+<span class="p">#</span> mv /mnt/root/vmlinuz /mnt/root/initrd.img /mnt/boot/systemlinux/</pre>
+<p><strong>Dual-boot on UEFI</strong> (no boot partition of your own): leave the kernel in <code>/mnt/boot</code>, move it
+into <code>/mnt/boot/systemlinux/</code> there, and mount the existing EFI System Partition at
+<code>/mnt/boot/efi</code> instead:</p>
+<pre class="term"><span class="p">#</span> mkdir -p /mnt/boot/systemlinux /mnt/boot/efi
+<span class="p">#</span> mv /mnt/boot/vmlinuz /mnt/boot/initrd.img /mnt/boot/systemlinux/
+<span class="p">#</span> mount /dev/nvme0n1p1 /mnt/boot/efi       <span class="c"># your existing EFI System Partition</span></pre>
+<p>A separate <code>/home</code> partition: <code>mount /dev/sda4 /mnt/home</code> now.</p>
+<!-- /content -->

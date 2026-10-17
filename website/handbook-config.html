@@ -1,0 +1,60 @@
+<!-- content -->
+<h2>fstab</h2>
+<p><code>/etc/fstab</code> lists the filesystems mounted at boot. Refer to them by UUID, which never changes, unlike
+<code>/dev/sda3</code>:</p>
+<pre class="term"><span class="p">#</span> blkid /dev/sda2 /dev/sda3
+/dev/sda2: LABEL="BOOT" UUID="4C1A-0B2E" TYPE="vfat" ...
+/dev/sda3: LABEL="systemLinux" UUID="9f2c1d6e-..." TYPE="ext4" ...</pre>
+<p>Write the file with your UUIDs (<code>nano /mnt/etc/fstab</code>):</p>
+<pre># &lt;filesystem&gt;                            &lt;mount point&gt;  &lt;type&gt;  &lt;options&gt;         &lt;dump&gt; &lt;pass&gt;
+UUID=9f2c1d6e-0000-0000-0000-000000000000  /              ext4    defaults,noatime  0      1
+UUID=4C1A-0B2E                             /boot          vfat    umask=0077        0      2</pre>
+<ul>
+<li>Encrypted root: <code>/dev/mapper/root  /  ext4  defaults,noatime  0 1</code> (the initramfs already opened and mounted it; this line is for tools that read fstab).</li>
+<li>Dual-boot on UEFI: the EFI System Partition goes to <code>/boot/efi</code> instead of <code>/boot</code>.</li>
+<li>A separate <code>/home</code>: <code>UUID=...  /home  ext4  defaults,noatime  0 2</code>.</li>
+<li>A swap partition: <code>UUID=...  none  swap  defaults  0 0</code>.</li>
+</ul>
+
+<h2 id="swap">A swap file (optional)</h2>
+<pre class="term"><span class="p">#</span> dd if=/dev/zero of=/mnt/swapfile bs=1M count=4096 status=progress     <span class="c"># 4 GB</span>
+<span class="p">#</span> chmod 600 /mnt/swapfile &amp;&amp; mkswap /mnt/swapfile
+<span class="p">#</span> echo '/swapfile  none  swap  defaults  0 0' &gt;&gt; /mnt/etc/fstab</pre>
+
+<h2>Entering the new system</h2>
+<p>From here on you work <em>inside</em> the new system with <code>chroot</code>, so that commands and files are the
+new system's own. It needs the kernel's virtual filesystems:</p>
+<pre class="term"><span class="p">#</span> mount --rbind /dev /mnt/dev &amp;&amp; mount --make-rslave /mnt/dev
+<span class="p">#</span> mount --rbind /sys /mnt/sys &amp;&amp; mount --make-rslave /mnt/sys
+<span class="p">#</span> mount -t proc proc /mnt/proc
+<span class="p">#</span> cp -L /etc/resolv.conf /mnt/etc/resolv.conf        <span class="c"># DNS inside the chroot</span>
+<span class="p">#</span> chroot /mnt /bin/bash
+<span class="p">#</span> source /etc/profile
+<span class="p">#</span> export PS1="(chroot) $PS1"</pre>
+<p><code>--make-rslave</code> keeps the unmounting at the end from also unmounting the live system's own
+<code>/dev</code> and <code>/sys</code>. Every command below runs inside the chroot.</p>
+
+<h2>Hostname</h2>
+<pre class="term"><span class="p">#</span> echo mycomputer &gt; /etc/hostname
+<span class="p">#</span> printf '127.0.0.1\tlocalhost\n::1\t\tlocalhost\n127.0.1.1\tmycomputer\n' &gt; /etc/hosts</pre>
+
+<h2>Time zone and clock</h2>
+<pre class="term"><span class="p">#</span> ls /usr/share/zoneinfo/                   <span class="c"># regions; then e.g. ls /usr/share/zoneinfo/Europe</span>
+<span class="p">#</span> ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime
+<span class="p">#</span> hwclock --systohc --utc                    <span class="c"># keep the hardware clock in UTC</span></pre>
+<p>Dual-booting with Windows, which keeps the hardware clock in local time: either tell Windows to use UTC (search for
+<em>RealTimeIsUniversal</em>) or accept that one of the two shows the wrong time after switching.</p>
+
+<h2>Language</h2>
+<pre class="term"><span class="p">#</span> echo LANG=C.UTF-8 &gt; /etc/locale.conf</pre>
+<p><code>C.UTF-8</code> is English with full Unicode support and works without generating anything.</p>
+
+<h2>Keyboard</h2>
+<pre class="term"><span class="p">#</span> echo KEYMAP=fr &gt; /etc/vconsole.conf</pre>
+<p>dinit's <code>system-identity</code> service loads it at every boot. A <code>FONT=</code> line sets a console font
+the same way, if you install one.</p>
+
+<h2>Services</h2>
+<p>The stage starts what a system needs (devices, filesystems, D-Bus, NetworkManager, a login on tty1). Add others now
+or later with <code>dinitctl enable</code>; see <a href="handbook-services.html">Services with dinit</a>.</p>
+<!-- /content -->
