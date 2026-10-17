@@ -27,6 +27,12 @@
 - `mount-fstab` also turns on the swap listed in `/etc/fstab`.
 - The stage no longer carries a D-Bus machine id; every install makes its own on first boot.
 
+- A quiet console: with `quiet` on the kernel command line (the default boot entries) dinit only prints errors, the
+  login prompt comes up on a cleared screen, and long-running services (dbus and what it starts, such as ModemManager,
+  NetworkManager, udevd, sshd, and the services of the cups, bluez, seatd, iwd and chrony ports) write to
+  `/var/log/NAME.log` instead of the console. Entries without `quiet` (and the ISO's serial entry) still show every
+  service.
+
 ### Fixed
 - Installed systems booted to a `grub>` shell on UEFI when the ISO was built on Ubuntu: its `grub-install` put Ubuntu's
   prebuilt Secure Boot image on the ESP, which does not find `grub.cfg` without shim. The copied `grub-install` now
