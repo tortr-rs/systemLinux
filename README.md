@@ -15,9 +15,6 @@ with `systemlinux-install` or step by step with the Handbook. It ships the build
 source with `get` and the ports tree of over a thousand recipes.
 
 **New in 0.2.5** (see `CHANGELOG.md`):
-* **`systemlinux-upgrade`:** upgrade an installed system to the next release without reinstalling. The new image is
-  added next to the old one, your files and packages carry over, and the old version stays in the GRUB menu to roll
-  back to.
 * **Desktop sessions without elogind:** your runtime directory is created at login, and a per-user dinit starts the
   session D-Bus, PipeWire and WirePlumber (`exec dinit` in your sway or i3 config).
 * **`linux-firmware`:** kernel.org's firmware for Wi-Fi cards, GPUs and Bluetooth, one `get install` away.

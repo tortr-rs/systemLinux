@@ -189,14 +189,8 @@ root
         <p><code>exec dinit</code> starts your own session services: the session D-Bus, and PipeWire with WirePlumber for sound. They are in <code>/etc/dinit.d/user</code>; add your own in <code>~/.config/dinit.d</code>, and see them with <code>dinitctl list</code>. Your user is in the <code>video</code>, <code>audio</code> and <code>input</code> groups, which seatd, sound and input need.</p></div>
 
       <div class="chapter" id="hb-10"><h2>10. Moving to a new version</h2>
-        <p>An installed system upgrades itself to the latest release:</p>
-        <pre class="term"><span class="p">$</span> systemlinux-upgrade --check             <span class="c"># is there a newer release?</span>
-<span class="p">$</span> sudo systemlinux-upgrade                 <span class="c"># download it, check its checksum and install it</span>
-<span class="p">$</span> sudo reboot</pre>
-        <p>The new version is a new image next to the old one in <code>/boot/images</code>; your files, accounts, settings and the packages you built with <code>get</code> (all in <code>/persist</code>) are kept as they are. Nothing changes until you reboot.</p>
-        <p><strong>Rolling back:</strong> the old version stays in the GRUB menu, so if the new one misbehaves, pick the old one at boot. To make it the default again: <code>sudo systemlinux-upgrade --rollback</code>. <code>systemlinux-upgrade --list</code> shows the installed versions; the newest three are kept.</p>
-        <p>Without a network, upgrade from an ISO you downloaded elsewhere: <code>sudo systemlinux-upgrade --iso systemLinux-0.2.5-x86_64.iso</code>.</p>
-        <div class="note"><strong>Coming from 0.2.3 or older:</strong> those images had wrong file owners, so <code>sudo</code> and <code>su</code> fail with &ldquo;operation not permitted&rdquo;. Install 0.2.4 or newer fresh; upgrading the old install does not fix it.</div></div>
+        <p>There is no in-place upgrade yet. Back up your files (see <a href="#hb-11">Recovery</a>), write the new ISO to a stick and install again.</p>
+        <div class="note"><strong>Coming from 0.2.3 or older:</strong> those images had wrong file owners, so <code>sudo</code> and <code>su</code> fail with &ldquo;operation not permitted&rdquo;. Install 0.2.4 or newer fresh; updating the old install does not fix it.</div></div>
 
       <div class="chapter" id="hb-11"><h2>11. Recovery</h2>
         <p><strong>Older image:</strong> the GRUB menu lists every image on the disk, and a <em>debug</em> entry for each that shows all boot messages.</p>

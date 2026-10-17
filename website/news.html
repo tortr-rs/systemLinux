@@ -24,7 +24,6 @@
 <h3>systemLinux 0.2.5 released</h3>
 <div class="date">2026-10-17</div>
 <ul class="tight">
-<li><strong>Upgrades with rollback.</strong> <code>sudo systemlinux-upgrade</code> installs the next release next to the running one and makes it the default. Your files, accounts and the packages you built carry over, and the old version stays in the GRUB menu: if the new one misbehaves, pick the old one at boot.</li>
 <li><strong>Desktop sessions without elogind.</strong> Your runtime directory (<code>XDG_RUNTIME_DIR</code>) is made when you log in, and a per-user dinit starts the session D-Bus, PipeWire and WirePlumber. Put <code>exec dinit</code> in your sway or i3 config.</li>
 <li><strong><code>linux-firmware</code></strong>: kernel.org's firmware for Wi-Fi cards, GPUs and Bluetooth, compressed, with <code>sudo get install linux-firmware</code>.</li>
 <li>New users are in the <code>video</code>, <code>audio</code> and <code>input</code> groups, so seatd, sound and input devices work.</li>
