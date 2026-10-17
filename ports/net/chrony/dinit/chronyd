@@ -3,3 +3,5 @@ type = process
 command = /usr/bin/chronyd -n
 depends-on = network
 smooth-recovery = true
+# output goes to a log file, not over the console and the login prompt
+logfile = /var/log/chronyd.log

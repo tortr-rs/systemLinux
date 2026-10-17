@@ -1,6 +1,6 @@
-# Console login on tty1. The live system's init adds --autologin root (live only, in its tmpfs layer).
+# Console login on tty1, on a cleared screen. The live system's init adds --autologin root (live only, in its tmpfs layer).
 type = process
-command = /usr/bin/agetty --noclear tty1 38400 linux
+command = /usr/bin/agetty tty1 38400 linux
 depends-on = system-identity
 waits-for = console-setup
 restart = true

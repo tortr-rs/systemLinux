@@ -4,3 +4,5 @@ command = /usr/bin/sshd -D
 depends-on = network
 waits-for = ssh-keygen
 smooth-recovery = true
+# output goes to a log file, not over the console and the login prompt
+logfile = /var/log/sshd.log
