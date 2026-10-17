@@ -273,4 +273,7 @@ mount --move /dev /newroot/dev
 mount -t tmpfs -o mode=0755,nosuid,nodev tmpfs /newroot/run
 [ "$DEBUG" = 1 ] && emergency "systemlinux.debug=1: about to switch root"
 [ -x "/newroot$INIT" ] || emergency "$INIT not found in the system image"
-exec switch_root /newroot "$INIT"
+# with "quiet" on the command line dinit prints only errors (no [ OK ] line per service); without it, everything
+INIT_ARGS=
+case " $(cat /proc/cmdline) " in *" quiet "*) [ "$INIT" = /usr/bin/dinit ] && [ "$DEBUG" = 0 ] && INIT_ARGS=--quiet ;; esac
+exec switch_root /newroot "$INIT" $INIT_ARGS

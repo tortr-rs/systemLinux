@@ -4,3 +4,5 @@ command = /usr/bin/udevd
 depends-on = early-filesystems
 restart = true
 smooth-recovery = true
+# output goes to a log file, not over the console and the login prompt
+logfile = /var/log/udevd.log

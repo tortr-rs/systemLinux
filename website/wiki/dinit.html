@@ -179,9 +179,13 @@ with <code>dinit-check NAME</code>.</p>
 <code>dinitctl list</code>, <code>dinitctl restart pipewire</code>.</p>
 
 <h2 id="logs">Logs</h2>
-<p>There is no journal. Services print to the console during boot, or to the file named by <code>logfile</code>. The
-kernel's messages are in <code>dmesg</code>. For a full system log, install a syslog daemon from the ports tree and
-write a service for it.</p>
+<p>There is no journal. Each long-running service writes its output to its own file,
+<code>/var/log/NAME.log</code> (the <code>logfile</code> setting): <code>/var/log/NetworkManager.log</code>,
+<code>/var/log/dbus.log</code> (with the programs D-Bus starts, such as ModemManager), <code>/var/log/udevd.log</code>,
+and so on. The kernel's messages are in <code>dmesg</code>.</p>
+<p>With <code>quiet</code> on the kernel command line (the default GRUB entry), dinit only prints errors at boot, so the
+console stays clean and the login prompt appears on a cleared screen. Boot the entry without <code>quiet</code>
+("show all boot messages") to see a line for every service as it starts.</p>
 
 <h2 id="troubleshooting">Troubleshooting</h2>
 <ul>

@@ -4,3 +4,5 @@ command = /usr/bin/cupsd -f
 depends-on = dbus
 depends-on = network
 smooth-recovery = true
+# output goes to a log file, not over the console and the login prompt
+logfile = /var/log/cupsd.log

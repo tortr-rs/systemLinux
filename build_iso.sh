@@ -247,11 +247,12 @@ menuentry "systemLinux $IMAGE_VERSION (copy to RAM)" {
     initrd /live/initrd.img
 }
 
+# no "quiet": dinit prints every service as it starts (the boot smoke test waits for "[  OK  ] boot")
 menuentry "systemLinux $IMAGE_VERSION (serial console)" --id serial {
     if [ ! -f /live/vmlinuz ]; then
         search --no-floppy --set=root --file /live/vmlinuz
     fi
-    linux /live/vmlinuz quiet loglevel=3 console=tty0 console=ttyS0,115200
+    linux /live/vmlinuz loglevel=3 console=tty0 console=ttyS0,115200
     initrd /live/initrd.img
 }
 

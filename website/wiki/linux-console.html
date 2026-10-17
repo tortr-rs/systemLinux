@@ -115,7 +115,7 @@ service:</p>
 <h3 id="automatic-login">Automatic login</h3>
 <p>To log a user in on tty1 without a password (only on a computer nobody else can touch), add
 <code>--autologin alex</code> after <code>agetty</code> in <code>/etc/dinit.d/getty-tty1</code>:</p>
-<pre>command = /usr/bin/agetty --autologin alex --noclear tty1 38400 linux</pre>
+<pre>command = /usr/bin/agetty --autologin alex tty1 38400 linux</pre>
 <h3 id="serial-console">Serial console</h3>
 <p>Add <code>console=tty0 console=ttyS0,115200</code> to the kernel command line for boot messages on the serial port,
 and a getty for it:</p>

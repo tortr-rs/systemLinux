@@ -5,3 +5,5 @@ command = /usr/bin/seatd -g video
 depends-on = early-filesystems
 waits-for = udev-trigger
 smooth-recovery = true
+# output goes to a log file, not over the console and the login prompt
+logfile = /var/log/seatd.log
